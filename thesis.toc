@@ -1,0 +1,113 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}Basics}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Solar composition}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Solar dynamics}{6}{section.2.2}
+\contentsline {section}{\numberline {2.3}Solar wind}{9}{section.2.3}
+\contentsline {section}{\numberline {2.4}Heliospheric magnetic field}{9}{section.2.4}
+\contentsline {section}{\numberline {2.5}Solar wind properties and structures}{10}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Solar wind plasma}{10}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Slow solar wind}{10}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}High speed streams}{10}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {2.5.4}Stream interaction regions}{11}{subsection.2.5.4}
+\contentsline {subsection}{\numberline {2.5.5}HCS / HPS}{11}{subsection.2.5.5}
+\contentsline {subsection}{\numberline {2.5.6}Coronal mass ejections}{11}{subsection.2.5.6}
+\contentsline {subsubsection}{\nonumberline Magnetic clouds}{11}{section*.13}
+\contentsline {section}{\numberline {2.6}Space weather}{11}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Solar influence on Earth}{12}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Magnetosphere}{12}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.3}Geomagnetic indices}{13}{subsection.2.6.3}
+\contentsline {subsection}{\numberline {2.6.4}Solar wind--magnetosphere coupling}{13}{subsection.2.6.4}
+\contentsline {chapter}{\numberline {3}Data}{15}{chapter.3}
+\contentsline {section}{\numberline {3.1}Instruments}{15}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Magnetometer}{15}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Plasma detector}{15}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Data sources}{16}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Sunspot number}{16}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Kp index}{16}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}OMNI data set}{16}{subsection.3.2.3}
+\contentsline {subsubsection}{\nonumberline Advanced Composition Explorer}{17}{section*.17}
+\contentsline {subsubsection}{\nonumberline Solar Wind Structures}{17}{section*.18}
+\contentsline {subsection}{\numberline {3.2.4}Helios probes}{17}{subsection.3.2.4}
+\contentsline {chapter}{\numberline {4}Solar wind time variations}{21}{chapter.4}
+\contentsline {section}{\numberline {4.1}Solar wind variation with solar cycle}{21}{section.4.1}
+\contentsline {section}{\numberline {4.2}Solar wind variation with season}{21}{section.4.2}
+\contentsline {section}{\numberline {4.3}Solar wind empirical forecast}{21}{section.4.3}
+\contentsline {chapter}{\numberline {5}Solar wind distance variations}{23}{chapter.5}
+\contentsline {section}{\numberline {5.1}Solar wind back-extrapolation}{23}{section.5.1}
+\contentsline {chapter}{\numberline {6}Helios radial line-up passings}{25}{chapter.6}
+\contentsline {chapter}{\numberline {7}Solar wind impact on the magnetosphere}{31}{chapter.7}
+\contentsline {section}{\numberline {7.1}Solar wind interaction processes with the magnetosphere}{31}{section.7.1}
+\contentsline {section}{\numberline {7.2}Solar wind--magnetosphere coupling functions}{31}{section.7.2}
+\contentsline {section}{\numberline {7.3}Parameter selection}{31}{section.7.3}
+\contentsline {section}{\numberline {7.4}Data selection}{31}{section.7.4}
+\contentsline {section}{\numberline {7.5}General Kp correlations}{32}{section.7.5}
+\contentsline {section}{\numberline {7.6}Solar cycle influence}{32}{section.7.6}
+\contentsline {section}{\numberline {7.7}Isolating the CME influence}{32}{section.7.7}
+\contentsline {subsection}{\numberline {7.7.1}Solar wind structure list}{32}{subsection.7.7.1}
+\contentsline {subsection}{\numberline {7.7.2}CME correlations}{33}{subsection.7.7.2}
+\contentsline {chapter}{\numberline {8}Solar wind impact on the terrestrial magnetosphere}{35}{chapter.8}
+\contentsline {section}{\numberline {8.1}Quantifying solar wind impact on the terrestrial magnetosphere}{35}{section.8.1}
+\contentsline {section}{\numberline {8.2}Solar wind structure type influence on the terrestrial magnetosphere}{36}{section.8.2}
+\contentsline {section}{\numberline {8.3}Solar wind structure analyses}{37}{section.8.3}
+\contentsline {section}{\numberline {8.4}CME impact on the magnetosphere}{37}{section.8.4}
+\contentsline {section}{\numberline {8.5}Solar wind frequency distributions}{38}{section.8.5}
+\contentsline {subsection}{\numberline {8.5.1}Solar wind solar cycle dependence}{38}{subsection.8.5.1}
+\contentsline {subsection}{\numberline {8.5.2}Solar wind seasonal dependence}{38}{subsection.8.5.2}
+\contentsline {section}{\numberline {8.6}Kp frequency distribution}{39}{section.8.6}
+\contentsline {subsection}{\numberline {8.6.1}Kp solar cycle dependence}{39}{subsection.8.6.1}
+\contentsline {subsection}{\numberline {8.6.2}Kp seasonal dependence}{40}{subsection.8.6.2}
+\contentsline {section}{\numberline {8.7}Summary/Results}{41}{section.8.7}
+\contentsline {section}{\numberline {8.8}Forecast}{41}{section.8.8}
+\contentsline {subsection}{\numberline {8.8.1}Internal solar wind correlations}{41}{subsection.8.8.1}
+\contentsline {subsection}{\numberline {8.8.2}Kp forecast from CME velocity}{41}{subsection.8.8.2}
+\contentsline {section}{\numberline {8.9}Applications}{41}{section.8.9}
+\contentsline {chapter}{\numberline {9}Solar wind origin and evolution}{43}{chapter.9}
+\contentsline {section}{\numberline {9.1}Solar wind parameters}{43}{section.9.1}
+\contentsline {section}{\numberline {9.2}Empirical solar wind model}{44}{section.9.2}
+\contentsline {subsection}{\numberline {9.2.1}Solar distance dependency---theory}{45}{subsection.9.2.1}
+\contentsline {subsection}{\numberline {9.2.2}Solar distance dependency---Helios data}{46}{subsection.9.2.2}
+\contentsline {subsection}{\numberline {9.2.3}Latitude dependency---theory}{47}{subsection.9.2.3}
+\contentsline {subsection}{\numberline {9.2.4}Latitude dependency---Helios data}{48}{subsection.9.2.4}
+\contentsline {subsection}{\numberline {9.2.5}Shape of the frequency distributions}{48}{subsection.9.2.5}
+\contentsline {subsubsection}{\nonumberline Single lognormal fit}{49}{section*.52}
+\contentsline {subsubsection}{\nonumberline Double lognormal fit}{49}{section*.55}
+\contentsline {subsection}{\numberline {9.2.6}Helios solar wind model}{51}{subsection.9.2.6}
+\contentsline {subsubsection}{\nonumberline Model quality}{53}{section*.62}
+\contentsline {section}{\numberline {9.3}Extrapolation model}{54}{section.9.3}
+\contentsline {subsection}{\numberline {9.3.1}Model validity}{55}{subsection.9.3.1}
+\contentsline {subsection}{\numberline {9.3.2}Model comparison via SSR}{55}{subsection.9.3.2}
+\contentsline {subsection}{\numberline {9.3.3}Adjusted extrapolation models}{56}{subsection.9.3.3}
+\contentsline {subsection}{\numberline {9.3.4}Comparison with existing extrapolation models}{56}{subsection.9.3.4}
+\contentsline {section}{\numberline {9.4}Radial evolution of solar wind structures}{56}{section.9.4}
+\contentsline {section}{\numberline {9.5}Summary/Results}{57}{section.9.5}
+\contentsline {chapter}{\numberline {10}Discussion and results}{59}{chapter.10}
+\contentsline {chapter}{\numberline {11}Summary and outlook}{61}{chapter.11}
+\contentsline {chapter}{\numberline {\hyperref [toc]{A}}Physics}{63}{appendix.A}
+\contentsline {section}{\numberline {\hyperref [toc]{A}.1}Electromagnetism}{63}{section.A.1}
+\contentsline {section}{\numberline {\hyperref [toc]{A}.2}Solar wind pressures}{63}{section.A.2}
+\contentsline {section}{\numberline {\hyperref [toc]{A}.3}Plasma beta}{63}{section.A.3}
+\contentsline {section}{\numberline {\hyperref [toc]{A}.4}Alfv\'en waves}{64}{section.A.4}
+\contentsline {section}{\numberline {\hyperref [toc]{A}.5}Solar rotation}{64}{section.A.5}
+\contentsline {subsection}{\numberline {\hyperref [toc]{A}.5.1}Solar surface differential rotation}{64}{subsection.A.5.1}
+\contentsline {subsection}{\numberline {\hyperref [toc]{A}.5.2}Solar rotation axis tilt}{65}{subsection.A.5.2}
+\contentsline {section}{\numberline {\hyperref [toc]{A}.6}Coordinate systems}{66}{section.A.6}
+\contentsline {subsection}{\numberline {\hyperref [toc]{A}.6.1}Geocentric Solar Ecliptic}{66}{subsection.A.6.1}
+\contentsline {subsection}{\numberline {\hyperref [toc]{A}.6.2}Geocentric Solar Magnetospheric}{66}{subsection.A.6.2}
+\contentsline {subsection}{\numberline {\hyperref [toc]{A}.6.3}Heliographic Inertial}{66}{subsection.A.6.3}
+\contentsline {section}{\numberline {\hyperref [toc]{A}.7}Earth orbit geometry}{67}{section.A.7}
+\contentsline {subsection}{\numberline {\hyperref [toc]{A}.7.1}Sun tilt}{67}{subsection.A.7.1}
+\contentsline {subsection}{\numberline {\hyperref [toc]{A}.7.2}Earth tilt}{67}{subsection.A.7.2}
+\contentsline {subsection}{\numberline {\hyperref [toc]{A}.7.3}seasonal distance}{67}{subsection.A.7.3}
+\contentsline {chapter}{\numberline {\hyperref [toc]{B}}Math}{69}{appendix.B}
+\contentsline {section}{\numberline {\hyperref [toc]{B}.1}Correlations}{69}{section.B.1}
+\contentsline {section}{\numberline {\hyperref [toc]{B}.2}Lognormal distribution}{69}{section.B.2}
+\contentsline {section}{\numberline {\hyperref [toc]{B}.3}Goodness of fit}{70}{section.B.3}
+\contentsline {section}{\numberline {\hyperref [toc]{B}.4}other}{71}{section.B.4}
+\contentsline {chapter}{\numberline {\hyperref [toc]{C}}Glossary}{73}{appendix.C}
+\contentsline {section}{\numberline {\hyperref [toc]{C}.1}Astronomical constants}{73}{section.C.1}
+\contentsline {section}{\numberline {\hyperref [toc]{C}.2}Symbols}{73}{section.C.2}
+\contentsline {section}{\numberline {\hyperref [toc]{C}.3}Abbreviations}{73}{section.C.3}
+\contentsline {chapter}{\nonumberline References}{75}{chapter*.75}
+\contentsline {chapter}{\nonumberline \hyperref [toc]{\color {gray}Acknowledgments}}{79}{chapter*.76}
+\contentsline {chapter}{\nonumberline \hyperref [toc]{\color {gray}Curriculum vitae}}{81}{chapter*.77}

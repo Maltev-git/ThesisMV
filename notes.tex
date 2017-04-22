@@ -1,0 +1,209 @@
+\section*{notes}
+
+% thesis style:
+%VB sensibilisieren in Bezug auf genutzten Style:
+%	american english
+%	1~au statt 1~AU
+%	in situ statt in-situ
+%	lognormal statt log-normal
+%	R_S oder R_\odot??
+%	Astronomy \& Astrophysics typography style:
+%	http://cds.aanda.org/index.php?option=com_content&task=view&id=172&Itemid=216
+% 
+
+Fragen:\\
+	- references vol \# fett drucken?\\
+	- references journal kursiv drucken?\\
+		- maybe style references different. like in space science reviews?\\
+	- page \# oben lassen?\\
+	- A5 format?\\
+
+nice phrases:\\
+	...this leads to the question wh... . The answer to this question is developed in the course of the next section.\\
+	
+write basics without third persons view ``we''\\
+
+define if using astronomical symbols...\\
+...and use style consistently\\
+
+Letzte Änderungen:\\
+	Genehmigungen für die Abb. besorgen!!\\
+	check for topic sentences!\\
+	Am Anfang der Arbeit den folgenden logischen Aufbau der Kapitel erlaeutern.\\
+	Am Anfang jedes Kapitels den folgenden logischen Aufbau der Abschnitte erlaeutern.\\
+	Beides auf Aenderungen ueberpruefen.\\
+	print figures to check look of colors\\
+	adjust figure width to textwidth...\\
+	complete pdfinfo text...\\
+
+	Abkuerzungen CME, usw. konsequent nutzen und beim ersten Auftauchen ausschreiben.\\
+
+	englische Kommasetzung beachten!\\
+	schauen, ob Kommata oder Punkte durch Semikolon ersetzt werden koennen\\
+	Pruefen, ob Ueberschriften den Inhalt des Kapitels gut beschreiben/gut zum Kapitel passen.\\
+	check if AE spelling consistently, search and replace: analyse, etc.\\
+	check for thin spaces in numbers with 5 digits and more\\
+	
+	Header und footer fuer notes, seitenzahl, Thema und Kapitel einfuegen\\
+	check gnuplot plot text sizes and finish figures\\
+	
+	check for changed links and update access date\\
+	
+	sinnlosen Satz irgendwo einfügen\\
+	76~\%, ACME irgendwo einfügen (ACME is good...)\\
+	comic strip aus thesis extrahieren\\
+	put movie in header or footer\\
+
+	create hyperref version including bibtex links\\
+		adjust link colors and remove boxes... (hyperref package options)\\
+		remove google-books links!\\
+		maybe adjust References like in Hathaway2010\\
+
+
+LaTeX commands:\\
+block commenting: strg+d\\
+srtg+shift+d\\
+
+\begin{align}
+	N_mean_0 = ee\,e\:e\;e\ e\quad e\qquad e\enskip e\\	%\enskip ist Zahlenbreite
+	N_median_0 = ||\,|\:|\;|\ |\quad|\qquad|\enskip|
+\end{align}
+
+Provides generic commands \degree, \celsius, \perthousand, \micro{} and \ohm{} which work both in text and maths mode.\\
+
+%quotes '" `` ''
+\citet{Lem1984}, \citep{Lem1984}, ``citep[see][page 45]{Lem1984}'' => \citep[see][page 45]{Lem1984}
+
+included persons via citations:
+Volker Bothmer, Rainer Schwenn, Eckhard Bosman, Russel Howard, Manuela Temmer, Angelos Vourlidas, Craig DeForest, Tim Howard, Rodney Viereck\\
+
+Style rules:\\
+the Sun's/solar rotation period\\
+Earth's/terrestrial\\
+the Sun, sunspots; near-Sun measurements, near-relativistic electrons, in situ measurements without hyphen\\
+64~s data; but 64"~second data\\
+Therefore, a comma is set after certain adverbs at the beginning of a sentence.\\
+lognormal or log-normal, not log normal\\
+
+A\&A style:\\
+Italics should never be used for units\\
+italics should be avoided for the following: mathematical signs such as ``d'' (total differential), ``e'' (base of natural logarithm), ``i'' (imaginary unit), ``pi''\\
+Physical constants such as the speed of light, the Boltzmann constant, the Hubble constant and the solar mass are also set in regular italics.\\
+\begin{align}
+	\text{e}^x &= 10~\text{km\,s}^{-1}\\
+	\text{e}^x &= 10~\text{km\textperiodcentered s}^{-1}\\
+	\text{e}^x &= 10~\text{km/s}\\
+	k_\text{B}
+\end{align}
+Sample input:
+20\,000 km, 1\,000\,000 s, HD 174\,638 1950--1985, p.~11--21, this -- written on a computer -- is now printed, this---written on a computer---is now printed, signal-to-noise ratio, early-type, metal-poor, non-relativistic $-30$~K, $-5\ ^{\circ}$C Dr.~h.c.~Rockefeller-Smith and Prof.~Dr.~Mallory
+
+------------\\
+
+-----------------------------------------------------------\\
+N\"utzliche Beispiele f\"ur LaTeX-Kommandos:\\
+Autob\-ahn\\	%soft hyphen (trennt das Wort bei Bedarf am Zeilenumbruch nur an der Stelle: Autob-   ahn)
+X-Ray\\		%hyphen
+X"~Ray\\	%non-breaking hyphen (works only for ngerman babel; use \mbox{X-Ray} instead
+% \useshorthands{"}	%activate shorthand for non-breaking hyphen "~; needs activation of ngerman in babel package
+% \addto\extrasenglish{\languageshorthands{ngerman}}
+Dr.~Huber\\	%non-breaking space
+100\,000\,V\\	%thin non-breaking space
+100\,000~V\\	%both possible.?
+The food---which was delicious---reminded me of home.\\
+Red, white, and blue---these are the colors of the flag.\\
+
+$U = 20$\,$000$\,V	%Masseinheiten (m, kg, ...), mathematische Konstanten (e, i, ...) und definierte Funktionen (sin, cos, log) Aufrecht schreiben. Den Rest Kursiv.
+
+solar radius: $R_\odot = 696\,000$~km\\
+
+%\earth, $\odot$, \astrosun\\	%wasysym package
+
+
+
+\noindent 10\,\textdegree{}C\\
+10\,$^\circ$C\\			%nicht verwenden.
+10\,\textcelsius\\
+Ein Winkel von 10\textdegree.\\
+
+\begin{align}
+	\frac{T_\text{D}}{[\text{K}]} &= 21,8\,\cdot\,\left( \frac{\Delta v_\text{FWHM}^\text{LMC}}{[\text{km\,s}^{-1}]} \right)^2\\
+	\frac{T_\text{D}}{[\text{K}]} &= 21,8\,\cdot\,\left( \frac{\Delta v_{{}_\text{FWHM}}^{{}^\text{LMC}}}{[\text{km\,s}^{-1}]} \right)^2
+\end{align}
+
+\begin{align}
+	k = 3.56 \text{\,e--6}\\
+	k = 3.56 \cdot 10^{-6}\\
+	k = 3.56 \times 10^{-6}
+\end{align}
+
+\begin{enumerate}
+	\item CM LMC Longitude
+	\item [drei] CM LMC Latitude
+\end{enumerate}
+
+\begin{description}
+  	\item Volume in (\textdegree)\,$^2$m\,s$^{-1}$. Summe aller Voxel des Objektes.
+  	\item [Volume] in (\textdegree)\,$^2$m\,s$^{-1}$. Summe aller Voxel des Objektes.
+\end{description}
+
+\begin{itemize}
+ 	\item Volume
+	\item [sdgffs] CM GSR Velocity
+\end{itemize}
+
+\begin{list}{asdf}{\makelabel{label}}
+ 	\item Volume
+	\item [drei] CM LMC Latitude
+\end{list}
+
+\footnote{All listed websites were existent on 2008-09-15.} oder \footnotemark \footnotetext{All listed websites were existent on 2008-09-15.}
+
+\begin{equation}
+	a^2 + b^2 = c^2
+	\label{eq:pythagoras} 
+\end{equation}
+Formel zitieren: (Siehe Formel \ref{eq:pythagoras}, Formel \eqref{eq:pythagoras}, Seite \pageref{eq:pythagoras})\\
+
+package siunitx:\\
+\SI{20.5e-3}{\kilo\gram}\\
+\SI{20.5e-3}{\kg}\\
+\SI{20.5e-3}{kg}\\
+
+%\begin{figure}[htb]
+%	\centering
+%	\includegraphics[width=0.5\textwidth]{pictures/AVG_full_MW_GAL_with_LA_field.jpg}
+%	\caption{Dargestellt ist die H\i-S\"aulendichte in galaktischen Koordinaten. Grundlage ist der vollst\"andige GASS-Datensatz.}
+%	\label{fig:AVG_full_MW_GAL_with_LA_field}
+%\end{figure}
+%Bild zitieren: (Siehe Abbildung \ref{fig:AVG_full_MW_GAL_with_LA_field})
+	%sec:, fig:, tab:, eq:, chap:, lst:
+
+
+width defines the width of the resulting box as seen from the outside (This means it can be \raisebox{0pt}[0pt][0pt]{\framebox[1.2\width]{smaller}} than the material inside the box. You can even set the width to 0pt so that the text inside the box will be typeset without influ%
+\raisebox{0pt}[0pt][0pt]{%
+\raisebox{-0.1ex}{en}%
+\raisebox{-0.3ex}{c}%
+\raisebox{-0.6ex}{i}%
+\raisebox{-1.0ex}{n}%
+\raisebox{-1.5ex}{g}%
+\raisebox{-2.1ex}{ }%
+\raisebox{-2.8ex}{t}%
+\raisebox{-3.6ex}{h}%
+\raisebox{-4.5ex}{e}%
+\raisebox{-2ex}{ }%
+\raisebox{2.8ex}{s}%
+\raisebox{2.2ex}{u}%
+\raisebox{1.8ex}{r}%
+\raisebox{1.2ex}{r}%
+\raisebox{0.8ex}{o}%
+\raisebox{0.3ex}{u}}%
+nding boxes). Besides the length expressions, you can also u
+
+
+semi-log plots:\\
+log-lin:	logarithmic scale on the y-axis, and a linear scale on the x-axis\\
+lin-log:	logarithmic scale on the x-axis, and a linear scale on the y-axis\\
+the naming is output-input (y-x), the opposite order from (x, y)
+
+

@@ -1,0 +1,116 @@
+\documentclass[twoside,openright,fontsize=10pt]{scrreprt}
+\KOMAoptions{headings=normal,numbers=noendperiod,toc=bib,cleardoublepage=plain}
+%\KOMAoption{Option}{Werteliste}
+%a4paper is default in KOMA-classes
+
+%pdf/a or b as sustainable pdf form...
+
+\usepackage[utf8]{inputenc}	% [latin1]?
+\usepackage[T1]{fontenc}
+
+\usepackage[ngerman,english]{babel}
+
+\useshorthands{"}	%activate shorthand for non-breaking hyphen "~; needs activation of ngerman in babel package
+\addto\extrasenglish{\languageshorthands{ngerman}}
+
+\addto\captionsenglish{\renewcommand{\bibname}{References}}	%for book and report class
+%\addto\captionsenglish{\renewcommand{\refname}{References}}	%for article class
+
+\usepackage[inner=3cm,outer=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+
+\usepackage{graphicx}
+
+\usepackage[svgnames]{xcolor}	%svgnames: blue!70!black
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+
+%##############--  symbols  --#############
+\usepackage{textcomp}		%provides additional text symbols like \textdegree
+\usepackage{gensymb}		%Provides generic commands \de­gree, \cel­sius, \pert­hou­sand, \mi­cro and \ohm which work both in text and maths mode.
+%\usepackage{wasysym}	%provides astronomical symbols and other
+
+\usepackage{scrdate}	%get actual date
+\usepackage{scrtime}	%get actual time
+
+%##############--  header/footer  --#############
+%use of fancyhdr not recommended together with komascript classes! use instead scrlayer-scrpage package
+\usepackage[headsepline]{scrlayer-scrpage}
+\automark[section]{chapter}	%[right]{left}
+\chead{\hyperref[toc]{Contents}}	%link to contents
+\setkomafont{pageheadfoot}{\normalfont \sffamily}
+\setkomafont{pagenumber}{\sffamily}
+
+%##############--  hyperlinks  --#############
+\usepackage{url}		%displays urls correctly with \url{www.abc.de}
+\usepackage{hyperref}		%creates internal and external hyperlinks
+\hypersetup{
+	colorlinks = true,
+	linkcolor = DarkBlue,
+	citecolor = DarkBlue,
+	urlcolor = blue,
+	pdfinfo={
+		Title={Thesis title...},
+		Subject={PhD thesis},
+		Author={Malte S. Venzmer},
+		Keywords={Solar wind, ...}
+	},
+%	allcolors = DarkBlue,	%assign to all links the same color
+%	hidelinks	%all black links
+}
+%linktocpage=true	=> only numbers clickable in content
+%hidelinks	black links
+
+% convert chapter/section names in header to hyperlinks
+%https://tex.stackexchange.com/questions/51574/hyperlinked-sectionnames-in-fancyheader
+\makeatletter
+\renewcommand{\chaptermark}[1]{
+	\markboth{\protect\hyperlink{\@currentHref}{\thechapter. #1}}{}
+}
+\renewcommand{\sectionmark}[1]{
+	\markright{\protect\hyperlink{\@currentHref}{\thesection. #1}}{}
+}
+
+% %link chapter/section numbers to toc
+% \renewcommand\thechapter{\hyperref[toc]{\arabic{chapter}}}	%has to appear after \appendix again
+% \renewcommand\thesection{\thechapter\hyperref[toc]{.\arabic{section}}}
+% \renewcommand\thesubsection{\thesection\hyperref[toc]{.\arabic{subsection}}}
+% \renewcommand\thesubsubsection{\thesubsection\hyperref[toc]{.\arabic{subsection}}}
+
+%###########-- figure/table captions  --###########
+\usepackage{caption}	%to change caption style
+	\captionsetup{format=plain, font=small, labelfont=bf, labelformat=simple, labelsep=quad}%, width=0.9\textwidth}
+	%\captionsetup{figurename=Fig.}
+	%\captionsetup{aboveskip=4pt}
+	%\captionsetup{belowskip=4pt}
+%\usepackage[figuresright]{rotating}	%for 90 deg rotation of images AND captions together (\begin{sidewaysfigure})
+
+\usepackage[capbesideposition=outside,capbesidesep=quad,facing=yes,floatrowsep=qquad]{floatrow}	%to put captions on side of figures
+\floatsetup[table]{style=plaintop}
+%\floatsetup{heightadjust=all,valign=b}
+
+%##########--  bib  --###########
+\usepackage{natbib}		%defines citation style
+\citestyle{aa}
+
+%##########--  tables  --###########
+\usepackage{multirow}	%for tables
+\usepackage{booktabs}	%improved line thickness and line spacing for tables
+\usepackage{dcolumn}	%new column specifier: align at decimal point
+	\newcolumntype{.}[1]{D{.}{.}{#1}}	%new shorthand
+	\newcolumntype{e}[0]{D{,}{~}{-1}}	%new shorthand; align at ',' and replace by space
+	\newcolumntype{g}[0]{D{,}{\,}{-1}}	%new shorthand; align at ',' and replace by space
+%	\newcolumntype{s}[1]{D{.}{.}{2.#1}}	%new shorthand; for scientific notation
+%remove this:
+%	\newcolumntype{d}[0]{D{.}{.}{-1}}	%new shorthand
+
+\usepackage{mdwlist}	%no vertical space in listings (provides itemize*, usw.)
+
+\newcommand{\up}[1]{\textsuperscript{#1}}	%\sup was taken...
+\newcommand{\sub}[1]{\textsubscript{#1}}
+
+\usepackage{siunitx}
+	\DeclareSIUnit[number-unit-product=\,]\au{au}
+	\sisetup{table-figures-uncertainty=2, table-number-alignment=center, range-phrase=--, range-units=single}
+
+%\usepackage{lipsum}

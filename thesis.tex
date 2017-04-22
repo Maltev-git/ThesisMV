@@ -1,0 +1,89 @@
+ 
+%\input{style/header}
+\input{style/header}
+
+%AFFECTS
+%Promotions-Thema:
+%Original:
+	%Analyse der Plasma- und Magnetfelddaten des ACE (Advanced Composition Explorer) -Satelliten zur Erstellung von "Echt-Zeit"-Weltraumwetterwarnungen und zur Modellierung solarer Einflüsse auf die terrestrische Ionosphäre im Rahmen des EU FP7 Projektes AFFECTS (Advanced Forecast For Ensuring Communications Through Space).
+%Kürzer:
+	%Analyse der Plasma- und Magnetfelddaten des ACE-Satelliten zur Erstellung von Echtzeit-Weltraumwetterwarnungen und zur Modellierung solarer Einflüsse auf die terrestrische Ionosphäre im Rahmen von AFFECTS.
+
+	%Analyse von in-situ Sonnenwinddaten zur Erstellung von ``Echtzeit''-Weltraumwetterwarnungen und zur Modellierung solarer Einflüsse auf die terrestrische Ionosphäre.
+	
+	%Analyse von in-situ Plasma- und Magnetfeld-Sonnenwinddaten - Modellierung der Entwicklung des Sonnenwindes von der Sonne zur Erde und sein Einfluss auf das Erdmagnetfeld zur Erstellung von nahezu Echtzeit-Weltraumwetterwarnungen.
+
+%Original translated:
+	%Analysis of plasma and magnetic field data from the ACE (Advanced Composition Explorer) spacecraft for the generation of real-time space weather alerts and for the modeling of solar influences on the terrestrial ionosphere in the context of the EU FP7 project AFFECTS (Advanced Forecast For Communications Through Space).
+%Short:
+	%Analysis of plasma and magnetic field data from the ACE spacecraft for the generation of real-time space weather alerts and for the modeling of solar influences on the terrestrial ionosphere in the context of the EU FP7 project AFFECTS.
+
+	%Analysis of plasma and magnetic field data from the ACE spacecraft, generation of real-time space weather alerts and modeling of solar influence on the terrestrial ionosphere.
+
+	%Analysis of solar wind plasma and magnetic field in-situ data, generation of near real-time space weather alerts and modeling of the solar influence on the terrestrial magnetic field.
+	
+	%Analysis of solar wind plasma and magnetic field in-situ data - modeling of solar wind evolution from Sun to Earth and of its influence on the terrestrial magnetic field for the generation of near real-time space weather warnings.
+%short:
+	%Analysis of solar wind in-situ data - modeling of the solar wind evolution to Earth and of the influence on its magnetic field.
+	%Modeling of the solar wind's evolution to Earth and of its influence on the terrestrial magnetic field by analysing solar wind in-situ data.
+	
+
+%daraus abgeleiteter Titel in Deutsch:
+%Modellierung und Analyse solarer Einflüsse auf die terrestrische Ionosphäre/Magnetosphäre
+%Translated titel (topic):
+%Modeling and analysis of solar influences on the terrestrial ionosphere/magnetosphere
+
+
+
+
+%daraus abgeleiteter Titel in Deutsch (Version 2):
+%Analyse von in-situ Sonnenwind-Messungen zur Erstellung von Echtzeit-Weltraumwetterwarnungen und zur Modellierung solarer Einflüsse auf die terrestrische Ionosphäre...
+
+
+%SolarProbePlus CGAUSS
+%Theme has to be updated, because of SolarProbePlus work...
+%Maybe: Analyses of solar wind influence on the terrestrial ionosphere/magnetosphere and modeling of solar wind within the near Sun region
+
+%Analyse der Helios-Datensätze für die Modellierung des Sonnenwindes im Bereich des SolarProbePlus Orbits für die WISPR-Kamera
+
+
+
+\input{style/short_commands_malte}
+
+
+%\includeonly{filename1,filename2,...}
+
+\begin{document}
+	\pagenumbering{Roman}
+	\include{chapters/cover}		%cover_formal
+	\pagenumbering{arabic}
+	\include{chapters/introduction}		%introduction & basics
+%	\include{chapters/data}
+	\include{chapters/analyses_helios}
+	\include{chapters/analyses_helios_lineup}
+	\include{chapters/analyses_omni}
+	\include{chapters/analyses}
+	\include{chapters/results}
+	\include{chapters/summary}	%summary and conclusions
+
+	\appendix
+	\renewcommand\thechapter{\hyperref[toc]{\Alph{chapter}}}
+	\include{appendix/physics}	%theory & calculations
+	\include{appendix/math}		%definitions, methods, calculations
+	\include{appendix/glossary}
+	%\include{appendix/figures}
+
+	\bibliographystyle{style/apj_modified_v3_url}	%style/mn, style/astron, plain, plainnat, style/apj, alpha, abbrv, style/apj_modified_v3, style/apj_modified_v3_url
+	\bibliography{appendix/literature_bibtex,appendix/literature_bibtex_custom_entries}	%style/mn-jour, style/apj-jour
+	
+	\include{appendix/acknowledgments}
+	\include{appendix/curriculum_vitae}
+	\include{notes}	% spaeter entfernen
+
+\end{document}
+
+
+
+
+
+

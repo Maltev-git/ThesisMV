@@ -1,0 +1,106 @@
+set terminal pdfcairo enhanced font "arial,12" fontscale 1 lw 2 size 8,6 rounded
+set output "Helios12_lineup_calculation_delay_pdfcairo_plot.pdf"
+
+############
+#set title "Line-up calculation"
+
+####--  Key  --####
+set key vert reverse Left left opaque
+#set key width -4
+unset key
+
+#set timestamp "%Y-%m-%d %H:%M CEST" font "Arial,10"
+
+set angles degrees
+angle = 30
+
+####--  Styles  --####
+set style line 1 lw 1 lc rgb "white"
+set style line 2 lw 1 lc rgb "light-red"
+set style line 3 lw 1 lc rgb "web-green"
+set style line 4 lw 1 lc rgb "web-blue"
+set style line 5 lw 1 lc rgb "orange"
+set style line 6 lw 1 lc rgb "dark-orange"
+set style line 7 lw 1 lc rgb "skyblue"
+set style line 8 lw 1 lc rgb "dark-blue"
+set style line 9 lw 1 lc rgb "dark-magenta"
+set style line 10 lw 1 lc rgb "black"
+set style line 11 lw 1 lc rgb "gray"
+set style line 12 lw 1 lc rgb "gray50"
+
+####--  Arrows  --####
+set arrow from 0,0 to 0.8,0 nohead ls 10 dt 2
+set arrow from 0,0 to cos(angle)*0.8,sin(angle)*0.8 nohead ls 10 dt 2
+set arrow from cos(angle)*0.4,sin(angle)*0.4 to cos(angle)*0.6,sin(angle)*0.6 head ls 2 lw 2
+set arrow from 0,0 to cos(80)*0.4,sin(80)*0.4 head ls 10
+set arrow from 0,0 to cos(73)*0.6,sin(73)*0.6 head ls 10
+
+set arrow from 0.54,0.46 to 0.46,0.54 ls 10 lw 2
+
+####--  Labels  --####
+set label at -0.1,0.42 "inner orbit" front tc ls 10
+set label at -0.1,0.62 "outer orbit" front tc ls 10
+set label at 0.7,0.03 "spacecraft line-up" front
+set label at 0.7,0.38 "arbitrary longitude" front
+
+set label at 0,0.3 "{/Times:Italic=14 r}_{/:=8 1}" front tc ls 10
+set label at 0.1,0.5 "{/Times:Italic=14 r}_{/:=8 2}" front tc ls 10
+
+set label at 0.41,-0.01 "{/Times:Italic=14 t}_{/:=8 0}" front tc ls 10
+set label at 0.4,0.12 "{/Times:Italic=14 t}_{/:=8 1}" front tc ls 4
+set label at 0.6,0.17 "{/Times:Italic=14 t}_{/:=8 2}" front tc ls 3
+set label at 0.39,0.29 "{/Times:Italic=14 t}_{/:=8 sw}" front tc ls 2
+set label at 0.25,0.35 "{/Times:Italic=14 t}_{/:=8 lag}" front tc ls 9
+
+set label at 0.54,0.54 "flight direction" front
+
+####--  Axis  --####
+set size ratio -1
+
+set polar
+set border 0
+
+#set label at 0.35,-0.12 "[au]"
+#set xlabel "Longitude"
+unset xtics
+unset ytics
+unset raxis
+set rtics scale 0
+set format r ""
+#set grid polar lw 1
+#set rrange [0:1]
+set xrange [-0.1:0.9]
+set yrange [-0.1:0.7]
+
+
+set style data line
+
+####--  Plots  --####
+plot\
+	0,0 with points notitle ls 5 pt 7,\
+	0.4 with lines notitle ls 10 lw 1,\
+	0.6 with lines notitle ls 10 lw 1,\
+	'+' using ($1):($1<=angle?0.61:NaN) with lines notitle ls 3 lw 2 dt 2,\
+	'+' using ($1):($1<=angle?0.4:NaN) with lines notitle ls 4 lw 2,\
+	'+' using ($1):($1<=16.5?0.6:NaN) with lines notitle ls 4 lw 2,\
+	'+' using ($1):($1<=48?$1>=angle?0.4:NaN:NaN) with lines notitle ls 2 lw 2,\
+	'+' using ($1):($1<=25.5?$1>=16.5?0.6:NaN:NaN) with lines notitle ls 2 lw 2,\
+	'+' using ($1):($1<=57?$1>=48?0.4:NaN:NaN) with lines notitle ls 9 lw 2,\
+	'+' using ($1):($1<=angle?$1>=25.5?0.6:NaN:NaN) with lines notitle ls 9 lw 2,\
+	'-' with points ls 10 pt 7,\
+	'-' with points ls 4 pt 7,\
+	'-' with points ls 2 pt 7,\
+	'-' with points ls 9 pt 7,\
+	NaN notitle
+	0	0.4
+	0	0.6
+	e
+	30	0.4
+	16.5	0.6
+	e
+	48	0.4
+	25.5	0.6
+	e
+	57	0.4
+	30	0.6
+	e

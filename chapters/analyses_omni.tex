@@ -1,0 +1,118 @@
+\chapter{Solar wind impact on the magnetosphere}
+%\label{chap:}
+
+motivation (see also introduction): solar wind impact nowcast, CME impact forecast\\
+%COFI -- chapter outline and flow integration\\
+
+
+\section{Solar wind interaction processes with the magnetosphere}
+%\label{sec:}
+
+%theory
+As is known for some time the terrestrial magnetic field shows disturbances that are caused by solar wind (see \autoref{sec:solar_influence_on_earth}).\\
+
+there are several underlying physical mechanisms, whose contribution is not yet quantified'?'\\
+% physical mechanisms:\\
+% - reconnection\\
+% - compression\\
+% - turbulence\\
+% - induction?\\
+
+three ways for solar wind momentum and energy transfer into magnetosphere:\\
+- sw entering sphere\\
+- waves/eddies\\
+- reconnection\\
+
+%[the relation of these events was confirmed two decades ago by (who and \citet{Bothmer1993})]\\
+
+-> example events CIR/HSS and CME\\
+
+
+\section{Solar wind--magnetosphere coupling functions}
+\label{sec:solar_wind_magnetosphere_coupling_functions}
+
+%theory from literature
+coupling mechanisms and therefrom derived functions\\
+VBzgsm - E-field...\\
+
+Studies finding best coupling function, Newell, etc.\\
+
+\citet{Newell2007}: universal sw-magnetosphere coupling function (opening flux rate)\\
+\citet{Newell2008}: coupling function merging and viscous term\\
+merging and viscous terms (reconnection and turbulence)\\
+merging term: rate magnetic flux is opened at the magnetopause ($d\Phi_\text{MP}/dt$)\\
+viscous term: reconnection due to Kelvin-Helmholtz instabilies at the boundary ($n^{1/2} v^2$)\\
+equation for the least variance linear prediction of Kp: $Kp = 0.05 + \num{2.244e-4} d\Phi_\text{MP}/dt + \num{2.844e-6} n^{1/2} v^2$\\
+combination of both terms works best (r = 0.866)\\
+
+see also \autoref{sec:solar_wind_magnetosphere_coupling}\\
+
+
+\section{Parameter selection}
+
+%fix usage of Kp index\\
+In our analyses we use the planetary geomagnetic disturbance indicator Kp (see Section~XX...), because it is designed to measure solar particle radiation by its magnetic effects (cite? Bartels...?).\\
+and close relation to aurorae, NOAA scale\\
+
+choose solar wind parameters based on coupling functions\\
+V, B, Bzgsm, N, T\\
+
+
+\section{Data selection}
+
+choose data sets, data resolution and time period\\
+
+geomagnetic disturbance index Kp: magnetic field maximal variation range within 3~hours; 3-hourly index\\
+need high resolution solar wind data (e.g. 1~min) to be able to determine maximal values/variations within 3~hours\\
+
+choosing data time range\\
+the Kp time series started in XXXX, when there were no spacecraft to measure in situ solar wind --> time range defined by available solar wind data\\
+OMNI data set -> longest continuous solar wind data set\\
+
+
+data processing\\
+choosing data averaging duration and method (min/avg/max)\\
+OMNI 1min data to 3hmin/max\\
+now: 3~hour solar wind extreme value, to back up argument refer to cc table (same data period, different resolution/measure (measure=mean, max or min))\\
+		(tested: 3"~hour solar wind variation range gives 8~\% lower cc)\\
+
+
+\section{General Kp correlations}
+
+general frequency distributions\\
+
+general correlation coefficients + plots\\
+
+general cc table\\
+
+\section{Solar cycle influence}
+
+solar cycle dependence\\
+- parameter time plots\\
+- parameter vs SSN matrix-plots\\
+- cc time plots\\
+- cc vs SSN plots\\
+
+\section{Isolating the CME influence}
+
+the causes of the strongest geomagnetic storms are draping and magnetic clouds of CMEs \citep{Bothmer1993}\\
+
+-> example event CME\\
+
+\subsection{Solar wind structure list}
+
+solar wind structures (SWS) OMNI list of Ian~Richardson \citep{Richardson2012}\\
+open source 1995--2015 \url{http://www.srl.caltech.edu/ACE/ASC/DATA/level3/icmetable2.htm}\\
+restricted source 1963--2015 \url{http://cedarweb.vsp.ucar.edu/wiki/index.php/Tools_and_Models:Solar_Wind_Structures} \citet{Richardson2012}\\	%Rules of the Road: Please contact Ian Richardson about your use of this data.
+
+overall CME fraction of solar wind - compute (for used period) from file $sws_swstruc_yearly_63001_14035.txt$\\
+e.g. 2013: 0.220 CMEs, 0.236 CIRs/HSSs and 0.544 slows (low speed streams - LSSs)\\
+
+\subsection{CME correlations}
+
+same analysis for CMEs\\
+- parameter time plots\\
+- parameter vs SSN matrix-plots\\
+- cc time plots\\
+- cc vs SSN plots\\
+

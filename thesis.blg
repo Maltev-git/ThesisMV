@@ -1,0 +1,65 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis.aux
+A level-1 auxiliary file: chapters/cover.aux
+A level-1 auxiliary file: chapters/introduction.aux
+A level-1 auxiliary file: chapters/analyses_helios.aux
+A level-1 auxiliary file: chapters/analyses_helios_lineup.aux
+A level-1 auxiliary file: chapters/analyses_omni.aux
+A level-1 auxiliary file: chapters/analyses.aux
+A level-1 auxiliary file: chapters/results.aux
+A level-1 auxiliary file: chapters/summary.aux
+A level-1 auxiliary file: appendix/physics.aux
+A level-1 auxiliary file: appendix/math.aux
+A level-1 auxiliary file: appendix/glossary.aux
+The style file: style/apj_modified_v3_url.bst
+A level-1 auxiliary file: appendix/acknowledgments.aux
+A level-1 auxiliary file: appendix/curriculum_vitae.aux
+A level-1 auxiliary file: notes.aux
+Database file #1: appendix/literature_bibtex.bib
+Database file #2: appendix/literature_bibtex_custom_entries.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--can't use both author and editor fields in Schwenn1990
+Warning--empty publisher in Schwenn1990
+You've used 48 entries,
+            3166 wiz_defined-function locations,
+            1076 strings with 18158 characters,
+and the built_in function-call counts, 23624 in all, are:
+= -- 1916
+> -- 1564
+< -- 26
++ -- 520
+- -- 550
+* -- 2177
+:= -- 4343
+add.period$ -- 96
+call.type$ -- 48
+change.case$ -- 309
+chr.to.int$ -- 48
+cite$ -- 50
+duplicate$ -- 1024
+empty$ -- 1638
+format.name$ -- 625
+if$ -- 4744
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 46
+newline$ -- 148
+num.names$ -- 193
+pop$ -- 336
+preamble$ -- 1
+purify$ -- 309
+quote$ -- 0
+skip$ -- 758
+stack$ -- 0
+substring$ -- 930
+swap$ -- 55
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 414
+warning$ -- 2
+while$ -- 178
+width$ -- 0
+write$ -- 574
+(There were 2 warnings)

@@ -1,7 +1,6 @@
 # ThesisMV :eyes:
+## git commands:
 ```bash
-git commands:
-
 git help init
 git init
 sudo git init

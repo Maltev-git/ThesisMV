@@ -1,5 +1,5 @@
 # ThesisMV
-```
+```shell
 git commands:
 
 git help init

@@ -1,5 +1,5 @@
 # ThesisMV :eyes:
-```git
+```bash
 git commands:
 
 git help init

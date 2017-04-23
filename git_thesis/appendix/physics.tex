@@ -115,14 +115,13 @@ critical surfaces, solar wind acceleration...\\
 %Cranmer2005 - ON THE GENERATION, PROPAGATION, AND REFLECTION OF ALFVÉN WAVES FROM THE SOLAR PHOTOSPHERE TO THE DISTANT HELIOSPHERE
 
 
-\section{Solar rotation}
-\label{sec:solar_rotation}
+\section{Solar surface differential rotation}
+\label{sec:solar_surface_differential_rotation}
+
+%solar rotation
+the solar rotation was first discovered from sunspots in 18XX?
 
 %rotation period
-%surface differential rotation
-%rotation axis tilt
-the rotation was first discovered from sunspots in 18XX?
-
 \citet{Bartels1934} set the synodic solar rotation period to 27~days for the definition of his solar rotation number. The Bartels' Rotation Number counts the solar rotations starting with 8 February 1832.\\
 Carrington solar rotation period of 27.2753~days (Where Carrington Rotation Number is based upon, starting with November 9, 1853; Wikipedia...)\\
 %synodic rotation period of 27.2753 days (or a sidereal period of 25.38 days; This chosen period roughly corresponds to rotation at a latitude of 16~deg (sic), which is consistent with the typical latitude of sunspots and corresponding periodic solar activity; cite from https://en.wikipedia.org/wiki/Solar_rotation
@@ -130,10 +129,9 @@ Carrington solar rotation period of 27.2753~days (Where Carrington Rotation Numb
 Solar surface rotation period at 16\degree{} latitude:\\
 sidereal: 25.38~d (of 609.12~h Sun Fact Sheet...), synodic: 27.2753~d (derived)\\
 
+rotation axis tilt (see next section)\\
 
-\subsection{Solar surface differential rotation}
-\label{sec:solar_surface_differential_rotation}
-
+%surface differential rotation
 The Sun's inner thermal convective circulation results in a differential rotation caused by transport of angular momentum away from the rotation axis.
 
 %best-fitting function
@@ -192,6 +190,35 @@ are listed in \autoref{tab:solar_surface_rotation_periods}.\\
 The meridional circulation is the proposed equatorial updrift and polar downdrift - a result of Reynolds stress and convective transport (cite?).\\
 
 
+\section{Earth orbit geometry}
+
+%all from https://en.wikipedia.org/wiki/Earth's_orbit
+%see also http://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html
+orbit defines ecliptic\\
+
+Earth orbit parameters (cite?):\\
+semimajor axis: $a = 1.000001018$~au\\
+eccentricity: $e = 0.0167086$~au\\
+%perihelion, point on solar orbit with minimum distance to Sun\\
+%aphelion, point on solar orbit with maximum distance to Sun\\
+distance at perihelion: (formula cite?, accuracy?)\\
+\begin{align}
+	r_\text{p} &= a (1 - e)\\
+		&= 0.98329~\text{au}	\nonumber
+\end{align}
+distance at aphelion:\\
+\begin{align}
+	r_\text{p} &= a (1 + e)\\
+		&= 1.0167~\text{au}	\nonumber
+\end{align}
+
+for calculation of heliospheric distance see HORIZONS Web-Interface at \url{http://ssd.jpl.nasa.gov/horizons.cgi}
+
+perihelion/aphelion times...
+%http://aa.usno.navy.mil/data/docs/EarthSeasons.php
+
+\subsection{Solar distance}
+
 \subsection{Solar rotation axis tilt}
 %\label{sec:}
 
@@ -243,6 +270,8 @@ solar tilt over the year, see \autoref{fig:Solar_tilt_seasons_plot}
 		\label{fig:Solar_tilt_seasons_plot}
 	}
 \end{figure}
+
+\subsection{Earth tilt}
 
 
 \section{Coordinate systems}
@@ -327,33 +356,3 @@ the dipole axis orientation changes over time; at 1995 the northern pole was at 
 \subsection{Heliographic Inertial}
 
 HGI - Heliographic Inertial coordinates\\
-
-
-\section{Earth orbit geometry}
-
-%all from https://en.wikipedia.org/wiki/Earth's_orbit
-%see also http://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html
-Earth orbit parameters (cite?):\\
-semimajor axis: $a = 1.000001018$~au\\
-eccentricity: $e = 0.0167086$~au\\
-%perihelion, point on solar orbit with minimum distance to Sun\\
-%aphelion, point on solar orbit with maximum distance to Sun\\
-distance at perihelion: (formula cite?, accuracy?)\\
-\begin{align}
-	r_\text{p} &= a (1 - e)\\
-		&= 0.98329~\text{au}	\nonumber
-\end{align}
-distance at aphelion:\\
-\begin{align}
-	r_\text{p} &= a (1 + e)\\
-		&= 1.0167~\text{au}	\nonumber
-\end{align}
-
-for calculation of heliospheric distance see HORIZONS Web-Interface at \url{http://ssd.jpl.nasa.gov/horizons.cgi}
-
-perihelion/aphelion times...
-%http://aa.usno.navy.mil/data/docs/EarthSeasons.php
-
-\subsection{Sun tilt}
-\subsection{Earth tilt}
-\subsection{seasonal distance}

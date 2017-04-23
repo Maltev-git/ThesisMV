@@ -37,7 +37,7 @@
 %use of fancyhdr not recommended together with komascript classes! use instead scrlayer-scrpage package
 \usepackage[headsepline]{scrlayer-scrpage}
 \automark[section]{chapter}	%[right]{left}
-\chead{\hyperref[toc]{Contents}}	%link to contents
+%\chead{\hyperref[toc]{Contents}}	%link to contents
 \setkomafont{pageheadfoot}{\normalfont \sffamily}
 \setkomafont{pagenumber}{\sffamily}
 
@@ -73,6 +73,7 @@
 
 % %link chapter/section numbers to toc
 % \renewcommand\thechapter{\hyperref[toc]{\arabic{chapter}}}	%has to appear after \appendix again
+% \renewcommand\thechapter{\hyperref[toc]{\Alph{chapter}}}	%put after \appendix
 % \renewcommand\thesection{\thechapter\hyperref[toc]{.\arabic{section}}}
 % \renewcommand\thesubsection{\thesection\hyperref[toc]{.\arabic{subsection}}}
 % \renewcommand\thesubsubsection{\thesubsection\hyperref[toc]{.\arabic{subsection}}}

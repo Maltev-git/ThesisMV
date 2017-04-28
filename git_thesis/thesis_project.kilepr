@@ -295,20 +295,20 @@ order=3
 
 [item:chapters/cover.tex]
 archive=true
-column=135
+column=48
 encoding=UTF-8
 highlight=LaTeX
-line=222
+line=209
 mode=LaTeX
-open=false
-order=0
+open=true
+order=1
 
 [item:chapters/introduction.tex]
 archive=true
-column=0
+column=118
 encoding=UTF-8
 highlight=LaTeX
-line=218
+line=784
 mode=LaTeX
 open=true
 order=0
@@ -462,16 +462,16 @@ JumpList=
 ViMarks=.,29,0,[,29,0,],29,0
 
 [view-settings,view=0,item:chapters/cover.tex]
-CursorColumn=135
-CursorLine=222
+CursorColumn=48
+CursorLine=209
 JumpList=
-ViMarks=.,222,135,[,222,135,],222,135
+ViMarks=.,209,47,[,208,28,],209,47
 
 [view-settings,view=0,item:chapters/introduction.tex]
-CursorColumn=0
-CursorLine=218
+CursorColumn=118
+CursorLine=784
 JumpList=
-ViMarks=.,212,160,[,212,146,],212,160
+ViMarks=.,784,117,[,784,117,],784,117
 
 [view-settings,view=0,item:chapters/results.tex]
 CursorColumn=9

@@ -30,6 +30,8 @@ git clone https://github.com/Maltev-git/ThesisMV.git
 ```bash
 git status
 git diff
+git ls-tree master
+git ls-files
 ```
 
 ### working

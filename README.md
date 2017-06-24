@@ -24,6 +24,9 @@ touch .gitignore
 ### existing repository
 ```bash
 git clone https://github.com/Maltev-git/ThesisMV.git
+
+git remote add origin https://github.com/Maltev-git/ThesisMV.git
+git push origin master
 ```
 
 ### other

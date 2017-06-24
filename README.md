@@ -40,6 +40,8 @@ git add *.txt
 git reset
 git reset filename
 
+git checkout -- 'filename.txt'
+
 git commit -m "Message..."
 
 git pull https://github.com/Maltev-git/ThesisMV.git
@@ -58,4 +60,12 @@ git push https://github.com/Maltev-git/ThesisMV.git v0.17.02
 ```
 
 ### branching
-...
+´´´bash
+git branch branchname
+git checkout branchname
+git branch
+git checkout master
+git branch -d branchname
+git merge branchname
+´´´
+

@@ -1,20 +1,21 @@
 \chapter{chapter2}
 
-\chapter{Solar wind impact on the magnetosphere}
-motivation (see also introduction): solar wind impact nowcast, CME impact forecast\\
 %COFI -- chapter outline and flow integration\\
+
+-> example events CIR/HSS and CME\\
+
+SWS: Rules of the Road: Please contact Ian Richardson about your use of this data.\\
+
+V-Kp correlation similar to \citet{Elliott2013}; different data resolution and averaging method (3-hour maximum of 1~min data)
 
 
 \section{Solar wind interaction processes with the magnetosphere}
-%theory
-As is known for some time the terrestrial magnetic field shows disturbances that are caused by solar wind (see \autoref{sec:solar_influence_on_earth}).\\
-
 there are several underlying physical mechanisms, whose contribution is not yet quantified'?'\\
-% physical mechanisms:\\
-% - reconnection\\
-% - compression\\
-% - turbulence\\
-% - induction?\\
+physical mechanisms:\\
+- reconnection\\
+- compression\\
+- turbulence\\
+- induction?\\
 
 three ways for solar wind momentum and energy transfer into magnetosphere:\\
 - sw entering sphere\\
@@ -22,9 +23,6 @@ three ways for solar wind momentum and energy transfer into magnetosphere:\\
 - reconnection\\
 
 %[the relation of these events was confirmed two decades ago by (who and \citet{Bothmer1993})]\\
-
--> example events CIR/HSS and CME\\
-
 
 \section{Solar wind--magnetosphere coupling functions}
 %theory from literature
@@ -47,26 +45,12 @@ see also \autoref{sec:solar_wind_magnetosphere_coupling}\\
 \section{Parameter selection}
 %fix usage of Kp index\\
 In our analyses we use the planetary geomagnetic disturbance indicator Kp (see Section~XX...), because it is designed to measure solar particle radiation by its magnetic effects (cite? Bartels...?).\\
-and close relation to aurorae, NOAA scale\\
-
+and has close relation to aurorae, NOAA scale\\
 
 \section{Data selection}
-choose data sets, data resolution and time period\\
-
-geomagnetic disturbance index Kp: magnetic field maximal variation range within 3~hours; 3-hourly index\\
-need high resolution solar wind data (e.g. 1~min) to be able to determine maximal values/variations within 3~hours\\
-
 choosing data time range\\
 the Kp time series started in XXXX, when there were no spacecraft to measure in situ solar wind --> time range defined by available solar wind data\\
 OMNI data set -> longest continuous solar wind data set\\
-
-
-data processing\\
-choosing data averaging duration and method (min/avg/max)\\
-OMNI 1min data to 3hmin/max\\
-now: 3~hour solar wind extreme value, to back up argument refer to cc figure (same data period, different resolution/measure (measure=mean, max or min))\\
-		(tested: 3"~hour solar wind variation range gives 8~\% lower cc)\\
-
 
 \section{Solar cycle influence}
 solar cycle dependence\\
@@ -75,20 +59,19 @@ solar cycle dependence\\
 - cc time plots\\
 - cc vs SSN plots\\
 
-
-\section{Isolating the CME influence}
-the causes of the strongest geomagnetic storms are draping and magnetic clouds of CMEs \citep{Bothmer1993}\\
--> example event CME\\
-
-\subsection{Solar wind structure list}
-solar wind structures (SWS) OMNI list of Ian~Richardson \citep{Richardson2012}\\
-open source 1995--2015 \url{http://www.srl.caltech.edu/ACE/ASC/DATA/level3/icmetable2.htm}\\
-restricted source 1963--2015 \url{http://cedarweb.vsp.ucar.edu/wiki/index.php/Tools_and_Models:Solar_Wind_Structures} \citet{Richardson2012}\\	%Rules of the Road: Please contact Ian Richardson about your use of this data.
-
-\subsection{CME correlations}
+\section{CME correlations}
 same analysis for CMEs\\
 - parameter time plots\\
 - parameter vs SSN matrix-plots\\
 - cc time plots\\
 - cc vs SSN plots\\
 
+\section{Solar wind structure analyses}
+ACE solar wind time series and event list\\
+
+see OPTIMAP events\\
+events from ACE CME list...\\
+
+%method: automatic list creation by event detection via parameter thresholds
+
+sample CME analyses (MVA, -> Kp)\\

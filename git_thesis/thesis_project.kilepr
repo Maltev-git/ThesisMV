@@ -4,7 +4,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.1.3
-lastDocument=chapters/analyses_helios.tex
+lastDocument=chapters/analyses.tex
 masterDocument=
 name=thesis_project
 pkg_extIsRegExp=false
@@ -255,20 +255,20 @@ order=5
 
 [item:chapters/analyses.tex]
 archive=true
-column=0
+column=161
 encoding=UTF-8
 highlight=LaTeX
-line=342
+line=197
 mode=LaTeX
 open=true
 order=3
 
 [item:chapters/analyses_helios.tex]
 archive=true
-column=39
+column=2
 encoding=UTF-8
 highlight=LaTeX
-line=6
+line=86
 mode=LaTeX
 open=true
 order=4
@@ -288,27 +288,27 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=88
+line=72
 mode=LaTeX
 open=true
 order=2
 
 [item:chapters/cover.tex]
 archive=true
-column=67
+column=37
 encoding=UTF-8
 highlight=LaTeX
-line=211
+line=212
 mode=LaTeX
 open=true
 order=1
 
 [item:chapters/introduction.tex]
 archive=true
-column=207
+column=23
 encoding=UTF-8
 highlight=LaTeX
-line=533
+line=697
 mode=LaTeX
 open=true
 order=0
@@ -438,16 +438,16 @@ JumpList=
 ViMarks=.,149,141,[,149,139,],149,141
 
 [view-settings,view=0,item:chapters/analyses.tex]
-CursorColumn=0
-CursorLine=342
+CursorColumn=161
+CursorLine=197
 JumpList=
-ViMarks=.,346,59,[,346,59,],346,59
+ViMarks=.,197,160,[,197,158,],197,160
 
 [view-settings,view=0,item:chapters/analyses_helios.tex]
-CursorColumn=39
-CursorLine=6
+CursorColumn=2
+CursorLine=86
 JumpList=
-ViMarks=.,6,38,[,6,20,],6,38
+ViMarks=.,86,2,[,86,2,],86,2
 
 [view-settings,view=0,item:chapters/analyses_helios_lineup.tex]
 CursorColumn=0
@@ -457,21 +457,21 @@ ViMarks=.,0,0,[,0,0,],0,0
 
 [view-settings,view=0,item:chapters/analyses_omni.tex]
 CursorColumn=0
-CursorLine=88
+CursorLine=72
 JumpList=
-ViMarks=.,88,0,[,88,0,],88,0
+ViMarks=.,72,0,[,72,0,],72,0
 
 [view-settings,view=0,item:chapters/cover.tex]
-CursorColumn=67
-CursorLine=211
+CursorColumn=37
+CursorLine=212
 JumpList=
-ViMarks=.,211,66,[,211,65,],211,66
+ViMarks=.,212,36,[,212,27,],212,36
 
 [view-settings,view=0,item:chapters/introduction.tex]
-CursorColumn=207
-CursorLine=533
+CursorColumn=23
+CursorLine=697
 JumpList=
-ViMarks=.,533,206,[,533,176,],533,206
+ViMarks=.,697,23,[,697,23,],697,23
 
 [view-settings,view=0,item:chapters/results.tex]
 CursorColumn=9

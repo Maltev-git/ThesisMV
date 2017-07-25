@@ -2,11 +2,18 @@
 
 %COFI -- chapter outline and flow integration\\
 
+Alle Presis ausschlachten!\\
+Alle Projektberichte ausschlachten!\\
+Kp8--Liste irgendwo einweben...\\
+paper draft 2014 ausschlachten... Check!\\
+
+
 -> example events CIR/HSS and CME\\
 
+literature:\\
 SWS: Rules of the Road: Please contact Ian Richardson about your use of this data.\\
-
-V-Kp correlation similar to \citet{Elliott2013}; different data resolution and averaging method (3-hour maximum of 1~min data)
+V-Kp correlation similar to \citet{Elliott2013}; different data resolution and averaging method (3-hour maximum of 1~min data)\\
+linear velocity replacement of ACE realtime data with Kp, Machol2013\\
 
 
 \section{Solar wind interaction processes with the magnetosphere}
@@ -47,6 +54,31 @@ see also \autoref{sec:solar_wind_magnetosphere_coupling}\\
 In our analyses we use the planetary geomagnetic disturbance indicator Kp (see Section~XX...), because it is designed to measure solar particle radiation by its magnetic effects (cite? Bartels...?).\\
 and has close relation to aurorae, NOAA scale\\
 
+correlation coefficients in \autoref{tab:correlation_coefficients}.
+\begin{table}[htb]\small
+	\centering
+	\captionsetup{belowskip=4pt}
+	\caption{Pearson correlation coefficients of Kp with solar wind parameters... (use Spearman instead?)}
+	\begin{tabular}{cc}
+		\toprule
+			&OMNI 1min\\
+		Parameter	&19850101-20150101\\
+			&3h 1min max\\
+		\midrule
+		N	&0.199792\\
+		V	&0.598351\\
+		T	&0.510607\\
+		B	&0.595860\\
+		Bzgsm	&-0.666050$^\text{a}$\\
+		V*B	&0.682383\\
+		V*Bzgsm	&-0.715101$^\text{a}$\\
+		N*T	&\\
+		\bottomrule
+		\multicolumn{2}{l}{\footnotesize{$^\text{a}$Here it is min instead of max.}}
+	\end{tabular}
+	\label{tab:correlation_coefficients}
+\end{table}
+
 \section{Data selection}
 choosing data time range\\
 the Kp time series started in XXXX, when there were no spacecraft to measure in situ solar wind --> time range defined by available solar wind data\\
@@ -67,11 +99,33 @@ same analysis for CMEs\\
 - cc vs SSN plots\\
 
 \section{Solar wind structure analyses}
+
+How strong do different structure types influence the terrestrial magnetosphere?\\
+What kind of solar wind structures create the individual regions in this distribution?\\
+What is their individual contribution to the Kp ranges (e.g. high Kp: CMEs 70\% and CIRs 30\%)?\\
+
 ACE solar wind time series and event list\\
+sw-timeseries ACE OPTIMAP ``Zeitreihe''-events
 
-see OPTIMAP events\\
-events from ACE CME list...\\
-
-%method: automatic list creation by event detection via parameter thresholds
+method: automatic list creation by event detection via parameter thresholds...\\
 
 sample CME analyses (MVA, -> Kp)\\
+
+(How can the impact field strength of CMEs be forecasted (V->B correlation for CMEs)?)\\
+
+
+\section{Forecast}
+Internal solar wind correlations:\\
+B-V correlation\\
+ACE MAGSWE 64~s data -> yearly overlay plot\\
+
+applications:\\
+rssfeeds, rtsw plots\\
+CME Kp impact as part of DDC\\
+- \textit{Kp} nowcast with L1 solar wind measurements (L1 alerts, disseminated as RSS feeds; integrated in smartphone app and space weather display)\\
+- Forecast of the possible CME impact on the Earth's magnetosphere (\textit{Kp} index) from the predicted CME arrival velocity (integrated in UGOE CME forecast chain (aka DDC))\\
+
+
+seasonal correction: $\Delta$Kp(month)\\
+$Kp_\text{impact} = Kp_\text{CME} \pm \Delta Kp(month)$\\
+

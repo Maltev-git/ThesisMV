@@ -563,11 +563,14 @@ ionosphere -> TEC -> GNSS error\\
 \label{sec:geomagnetic_indices}
 
 %%% various indices
-for Kp, AA and Dst read Section 7.4 in book \citet{Bothmer2007}...\\
+Several indices were defined for measuring variations in different parts of the geomagnetic system.\\
+The International Service of Geomagnetic Indices (ISGI) lists the following indices: ...\\
+
+
+
+for \Kp{}, $AA$ and $Dst$ read Section 7.4 in book \citet{Bothmer2007}...\\
 Geomagnetic indices (variety of indices AA, AE, Dst, etc.)\\
-Kp index, construction from 13 K stations... (-> look into early presentations)\\	%see GFZ Potsdam website
-% http://isgi.unistra.fr/indices_kp.php (nice figure with Kp obs locations)
-The Kp index is described in \autoref{sec:kp_index}.\\
+The \Kp~index is described in \autoref{sec:kp_index}.\\
 
 AE - intensity of northern polar electrojet\\
 Dst - intensity of magnetospheric ring current\\
@@ -695,19 +698,52 @@ WDC-SILSO -- World Data Center-Sunspot Index and Long-term Solar Observations\\
 %https://de.wikipedia.org/wiki/Sonnenfleck#Geschichte
 
 
-\subsection{\textit{Kp} index}
+\subsection{\Kp{}~index}
 \label{sec:kp_index}
 
-Kp index first introduced by \citet{Bartels1949}\\
-it was maintained at the University of Göttingen...\\
+\Kp{} is a geomagnetic disturbance index, introduced by Bartels in 1949 at the Institute for Geophysics, University of Göttingen \citep{Bartels1949}.\\
 
-insert figure of Kp musical diagram\\
+``It is designed to measure solar particle radiation by its magnetic effects.``\\
 
-mention IAGA...\\
+\Kp: magnetic field maximal variation range within 3~hours; 3"~hourly index\\
+The \Kp~index measures the maximal variation of the surface magnetic field within 3"~hour intervals. Its scale is a quasi-logarithmic representation of the actual magnetic field strength's variations.\\
 
-The German Research Centre for Geosciences (GFZ) in Potsdam supplies indices of global geomagnetic activity, more precisely the Kp index and thereof derived indices. The GFZ provides historical and quicklook data of the indices via their website\footnote{GFZ website: \url{http://www.gfz-potsdam.de/sektion/erdmagnetfeld/daten-produkte-dienste/kp-index/} (existent in 2017-02-12)}.\\
-list Kp derived indices\\
-ap, Ap, K, Cp, ...\\
+\Kp{} is calculated from local \textit{K} indices...\\
+\Kp{}~index, construction from 13~\textit{K} stations... (-> look into early presentations)\\	%see GFZ Potsdam website
+% http://isgi.unistra.fr/indices_kp.php (nice figure with Kp obs locations)
+
+The 13~observatories contributing to the \Kp{}~index are located around \SI{+-50}{\degree} geomagnetic latitude (see \autoref{fig:Kp_map}), however their distribution is biased towards Europe.\\
+\begin{figure}[htb]
+	%\centering
+	\fcapside[\FBwidth]{
+		\includegraphics[width=0.5\textwidth]{images/Kp_map.jpg}
+	}{
+		\caption{Distribution of the 13 \Kp{} stations. Credit: International Service of Geomagnetic Indices (ISGI), 2013.  look into cc license...}
+		\label{fig:Kp_map}
+	}
+\end{figure}
+%\url{http://isgi.unistra.fr/indices_kp.php}
+
+The \Kp{}~indices are often visualized in musical diagrams, where they are stacked into periods of 27~days to enable the detection of recurrent activities, as seen in \autoref{fig:musi1612}.\\
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\textwidth]{images/musi1612.pdf}
+	\caption{Bartels musical \Kp{} diagram for the time period from September until end of December 2016. Credit: GFZ~Potsdam, 2017. look into cc license...}
+	\label{fig:musi1612}
+\end{figure}
+%ftp://ftp.gfz-potsdam.de/pub/home/obs/kp-ap/music/
+
+The \Kp{}~intex can be converted to the 3"~hour equivalent $ap$~index, which represents the magnetic field strength at a position of about \SI{50}{\degree} dipole latitude. The conversion is done via a defined table (figure?), which is scaled in \SI{2}{nT} units.
+
+There are further geomagnetic indices which are derived from the \Kp{}~index. They include $Ap$, the daily $ap$ average, $Cp$, the daily $ap$ sum mapped via a defined table to the range \numrange{0}{2.5} and $C9$, a mapping of $Cp$ via a defined table to the range \numrange{0}{9}. Also obtained from the \Kp{}~index is the definition of Q"~days (quiet days) and D"~days (disturbed days).\\
+
+The \Kp{} index was maintained in Göttingen until January 1997 and is now maintained at the GFZ~Potsdam.\\
+mention International Association of Geomagnetism and Aeronomy (IAGA)...\\
+
+The German Research Centre for Geosciences (GFZ) in Potsdam supplies indices of global geomagnetic activity, more precisely the \Kp{} index and thereof derived indices. The GFZ provides historical and quicklook data of the indices via their website\footnote{GFZ website: \url{http://www.gfz-potsdam.de/de/kp-index/} (existent in 2017-10-05)}.\\
+
+%acknowledgments
+The results presented in this thesis rely on the \Kp{}"~index, calculated and made available by the GFZ"~Potsdam from data collected at magnetic observatories. We thank the involved national institutes, the INTERMAGNET network and ISGI (isgi.unistra.fr).\\
 
 
 \subsection{OMNI data set}

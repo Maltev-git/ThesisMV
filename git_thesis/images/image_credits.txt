@@ -53,11 +53,14 @@ http://www.sp.ph.ic.ac.uk/~davids/MHD_waves/lect1106_files/image002.jpg
 The cavity is called the �magnetosphere�.� It has a relatively well-defined outer boundary, the magnetopaus
 
 
+Kp_map.jpg
+http://isgi.unistra.fr/Images/reseau_Kp.jpg
+http://isgi.unistra.fr/indices_kp.php
 
 
-
-
-
+musi1612.ps
+ftp://ftp.gfz-potsdam.de/pub/home/obs/kp-ap/music/
+ps2pdf -dEPSCrop myfile.ps myfile.pdf
 
 
 

@@ -561,20 +561,15 @@ ionosphere -> TEC -> GNSS error\\
 
 \subsection{Geomagnetic indices}
 \label{sec:geomagnetic_indices}
+Geomagnetic observatories are distributed widely over the globe, measuring the local magnetic field at their position. Several sets of stations, covering specific regions, are defined to monitor the state of different parts of the magnetospheric system. Magnetic measurements from these sets define several geomagnetic indices. The International Association of Geomagnetism and Aeronomy (IAGA)  supports the following global geomagnetic indices which are serviced by the International Service of Geomagnetic Indices (ISGI)\footnote{ISGI website: \url{http://isgi.unistra.fr/}}:
+The $aa$~index is designed to represent the amplitude of the global geomagnetic activity, normalized to a geomagnetic latitude of \SI{+-50}{\degree}. The $am$~index characterizes the global geomagnetic activity. The \Kp{}~index is designed to measure geomagnetic disturbances from solar particle radiation [reword...]. The \Kp~index is described in more detail in \autoref{sec:kp_index}. The $Dst$~index monitors the intensity of the magnetospheric ring current. The $PC$~index monitors the polar cap magnetic activity. It approximates the amount of energy which entered the magnetosphere through solar wind coupling. The indices $AE$, $AU$, $AL$ and $AO$ measure the magnetic effects of the northern auroral electrojet.\\
 
-%%% various indices
-Several indices were defined for measuring variations in different parts of the geomagnetic system.\\
-The International Service of Geomagnetic Indices (ISGI) lists the following indices: ...\\
+The first three are calculated from different sets of local 3"~hourly $K$~indices, which measure the local magnetic disturbances at the observatories.\\
 
+Several indices are the basis for derived indices.\\
 
-
-for \Kp{}, $AA$ and $Dst$ read Section 7.4 in book \citet{Bothmer2007}...\\
-Geomagnetic indices (variety of indices AA, AE, Dst, etc.)\\
-The \Kp~index is described in \autoref{sec:kp_index}.\\
-
-AE - intensity of northern polar electrojet\\
-Dst - intensity of magnetospheric ring current\\
-Ring-Current Index Dst (read book Jursa1985 p. 4-31)\\
+[for \Kp{}, $AA$ and $Dst$ read Section 7.4 in book \citet{Bothmer2007}...\\
+$Dst$ (read book Jursa1985 p. 4-31)]\\
 
 
 \subsection{Solar wind--magnetosphere coupling}
@@ -708,7 +703,7 @@ WDC-SILSO -- World Data Center-Sunspot Index and Long-term Solar Observations\\
 \Kp: magnetic field maximal variation range within 3~hours; 3"~hourly index\\
 The \Kp~index measures the maximal variation of the surface magnetic field within 3"~hour intervals. Its scale is a quasi-logarithmic representation of the actual magnetic field strength's variations.\\
 
-\Kp{} is calculated from local \textit{K} indices...\\
+\Kp{} is a kind of average from 13 \textit{Ks} indices, which are standardized versions of local \textit{K} indices measured at 13 observatories.\\
 \Kp{}~index, construction from 13~\textit{K} stations... (-> look into early presentations)\\	%see GFZ Potsdam website
 % http://isgi.unistra.fr/indices_kp.php (nice figure with Kp obs locations)
 

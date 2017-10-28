@@ -108,9 +108,14 @@ sw structure marked plot\\
 
 
 \section{Solar distance dependency---theory}
-B-field radial profile: $B \propto r^{-.5?}$\\
-	Kivelson/Parker references\\
-	shear effect from solar rotation; talk 2014-07-21\\
+B-field radial profile: $B \propto r^{-1.5?}$\\
+	Magnetic field magnitude model (Kivelson 1995):\\
+	Br(r) = B0 / r²\\
+	Bphi(r) = -B0 omega / (Vr * r) (shear effect from solar rotation omega)\\
+	Btheta(r) = 0\\
+	B(r) = (Br² + Bphi² + Btheta²)**1/2\\
+	see also \url{radial_fit_B_test_plot.png}\\
+	Parker references\\
 velocity radial profile: $V \propto r^{0?}$\\
 	model based on LeBlanc1998 electron density with flux conservation: Zic2015(Temmer)\\
 density radial profile: $N \propto r^{-2}$\\

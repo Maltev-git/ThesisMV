@@ -376,6 +376,7 @@ MHD simulations based on Voyager~1 and 2 measurements within the heliosheath ind
 list event/structure types\\
 solar wind structures source regions: sunspots/active regions, coronal holes, filaments\\
 
+sw density considerations, see presi S³\\
 
 \subsection{Solar wind plasma}
 \label{sec:solar_wind_plasma}
@@ -498,6 +499,7 @@ lovely, disruptive, dangerous consequences <-- read in VBbook\\
 
 at Earth the solar wind total energy flux ($1.45~\text{mW/m}^2$) is only about one millionth of the solar radiation flux (see \citet[p.~153]{Schwenn1990})\\
 
+"The principal users affected by geomagnetic storms are the electrical power grid, spacecraft operations, users of radio signals that reflect off of or pass through the ionosphere, and observers of the aurora." NOAA cite\\
 
 \subsection{Magnetosphere}
 \label{sec:magnetosphere}
@@ -562,11 +564,8 @@ ionosphere -> TEC -> GNSS error\\
 \subsection{Geomagnetic indices}
 \label{sec:geomagnetic_indices}
 Geomagnetic observatories are distributed widely over the globe, measuring the local magnetic field at their position. Several sets of stations, covering specific regions, are defined to monitor the state of different parts of the magnetospheric system. Magnetic measurements from these sets define several geomagnetic indices. The International Association of Geomagnetism and Aeronomy (IAGA)  supports the following global geomagnetic indices which are serviced by the International Service of Geomagnetic Indices (ISGI)\footnote{ISGI website: \url{http://isgi.unistra.fr/}}:
-The $aa$~index is designed to represent the amplitude of the global geomagnetic activity, normalized to a geomagnetic latitude of \SI{+-50}{\degree}. The $am$~index characterizes the global geomagnetic activity. The \Kp{}~index is designed to measure geomagnetic disturbances from solar particle radiation [reword...]. The \Kp~index is described in more detail in \autoref{sec:kp_index}. The $Dst$~index monitors the intensity of the magnetospheric ring current. The $PC$~index monitors the polar cap magnetic activity. It approximates the amount of energy which entered the magnetosphere through solar wind coupling. The indices $AE$, $AU$, $AL$ and $AO$ measure the magnetic effects of the northern auroral electrojet.\\
-
-The first three are calculated from different sets of local 3"~hourly $K$~indices, which measure the local magnetic disturbances at the observatories.\\
-
-Several indices are the basis for derived indices.\\
+The $aa$~index is designed to represent the amplitude of the global geomagnetic activity, normalized to a geomagnetic latitude of \SI{+-50}{\degree}. The $am$~index characterizes the global geomagnetic activity. The \Kp{}~index is designed to measure geomagnetic disturbances from solar particle radiation [reword...]. The \Kp~index is described in more detail in \autoref{sec:kp_index}. The $Dst$~index monitors the intensity of the magnetospheric ring current. The $PC$~index monitors the polar cap magnetic activity -- it approximates the amount of energy which entered the magnetosphere through solar wind coupling. The $AE$~index and its relatives $AU$, $AL$ and $AO$ measure the magnetic effects of the northern auroral electrojet.
+The first three listed indices (\textit{aa}, \textit{am} and \Kp{}) are calculated from different sets of local 3"~hourly $K$~indices, which measure the local magnetic disturbances at the observatories. There exist several more indices that are based on some of those listed above.\\
 
 [for \Kp{}, $AA$ and $Dst$ read Section 7.4 in book \citet{Bothmer2007}...\\
 $Dst$ (read book Jursa1985 p. 4-31)]\\
@@ -695,23 +694,13 @@ WDC-SILSO -- World Data Center-Sunspot Index and Long-term Solar Observations\\
 
 \subsection{\Kp{}~index}
 \label{sec:kp_index}
+Julius~Bartels introduced the \textit{K}~index in 1938 and designed it to measure the intensity of geomagnetic disturbances \citep{Bartels1939}. Its name originates from 'Kennziffer' -- the german word for characteristic digit. The \textit{K}~index is a measure for the maximal variation of the surface magnetic field, observed in a magnetogram within 3"~hour intervals. Its scale in the range 0--9 is a quasi-logarithmic representation of the actual magnetic field strength's variations.
 
-\Kp{} is a geomagnetic disturbance index, introduced by Bartels in 1949 at the Institute for Geophysics, University of Göttingen \citep{Bartels1949}.\\
-
-``It is designed to measure solar particle radiation by its magnetic effects.``\\
-
-\Kp: magnetic field maximal variation range within 3~hours; 3"~hourly index\\
-The \Kp~index measures the maximal variation of the surface magnetic field within 3"~hour intervals. Its scale is a quasi-logarithmic representation of the actual magnetic field strength's variations.\\
-
-\Kp{} is a kind of average from 13 \textit{Ks} indices, which are standardized versions of local \textit{K} indices measured at 13 observatories.\\
-\Kp{}~index, construction from 13~\textit{K} stations... (-> look into early presentations)\\	%see GFZ Potsdam website
-% http://isgi.unistra.fr/indices_kp.php (nice figure with Kp obs locations)
-
-The 13~observatories contributing to the \Kp{}~index are located around \SI{+-50}{\degree} geomagnetic latitude (see \autoref{fig:Kp_map}), however their distribution is biased towards Europe.\\
+The Planetary \textit{K}~index (\Kp{}) is a planetary geomagnetic disturbance index, introduced by Bartels in 1949 at the Institute for Geophysics, University of Göttingen \citep{Bartels1949}. \Kp{} is the weighted average of 13 \textit{Ks}~indices, which are the standardized versions of the local \textit{K} indices measured at 13 observatories. These contributing observatories are located around \SI{+-50}{\degree} geomagnetic latitude (see \autoref{fig:Kp_map}), however their distribution is biased towards Europe.
 \begin{figure}[htb]
 	%\centering
 	\fcapside[\FBwidth]{
-		\includegraphics[width=0.5\textwidth]{images/Kp_map.jpg}
+		\includegraphics[width=0.6\textwidth]{images/Kp_map.jpg}
 	}{
 		\caption{Distribution of the 13 \Kp{} stations. Credit: International Service of Geomagnetic Indices (ISGI), 2013.  look into cc license...}
 		\label{fig:Kp_map}
@@ -719,7 +708,7 @@ The 13~observatories contributing to the \Kp{}~index are located around \SI{+-50
 \end{figure}
 %\url{http://isgi.unistra.fr/indices_kp.php}
 
-The \Kp{}~indices are often visualized in musical diagrams, where they are stacked into periods of 27~days to enable the detection of recurrent activities, as seen in \autoref{fig:musi1612}.\\
+To benefit from its higher precision, its scale, in the range 0--9 as well, is further divided into thirds, represented by the suffixes '$+$', 'o' and '$-$' (e.g., 3o, $3+$, $4-$, 4o). The \Kp{}~indices are often visualized in musical diagrams, where they are stacked into periods of 27~days to enable the detection of recurrent activities, as seen in \autoref{fig:musi1612}.\\
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{images/musi1612.pdf}
@@ -728,17 +717,36 @@ The \Kp{}~indices are often visualized in musical diagrams, where they are stack
 \end{figure}
 %ftp://ftp.gfz-potsdam.de/pub/home/obs/kp-ap/music/
 
-The \Kp{}~intex can be converted to the 3"~hour equivalent $ap$~index, which represents the magnetic field strength at a position of about \SI{50}{\degree} dipole latitude. The conversion is done via a defined table (figure?), which is scaled in \SI{2}{nT} units.
+``It is designed to measure solar particle radiation by its magnetic effects.``\\
 
-There are further geomagnetic indices which are derived from the \Kp{}~index. They include $Ap$, the daily $ap$ average, $Cp$, the daily $ap$ sum mapped via a defined table to the range \numrange{0}{2.5} and $C9$, a mapping of $Cp$ via a defined table to the range \numrange{0}{9}. Also obtained from the \Kp{}~index is the definition of Q"~days (quiet days) and D"~days (disturbed days).\\
+\Kp: magnetic field maximal variation range within 3~hours; 3"~hourly index\\
+
+The \Kp{}~intex can be converted to the 3"~hour equivalent $ap$~index, which represents the magnetic field strength at a position of about \SI{50}{\degree} dipole latitude. The conversion is done via a defined table, which is scaled in \SI{2}{nT} units (see \autoref{tab:kp_to_ap_table}). There are further geomagnetic indices which are derived from the \Kp{}~index. They include $Ap$, the daily $ap$ average, $Cp$, the daily $ap$ sum mapped via a defined table to the range \numrange{0}{2.5} and $C9$, a mapping of $Cp$ via a defined table to the range \numrange{0}{9}. The definitions of Q"~days (quiet days) and D"~days (disturbed days) are also obtained from the \Kp{}~index.\\
+\begin{table}
+	\caption{Conversion table from the \Kp~index to the equivalent \textit{ap}~index.}
+	\label{tab:kp_to_ap_table}
+	\centering
+	\begin{tabular}{lssssssssssssss}
+		\Kp	&0o	&0+	&1-	&1o	&1+	&2-	&2o	&2+	&3-	&3o	&3+	&4-	&4o	&4+\\
+		\textit{ap} [\SI{2}{nT}]	&0	&2	&3	&4	&5	&6	&7	&9	&12	&15	&18	&22	&27	&32\\
+		\hline
+		\Kp	&5-	&5o	&5+	&6-	&6o	&6+	&7-	&7o	&7+	&8-	&8o	&8+	&9-	&9o\\
+		\textit{ap} [\SI{2}{nT}]	&39	&48	&56	&67	&80	&94	&111	&132	&154	&179	&207	&236	&300	&400
+	\end{tabular}
+\end{table}
+
+
+
+The International Association of Geomagnetism and Aeronomy (IAGA) adopted the \Kp{}~index in 1954.\\
 
 The \Kp{} index was maintained in Göttingen until January 1997 and is now maintained at the GFZ~Potsdam.\\
-mention International Association of Geomagnetism and Aeronomy (IAGA)...\\
-
 The German Research Centre for Geosciences (GFZ) in Potsdam supplies indices of global geomagnetic activity, more precisely the \Kp{} index and thereof derived indices. The GFZ provides historical and quicklook data of the indices via their website\footnote{GFZ website: \url{http://www.gfz-potsdam.de/de/kp-index/} (existent in 2017-10-05)}.\\
+
+derived values: NOAA scales, GNSS error, auroral boundary positions\\
 
 %acknowledgments
 The results presented in this thesis rely on the \Kp{}"~index, calculated and made available by the GFZ"~Potsdam from data collected at magnetic observatories. We thank the involved national institutes, the INTERMAGNET network and ISGI (isgi.unistra.fr).\\
+
 
 
 \subsection{OMNI data set}
@@ -879,3 +887,8 @@ Helios 2: 1976-01-01 - 1980-03-04\\
 Mag data availability: 54.4~\%\\
 Plasma \& orbit data availability: 91.8~\%\\
 
+
+\subsection{Parker Solar Probe}
+\label{sec:parker_solar_probe}
+
+Sun angular diameter comparison, see presi S³\\

@@ -238,7 +238,7 @@ Observations of the surface radial magnetic field show the appearance of bipolar
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{images/Hathaway_magbfly_201610.jpg}
-	\caption{This magnetic butterfly diagram maps the synoptic radial magnetic field on the solar surface. Yellow represents an outward directed magnetic field (positive), blue inward (negative). The data is obtained from instruments on Kitt~Peak National Observatory and from the MDI at the SOHO spacecraft. Credit: David~Hathaway, NASA Marshall Space Flight Center; see also \citet[Fig.~17]{Hathaway2015}. Update this figure before printing! get permission...}
+	\caption{Magnetic butterfly diagram of the synoptic radial magnetic field on the solar surface. Yellow represents an outward directed magnetic field (positive), blue inward (negative). The data is obtained from instruments on Kitt~Peak National Observatory and from the MDI at the SOHO spacecraft. Credit: David~Hathaway, NASA Marshall Space Flight Center; see also \citet[Fig.~17]{Hathaway2015}. Update this figure before printing! get permission...}
 	\label{fig:Hathaway_magbfly}
 \end{figure}
 %figure source:	http://solarscience.msfc.nasa.gov/images/magbfly.jpg
@@ -662,23 +662,34 @@ The temperature scales with the distribution's width.\\
 
 
 \section{Data sources}
-%\label{sec:}
 
 Spacecraft / data sets\\
 
 Positions:\\
 Earth:\\
 	imager, magnetosphere\\
-L1 - Lagrangian point:\\
+L1 - first Lagrangian point:\\
 	ACE (siehe auch space weather spacecraft Liste)\\
 	Wind etc. (OMNI)\\
+	DSCOVR\\
+1~au orbit\\
+	STEREO~A and B\\
 inner heliosphere:\\
 	Helios~1 \& 2\\
+	PSP\\
 outer heliosphere:\\
 	Voyager~1 and 2\\
 	Ulysses\\
 
-also RT-data sources?\\
+also RT-data sources? Wind, ACE, STEREO~A and B, DSCOVR\\
+
+A time coverage overview of the data sets used in the analyses of this thesis (SSN, \Kp~index, LRO, HRO, Helios~1 and 2) is plotted in \autoref{fig:timeline_SSN_with_data_and_sc}.\\
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\textwidth]{images/gnuplots/timeline_SSN_with_data_and_sc.pdf}
+	\caption{Time coverage of the \Kp~index, low and high resolution OMNI, Helios~1 and Helios~2 data sets until end of 2016. The SIDC 13-month smoothed monthly SSN is plotted in the background.}
+	\label{fig:timeline_SSN_with_data_and_sc}
+\end{figure}
 
 
 \subsection{Sunspot number}
@@ -761,33 +772,16 @@ NASA, Goddard Space Flight Center (GSFC), Space Physics Data Facility (SPDF): \u
 - OMNIWeb Plus: \url{http://omniweb.gsfc.nasa.gov/}\\	%exintent in 2016-08-18
 %OMNIWeb Data Documentation: http://omniweb.gsfc.nasa.gov/html/ow_data.html
 
-
-intercalibrated multi-spacecraft OMNI data coverage (see also talk 2014-02-18), see \autoref{fig:timeline_OMNI_SC_IDs_}\\
+intercalibrated multi-spacecraft solar wind data\\
+Various spacecraft contribute to the interplanetary magnetic field (IMF) and solar wind plasma OMNI data, as seen in \autoref{fig:timeline_OMNI_SC_IDs}.\\
 \begin{figure}[htb]
 	\centering
-	\includegraphics[width=\textwidth]{images/gnuplots/timeline_OMNI_SC_IDs_.pdf}
-	\caption{Low Resolution OMNI (LRO) data spacecraft coverage. integrate into 1 panel...}
-	\label{fig:timeline_OMNI_SC_IDs_}
+	\includegraphics[width=\textwidth]{images/gnuplots/timeline_OMNI_SC_IDs.pdf}
+	\caption{IMF and solar wind plasma data source spacecraft for the high and the low resolution OMNI (HRO, LRO) data sets until end of 2016. The SIDC 13-month smoothed monthly SSN is plotted in the background.}
+	\label{fig:timeline_OMNI_SC_IDs}
 \end{figure}
 
-HRO s/c coverage figure...\\
-make LRO, HRO, Helios, PSP, Kp, SSN overview timeline...\\
-
-
-\subsubsection{Advanced Composition Explorer}
-
-s/c figure, launch date was 25 August 1997\\
-
-MAG -- fluxgate magnetometer\\
-SWEPAM\\	%https://sci-hub.ac/10.1023/A:1005040232597
-
-data errors/gaps...\\
-
-DSCOVR as replacement was launched on 11~Februar 2015. It is NOAA's SWPC real-time solar wind prime source since 27 July 2016.\footnote{\url{http://www.swpc.noaa.gov/products/real-time-solar-wind}}\\
-
-
 \subsubsection{Solar Wind Structures}
-
 Solar Wind Structures (SWS) list\\
 derived by Richardson.... from OMNI data (only?)
 
@@ -886,3 +880,16 @@ Plasma \& orbit data availability: 91.8~\%\\
 \label{sec:parker_solar_probe}
 
 Sun angular diameter comparison, see presi S³\\
+
+
+\subsection{Real-time solar wind data}
+
+Advanced Composition Explorer\\
+s/c figure, launch date was 25 August 1997\\
+
+MAG -- fluxgate magnetometer\\
+SWEPAM\\	%https://sci-hub.ac/10.1023/A:1005040232597
+
+data errors/gaps...\\
+
+DSCOVR as replacement was launched on 11~Februar 2015. It is NOAA's SWPC real-time solar wind prime source since 27 July 2016.\footnote{\url{http://www.swpc.noaa.gov/products/real-time-solar-wind}}\\

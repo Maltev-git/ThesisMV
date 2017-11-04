@@ -47,21 +47,29 @@
 %Analyse der Helios-Datensätze für die Modellierung des Sonnenwindes im Bereich des SolarProbePlus Orbits für die WISPR-Kamera
 
 
-
 \input{style/short_commands_malte}
+\input{style/aa_compatibility_malte}
 
 
 %\includeonly{filename1,filename2,...}
 
-\begin{document}
+\begin{document}	%use input instead of include...
 	\pagenumbering{Roman}
 	\include{chapters/cover}		%cover_formal
 	\pagenumbering{arabic}
 	\include{chapters/introduction}		%introduction, basics and data
 %	\include{chapters/data}
+
+	%####--  Chapter2  --####
+	\include{chapters/chapter2_wrapper}
+
+	%####--  PaperMVVB  --####
+	\include{chapters/paperMVVB_wrapper}
+	%\bibliography{paperMVVB/sections/literature_bibtex}
+	%\includepdf[pages=-]{paperMVVB/paperMVVB_without_bold.pdf}
+
 	\include{chapters/analyses_helios}
 	\include{chapters/analyses_helios_lineup}
-	\include{chapters/analyses_omni}
 	\include{chapters/results}
 	\include{chapters/summary}	%summary and conclusions
 
@@ -72,15 +80,13 @@
 	%\include{appendix/figures}
 
 	\bibliographystyle{style/apj_modified_v3_url}	%style/mn, style/astron, plain, plainnat, style/apj, alpha, abbrv, style/apj_modified_v3, style/apj_modified_v3_url
-	\bibliography{appendix/literature_bibtex,appendix/literature_bibtex_custom_entries}	%style/mn-jour, style/apj-jour
+	\bibliography{appendix/literature_bibtex,appendix/literature_bibtex_custom_entries,paperMVVB/sections/literature_bibtex}	%style/mn-jour, style/apj-jour
 	
 	\include{appendix/acknowledgments}
 	\include{appendix/curriculum_vitae}
 	\include{notes}	% spaeter entfernen
 
 \end{document}
-
-
 
 
 

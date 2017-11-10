@@ -1,8 +1,8 @@
 % aa compatibility
 % 2017-11-04
 
-\newcommand{\Rs}{Rsun}
-\newcommand{\sun}{$\odot$}
+\newcommand*{\sun}{\ensuremath{\odot}}
+\newcommand{\Rs}{$R_\sun{}$}
 
 \def\tablefootmark#1{{\footnotemark{#1}}}
 \def\tablefoot#1{{#1}}
@@ -17,3 +17,6 @@
 
 % acknowledgments
 \def\acknowledgements#1{\section{Acknowledgments} #1}
+
+%search&replace:
+%[width=18cm] -> [width=\textwidth]

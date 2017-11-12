@@ -53,30 +53,31 @@
 
 %\includeonly{filename1,filename2,...}
 
-\begin{document}	%use input instead of include...
+\begin{document}
+	%\include{filename} essentially does a \clearpage before and after \input{filename}
 	\pagenumbering{Roman}
 	\include{chapters/cover}		%cover_formal
 	\pagenumbering{arabic}
-	\include{chapters/introduction}		%introduction, basics and data
-%	\include{chapters/data}
+	\input{chapters/introduction}		%introduction, basics and data
 
 	%####--  Chapter2  --####
-	\include{chapters/chapter2_wrapper}
+	\input{chapters/chapter2_wrapper}
+
+	\input{chapters/analyses_omni}
 
 	%####--  PaperMVVB  --####
-	\include{chapters/paperMVVB_wrapper}
+	\input{chapters/paperMVVB_wrapper}
 	%\bibliography{paperMVVB/sections/literature_bibtex}
 	%\includepdf[pages=-]{paperMVVB/paperMVVB_without_bold.pdf}
 
-	\include{chapters/analyses_helios}
-	\include{chapters/analyses_helios_lineup}
-	\include{chapters/results}
-	\include{chapters/summary}	%summary and conclusions
+	\input{chapters/analyses_helios}
+	\input{chapters/analyses_helios_lineup}
+	\input{chapters/discussion_summary}
 
 	\appendix
-	\include{appendix/physics}	%theory & calculations
-	\include{appendix/math}		%definitions, methods, calculations
-	\include{appendix/glossary}
+	\input{appendix/physics}	%theory & calculations
+	\input{appendix/math}		%definitions, methods, calculations
+	\input{appendix/glossary}
 	%\include{appendix/figures}
 
 	\bibliographystyle{style/apj_modified_v3_url}	%style/mn, style/astron, plain, plainnat, style/apj, alpha, abbrv, style/apj_modified_v3, style/apj_modified_v3_url

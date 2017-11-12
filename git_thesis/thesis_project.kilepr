@@ -4,7 +4,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.1.3
-lastDocument=paperMVVB/sections/content.tex
+lastDocument=chapters/cover.tex
 masterDocument=
 name=thesis_project
 pkg_extIsRegExp=false
@@ -86,6 +86,20 @@ Highlighting=LaTeX
 Indentation Mode=normal
 Mode=LaTeX
 
+[document-settings,item:chapter2/sections/abstract.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Indentation Mode=normal
+Mode=LaTeX
+
+[document-settings,item:chapter2/sections/content.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Indentation Mode=normal
+Mode=LaTeX
+
 [document-settings,item:chapters/analyses_helios.tex]
 Bookmarks=
 Encoding=UTF-8
@@ -121,6 +135,13 @@ Highlighting=LaTeX
 Indentation Mode=normal
 Mode=LaTeX
 
+[document-settings,item:chapters/discussion_summary.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Indentation Mode=normal
+Mode=LaTeX
+
 [document-settings,item:chapters/introduction.tex]
 Bookmarks=
 Encoding=UTF-8
@@ -129,20 +150,6 @@ Indentation Mode=normal
 Mode=LaTeX
 
 [document-settings,item:chapters/paperMVVB_wrapper.tex]
-Bookmarks=
-Encoding=UTF-8
-Highlighting=LaTeX
-Indentation Mode=normal
-Mode=LaTeX
-
-[document-settings,item:chapters/results.tex]
-Bookmarks=
-Encoding=UTF-8
-Highlighting=LaTeX
-Indentation Mode=normal
-Mode=LaTeX
-
-[document-settings,item:chapters/summary.tex]
 Bookmarks=
 Encoding=UTF-8
 Highlighting=LaTeX
@@ -185,7 +192,7 @@ Indentation Mode=normal
 Mode=BibTeX
 
 [document-settings,item:style/aa_compatibility_malte.tex]
-Bookmarks=
+Bookmarks=21
 Encoding=UTF-8
 Highlighting=LaTeX
 Indentation Mode=normal
@@ -217,17 +224,17 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=47
+line=1
 mode=LaTeX
 open=false
 order=1
 
 [item:appendix/curriculum_vitae.tex]
 archive=true
-column=454
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=9
+line=1
 mode=LaTeX
 open=false
 order=-1
@@ -254,10 +261,10 @@ order=2
 
 [item:appendix/glossary.tex]
 archive=true
-column=17
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=0
+line=1
 mode=LaTeX
 open=false
 order=-1
@@ -274,10 +281,10 @@ order=2
 
 [item:appendix/literature_bibtex_combined.bib]
 archive=true
-column=20
+column=25
 encoding=UTF-8
 highlight=BibTeX
-line=805
+line=1116
 mode=BibTeX
 open=false
 order=-1
@@ -294,27 +301,57 @@ order=-1
 
 [item:appendix/math.tex]
 archive=true
-column=116
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=39
+line=1
 mode=LaTeX
 open=false
 order=4
 
 [item:appendix/physics.tex]
 archive=true
-column=142
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=149
+line=1
 mode=LaTeX
 open=false
 order=5
 
+[item:chapter2/sections/abstract.tex]
+archive=true
+column=20
+encoding=UTF-8
+highlight=LaTeX
+line=1
+mode=LaTeX
+open=false
+order=-1
+
+[item:chapter2/sections/acknowledgments.tex]
+archive=true
+column=1
+encoding=
+highlight=
+line=0
+mode=
+open=false
+order=-1
+
+[item:chapter2/sections/content.tex]
+archive=true
+column=26
+encoding=UTF-8
+highlight=LaTeX
+line=57
+mode=LaTeX
+open=false
+order=-1
+
 [item:chapters/analyses_helios.tex]
 archive=true
-column=28
+column=0
 encoding=UTF-8
 highlight=LaTeX
 line=0
@@ -327,7 +364,7 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=0
+line=1
 mode=LaTeX
 open=false
 order=-1
@@ -344,57 +381,37 @@ order=1
 
 [item:chapters/chapter2_wrapper.tex]
 archive=true
-column=0
+column=26
 encoding=UTF-8
 highlight=LaTeX
-line=0
+line=4
 mode=LaTeX
 open=false
 order=-1
 
 [item:chapters/cover.tex]
 archive=true
-column=58
+column=116
 encoding=UTF-8
 highlight=LaTeX
-line=221
-mode=LaTeX
-open=false
-order=1
-
-[item:chapters/introduction.tex]
-archive=true
-column=372
-encoding=UTF-8
-highlight=LaTeX
-line=105
+line=223
 mode=LaTeX
 open=true
-order=3
+order=0
 
-[item:chapters/paperMVVB_wrapper.tex]
+[item:chapters/discussion_summary.tex]
 archive=true
-column=1
+column=22
 encoding=UTF-8
 highlight=LaTeX
 line=4
 mode=LaTeX
 open=false
-order=1
+order=3
 
-[item:chapters/results.tex]
+[item:chapters/introduction.tex]
 archive=true
-column=42
-encoding=UTF-8
-highlight=LaTeX
-line=11
-mode=LaTeX
-open=false
-order=4
-
-[item:chapters/summary.tex]
-archive=true
-column=0
+column=21
 encoding=UTF-8
 highlight=LaTeX
 line=1
@@ -402,12 +419,22 @@ mode=LaTeX
 open=false
 order=3
 
-[item:notes.tex]
+[item:chapters/paperMVVB_wrapper.tex]
 archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=123
+line=13
+mode=LaTeX
+open=false
+order=1
+
+[item:notes.tex]
+archive=true
+column=17
+encoding=UTF-8
+highlight=LaTeX
+line=67
 mode=LaTeX
 open=false
 order=4
@@ -434,12 +461,12 @@ order=-1
 
 [item:paperMVVB/sections/content.tex]
 archive=true
-column=39
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=147
+line=173
 mode=LaTeX
-open=true
+open=false
 order=4
 
 [item:paperMVVB/sections/literature_bibtex.bib]
@@ -454,12 +481,12 @@ order=-1
 
 [item:style/aa_compatibility_malte.tex]
 archive=true
-column=34
+column=1
 encoding=UTF-8
 highlight=LaTeX
-line=21
+line=7
 mode=LaTeX
-open=true
+open=false
 order=2
 
 [item:style/header.tex]
@@ -467,10 +494,10 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=10
+line=26
 mode=LaTeX
-open=true
-order=0
+open=false
+order=2
 
 [item:style/short_commands_malte.tex]
 archive=true
@@ -484,10 +511,10 @@ order=-1
 
 [item:thesis.tex]
 archive=true
-column=92
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=82
+line=54
 mode=LaTeX
 open=true
 order=1
@@ -504,15 +531,15 @@ order=-1
 
 [view-settings,view=0,item:appendix/acknowledgments.tex]
 CursorColumn=0
-CursorLine=47
+CursorLine=1
 JumpList=
-ViMarks=.,46,292,[,46,0,],-1,-1
+ViMarks=.,0,0,[,1,0,],-1,-1
 
 [view-settings,view=0,item:appendix/curriculum_vitae.tex]
-CursorColumn=454
-CursorLine=9
+CursorColumn=0
+CursorLine=1
 JumpList=
-ViMarks=.,4,30,[,4,0,],4,30
+ViMarks=.,0,0,[,1,0,],-1,-1
 
 [view-settings,view=0,item:appendix/declaration.tex]
 CursorColumn=0
@@ -527,10 +554,10 @@ JumpList=
 ViMarks=.,29,15,[,29,15,],29,15
 
 [view-settings,view=0,item:appendix/glossary.tex]
-CursorColumn=17
-CursorLine=0
+CursorColumn=0
+CursorLine=1
 JumpList=
-ViMarks=.,7,90,[,7,90,],7,90
+ViMarks=.,0,0,[,1,0,],-1,-1
 
 [view-settings,view=0,item:appendix/literature_bibtex.bib]
 CursorColumn=74
@@ -539,10 +566,10 @@ JumpList=
 ViMarks=.,697,97,[,697,97,],697,97
 
 [view-settings,view=0,item:appendix/literature_bibtex_combined.bib]
-CursorColumn=20
-CursorLine=805
+CursorColumn=25
+CursorLine=1116
 JumpList=
-ViMarks=.,806,67,[,806,67,],806,67
+ViMarks=.,1116,24,[,1116,23,],1116,24
 
 [view-settings,view=0,item:appendix/literature_bibtex_custom_entries.bib]
 CursorColumn=0
@@ -551,28 +578,40 @@ JumpList=
 ViMarks=.,46,0,[,46,0,],46,0
 
 [view-settings,view=0,item:appendix/math.tex]
-CursorColumn=116
-CursorLine=39
+CursorColumn=0
+CursorLine=1
 JumpList=
-ViMarks=.,39,98,[,39,98,],39,115
+ViMarks=.,0,0,[,1,0,],-1,-1
 
 [view-settings,view=0,item:appendix/physics.tex]
-CursorColumn=142
-CursorLine=149
+CursorColumn=0
+CursorLine=1
 JumpList=
-ViMarks=.,149,141,[,149,139,],149,141
+ViMarks=.,0,0,[,1,0,],-1,-1
+
+[view-settings,view=0,item:chapter2/sections/abstract.tex]
+CursorColumn=20
+CursorLine=1
+JumpList=
+ViMarks=.,1,19,[,1,8,],1,19
+
+[view-settings,view=0,item:chapter2/sections/content.tex]
+CursorColumn=26
+CursorLine=57
+JumpList=
+ViMarks=.,199,0,[,199,0,],199,0
 
 [view-settings,view=0,item:chapters/analyses_helios.tex]
-CursorColumn=28
-CursorLine=0
-JumpList=
-ViMarks=.,0,27,[,0,18,],0,27
-
-[view-settings,view=0,item:chapters/analyses_helios_lineup.tex]
 CursorColumn=0
 CursorLine=0
 JumpList=
 ViMarks=.,0,0,[,0,0,],0,0
+
+[view-settings,view=0,item:chapters/analyses_helios_lineup.tex]
+CursorColumn=0
+CursorLine=1
+JumpList=
+ViMarks=.,0,0,[,1,0,],-1,-1
 
 [view-settings,view=0,item:chapters/analyses_omni.tex]
 CursorColumn=0
@@ -581,46 +620,40 @@ JumpList=
 ViMarks=.,80,0,[,80,0,],80,0
 
 [view-settings,view=0,item:chapters/chapter2_wrapper.tex]
-CursorColumn=0
-CursorLine=0
-JumpList=
-ViMarks=
-
-[view-settings,view=0,item:chapters/cover.tex]
-CursorColumn=58
-CursorLine=221
-JumpList=
-ViMarks=.,221,57,[,221,44,],221,57
-
-[view-settings,view=0,item:chapters/introduction.tex]
-CursorColumn=372
-CursorLine=105
-JumpList=
-ViMarks=.,105,372,[,105,372,],105,372
-
-[view-settings,view=0,item:chapters/paperMVVB_wrapper.tex]
-CursorColumn=1
+CursorColumn=26
 CursorLine=4
 JumpList=
-ViMarks=.,4,0,[,4,0,],4,0
+ViMarks=.,9,20,[,9,13,],9,20
 
-[view-settings,view=0,item:chapters/results.tex]
-CursorColumn=42
-CursorLine=11
+[view-settings,view=0,item:chapters/cover.tex]
+CursorColumn=116
+CursorLine=223
 JumpList=
-ViMarks=.,11,41,[,11,41,],11,41
+ViMarks=.,223,115,[,223,89,],223,115
 
-[view-settings,view=0,item:chapters/summary.tex]
-CursorColumn=0
+[view-settings,view=0,item:chapters/discussion_summary.tex]
+CursorColumn=22
+CursorLine=4
+JumpList=
+ViMarks=.,4,21,[,4,20,],4,21
+
+[view-settings,view=0,item:chapters/introduction.tex]
+CursorColumn=21
 CursorLine=1
 JumpList=
-ViMarks=.,1,0,[,1,0,],1,0
+ViMarks=.,0,0,[,1,0,],-1,-1
+
+[view-settings,view=0,item:chapters/paperMVVB_wrapper.tex]
+CursorColumn=0
+CursorLine=13
+JumpList=
+ViMarks=.,12,31,[,11,0,],-1,-1
 
 [view-settings,view=0,item:notes.tex]
-CursorColumn=0
-CursorLine=123
+CursorColumn=17
+CursorLine=67
 JumpList=
-ViMarks=.,0,7,[,0,1,],0,7
+ViMarks=.,67,16,[,67,14,],67,16
 
 [view-settings,view=0,item:paperMVVB/sections/abstract.tex]
 CursorColumn=117
@@ -635,10 +668,10 @@ JumpList=
 ViMarks=.,10,0,[,10,0,],10,0
 
 [view-settings,view=0,item:paperMVVB/sections/content.tex]
-CursorColumn=39
-CursorLine=147
+CursorColumn=0
+CursorLine=173
 JumpList=
-ViMarks=.,147,0,[,147,0,],147,0
+ViMarks=.,219,0,[,219,0,],219,0
 
 [view-settings,view=0,item:paperMVVB/sections/literature_bibtex.bib]
 CursorColumn=0
@@ -647,16 +680,16 @@ JumpList=
 ViMarks=.,778,73,[,778,73,],778,73
 
 [view-settings,view=0,item:style/aa_compatibility_malte.tex]
-CursorColumn=34
-CursorLine=21
+CursorColumn=1
+CursorLine=7
 JumpList=
-ViMarks=.,21,24,[,21,24,],21,33
+ViMarks=.,7,0,[,7,0,],7,0,a,21,0
 
 [view-settings,view=0,item:style/header.tex]
 CursorColumn=0
-CursorLine=10
+CursorLine=26
 JumpList=
-ViMarks=.,10,0,[,10,0,],10,0
+ViMarks=.,25,22,[,26,0,],-1,-1
 
 [view-settings,view=0,item:style/short_commands_malte.tex]
 CursorColumn=20
@@ -665,7 +698,7 @@ JumpList=
 ViMarks=.,25,19,[,25,19,],25,19
 
 [view-settings,view=0,item:thesis.tex]
-CursorColumn=92
-CursorLine=82
+CursorColumn=0
+CursorLine=54
 JumpList=
-ViMarks=.,82,92,[,82,92,],82,92
+ViMarks=.,58,8,[,58,4,],58,8

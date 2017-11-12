@@ -4,9 +4,9 @@
 \newcommand*{\sun}{\ensuremath{\odot}}
 \newcommand{\Rs}{$R_\sun{}$}
 
-\def\tablefootmark#1{{\footnotemark{#1}}}
-\def\tablefoot#1{{#1}}
-\def\tablefoottext#1#2{{#1}{#2}}
+\newcommand{\vBz}{$vB_\text{z}$}
+%\renewcommand{\~}{\hbox{-}}	%replaces the command letter-tilde with nonbreaking hyphen
+
 
 % abstract
 \def\titley#1{{\chapter{#1}}}			%add 'y'
@@ -18,5 +18,50 @@
 % acknowledgments
 \def\acknowledgements#1{\section{Acknowledgments} #1}
 
-%search&replace:
+
+%tablefootnote taken from aa.cls:
+\newlength{\VSpaceBeforeTabBib}
+\setlength{\VSpaceBeforeTabBib}{2ex}
+\newlength{\VSpaceBeforeTabFoot}
+\setlength{\VSpaceBeforeTabFoot}{2ex}
+
+\newcommand*\aa@tablefootname{Notes}
+\newcommand*\aa@tablefootfont{\small}
+\newcommand*\aa@tablefootnamefont{\small\bfseries}
+
+\newcommand\tablefoot[1]{\VSpaceBeforeTabBib=1ex
+  \par\vspace{\VSpaceBeforeTabFoot}
+  \noindent
+  \begin{minipage}{\linewidth}
+    {\aa@tablefootnamefont\aa@tablefootname}~
+    \aa@tablefootfont
+    \ignorespaces
+    #1
+  \end{minipage}
+}
+\newcommand*\tablefootmark[1]{
+  \unskip
+  \hbox{\@textsuperscript{\normalfont\itshape\ignorespaces#1}}
+  \,
+  \ignorespaces
+}
+\newcommand\tablefoottext[2]{
+  \hbox{\@textsuperscript{\normalfont({\itshape\ignorespaces#1})}}
+%  ~
+  \ignorespaces
+  #2\ \ignorespaces
+}
+
+
+%search & replace for figures:
 %[width=18cm] -> [width=\textwidth]
+
+%\t\\resizebox\{\\hsize\}\{!\}\{\\includegraphics\{([^\}]*)\}\}\n\t
+% to
+%\t\\fcapside[\\FBwidth]\{\n\t\t\\includegraphics[width=0.5\\textwidth]\{\1\}\n\t\}\{\n\t\t
+
+% \t\\label\{fig:([^\}]*)\}
+% to
+% \t\t\\label\{fig:\1\}\n\t\}
+
+

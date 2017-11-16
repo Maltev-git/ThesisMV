@@ -281,13 +281,13 @@ order=2
 
 [item:appendix/literature_bibtex_combined.bib]
 archive=true
-column=25
+column=9
 encoding=UTF-8
 highlight=BibTeX
-line=1116
+line=685
 mode=BibTeX
-open=false
-order=-1
+open=true
+order=3
 
 [item:appendix/literature_bibtex_custom_entries.bib]
 archive=true
@@ -391,10 +391,10 @@ order=-1
 
 [item:chapters/cover.tex]
 archive=true
-column=67
+column=58
 encoding=UTF-8
 highlight=LaTeX
-line=225
+line=226
 mode=LaTeX
 open=true
 order=0
@@ -411,10 +411,10 @@ order=3
 
 [item:chapters/introduction.tex]
 archive=true
-column=140
+column=28
 encoding=UTF-8
 highlight=LaTeX
-line=293
+line=250
 mode=LaTeX
 open=true
 order=2
@@ -501,10 +501,10 @@ order=2
 
 [item:style/short_commands_malte.tex]
 archive=true
-column=20
+column=33
 encoding=UTF-8
 highlight=LaTeX
-line=25
+line=36
 mode=LaTeX
 open=false
 order=-1
@@ -566,10 +566,10 @@ JumpList=
 ViMarks=.,697,97,[,697,97,],697,97
 
 [view-settings,view=0,item:appendix/literature_bibtex_combined.bib]
-CursorColumn=25
-CursorLine=1116
+CursorColumn=9
+CursorLine=685
 JumpList=
-ViMarks=.,1116,24,[,1116,23,],1116,24
+ViMarks=.,685,9,[,685,9,],685,9
 
 [view-settings,view=0,item:appendix/literature_bibtex_custom_entries.bib]
 CursorColumn=0
@@ -626,10 +626,10 @@ JumpList=
 ViMarks=.,9,20,[,9,13,],9,20
 
 [view-settings,view=0,item:chapters/cover.tex]
-CursorColumn=67
-CursorLine=225
+CursorColumn=58
+CursorLine=226
 JumpList=
-ViMarks=.,225,67,[,225,67,],225,67
+ViMarks=.,226,57,[,226,54,],226,57
 
 [view-settings,view=0,item:chapters/discussion_summary.tex]
 CursorColumn=22
@@ -638,10 +638,10 @@ JumpList=
 ViMarks=.,4,21,[,4,20,],4,21
 
 [view-settings,view=0,item:chapters/introduction.tex]
-CursorColumn=140
-CursorLine=293
+CursorColumn=28
+CursorLine=250
 JumpList=
-ViMarks=.,277,57,[,277,0,],-1,-1
+ViMarks=.,191,0,[,191,0,],191,0
 
 [view-settings,view=0,item:chapters/paperMVVB_wrapper.tex]
 CursorColumn=0
@@ -692,10 +692,10 @@ JumpList=
 ViMarks=.,25,22,[,26,0,],-1,-1
 
 [view-settings,view=0,item:style/short_commands_malte.tex]
-CursorColumn=20
-CursorLine=25
+CursorColumn=33
+CursorLine=36
 JumpList=
-ViMarks=.,33,19,[,33,19,],33,20
+ViMarks=.,36,32,[,36,32,],36,32
 
 [view-settings,view=0,item:thesis.tex]
 CursorColumn=0

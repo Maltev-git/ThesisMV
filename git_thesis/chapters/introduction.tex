@@ -10,8 +10,8 @@ Introductory text -> motivation\\
 (Kurzer Text zur Motivation für diese Arbeit,  wie es zum Thema kam und wie das Ziel erreicht wurde)\\
 
 % Questions this work asks:\\	%Fragestellungen ausformuliert
-% 	How strong is the solar wind influence on the terrestrial magnetosphere?\\
-% 	How often occur certain solar wind ranges?\\
+% 	How strong is the solar-wind influence on the terrestrial magnetosphere?\\
+% 	How often occur certain solar-wind ranges?\\
 % 	How strong do different structure types influence the terrestrial magnetosphere?\\
 % forecast:\\
 % 	How can the impact strength of the solar wind be forecasted? (VBz->Kp L1-Alerts)\\
@@ -30,7 +30,7 @@ scientific goals\\
 
 %Outline of this thesis:
 Synopsis (chapters, content)\\	%Gliederung der Arbeit (zum Schluss ueberarbeiten)
-This thesis merges the solar wind analyses of its variation in time (autoref{ch:}), its evolution to Earth (chapter~XX) and its impact on the magnetosphere (chapter~XX). The solar wind model derived in the first two chapters is used together with SSN predictions to estimate the near-Sun solar wind environment the planned SPP spacecraft will encounter during its mission, beginning in 2018. Lists of constants, symbols and abbreviations used in this thesis are located in the appendix.\\
+This thesis merges the solar-wind analyses of its variation in time (autoref{ch:}), its evolution to Earth (chapter~XX) and its impact on the magnetosphere (chapter~XX). The solar-wind model derived in the first two chapters is used together with SSN predictions to estimate the near-Sun solar-wind environment the planned SPP spacecraft will encounter during its mission, beginning in 2018. Lists of constants, symbols and abbreviations used in this thesis are located in the appendix.\\
 
 
 \chapter{Basics}
@@ -45,7 +45,7 @@ First this chapter sketches the Sun's origin, inner structure, atmosphere and he
 \label{sec:solar_composition}
 
 %%% universe
-13.8~billion years ago the Big~Bang formed our universe. The energy density of our universe consists of \SI{69.1}{\percent} dark energy, \SI{25.9}{\percent} dark matter and \SI{4.9}{\percent} baryonic matter according to calculations using the inflationary $\Lambda$CDM cosmology together with the latest CMB temperature measurements \citep{Planck2016}.
+13.8~billion years ago the Big~Bang formed our universe. The energy density of our universe consists of \SI{69.1}{\percent} dark energy, \SI{25.9}{\percent} dark matter and \SI{4.9}{\percent} baryonic matter, according to calculations using the inflationary $\Lambda$CDM cosmology together with the latest CMB temperature measurements \citep{Planck2016}.
 %see Planck2016 page 31 Table 4		age of universe
 %see Planck2016 page 31 Table 4 and en.wikipedia.org/wiki/Lambda-CDM_model#Parameters
 %energy density consists of
@@ -61,7 +61,7 @@ Over the years this gas cooled down and gravitationally accreted into molecular 
 %In 20XX the Voyager~? probe measured a density of about ...\SI{0}{\per\cm\cubed} right outside of the heliopause (cite?).\\
 
 %%% solar interior
-Our Sun, a metal-rich Population~I yellow dwarf star, emerged 4.6~billion years ago \citep{Bahcall1995} from an accretion disk formed by a collapsing rotating cloud. The compression within its center resulted in high temperatures which initiated the fusion of hydrogen to helium (primarily pp~chain reaction). The fusion reactions produce huge amounts of energy and heat the solar center to a temperature of 15.7~million~kelvins \citep{Christensen-Dalsgaard1996}. The generated energy is transported through the solar body to its surface and eventually into space.
+Our Sun, a metal-rich Population~I yellow dwarf star, emerged 4.6~billion years ago \citep{Bahcall1995} from an accretion disk, formed by a collapsing rotating cloud. The compression within its center resulted in high temperatures, which initiated the fusion of hydrogen to helium (primarily pp~chain reaction). The fusion reactions produce huge amounts of energy and heat the solar center to a temperature of 15.7~million~kelvins \citep{Christensen-Dalsgaard1996}. The generated energy is transported through the solar body to its surface and eventually into space.
 The core region extends to about 0.25~solar radii (\Rsun), where the declining temperature becomes insufficient for fusion reactions. The energy transport is dominated by thermal radiation until, because of declining ionization and density, at 0.71\,\Rsun{} up to the surface convective motion takes over \citep{Christensen-Dalsgaard1991}. %0.7: http://adsabs.harvard.edu/abs/1991ApJ...378..413C
 %Dalsgaard Model S: http://astro.phys.au.dk/~jcd/solar_models/
 %core radius (cite?)
@@ -80,24 +80,24 @@ At this surface layer granules, the tops of convection cells, and temporary suns
 \end{figure}
 
 %%% chromosphere + corona + CMEs
-Above the photosphere at the base of the chromosphere the temperature declines to its solar minimum of \SI{3800}{\K} until it raises to \numrange{2}{3}~million~kelvins in the corona \citep{Billings1959,Liebenberg1975}. Up to now it is not fully understood why the corona is so much hotter than the underlying chromosphere---this question is known as the coronal heating problem. The energy transfer mechanisms of choice are magnetic reconnections, wave heating and type~II spicules or a combination of these (cite?).
+Above the photosphere at the base of the chromosphere, the temperature declines to its solar minimum of \SI{3800}{\K} until it raises to \numrange{2}{3}~million~kelvins in the corona \citep{Billings1959,Liebenberg1975}. Up to now it is not fully understood why the corona is so much hotter than the underlying chromosphere -- this question is known as the coronal heating problem. The energy transfer mechanisms of choice are magnetic reconnections, wave heating and type~II spicules or a combination of these (cite?).
 
-The chromosphere is a \SI{2000}{\km} thick region whose features (numerous spicules, filaments and prominences) can range far into the corona. They consist of by the solar magnetic field channeled chromospheric material, which is enveloped by a thin transition region where the temperature jumps up from ?\SIrange{20000}{35000}{\K} to coronal temperatures (cite?). Reconnection of magnetic field lines can result in the eruption of filaments into the corona and beyond, termed coronal mass ejections (CMEs) (see also Section~XX...). Details of chromospheric features are shown in \autoref{fig:sun_atmosphere}.
+The chromosphere is a \SI{2000}{\km} thick region whose features (numerous spicules, filaments and prominences) can reach far into the corona. They consist of chromospheric material channeled by the solar magnetic field, which is enveloped by a thin transition region where the temperature jumps up from ?\SIrange{20000}{35000}{\K} to coronal temperatures (cite?). Reconnection of magnetic field lines can result in the eruption of filaments into the corona and beyond, termed coronal mass ejections (CMEs) (see also Section~XX...). Details of chromospheric features are shown in \autoref{fig:sun_atmosphere}.
 
 %%% coronal holes
-The Sun's atmosphere is dominated by the varying small- and large-scale solar magnetic field configuration. There are regions where the magnetic field lines arc back to the surface and regions with open field lines. In the latter areas the coronal plasma can---guided by the field---escape into space. Thus these coronal areas are less dense, cooler and therefore appear darker in extreme ultraviolet (EUV) and are called coronal holes (more in Section~XX...). In \autoref{fig:sun_atmosphere} a coronal hole is located at the solar south pole.
+The Sun's atmosphere is dominated by the varying small- and large-scale solar magnetic field configuration. There are regions where the magnetic field lines arc back to the surface and regions with open field lines. In the latter areas the coronal plasma can -- guided by the field -- escape into space. Thus these coronal areas are less dense, cooler and therefore appear darker in extreme ultraviolet (EUV) and are called coronal holes (more in Section~XX...). In \autoref{fig:sun_atmosphere} a coronal hole is located at the solar south pole.
 \begin{figure}[htb]
 	%\centering
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{images/own_figures/sun_atmosphere.png}
 	}{
-		\caption{Composite image of the solar atmosphere and some of its features. Corona, chromosphere and photosphere are seen in wavelengths of \SI{193}{\angstrom}, \SI{304}{\angstrom} and continu\-um. On the northern limb chromospheric spicules are visible. The enlargements on the right show a prominence and a filament. The dark region at the south pole is a coronal hole. The left inset shows details of the active region belonging to the sunspots in \autoref{fig:sun_interior_HMIIC}. The figure is based on SDO/AIA images from 20~March~2016, credit: NASA/SDO and the AIA, EVE and HMI science teams.}
+		\caption{Composite image of the solar atmosphere and some of its features. Corona, chromosphere and photosphere are seen in wavelengths of \SI{193}{\angstrom}, \SI{304}{\angstrom} and continu\-um. Chromospheric spicules are visible on the northern limb. The enlargements on the right show a prominence and a filament. The dark region at the south pole is a coronal hole. The left inset shows details of the active region belonging to the sunspots in \autoref{fig:sun_interior_HMIIC}. The figure is based on SDO/AIA images from 20~March~2016, credit: NASA/SDO and the AIA, EVE and HMI science teams.}
 		\label{fig:sun_atmosphere}
 	}
 \end{figure}
 
 %%% corona
-From Earth the faint corona and chromosphere can only be observed during eclipses, because of the brightness of the solar disk. There are three effects contributing to the visibility of the corona, photon scattering off free electrons and dust particles, and ion spectral emission lines (termed K-, F- and E"~corona).
+From Earth, the faint corona and chromosphere can only be observed during eclipses, because of the brightness of the solar disk. There are three effects contributing to the visibility of the corona: photon scattering off free electrons and dust particles, and ion spectral emission lines (termed K-, F- and E"~corona).
 % the so-called K-, F- and E"~corona (K kontinuierlich, F Fraunhofer, E emission).\\
 % K-corona: photon scattering off free electrons --> coronagraphs\\
 % F-corona: photon scattering off dust particles; contains Fraunhofer absorption lines; expands in ecliptic as zodiacal light --> coronagraphs\\
@@ -108,14 +108,14 @@ The image of a solar eclipse reveals the coronal plasma, shaped by the magnetic 
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{images/Tse2008_500_mo1.png}
 	}{
-		\caption{Total solar eclipse image of the inner corona up to 5~solar radii. The picture was taken in Mongolia, 1~August~2008 and is processed from multiple images. Visible are the for a quiet Sun in cycle minimum typical magnetic field's dipole structure and the equatorial streamer belt. Credit: \href{http://www.zam.fme.vutbr.cz/~druck/Eclipse/}{Miloslav Druckmüller, Peter Aniol, Jan Sládeček}, 2008, reproduced with permission.}
+		\caption{Total solar eclipse image of the inner corona up to 5~solar radii. The picture was taken in Mongolia, 1~August~2008 and is processed from multiple images. The magnetic field's dipole structure and the equatorial streamer belt, typical for a quiet Sun in cycle minimum, are visible. Credit: \href{http://www.zam.fme.vutbr.cz/~druck/Eclipse/}{Miloslav Druckmüller, Peter Aniol, Jan Sládeček}, 2008, reproduced with permission.}
 		\label{fig:Tse2008_500_mo1}
 	}
 \end{figure}
 %figure source: http://www.zam.fme.vutbr.cz/~druck/Eclipse/Ecl2008m/Tse2008_500_mo1/Hr/Tse2008_500_mo1.png
 
-%%% solar wind + heliosphere
-Because of the high coronal temperatures, plasma escapes from the solar gravitational field \citep{Parker1958} with velocities of \SIrange{200}{800}{\km\per\s}. Its acceleration is linked to the coronal heating, but the exact location and process remain an open question (cite?). At a distance of a few solar radii (?4--20) the magnetic field becomes too weak to guide the coronal plasma. From this source surface the solar wind flows radially outward into space until it reaches the termination shock, spanning the heliosphere. Eventually it collides with the local interstellar medium, creating the heliopause. The heliosphere is expected to be a bubble of teardrop shape (and may be led by a bow shock), caused by the Sun's relative velocity of \SI{23}{\km\per\s} to the local interstellar medium \citep{Owens2013}. Measurements of the Voyager~1 and 2 spacecraft indicate their passage of the termination shock at about \SI{94}{\au} and \SI{84}{\au}, entering the heliosheath region \citep{Owens2013}. \citet{Gurnett2013} report that in 2012 Voyager~1 actually crossed the heliopause into interstellar space at a solar distance of \SI{121}{\au}. \autoref{fig:Owens2013_Heliosphere_screenshot} illustrates the heliosphere and its surrounding flow structure.
+%%% solar-wind + heliosphere
+Due to the high coronal temperatures, plasma escapes from the solar gravitational field \citep{Parker1958} with velocities of \SIrange{200}{800}{\km\per\s}. Its acceleration is linked to the coronal heating, however the exact location and process remain an open question (cite?). The magnetic field becomes too weak to guide the coronal plasma at a distance of a few solar radii (?4--20). From this source surface the solar wind flows radially outward into space until it reaches the termination shock, spanning the heliosphere. Eventually it collides with the local interstellar medium, creating the heliopause. The heliosphere is expected to be a bubble of teardrop shape (and may be led by a bow shock), caused by the Sun's relative velocity of \SI{23}{\km\per\s} to the local interstellar medium \citep{Owens2013}. Measurements of the Voyager~1 and 2 spacecraft indicate their passage of the termination shock at about \SI{94}{\au} and \SI{84}{\au}, entering the heliosheath region \citep{Owens2013}. \citet{Gurnett2013} report that in 2012 Voyager~1 actually crossed the heliopause into interstellar space at a solar distance of \SI{121}{\au}. \autoref{fig:Owens2013_Heliosphere_screenshot} illustrates the heliosphere and its surrounding flow structure.
 \begin{figure}[htb]
 	%\centering
 	\fcapside[\FBwidth]{
@@ -128,8 +128,8 @@ Because of the high coronal temperatures, plasma escapes from the solar gravitat
 % contacted for permission...
 %Owens2013 figure permission request: open access article
 
-%%% solar wind influence + space weather
-On its way outwards through the solar system the solar wind, carrying the solar magnetic field, interacts with the planets, their magnetic fields and other solar system bodies. These interactions have various effects, for instance disturbances in planetary magnetic fields with appearance of aurorae and enhanced radiation, atmospheric losses and stripping of cometary tails. Some of these effects can have disruptive consequences for humans and their technology. The topic of space weather effects is further addressed in \autoref{sec:space_weather}. The magnitude of these effects highly depend on spatial and temporal variations in the solar wind which are rooted in the dynamics of the solar magnetic field.\\
+%%% solar-wind influence + space weather
+On its way outwards through the solar system, the solar wind -- carrying the solar magnetic field -- interacts with the planets, their magnetic fields and other solar system bodies. These interactions have various effects, for instance disturbances in planetary magnetic fields with appearance of aurorae and enhanced radiation, atmospheric losses and stripping of cometary tails. Some of these effects can have disruptive consequences for humans and their technology. The topic of space weather effects is further addressed in \autoref{sec:space_weather}. The magnitude of these effects depends highly on spatial and temporal variations in the solar wind, which are rooted in the dynamics of the solar magnetic field.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\section{Stars/Beginning}
@@ -179,7 +179,7 @@ With a rotation period of about 34~days the poles have a lag of almost 9~days (f
 		\ffigbox{
 			\includegraphics[width=0.28\textwidth]{images/Zhao2013_meridional_flow.png}
 		}{
-			\caption{Meridional flow velocity profile in part of the convection zone. Positive values are directed towards north. The velocity is inferred from helioseismology via observations from the Helioseismic Magnetic Imager (HMI) at the Solar Dynamics Observatory (SDO) spacecraft. Credit: \citet[][Fig.~4,\,panel~a]{Zhao2013}, reproduced with permission.}
+			\caption{Meridional flow velocity profile in part of the convection zone. Positive values are directed towards north. The velocity is inferred from helioseismology via observations from the Helioseismic Magnetic Imager (HMI) at the Solar Dynamics Observatory (SDO) spacecraft. Credit: \citet[][Fig.~4,\,panel~a]{Zhao2013}, reproduced with permission, \textcopyright~AAS.}
 			\label{fig:Zhao2013_meridional_flow}
 			%Zhao2013 permission request: permission granted.
 		}
@@ -280,7 +280,7 @@ active regions forming streamer belt\\
 fast solar wind emerges from CHs\\
 slow from closed field streamers; different sources...\\
 
-This is confirmed by the Ulysses spacecraft, which measured the solar wind speed in a polar orbit covering more than one solar cycle (\autoref{fig:McComas2008_Ulysses_orbit}).\\
+This is confirmed by the Ulysses spacecraft, which measured the solar-wind speed in a polar orbit covering more than one solar cycle (\autoref{fig:McComas2008_Ulysses_orbit}).\\
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{images/McComas2008_Ulysses_orbit_.png}
@@ -288,7 +288,7 @@ This is confirmed by the Ulysses spacecraft, which measured the solar wind speed
 	\label{fig:McComas2008_Ulysses_orbit}
 \end{figure}
 %figure source: http://onlinelibrary.wiley.com/doi/10.1029/2003GL017136/full
-%McComas200809: (a–c) Polar plots of the solar wind speed, colored by IMF polarity for Ulysses' three polar orbits colored to indicate measured magnetic polarity. In each, the earliest times are on the left (nine o'clock position) and progress around counterclockwise. (d) Contemporaneous values for the smoothed sunspot number (black) and heliospheric current sheet tilt (red), lined up to match Figures 1a–1c. In Figures 1a–1c, the solar wind speed is plotted over characteristic solar images for solar minimum for cycle 22 (8/17/96), solar maximum for cycle 23 (12/07/00), and solar minimum for cycle 23 (03/28/06). From the center out, we blend images from the Solar and Heliospheric Observatory (SOHO) Extreme ultraviolet Imaging Telescope (Fe XII at 1950 nm), the Mauna Loa K coronameter (700–950 nm), and the SOHO C2 white light coronagraph.
+%McComas200809: (a–c) Polar plots of the solar-wind speed, colored by IMF polarity for Ulysses' three polar orbits colored to indicate measured magnetic polarity. In each, the earliest times are on the left (nine o'clock position) and progress around counterclockwise. (d) Contemporaneous values for the smoothed sunspot number (black) and heliospheric current sheet tilt (red), lined up to match Figures 1a–1c. In Figures 1a–1c, the solar-wind speed is plotted over characteristic solar images for solar minimum for cycle 22 (8/17/96), solar maximum for cycle 23 (12/07/00), and solar minimum for cycle 23 (03/28/06). From the center out, we blend images from the Solar and Heliospheric Observatory (SOHO) Extreme ultraviolet Imaging Telescope (Fe XII at 1950 nm), the Mauna Loa K coronameter (700–950 nm), and the SOHO C2 white light coronagraph.
 
 %++dynamics and magnetic field++\\
 %rotating nebula to solar rotation\\
@@ -298,7 +298,7 @@ This is confirmed by the Ulysses spacecraft, which measured the solar wind speed
 keywords:\\
 SSN -> poloidal/toroidal field -> magnetic surface activity (butterfly diagram) -> min/max polar CHs (quiet/active Sun figure) -> HMF (quiet B-field figure) -> quiet HMF Parker spiral (figure) -> solar wind -> slow/fast sw pattern (Ulysses figure))\\
 
-solar wind plasma composition and properties -> visible solar wind structures (coronagraph image; with CME and streamer) -> stream interface (figure) -> in situ measurements (example in situ CIR/HSS plot)\\
+solar-wind plasma composition and properties -> visible solar-wind structures (coronagraph image; with CME and streamer) -> stream interface (figure) -> in situ measurements (example in situ CIR/HSS plot)\\
 
 stream interfaces (figure and link to previous CIR plot) -> HCS/HPS\\
 
@@ -336,7 +336,7 @@ discovered via eclipses?\\
 see eclipse photo from Druckmüller \autoref{fig:Tse2008_500_mo1}\\
 
 in 1958 Parker predicted/postulated the solar wind \citep{Parker1958}\\
-expanding isothermal atmosphere (solar wind model)\\
+expanding isothermal atmosphere (solar-wind model)\\
 continuous supersonic radial outflow of plasma\\
 -> also Parker spiral of HMF (see \autoref{fig:Owens2013_PFSS_Sectors_screenshot})
 
@@ -373,13 +373,13 @@ compare with field geometry from eclipse \autoref{fig:Tse2008_500_mo1}...\\
 		\ffigbox{
 			\includegraphics[width=0.45\textwidth]{images/Banaszkiewicz1998_DQCS_model_raw.png}
 		}{
-			\caption{Solar magnetic field geometry from the DQCS model with field lines (solid) and constant field strength surfaces (dashed). The quadrupole part allows equatorial outflows along the current sheet. Credit: \citet[][Fig.~3]{Banaszkiewicz1998}, reproduced with permission \textcopyright~ESO.}
+			\caption{Solar magnetic field geometry from the DQCS model with field lines (solid) and constant field strength surfaces (dashed). The quadrupole part allows equatorial outflows along the current sheet. Credit: \citet[][Fig.~3]{Banaszkiewicz1998}, reproduced with permission, \textcopyright~ESO.}
 			\label{fig:Banaszkiewicz1998_DQCS_model_raw}
 		}
 		\ffigbox{
 			\includegraphics[width=\Xhsize]{images/Owens2013_PFSS_Sectors_screenshot.png}
 		}{
-			\caption{Illustration of the solar magnetic field Parker spiral formation by rotation of the solar wind source surface. Between solar wind flows of opposite magnetic field polarity a heliospheric current sheet (HCS) forms. Credit: \citet[Fig.~1]{Owens2013}, adapted from \citet[Fig.~1]{Schatten1969}.}
+			\caption{Illustration of the solar magnetic field Parker spiral formation by rotation of the solar-wind source surface. Between solar-wind flows of opposite magnetic field polarity a heliospheric current sheet (HCS) forms. Credit: \citet[Fig.~1]{Owens2013}, adapted from \citet[Fig.~1]{Schatten1969}.}
 			\label{fig:Owens2013_PFSS_Sectors_screenshot}
 			%Owens2013 figure permission request: open access article
 		}
@@ -387,7 +387,7 @@ compare with field geometry from eclipse \autoref{fig:Tse2008_500_mo1}...\\
 \end{figure}
 
 Parker spiral, source surface and HCS, see \autoref{fig:Owens2013_PFSS_Sectors_screenshot}\\
-%A sketch of the steady-state solar magnetic field in the ecliptic plane. Close to the Sun, in a spatial region approximately bounding the solar corona, the magnetic field dominates the plasma flow and undergoes significant non-radial (or super-radial) expansion with height. At the source surface, typically taken to be a few solar radii, the pressure-driven expansion of the solar wind dominates and both the field and flow both become purely radial. In the heliosphere, rotation of the HMF footpoints within a radial solar wind flow generates an azimuthal component of the HMF, leading to a archimedean spiral geometry. Regions of opposite HMF polarity, shown as red and blue lines, are separated by the heliospheric current sheet (HCS), shown as the green dashed line. Image adapted from Schatten et al. (1969).
+%A sketch of the steady-state solar magnetic field in the ecliptic plane. Close to the Sun, in a spatial region approximately bounding the solar corona, the magnetic field dominates the plasma flow and undergoes significant non-radial (or super-radial) expansion with height. At the source surface, typically taken to be a few solar radii, the pressure-driven expansion of the solar wind dominates and both the field and flow both become purely radial. In the heliosphere, rotation of the HMF footpoints within a radial solar-wind flow generates an azimuthal component of the HMF, leading to a archimedean spiral geometry. Regions of opposite HMF polarity, shown as red and blue lines, are separated by the heliospheric current sheet (HCS), shown as the green dashed line. Image adapted from Schatten et al. (1969).
 
 MHD simulations based on Voyager~1 and 2 measurements within the heliosheath indicate the formation of magnetic bubbles (reconnected sector regions) at the sector boundary caused by the compression before the heliopause, flowing away to the heliosheath tail \citep{Opher2011}.\\
 %Opher2011: Is the Magnetic Field in the Heliosheath Laminar or a Turbulent Sea of Bubbles?
@@ -396,7 +396,7 @@ MHD simulations based on Voyager~1 and 2 measurements within the heliosheath ind
 \section{Solar wind properties and structures}
 
 list event/structure types\\
-solar wind structures source regions: sunspots/active regions, coronal holes, filaments\\
+solar-wind structures source regions: sunspots/active regions, coronal holes, filaments\\
 
 sw density considerations, see presi S³\\
 
@@ -404,7 +404,7 @@ sw density considerations, see presi S³\\
 \label{sec:solar_wind_plasma}
 
 Plasma in general (properties (H/He/metal composition; see paper...), Plasma-beta, etc.)\\
-	solar wind properties, slow/fast wind, MHD waves (Alfv\'en waves)\\
+	solar-wind properties, slow/fast wind, MHD waves (Alfv\'en waves)\\
 
 special events/configurations, which can appear (CIRs, HCS/HPS, etc.)
 HSS, sector boundaries, CIRs, CMEs\\
@@ -588,7 +588,7 @@ ionosphere -> TEC -> GNSS error\\
 \subsection{Geomagnetic indices}
 \label{sec:geomagnetic_indices}
 Geomagnetic observatories are distributed widely over the globe, measuring the local magnetic field at their position. Several sets of stations, covering specific regions, are defined to monitor the state of different parts of the magnetospheric system. Magnetic measurements from these sets define several geomagnetic indices. The International Association of Geomagnetism and Aeronomy (IAGA)  supports the following global geomagnetic indices which are serviced by the International Service of Geomagnetic Indices (ISGI)\footnote{ISGI website: \url{http://isgi.unistra.fr/}}:
-The $aa$~index is designed to represent the amplitude of the global geomagnetic activity, normalized to a geomagnetic latitude of \SI{+-50}{\degree}. The $am$~index characterizes the global geomagnetic activity. The \Kp{}~index is designed to measure geomagnetic disturbances from solar particle radiation [reword...]. The \Kp~index is described in more detail in \autoref{sec:kp_index}. The $Dst$~index monitors the intensity of the magnetospheric ring current. The $PC$~index monitors the polar cap magnetic activity -- it approximates the amount of energy which entered the magnetosphere through solar wind coupling. The $AE$~index and its relatives $AU$, $AL$ and $AO$ measure the magnetic effects of the northern auroral electrojet.
+The $aa$~index is designed to represent the amplitude of the global geomagnetic activity, normalized to a geomagnetic latitude of \SI{+-50}{\degree}. The $am$~index characterizes the global geomagnetic activity. The \Kp{}~index is designed to measure geomagnetic disturbances from solar particle radiation [reword...]. The \Kp~index is described in more detail in \autoref{sec:kp_index}. The $Dst$~index monitors the intensity of the magnetospheric ring current. The $PC$~index monitors the polar cap magnetic activity -- it approximates the amount of energy which entered the magnetosphere through solar-wind coupling. The $AE$~index and its relatives $AU$, $AL$ and $AO$ measure the magnetic effects of the northern auroral electrojet.
 The first three listed indices (\textit{aa}, \textit{am} and \Kp{}) are calculated from different sets of local 3"~hourly $K$~indices, which measure the local magnetic disturbances at the observatories. There exist several more indices that are based on some of those listed above.\\
 
 [for \Kp{}, $AA$ and $Dst$ read Section 7.4 in book \citet{Bothmer2007}...\\
@@ -626,7 +626,7 @@ Merkin2013 MHD simulation of velocity shear at magnetosphere boundary with north
 %\label{sec:instruments}
 
 For analyzing the solar wind and related effects on the Sun there are remote instruments (solar imager and coronagraphs) and in situ instruments (magnetometer and plasma detector).\\
-Here the basic principles of the latter are described, because the analyses performed in this thesis are based on in situ solar wind measurements.\\
+Here the basic principles of the latter are described, because the analyses performed in this thesis are based on in situ solar-wind measurements.\\
 
 \subsection{Magnetometer}
 %\label{sec:magnetometer}
@@ -677,7 +677,7 @@ The temperature scales with the distribution's width.\\
 % ion distributions over an E/q range chosen to include the thermal proton and
 % alpha-particle populations. Under extremely hot conditions, there can
 % sometimes be some overlap between these populations. Additionally, during
-% periods when the solar wind temperature is exceptionally low the experiment can
+% periods when the solar-wind temperature is exceptionally low the experiment can
 % not properly measure the temperature. Care has been taken to estimate the
 % instrument background from channels that do not contain data, and the effects
 % of background have been removed from the integration. The velocity space 
@@ -791,19 +791,19 @@ from spacecraft located near the Lagrange point L1 upstream of Earth\\
 time-shifted to the bow shock of the magnetosphere\\
 
 OMNI2 H0 MRG1HR (1963--201308)
-Cite from CDAweb: Hourly near-Earth solar wind magnetic field and plasma data, energetic proton fluxes (>~1 to >~60~MeV), and geomagnetic and solar activity indices.
+Cite from CDAweb: Hourly near-Earth solar-wind magnetic field and plasma data, energetic proton fluxes (>~1 to >~60~MeV), and geomagnetic and solar activity indices.
 
 NASA, Goddard Space Flight Center (GSFC), Space Physics Data Facility (SPDF): \url{http://spdf.gsfc.nasa.gov/}\\	%exintent in 2016-08-18
 - Coordinated Data Analysis Web (CDAWeb): \url{http://cdaweb.gsfc.nasa.gov/}\\	%exintent in 2016-08-18
 - OMNIWeb Plus: \url{http://omniweb.gsfc.nasa.gov/}\\	%exintent in 2016-08-18
 %OMNIWeb Data Documentation: http://omniweb.gsfc.nasa.gov/html/ow_data.html
 
-intercalibrated multi-spacecraft solar wind data\\
-Various spacecraft contribute to the interplanetary magnetic field (IMF) and solar wind plasma OMNI data, as seen in \autoref{fig:timeline_OMNI_SC_IDs}.\\
+intercalibrated multi-spacecraft solar-wind data\\
+Various spacecraft contribute to the interplanetary magnetic field (IMF) and solar-wind plasma OMNI data, as seen in \autoref{fig:timeline_OMNI_SC_IDs}.\\
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{images/gnuplots/timeline_OMNI_SC_IDs.pdf}
-	\caption{IMF and solar wind plasma data source spacecraft for the high and the low resolution OMNI (HRO, LRO) data sets until end of 2016. The SIDC 13-month smoothed monthly SSN is plotted in the background. add cycle number...}
+	\caption{IMF and solar-wind plasma data source spacecraft for the high and the low resolution OMNI (HRO, LRO) data sets until end of 2016. The SIDC 13-month smoothed monthly SSN is plotted in the background. add cycle number...}
 	\label{fig:timeline_OMNI_SC_IDs}
 \end{figure}
 
@@ -814,7 +814,7 @@ derived by Richardson.... from OMNI data (only?)
 permission received.\\
 
 %http://cedarweb.vsp.ucar.edu/wiki/index.php/Tools_and_Models:Solar_Wind_Structures
-characterization of near-Earth solar wind structures since 1963\\
+characterization of near-Earth solar-wind structures since 1963\\
 SWS lists \citep{Richardson2000} and \citep{Richardson2012}
 
 
@@ -882,7 +882,7 @@ Solar wind data courtesy of R.~Schwenn, Max-Planck-Institut für Aeronomie, Lind
 
 
 data sources -- see paper for replacing the following data\\
-solar wind parameters: ACE, Helios, OMNI\\
+solar-wind parameters: ACE, Helios, OMNI\\
 geomagnetic indices: Kp, OMNI\\
 
 Space Physics Data Facility (SPDF)\\
@@ -910,7 +910,7 @@ Plasma \& orbit data availability: 91.8~\%\\
 Sun angular diameter comparison, see presi S³\\
 
 
-\subsection{Real-time solar wind data}
+\subsection{Real-time solar-wind data}
 
 Advanced Composition Explorer\\
 s/c figure, launch date was 25 August 1997\\
@@ -920,4 +920,4 @@ SWEPAM\\	%https://sci-hub.ac/10.1023/A:1005040232597
 
 data errors/gaps...\\
 
-DSCOVR as replacement was launched on 11~Februar 2015. It is NOAA's SWPC real-time solar wind prime source since 27 July 2016.\footnote{\url{http://www.swpc.noaa.gov/products/real-time-solar-wind}}\\
+DSCOVR as replacement was launched on 11~Februar 2015. It is NOAA's SWPC real-time solar-wind prime source since 27 July 2016.\footnote{\url{http://www.swpc.noaa.gov/products/real-time-solar-wind}}\\

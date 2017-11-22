@@ -220,6 +220,38 @@ perihelion/aphelion times...
 
 \subsection{Solar distance}
 
+Sun-Earth distance over the course of the year.\\
+In the year 2017 Earth's perihelion was on 5~January with a distance of \SI{-1.67}{\percent} from \SI{1}{\au} (Horizons On-Line Ephemeris System\footnote{\url{http://ssd.jpl.nasa.gov/horizons.cgi}}, Solar System Dynamics Group, Jet~Propulsion Laboratory).\\
+The cosine approximation
+\begin{align}
+	r_\text{E}(t) = 1 - 0.0167 \cdot \cos\left(2 \pi \left(t - 2017 - \frac{5}{365}\right)\right)\,,
+\end{align}
+with $t$ in years, suffices for our accuracy requirements.\\
+% HORIZONS Web-Interface
+% http://ssd.jpl.nasa.gov/horizons.cgi
+% Ephemeris Type:	VECTORS
+% Target Body:		Earth [Geocenter] [399]
+% Coordinate Origin:	Sun (body center) [500@10]
+% Time Span:		Start=2017-01-01, Stop=2017-12-31, Step=1 d
+% Table Settings:	CSV format=YES
+% Display/Output:	download/save (plain text file)
+%-> distance:	9.833098226363186E-01
+%-> diff. to 1 au:	0.166901774
+%-> change to day before:	4.4e-6	-> 0.1669018(44)
+
+seasonal variation function:\\
+$X_\text{avg}(t) = a\,r_\text{E}(t)^b$\\
+% B_avg = 5.969(29)~nT\\
+% B_med = 5.435(24)~nT\\
+% N_avg = 6.329(85)~cm-3\\
+% N_med = 4.858(60)~cm-3\\
+% T_avg = 1.198(16)e5~K\\
+% T_med = 7.17(12)e4~K\\
+% V1_avg = 4.132(22)e2~km/s\\
+% V1_med = 4.034(21)e2~km/s\\
+% V2_avg = 4.132(22)e2~km/s\\
+% V2_med = 4.034(21)e2~km/s\\
+
 \subsection{Solar rotation axis tilt}
 %\label{sec:}
 
@@ -356,4 +388,8 @@ the dipole axis orientation changes over time; at 1995 the northern pole was at 
 
 \subsection{Heliographic Inertial}
 
-HGI - Heliographic Inertial coordinates\\
+Heliographic Inertial (HGI) coordinates\\
+HGI coordinates are Sun-centered with the z-axis directed along the solar rotation axis and directed northward of the solar equator. The solar equator plane is inclined \SI{7.25}{\degree} from the ecliptic.\\
+
+HGI coordinates; latitude range \SI{-7.25}{\degree}~to~\SI{-7.25}{\degree}\\
+latitude variation (see Schwenn1990, p.~127)\\

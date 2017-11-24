@@ -848,30 +848,20 @@ see \autoref{fig:helios2}
 
 solar distance, HGI latitude and sunspot number during the Helios missions; see \autoref{fig:Helios12_1h_r_b_ssn_plot}\\
 
-Helios orbit in the ecliptic plane and in the latitude polar plane (see \autoref{fig:Helios12_orbits_ecliptic_polar})\\
+Helios~1 and 2 orbits in the ecliptic plane and in the latitude polar plane (see \autoref{fig:Helios12_orbits_ecliptic_polar})\\
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{images/gnuplots/Helios12_orbits_ecliptic_polar.pdf}
-	\caption{Helios orbits in the solar equatorial plane (left) and polar plane (right) (HGI-coordinates). change colors?}
+	\caption{Orbits of the Helios~1 (red) and Helios~2 (green) spacecraft in the solar equatorial plane (left) and polar plane (right) (HGI-coordinates). change colors?}
 	\label{fig:Helios12_orbits_ecliptic_polar}
 \end{figure}
 
-The Helios magnetic field and plasma data counts over solar distance are plotted in \autoref{fig:Helios12_1h_magswe_r-count_plot} and over latitude are plotted in \autoref{fig:latitude_frequency_plot}. build 2-panel figure...\\
+The Helios magnetic field and plasma data frequency over heliocentric distance and over heliographic latitude are plotted in \autoref{fig:helios_data_frequency}.\\
 \begin{figure}[htb]
-	\begin{floatrow}
-		\ffigbox{
-			\includegraphics[width=0.45\textwidth]{images/gnuplots/Helios12_1h_magswe_r-count_plot.png}
-		}{
-			\caption{Plot of the Helios data count per 0.01~au solar distance bins. plot for mag and plasma individually..., combine with latitude plot...}
-			\label{fig:Helios12_1h_magswe_r-count_plot}
-		}
-		\ffigbox{
-			\includegraphics[width=\Xhsize]{images/gnuplots/latitude_frequency_plot.png}
-		}{
-			\caption{Plot of the Helios data count per 0.1° latitude. plot for mag and plasma individually... remove all other curves...}
-			\label{fig:latitude_frequency_plot}
-		}
-	\end{floatrow}
+	\centering
+	\includegraphics[width=\textwidth]{images/gnuplots/helios_data_frequency.pdf}
+	\caption{Helios data frequency over heliocentric distance with bins of \SI{0.01}{au} (left panels) and over heliographic latitude with bins of \SI{0.1}{\degree} (right panels). The frequency data is based on the hourly merged magnetometer and plasma data sets for Helios~1 and Helios~2. The top panels show the frequencies for Helios~1 and Helios~2 individually and the bottom panels those for the magnetometer and plasma data. avoid white lines...}
+	\label{fig:helios_data_frequency}
 \end{figure}
 
 Solar wind data courtesy of R.~Schwenn, Max-Planck-Institut für Aeronomie, Lindau, magnetic field data courtesy of F.~Neubauer, Universität zu Köln. (see paper; into acknowledgements...)\\

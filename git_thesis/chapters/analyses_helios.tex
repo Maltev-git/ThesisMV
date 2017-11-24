@@ -1,5 +1,5 @@
 
-\chapter{PaperMVVB additions}
+\chapter{PaperMVVB}
 
 %COFI -- chapter outline and flow integration\\
 
@@ -54,8 +54,9 @@ B(1.017~au) = 5.9~nT\\
 
 
 \section{Latitude dependency}
-refer to Ulysses figure...\\
+refer to Ulysses \autoref{fig:McComas2008_Ulysses_orbit}\\
 Ulysses swoops polar plots...\\
+
 see Schwenn1990's~Fig.~3.14\\
 see also \citet{Schwenn1990} p.~127\\
 see also \citet{Richardson1995}\\
@@ -68,7 +69,7 @@ latitude; see \autoref{fig:latitude_frequency_4_thesis_plot}
 	\label{fig:latitude_frequency_4_thesis_plot}
 \end{figure}
 
-with the exponential dependencies to 1~au projected solar wind parameters; there are only small changes with latitude in the range -7.25°--7.25°\\
+with the exponential dependencies to 1~au projected solar wind parameters; there are only small changes with latitude in the range \SIrange{-7.25}{7.25}{\degree}\\
 have a look on distribution widths...\\
 
 dependence from latitude in interval -7.25°--7.25° in Helios data negligible?, see \autoref{fig:latitude_frequency_rcorrected_v3_4_thesis_plot}.
@@ -80,33 +81,33 @@ dependence from latitude in interval -7.25°--7.25° in Helios data negligible?,
 \end{figure}
 estimate error ranges...\\
 
-plot Ulysses data into plot...\\
+...plot Ulysses data into plot?\\
 
 %latitude variation negligible?
-influence from latitude variation in data negligible? (see Ulysses figure in introduction). Helios probes within ecliptic => variation span equal to solar tilt: -7.25° to 7.25°; solar tilt/obliquity to ecliptic: $i_\odot = 7.25\degree$ (Sun fact sheet: \url{http://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html)}\\
-big part of Helios data is from latitudes $>\pm5$°, see Figure~XX (data count over latitude) and see Figure~XX (Helios orbit polar plane in data section...)\\
+influence from latitude variation in data negligible? (see Ulysses \autoref{fig:McComas2008_Ulysses_orbit} in introduction). Helios probes within ecliptic => variation span equal to solar tilt: -7.25° to 7.25°; solar tilt/obliquity to ecliptic: $i_\odot = 7.25\degree$ (Sun fact sheet: \url{http://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html)}\\
+big part of Helios data is from latitudes $>\pm5$°, see Figure~XX (data count over latitude) and see \autoref{fig:Helios12_orbits_ecliptic_polar} (Helios orbit polar plane in data section)\\
 
 
 \section{Radial evolution of solar wind structures}
 %see CGAUSS report2015_2
 
 Helios event lists HSSs, SLOWs, CIRs, CMEs...; event lists for all Helios data\\
-see Liu2004 for Helios ICME list and radial dependencies of B, n, T and v...\\
+see Liu2004 for Helios ICME list and radial dependencies of $B$, $n$, $T$ and $v$...\\
 
-200~km/s slow solar wind at 10~$R_\odot$ is in agreement with blob measurements from Wang2000\\
+\SI{200}{\km\per\s} slow solar wind at 10~$R_\odot$ is in agreement with blob measurements from Wang2000\\
 
 very slow sw (VSSW) gets accelerated; see Sanchez-Diaz2016:\\
 %"The reported in situ measurements suggest that the properties of VSSW are a continuation of the slow wind toward lower speeds: higher densities, higher proton fluxes, and lower temperatures, thereby extending well-known scaling laws [Lopez and Freeman, 1986; Hundhausen et al., 1970] down to speeds as low as 200 km/s."\\
 %"The VSSW has a number of interesting properties that suggest it may be the interplanetary signature of long HPS crossings."\\
 
-structure extrapolations\\
 
 radial diameter of MCs increase between 0.3~au and 4.3~au proportional to the distance as $r^{0.8}$ \citep{Bothmer1998}\\
-
 MC central axial magnetic field strength radial density dependence $B = 18.1\,r^{-1.64}$ \citet{Leitner2007}\\
 MC average diameter $D = 0.23\,r^{1.14}$ \citet{Leitner2007}
 
-sw structure marked plot\\
+sw structure marked plots\\
+
+structure extrapolations\\
 
 
 \section{Solar distance dependency---theory}
@@ -116,6 +117,7 @@ B-field radial profile: $B \propto r^{-1.5?}$\\
 	Bphi(r) = -B0 omega / (Vr * r) (shear effect from solar rotation omega)\\
 	Btheta(r) = 0\\
 	B(r) = (Br² + Bphi² + Btheta²)**1/2\\
+	B(r) = sqrt((B0 / r²)² + (-B0 omega / (Vr * r))²)	--> expected r dependency: B propto a*r**-2 + b*r**-1\\
 	see also \url{radial_fit_B_test_plot.png}\\
 	Parker references\\
 velocity radial profile: $V \propto r^{0?}$\\
@@ -131,7 +133,19 @@ solar wind ram pressure $p_\text{ram} = \rho V^2$\\
 
 
 \subsection{change B-field radial dependency...}
+B(r) = sqrt((B0 / r²)² + (-B0 omega / (Vr * r))²)	--> expected r dependency: B propto a*r**-2 + b*r**-1\\
 fit with $\sqrt{(r^a)^2 + (r^b)^2}$, where $a \approx -2$ and $b \approx -1$\\
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.4\textwidth]{images/gnuplots/double_fit_B_freq_r_plot_thesis.png}
+	\caption{Plot of the magnetic field strength's frequency distribution at different solar distances (0.29, 0.52, 0.75 and 0.98~au). The Helios data, the composed fit model and both its components are plotted. 0.23~au steps, lw 2, stepfunction}
+	\label{fig:double_fit_B_freq_r_plot_thesis}
+\end{figure}
+
+=> what kind of distribution has the B-field near the Sun?\\
+
+
 
 \section{flux conservation}
 conserved quantities:\\
@@ -239,11 +253,9 @@ $T$: bin size 10\,000~K, min 497, mean precision: 4.49--44.49\\
 \section{other}
 McGregor2011 analyzed the empirical magnetic topology–velocity relationship, using Helios perihelion data with the Wang-Sheeley-Arge (WSA) coronal model, and found indications, that the fast and slow solar wind are generated from distinct sources. (not only superradial expansion)\\
 
+%GUM statement
+Concerning the error notation I adhere to the parentheses notation documented in the ``Guide to the expression of uncertainty in measurement'' (GUM) published by \citet{GUM2008}, where the numbers in parentheses are the errors on the corresponding last digits of the quoted value.\\
 
-Larger individual graphs can be found in the appendix...
-
-state this at the first occurence... (from GUM guide)\\
-mS = 100,021 47(35) g, where the number in parentheses is the numerical value of (the combined standard uncertainty) uc referred to the corresponding last digits of the quoted result.\\
 
 %\captionsetup{width=0.75\textwidth}
 %align caption width with table width  OR  widen table to textwidth?
@@ -261,15 +273,6 @@ we get the ultimate monster equation:\\
 	W_\text{II}(x,\tilde{a}_1, \tilde{b}_1, \bar{a}_1, \bar{b}_1, \tilde{a}_2, \tilde{b}_2, \bar{a}_2, \bar{b}_2) =\\
 	\frac{c}{2 \sqrt{\pi \ln\left(\frac{\bar{a}_1 \, r^{\bar{b}_1}}{\tilde{a}_1 \, r^{\tilde{b}_1}}\right)} \, x} \, \exp\left(- \frac{\ln^2\left(\frac{x}{\tilde{a}_1 \, r^{\tilde{b}_1}}\right)}{4 \ln\left(\frac{\bar{a}_1 \, r^{\bar{b}_1}}{\tilde{a}_1 \, r^{\tilde{b}_1}}\right)}\right) + \frac{(1 - c)}{2 \sqrt{\pi \ln\left(\frac{\bar{a}_2 \, r^{\bar{b}_2}}{\tilde{a}_2 \, r^{\tilde{b}_2}}\right)} \, x} \, \exp\left(- \frac{\ln^2\left(\frac{x}{\tilde{a}_2 \, r^{\tilde{b}_2}}\right)}{4 \ln\left(\frac{\bar{a}_2 \, r^{\bar{b}_2}}{\tilde{a}_2 \, r^{\tilde{b}_2}}\right)}\right)
 \end{align}
-
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=0.4\textwidth]{images/gnuplots/double_fit_B_freq_r_plot_thesis.png}
-	\caption{Plot of the magnetic field strength's frequency distribution at different solar distances (0.29, 0.52, 0.75 and 0.98~au). The Helios data, the composed fit model and both its components are plotted. 0.23~au steps, lw 2, stepfunction}
-	\label{fig:double_fit_B_freq_r_plot_thesis}
-\end{figure}
-
-=> what kind of distribution has the B-field near the Sun?\\
 
 The extrapolation distance is only about one third of the model range, but as the parameters follow exponential change, one has to look at the logarithmic distance which is indeed one and a half times the model range.\\
 

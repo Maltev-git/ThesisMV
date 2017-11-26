@@ -260,19 +260,72 @@ As the SSN is commonly used as an indicator for solar activity, there exists int
 
 
 \section{Heliospheric magnetic field}
+%\label{sec:heliospheric_magnetic_field}
 %%% solar coronal and heliospheric effects
 
-near-Sun field configuration changes\\
-out to heliopause.\\
-sec:solar wind\\
-its effects and resulting structures\\
+%Cranmer2005:
+at least for open coronal regions (CHs) MBPs are the photospheric source of the HMF in the fast sw\\
+At the photosphere magnetic bright points (MBPs) are identified as intergranular magnetic flux tubes with field strenghts of \SIrange{100}{200}{\milli\tesla} \citep{Cranmer2005}.\\
+Their stochastic convective appearance and motions result in wavelike fluctuations of the thin flux tubes.\\
+leading to incompressible waves leak into the solar wind\\
+Alfvén waves?\\
+read Cranmer2005 page3 again and connect to alfvenic waves...\\
+
+for more details about the Alfvén waves and Alfvén speed see \autoref{sec:alfvén_waves}\\
+
+low chromosphere:\\
+thin flux tubes expand laterally and merge to a homogeneous network field\\
+
+below the chromosphere-corona transition region:\\
+the network magnetic field expands laterally and merges again to a large-scale canopy (image)\\
+
+near-Sun field configuration:\\
+``above the Alfvén critical point -- where the wind speed equals the local Alfvén speed at about \SI{10}{\Rs} -- both the inward and outward modes are advected (advect: convect horizontally) outward with the wind\\
+superradially expanding magnetic flux tube''\\
+\citep{Cranmer2005}\\
+see also paper citations...\\
+
+
+analytical solar magnetic field model for solar minimum conditions \citep{Banaszkiewicz1998}\\
+dipole plus quadrupole plus current sheet (DQCS) solar magnetic field model\\
+The DQCS model with its quadrupole part having a direct link from the solar equator to infinity along the equatorial plane and current sheet. (see \autoref{fig:Banaszkiewicz1998_DQCS_model_raw}) \citep{Banaszkiewicz1998}\\
+compare with field geometry from eclipse \autoref{fig:Tse2008_500_mo1}...\\
+\begin{figure}[htb]
+	\begin{floatrow}
+		\ffigbox{
+			\includegraphics[width=0.45\textwidth]{images/Banaszkiewicz1998_DQCS_model_raw.png}
+		}{
+			\caption{Solar magnetic field geometry from the DQCS model with field lines (solid) and constant field strength surfaces (dashed). The quadrupole part allows equatorial outflows along the current sheet. Credit: \citet[][Fig.~3]{Banaszkiewicz1998}, reproduced with permission, \textcopyright~ESO.}
+			\label{fig:Banaszkiewicz1998_DQCS_model_raw}
+		}
+		\ffigbox{
+			\includegraphics[width=\Xhsize]{images/Owens2013_PFSS_Sectors_screenshot.png}
+		}{
+			\caption{Illustration of the solar magnetic field Parker spiral formation by rotation of the solar-wind source surface. Between solar-wind flows of opposite magnetic field polarity a heliospheric current sheet (HCS) forms. Credit: \citet[Fig.~1]{Owens2013}, adapted from \citet[Fig.~1]{Schatten1969}.}
+			\label{fig:Owens2013_PFSS_Sectors_screenshot}
+			%Owens2013 figure permission request: open access article
+		}
+	\end{floatrow}
+\end{figure}
+
+Parker spiral, source surface and HCS, see \autoref{fig:Owens2013_PFSS_Sectors_screenshot}\\
+%A sketch of the steady-state solar magnetic field in the ecliptic plane. Close to the Sun, in a spatial region approximately bounding the solar corona, the magnetic field dominates the plasma flow and undergoes significant non-radial (or super-radial) expansion with height. At the source surface, typically taken to be a few solar radii, the pressure-driven expansion of the solar wind dominates and both the field and flow both become purely radial. In the heliosphere, rotation of the HMF footpoints within a radial solar-wind flow generates an azimuthal component of the HMF, leading to a archimedean spiral geometry. Regions of opposite HMF polarity, shown as red and blue lines, are separated by the heliospheric current sheet (HCS), shown as the green dashed line. Image adapted from Schatten et al. (1969).
+
+
+out to heliopause:\\
+MHD simulations based on Voyager~1 and 2 measurements within the heliosheath indicate the formation of magnetic bubbles (reconnected sector regions) at the sector boundary caused by the compression before the heliopause, flowing away to the heliosheath tail \citep{Opher2011}.\\
+%Opher2011: Is the Magnetic Field in the Heliosheath Laminar or a Turbulent Sea of Bubbles?
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Solar wind}
+\label{sec:solar_wind}
 
 The ordered dipole structure in solar cycle minimum leads to open polar field regions with large coronal holes and a closed equatorial field belt/streamer belt (clearly visible in \autoref{fig:Tse2008_500_mo1}).\\
 
 
-HMF with figures DQCS + Parker spiral\\
-
-This leads to the chaotic appearance of closed field lines even at higher latitudes/poles and coronal holes covering equatorial regions. tbm\\
+This leads to the chaotic appearance of closed field lines even at higher latitudes/poles and coronal holes covering equatorial regions.\\
 
 sw in minimum: streamer belt and polar HSSs\\
 active regions forming streamer belt\\
@@ -289,6 +342,7 @@ This is confirmed by the Ulysses spacecraft, which measured the solar-wind speed
 \end{figure}
 %figure source: http://onlinelibrary.wiley.com/doi/10.1029/2003GL017136/full
 %McComas200809: (a–c) Polar plots of the solar-wind speed, colored by IMF polarity for Ulysses' three polar orbits colored to indicate measured magnetic polarity. In each, the earliest times are on the left (nine o'clock position) and progress around counterclockwise. (d) Contemporaneous values for the smoothed sunspot number (black) and heliospheric current sheet tilt (red), lined up to match Figures 1a–1c. In Figures 1a–1c, the solar-wind speed is plotted over characteristic solar images for solar minimum for cycle 22 (8/17/96), solar maximum for cycle 23 (12/07/00), and solar minimum for cycle 23 (03/28/06). From the center out, we blend images from the Solar and Heliospheric Observatory (SOHO) Extreme ultraviolet Imaging Telescope (Fe XII at 1950 nm), the Mauna Loa K coronameter (700–950 nm), and the SOHO C2 white light coronagraph.
+
 
 %++dynamics and magnetic field++\\
 %rotating nebula to solar rotation\\
@@ -323,11 +377,17 @@ solar wind's impact on Earth\\
 
 the rotation axis is tilted from the normal of the ecliptic by $i_\odot = 7.25$\textdegree{} \citep{USNO2015} (refer to or put into appendix??).\\ %USNO2015 C3
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+reviews: \citet{Balogh2009} (for heliosheath), \citet{Owens2013}\\
+
+Winterhalter1994 The heliospheric plasma sheet:\\
+"the narrow heliospheric current sheet (ca. \SIrange{3000}{10000}{\km} thick), together with the heliospheric plasma sheet in which it is embedded. The heliospheric plasma sheet region is identified by a significantly enhanced plasma beta caused by density enhancements and diminished magnetic field strength and is about 20 to 30 times the thickness of the current sheet."\\
+heliospheric current sheet (HCS)\\
+heliospheric plasma sheet (HPS)\\
+ballerina model... (search figure...)\\
 
 
-\section{Solar wind}
-\label{sec:solar_wind}
+its effects and resulting structures\\
 
 see Kivelson1995, p14+91\\
 first observed at solar eclipses?, before? deduced by Parker from theory/Carrington from geomagnetic storms?\\
@@ -339,58 +399,6 @@ in 1958 Parker predicted/postulated the solar wind \citep{Parker1958}\\
 expanding isothermal atmosphere (solar-wind model)\\
 continuous supersonic radial outflow of plasma\\
 -> also Parker spiral of HMF (see \autoref{fig:Owens2013_PFSS_Sectors_screenshot})
-
-
-\section{Heliospheric magnetic field}	%better: interplanetary magnetic field??
-%\label{sec:heliospheric_magnetic_field}
-
-reviews: \citet{Balogh2009} (for heliosheath), \citet{Owens2013}\\
-
-Winterhalter1994 The heliospheric plasma sheet:\\
-"the narrow heliospheric current sheet (ca. \SIrange{3000}{10000}{\km} thick), together with the heliospheric plasma sheet in which it is embedded. The heliospheric plasma sheet region is identified by a significantly enhanced plasma beta caused by density enhancements and diminished magnetic field strength and is about 20 to 30 times the thickness of the current sheet."\\
-heliospheric current sheet (HCS)\\
-heliospheric plasma sheet (HPS)\\
-ballerina model... (search figure...)\\
-
-%Cranmer2005:
-%?insert their figure 1
-Photosphere: magnetic bright points (MBP) \SIrange{1}{2}{\kilo G}\\ %Cranmer2005
-their convective motion result in wavelike fluctuations of the thin tubes\\
-low chromosphere: thin flux tubes expand laterally and merge to a homogeneous network field\\
-below the chromosphere-corona transition region: the network magnetic field expands laterally and merges again to a large-scale canopy (image)\\
-
-[above the Alfv\'en critical point -- where the wind speed equals the local Alfv\'en speed at about 10~$R_\odot$ -- both the inward and outward modes are advected (advect: convect horizontally) outward with the wind\\
-superradially expanding magnetic flux tube\\
-\citep{Cranmer2005}]\\
-see also paper citations...\\
-
-analytical solar magnetic field model for solar minimum conditions \citep{Banaszkiewicz1998}\\
-dipole plus quadrupole plus current sheet (DQCS) solar magnetic field model\\
-The DQCS model with its quadrupole part having a direct link from the solar equator to infinity along the equatorial plane and current sheet. (see \autoref{fig:Banaszkiewicz1998_DQCS_model_raw}) \citep{Banaszkiewicz1998}\\
-compare with field geometry from eclipse \autoref{fig:Tse2008_500_mo1}...\\
-\begin{figure}[htb]
-	\begin{floatrow}
-		\ffigbox{
-			\includegraphics[width=0.45\textwidth]{images/Banaszkiewicz1998_DQCS_model_raw.png}
-		}{
-			\caption{Solar magnetic field geometry from the DQCS model with field lines (solid) and constant field strength surfaces (dashed). The quadrupole part allows equatorial outflows along the current sheet. Credit: \citet[][Fig.~3]{Banaszkiewicz1998}, reproduced with permission, \textcopyright~ESO.}
-			\label{fig:Banaszkiewicz1998_DQCS_model_raw}
-		}
-		\ffigbox{
-			\includegraphics[width=\Xhsize]{images/Owens2013_PFSS_Sectors_screenshot.png}
-		}{
-			\caption{Illustration of the solar magnetic field Parker spiral formation by rotation of the solar-wind source surface. Between solar-wind flows of opposite magnetic field polarity a heliospheric current sheet (HCS) forms. Credit: \citet[Fig.~1]{Owens2013}, adapted from \citet[Fig.~1]{Schatten1969}.}
-			\label{fig:Owens2013_PFSS_Sectors_screenshot}
-			%Owens2013 figure permission request: open access article
-		}
-	\end{floatrow}
-\end{figure}
-
-Parker spiral, source surface and HCS, see \autoref{fig:Owens2013_PFSS_Sectors_screenshot}\\
-%A sketch of the steady-state solar magnetic field in the ecliptic plane. Close to the Sun, in a spatial region approximately bounding the solar corona, the magnetic field dominates the plasma flow and undergoes significant non-radial (or super-radial) expansion with height. At the source surface, typically taken to be a few solar radii, the pressure-driven expansion of the solar wind dominates and both the field and flow both become purely radial. In the heliosphere, rotation of the HMF footpoints within a radial solar-wind flow generates an azimuthal component of the HMF, leading to a archimedean spiral geometry. Regions of opposite HMF polarity, shown as red and blue lines, are separated by the heliospheric current sheet (HCS), shown as the green dashed line. Image adapted from Schatten et al. (1969).
-
-MHD simulations based on Voyager~1 and 2 measurements within the heliosheath indicate the formation of magnetic bubbles (reconnected sector regions) at the sector boundary caused by the compression before the heliopause, flowing away to the heliosheath tail \citep{Opher2011}.\\
-%Opher2011: Is the Magnetic Field in the Heliosheath Laminar or a Turbulent Sea of Bubbles?
 
 
 \section{Solar wind properties and structures}
@@ -481,7 +489,7 @@ MVA...\\
 Solar wind influences the Earth's magnetosphere and can disturb sensitive technical systems\\
 understanding its properties helps with prediction of events\\
 
-influences on human infrastructure/technical systems\\
+influences on human infrastructure/technical systems/animals (such as birds and whales -> Vanselow2017 10.1017/S147355041700026X)\\
 
 various space weather effects, for instance disturbances in magnetic fields, aurorae, episodes of enhanced radiation, atmospheric losses and stripping of cometary tails. figures of these effects?\\
 
@@ -777,6 +785,12 @@ GNSS error, auroral boundary positions\\
 
 ``It is designed to measure solar particle radiation by its magnetic effects.``\\
 
+Methods of \Kp{} forecast:\\
+- Wing \Kp{} model\\
+- Potsdam quicklook data\\
+- Alexej \Kp{} correlation forecast model\\
+
+
 % acknowledgments:\\
 % The results presented in this thesis rely on the \Kp{}~index, calculated and made available by the German Research Centre for Geosciences in Potsdam from data collected at magnetic observatories. We thank the involved national institutes, the INTERMAGNET network and ISGI (isgi.unistra.fr).\\
 
@@ -894,15 +908,9 @@ Mag data availability: 54.4~\%\\
 Plasma \& orbit data availability: 91.8~\%\\
 
 
-\subsection{Parker Solar Probe}
-\label{sec:parker_solar_probe}
-
-Sun angular diameter comparison, see presi S³\\
-
-
 \subsection{Real-time solar-wind data}
 
-Advanced Composition Explorer\\
+Advanced Composition Explorer (ACE)\\
 s/c figure, launch date was 25 August 1997\\
 
 MAG -- fluxgate magnetometer\\

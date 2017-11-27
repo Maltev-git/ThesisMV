@@ -261,41 +261,49 @@ As the SSN is commonly used as an indicator for solar activity, there exists int
 
 \section{Heliospheric magnetic field}
 %\label{sec:heliospheric_magnetic_field}
+
 %%% solar coronal and heliospheric effects
+look at solar cycle minimum field\\
+MBPs in open coronal regions are the photospheric source of the HMF in the fast solar wind.\\
 
-%Cranmer2005:
-at least for open coronal regions (CHs) MBPs are the photospheric source of the HMF in the fast sw\\
-At the photosphere magnetic bright points (MBPs) are identified as intergranular magnetic flux tubes with field strenghts of \SIrange{100}{200}{\milli\tesla} \citep{Cranmer2005}.\\
-Their stochastic convective appearance and motions result in wavelike fluctuations of the thin flux tubes.\\
-leading to incompressible waves leak into the solar wind\\
-Alfvén waves?\\
-read Cranmer2005 page3 again and connect to alfvenic waves...\\
+%%% MBPs to canopy
+At the photosphere between the granules, magnetic bright points (MBPs) are identified as magnetic flux tubes with field strenghts of \SIrange{100}{200}{\milli\tesla} \citep{Cranmer2005}. In the low chromosphere these thin flux tubes expand laterally and merge to homogeneous network fields which expand and merge again to a large-scale canopy below the transition region (see \autoref{fig:Cranmer2005_fig1_ab}) \citep{Cranmer2005}.
+\begin{figure}[htb]
+	\fcapside[\FBwidth]{
+		\includegraphics[width=0.6\textwidth]{images/Cranmer2005_fig1_ab.png}
+	}{
+		\caption{Schemata of superradially expanding magnetic flux. MBPs between granules are thin magnetic flux tubes that merge to a homogeneous network field (a). The network field expands again to the large-scale canopy field of the lower corona (b). Credit: \citep{Cranmer2005}, get permission...}
+		\label{fig:Cranmer2005_fig1_ab}
+	}
+\end{figure}
 
-for more details about the Alfvén waves and Alfvén speed see \autoref{sec:alfvén_waves}\\
+%%% Alfvén waves
+The MBP's convective appearance and stochastic motions result in wavelike fluctuations that propagate upward from the photosphere through the superradially expanding flux tube -- leading to incompressible waves leaking into the solar wind. These Alfvén waves propagate with a characteristic speed along the magnetic field lines -- for more details about Alfvén waves and Alfvén speed see \autoref{sec:alfvén_waves}.\\
 
-low chromosphere:\\
-thin flux tubes expand laterally and merge to a homogeneous network field\\
+At about \SI{10}{\Rs} the local Alfvén speed and the solar wind speed equals (Alfvén critical surface). It is believed that the solar wind is accelerated until this surface (cite?).\\
 
-below the chromosphere-corona transition region:\\
-the network magnetic field expands laterally and merges again to a large-scale canopy (image)\\
+%%% field geometry from source surface on to heliopause
 
-near-Sun field configuration:\\
-``above the Alfvén critical point -- where the wind speed equals the local Alfvén speed at about \SI{10}{\Rs} -- both the inward and outward modes are advected (advect: convect horizontally) outward with the wind\\
-superradially expanding magnetic flux tube''\\
-\citep{Cranmer2005}\\
-see also paper citations...\\
+From the source surface on, the magnetic field -- frozen within the plasma -- is carried by the solar wind radially outwards into the heliosphere.\\
+
+the superradial field expansion up to the source surface can be seen in fig...\\
+
+In solar minimum conditions, with polar coronal holes and closed equatorial fields, an equatorial current sheet exists, separating both hemispheres.\\
+
+The DQCS model with its quadrupole part having a direct link from the solar equator to the equatorial plane and current sheet. (see \autoref{fig:Banaszkiewicz1998_DQCS_model_raw}) \citep{Banaszkiewicz1998}\\
+The dipole plus quadrupole plus current sheet (DQCS) model constructed by \citet{Banaszkiewicz1998}
+
+analytical solar magnetic field model for solar minimum conditions was\\
 
 
-analytical solar magnetic field model for solar minimum conditions \citep{Banaszkiewicz1998}\\
-dipole plus quadrupole plus current sheet (DQCS) solar magnetic field model\\
-The DQCS model with its quadrupole part having a direct link from the solar equator to infinity along the equatorial plane and current sheet. (see \autoref{fig:Banaszkiewicz1998_DQCS_model_raw}) \citep{Banaszkiewicz1998}\\
+
 compare with field geometry from eclipse \autoref{fig:Tse2008_500_mo1}...\\
 \begin{figure}[htb]
 	\begin{floatrow}
 		\ffigbox{
 			\includegraphics[width=0.45\textwidth]{images/Banaszkiewicz1998_DQCS_model_raw.png}
 		}{
-			\caption{Solar magnetic field geometry from the DQCS model with field lines (solid) and constant field strength surfaces (dashed). The quadrupole part allows equatorial outflows along the current sheet. Credit: \citet[][Fig.~3]{Banaszkiewicz1998}, reproduced with permission, \textcopyright~ESO.}
+			\caption{Solar magnetic field geometry in the polar plane for solar cycle minimum. Magnetic field lines (solid) and constant field strength surfaces (dashed) from the DQCS model are plotted. The model's quadrupole part allows equatorial outflows along the current sheet. Credit: \citet[][Fig.~3]{Banaszkiewicz1998}, reproduced with permission, \textcopyright~ESO.}
 			\label{fig:Banaszkiewicz1998_DQCS_model_raw}
 		}
 		\ffigbox{
@@ -307,6 +315,8 @@ compare with field geometry from eclipse \autoref{fig:Tse2008_500_mo1}...\\
 		}
 	\end{floatrow}
 \end{figure}
+
+
 
 Parker spiral, source surface and HCS, see \autoref{fig:Owens2013_PFSS_Sectors_screenshot}\\
 %A sketch of the steady-state solar magnetic field in the ecliptic plane. Close to the Sun, in a spatial region approximately bounding the solar corona, the magnetic field dominates the plasma flow and undergoes significant non-radial (or super-radial) expansion with height. At the source surface, typically taken to be a few solar radii, the pressure-driven expansion of the solar wind dominates and both the field and flow both become purely radial. In the heliosphere, rotation of the HMF footpoints within a radial solar-wind flow generates an azimuthal component of the HMF, leading to a archimedean spiral geometry. Regions of opposite HMF polarity, shown as red and blue lines, are separated by the heliospheric current sheet (HCS), shown as the green dashed line. Image adapted from Schatten et al. (1969).
@@ -601,6 +611,8 @@ The first three listed indices (\textit{aa}, \textit{am} and \Kp{}) are calculat
 
 [for \Kp{}, $AA$ and $Dst$ read Section 7.4 in book \citet{Bothmer2007}...\\
 $Dst$ (read book Jursa1985 p. 4-31)]\\
+
+\citet{Lockwood2014} even used geomagnetic indices to reconstruct the near-Earth solar wind magnetic field strength and velocity back to 1845.\\
 
 
 \subsection{Solar wind--magnetosphere coupling}

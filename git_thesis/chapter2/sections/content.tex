@@ -23,7 +23,7 @@ The equatorward auroral boundary position correlates with the \Kp~index.\\
 The total electron content (TEC) of the ionosphere has influence on global navigation satellite systems (GNSS). A part of their positional error scales directly with the TEC (in extreme cases up to about \SI{30}{\m}).\\
 
 %CME velocity forecast
-The velocity and direction of CMEs can be determined in their early near\~Sun stages via remote tracking with coronagraph white-light observations. Using these parameters as input for propagation models, their possible arrival time and arrival velocity at Earth can be derived.\\
+The velocity and direction of CMEs can be determined in their early near-Sun stages via remote tracking with coronagraph white-light observations. Using these parameters as input for propagation models, their possible arrival time and arrival velocity at Earth can be derived.\\
 
 %stream velocity forecast from CHs
 As coronal holes are the origin of the fast solar wind, their area on the solar disk, seen in EUV images, correlates with the measured velocity of solar wind streams \citep{Vrsnak2007}. This is used to predict the Earth arrival velocity of solar wind streams about 4~days in advance \citep{Rotter2012}.\footnote{\url{http://swe.uni-graz.at/index.php/services/solar-wind-forecast}}\\
@@ -121,7 +121,7 @@ There also are seasonal variations in the magnetospheric disturbances. Looking a
 		\label{fig:Kp_histogram_monthly}
 	}
 \end{figure}
-These seasonal \Kp{} changes arise from seasonal variations of the solar wind parameters at Earth, which stem from Earth's yearly changes in orbital distance and heliographic latitude (as discussed in Sect.~XX of MVVB\~Paper). Another seasonal effect comes from the Earth's rotation axis tilt (\SI{+-23.44}{\degree}) (obliquity to the ecliptic), which changes the direction of the Earth's magnetic dipole axis to the Sun over the year (see bottom panel of Fig.~\ref{fig:Kp_seasonal}). The rate of magnetic reconnection between solar wind and magnetosphere depends on both fields' direction to each other (parallel/antiparallel) (see Figure in Basics...).\\
+These seasonal \Kp{} changes arise from seasonal variations of the solar wind parameters at Earth, which stem from Earth's yearly changes in orbital distance and heliographic latitude (as discussed in Sect.~XX of MVVB-Paper). Another seasonal effect comes from the Earth's rotation axis tilt (\SI{+-23.44}{\degree}) (obliquity to the ecliptic), which changes the direction of the Earth's magnetic dipole axis to the Sun over the year (see bottom panel of Fig.~\ref{fig:Kp_seasonal}). The rate of magnetic reconnection between solar wind and magnetosphere depends on both fields' direction to each other (parallel/antiparallel) (see Figure in Basics...).\\
 
 \Kp{} seasonal variation effects from seasonal changing Sun tilt, Earth tilt and Earth distance.\\
 causes (see citet{Rangarajan1997} p.~1282 and mention Bartels1963 too):\\
@@ -160,7 +160,7 @@ To describe this, some coupling functions with different complexity were propose
 dayside reconnection:\\
 ``$E_\text{y}$ is the rate at which southward magnetic flux is convected to the magnetosphere by the solar wind ($-v_\text{x} \cdot B_\text{z}$) in GSM coordinates,'' \citep{Russell2007}\\
 
-the product of the proton velocity $v$ and the magnetic field z\~component in geocentric solar magnetospheric (GSM) coordinates $B_\text{z}$:
+the product of the proton velocity $v$ and the magnetic field z-component in geocentric solar magnetospheric (GSM) coordinates $B_\text{z}$:
 \begin{align}
 	?check vectors  E_\text{y} = -v_\text{x} \times B_\text{z}\,\text{(GSM)}	\label{eq:coupling_vxB}
 \end{align}
@@ -179,15 +179,15 @@ It also is known that the solar wind velocity itself already correlates strongly
 \label{sec:data_set__data_processing_and_correlation}
 %determine data basis
 The \Kp{} time series started in 1932 when there were no spacecraft to measure in situ solar wind. Thus, the surveyed time range is defined by the available in situ solar wind data. The OMNI data set collects the longest continuous solar wind measurements at \SI{1}{\au},
-it covers hourly data since 1963; 5\~minute and minutely data since 1981.\\
+it covers hourly data since 1963; 5-minute and minutely data since 1981.\\
 
 why this data set? - because of long time coverage, to magnetospheric bow shock calculated solar wind and integrated geomagnetic indices (see Paper...)\\
 
 %argue for averaging method
-The \Kp{}~index represents maximal variations within 3-hour time intervals. Any solar wind parameter that will be correlated with it also has to have the same time resolution. Additionally to adapting the time resolution, we have to consider by which means it should be done. Simple 3\~hour average values should have a lower correlation coefficient than the solar wind parameter's 3\~hourly maximal variation.\\
+The \Kp{}~index represents maximal variations within 3-hour time intervals. Any solar wind parameter that will be correlated with it also has to have the same time resolution. Additionally to adapting the time resolution, we have to consider by which means it should be done. Simple 3-hour average values should have a lower correlation coefficient than the solar wind parameter's 3-hourly maximal variation.\\
 
 %argue for high resolution, deliberate between hourly and minutely data
-The 3\~hour maximal variations are obviously higher when using high resolution data. Thus, to be able to correlate \Kp{} with solar wind data, high resolution data (e.g., 1~min) is needed to determine the maximal solar wind variations within each 3\~hour interval.\\
+The 3-hour maximal variations are obviously higher when using high resolution data. Thus, to be able to correlate \Kp{} with solar wind data, high resolution data (e.g., 1~min) is needed to determine the maximal solar wind variations within each 3-hour interval.\\
 
 %compare data sets (hourly/minutely->what is good for 3hmax?\\
 The longest time coverage has the hourly OMNI data set (since 1963), however we prefer to use the minutely OMNI data with the time range 1981--2016, to benefit from higer correlation coefficients (see Figs?).\\
@@ -210,7 +210,7 @@ correlate positive and negative values separately?\\
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.5\textwidth]{chapter2/figures/cc_lag_data_d_KpvsVBzgsm.pdf}
 	}{
-		\caption{\Kp-\vBz{} correlation coefficients for different time shifts. Minutely OMNI data from 1981--2016 processed with mean (black) and minimum (red) 3\~hour averaging.}
+		\caption{\Kp-\vBz{} correlation coefficients for different time shifts. Minutely OMNI data from 1981--2016 processed with mean (black) and minimum (red) 3-hour averaging.}
 		\label{fig:cc_lag_data_d_KpvsVBzgsm}
 	}
 \end{figure}
@@ -218,14 +218,14 @@ correlate positive and negative values separately?\\
 %min:	0.00000    -0.717240
 %mean:	0.00000    -0.362237
 %max:	0.00000     0.293137
-The largest correlation is found for the 3\~hour minimum data without time shift. It is a negative correlation with a coefficient of $-0.72$.\\
+The largest correlation is found for the 3-hour minimum data without time shift. It is a negative correlation with a coefficient of $-0.72$.\\
 
-We use \vBz{} 3\~hour minimum values, as a result their frequency distribution and its peak is asymmetrically shifted to negative values, as seen in Fig.~\ref{fig:histogram_VBzgsm}.\\
+We use \vBz{} 3-hour minimum values, as a result their frequency distribution and its peak is asymmetrically shifted to negative values, as seen in Fig.~\ref{fig:histogram_VBzgsm}.\\
 \begin{figure}
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.5\textwidth]{chapter2/figures/histogram_VBzgsm.pdf}
 	}{
-		\caption{Frequency distributions of \vBz{} for 3\~hour mean (black) and minimum (red) minutely OMNI data from 1981--2016.}
+		\caption{Frequency distributions of \vBz{} for 3-hour mean (black) and minimum (red) minutely OMNI data from 1981--2016.}
 		\label{fig:histogram_VBzgsm}
 	}
 \end{figure}
@@ -233,7 +233,7 @@ We use \vBz{} 3\~hour minimum values, as a result their frequency distribution a
 % min shift: -1250
 % mean shift: -250
 % max shift: -750
-even the 3\~hour mean shows a slight offset in position (why?)\\
+even the 3-hour mean shows a slight offset in position (why?)\\
 
 
 \subsection{Functional dependency}
@@ -243,13 +243,13 @@ The frequency distribution over the \Kp-\vBz{} space is shaped like a candle fla
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.5\textwidth]{chapter2/figures/Kp_2dhistogram_VBzgsm_sws_d.pdf}
 	}{
-		\caption{\Kp{} versus \vBz{} frequency distribution (top) and its relative distribution (bottom) with the mean \Kp{} values (solid) and their mean absolute deviation (dotted). It is 3\~hour minimum data from the minutely OMNI data set (1981--2016). The bin size is \SI{500}{\km\per\s\nano\tesla} and \SI{1/3}{\Kp~unit} respectively.}
+		\caption{\Kp{} versus \vBz{} frequency distribution (top) and its relative distribution (bottom) with the mean \Kp{} values (solid) and their mean absolute deviation (dotted). It is 3-hour minimum data from the minutely OMNI data set (1981--2016). The bin size is \SI{500}{\km\per\s\nano\tesla} and \SI{1/3}{\Kp~unit} respectively.}
 		\label{fig:Kp_2dhistogram_VBzgsm_sws_d}
 	}
 \end{figure}
 
 %dependency
-To determine a functional dependency we look at the relative frequencies per \vBz\~interval and their mean \Kp{} values, which are plotted in the bottom panel of Fig.~\ref{fig:Kp_2dhistogram_VBzgsm_sws_d}. The mean absolute deviation (MAD) of the mean has a mean size of \SI{0.7}{\Kp~units}. This probability distribution is asymmetrically V\~shaped around zero, having a larger and steeper negative arm. This effect is not a result of the data reducing method (3\~hour minimum), because for 3\~hour mean data the asymmetry also exists (fig...?). Rather the steeper negative arm is a consequence of the half-wave rectifier coupling of the solar wind magnetic field direction to the magnetosphere as described in Sect~(coupling section...).\\
+To determine a functional dependency we look at the relative frequencies per \vBz-interval and their mean \Kp{} values, which are plotted in the bottom panel of Fig.~\ref{fig:Kp_2dhistogram_VBzgsm_sws_d}. The mean absolute deviation (MAD) of the mean has a mean size of \SI{0.7}{\Kp~units}. This probability distribution is asymmetrically V-shaped around zero, having a larger and steeper negative arm. This effect is not a result of the data reducing method (3-hour minimum), because for 3-hour mean data the asymmetry also exists (fig...?). Rather the steeper negative arm is a consequence of the half-wave rectifier coupling of the solar wind magnetic field direction to the magnetosphere as described in Sect~(coupling section...).\\
 %MAD: 2.211/3 = 0.737 Kp units
 
 %determine fitting functions
@@ -297,7 +297,7 @@ This relation can be used together with real-time in situ measurements from spac
 
 
 \section{\Kp{} forecast from remote CME observations}
-Compared to the steady solar wind, which can be measured reliably only from in situ measurements, CMEs can already be sighted raising from their source region on the solar surface. From remote coronagraph observations some CME properties can be estimated and modeled to Earth, like its propagation direction and its arrival time and velocity (cites...). Thus, early observations enable a heads\~up time only depending on the CME's propagation speed to Earth. This travel duration can be more than 4~days for slow events with average solar wind speeds, about 40~hours for fast events with average speeds of \SI{1000}{\km\per\s} and down to 20~hours and even below for the rare extreme cases, e.g., 19~hours for the event observed by \citet{Carrington1859} on 1~September 1859 and about 21~hours for the event on 23~July 2012 \citep{Russell2013,Temmer2015}.\\
+Compared to the steady solar wind, which can be measured reliably only from in situ measurements, CMEs can already be sighted raising from their source region on the solar surface. From remote coronagraph observations some CME properties can be estimated and modeled to Earth, like its propagation direction and its arrival time and velocity (cites...). Thus, early observations enable a heads-up time only depending on the CME's propagation speed to Earth. This travel duration can be more than 4~days for slow events with average solar wind speeds, about 40~hours for fast events with average speeds of \SI{1000}{\km\per\s} and down to 20~hours and even below for the rare extreme cases, e.g., 19~hours for the event observed by \citet{Carrington1859} on 1~September 1859 and about 21~hours for the event on 23~July 2012 \citep{Russell2013,Temmer2015}.\\
 
 To make use of the heads-up time for CMEs, we simplify the coupling relation from before (\ref{eq:coupling_vxB}) by neglecting its magnetic field part, which cannot be determined from remote observations. Only the solar wind velocity is left as a coupling parameter.\\
 
@@ -321,31 +321,31 @@ The CME fraction of the OMNI time series for the period 1981--2016 is \SI{15.8}{
 
 
 \subsection{Data processing and correlation}
-Again we calculate 3\~hour extreme values using the minutely OMNI data to profit from higher correlation coefficients, like done for the data processing of the \vBz{} analysis in Sect.~\ref{sec:data_set__data_processing_and_correlation}. For the velocity these are 3\~hour maximum values. The comparison between the 3\~hour maximum and the 3\~hour mean frequency distributions show that their mean position raises from 405 to \SI{425}{\km\per\s}, see Fig.~\ref{fig:histogram_V_b}.\\
+Again we calculate 3-hour extreme values using the minutely OMNI data to profit from higher correlation coefficients, like done for the data processing of the \vBz{} analysis in Sect.~\ref{sec:data_set__data_processing_and_correlation}. For the velocity these are 3-hour maximum values. The comparison between the 3-hour maximum and the 3-hour mean frequency distributions show that their mean position raises from 405 to \SI{425}{\km\per\s}, see Fig.~\ref{fig:histogram_V_b}.\\
 %the SWS1 mean raises from 435 to 455~km/s in 3hmax data...\\
 \begin{figure}
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.5\textwidth]{chapter2/figures/histogram_V_b.pdf}
 	}{
-		\caption{Solar wind velocity frequency distributions for 3\~hour mean (black), maximum (red) and maximum of the CME part (green). Minutely OMNI data from the period 1981--2016 is used.}
+		\caption{Solar wind velocity frequency distributions for 3-hour mean (black), maximum (red) and maximum of the CME part (green). Minutely OMNI data from the period 1981--2016 is used.}
 		\label{fig:histogram_V_b}
 	}
 \end{figure}
 
-Using the CME periods from the SWS list as a filter, the CME part and non\~CME part of the data can be examined separately. Their frequency distributions show that in faster solar wind the CME share is rising until eventually in the region above about \SI{900}{\km\per\s} there exist only CMEs, see Fig.~\ref{fig:histogram_V_b}.
+Using the CME periods from the SWS list as a filter, the CME part and non-CME part of the data can be examined separately. Their frequency distributions show that in faster solar wind the CME share is rising until eventually in the region above about \SI{900}{\km\per\s} there exist only CMEs, see Fig.~\ref{fig:histogram_V_b}.
 
 The CME part of the data is correlated with the \Kp~index independently from the remaining solar wind, see Fig.~\ref{fig:cc_lag_sws_d}.
 \begin{figure}
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.5\textwidth]{chapter2/figures/cc_lag_sws_d.pdf}
 	}{
-		\caption{\Kp{}-velocity correlation coefficients for different time shifts. The correlations for the whole solar wind data (solid), for solar wind without CMEs (dashed) and for CMEs only (dotted) are plotted. The used data is the 3\~hour maximum of the minutely high resolution OMNI data.}
+		\caption{\Kp{}-velocity correlation coefficients for different time shifts. The correlations for the whole solar wind data (solid), for solar wind without CMEs (dashed) and for CMEs only (dotted) are plotted. The used data is the 3-hour maximum of the minutely high resolution OMNI data.}
 		\label{fig:cc_lag_sws_d}
 	}
 \end{figure}
 The correlation for CME related data is smaller than that for the regular solar wind. Its maximal correlation coefficient with a value of 0.51 is without time shift, see Table~\ref{tab:correlation_coefficients_kpvsv}.
 \begin{table*}
-	\caption{Time lags with the highest correlation coefficients for the \Kp{}-velocity relation. The used data is the 3\~hour maximum of the minutely high resolution OMNI data.}
+	\caption{Time lags with the highest correlation coefficients for the \Kp{}-velocity relation. The used data is the 3-hour maximum of the minutely high resolution OMNI data.}
 	\label{tab:correlation_coefficients_kpvsv}
 	\centering
 	\begin{tabular}{lcc}
@@ -376,16 +376,16 @@ The correlation for CME related data is smaller than that for the regular solar 
 % 0	0.595784\\
 The regular solar wind without CMEs shows a higher correlation with \Kp{} and its maximal coefficient of 0.66 is at a positive time shift of 9~hours, that is, the \Kp~index forecasts the velocity of regular solar wind 9~hours in advance.
 
-The positive time shift can be explained with the occurence of interaction regions followed by high speed streams (HSS). When a slow solar wind stream is followed by a fast one, the compression at their interface leads to enhanced solar wind densities and magnetic field strengths. The peak velocity of a HSS naturally appears after the interaction region. Therefore the \Kp\~impact of the enhanced magnetic field is correlated with the higher velocity of the HSS, yielding the observed positive time shift.\\
+The positive time shift can be explained with the occurence of interaction regions followed by high speed streams (HSS). When a slow solar wind stream is followed by a fast one, the compression at their interface leads to enhanced solar wind densities and magnetic field strengths. The peak velocity of a HSS naturally appears after the interaction region. Therefore the \Kp-impact of the enhanced magnetic field is correlated with the higher velocity of the HSS, yielding the observed positive time shift.\\
 
 
 \subsection{Functional dependency for CMEs}
-The general \Kp\~velocity dependency is apparent in the tilt of its distribution, see top panel of Fig.~\ref{fig:Kp_2dhistogram_V_sws_c}.
+The general \Kp-velocity dependency is apparent in the tilt of its distribution, see top panel of Fig.~\ref{fig:Kp_2dhistogram_V_sws_c}.
 \begin{figure}
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.5\textwidth]{chapter2/figures/Kp_2dhistogram_V_sws_c.pdf}
 	}{
-		\caption{\Kp-velocity distributions for the whole solar wind data, for solar wind without CMEs and for CMEs only. The used data is the 3\~hour maximum of the minutely high resolution OMNI data. For the CME separation the SWS list from \citet{Richardson2012} is used. The bin size is \SI{10}{\km\per\s} and \SI{1/3}{\Kp~unit} respectively.}
+		\caption{\Kp-velocity distributions for the whole solar wind data, for solar wind without CMEs and for CMEs only. The used data is the 3-hour maximum of the minutely high resolution OMNI data. For the CME separation the SWS list from \citet{Richardson2012} is used. The bin size is \SI{10}{\km\per\s} and \SI{1/3}{\Kp~unit} respectively.}
 		\label{fig:Kp_2dhistogram_V_sws_c}
 	}
 \end{figure}
@@ -430,14 +430,14 @@ which can be used to forecast the \Kp{}~index from the estimated CME arrival vel
 
 \subsection{Functional dependency for non-CMEs}
 
-use of by 9\~hours shifted data..., see Fig.~\ref{fig:cc_lag_sws_d}\\
+use of by 9-hours shifted data..., see Fig.~\ref{fig:cc_lag_sws_d}\\
 
 To find a functional dependency for the mean \Kp{} value we look at the relative frequencies per velocity interval, which are plotted in the bottom panel of Fig.~\ref{fig:Kp_2dhistogram_V_sws23_c}.
 \begin{figure}
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.5\textwidth]{chapter2/figures/Kp_2dhistogram_V_sws23_c.pdf}
 	}{
-		\caption{Non\~CME part of the \Kp-velocity distribution (similar to second panel of Fig.~\ref{fig:Kp_2dhistogram_V_sws_c}, but with the by 9\~hours shifted data) and its relative distribution per velocity interval with the mean \Kp{} values (solid) and their mean absolute deviation (dotted). The bin size is \SI{10}{\km\per\s} and \SI{1/3}{\Kp~unit} respectively.}
+		\caption{Non-CME part of the \Kp-velocity distribution (similar to second panel of Fig.~\ref{fig:Kp_2dhistogram_V_sws_c}, but with the by 9-hours shifted data) and its relative distribution per velocity interval with the mean \Kp{} values (solid) and their mean absolute deviation (dotted). The bin size is \SI{10}{\km\per\s} and \SI{1/3}{\Kp~unit} respectively.}
 		\label{fig:Kp_2dhistogram_V_sws23_c}
 	}
 \end{figure}
@@ -458,11 +458,11 @@ The resulting fit is plotted in Fig.~\ref{fig:Kp_2dhistogram_V_sws23_fit_e} and 
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.5\textwidth]{chapter2/figures/Kp_2dhistogram_V_sws23_fit_e.pdf}
 	}{
-		\caption{Mean \Kp{} values (+) and MAD values (dotted) per velocity interval for the non\~CME part of the data, shifted by 9\~hours. The error bars represent the relative data count. The logarithmic fit (dashed) is plotted with a mean MAD band (shaded area). The function (\ref{eq:log_offset_fit_function}) is used for the weighted fit. The non\~CME part of the OMNI data from the period 1981--2016 is obtained using the SWS list from \citet{Richardson2012}.}
+		\caption{Mean \Kp{} values (+) and MAD values (dotted) per velocity interval for the non-CME part of the data, shifted by 9-hours. The error bars represent the relative data count. The logarithmic fit (dashed) is plotted with a mean MAD band (shaded area). The function (\ref{eq:log_offset_fit_function}) is used for the weighted fit. The non-CME part of the OMNI data from the period 1981--2016 is obtained using the SWS list from \citet{Richardson2012}.}
 		\label{fig:Kp_2dhistogram_V_sws23_fit_e}
 	}
 \end{figure}
-This leads to the non\~CME dependency function
+This leads to the non-CME dependency function
 \begin{align}
 	\Kp(v) = 5.9 \cdot \ln(v + 300) - 37	\,,	\label{eq:kpvsv_sws23_dependency_function}
 \end{align}
@@ -474,10 +474,10 @@ solar activity: \Kp-$ssn$ relation\\
 seasonal changes: \Kp{}-month relation\\
 solar wind nowcast: \Kp-\vBz{} relation (average and worst case)\\
 CME forecast: \Kp-velocity relation (average and worst case)\\
-non\~CME forecast: \Kp-velocity relation (average and worst case)\\
+non-CME forecast: \Kp-velocity relation (average and worst case)\\
 
 \Kp-velocity correlation\\
-similar to \citet{Elliott2013}; different data time period, resolution and averaging method (3\~hour maximum of 1~min data)\\
+similar to \citet{Elliott2013}; different data time period, resolution and averaging method (3-hour maximum of 1~min data)\\
 
 
 \section{Conclusions}

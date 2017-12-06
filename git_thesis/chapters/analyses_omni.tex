@@ -1,105 +1,16 @@
-\chapter{chapter2}
 
-%COFI -- chapter outline and flow integration\\
+\chapter{notes to chapter2...}
 
-Alle Presis ausschlachten!\\
-Alle Projektberichte ausschlachten!\\
-Kp8--Liste irgendwo einweben...\\
-paper draft 2014 ausschlachten... Check!\\
-
+% Alle Presis ausschlachten!\\
+% Alle Projektberichte ausschlachten!\\
+% Kp8--Liste irgendwo einweben...\\
 
 -> example events CIR/HSS and CME\\
 
-literature:\\
-SWS: Rules of the Road: Please contact Ian Richardson about your use of this data.\\
-V-Kp correlation similar to \citet{Elliott2013}; different data resolution and averaging method (3-hour maximum of 1~min data)\\
-linear velocity replacement of ACE realtime data with Kp, Machol2013\\
+%the relation of these events was confirmed two decades ago by (who and \citet{Bothmer1993})\\
 
-
-\section{Solar wind interaction processes with the magnetosphere}
-there are several underlying physical mechanisms, whose contribution is not yet quantified'?'\\
-physical mechanisms:\\
-- reconnection\\
-- compression\\
-- turbulence\\
-- induction?\\
-
-three ways for solar wind momentum and energy transfer into magnetosphere:\\
-- sw entering sphere\\
-- waves/eddies\\
-- reconnection\\
-
-%[the relation of these events was confirmed two decades ago by (who and \citet{Bothmer1993})]\\
-
-\section{Solar wind--magnetosphere coupling functions}
-%theory from literature
-coupling mechanisms and therefrom derived functions\\
-VBzgsm - E-field...\\
-
-Studies finding best coupling function, Newell, etc.\\
-
-\citet{Newell2007}: universal sw-magnetosphere coupling function (opening flux rate)\\
-\citet{Newell2008}: coupling function merging and viscous term\\
-merging and viscous terms (reconnection and turbulence)\\
-merging term: rate magnetic flux is opened at the magnetopause ($d\Phi_\text{MP}/dt$)\\
-viscous term: reconnection due to Kelvin-Helmholtz instabilies at the boundary ($n^{1/2} v^2$)\\
-equation for the least variance linear prediction of Kp: $Kp = 0.05 + \num{2.244e-4} d\Phi_\text{MP}/dt + \num{2.844e-6} n^{1/2} v^2$\\
-combination of both terms works best (r = 0.866)\\
-
-see also \autoref{sec:solar_wind_magnetosphere_coupling}\\
-
-
-\section{Parameter selection}
-%fix usage of Kp index\\
-In our analyses we use the planetary geomagnetic disturbance indicator Kp (see Section~XX...), because it is designed to measure solar particle radiation by its magnetic effects (cite? Bartels...?).\\
-and has close relation to aurorae, NOAA scale\\
-
-correlation coefficients in \autoref{tab:correlation_coefficients}.
-\begin{table}[htb]\small
-	\centering
-	\captionsetup{belowskip=4pt}
-	\caption{Pearson correlation coefficients of Kp with solar wind parameters... (use Spearman instead?)}
-	\begin{tabular}{cc}
-		\toprule
-			&OMNI 1min\\
-		Parameter	&19850101-20150101\\
-			&3h 1min max\\
-		\midrule
-		N	&0.199792\\
-		V	&0.598351\\
-		T	&0.510607\\
-		B	&0.595860\\
-		Bzgsm	&-0.666050$^\text{a}$\\
-		V*B	&0.682383\\
-		V*Bzgsm	&-0.715101$^\text{a}$\\
-		N*T	&\\
-		\bottomrule
-		\multicolumn{2}{l}{\footnotesize{$^\text{a}$Here it is min instead of max.}}
-	\end{tabular}
-	\label{tab:correlation_coefficients}
-\end{table}
-
-\section{Data selection}
-choosing data time range\\
-the Kp time series started in XXXX, when there were no spacecraft to measure in situ solar wind --> time range defined by available solar wind data\\
-OMNI data set -> longest continuous solar wind data set\\
-
-\section{Solar cycle influence}
-solar cycle dependence\\
-- parameter time plots\\
-- parameter vs SSN matrix-plots\\
-- cc time plots\\
-- cc vs SSN plots\\
-
-\section{CME correlations}
-same analysis for CMEs\\
-- parameter time plots\\
-- parameter vs SSN matrix-plots\\
-- cc time plots\\
-- cc vs SSN plots\\
 
 \section{Solar wind structure analyses}
-
 How strong do different structure types influence the terrestrial magnetosphere?\\
 What kind of solar wind structures create the individual regions in this distribution?\\
 What is their individual contribution to the Kp ranges (e.g. high Kp: CMEs 70\% and CIRs 30\%)?\\
@@ -109,12 +20,11 @@ sw-timeseries ACE OPTIMAP ``Zeitreihe''-events
 
 method: automatic list creation by event detection via parameter thresholds...\\
 
-sample CME analyses (MVA, -> Kp)\\
-
-(How can the impact field strength of CMEs be forecasted (V->B correlation for CMEs)?)\\
+sample CME analyses (MVA -> Kp)\\
 
 
 \section{Forecast}
+How can the impact field strength of CMEs be forecasted (V->B correlation for CMEs)?\\
 Internal solar wind correlations:\\
 B-V correlation\\
 ACE MAGSWE 64~s data -> yearly overlay plot\\
@@ -124,8 +34,4 @@ rssfeeds, rtsw plots\\
 CME Kp impact as part of DDC\\
 - \textit{Kp} nowcast with L1 solar wind measurements (L1 alerts, disseminated as RSS feeds; integrated in smartphone app and space weather display)\\
 - Forecast of the possible CME impact on the Earth's magnetosphere (\textit{Kp} index) from the predicted CME arrival velocity (integrated in UGOE CME forecast chain (aka DDC))\\
-
-
-seasonal correction: $\Delta$Kp(month)\\
-$Kp_\text{impact} = Kp_\text{CME} \pm \Delta Kp(month)$\\
 

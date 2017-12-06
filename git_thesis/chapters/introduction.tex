@@ -2,12 +2,12 @@
 \chapter{Introduction}
 \label{chap:introduction}
 
-Introductory text -> motivation\\
-- time variation analysis\\
-- distance analysis\\
-- \Kp{} impact analysis\\
+%Kurzer Text zur Motivation für diese Arbeit; wie es zum Thema kam und wie das Ziel erreicht wurde
 
-(Kurzer Text zur Motivation für diese Arbeit,  wie es zum Thema kam und wie das Ziel erreicht wurde)\\
+Introductory text -> motivation\\
+- \Kp{} impact analysis\\
+- solar activity analysis\\
+- distance analysis\\
 
 % Questions this work asks:\\	%Fragestellungen ausformuliert
 % 	How strong is the solar-wind influence on the terrestrial magnetosphere?\\
@@ -25,19 +25,16 @@ Introductory text -> motivation\\
 % 	(How does the solar wind get accelerated?)\\
 % 	(How is this related to the coronal heating problem?)\\
 
-scientific goals\\
-- finding more precise connections/relationships between parameters/quantities -> for being able to make better forecasts\\
+thesis goal: finding more precise relationships between parameters/quantities for being able to make better forecasts\\
 
-%Outline of this thesis:
-Synopsis (chapters, content)\\	%Gliederung der Arbeit (zum Schluss ueberarbeiten)
-This thesis merges the solar-wind analyses of its variation in time (autoref{ch:}), its evolution to Earth (chapter~XX) and its impact on the magnetosphere (chapter~XX). The solar-wind model derived in the first two chapters is used together with SSN predictions to estimate the near-Sun solar-wind environment the planned SPP spacecraft will encounter during its mission, beginning in 2018. Lists of constants, symbols and abbreviations used in this thesis are located in the appendix.\\
+%Synopsis	% Outline (chapters and their content)
+This thesis merges the solar-wind analyses of its impact on the magnetosphere, its variation with solar activity, and its evolution to Earth. This work is structured as follows. In \autoref{chap:basics} the fundamentals about the Sun, its activity, solar wind, and space weather are laid. The instruments and data are described in \autoref{chap:data}. The influences on the \Kp{}~index from solar activity, solar wind, its streams, and CMEs are analyzed in autoref{chap:chapter2}. In \autoref{chap:empirical_solar_wind_model_for_the_inner_heliosphere}, which includes the published paper on the same topic (\autoref{chap:solar_wind_predictions_for_the_parker_solar_probe_orbit}), an empirical solar-wind model for the inner heliosphere is developed and used to estimate the near-Sun solar-wind environment for the planned PSP mission. \autoref{chap:summary} summarizes the results and gives an outlook for further studies. Useful equations, constants, and abbreviations are located in the \autoref{chap:physics}, \ref{chap:math}, and \ref{chap:glossary}.
 
 
 \chapter{Basics}
 \label{chap:basics}
-
-%COFI -- chapter outline and flow integration\\
-First this chapter sketches the Sun's origin, inner structure, atmosphere and heliosphere. Then the Sun's dynamics with its magnetic field variations and solar cycle are outlined (including differential rotation, magnetic field generation, solar cycle, quiet/active Sun characteristics on surface and solar wind with HMF consequences). The solar wind and its characteristic structures are described. Further, the solar influence on Earth, on its magnetosphere and other space weather effects are portrayed.\\
+%COFI -- chapter outline and flow integration
+This chapter sketches the basics for the analyses performed in this work. First, the Sun's origin, inner structure, atmosphere and heliosphere are described. Then, the Sun's dynamics with its differential rotation and magnetic field generation are outlined. Further, the solar activity cycle is described, including the meridional flow circulation, appearance of active regions, the surface magnetic field change, and sunspot cycles. The heliospheric magnetic field is pictured from its photospheric emergence in magnetic bright points and coronal superradial expansion, through the formation of the heliospheric current sheet and the Parker spiral to the heliosheath. The solar wind and its properties, the origin of slow and fast streams, stream interaction regions, and coronal mass ejections are described. Furthermore, the space weather, the solar influence on Earth, the magnetosphere, solar wind-magnetosphere coupling, and geomagnetic indices are portrayed.
 %first the existing structures, second their dynamics, last their influence on humans/their technology (space weather)
 
 
@@ -115,7 +112,7 @@ The image of a solar eclipse reveals the coronal plasma, shaped by the magnetic 
 %figure source: http://www.zam.fme.vutbr.cz/~druck/Eclipse/Ecl2008m/Tse2008_500_mo1/Hr/Tse2008_500_mo1.png
 
 %%% solar-wind + heliosphere
-Due to the high coronal temperatures, plasma escapes from the solar gravitational field \citep{Parker1958} with velocities of \SIrange{200}{800}{\km\per\s}. Its acceleration is linked to the coronal heating, however the exact location and process remain an open question (cite?). The magnetic field becomes too weak to guide the coronal plasma at a distance of a few solar radii (?4--20). From this source surface the solar wind flows radially outward into space until it reaches the termination shock. Eventually it collides with the local interstellar medium, creating the boundary of the heliosphere, the heliopause. The  is expected to be a bubble of either teardrop or croissant shape (and may be led by a bow shock), caused by the Sun's relative velocity of \SI{23}{\km\per\s} to the local interstellar medium \citep{Owens2013, Opher2015}. Measurements of the Voyager~1 and 2 spacecraft indicate their passage of the termination shock at about \SI{94}{\au} and \SI{84}{\au}, entering the heliosheath region \citep{Owens2013}. \citet{Gurnett2013} report that in 2012 Voyager~1 actually crossed the heliopause into interstellar space at a solar distance of \SI{121}{\au}. \autoref{fig:Owens2013_Heliosphere_screenshot} illustrates the heliosphere and its surrounding flow structure.
+Due to the high coronal temperatures, plasma escapes from the solar gravitational field \citep{Parker1958} with velocities of \SIrange{200}{800}{\km\per\s}. Its acceleration is linked to the coronal heating, however the exact location and process remain an open question (cite?). The magnetic field becomes too weak to guide the coronal plasma at a distance of a few solar radii (?4--20). From this source surface, the solar wind flows radially outward into space until it reaches the termination shock. Eventually it collides with the local interstellar medium, creating the boundary of the heliosphere, the heliopause, which is expected to be a bubble of either teardrop or croissant shape (and may be led by a bow shock), caused by the Sun's relative velocity of \SI{23}{\km\per\s} to the local interstellar medium \citep{Owens2013, Opher2015}. Measurements of the Voyager~1 and 2 spacecraft indicate their passage of the termination shock at about \SI{94}{\au} and \SI{84}{\au}, entering the heliosheath region \citep{Owens2013}. \citet{Gurnett2013} report that in 2012 Voyager~1 actually crossed the heliopause into interstellar space at a solar distance of \SI{121}{\au}. \autoref{fig:Owens2013_Heliosphere_screenshot} illustrates the heliosphere and its surrounding flow structure.
 \begin{figure}[htb]
 	%\centering
 	\fcapside[\FBwidth]{
@@ -188,7 +185,7 @@ With a rotation period of about 34~days the poles have a lag of almost 9~days (f
 %Angular velocity profile in the solar interior inferred from helioseismology (after Thompson et al., 2003). In panel (a), a 2D (latitude-radius) rotational inversion is shown based on the subtractive optimally localized averaging (SOLA) technique. All inversions are based on data from the Michelson Doppler Imager (MDI) instrument aboard the SOHO spacecraft, averaged over 144 days. Inversions become unreliable close to the rotation axis, represented by white areas in panel (a). Note also that global modes are only sensitive to the rotation component which is symmetric about the equator (courtesy M.J. Thompson \& J. Christensen-Dalsgaard).
 
 %%% magnetic field dynamo mechanism
-Turbulent plasma motions from convective flows in the convection zone generate and carry magnetic flux. The large rotational shear at the tachocline stretches and amplifies the disorganized magnetic fields ($\omega$-effect) to strong coherent toroidal flux with intensities of the order \SIrange{1}{10}{\tesla}. These toroidal fields, generated near the bottom of the convection zone, can be stored in a deep magnetic layer located in the stably stratified region below the convection zone \citep{Ossendrijver2003}. The stronger flux ropes become buoyant and raise to the surface. The Coriolis force twists them systematically, the twist is stronger at higher latitudes (Joy's law), on their way through the convection zone ($\alpha$-effect) and they emerge then on the photosphere as bipolar active regions -- the stronger ones forming pairs of sunspots, see \autoref{fig:bipolar_region_HMIB_HMIIF}.
+Turbulent plasma motions from convective flows in the convection zone generate and carry magnetic flux. The large rotational shear at the tachocline stretches and amplifies the disorganized magnetic fields ($\omega$-effect) to strong coherent toroidal flux with intensities of the order \SIrange{1}{10}{\tesla}. These toroidal fields, generated near the bottom of the convection zone, can be stored in a deep magnetic layer located in the stably stratified region below the convection zone \citep{Ossendrijver2003}. The stronger flux ropes become buoyant and raise to the surface. The Coriolis force twists them systematically, the twist is stronger at higher latitudes (Joy's law), on their way through the convection zone ($\alpha$-effect). They emerge then on the photosphere as bipolar active regions -- the stronger ones forming pairs of sunspots, see \autoref{fig:bipolar_region_HMIB_HMIIF}.
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{images/own_figures/bipolar_region_HMIB_HMIIF.png}
@@ -196,7 +193,7 @@ Turbulent plasma motions from convective flows in the convection zone generate a
 	\label{fig:bipolar_region_HMIB_HMIIF}
 \end{figure}
 % HMI is a vector magnetogram, but the public sources say that the magnetogram shows a line-of-sight magnetic field.
-Turbulent convective diffusion of this surface flux contributes to the build-up of poloidal fields. Their resulting polarity is opposite to the prevailing global field, due to the directional way the rotational shear at the tachocline and the Coriolis force in the convection zone act. In these processes fluctuating motions further amplify the mean fields. This solar $\alpha$-$\omega$-dynamo is thought to create the major part of the solar magnetic field. Still, with regard to the magnetic field's high variability, the long-term mean fields are governed by intermittent localized structures, that is, active regions, filaments and coronal loops \citep{Miesch2005}.	%Miesch2005 p.~18 + p.~31
+Turbulent convective diffusion of this surface flux contributes to the build-up of poloidal fields. Their resulting polarity is opposite to the prevailing global field, due to the directional way the rotational shear at the tachocline and the Coriolis force in the convection zone act. Fluctuating motions further amplify the mean fields in these processes. This solar $\alpha$-$\omega$-dynamo is thought to create the major part of the solar magnetic field. Still, with regard to the magnetic field's high variability, the long-term mean fields are governed by intermittent localized structures, that is, active regions, filaments and coronal loops \citep{Miesch2005}.	%Miesch2005 p.~18 + p.~31
 
 the $\alpha$-$\omega$-dynamo, see \autoref{fig:EOSFIG2_modified}\\
 \begin{figure}[htb]
@@ -225,11 +222,11 @@ the $\alpha$-$\omega$-dynamo, see \autoref{fig:EOSFIG2_modified}\\
 \section{Solar activity cycle}
 \label{sec:solar_activity_cycle}
 %%% convection cycle + solar surface magnetic field + solar cycle
-Helioseismic measurements reveal that the large-scale convective flow is agglomerated into large convection cells with slow meridional flows of a few \si{\m\per\s}, see \autoref{fig:Zhao2013_meridional_flow}. A poleward subsurface flow and equatorward backflow beneath with a further poleward flow below are detected within each hemisphere, comprising a stacked double-cell profile. The meridional circulation flow speed has a major influence on the average 22~year period of the emerging magnetic flux at the solar surface. This period varies and is influenced by the stochastic emergence rate and tilts of active regions and the diffusion from random convective motions \citep{Hathaway2016}. Within one period the surface magnetic field configuration changes from a dipole structure to a reversed dipole structure with opposite polarity, thus the transition time from one dipole state to the next lasts about 11~years, this period is termed solar cycle.
+Helioseismic measurements reveal that the large-scale convective flow is agglomerated into large convection cells with slow meridional flows of a few \si{\m\per\s}, see \autoref{fig:Zhao2013_meridional_flow}. A poleward subsurface flow and equatorward backflow beneath with a further poleward flow below are detected within each hemisphere, comprising a stacked double-cell profile. The meridional circulation flow speed has a major influence on the average 22-year period of the emerging magnetic flux at the solar surface. This period varies and is influenced by the stochastic emergence rate and tilts of active regions and the diffusion from random convective motions \citep{Hathaway2016}. Within one period, the surface magnetic field configuration changes from a dipole structure to a reversed dipole structure with opposite polarity, thus the transition time from one dipole state to the next lasts about 11~years, this period is termed solar cycle.
 %http://www.solarcyclescience.com/forum/viewforum.php?f=9
 
 %%% butterfly pattern
-In the transition phase magnetic flux emerges in belts above and below the solar equator, manifesting as bipolar active regions with sunspots, resulting in a toroidal/multipolar structured magnetic field. At the beginning of a cycle sunspots appear at about \SI{+-20}{\degree} latitude, this shifts towards lower latitudes at the end of a cycle. Thus the plot of sunspots over latitude and time reveals a butterfly pattern \citep{Maunder1904}. This butterfly pattern appears in surface radial magnetic field observations as well, see \autoref{fig:Hathaway_magbfly}.
+In the transition phase, magnetic flux emerges in belts above and below the solar equator, manifesting as bipolar active regions with sunspots, resulting in a toroidal/multipolar structured magnetic field. Sunspots appear at about \SI{+-20}{\degree} latitude at the beginning of a cycle, this shifts towards lower latitudes at the end of a cycle. Thus the plot of sunspots over latitude and time reveals a butterfly pattern \citep{Maunder1904}. This butterfly pattern appears in surface radial magnetic field observations as well, see \autoref{fig:Hathaway_magbfly}.
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{images/Hathaway_magbfly_201610.jpg}
@@ -238,7 +235,7 @@ In the transition phase magnetic flux emerges in belts above and below the solar
 \end{figure}
 %Hathaway 2015 permission request: open access article
 %figure source:	http://solarscience.msfc.nasa.gov/images/magbfly.jpg
-The leading polarity of bipolar regions is opposite in both hemispheres and the leading polarity changes with each cycle (Hale's polarity law). The emerging flux is carried by the slow meridional surface flow poleward, canceling the current dominating polar field polarity and eventually resulting in the polar field switch.
+The leading polarity of bipolar regions is opposite in both hemispheres and the leading polarity changes with each cycle (Hale's polarity law). The emerging flux is carried by the slow meridional surface flow poleward, canceling the current dominating polar field polarity and eventually resulting in the polar field switch \citep{Hathaway2015}.
 
 %%% sunspot number
 Since regions of strong magnetic flux are visible as sunspots on the photosphere, they were known well before the common era by greek and chinese scholars \citep{Vaquero2007,Clark1978}. %greek sunspot observation: http://adsabs.harvard.edu/abs/2007JBAA..117..346V
@@ -256,7 +253,7 @@ Systematic sunspot observations exist since 1610, shortly after the invention of
 The SSN observations show large variations in cycle length (9--14~years) and cycle amplitude, with peak SSNs in the range 0--300, \citep{Hathaway2015}. There also exist long-term variations, such as the 70"~year Maunder~Minimum, during which from 1645 on almost no sunspots were observed, \citep{Maunder1890}. The source of the variations in the solar cycle periods and amplitudes are variations in the meridional circulation, because their fluctuations are larger than those found in the differential rotation and in the convective motions \citep{Hathaway2015}.
 
 %%% SSN prediction
-As the SSN is commonly used as an indicator for solar activity, there exists interest in predicting the course of the actual and upcoming solar cycles. The continuing prediction of an already commenced activity cycle is reliable, but then the prediction of a cycle before it began is more difficult. Though, there are indications that the polar magnetic field strength during the preceding activity minimum is correlated to the strenght of the next solar cycle \citep{Schatten1987}. However, \citet{Hathaway2016} suggest that the predictability of solar cycles is generally limited -- accumulated uncertainty produced by stochastic motions in the convection zone makes predicitons further than the next solar cycle very unreliable.
+As the SSN is commonly used as an indicator for solar activity, there exists interest in its prediction for the course of the actual and upcoming solar cycles. The continuing prediction of an already commenced activity cycle is reliable, but then the prediction of a cycle before it began is more difficult. Though, there are indications that the polar magnetic field strength during the preceding activity minimum is correlated to the strenght of the next solar cycle \citep{Schatten1987}. However, \citet{Hathaway2016} suggest that the predictability of solar cycles is generally limited -- accumulated uncertainty produced by stochastic motions in the convection zone makes predicitons further than the next solar cycle very unreliable.
 
 
 \section{Heliospheric magnetic field}
@@ -483,7 +480,7 @@ MVA...\\
 \section{Space weather}
 \label{sec:space_weather}
 
-Solar wind influences the Earth's magnetosphere and can disturb sensitive technical systems\\
+Solar wind influences the terrestrial magnetosphere and can disturb sensitive technical systems\\
 understanding its properties helps with prediction of events\\
 
 influences on human infrastructure/technical systems/animals (such as birds and whales -> Vanselow2017 10.1017/S147355041700026X)\\
@@ -590,6 +587,20 @@ its variations due to solar radiation (day/night cycle and flares)\\
 ionosphere -> TEC -> GNSS error\\
 
 
+Solar wind interaction processes with the magnetosphere:\\
+there are several underlying physical mechanisms, whose contribution is not yet quantified'?'\\
+physical mechanisms:\\
+- reconnection\\
+- compression\\
+- turbulence\\
+- induction?\\
+
+three ways for solar wind momentum and energy transfer into magnetosphere:\\
+- sw entering sphere\\
+- waves/eddies\\
+- reconnection\\
+
+
 \subsection{Geomagnetic indices}
 \label{sec:geomagnetic_indices}
 Geomagnetic observatories are distributed widely over the globe, measuring the local magnetic field at their position. Several sets of stations, covering specific regions, are defined to monitor the state of different parts of the magnetospheric system. Magnetic measurements from these sets define several geomagnetic indices. The International Association of Geomagnetism and Aeronomy (IAGA)  supports the following global geomagnetic indices which are serviced by the International Service of Geomagnetic Indices (ISGI)\footnote{ISGI website: \url{http://isgi.unistra.fr/}}:
@@ -617,17 +628,17 @@ Axford1964 viscous interaction (of turbulent nature, KH/RT instabilities, KH ins
 Otto\&Nykyri1982 KH instabilities/vortices force magnetic reconnection even at northern IMF and are able to account for observed mass flux\\
 
 \citet{Newell2007} and \citet{Newell2008}: coupling consists of merging and viscous part (reconnection and turbulence)\\
-merging part: rate magnetic flux is opened at the magnetopause\\
-viscous part: reconnection due to Kelvin-Helmholtz instabilies at the boundary\\
+merging part: universal sw-magnetosphere coupling function; rate magnetic flux is opened at the magnetopause ($d\Phi_\text{MP}/dt$)\\
+viscous part: reconnection due to Kelvin-Helmholtz instabilies at the boundary ($n^{1/2} v^2$)\\
+equation for the least variance linear prediction of Kp: $Kp = 0.05 + \num{2.244e-4} d\Phi_\text{MP}/dt + \num{2.844e-6} n^{1/2} v^2$\\
+combination of both terms works best (r = 0.866)\\
 
 Merkin2013 MHD simulation of velocity shear at magnetosphere boundary with northern IMF; KH instabilities; double-vortex sheet structure\\
 
 
 \chapter{Data}
 \label{chap:data}
-
-%COFI -- chapter outline and flow integration\\
-
+%COFI -- chapter outline and flow integration
 
 \section{Instruments}
 %\label{sec:instruments}

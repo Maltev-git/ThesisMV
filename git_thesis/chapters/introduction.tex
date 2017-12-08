@@ -257,39 +257,32 @@ As the SSN is commonly used as an indicator for solar activity, there exists int
 
 
 \section{Heliospheric magnetic field}
-%\label{sec:heliospheric_magnetic_field}
-
-%%% solar coronal and heliospheric effects
-look at solar cycle minimum field\\
-MBPs in open coronal regions are the photospheric source of the HMF in the fast solar wind.\\
-
+\label{sec:heliospheric_magnetic_field}
 %%% MBPs to canopy
-At the photosphere between the granules, magnetic bright points (MBPs) are identified as magnetic flux tubes with field strenghts of \SIrange{100}{200}{\milli\tesla} \citep{Cranmer2005}. In the low chromosphere these thin flux tubes expand laterally and merge to homogeneous network fields which expand and merge again to a large-scale canopy below the transition region (see \autoref{fig:Cranmer2005_fig1_ab}).
+In the quiet Sun during solar cycle minimum, open coronal regions are the photospheric sources of the heliospheric magnetic field (HMF). Bright points between the granules on the photosphere are detected in G-band (\SI{430}{\nano\meter}) images. They are identified as magnetic flux tubes with field strenghts of \SIrange{100}{200}{\milli\tesla} \citep{Cranmer2005}. Together these magnetic bright points (MBPs) cover around \SIrange{1}{2}{\%} of the solar surface and carry many times the flux that active regions do \citep{Sanchez_Almeida2010}. These thin flux tubes expand laterally in the low chromosphere and merge to homogeneous network fields, which expand and merge again to a large-scale canopy below the transition region (see \autoref{fig:Cranmer2005_fig1_ab}).
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{images/Cranmer2005_fig1_ab.png}
 	}{
-		\caption{Schemata of superradially expanding magnetic flux. MBPs between granules are thin magnetic flux tubes that merge to a homogeneous network field (a). The network field expands again to the large-scale canopy field of the lower corona (b). Credit: \citet[][Fig.~1]{Cranmer2005}, reproduced with permission, \textcopyright~AAS.}
+		\caption{Schemata of superradially expanding magnetic flux. MBPs between granules on the photosphere are thin magnetic flux tubes that merge to a homogeneous network field (a). The network field expands again to the large-scale canopy field of the lower corona (b). Credit: \citet[][Fig.~1]{Cranmer2005}, reproduced with permission, \textcopyright~AAS.}
 		\label{fig:Cranmer2005_fig1_ab}
 	}
 \end{figure}
 
 %%% Alfvén waves
-The MBP's convective appearance and stochastic motions result in wavelike fluctuations that propagate upward from the photosphere through the superradially expanding flux tube -- leading to incompressible waves leaking into the solar wind \citep{Cranmer2005}. These Alfvén waves propagate with a characteristic speed along the magnetic field lines -- for more details about Alfvén waves and Alfvén speed see \autoref{sec:alfvén_waves}.\\
-
-At about \SI{10}{\Rs} the local Alfvén speed and the solar wind speed equals (Alfvén critical surface). It is believed that the solar wind is accelerated until this surface (cite?).\\
+The MBP's convective appearance and stochastic motions result in wavelike fluctuations that propagate upward from the photosphere through the superradially expanding flux tube -- leading to incompressible waves leaking into the solar wind \citep{Cranmer2005}. These Alfvén waves propagate with a characteristic speed along the magnetic field lines -- for more details about Alfvén waves and Alfvén speed see appendix \autoref{sec:alfvén_waves}. The local Alfvén speed equals the solar wind speed at around \SI{17}{\Rs} \citep{Sittler1999,Exarhos2000}. It is believed that the solar wind is accelerated until this so-called Alfvén critical surface (cite?).\\
 
 %%% field geometry from source surface on to heliopause
-The coronal plasma expands superradially following the magnetic field lines. However, the field strength decreases with increasing solar distance and at a distance of about XX Rs, the thermal pressure becomes larger than the magnetic pressure. Thereby the magnetic field gets frozen within the plasma and is carried by the solar wind radially outwards into the heliosphere. The distance from which the solar wind propagation uncouples from the magnetic field lines is called the source surface and the thermal to magnetic pressure ratio is called plasma beta -- for more details on plasma beta see \autoref{sec:plasma_beta}. The magnetic field changes from superradial expansion below the source surface to a radial configuration above, this field geometry is also visible in the total eclipse image \autoref{fig:Tse2008_500_mo1}.
+The coronal plasma expands superradially, following the magnetic field lines. However, the field strength decreases with increasing solar distance and at a distance of about XX Rs, the thermal pressure becomes larger than the magnetic pressure. Thereby the magnetic field gets frozen within the plasma and is carried by the solar wind radially outwards into the heliosphere. The distance from which the solar wind propagation uncouples from the magnetic field lines is called the source surface and the thermal to magnetic pressure ratio is called plasma beta -- for more details on plasma beta see appendix \autoref{sec:plasma_beta}. The magnetic field changes from superradial expansion below the source surface to a radial configuration above it, this field geometry is also visible in the total eclipse image \autoref{fig:Tse2008_500_mo1}.
 
 %%% HCS
-In solar cycle minimum conditions, a heliospheric current sheet (HCS) separates the two different magnetic polarities originating from both polar coronal holes. The HCS is roughly located in the equatorial plane, dividing both hemispheres. The analytical solar magnetic field model for solar minimum conditions, constructed by \citet{Banaszkiewicz1998}, shows this field geometry as seen in \autoref{fig:Banaszkiewicz1998_DQCS_model_raw}. The quadrupole part of their dipole plus quadrupole plus current sheet (DQCS) model considers the closed equatorial fields and allows equatorial outflows along the current sheet.
+Under solar cycle minimum conditions, a heliospheric current sheet (HCS) separates the two different magnetic polarities originating from both polar coronal holes. The HCS is roughly located in the equatorial plane, dividing both hemispheres. The analytical solar magnetic field model for solar minimum conditions, constructed by \citet{Banaszkiewicz1998}, shows this field geometry as seen in \autoref{fig:Banaszkiewicz1998_DQCS_model_raw}. The quadrupole part of their dipole plus quadrupole plus current sheet (DQCS) model considers the closed equatorial fields and allows equatorial outflows along the current sheet.
 \begin{figure}[htb]
 	\begin{floatrow}
 		\ffigbox{
 			\includegraphics[width=0.45\textwidth]{images/Banaszkiewicz1998_DQCS_model_raw.png}
 		}{
-			\caption{Model of the solar magnetic field geometry in the polar plane for solar cycle minimum. Magnetic field lines (solid) and constant field strength surfaces (dashed) from the DQCS model are plotted. The HCS forms a few solar radii distance at $z = 0$. Credit: \citet[][Fig.~3]{Banaszkiewicz1998}, reproduced with permission, \textcopyright~ESO.}
+			\caption{Model of the solar magnetic field geometry in the polar plane for solar cycle minimum. Magnetic field lines (solid) and constant field strength surfaces (dashed) from the DQCS model are plotted. The field line spacing does not represent the field strength but provides better detail where needed. The HCS forms a few solar radii distance at $z = 0$. Credit: \citet[][Fig.~3]{Banaszkiewicz1998}, reproduced with permission, \textcopyright~ESO.}
 			\label{fig:Banaszkiewicz1998_DQCS_model_raw}
 		}
 		\ffigbox{
@@ -303,7 +296,7 @@ In solar cycle minimum conditions, a heliospheric current sheet (HCS) separates 
 \end{figure}
 
 %%% Parker spiral
-The solar-wind source surface rotates with the Sun and thus shears the heliospheric magnetic field (HMF) into an Archimedean spiral pattern, adding an azimuthal component to the radial HMF. This geometry was anticipated by \citet{Parker1958} and is today called Parker spiral. Commonly the HCS looks more like a ballerina skirt, due to magnetic field variations, and thus the Parker spiral has sectors of different magnetic polarity, whose boundaries are separated by the HCSs. \autoref{fig:Owens2013_PFSS_Sectors_screenshot} shows the Parker spiral viewed in the ecliptic plane, where the solar rotation axis tilt (of xx degree) leads to a slight diving into both hemispheres of opposite polarity.
+The solar-wind source surface rotates with the Sun and thus shears the HMF into an Archimedean spiral pattern, adding an azimuthal component to the radial HMF. This geometry was anticipated by \citet{Parker1958} and is today called Parker spiral. Commonly the HCS looks more like a ballerina skirt, due to magnetic field variations, and thus the Parker spiral has sectors of different magnetic polarity, whose boundaries are separated by the HCSs. \autoref{fig:Owens2013_PFSS_Sectors_screenshot} shows the Parker spiral viewed in the ecliptic plane, where the solar rotation axis tilt of up to \SI{7.25}{\degree} leads to a slight diving into both hemispheres of opposite polarity.
 
 %%% out to heliopause
 That way the HMF is carried out to the termination shock by the solar wind. MHD simulations, based on Voyager~1 and 2 measurements within the heliosheath, provide indications about the outer structure of the heliosheath. After the termination shock, the magnetic sector boundaries are compressed and they reconnect, forming magnetic bubbles \citep{Opher2011}. These bubbles -- unconnected to the HMF -- flow away to the heliosheath tail region. Even beyond the termination shock, the solar wind plasma is confined and collimated by the twisted solar magnetic field and driven into a northern and a southern jet \citep{Opher2015}. Hence, the Sun's magnetosphere has likely a croissant-like shape with two turbulent tail-lobes, where eventually the solar wind and the HMF are mixed into the interstellar medium.
@@ -312,76 +305,7 @@ That way the HMF is carried out to the termination shock by the solar wind. MHD 
 \section{Solar wind}
 \label{sec:solar_wind}
 
-history (paper); properties -> CHs and streamers; fast/slow; Ulysses -> SIRs; in situ fig -> CMEs; coronagraph fig; in situ fig\\
-
-
-
-The ordered dipole structure in solar cycle minimum leads to open polar field regions with large coronal holes and a closed equatorial field belt/streamer belt (clearly visible in \autoref{fig:Tse2008_500_mo1}).\\
-
-
-This leads to the chaotic appearance of closed field lines even at higher latitudes/poles and coronal holes covering equatorial regions.\\
-
-sw in minimum: streamer belt and polar HSSs\\
-active regions forming streamer belt\\
-
-fast solar wind emerges from CHs\\
-slow from closed field streamers; different sources...\\
-
-This is confirmed by the Ulysses spacecraft, which measured the solar-wind speed in a polar orbit covering more than one solar cycle (\autoref{fig:McComas2008_Ulysses_orbit}).\\
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=\textwidth]{images/McComas2008_Ulysses_orbit_.png}
-	\caption{Solar-wind velocity and magnetic field polarity (red/blue) with respect to heliographic latitude for the three orbits of the Ulysses spacecraft during low and high solar activity (upper panels). The data starts left and couterclockwise. The corresponding smoothed SSN (black) and HCS tilt angle (red) are plotted beneath. The background consists of solar images for solar cycle~22 minimum (1996-08-17), solar cycle~23 maximum (2000-07-12), and solar cycle~23 minimum (2006-03-28). The solar disk, inner corona, and outer corona images are from SOHO/EIT (Fe~XII at \SI{1950}{\nano\meter}), Mauna~Loa K~coronameter (\SIrange{700}{950}{\nano\meter}), and SOHO/C2 white light coronagraph. Credit: \citet[][Fig.~1]{McComas200809}, reproduced with permission, \textcopyright~American Geophysical Union. ...ask for high res. image?}
-	\label{fig:McComas2008_Ulysses_orbit}
-\end{figure}
-%figure source: http://onlinelibrary.wiley.com/doi/10.1029/2003GL017136/full
-%McComas200809: (a–c) Polar plots of the solar-wind speed, colored by IMF polarity for Ulysses' three polar orbits colored to indicate measured magnetic polarity. In each, the earliest times are on the left (nine o'clock position) and progress around counterclockwise. (d) Contemporaneous values for the smoothed sunspot number (black) and heliospheric current sheet tilt (red), lined up to match Figures 1a–1c. In Figures 1a–1c, the solar-wind speed is plotted over characteristic solar images for solar minimum for cycle 22 (8/17/96), solar maximum for cycle 23 (12/07/00), and solar minimum for cycle 23 (03/28/06). From the center out, we blend images from the Solar and Heliospheric Observatory (SOHO) Extreme ultraviolet Imaging Telescope (Fe XII at 1950 nm), the Mauna Loa K coronameter (700–950 nm), and the SOHO C2 white light coronagraph.
-
-
-%++dynamics and magnetic field++\\
-%rotating nebula to solar rotation\\
-%rotation + convective motion -> differential rotation (first discovered by sunspot observations; helioseismology -> inner rotation, tachocline)\\
-% meridional flow -> 22 year cycle || convective cells\\
-% 22y convection cycle + magnetic field -> 11ys solar cycle (magnetic field activity cycle, polarity change, sunspot number)\\
-keywords:\\
-SSN -> poloidal/toroidal field -> magnetic surface activity (butterfly diagram) -> min/max polar CHs (quiet/active Sun figure) -> HMF (quiet B-field figure) -> quiet HMF Parker spiral (figure) -> solar wind -> slow/fast sw pattern (Ulysses figure))\\
-
-solar-wind plasma composition and properties -> visible solar-wind structures (coronagraph image; with CME and streamer) -> stream interface (figure) -> in situ measurements (example in situ CIR/HSS plot)\\
-
-stream interfaces (figure and link to previous CIR plot) -> HCS/HPS\\
-
-CMEs (link to previous coronagraph image; in situ CME/MC plot; CME schema figure?)\\
-
-differential rotation/shear at tachocline -> B-field\\
-meridional flow -> solar cycle period\\
-dipole structure, open and closed field lines\\
-polar coronal holes\\
-streamer/equatorial streamer belt\\
-solar wind\\
-
-open field lines (coronal holes) -> HSSs\\
-equatorial ballerina model -> CIRs (figure?)\\
-
-%%% reconnections + CMEs
-The solar differential rotation wraps the magnetic field lines, accumulating tension, leading eventually to relief with a magnetic reconfiguration by field line reconnections.\\
---> release of much energy --> flares, CMEs\\
-
-
-solar wind's impact on Earth\\
-
-the rotation axis is tilted from the normal of the ecliptic by $i_\odot = 7.25$\textdegree{} \citep{USNO2015} (refer to or put into appendix??).\\ %USNO2015 C3
-
-
-reviews: \citet{Balogh2009} (for heliosheath), \citet{Owens2013}\\
-
-Winterhalter1994 The heliospheric plasma sheet:\\
-"the narrow heliospheric current sheet (ca. \SIrange{3000}{10000}{\km} thick), together with the heliospheric plasma sheet in which it is embedded. The heliospheric plasma sheet region is identified by a significantly enhanced plasma beta caused by density enhancements and diminished magnetic field strength and is about 20 to 30 times the thickness of the current sheet."\\
-heliospheric current sheet (HCS)\\
-heliospheric plasma sheet (HPS)\\
-ballerina model... (search figure...)\\
-
-
-its effects and resulting structures\\
+%%% history and plasma properties
 
 see Kivelson1995, p14+91\\
 first observed at solar eclipses?, before? deduced by Parker from theory/Carrington from geomagnetic storms?\\
@@ -394,31 +318,54 @@ expanding isothermal atmosphere (solar-wind model)\\
 continuous supersonic radial outflow of plasma\\
 -> also Parker spiral of HMF (see \autoref{fig:Owens2013_PFSS_Sectors_screenshot})
 
+paperMVVB:\\
+"From observations of cometary tail fluctuations, Biermann (1951) inferred the presence of a continuous flow of particles from the Sun. With his theoretical solar-wind model, Parker (1958) formulated the existence of the solar wind even before the first satellites measured it in situ in 1959 (Gringauz et al. 1960; Neugebauer \& Snyder 1966)."\\
 
-\section{Solar wind properties and structures}
+solar-wind plasma composition and properties\\
+
+its properties are highly variable\\
+parameter magnitudes change with solar distance\\
+parameter ranges at 1 au, He \%\\
+
+Solar-wind properties and structures\\
 
 list event/structure types\\
 solar-wind structures source regions: sunspots/active regions, coronal holes, filaments\\
 
 sw density considerations, see presi S³\\
 
-\subsection{Solar wind plasma}
-\label{sec:solar_wind_plasma}
+solar-wind plasma\\
 
 Plasma in general (properties (H/He/metal composition; see paper...), Plasma-beta, etc.)\\
-	solar-wind properties, slow/fast wind, MHD waves (Alfv\'en waves)\\
+	solar-wind properties, slow/fast wind, MHD waves (Alfvén waves)\\
 
 special events/configurations, which can appear (CIRs, HCS/HPS, etc.)
 HSS, sector boundaries, CIRs, CMEs\\
 
 
-\subsection{Slow solar wind}
+\subsection{Slow and fast streams}
+%%% fast and slow solar wind
+
+The ordered dipole structure in solar cycle minimum leads to open polar field regions with large coronal holes and a closed equatorial field belt/streamer belt (clearly visible in \autoref{fig:Tse2008_500_mo1}).\\
+
+sw in minimum: streamer belt and polar HSSs\\
+active regions forming streamer belt\\
+streamer/equatorial streamer belt\\
+
+polar coronal holes\\
+fast solar wind emerges from CHs\\
+slow from closed field streamers; different sources...\\
+open field lines (coronal holes) -> HSSs\\
+
+cycle maximum:\\
+This leads to the chaotic appearance of closed field lines even at higher latitudes/poles and coronal holes covering equatorial regions.\\
+
+slow solar wind\\
 
 regions with closed lines\\
 trapped plasma, slow solar wind from streamers\\
 
-
-\subsection{High speed streams}
+high speed streams\\
 
 regions with open lines\\
 coronal holes as sources of fast sw\\
@@ -427,14 +374,40 @@ sw plot of HSS with CIR to refer to\\
 
 \citet{Schwenn1983}: ``During the Skylab era in 1973/74 we learned that these high speed streams emerge from coronal holes (Hundhausen, 1977 and references therein).''\\
 
+This is confirmed by the Ulysses spacecraft, which measured the solar-wind speed in a polar orbit covering more than one solar cycle (\autoref{fig:McComas2008_Ulysses_orbit}).\\
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\textwidth]{images/McComas2008_Ulysses_orbit_.png}
+	\caption{Solar-wind velocity and magnetic field polarity (red/blue) with respect to heliographic latitude for the three orbits of the Ulysses spacecraft during low and high solar activity (upper panels). The data starts left and couterclockwise. The corresponding smoothed SSN (black) and HCS tilt angle (red) are plotted beneath. The background consists of solar images for solar cycle~22 minimum (1996-08-17), solar cycle~23 maximum (2000-07-12), and solar cycle~23 minimum (2006-03-28). The solar disk, inner corona, and outer corona images are from SOHO/EIT (Fe~XII at \SI{1950}{\nano\meter}), Mauna~Loa K~coronameter (\SIrange{700}{950}{\nano\meter}), and SOHO/C2 white light coronagraph. Credit: \citet[][Fig.~1]{McComas200809}, reproduced with permission, \textcopyright~American Geophysical Union. ...ask for high res. image?}
+	\label{fig:McComas2008_Ulysses_orbit}
+\end{figure}
+%figure source: http://onlinelibrary.wiley.com/doi/10.1029/2003GL017136/full
+%McComas200809: (a–c) Polar plots of the solar-wind speed, colored by IMF polarity for Ulysses' three polar orbits colored to indicate measured magnetic polarity. In each, the earliest times are on the left (nine o'clock position) and progress around counterclockwise. (d) Contemporaneous values for the smoothed sunspot number (black) and heliospheric current sheet tilt (red), lined up to match Figures 1a–1c. In Figures 1a–1c, the solar-wind speed is plotted over characteristic solar images for solar minimum for cycle 22 (8/17/96), solar maximum for cycle 23 (12/07/00), and solar minimum for cycle 23 (03/28/06). From the center out, we blend images from the Solar and Heliospheric Observatory (SOHO) Extreme ultraviolet Imaging Telescope (Fe XII at 1950 nm), the Mauna Loa K coronameter (700–950 nm), and the SOHO C2 white light coronagraph.
+
+visible solar-wind structures (coronagraph image; with CME and streamer)\\
+
 
 \subsection{Stream interaction regions}
+%%% SIRs/CIRs and HCS/HPS
+in situ measurements (example in situ CIR/HSS plot)\\
+stream interfaces (figure and link to previous CIR plot) -> HCS/HPS\\
+equatorial ballerina model -> CIRs (figure?)\\
 
-Streams of fast wind catch slow wind\\
--> compressions, shocks, deflections\\
+reviews: \citet{Balogh2009} (for heliosheath), \citet{Owens2013}\\
+
+heliospheric current sheet (HCS)\\
+heliospheric plasma sheet (HPS)\\
+
+Winterhalter1994 The heliospheric plasma sheet:\\
+"the narrow heliospheric current sheet (ca. \SIrange{3000}{10000}{\km} thick), together with the heliospheric plasma sheet in which it is embedded. The heliospheric plasma sheet region is identified by a significantly enhanced plasma beta caused by density enhancements and diminished magnetic field strength and is about 20 to 30 times the thickness of the current sheet."\\
+
+
 
 Corotating interaction regions (CIRs)\\
 Stream interaction regions (SIRs)\\
+
+Streams of fast wind catch slow wind\\
+-> compressions, shocks, deflections\\
 
 formation of stream interface and stream deflection, see \autoref{fig:Owens2013_CIR_2panel_screenshot}\\
 %A sketch of a stream interaction region. Left: Looking down on the ecliptic plane. Magnetic field lines within fast (slow) wind, shown in red (blue), become aligned with the stream interface by the reverse (forward) wave. Right: a view from Earth. The magnetic axis, M, and therefore the wind speed belts, are inclined to the rotation axis, R. The point in the heliosphere at which fast wind is able to catch up to the slow wind ahead of it is the stream interface (SI), which forms a spiral front in the heliosphere, shown as the black-outlined curved surface. In the frame of reference of the SI, both fast and slow wind flow toward the SI. Fast (slow) wind, shown by the red (blue) arrow, is slowed (accelerated) and deflected along the SI in the direction counter to (along) solar rotation. Right panel adapted from Pizzo (1991).
@@ -451,14 +424,22 @@ formation of stream interface and stream deflection, see \autoref{fig:Owens2013_
 
 refer to sw figure of CIR\\
 
-
-\subsection{HCS / HPS}
+HCS/HPS\\
 
 from sector boundaries (ballerina skirt)\\
 
 
 \subsection{Coronal mass ejections}
 \label{sec:coronal_mass_ejections}
+%%% CMEs and MCs
+CMEs (link to previous coronagraph image; in situ CME/MC plot; CME schema figure?)\\
+
+flares + CMEs\\
+
+% reconnections
+The solar differential rotation wraps the magnetic field lines, accumulating tension, leading eventually to relief with a magnetic reconfiguration by field line reconnections.\\
+--> release of much energy --> flares, CMEs\\
+
 
 Coronal mass ejections (CMEs) (discovery (Carrington), definition (Hundthausen?), models, GCS (conception of 3-dim CME shape --> enables Earth arrival time forecast from modeled direction and velocity))\\
 
@@ -471,10 +452,25 @@ in situ solar wind figure of same CME (recent one from 2016)\\
 CME-plasma properties\\
 + flares and SEPs often accompany CMEs\\
 
-\subsubsection{Magnetic clouds}
+magnetic clouds\\
 magnetic cloud (MC); refer to in situ plot\\
 See BS magnetic cloud model in analyses methods chapter
 MVA...\\
+
+
+%%%%%%%%%%%%%%%%
+
+
+history (paper); properties -> CHs and streamers; fast/slow; Ulysses -> SIRs; in situ fig -> CMEs; coronagraph fig; in situ fig\\
+
+%++dynamics and magnetic field++\\
+%rotating nebula to solar rotation\\
+%rotation + convective motion -> differential rotation (first discovered by sunspot observations; helioseismology -> inner rotation, tachocline)\\
+% meridional flow -> 22 year cycle || convective cells\\
+% 22y convection cycle + magnetic field -> 11ys solar cycle (magnetic field activity cycle, polarity change, sunspot number)\\
+keywords:\\
+SSN -> poloidal/toroidal field -> magnetic surface activity (butterfly diagram) -> min/max polar CHs (quiet/active Sun figure) -> HMF (quiet B-field figure) -> quiet HMF Parker spiral (figure) -> solar wind -> slow/fast sw pattern (Ulysses figure))\\
+
 
 
 \section{Space weather}
@@ -483,14 +479,16 @@ MVA...\\
 Solar wind influences the terrestrial magnetosphere and can disturb sensitive technical systems\\
 understanding its properties helps with prediction of events\\
 
-influences on human infrastructure/technical systems/animals (such as birds and whales -> Vanselow2017 10.1017/S147355041700026X)\\
-
 various space weather effects, for instance disturbances in magnetic fields, aurorae, episodes of enhanced radiation, atmospheric losses and stripping of cometary tails. figures of these effects?\\
+
+influences on human infrastructure/technical systems/animals (such as birds and whales -> Vanselow2017 10.1017/S147355041700026X)\\
 
 reference to \citet{Bothmer2007}, maybe images\\
 
 \subsection{Solar influence on Earth}
 \label{sec:solar_influence_on_earth}
+
+solar wind's impact on Earth\\
 
 Carrington made first connection between terrestrial magnetic field and solar flares. correct?\\
 
@@ -509,7 +507,7 @@ seasonal effects from Earth orbital distance, inclination (solar rotation axis a
 	\label{fig:sun-earth_seasonal_geometry_draft}
 \end{figure}
 
-solar wind and its species\\
+solar wind and its structures\\
 solar radiation\\
 solar energetic particles (SEPs)\\
 gravitation\\
@@ -530,7 +528,7 @@ at Earth the solar wind total energy flux ($1.45~\text{mW/m}^2$) is only about o
 \subsection{Magnetosphere}
 \label{sec:magnetosphere}
 
-shape formed by dynamic pressure..., similar to heliosphere in ISM...\\
+The magnetosphere's shape is formed by the dynamic pressure balance. The structure is similar to the heliosphere in the ISM.\\
 
 bow shock, magnetotail, magnetosheath, magnetopause\\
 add ecliptic and terrestrial tilt angle; with plasmoid?\\
@@ -545,7 +543,7 @@ see \autoref{fig:heliosphere_image002}\\
 	}
 \end{figure}
 
-turbulence with sw (KH or RT instabilities), see \autoref{sec:solar_wind_magnetosphere_coupling}\\
+turbulence with sw (KH or RT instabilities)\\
 
 Earth magnetic field strength at a height of \SI{36000}{\km} (geostationary): $\approx$\SI{100}{\nT}\\
 Earth magnetic field strength at the surface - equator: $\approx$\SI{30000}{\nT} - poles: $\approx$\SI{60000}{\nT} (cite?)\\
@@ -601,27 +599,17 @@ three ways for solar wind momentum and energy transfer into magnetosphere:\\
 - reconnection\\
 
 
-\subsection{Geomagnetic indices}
-\label{sec:geomagnetic_indices}
-Geomagnetic observatories are distributed widely over the globe, measuring the local magnetic field at their position. Several sets of stations, covering specific regions, are defined to monitor the state of different parts of the magnetospheric system. Magnetic measurements from these sets define several geomagnetic indices. The International Association of Geomagnetism and Aeronomy (IAGA)  supports the following global geomagnetic indices which are serviced by the International Service of Geomagnetic Indices (ISGI)\footnote{ISGI website: \url{http://isgi.unistra.fr/}}:
-The $aa$~index is designed to represent the amplitude of the global geomagnetic activity, normalized to a geomagnetic latitude of \SI{+-50}{\degree}. The $am$~index characterizes the global geomagnetic activity. The \Kp{}~index is designed to measure geomagnetic disturbances from solar particle radiation [reword...]. The \Kp~index is described in more detail in \autoref{sec:kp_index}. The $Dst$~index monitors the intensity of the magnetospheric ring current. The $PC$~index monitors the polar cap magnetic activity -- it approximates the amount of energy which entered the magnetosphere through solar-wind coupling. The $AE$~index and its relatives $AU$, $AL$ and $AO$ measure the magnetic effects of the northern auroral electrojet.
-The first three listed indices (\textit{aa}, \textit{am} and \Kp{}) are calculated from different sets of local 3"~hourly $K$~indices, which measure the local magnetic disturbances at the observatories. There exist several more indices that are based on some of those listed above.\\
-
-[for \Kp{}, $AA$ and $Dst$ read Section 7.4 in book \citet{Bothmer2007}...\\
-$Dst$ (read book Jursa1985 p. 4-31)]\\
-
-\citet{Lockwood2014} even used geomagnetic indices to reconstruct the near-Earth solar wind magnetic field strength and velocity back to 1845.\\
-
-
 \subsection{Solar wind--magnetosphere coupling}
-\label{sec:solar_wind_magnetosphere_coupling}
+%\label{sec:solar_wind_magnetosphere_coupling}
 
-E"~field:	%VBth p124
+E-field produced by solar wind:	%VBth p124
+acts on magnetospheric plasma\\
 \begin{align}
-	\textbf{E}_\text{IMF?} = -\textbf{V} \times \textbf{B}_\text{IMF}
+	\textbf{E}_\text{IMF} = -\textbf{V} \times \textbf{B}_\text{IMF}
 \end{align}
-...derive from Lorentz force\\
-(Because of high plasma conductivity the E"~field is not existent.)\\
+from Lorentz force F = -e vxB\\
+E = -F/e\\
+Because of high plasma conductivity the E-field is not existent.\\
 
 Axford1964 viscous interaction (of turbulent nature, KH/RT instabilities, KH instabilities at the flanks of the magnetosphere) is a viable source of drag force/solar storm energy input into magnetosphere\\
 
@@ -635,6 +623,21 @@ combination of both terms works best (r = 0.866)\\
 
 Merkin2013 MHD simulation of velocity shear at magnetosphere boundary with northern IMF; KH instabilities; double-vortex sheet structure\\
 
+
+\subsection{Geomagnetic indices}
+\label{sec:geomagnetic_indices}
+Geomagnetic observatories are distributed widely over the globe, measuring the local magnetic field at their position. Several sets of stations, covering specific regions, are defined to monitor the state of different parts of the magnetospheric system. Magnetic measurements from these sets define several geomagnetic indices. The International Association of Geomagnetism and Aeronomy (IAGA) supports the following global geomagnetic indices which are serviced by the International Service of Geomagnetic Indices (ISGI)\footnote{ISGI website: \url{http://isgi.unistra.fr/}}:
+The $aa$~index is designed to represent the amplitude of the global geomagnetic activity, normalized to a geomagnetic latitude of \SI{+-50}{\degree}. The $am$~index characterizes the global geomagnetic activity. The \Kp{}~index is designed to measure geomagnetic disturbances from solar particle radiation [reword...]. The \Kp~index is described in more detail in \autoref{sec:kp_index}. The $Dst$~index monitors the intensity of the magnetospheric ring current. The $PC$~index monitors the polar cap magnetic activity -- it approximates the amount of energy which entered the magnetosphere through solar-wind coupling. The $AE$~index and its relatives $AU$, $AL$ and $AO$ measure the magnetic effects of the northern auroral electrojet.
+The first three listed indices (\textit{aa}, \textit{am} and \Kp{}) are calculated from different sets of local 3"~hourly $K$~indices, which measure the local magnetic disturbances at the observatories. There exist several more indices that are based on some of those listed above.\\
+
+[for \Kp{}, $AA$ and $Dst$ read Section 7.4 in book \citet{Bothmer2007}...\\
+$Dst$ (read book Jursa1985 p. 4-31)]\\
+
+\citet{Lockwood2014} even used geomagnetic indices to reconstruct the near-Earth solar wind magnetic field strength and velocity back to 1845.\\
+
+
+
+%%%%--  next chapter  --%%%%
 
 \chapter{Data}
 \label{chap:data}
@@ -658,6 +661,9 @@ Because these magnetometer types are directional, they often are placed in two s
 L-> which is generated by surface charges?/electrons?/ionization?/the instruments?\\
 %https://en.wikipedia.org/wiki/Spacecraft_magnetometer
 
+examples:\\
+ACE/MAG -- fluxgate magnetometer\\
+
 
 \subsection{Plasma detector}
 %\label{sec:plasma_detector}
@@ -671,7 +677,7 @@ sw ion composition spectrometer - \\
 radio burst tracker\\
 
 
-A plasma detector measures the ion energy frequency distribution, which consists basically only of protons and alphas in solar wind (see \autoref{fig:ion_energy_spectrum_plot}). see also \autoref{sec:solar_wind_plasma}
+A plasma detector measures the ion energy frequency distribution, which consists basically only of protons and alphas in solar wind (see \autoref{fig:ion_energy_spectrum_plot}). see also \autoref{sec:solar_wind}
 \\
 \begin{figure}[htb]
 	%\centering
@@ -702,6 +708,7 @@ The temperature scales with the distribution's width.\\
 % resolution of the experiment is better in the energy dimension than in the
 % angular dimensions.''
 
+ACE/SWEPAM\\	%https://sci-hub.ac/10.1023/A:1005040232597
 
 \section{Data sources}
 
@@ -725,8 +732,6 @@ outer heliosphere:\\
 	Voyager~1 and 2\\
 	Ulysses\\
 
-also RT-data sources? Wind, ACE, SOHO?, STEREO~A and B, DSCOVR\\
-
 A time coverage overview of the data sets used in the analyses of this thesis (SSN, \Kp~index, LRO, HRO, Helios~1 and 2) is plotted in \autoref{fig:timeline_SSN_with_data_and_sc}.\\
 \begin{figure}[htb]
 	\centering
@@ -737,10 +742,11 @@ A time coverage overview of the data sets used in the analyses of this thesis (S
 
 
 \subsection{Sunspot number}
-%\label{sec:sunspot_number}
+\label{sec:sunspot_number}
+
 SSN history in section basics\\
 add SSN figure of history incl. Maunder minimum?\\
-SIDC/SILSO...\\
+SIDC/SILSO... see paper...\\
 SSN Version~2.0\\
 WDC-SILSO -- World Data Center-Sunspot Index and Long-term Solar Observations\\
 %https://de.wikipedia.org/wiki/Sonnenfleck#Geschichte
@@ -772,7 +778,7 @@ To benefit from its higher precision, its scale, in the range 0--9 as well, is f
 \end{figure}
 %ftp://ftp.gfz-potsdam.de/pub/home/obs/kp-ap/music/
 
-The \Kp{}~intex can be converted to the 3"~hour equivalent $ap$~index, which represents the magnetic field strength at a surface position of about \SI{50}{\degree} dipole latitude. The conversion is done via a table defined by Bartels, in which the value of the \textit{ap}~index is scaled in units of \SI{2}{nT} (see \autoref{tab:kp_to_ap_table}).
+The \Kp{}~index can be converted to the 3"~hour equivalent $ap$~index, which represents the magnetic field strength at a surface position of about \SI{50}{\degree} dipole latitude. The conversion is done via a table defined by Bartels, in which the value of the \textit{ap}~index is scaled in units of \SI{2}{nT} (see \autoref{tab:kp_to_ap_table}).
 \begin{table}
 	\caption{Defined table for the conversion from the \Kp~index to the equivalent \textit{ap}~index, which represents the magnetic field strength in units of \SI{2}{nT}.}
 	\label{tab:kp_to_ap_table}
@@ -785,22 +791,22 @@ The \Kp{}~intex can be converted to the 3"~hour equivalent $ap$~index, which rep
 		\textit{ap}	&39	&48	&56	&67	&80	&94	&111	&132	&154	&179	&207	&236	&300	&400
 	\end{tabular}
 \end{table}
-There are further geomagnetic indices which are derived from the \Kp{}~index. They include $Ap$, the daily $ap$ average, $Cp$, the daily $ap$ sum mapped via a defined table to the range \numrange{0}{2.5} and $C9$, a mapping of $Cp$ via a defined table to the range \numrange{0}{9}. The definitions of Q"~days (quiet days) and D"~days (disturbed days) are also obtained from the \Kp{}~index.
+There are further geomagnetic indices which are derived from the \Kp{}~index. They include $Ap$, the daily $ap$ average, $Cp$, the daily $ap$ sum mapped via a defined table to the range \numrange{0}{2.5}, and $C9$, a mapping of $Cp$ via a defined table to the range \numrange{0}{9}. The definitions of Q"~days (quiet days) and D"~days (disturbed days) are also obtained from the \Kp{}~index.
 
 The International Association of Geomagnetism and Aeronomy (IAGA) adopted the \Kp{}~index in 1954. The \Kp{}~index was maintained in Göttingen until January 1997 -- now the German Research Centre for Geosciences (GFZ) in Potsdam supplies the \Kp{}~index and thereof derived indices. The GFZ provides historical and quicklook data of the indices via their website\footnote{GFZ website for geomagnetic indices: \url{http://www.gfz-potsdam.de/de/kp-index/} (existent in 2017-10-29)}. The data was extended backwards and is available from 1932 onwards.\\
 
-further uses of the \Kp~index:\\
-The NOAA G"~Scale for geomagnetic storms (G~1 to G~5) is based on the \Kp~index\footnote{NOAA Space Weather Scales website: \url{http://www.swpc.noaa.gov/noaa-scales-explanation} (existent in 2017-10-29)}.\\
+Several indicators/quantities are based on the \Kp{}~index:\\
+The NOAA G-Scale for geomagnetic storms (G~1 to G~5) is based on the \Kp~index\footnote{NOAA Space Weather Scales website: \url{http://www.swpc.noaa.gov/noaa-scales-explanation} (existent in 2017-10-29)}.\\
 The equatorward auroral boundary position correlates with the \Kp~index (cite?).\\
 The variation of the total electron content (TEC) of the ionosphere correlates with the \Kp~index (cite?). The TEC has influence on global navigation satellite systems (GNSS). A part of their positional error scales directly with TEC (in extreme cases up to about \SI{30}{\m}).\\
 
-``It is designed to measure solar particle radiation by its magnetic effects.``\\
+"It is designed to measure solar particle radiation by its magnetic effects."\\
 
-Methods of \Kp{} forecast:\\
-- Wing \Kp{} model\\
-- Potsdam quicklook data\\
-- Alexej \Kp{} correlation forecast model\\
-
+Because of the effects on sensitive technical systems, methods for \Kp{} forecasting are developed.\\
+- Wing \Kp{} model (link)\\
+- Potsdam quicklook data (link)\\
+- Alexej \Kp{} correlation forecast model (link)\\
+- In this work we derive relations for \Kp{} nowcast from in-situ solar-wind measurements and \Kp{} forecast from remote solar-wind stream/CME observations.\\
 
 % acknowledgments:\\
 % The results presented in this thesis rely on the \Kp{}~index, calculated and made available by the German Research Centre for Geosciences in Potsdam from data collected at magnetic observatories. We thank the involved national institutes, the INTERMAGNET network and ISGI (isgi.unistra.fr).\\
@@ -808,6 +814,8 @@ Methods of \Kp{} forecast:\\
 
 \subsection{OMNI data set}
 \label{sec:omni_data_set}
+
+see paper...\\
 
 a data set merged from different sources\\
 The OMNI data \citep{King2005} were obtained from the GSFC/SPDF OMNIWeb interface.\\
@@ -835,6 +843,7 @@ Various spacecraft contribute to the interplanetary magnetic field (IMF) and sol
 \subsubsection{Solar Wind Structures}
 Solar Wind Structures (SWS) list\\
 derived by Richardson.... from OMNI data (only?)
+see chapter2...\\
 
 permission received.\\
 
@@ -924,9 +933,9 @@ Plasma \& orbit data availability: 91.8~\%\\
 Advanced Composition Explorer (ACE)\\
 s/c figure, launch date was 25 August 1997\\
 
-MAG -- fluxgate magnetometer\\
-SWEPAM\\	%https://sci-hub.ac/10.1023/A:1005040232597
+Wind, STEREO, SOHO, CELIAS\\
 
 data errors/gaps...\\
+Several services/alerts are based on the data streams from real-time measurements. (L1 alerts, etc.)\\
 
 DSCOVR as replacement was launched on 11~Februar 2015. It is NOAA's SWPC real-time solar-wind prime source since 27 July 2016.\footnote{\url{http://www.swpc.noaa.gov/products/real-time-solar-wind}}\\

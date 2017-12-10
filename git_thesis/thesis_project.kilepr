@@ -330,7 +330,7 @@ encoding=UTF-8
 highlight=LaTeX
 line=261
 mode=LaTeX
-open=true
+open=false
 order=2
 
 [item:chapter2/sections/abstract.tex]
@@ -388,7 +388,7 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=3
+line=33
 mode=LaTeX
 open=false
 order=1
@@ -408,7 +408,7 @@ archive=true
 column=49
 encoding=UTF-8
 highlight=LaTeX
-line=239
+line=240
 mode=LaTeX
 open=true
 order=0
@@ -425,10 +425,10 @@ order=3
 
 [item:chapters/introduction.tex]
 archive=true
-column=43
+column=16
 encoding=UTF-8
 highlight=LaTeX
-line=545
+line=460
 mode=LaTeX
 open=true
 order=1
@@ -450,7 +450,7 @@ encoding=UTF-8
 highlight=LaTeX
 line=14
 mode=LaTeX
-open=true
+open=false
 order=4
 
 [item:notes.tex]
@@ -541,7 +541,7 @@ highlight=LaTeX
 line=0
 mode=LaTeX
 open=true
-order=3
+order=2
 
 [item:thesis_project.kilepr]
 archive=true
@@ -645,7 +645,7 @@ ViMarks=.,0,0,[,1,0,],-1,-1
 
 [view-settings,view=0,item:chapters/analyses_omni.tex]
 CursorColumn=0
-CursorLine=3
+CursorLine=33
 JumpList=
 ViMarks=.,2,0,[,3,0,],-1,-1
 
@@ -657,9 +657,9 @@ ViMarks=.,2,5,[,2,1,],2,5
 
 [view-settings,view=0,item:chapters/cover.tex]
 CursorColumn=49
-CursorLine=239
+CursorLine=240
 JumpList=
-ViMarks=.,239,48,[,239,19,],239,48
+ViMarks=.,240,48,[,240,45,],240,48
 
 [view-settings,view=0,item:chapters/discussion_summary.tex]
 CursorColumn=19
@@ -668,10 +668,10 @@ JumpList=
 ViMarks=.,1,18,[,1,7,],1,18
 
 [view-settings,view=0,item:chapters/introduction.tex]
-CursorColumn=43
-CursorLine=545
+CursorColumn=16
+CursorLine=460
 JumpList=
-ViMarks=.,545,43,[,545,43,],545,43
+ViMarks=.,466,27,[,466,27,],466,27
 
 [view-settings,view=0,item:chapters/paperMVVB_wrapper.tex]
 CursorColumn=0

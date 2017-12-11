@@ -325,13 +325,13 @@ order=7
 
 [item:appendix/physics.tex]
 archive=true
-column=54
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=261
+line=78
 mode=LaTeX
-open=false
-order=2
+open=true
+order=3
 
 [item:chapter2/sections/abstract.tex]
 archive=true
@@ -365,13 +365,13 @@ order=2
 
 [item:chapters/analyses_helios.tex]
 archive=true
-column=45
+column=22
 encoding=UTF-8
 highlight=LaTeX
-line=3
+line=16
 mode=LaTeX
-open=false
-order=3
+open=true
+order=4
 
 [item:chapters/analyses_helios_lineup.tex]
 archive=true
@@ -405,10 +405,10 @@ order=3
 
 [item:chapters/cover.tex]
 archive=true
-column=49
+column=69
 encoding=UTF-8
 highlight=LaTeX
-line=240
+line=241
 mode=LaTeX
 open=true
 order=0
@@ -425,10 +425,10 @@ order=3
 
 [item:chapters/introduction.tex]
 archive=true
-column=16
+column=59
 encoding=UTF-8
 highlight=LaTeX
-line=460
+line=319
 mode=LaTeX
 open=true
 order=1
@@ -608,8 +608,8 @@ JumpList=
 ViMarks=.,0,0,[,1,0,],-1,-1
 
 [view-settings,view=0,item:appendix/physics.tex]
-CursorColumn=54
-CursorLine=261
+CursorColumn=0
+CursorLine=78
 JumpList=
 ViMarks=.,261,54,[,261,54,],261,54
 
@@ -632,10 +632,10 @@ JumpList=
 ViMarks=.,197,0,[,197,0,],197,0
 
 [view-settings,view=0,item:chapters/analyses_helios.tex]
-CursorColumn=45
-CursorLine=3
+CursorColumn=22
+CursorLine=16
 JumpList=
-ViMarks=.,3,45,[,3,45,],3,45
+ViMarks=.,16,21,[,16,14,],16,21
 
 [view-settings,view=0,item:chapters/analyses_helios_lineup.tex]
 CursorColumn=0
@@ -656,10 +656,10 @@ JumpList=
 ViMarks=.,2,5,[,2,1,],2,5
 
 [view-settings,view=0,item:chapters/cover.tex]
-CursorColumn=49
-CursorLine=240
+CursorColumn=69
+CursorLine=241
 JumpList=
-ViMarks=.,240,48,[,240,45,],240,48
+ViMarks=.,241,68,[,241,38,],241,68
 
 [view-settings,view=0,item:chapters/discussion_summary.tex]
 CursorColumn=19
@@ -668,10 +668,10 @@ JumpList=
 ViMarks=.,1,18,[,1,7,],1,18
 
 [view-settings,view=0,item:chapters/introduction.tex]
-CursorColumn=16
-CursorLine=460
+CursorColumn=59
+CursorLine=319
 JumpList=
-ViMarks=.,466,27,[,466,27,],466,27
+ViMarks=.,319,59,[,319,60,],319,59
 
 [view-settings,view=0,item:chapters/paperMVVB_wrapper.tex]
 CursorColumn=0

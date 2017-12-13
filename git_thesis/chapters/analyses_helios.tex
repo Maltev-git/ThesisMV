@@ -123,13 +123,85 @@ difference to -2 is 0.039\\
 % ]constant mass flux only for mean...\\
 
 
-\subsection{change B-field radial dependency...}
+
+\subsection{Magnetic field strength solar distance dependency improvement}
 
 in the paperMVVB it is seen that the magnetic field strength mean and median cross each other at 0.339 au and the mean is lower than the median at smaller distances, in agreement with the Parker spiral geometry of the interplanetary magnetic field (IMF)?.\\
 
-B(r) = sqrt((B0 / r²)² + (-B0 omega / (Vr * r))²)	--> expected r dependency: B propto a*r**-2 + b*r**-1\\
-fit with $\sqrt{(r^a)^2 + (r^b)^2}$, where $a \approx -2$ and $b \approx -1$\\
-see also \url{radial_fit_B_test_plot.png}\\
+The coronal magnetic field near the Sun rigidly rotates, holding on to the coronal plasma. At the solar wind source surface, where the thermal plasma pressure overcomes the magnetic pressure, the magnetic field gets radially transported outwards maintaining only its radial component $B_r$. From there on, the solar rotation begins to shear the magnetic field, building up a longitudinal component $B_\phi$ as well.\\
+
+Solar wind magnetic field model of \citet{Parker1958} with its components in spherical coordinates ($\theta$ is the co-latitude):
+\begin{align}
+	\vect{B}_r(r) &= B_0 \left(\frac{r_0}{r}\right)^2 \cdot \vect{e}_r\\
+	\vect{B}_\phi(r) &= -B_0 \left(\frac{r_0}{r}\right)^2 \cdot \frac{\omega\,r\,\sin\theta}{v_\text{sw}} \cdot \vect{e}_\phi\\
+	\vect{B}_\theta(r) &= 0 \cdot \vect{e}_\theta\\
+	B(r) &= \sqrt{\vect{B}_r^2 + \vect{B}_\phi^2 + \vect{B}_\theta^2}\\
+	B(r) &= \sqrt{\left(B_0 \left(\frac{r_0}{r}\right)^2\right)^2 + \left(-B_0 \left(\frac{r_0}{r}\right)^2 \cdot \frac{\omega\,r\,\sin\theta}{v_\text{sw}}\right)^2}\\
+	B(r) &= B_0 \left(\frac{r_0}{r}\right)^2 \cdot \sqrt{1 + \left(\frac{\omega\,r\,\sin\theta}{v_\text{sw}}\right)^2}
+\end{align}
+with the norming field strength $B_0$ at the norming distance $r_0$. The solar angular rotation rate $\omega$ and the solar wind velocity $v_\text{sw}$.\\
+
+In this model with increasing solar distance, its radial component scales with $r^{-2}$ as it is expected for a spherical source.\\
+
+Thus, in the ecliptic ($\theta = 90\degree$), the field strength scales like
+\begin{align}
+	B(r) &= B_0\,r^{-2} \cdot \sqrt{1 + \left(\frac{\omega\,r}{v_\text{sw}}\right)^2}\\
+	B(r) &= B_0 \cdot \sqrt{r^{-4} + \left(\frac{\omega}{v_\text{sw}}\right)^2 r^{-2}}\\
+	B(r) &= B_0 \cdot \sqrt{r^{-4} + b\,r^{-2}}\\
+	B(r) &= B_0 \cdot \sqrt{r^{-4} + r^{-2}}	\text{\,, for } b = 1\\
+	B(1\,\text{au}) &= B_0 \cdot \sqrt{2}
+\end{align}
+with the distance in [au] and $B_0$ the radial field component at 1 au.\\
+
+at 1 au the observed field angle in the ecliptic $\phi$ is about \SI{45}{\degree} ($B_r = B_\phi$, thus $B(1 au) = B_0 \cdot \sqrt{2}$). see OMNI plot and calculate omega from equation with typical values...\\
+Therefore $\left(\frac{\omega}{v_\text{sw}}\right) = b = 1$\\
+fit function: $f(r) = a \cdot \sqrt{\left(r^{e_1}\right)^2 + \left(r^{e_2}\right)^2}$\\
+expected $r$-dependency: $a \approx B(1 au) / \sqrt{2}$, $e_1 \approx -2$, and $e_2 \approx -1$\\
+fit function in \autoref{fig:radial_fit_B_test2} and resulting fit parameters in \autoref{tab:bfield_fit_parameters}\\
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.4\textwidth]{images/gnuplots/radial_fit_B_test2.png}
+	\caption{Helios hourly data plot of the magnetic field strength with respect to solar distance. The mean and median per \SI{0.01}{\au} data bin and their fit curves are plotted as well. The Helios data has a native distance resolution of \SI{0.01}{\au}, thus, to make the distribution visible in these plots, we added a random distance value of up to \SI{+-0.005}{\au}.}
+	\label{fig:radial_fit_B_test2}
+\end{figure}
+\begin{table*}
+	\caption{Fit parameters for the median and mean magnetic field strength solar distance relations and their crossing distance.}
+	\label{tab:bfield_fit_parameters}
+	\centering
+	\sisetup{table-figures-integer=1, table-figures-decimal=4, table-figures-exponent=0}
+	\begin{tabular}{l c c c c}
+		\hline\hline
+		\multirow{2}{*}{Fit}	&Factor	&\multicolumn{2}{c}{Exponents}	&Crossing distance\\
+		\cline{3-4}
+			&$a$	&$e_1$	&$e_2$	&[au]\\
+		\hline
+		Median	&4.04(13)	&-1.852(25)	&-0.97(23)	&\multirow{2}{*}{0.33625(??)}\\
+		Mean	&4.47(12)	&-1.740(18)	&-0.99(23)	&\\
+		\hline
+	\end{tabular}
+\end{table*}
+%4.47274*sqrt((r**-1.74028)**2 + (r**-0.990334)**2) = 4.04003*sqrt((r**-1.85224)**2 + (r**-0.974274)**2)\\
+%r approx 0.336257719\\
+%fit values
+%4.04003	-1.85224	-0.974274
+%4.47274	-1.74028	-0.990334
+%errors
+%0.130076	0.0246453	0.227053
+%0.119049	0.0178415	0.228909
+%table format
+%4.04(13)	-1.852(25)	-0.97(23)
+%4.47(12)	-1.740(18)	-0.99(23)
+%avg WSSR = 27607.2	-6%
+%med WSSR = 22254.7	-9%
+%old avg WSSR = 29339.9	for simple power law function a*r^b
+%old med WSSR = 24586.6
+
+Here, the WSSR is \SI{6}{\%}/\SI{9}{\%} lower compared to the simple power law function a*r**b in \citet{Venzmer2017}.\\
+
+make 2d-fit\\
+at \SI{0.046}{\au} the value is ?? nT. This is higher than the value in the paper.\\
+
+scaling SSN-relation with the fit result: $B(ssn,r) = \frac{B(ssn)}{\sqrt{2}} \cdot \sqrt{\left(r^{e_1}\right)^2 + \left(r^{e_2}\right)^2}$\\
 
 \begin{figure}[htb]
 	\centering
@@ -139,6 +211,7 @@ see also \url{radial_fit_B_test_plot.png}\\
 \end{figure}
 
 => what kind of distribution has the B-field near the Sun?\\
+
 
 
 \section{Literature}

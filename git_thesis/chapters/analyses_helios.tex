@@ -1,7 +1,9 @@
 
 \chapter{Empirical solar-wind model for the inner heliosphere}
 \label{chap:empirical_solar_wind_model_for_the_inner_heliosphere}
+
 %COFI -- chapter outline and flow integration
+This chapter is constructed as follows, the PSP mission, scientific goals, and spacecraft are described, I introduce the analyses done in the publication \citet{Venzmer2017}, which belongs to this chapter, an improvement to the magnetic field solar distance dependency is derived, which deprecates that from the paper, other things, and further an outlook is given.\\
 
 paper introduction and context of motivation in thesis and context of results in thesis\\
 
@@ -130,7 +132,7 @@ in the paperMVVB it is seen that the magnetic field strength mean and median cro
 
 The coronal magnetic field near the Sun rigidly rotates, holding on to the coronal plasma. At the solar wind source surface, where the thermal plasma pressure overcomes the magnetic pressure, the magnetic field gets radially transported outwards maintaining only its radial component $B_r$. From there on, the solar rotation begins to shear the magnetic field, building up a longitudinal component $B_\phi$ as well.\\
 
-Solar wind magnetic field model of \citet{Parker1958} with its components in spherical coordinates ($\theta$ is the co-latitude):
+Solar wind magnetic field model of \citet{Parker1958} with its components in spherical coordinates ($\theta$ is the colatitude):
 \begin{align}
 	\vect{B}_r(r) &= B_0 \left(\frac{r_0}{r}\right)^2 \cdot \vect{e}_r\\
 	\vect{B}_\phi(r) &= -B_0 \left(\frac{r_0}{r}\right)^2 \cdot \frac{\omega\,r\,\sin\theta}{v_\text{sw}} \cdot \vect{e}_\phi\\
@@ -153,14 +155,20 @@ Thus, in the ecliptic ($\theta = 90\degree$), the field strength scales like
 \end{align}
 with the distance in [au] and $B_0$ the radial field component at 1 au.\\
 
-at 1 au the observed field angle in the ecliptic $\phi$ is about \SI{45}{\degree} ($B_r = B_\phi$, thus $B(1 au) = B_0 \cdot \sqrt{2}$). see OMNI plot and calculate omega from equation with typical values...\\
+at 1 au the observed field angle in the ecliptic $\phi$ is about \SI{45}{\degree} ($B_r = B_\phi$, thus $B(1 au) = B_0 \cdot \sqrt{2}$). see theta and phi angles from the OMNI data in \autoref{fig:histogram_B_angles} and calculate omega from equation with typical values...\\
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.5\textwidth]{images/gnuplots/histogram_B_angles.pdf}
+	\caption{Magnetic field angles $\theta$ and $\phi$ in GSE coordinates.}
+	\label{fig:histogram_B_angles}
+\end{figure}
 Therefore $\left(\frac{\omega}{v_\text{sw}}\right) = b = 1$\\
 fit function: $f(r) = a \cdot \sqrt{\left(r^{e_1}\right)^2 + \left(r^{e_2}\right)^2}$\\
 expected $r$-dependency: $a \approx B(1 au) / \sqrt{2}$, $e_1 \approx -2$, and $e_2 \approx -1$\\
 fit function in \autoref{fig:radial_fit_B_test2} and resulting fit parameters in \autoref{tab:bfield_fit_parameters}\\
 \begin{figure}[htb]
 	\centering
-	\includegraphics[width=0.4\textwidth]{images/gnuplots/radial_fit_B_test2.png}
+	\includegraphics[width=0.5\textwidth]{images/gnuplots/radial_fit_B_test2.png}
 	\caption{Helios hourly data plot of the magnetic field strength with respect to solar distance. The mean and median per \SI{0.01}{\au} data bin and their fit curves are plotted as well. The Helios data has a native distance resolution of \SI{0.01}{\au}, thus, to make the distribution visible in these plots, we added a random distance value of up to \SI{+-0.005}{\au}.}
 	\label{fig:radial_fit_B_test2}
 \end{figure}
@@ -169,17 +177,20 @@ fit function in \autoref{fig:radial_fit_B_test2} and resulting fit parameters in
 	\label{tab:bfield_fit_parameters}
 	\centering
 	\sisetup{table-figures-integer=1, table-figures-decimal=4, table-figures-exponent=0}
-	\begin{tabular}{l c c c c}
+	\begin{tabular}{l l c c c c}
 		\hline\hline
-		\multirow{2}{*}{Fit}	&Factor	&\multicolumn{2}{c}{Exponents}	&Crossing distance\\
+		\multirow{2}{*}{Fit}	&	&Factor	&\multicolumn{2}{c}{Exponents}	&Crossing distance\\
 		\cline{3-4}
-			&$a$	&$e_1$	&$e_2$	&[au]\\
+			&	&$a$	&$e_1$	&$e_2$	&[au]\\
 		\hline
-		Median	&4.04(13)	&-1.852(25)	&-0.97(23)	&\multirow{2}{*}{0.33625(??)}\\
-		Mean	&4.47(12)	&-1.740(18)	&-0.99(23)	&\\
+		\multirow{2}{*}{Curve}	&Median	&4.04(13)	&-1.852(25)	&-0.97(23)	&\multirow{2}{*}{0.33625(??)}\\
+			&Mean	&4.47(12)	&-1.740(18)	&-0.99(23)	&\\
+		\multirow{2}{*}{Distribution}	&Median	&3.833(27)	&\multirow{2}{*}{-1.858(42)}	&\multirow{2}{*}{-1.32(12)}	&\multirow{2}{*}{--}\\
+			&Mean	&4.081(29)	&	&	&\\
 		\hline
 	\end{tabular}
 \end{table*}
+%%% radial fit %%%
 %4.47274*sqrt((r**-1.74028)**2 + (r**-0.990334)**2) = 4.04003*sqrt((r**-1.85224)**2 + (r**-0.974274)**2)\\
 %r approx 0.336257719\\
 %fit values
@@ -195,13 +206,74 @@ fit function in \autoref{fig:radial_fit_B_test2} and resulting fit parameters in
 %med WSSR = 22254.7	-9%
 %old avg WSSR = 29339.9	for simple power law function a*r^b
 %old med WSSR = 24586.6
+%
+%%% fixed fit %%%
+% 4.08078	-1.85771	-1.32237
+% 3.83306	-1.85771	-1.32237
+% errors:
+% 0.0291872	0.042217	0.115887
+% 0.0265236	0.042217	0.115887
+% for table formatted:
+% 4.081(29)	-1.858(42)	-1.32(12)
+% 3.833(27)	-1.858(42)	-1.32(12)
+% WSSR = 1.44202
+% 1267.19055342511	this fit; is 33 % higher
+% 950.841158464094	paper fit
 
 Here, the WSSR is \SI{6}{\%}/\SI{9}{\%} lower compared to the simple power law function a*r**b in \citet{Venzmer2017}.\\
 
-make 2d-fit\\
-at \SI{0.046}{\au} the value is ?? nT. This is higher than the value in the paper.\\
+we make a distribution fit. see fit distribution in \autoref{fig:fit_B_freq_r_fixed_width} and resulting fit parameters in table X.\\
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.5\textwidth]{images/gnuplots/fit_B_freq_r_fixed_width.png}
+	\caption{Frequency distribution of the solar wind magnetic field strength with respect to solar distance. Plotted are the binned Helios data and the square-root power-law lognormal fit model with its median value (white line). replace figure...}
+	\label{fig:fit_B_freq_r_fixed_width}
+\end{figure}
+
+At \SI{0.046}{\au} the median value is \SI{1267}{\nano\tesla} -- this is \SI{33}{\%} higher than the value in the paper.\\
 
 scaling SSN-relation with the fit result: $B(ssn,r) = \frac{B(ssn)}{\sqrt{2}} \cdot \sqrt{\left(r^{e_1}\right)^2 + \left(r^{e_2}\right)^2}$\\
+
+
+This result combined with the values obtained from the solar activity analysis in the paper is
+\begin{align}
+	B_\text{med}(ssn,r) &= \left(\SI{0.0131}{\nT} \cdot ssn + \SI{4.29}{\nT}\right) \cdot \sqrt{\left(r^{-1.86}\right)^2 + \left(r^{-1.3}\right)^2}	\,,\\
+	B_\text{avg}(ssn,r) &= 1.0879 \cdot B_\text{med}(ssn,r)\,.
+\end{align}
+
+extrapolation to the PSP orbital range, see \autoref{fig:sw_extrapolation_ssn_f}\\
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.5\textwidth]{images/gnuplots/sw_extrapolation_ssn_f.pdf}
+	\caption{Radial extrapolation of the solar-wind magnetic field strength to the PSP orbit region. The median value from the model, obtained from Helios and OMNI measurements, is extrapolated to the PSP region for SSN values between solar minimum and maximum, that is, $0 \le ssn \le 200$. The lower edges of the shaded areas correspond to solar minimum, the upper edges to solar maximum. Also plotted are the radial dependencies of the analytic DQCS magnetic field model for solar minimum (violet) from \citet{Banaszkiewicz1998} and the Parker field model (red).}
+	\label{fig:sw_extrapolation_ssn_f}
+\end{figure}
+
+forecast to PSP orbit and mission time, see autoref{fig:}\\
+extrapolation to the PSP orbital range, see \autoref{fig:PSP_perihelia_prediction_f}\\
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.5\textwidth]{images/gnuplots/PSP_perihelia_prediction_f.pdf}
+	\caption{Estimated solar-wind parameter medians (solid) and their error bands (gray area) during 12~days in 2018 and 2024 with PSP's first perihelion at about \SI{0.16}{\au} and PSP's 22nd (the first closest) perihelion at \SI{0.046}{\au}. The prediction from \citet{Venzmer2017} is indicated as well (dotted).}
+	\label{fig:PSP_perihelia_prediction_f}
+\end{figure}
+% first perihelion value:
+% 94 nT	this fit; is 8 % higher
+% 87 nT	old fit
+% first closest perihelion value:
+% 1241 nT	this fit; is 32 % higher
+% 943 nT	old fit
+
+The estimated magnetic field strength median value of \SI{94}{\nano\tesla} for the first perihelion is \SI{8}{\%} higher than that in the paper. However, the median value of \SI{1241}{\nano\tesla} for the first closest perihelion is \SI{32}{\%} higher.\\
+
+
+The estimated frequency distributions of the solar-wind magnetic field strength at PSP's 1st and 22nd (first closest) perihelion are plotted in \autoref{fig:PSP_sw_distributions_b}.\\
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.5\textwidth]{images/gnuplots/PSP_sw_distributions_b.pdf}
+	\caption{Frequency distributions of the solar-wind magnetic field strength (OMNI data) and those estimated with the solar-wind model for PSP's 1st and 22nd (first closest) perihelion. In these Figures the frequencies of both extrapolated curves are scaled for visibility to the same height as the \SI{1}{\au} distribution. The predictions from \citet{Venzmer2017} are indicated as well (dotted).}
+	\label{fig:PSP_sw_distributions_b}
+\end{figure}
 
 \begin{figure}[htb]
 	\centering
@@ -211,6 +283,9 @@ scaling SSN-relation with the fit result: $B(ssn,r) = \frac{B(ssn)}{\sqrt{2}} \c
 \end{figure}
 
 => what kind of distribution has the B-field near the Sun?\\
+
+%conclusion
+The result of this analysis is that the newly derived dependency relation can be used to replace and deprecate that found in the paper.\\
 
 
 

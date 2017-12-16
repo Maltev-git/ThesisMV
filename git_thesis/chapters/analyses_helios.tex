@@ -82,26 +82,26 @@ From these equations it can be seen that $\vect{B}_r$ scales with $r^{-2}$ with 
 \end{align}
 it is apparent that the magnetic field strength does not scale with a simple power law. A more accurate distance dependency for the model is derived in the following.\\
 
-If the solar rotation axis tilt to the ecliptic normal is neglected and the radial field component $B_0$ is set to be in the ecliptic ($\theta = 90\degree$) at $r_0 = \SI{1}{\au}$, then
+If the solar rotation axis tilt to the ecliptic normal is neglected and the radial field component $B_0$ is set to be in the ecliptic at $r_0 = \SI{1}{\au}$, then $\theta = 90\degree$ and
 \begin{align}
 	B(r) &= B_0 \cdot \sqrt{r^{-4} + \left(\frac{\omega\,r}{v_\text{sw}}\right)^2 r^{-4}}\,,	\label{eq:B_1au}
 \end{align}
 with the distance $r$ in units of [au].\\
 
-In the ecliptic at a distance of $r = \SI{1}{\au}$, the Parker spiral's observed magnetic field angle $\phi_B$ is centered most of the time at \SI{-45}{\degree} or in the opposite direction at \SI{135}{\degree}. This is apparent from its frequency distribution using OMNI data of the time period 1963--2016, see \autoref{fig:histogram_B_angles}.\\
+In the ecliptic at a distance of $r = \SI{1}{\au}$, the Parker spiral's observed magnetic field angle $\phi_B$ is centered most of the time at \SI{-45}{\degree} or in the opposite direction at \SI{135}{\degree}. This is apparent from its frequency distribution, using OMNI data of the time period 1963--2016, see \autoref{fig:histogram_B_angles_b}.\\
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
-		\includegraphics[width=0.5\textwidth]{images/gnuplots/histogram_B_angles.pdf}
+		\includegraphics[width=0.5\textwidth]{images/gnuplots/histogram_B_angles_b.pdf}
 	}{
-		\caption{Magnetic field angles $\theta_B$ and $\phi_B$ in GSE coordinates.}
-		\label{fig:histogram_B_angles}
+		\caption{Frequency distributions of the magnetic field angles $\theta_B$ and $\phi_B$ in GSE coordinates. The frequencies are based on the hourly OMNI data during the period 1963--2016.}
+		\label{fig:histogram_B_angles_b}
 	}
 \end{figure}
-The angle can be calculated via...
+The angle can be calculated via
 \begin{align}
-	\phi_B(\SI{1}{au}) &= \arctan\left(-\frac{\omega \cdot \SI{1}{au}}{v_\text{sw}} + 180\right)\,.
+	\phi_B(\SI{1}{au}) &= \arctan\left(-\frac{\omega \cdot \SI{1}{au}}{v_\text{sw}} + 180\degree\right)\,.
 \end{align}
-With the mean values $\omega = \SI{14.37}{\degree\per\day}$ (see appendix~XX) and $v_\text{sw} = 6.16$ (see paper) its value is: XX.\\
+With the mean values $\omega = \SI{14.37}{\degree\per\day}$ (see appendix~XX) and $v_\text{sw} = \SI{420}{\km\per\s}$ (see paper) its value is: XX.\\
 use differential rotation rate $\omega_\text{d}(\theta) = $ and assume equatorial field line origin at polar regions of \SI{+-60}{\degree} heliolatitude (only valid at cycle minimum...).\\
 This leads to an underwound Parker spiral \citep{Banaszkiewicz1998}.\\
 

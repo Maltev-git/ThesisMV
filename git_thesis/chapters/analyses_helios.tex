@@ -97,33 +97,27 @@ In the ecliptic at a distance of $r = \SI{1}{\au}$, the Parker spiral's observed
 		\label{fig:histogram_B_angles_b}
 	}
 \end{figure}
-The angle can be calculated via
+The angle is distance dependent and calculated via
 \begin{align}
-	\phi_B(\SI{1}{au}) &= \arctan\left(-\frac{\omega \cdot \SI{1}{au}}{v_\text{sw}} + 180\degree\right)\,.
+	\phi_B(r) &= \arctan\left(-\frac{\omega \cdot r}{v_\text{sw}}\right)\,.
 \end{align}
-With the mean values $\omega = \SI{14.37}{\degree\per\day}$ (see appendix~XX) and $v_\text{sw} = \SI{420}{\km\per\s}$ (see paper) its value is: XX.\\
-use differential rotation rate $\omega_\text{d}(\theta) = $ and assume equatorial field line origin at polar regions of \SI{+-60}{\degree} heliolatitude (only valid at cycle minimum...).\\
-This leads to an underwound Parker spiral \citep{Banaszkiewicz1998}.\\
+Using the equatorial angular velocity $\omega_\text{eq} = \SI{14.37}{\degree\per\day}$ (see appendix \autoref{sec:solar_surface_differential_rotation}) and the median solar-wind velocity from the paper, $v_\text{sw} = \SI{416}{\km\per\s}$, the angle is $\phi_B(\SI{1}{\au}) = \SI{-46.23}{\degree}$.\\
 
-For $\phi_B$ having these angles, both vector components $B_r$ and $B_\phi$ have to be of equal length. We see from \autoref{eq:B_1au} that it leads to
+During solar cycle minimum, the equatorial field lines originate from the polar regions at about \SI{+-60}{\degree} heliolatitude. Because of the surface differential rotation, this leads to a slightly underwound Parker spiral \citep{Banaszkiewicz1998}. Using the differential rotation rate $\omega(\SI{+-60}{\degree}) = \SI{13.69}{\degree\per\day}$ (see appendix \autoref{eq:omega_differential}), the angle becomes $\phi_B(\SI{1}{\au}) = \SI{-44.84}{\degree}$.\\
+
+For $\phi_B$ having in average this direction, both vector components $B_r$ and $B_\phi$ have to be of equal length. We see from \autoref{eq:B_1au} that this leads to
 \begin{align}
 	B(\SI{1}{\au}) &= B_0 \cdot \sqrt{2}	&\text{with}	&	&	\left(\frac{\omega\cdot\SI{1}{\au}}{v_\text{sw}}\right) &= 1\,.
 \end{align}
+This way, $\omega$ and $v_\text{sw}$ are assumed to be constants - their time dependency is neglected.\\
 
-
-
-
-This way, $\omega$ and $v_\text{sw}$ are assumed to be constants - their time dependency is neglected.
+In order to get an analytical representation of the radial dependence of the magnetic field, the function
 \begin{align}
-	B(r) &= B_0 \cdot \sqrt{r^{-4} + r^{-2}}	\text{\,, for } \left(\frac{\omega}{v_\text{sw}}\right) = 1\\
-	B(1\,\text{au}) &= B_0 \cdot \sqrt{2}
+	x(r) = a \cdot \sqrt{\left(r^{e_1}\right)^2 + \left(r^{e_2}\right)^2}	\label{eq:sqare_power_law}
 \end{align}
+with the scaling parameter $a$, the exponents $e_1$ and $e_2$, is used in a least squares regression fit. The data used is the same Helios data set as used in the paper.\\
 
-
-
-fit function: $f(r) = a \cdot \sqrt{\left(r^{e_1}\right)^2 + \left(r^{e_2}\right)^2}$\\
-expected $r$-dependency: $a \approx B(1 au) / \sqrt{2}$, $e_1 \approx -2$, and $e_2 \approx -1$\\
-fit function in \autoref{fig:radial_fit_B_test2} and resulting fit parameters in \autoref{tab:bfield_fit_parameters}\\
+The resulting fit curves for mean and median field strength with respect to solar distance are plotted in \autoref{fig:radial_fit_B_test2}.
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.5\textwidth]{images/gnuplots/radial_fit_B_test2.png}
@@ -132,8 +126,9 @@ fit function in \autoref{fig:radial_fit_B_test2} and resulting fit parameters in
 		\label{fig:radial_fit_B_test2}
 	}
 \end{figure}
+The resulting fit parameters are presented in \autoref{tab:bfield_fit_parameters}.\\
 \begin{table*}
-	\caption{Fit parameters for the median and mean magnetic field strength solar distance relations and their crossing distance.}
+	\caption{Fit parameter values for the curve fits (\autoref{eq:sqare_power_law}) and the distribution fit (eq XX), derived from the combined Helios~1 and 2 data. The numbers in parentheses are the errors on the corresponding last digits of the quoted value. The crossing distance indicates where the median and mean fits intersect each other.}
 	\label{tab:bfield_fit_parameters}
 	\centering
 	\sisetup{table-figures-integer=1, table-figures-decimal=4, table-figures-exponent=0}
@@ -180,9 +175,14 @@ fit function in \autoref{fig:radial_fit_B_test2} and resulting fit parameters in
 % 1267.19055342511	this fit; is 33 % higher
 % 950.841158464094	paper fit
 
-Here, the WSSR is \SI{6}{\%}/\SI{9}{\%} lower compared to the simple power law function a*r**b in \citet{Venzmer2017}.\\
+From the theory sketched above, the expected fit parameter values are: $a \approx \frac{B(\SI{1}{\au})}{\sqrt{2}}$, $e_1 \approx -2$, and $e_2 \approx -1$. The obtained fit parameter values are similar - however, the higher exponent $e_1$ leads to a less steep slope near the Sun.\\
 
-we make a distribution fit. see fit distribution in \autoref{fig:fit_B_freq_r_fixed_width} and resulting fit parameters in table X.\\
+Here, the WSSR slighly improved (\SI{6}{\%} for the median and \SI{9}{\%} for the mean) compared to the simple power-law function $x(r) = d \cdot r^e$ in \citet{Venzmer2017}. However, the mean and median fit curves still cross each other at a similar value as in the paper.\\
+
+
+
+
+fix mean and median exponents and make a distribution fit. see fit distribution in \autoref{fig:fit_B_freq_r_fixed_width} and resulting fit parameters in \autoref{tab:bfield_fit_parameters}.\\
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.5\textwidth]{images/gnuplots/fit_B_freq_r_fixed_width.png}

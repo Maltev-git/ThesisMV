@@ -117,13 +117,13 @@ In order to get an analytical representation of the radial dependence of the mag
 \end{align}
 with the scaling parameter $a$, the exponents $e_1$ and $e_2$, is used in a least squares regression fit. The data used is the same Helios data set as used in the paper.\\
 
-The resulting fit curves for mean and median field strength with respect to solar distance are plotted in \autoref{fig:radial_fit_B_test2}.
+The resulting fit curves for mean and median field strength with respect to solar distance are plotted in \autoref{fig:radial_fit_B_thesis_skip}. In the Helios distance region, the fit curves are very similar to those in the paper -- as they are expected to be. This is why this graph is visually almost indistinguishable to the corresponding one in the paper (ref page~XX paper Figure~7).
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
-		\includegraphics[width=0.5\textwidth]{images/gnuplots/radial_fit_B_test2.png}
+		\includegraphics[width=0.5\textwidth]{images/gnuplots/radial_fit_B_thesis_skip.pdf}
 	}{
 		\caption{Helios hourly data plot of the magnetic field strength with respect to solar distance. The mean and median per \SI{0.01}{\au} data bin and their fit curves are plotted as well. The Helios data has a native distance resolution of \SI{0.01}{\au}, thus, to make the distribution visible in these plots, we added a random distance value of up to \SI{+-0.005}{\au}.}
-		\label{fig:radial_fit_B_test2}
+		\label{fig:radial_fit_B_thesis_skip}
 	}
 \end{figure}
 The resulting fit parameters are presented in \autoref{tab:bfield_fit_parameters}.\\
@@ -182,13 +182,13 @@ Here, the WSSR slighly improved (\SI{6}{\%} for the median and \SI{9}{\%} for th
 
 
 
-fix mean and median exponents and make a distribution fit. see fit distribution in \autoref{fig:fit_B_freq_r_fixed_width} and resulting fit parameters in \autoref{tab:bfield_fit_parameters}.\\
+fix mean and median exponents and make a distribution fit. see fit distribution in \autoref{fig:fit_fixed_B_paper_f} and resulting fit parameters in \autoref{tab:bfield_fit_parameters}.\\
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
-		\includegraphics[width=0.5\textwidth]{images/gnuplots/fit_B_freq_r_fixed_width.png}
+		\includegraphics[width=0.5\textwidth]{images/gnuplots/fit_fixed_B_paper_f.pdf}
 	}{
-		\caption{Frequency distribution of the solar wind magnetic field strength with respect to solar distance. Plotted are the binned Helios data and the square-root power-law lognormal fit model with its median value (white line). replace figure...}
-		\label{fig:fit_B_freq_r_fixed_width}
+		\caption{Frequency distribution of the solar wind magnetic field strength with respect to solar distance. Plotted are the binned Helios data and the square-root power-law lognormal fit model with its median value (white line).}
+		\label{fig:fit_fixed_B_paper_f}
 	}
 \end{figure}
 
@@ -242,17 +242,6 @@ The estimated frequency distributions of the solar-wind magnetic field strength 
 		\label{fig:PSP_sw_distributions_b}
 	}
 \end{figure}
-
-\begin{figure}[htb]
-	\fcapside[\FBwidth]{
-		\includegraphics[width=0.4\textwidth]{images/gnuplots/double_fit_B_freq_r_plot_thesis.png}
-	}{
-		\caption{Plot of the magnetic field strength's frequency distribution at different solar distances (0.29, 0.52, 0.75 and 0.98~au). The Helios data, the composed fit model and both its components are plotted. 0.23~au steps, lw 2, stepfunction}
-		\label{fig:double_fit_B_freq_r_plot_thesis}
-	}
-\end{figure}
-
-=> what kind of distribution has the B-field near the Sun?\\
 
 %conclusion
 The result of this analysis is that the newly derived dependency relation can be used to replace and deprecate that found in the paper.\\

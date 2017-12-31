@@ -3,9 +3,9 @@
 \label{chap:empirical_solar_wind_model_for_the_inner_heliosphere}
 
 %COFI -- chapter outline and flow integration
-This chapter is constructed as follows, the PSP mission, scientific goals, and spacecraft are described, I introduce the analyses done in the publication \citet{Venzmer2017}, which belongs to this chapter, an improvement to the magnetic field solar distance dependency is derived, which deprecates that from the paper, other things, and further an outlook is given.\\
+This chapter is constructed as follows, the PSP mission, its scientific goals, and the spacecraft are described, I introduce the analyses done in the publication \citet{Venzmer2017}, which is a major part of this chapter, an improvement to the magnetic field solar distance dependency is derived, which upgrades that from our article, other things, and further an outlook is given.\\
 
-paper introduction and context of motivation in thesis and context of results in thesis\\
+context of motivation in thesis and paper introduction and context of results in thesis\\
 
 % from paper:
 We obtained lognormal representations of the frequency distributions’ shapes of the four key solar wind parameters magnetic field strength, proton velocity, density and temperature. We derived analytical relations for the parameters’ solar activity dependencies and for their solar distance scaling. An empirical solar wind model was build from the combination of the obtained frequency distributions, SSN dependence relations and solar distance dependence functions, representing the solar wind’s solar activity and distance behavior. This empirical model was fed with SSN predictions and extrapolated to the orbit of PSP. We estimated solar wind median values during PSP’s first perihelion and modeled the values for PSP’s closest perihelia.\\
@@ -17,7 +17,7 @@ varying shape with distance is indicator for internal physical processes (mixing
 
 
 %%% contributions and copyright
-The major part of this chapter is published in \citet{Venzmer2017} ((replace arXiv cite with aanda's)). The paper, published in Astronomy and Astrophysics (A\&A), is included following this chapter and \textbf{not yet} reproduced with permission \textcopyright~ESO.
+The major part of this chapter is published in \citet{Venzmer2017} (replace arXiv cite with aanda's). The article, published in Astronomy and Astrophysics (A\&A), is included following this chapter and \textbf{not yet} reproduced with permission \textcopyright~ESO.
 
 The analyses described in the paper were entirely done by me, as well as the tables, figures and equations. My coauthor Volker~Bothmer contributed to the text and the anonymous referee helped clarifying a few aspects. The text was further improved by the A\&A language editor Joshua~Neve.\\
 % my own contributions to the paper (percentages):\\
@@ -39,56 +39,60 @@ The analyses described in the paper were entirely done by me, as well as the tab
 
 \section{Parker Solar Probe mission}
 
+mission goals (see paper)\\
 include photo/picture\\
+orbit figure? ref. to distance figure?\\
+WISPR instrument\\
+CGAUSS project -- context of this work in project objectives\\
 Sun angular diameter comparison, see presi S³\\
 
 
 \section{Solar distance dependency---theory}
-B-field radial profile: $B \propto r^{-1.5?}$\\
-	Magnetic field magnitude model (Kivelson 1995):\\
-	Br(r) = B0 / r²\\
-	Bphi(r) = -B0 omega / (Vr * r) (shear effect from solar rotation omega)\\
-	Btheta(r) = 0\\
-	B(r) = (Br² + Bphi² + Btheta²)**1/2\\
-	B(r) = sqrt((B0 / r²)² + (-B0 omega / (Vr * r))²)	--> expected r dependency: B propto a*r**-2 + b*r**-1\\
-	Parker references\\
-velocity radial profile: $V \propto r^{0?}$\\
-	model based on LeBlanc1998 electron density with flux conservation: Zic2015(Temmer)\\
+B-field radial profile: $B \propto r^{-1.5}$; exponent between -1 and -2\\
+	Magnetic field model (Parker1958) (the equations are quoted in the next section)\\
+velocity radial profile: $V \propto r^{0}$ (constant; Parker)\\
 density radial profile: $N \propto r^{-2}$\\
-	simple view: for a spherical constant velocity mass outflow a one over distance squared law is expected, because of the mass flux conservation per solid angle for different distances. measurements up to the outer heliosphere confirm the $1/r^2$ dependency (1--38~au by Voyager~2, \citep{Belcher1993} newer paper?)\\
+	simple view: For a spherical constant velocity mass outflow, a per distance squared law is expected, because of the mass flux conservation per solid angle for different distances. Measurements up to the outer heliosphere confirm the $r^{-2}$ dependency (1--38~au by Voyager~2, \citep{Belcher1993} newer paper?)\\
 
-	in an ideal neutral plasma the electron and proton number density have the same values (neutral plasma) (reference?)\\
-	ca. 10~\% more electrons than protons (due to alphas) cite?\\	%http://omniweb.gsfc.nasa.gov/ftpbrowser/bow_derivation.html\\
 temperature radial profile: $T \propto r^{-1?}$\\
-	at larger distances heating outbalances the adiabatic temperature part (adiabatic cooling vs. pickup proton and stream--interaction heating; 1--68~au by Voyager~2; \citet{Richardson2003}\\
+	at larger distances (specify...) heating outbalances the adiabatic temperature part (adiabatic cooling vs. pickup proton and stream--interaction heating; 1--68~au by Voyager~2; \citet{Richardson2003}\\
 solar wind ram pressure $p_\text{ram} = \rho V^2$\\
 
 
-\section{Magnetic field strength solar distance dependency improvement}
-In our paper we scaled the magnetic field strength via a power-law function, obtaining a solar-distance dependency proportional to $r^{-1.662}$. We also noted there that the model's near-Sun field magnitude, extrapolated to PSP's closest perihelion, will be lower than the actual values to be found. However, this was a simplified approach -- in the following I present a procedure leading to a distance dependency, which also accounts for the contributions of the individual vector components.\\
+\section{Paper content}
 
-The coronal magnetic field near the Sun rigidly rotates, holding on to the coronal plasma. At the solar wind source surface (at around XX~Rs), where the thermal plasma pressure overcomes the magnetic pressure, the magnetic field gets radially transported outwards, maintaining only its radial vector component $\vect{B}_r$. From there on, the solar rotation begins to shear the magnetic field, building up a longitudinal component $\vect{B}_\phi$ as well. The solar-wind magnetic field model, formulated by \citet{Parker1958}, has the following components in spherical coordinates ($\theta$ is the colatitude):
+
+\section{Magnetic field strength solar distance dependency improvement}
+In our article we scaled the magnetic field strength via a power-law function, obtaining a solar-distance dependency proportional to $r^{-1.662}$. We also noted there that the model's near-Sun field magnitude, extrapolated to PSP's closest perihelion, will be lower than the actual values to be found. However, it was a simplified approach -- in the following I present a procedure leading to an improved distance dependency, which also accounts for the contributions of the individual field vector components. The new distance dependency, extrapolated to the PSP orbit and combined with the solar activity dependency described in the paper, yields XX~\% higher values at the first perihelion and XX~\% higher values at the 22nd perihelion.\\
+
+A more accurate distance dependency for the model is derived in the following.\\
+
+The coronal magnetic field near the Sun rotates rigidly, holding on to the coronal plasma. At the solar wind source surface (at around XX~Rs), where the thermal plasma pressure overcomes the magnetic pressure, the magnetic field gets radially transported outwards, maintaining only its radial vector component $\vect{B}_r$. From there on, the solar rotation begins to shear the magnetic field, building up a longitudinal component $\vect{B}_\phi$ as well. The solar-wind magnetic field model, formulated by \citet{Parker1958}, has the following components in spherical coordinates ($\theta$ is the colatitude):
 \begin{align}
 	\vect{B}_r(r) &= B_0 \left(\frac{r_0}{r}\right)^2 \cdot \vect{e}_r\,,\\
-	\vect{B}_\phi(r) &= -B_0 \left(\frac{r_0}{r}\right)^2 \cdot \frac{\omega\,r\,\sin\theta}{v_\text{sw}} \cdot \vect{e}_\phi\,,\\
+	\vect{B}_\phi(r) &= -B_0 \left(\frac{r_0}{r}\right)^2 \cdot \frac{\omega\,r\,\sin\theta}{v_\text{sw}} \cdot \vect{e}_\phi	\,,	\label{eq:b_phi_vector}\\
 	\vect{B}_\theta(r) &= 0 \cdot \vect{e}_\theta\,.
 \end{align}
-$B_0$ represents the radial field component at the solar distance $r_0$. The solar surface equatorial angular rotation rate $\omega$ and the solar wind velocity $v_\text{sw}$ are involved as well.\\
-
-From these equations it can be seen that $\vect{B}_r$ scales with $r^{-2}$ with increasing solar distance, as it is expected for a spherical source and $\vect{B}_\phi$ scales with $r^{-1}$. From its absolute value
+$B_0$ represents the radial field component at the solar distance $r_0$. The solar surface equatorial angular rotation rate $\omega$ and the solar wind velocity $v_\text{sw}$ are involved as well. From these equations it can be seen that $\vect{B}_r$ scales with $r^{-2}$ with increasing solar distance, as it is expected for a spherical outflow, and $\vect{B}_\phi$ scales with $r^{-1}$ as expected for a two-dimensional point source. From its absolute value
 \begin{align}
 	B(r) &= \sqrt{\vect{B}_r^2 + \vect{B}_\phi^2 + \vect{B}_\theta^2}\,,\\
 	B(r) &= \sqrt{\left(B_0 \left(\frac{r_0}{r}\right)^2\right)^2 + \left(-B_0 \left(\frac{r_0}{r}\right)^2 \cdot \frac{\omega\,r\,\sin\theta}{v_\text{sw}}\right)^2}\,,
 \end{align}
-it is apparent that the magnetic field strength does not scale with a simple power law. A more accurate distance dependency for the model is derived in the following.\\
-
-If the solar rotation axis tilt to the ecliptic normal is neglected and the radial field component $B_0$ is set to be in the ecliptic at $r_0 = \SI{1}{\au}$, then $\theta = 90\degree$ and
+it is apparent that the magnetic field strength does not scale with a simple power law. If the solar rotation axis tilt to the ecliptic normal is neglected and the radial field component $B_0$ is set to be in the ecliptic at $r_0 = \SI{1}{\au}$, then $\theta = 90\degree$ and
 \begin{align}
 	B(r) &= B_0 \cdot \sqrt{r^{-4} + \left(\frac{\omega\,r}{v_\text{sw}}\right)^2 r^{-4}}\,,	\label{eq:B_1au}
 \end{align}
 with the distance $r$ in units of [au].\\
 
-In the ecliptic at a distance of $r = \SI{1}{\au}$, the Parker spiral's observed magnetic field angle $\phi_B$ is centered most of the time at \SI{-45}{\degree} or in the opposite direction at \SI{135}{\degree}. This is apparent from its frequency distribution, using OMNI data of the time period 1963--2016, see \autoref{fig:histogram_B_angles_b}.\\
+The angle is distance dependent and calculated via
+\begin{align}
+	\phi_B(r) &= \arctan\left(-\frac{\omega \cdot r}{v_\text{sw}}\right)\,.
+\end{align}
+Using the Sun's equatorial angular velocity $\omega_\text{eq} = \SI{14.37}{\degree\per\day}$ (see appendix \autoref{sec:solar_surface_differential_rotation}) and the median solar-wind velocity from the paper, $v_\text{sw} = \SI{416}{\km\per\s}$, the angle is $\phi_B(\SI{1}{\au}) = \SI{-46.23}{\degree}$.\\
+
+During solar cycle minimum, the equatorial field lines originate from the polar regions at about \SI{+-60}{\degree} heliolatitude. Because of the surface differential rotation, this leads to a slightly underwound Parker spiral \citep{Banaszkiewicz1998}. Using the differential rotation rate $\omega(\SI{+-60}{\degree}) = \SI{13.69}{\degree\per\day}$ (see appendix \autoref{eq:omega_differential}), the angle becomes $\phi_B(\SI{1}{\au}) = \SI{-44.84}{\degree}$.\\
+
+This is apparent from its frequency distribution, using OMNI data of the time period 1963--2016, see \autoref{fig:histogram_B_angles_b}.\\
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.5\textwidth]{images/gnuplots/histogram_B_angles_b.pdf}
@@ -97,27 +101,22 @@ In the ecliptic at a distance of $r = \SI{1}{\au}$, the Parker spiral's observed
 		\label{fig:histogram_B_angles_b}
 	}
 \end{figure}
-The angle is distance dependent and calculated via
-\begin{align}
-	\phi_B(r) &= \arctan\left(-\frac{\omega \cdot r}{v_\text{sw}}\right)\,.
-\end{align}
-Using the equatorial angular velocity $\omega_\text{eq} = \SI{14.37}{\degree\per\day}$ (see appendix \autoref{sec:solar_surface_differential_rotation}) and the median solar-wind velocity from the paper, $v_\text{sw} = \SI{416}{\km\per\s}$, the angle is $\phi_B(\SI{1}{\au}) = \SI{-46.23}{\degree}$.\\
 
-During solar cycle minimum, the equatorial field lines originate from the polar regions at about \SI{+-60}{\degree} heliolatitude. Because of the surface differential rotation, this leads to a slightly underwound Parker spiral \citep{Banaszkiewicz1998}. Using the differential rotation rate $\omega(\SI{+-60}{\degree}) = \SI{13.69}{\degree\per\day}$ (see appendix \autoref{eq:omega_differential}), the angle becomes $\phi_B(\SI{1}{\au}) = \SI{-44.84}{\degree}$.\\
+In the ecliptic at a distance of $r = \SI{1}{\au}$, the Parker spiral's observed magnetic field angle $\phi_B$ is centered most of the time at \SI{-45}{\degree} or in the opposite direction at \SI{135}{\degree}.\\
 
-For $\phi_B$ having in average this direction, both vector components $B_r$ and $B_\phi$ have to be of equal length. We see from \autoref{eq:B_1au} that this leads to
+For $\phi_B$ having in average these directions, both vector components $B_r$ and $B_\phi$ have to be of equal length. We see from \autoref{eq:B_1au} that this leads to
 \begin{align}
 	B(\SI{1}{\au}) &= B_0 \cdot \sqrt{2}	&\text{with}	&	&	\left(\frac{\omega\cdot\SI{1}{\au}}{v_\text{sw}}\right) &= 1\,.
 \end{align}
-This way, $\omega$ and $v_\text{sw}$ are assumed to be constants - their time dependency is neglected.\\
+This way, we treat $\omega$ and $v_\text{sw}$ as constants and neglect their variations in time.\\
 
 In order to get an analytical representation of the radial dependence of the magnetic field, the function
 \begin{align}
 	x(r) = a \cdot \sqrt{\left(r^{e_1}\right)^2 + \left(r^{e_2}\right)^2}	\label{eq:sqare_power_law}
 \end{align}
-with the scaling parameter $a$, the exponents $e_1$ and $e_2$, is used in a least squares regression fit. The data used is the same Helios data set as used in the paper.\\
+with the scaling parameter $a$, the exponents $e_1$ and $e_2$, is used in a least squares regression fit. The same Helios data set is used for the fit as is in the paper.
 
-The resulting fit curves for mean and median field strength with respect to solar distance are plotted in \autoref{fig:radial_fit_B_thesis_skip}. In the Helios distance region, the fit curves are very similar to those in the paper -- as they are expected to be. This is why this graph is visually almost indistinguishable to the corresponding one in the paper (ref page~XX paper Figure~7).
+The resulting fit curves for mean and median field strength are plotted with respect to solar distance in \autoref{fig:radial_fit_B_thesis_skip}. In the Helios distance region, the fit curves are very similar to those in the paper -- as they are expected to be. This is why this graph is visually almost indistinguishable to the corresponding one in the paper (ref page~XX paper Figure~7).
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.5\textwidth]{images/gnuplots/radial_fit_B_thesis_skip.pdf}
@@ -128,17 +127,17 @@ The resulting fit curves for mean and median field strength with respect to sola
 \end{figure}
 The resulting fit parameters are presented in \autoref{tab:bfield_fit_parameters}.\\
 \begin{table*}
-	\caption{Fit parameter values for the curve fits (\autoref{eq:sqare_power_law}) and the distribution fit (eq XX), derived from the combined Helios~1 and 2 data. The numbers in parentheses are the errors on the corresponding last digits of the quoted value. The crossing distance indicates where the median and mean fits intersect each other.}
+	\caption{Fit parameter values for the curve fits (\autoref{eq:sqare_power_law}) and the distribution fit (eq XX), derived from the combined Helios~1 and 2 data. The numbers in parentheses are the errors on the corresponding last digits of the quoted value. The crossing distance indicates where the median and mean fits intersect each other. It is calculated numerically and that is why its error is estimated only by thumb.}
 	\label{tab:bfield_fit_parameters}
 	\centering
 	\sisetup{table-figures-integer=1, table-figures-decimal=4, table-figures-exponent=0}
 	\begin{tabular}{l l c c c c}
 		\hline\hline
 		\multirow{2}{*}{Fit}	&	&Factor	&\multicolumn{2}{c}{Exponents}	&Crossing distance\\
-		\cline{3-4}
+		\cline{4-5}
 			&	&$a$	&$e_1$	&$e_2$	&[au]\\
 		\hline
-		\multirow{2}{*}{Curve}	&Median	&4.04(13)	&-1.852(25)	&-0.97(23)	&\multirow{2}{*}{0.33625(??)}\\
+		\multirow{2}{*}{Curve}	&Median	&4.04(13)	&-1.852(25)	&-0.97(23)	&\multirow{2}{*}{0.336(10)}\\
 			&Mean	&4.47(12)	&-1.740(18)	&-0.99(23)	&\\
 		\multirow{2}{*}{Distribution}	&Median	&3.833(27)	&\multirow{2}{*}{-1.858(42)}	&\multirow{2}{*}{-1.32(12)}	&\multirow{2}{*}{--}\\
 			&Mean	&4.081(29)	&	&	&\\
@@ -175,12 +174,9 @@ The resulting fit parameters are presented in \autoref{tab:bfield_fit_parameters
 % 1267.19055342511	this fit; is 33 % higher
 % 950.841158464094	paper fit
 
-From the theory sketched above, the expected fit parameter values are: $a \approx \frac{B(\SI{1}{\au})}{\sqrt{2}}$, $e_1 \approx -2$, and $e_2 \approx -1$. The obtained fit parameter values are similar - however, the higher exponent $e_1$ leads to a less steep slope near the Sun.\\
-
 Here, the WSSR slighly improved (\SI{6}{\%} for the median and \SI{9}{\%} for the mean) compared to the simple power-law function $x(r) = d \cdot r^e$ in \citet{Venzmer2017}. However, the mean and median fit curves still cross each other at a similar value as in the paper.\\
 
-
-
+From the theoretical considerations sketched above, the expected fit parameter values are: $a \approx \frac{B(\SI{1}{\au})}{\sqrt{2}}$, $e_1 \approx -2$, and $e_2 \approx -1$. The obtained fit parameter values are similar - however, the higher exponent $e_1$ leads to a less steep slope near the Sun.\\
 
 fix mean and median exponents and make a distribution fit. see fit distribution in \autoref{fig:fit_fixed_B_paper_f} and resulting fit parameters in \autoref{tab:bfield_fit_parameters}.\\
 \begin{figure}[htb]
@@ -192,18 +188,19 @@ fix mean and median exponents and make a distribution fit. see fit distribution 
 	}
 \end{figure}
 
-At \SI{0.046}{\au} the median value is \SI{1267}{\nano\tesla} -- this is \SI{33}{\%} higher than the value in the paper.\\
+(At \SI{0.046}{\au} the median value is \SI{1267}{\nano\tesla} -- this is \SI{33}{\%} higher than the value in the paper.)\\
 
-scaling SSN-relation with the fit result: $B(ssn,r) = \frac{B(ssn)}{\sqrt{2}} \cdot \sqrt{\left(r^{e_1}\right)^2 + \left(r^{e_2}\right)^2}$\\
-
-
-This result combined with the values obtained from the solar activity analysis in the paper is
+The result of this analysis can be used to scale the SSN-relation derived in the paper:
+\begin{align}
+	B(ssn,r) = \frac{B(ssn)}{\sqrt{2}} \cdot \sqrt{\left(r^{e_1}\right)^2 + \left(r^{e_2}\right)^2}	\,.
+\end{align}
+The resulting equation, combined with the values obtained from the solar activity analysis in the paper, gives
 \begin{align}
 	B_\text{med}(ssn,r) &= \left(\SI{0.0131}{\nT} \cdot ssn + \SI{4.29}{\nT}\right) \cdot \sqrt{\left(r^{-1.86}\right)^2 + \left(r^{-1.3}\right)^2}	\,,\\
 	B_\text{avg}(ssn,r) &= 1.0879 \cdot B_\text{med}(ssn,r)\,.
 \end{align}
 
-extrapolation to the PSP orbital range, see \autoref{fig:sw_extrapolation_ssn_f}\\
+This magnetic field strength model is extrapolated to PSP's orbital range in \autoref{fig:sw_extrapolation_ssn_f}.\\
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.5\textwidth]{images/gnuplots/sw_extrapolation_ssn_f.pdf}
@@ -213,8 +210,7 @@ extrapolation to the PSP orbital range, see \autoref{fig:sw_extrapolation_ssn_f}
 	}
 \end{figure}
 
-forecast to PSP orbit and mission time, see autoref{fig:}\\
-extrapolation to the PSP orbital range, see \autoref{fig:PSP_perihelia_prediction_f}\\
+forecast to PSP orbit and mission time, see \autoref{fig:PSP_perihelia_prediction_f}\\
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.5\textwidth]{images/gnuplots/PSP_perihelia_prediction_f.pdf}
@@ -244,12 +240,11 @@ The estimated frequency distributions of the solar-wind magnetic field strength 
 \end{figure}
 
 %conclusion
-The result of this analysis is that the newly derived dependency relation can be used to replace and deprecate that found in the paper.\\
-
+The newly derived dependency relation can be used to replace that found in the paper.\\
 
 
 \section{Outlook}
-Currently, the solar-wind model described in this chapter is purely empirical and its four solar-wind quantities are characterized independent from each other. Now in further steps, theoretical relations connecting the parameters could be introduced to make the model self-consistent. For example, flux conservation could be implemented into the radial distance dependencies, relating the two parameters density and velocity (see section~XX), and also the velocity within the magnetic field's $\vect{B}_\phi$-component could be respected (not as a constant as is done in equation~XX).\\
+Currently, the solar-wind model described in this chapter is purely empirical and its four solar-wind quantities are characterized independently from each other. Now in further steps, theoretical relations connecting the parameters could be introduced to make the model self-consistent. For example, flux conservation could be implemented into the radial distance dependencies, relating the two parameters density and velocity (see section~XX), and also the velocity within the magnetic field's $\vect{B}_\phi$-component (\ref{eq:b_phi_vector}) could be respected (not as a constant as it is done in the previous section).\\
 
 
 \subsection{flux conservation}
@@ -267,7 +262,7 @@ conserved quantities:\\
 
 With consideration of continuity the mass flux per solid angle has to be constant: $\dot{m} = \text{const}$\\
 conserved quantities:\\
-- mass flux: $\dot{m} = \rho v A$ (with mass density $\rho$, velocity $v$ and [cross-sectional area $A$] or solid angle?...)\\
+- mass flux: $\dot{m} = \rho v A$ (with mass density $\rho$, velocity $v$ and solid angle A)\\
 - particle fluxes (proton flux, electron flux, etc.)\\
 	- proton flux: $j_\text{p} = n_\text{p} v_\text{p} A$ (with proton density $n_\text{p}$ and proton velocity $v_\text{p}$)\\
 
@@ -289,34 +284,24 @@ $v(r) = v_0 r^{c_v}$\\
 an increasing velocity should result in a steeper density...\\
 
 validity of mass flux continuity: within the heliosphere mass to energy conversion and vice versa is negligible, but there can be flux from and to higher latitudes as the Helios data is localized to a small latitude range in the ecliptic plane.\\
-estimate the error from that... (if error is too big => drop continuity condition)\\
 larger errors should be located near CMEs and CIRs (nonradial flows from interactions)\\
 there is a proton flux difference between slow and fast solar wind streams (see book Schwenn1990 p.~146)
 
 estimate the possible size of error:\\
-mean:\\
-$c_n = -2.010$\\
-$c_v = 0.049$\\
-$c_n + c_v = -1.961$\\
-difference to -2 is 0.039\\
-% [median:\\
-% $c_n = -2.093$\\
-% $c_v = 0.058$\\
-% $c_n + c_v = -2.035$\\
-% difference to -2 is -0.035\\
-% ]constant mass flux only for mean...\\
-
-
+(constant mass flux only for mean)\\
+$c_n = -2.114$\\
+$c_v = 0.0990$\\
+$c_n + c_v = -2.024$\\
+difference to -2 is 0.024\\
 
 
 
 \section{Literature}
-Schwenn1983 intro -> sw-averaging comment (beer and wine)\\
+Schwenn1983 intro -> sw-averaging comment (beer and wine) (cite him...)\\
 see Hellinger2013 p.1353\\
 see astro70/CGAUSS/dropbox\_presis/... (presi 1.07 Inside Helios-Origins and Evolution-Salem.ppt -> Helios reloaded; radial functions for all parameters)\\
 see Balogh1999 from p. 162 (Helios CIR results)\\
 see Marsch1999... (model constraints)\\
-model boundary condition: continuity of mass flux\\
 On solar wind acceleration and SPP proposition: McComas2007\\
 Parker1963 book, p.~75 -> isothermal expansion figure\\	%https://babel.hathitrust.org/cgi/pt?id=uc1.b4264142;view=1up;seq=12
 
@@ -345,18 +330,18 @@ see \autoref{fig:OMNI_monthly_freq_B_a_gps}
 \end{figure}
 
 derived exponent values from simple trigonometric fit on monthly values:\\
-$c_N = -2.234$\\
+$c_n = -2.234$\\
 maybe figure?\\
 
 expected influence from Earth's perihelion/aphelion (see Appendix...) distance vs observations\\
-we expect for the proton density (scaling law $N(r) = 7.6~\text{cm}^{-3} \cdot r^{-2}$):\\
-N(0.983~au) = 7.9~cm$^{-3}$\\
-N(1~au) = 7.6~cm$^{-3}$\\
-N(1.017~au) = 7.3~cm$^{-3}$\\
-we expect for the magnetic field strength (scaling law $\propto r^{-1.6}$):\\
-B(0.983~au) = 6.3~nT\\
-B(1~au) = 6.1~nT\\
-B(1.017~au) = 5.9~nT\\
+we expect for the mean proton density (scaling law $n(r) \propto r^{-2.114}$):\\
+$n(0.983~au) = 7.098~cm^{-3}$\\
+$n(1~au) = 6.845~cm^{-3}$\\
+$n(1.017~au) = 6.605~cm^{-3}$\\
+we expect for the magnetic field strength (paper scaling law $n(r) \propto r^{-1.662}$):\\
+$B(0.983~au) = 5.870~nT$\\
+$B(1~au) = 5.705~nT$\\
+$B(1.017~au) = 5.547~nT$\\
 
 
 \section{Latitude dependency}
@@ -368,22 +353,22 @@ see also \citet{Schwenn1990} p.~127\\
 see also \citet{Richardson1995}\\
 Balogh et al. (1999) p. 162 ff (origin and formation of CIRs in inner heliosphere with Helios data; latitude V dependence)\\
 
-latitude; see \autoref{fig:latitude_frequency_4_thesis_plot}
+Helios latitude; see \autoref{fig:latitude_frequency_4_thesis_plot}
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=0.5\textwidth]{images/gnuplots/latitude_frequency_4_thesis_plot.png}
-	\caption{The four solar wind parameter's HGI latitude dependency. Their mean values per 0.1° bin are plotted as well. make figure same dimensions as projected figure in analysis part...}
+	\caption{The four solar wind parameter's HGI latitude dependency. Their mean and median values per \SI{0.1}{\degree} bin are plotted as well. random jitter...}
 	\label{fig:latitude_frequency_4_thesis_plot}
 \end{figure}
 
 with the exponential dependencies to 1~au projected solar wind parameters; there are only small changes with latitude in the range \SIrange{-7.25}{7.25}{\degree}\\
 have a look on distribution widths...\\
 
-dependence from latitude in interval -7.25°--7.25° in Helios data negligible?, see \autoref{fig:latitude_frequency_rcorrected_v3_4_thesis_plot}.
+dependence from latitude in interval \SIrange{-7.25}{7.25}{\degree} in Helios data negligible?, see \autoref{fig:latitude_frequency_rcorrected_v3_4_thesis_plot}.
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=0.5\textwidth]{images/gnuplots/latitude_frequency_rcorrected_v3_4_thesis_plot.png}
-	\caption{Plot of the to 1~au projected solar wind parameters over latitude. And their mean values, including weighted fit. add projected median...}
+	\caption{Plot of the to 1~au projected solar wind parameters over latitude. And their mean values, including weighted fit. add projected median... random jitter...}
 	\label{fig:latitude_frequency_rcorrected_v3_4_thesis_plot}
 \end{figure}
 estimate error ranges...\\
@@ -391,7 +376,7 @@ estimate error ranges...\\
 ...plot Ulysses data into plot?\\
 
 %latitude variation negligible?
-influence from latitude variation in data negligible? (see Ulysses \autoref{fig:McComas2008_Ulysses_orbit} in introduction). Helios probes within ecliptic => variation span equal to solar tilt: -7.25° to 7.25°; solar tilt/obliquity to ecliptic: $i_\odot = 7.25\degree$ (Sun fact sheet: \url{http://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html)}\\
+influence from latitude variation in data negligible? (see Ulysses \autoref{fig:McComas2008_Ulysses_orbit} in introduction). Helios probes within ecliptic => variation span equal to solar tilt: \SIrange{-7.25}{7.25}{\degree}; solar tilt/obliquity to ecliptic: $i_\odot = 7.25\degree$ (Sun fact sheet: \url{http://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html)}\\
 big part of Helios data is from latitudes $>\pm5$°, see Figure~XX (data count over latitude) and see \autoref{fig:Helios12_orbits_ecliptic_polar} (Helios orbit polar plane in data section)\\
 
 
@@ -401,7 +386,7 @@ big part of Helios data is from latitudes $>\pm5$°, see Figure~XX (data count o
 Helios event lists HSSs, SLOWs, CIRs, CMEs...; event lists for all Helios data\\
 see Liu2004 for Helios ICME list and radial dependencies of $B$, $n$, $T$ and $v$...\\
 
-\SI{200}{\km\per\s} slow solar wind at 10~$R_\odot$ is in agreement with blob measurements from Wang2000\\
+\SI{200}{\km\per\s} slow solar wind at \SI{10}{\Rs} is in agreement with blob measurements from Wang2000\\
 
 very slow sw (VSSW) gets accelerated; see Sanchez-Diaz2016:\\
 %"The reported in situ measurements suggest that the properties of VSSW are a continuation of the slow wind toward lower speeds: higher densities, higher proton fluxes, and lower temperatures, thereby extending well-known scaling laws [Lopez and Freeman, 1986; Hundhausen et al., 1970] down to speeds as low as 200 km/s."\\
@@ -417,76 +402,21 @@ sw structure marked plots\\
 structure extrapolations\\
 
 
-\section{sw parameters and precision}
-definition of 'the four solar wind parameters':\\	%by OMNI histograms
-	magnetic field strength, aka magnetic field, $B$, usually measured in nT, in the order of 0--35~nT at 1~au\\
-	proton bulk velocity, aka velocity, $v$, usually measured in km/s, in the order of 200--900~km/s at 1~au\\
-	proton number density, aka density, $n$, usually measured in cm$^{-3}$, in the order of 1--60 at 1~au\\
-	proton temperature, aka temperature, $T$, usually measured in K, in the order of 10\,000--1\,000\,000~K at 1~au\\
-sentence about ordering of the parameters...\\
-
-%data binning
-hourly OMNI data\\
-measurement precision:\\
-$B$: 0.01~nT\\
-$v$: 1~km/s\\
-$n$: 0.1~cm$^{-3}$\\
-$T$: 1~K ? (smallest found: 7~K)\\
-
-error discussion:\\
-OMNI hourly data mean:\\
-$B$: bin size 0.5~nT, median 5.6, mean 6.30056(18)\\
-$v$: bin size 10~km/s, median 414, mean 437.6700(18)\\
-$n$: bin size 1~cm$^{-3}$, median 5.3, mean 6.831410(18)\\
-$T$: bin size 10\,000~K, median 80\,751, mean 112\,219.0(19) (with 1000~K as precision)\\
-
-empirical data; Helios; hourly\\
-why hourly and not higher resolution data?\\
-measurement precision:\\
-$B$: 0.01~nT\\
-$v$: 0.1~km/s\\
-$n$: 0.1~cm$^{-3}$\\
-$T$: 100--1000~K (3 digits)\\
-$r$: 0.01~au\\
-
-error discussion:\\
-Helios hourly data mean:\\
-$B$: min 337, precision: 0.000545; 18.3x better\\
-$v$: min 497, precision: 0.00449; 22.2x\\
-$n$: min 497, precision:  0.00449; 22.2x\\
-$T$: min 497, precision: 4.49--44.49 22.2x\\
-=> so we use 1/10 the measurement precicion for the mean.\\
-
-median precision same as data precision\\
-
-%data binning
-Helios histogram bin size for mean of frequency distribution (at specific solar distance)\\
-$B$: bin size 0.5~nT, min 337, mean precision: 0.000545\\
-$v$: bin size 1~cm$^{-3}$, min 497, mean precision: 0.00449\\
-$n$: bin size 10~km/s, min 497, mean precision:  0.00449\\
-$T$: bin size 10\,000~K, min 497, mean precision: 4.49--44.49\\
-
-
 \section{other}
-McGregor2011 analyzed the empirical magnetic topology–velocity relationship, using Helios perihelion data with the Wang-Sheeley-Arge (WSA) coronal model, and found indications, that the fast and slow solar wind are generated from distinct sources. (not only superradial expansion)\\
+
+%\captionsetup{width=0.75\textwidth}
+align caption width with table width  OR  widen table to textwidth?\\
+
+gnuplot:\\
+sum of the squared differences or 'residuals' (SSR) between the input data points and the function values, evaluated at the same places. This quantity is often called 'chisquare'\\
+'stdfit', the standard deviation of the fit, which is the rms of the residuals, and the variance of the residuals, also called 'reduced chisquare' when the data points are weighted.\\
+The 'sum of squares of residuals', also called 'chisquare', is the WSSR between the data and your fitted function; fit has minimized that.\\
+The WSSR can be used to calculate the reduced chisquare (WSSR/ndf) or stdfit, the standard deviation of the fit, sqrt(WSSR/ndf). Both of these are reported for the final WSSR.\\
+
+uncertainties:\\
+The extrapolation distance is only about one third of the model range, but as the parameters follow exponential change, the logarithmic distance is indeed one and a half times the model range.\\
 
 %GUM statement
 Concerning the error notation I adhere to the parentheses notation documented in the ``Guide to the expression of uncertainty in measurement'' (GUM) published by \citet{GUM2008}, where the numbers in parentheses are the errors on the corresponding last digits of the quoted value.\\
-
-For more on lognormal distributions see appendix \autoref{sec:lognormal_distribution}\\
-
-
-%\captionsetup{width=0.75\textwidth}
-%align caption width with table width  OR  widen table to textwidth?
-
-%gnuplot:
-%sum of the squared differences or 'residuals' (SSR) between the input data points and the function values, evaluated at the same places. This quantity is often called 'chisquare' 
-%'stdfit', the standard deviation of the fit, which is the rms of the residuals, and the variance of the residuals, also called 'reduced chisquare' when the data points are weighted.
-%The 'sum of squares of residuals', also called 'chisquare', is the WSSR between the data and your fitted function; fit has minimized that.
-%The WSSR can be used to calculate the reduced chisquare (WSSR/ndf) or stdfit, the standard deviation of the fit, sqrt(WSSR/ndf). Both of these are reported for the final WSSR.
-
-
-The extrapolation distance is only about one third of the model range, but as the parameters follow exponential change, one has to look at the logarithmic distance which is indeed one and a half times the model range.\\
-
 
 

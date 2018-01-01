@@ -1,7 +1,12 @@
 
+% paper issue: first page toc links wrong because of openright option of includepdf
+% make openright manually with newpage
+\newpage
 replace paper with actual published A\&A version...\\
+\newpage
 
-\includepdf[openright,addtotoc={
+
+\includepdf[addtotoc={
 1,chapter,1,Paper: Solar-wind predictions for the Parker Solar Probe orbit,chap:solar_wind_predictions_for_the_parker_solar_probe_orbit,
 1,subsection,3,Abstract,sec:abstract,
 1,section,2,Introduction,sec:introduction,
@@ -14,4 +19,3 @@ replace paper with actual published A\&A version...\\
 13,subsection,3,References,sec:references
 },pages={-}]{paperMVVB/aa31831-17.pdf}
 
-%paper issue: first page toc links wrong because of openright

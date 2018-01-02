@@ -3,65 +3,54 @@
 \label{chap:physics}
 
 \section{Electromagnetism}	%maybe exclude this section?
-
-Electromagnetism is one of the four fundamental forces at the common level of energy. In all situations examined in this thesis (sw plasma, magnetosphere) it is by far the strongest force and the others can be neglected.\\
+Electromagnetism is one of the four fundamental forces at the common level of energy. In all situations examined in this thesis (solar wind plasma, magnetosphere) it is by far the strongest force and the others can be neglected.\\
 
 %Lorentz force law as the definition of E and B\\
 %The electromagnetic force F on a test charge at a given point and time is a certain function of its charge q and velocity v, which can be parameterized by exactly two vectors E and B, in the functional form: (wiki)\\
-The Lorentz force: $\textbf{F} = q (\textbf{E} + \textbf{v} \times \textbf{B})$\\
+The Lorentz force law defines the electric and magnetic field vectors $\vect{E}$ and $\vect{B}$:
+\begin{align}
+	\vect{F} = q\,(\vect{E} + \vect{v} \times \vect{B})	\,,
+\end{align}
+with the charge $q$ the force is acting on and its velocity $v$.\\
 
 The Maxwell equations in differential notation:
 \begin{align}
-	\text{div}\,\textbf{B} &= 0\\
-	\text{div}\,\textbf{D} &= \rho\\
-	\text{rot}\,\textbf{H} &= \textbf{j} + \dot{\textbf{D}}\\
-	\text{rot}\,\textbf{E} &= - \dot{\textbf{B}}
+	\text{div}\,\vect{B} &= 0\\
+	\text{div}\,\vect{D} &= \rho\\
+	\text{rot}\,\vect{H} &= \vect{j} + \dot{\vect{D}}\\
+	\text{rot}\,\vect{E} &= - \dot{\vect{B}}
 \end{align}
-With the magnetic flux density \textbf{B} (aka magnetic field), the electric displacement field \textbf{D}, the charge density $\rho$, the magnetic field \textbf{H}, the electric field \textbf{E} and the current density \textbf{j}.\\
+With the magnetic flux density $\vect{B}$ (aka magnetic field), the electric displacement field $\vect{D}$, the charge density $\rho$, the magnetic field $\vect{H}$, the electric field $\vect{E}$ and the current density $\vect{j}$.\\
 %note about B naming convention within this work as magnetic field strength% maybe put into beginning...
-
-
-\section{Solar wind pressures}
-
-The magnetic energy density $w_\text{mag}$ is also the magnetic pressure $p_\text{mag}$
-\begin{align}
-	w_\text{mag} &= p_\text{mag}\\
-	&= \frac{B^2}{2 \mu_0}	\text{\,.}
-\end{align}
-
-dynamic pressure $p_\text{dyn} = \rho v^2$\\
-thermal pressure $p_\text{therm} = n k_\text{B} T$\\
-magnetic pressure $p_\text{mag} = B^2 / (2 \mu_0)$ (see above...)\\
-ram pressure??\\
-%VB1998p104
 
 
 \section{Plasma beta}
 \label{sec:plasma_beta}
-In MHD the magnetic energy density behaves like an additional pressure that adds to the gas pressure of a plasma (Wikipedia; find alternative source...).
-
-The ratio of the thermal pressure $p = n k_\text{B} T$ to the magnetic pressure $p_\text{mag} = \frac{B^2}{2 \mu_0}$ is called plasma beta
+The thermal pressure of a plasma is defined as $p = n k_\text{B} T$, with the number density $n$ and the Boltzmann constant $k_\text{B}$. However, according to magnetohydrodynamics, the magnetic energy density $w_\text{mag} = \frac{B^2}{2 \mu_0}$, with the permeability constant $\mu_0$, behaves like an additional pressure that adds to the thermal pressure of a plasma \citep[p.~50]{Kivelson1995}. The ratio of the thermal pressure to the magnetic pressure determines the behavior of the plasma. If the thermal pressure dominates the magnetic pressure (warm plasma), the plasma movements transport the magnetic field else the plasma movements are guided by the magnetic field lines (cold plasma). This ratio is called plasma beta:
 \begin{align}
-	\beta &= \frac{p}{p_\text{mag}}\\
-	&= \frac{2 \mu_0 n k_\text{B} T}{B^2}
+	\beta &= \frac{p}{p_\text{mag}}	\,,\\
+	&= \frac{2 \mu_0 n k_\text{B} T}{B^2}	\,.
 \end{align}
-with the number density $n$.\\
-$\beta \ll 1$: ``cold'' plasma; magnetic field contains plasma (magnetic clouds)\\
-$\beta \geq 1$: ``warm'' plasma; plasma keeps magnetic field
+The plasma at the photosphere has typical beta values around~14 and that of the low corona around~0.2 \citep{Gary2001}. 
+Further up, the beta raises again and the region where it equals~1 is the source surface for the solar wind \citep{Schatten1969}. The solar wind usually has plasma beta values higher than~1 -- it carries the solar magnetic field away into the heliosphere. Together with the solar rotation, this effect creates the spiral form of the interplanetary magnetic field (Parker spiral). Yet in some solar wind structures, such as magnetic clouds, $\beta \ll 1$ and thus the magnetic field can still contain the plasma.\\
 
-%aka proton beta
-plasma beta see \citep[p.~50]{Kivelson1995}
 
-typical $beta$-values for solar wind are in the range X--Y.\\
+% source surface where beta equals 1 (Schatten1969)\\
+% at 0.6~Rs\\
 
-% Plasma beta:\\
-% near-sun β << 1:\\
-% far-sun β ≥ 1:\\
-% β = p /pkin mag\\
-% plasma follows magnetic field\\
-% magnetic field is frozen within plasma\\
-% --> spiral-like B-field\\
-% Bφ ≈ -45° @ 1 au\\
+low source surface at 1.2~Rs (Gary2001)\\
+typical value at about 2.5~Rs\\
+source surface in the distance range of \SIrange{1.2}{4}{\Rs}\\
+
+% https://omniweb.gsfc.nasa.gov/ftpbrowser/bow_derivation.html
+% Plasma beta = thermal energy density (= thermal pressure) /magnetic energy density
+%     = D*Np*k*Tp*8pi/B**2
+% Beta = [(4.16*10**-5 * Tp) + 5.34] * Np/B**2 (B in nT)
+
+
+dynamic pressure $p_\text{dyn} = \rho v^2$\\
+ram pressure??\\
+%VB1998p104
 
 
 \section{Alfvén waves}	%Alfvén velocity

@@ -309,7 +309,7 @@ encoding=UTF-8
 highlight=LaTeX
 line=34
 mode=LaTeX
-open=true
+open=false
 order=2
 
 [item:chapter2/sections/abstract.tex]
@@ -349,7 +349,7 @@ encoding=UTF-8
 highlight=LaTeX
 line=53
 mode=LaTeX
-open=true
+open=false
 order=3
 
 [item:chapters/analyses_helios_lineup.tex]
@@ -384,13 +384,13 @@ order=4
 
 [item:chapters/cover.tex]
 archive=true
-column=85
+column=48
 encoding=UTF-8
 highlight=LaTeX
-line=250
+line=251
 mode=LaTeX
 open=true
-order=4
+order=2
 
 [item:chapters/discussion_summary.tex]
 archive=true
@@ -404,10 +404,10 @@ order=3
 
 [item:chapters/introduction.tex]
 archive=true
-column=2
+column=14
 encoding=UTF-8
 highlight=LaTeX
-line=320
+line=355
 mode=LaTeX
 open=true
 order=1
@@ -605,10 +605,10 @@ JumpList=
 ViMarks=.,2,5,[,2,1,],2,5
 
 [view-settings,view=0,item:chapters/cover.tex]
-CursorColumn=85
-CursorLine=250
+CursorColumn=48
+CursorLine=251
 JumpList=
-ViMarks=.,250,84,[,250,15,],250,84
+ViMarks=.,251,35,[,251,35,],251,35
 
 [view-settings,view=0,item:chapters/discussion_summary.tex]
 CursorColumn=19
@@ -617,10 +617,10 @@ JumpList=
 ViMarks=.,1,18,[,1,7,],1,18
 
 [view-settings,view=0,item:chapters/introduction.tex]
-CursorColumn=2
-CursorLine=320
+CursorColumn=14
+CursorLine=355
 JumpList=
-ViMarks=.,320,0,[,320,0,],320,1
+ViMarks=.,355,13,[,355,0,],355,13
 
 [view-settings,view=0,item:chapters/paperMVVB_wrapper.tex]
 CursorColumn=0

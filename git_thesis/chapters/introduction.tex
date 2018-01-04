@@ -306,44 +306,28 @@ That way the HMF is carried out to the termination shock by the solar wind. MHD 
 \label{sec:solar_wind}
 %%% sw history
 It is observed that cometary tails lag a few degrees from the radial direction away from the Sun, sometimes they also show fluctuations and become kinked. As such behavior could not be explained by interaction with sunlight pressure, eventually \citet{Biermann1951} concluded that cometary ion tails are influenced by a continuous flow of particles from the Sun.	%Kivelson1995, p14+91
-\citet{Parker1958} considered the consequences of Biermann's conclusions and built a solar-wind model, adopting an expanding isothermal solar atmosphere. Parker also incorporated the implications for the solar magnetic field in his model and hence he laid the theoretical foundations for a continuous supersonic radial outflow of magnetized plasma. Thus, the existence of the solar wind was postulated before the first satellites measured it in situ in 1959 \citep{Gringauz1960,Neugebauer1966}. Since that time spacecraft are able to measure the solar wind almost continuously with in situ magnetometer and plasma instruments (see \autoref{sec:instruments}). From Earth, the outflow of near-Sun solar wind can also be observed during solar eclipses, see the eclipse photo in \autoref{fig:Tse2008_500_mo1}.
+\citet{Parker1958} considered the consequences of Biermann's conclusions and built a solar-wind model, adopting an expanding isothermal solar atmosphere. Parker also incorporated the implications for the solar magnetic field in his model and hence he laid the theoretical foundations for a continuous supersonic radial outflow of magnetized plasma. Thus, the existence of the solar wind was postulated before the first satellites measured it in~situ in 1959 \citep{Gringauz1960,Neugebauer1966}. Since that time, spacecraft are able to measure the solar wind almost continuously with in~situ magnetometer and plasma instruments (see \autoref{sec:instruments}). Pronounced solar-wind structures, such as CMEs and streamers, become visible with the use of space-based coronagraph imagers. From Earth, the outflow of near-Sun solar wind can also be observed during solar eclipses, see the eclipse photo in \autoref{fig:Tse2008_500_mo1}.
 
 %%% plasma composition, parameter ranges and properties
 The solar wind is a magnetized plasma consisting of electrons and ions. The ions are mainly composed of hydrogen, a small percentage of helium, and traces of oxygen, carbon, and other metals. The average abundance of helium (alphas) is about \SI{4.5}{\%} and in slow wind at solar cycle minimum conditions less than \SI{2}{\%} \citep{Feldman1978,Schwenn1983,Kasper2012}.
 The solar wind is commonly approximated by an ideal incompressible magnetohydrodynamic plasma (viscosity $\mu = 0$ and electrical conductivity $\sigma = \infty$) and can be viewed as a neutral plasma. Also, its helium share is often viewed as being constant, in this case the proton density determines both the helium and electron densities. This work adopts these assumptions and treats the solar wind throughout as a proton plasma.
 
-The properties of solar wind are highly variable in time and space. The properties are determined by the values of the solar-wind parameters magnetic field strength, proton velocity, density, and temperature. Solar-wind quantities, such as particle flux densities, mass flux and plasma beta are derived from these four parameters. Their average magnitudes scale with solar activity, heliographic latitude, and solar distance. At a solar distance of Earth however, most of the time the parameter's typical values lie in the ranges \SIrange{3}{8}{\nano\tesla}, \SIrange{300}{500}{\km\per\s}, \SIrange{2}{8}{\per\cm\cubed}, and \SIrange{e4}{e5}{\K} (\citet[p.~92]{Kivelson1995}; \citet{Venzmer2017}). Having parameters in these ranges, the solar wind is a plasma with a beta mostly greater than unity (for more on plasma beta see appendix \ref{sec:plasma_beta}).\\
+The properties of solar wind are highly variable in time and space. The properties are determined by the values of the solar-wind parameters magnetic field strength, proton velocity, density, and temperature. Their average magnitudes scale with solar activity, heliographic latitude, and solar distance. At a solar distance of Earth however, most of the time the parameter's typical values lie in the ranges \SIrange{3}{8}{\nano\tesla}, \SIrange{300}{500}{\km\per\s}, \SIrange{2}{8}{\per\cm\cubed}, and \SIrange{e4}{e5}{\K} (\citet[p.~92]{Kivelson1995}; \citet{Venzmer2017}). The low density of solar wind can be illustrated with a short comparison: 1~liter of air at standard pressure, expanded to a typical solar wind density of \SI{6.5}{\per\cm\cubed}, would occupy a volume of a cube with edge length of about \SI{155}{\km}.
+% sw density considerations:\\
+% 1 mol approx 24.7895 l/mol at 25 °C and 1 bar
+% Avogadro constant N_A = 6.022140857(74)e23 mol−1
+% 1 liter air @ 1 bar equates to 1/24.7895 mol = 2.4293e+22
+% 2.4293e+22 / 6.5 cm-3 = 3.7374e+21 cm3 = 3.7374e6 km3 = (155 km)3
+% 1 liter air @ 1 bar (need 24 ms for passing 1 dm2 area @ 15 km/h)\\
+% equals\\
+% 3.7e6 km3 = (155 km)3 solar wind @ 6.5 cm-3 (need 43900 a for passing 1 dm2 area @ 400 km/s)\\
+Solar-wind quantities, such as particle flux densities, mass flux and plasma beta can be derived from the four listed parameters. Having the parameters in the aforementioned ranges, the solar wind is a plasma with a beta mostly greater than unity (for more on plasma beta see appendix \ref{sec:plasma_beta}).
 % mean beta: 1.714\\	%from mean paper values
 % low beta: 0.180\\	%from ranges above
 % high beta: 8.444\\	%from ranges above
 
-mass flux...\\
-% mass flux considerations:\\
-% mass per second per Earth disc...\\
-% R_E = 6371.008 km\\
-% A_E = pi * R_E² = 127516438.219 km²\\
-% m_p = 1.672621898e-27 kg\\
-% v = 400 km/s\\
-% n = 6.5 cm-3 = 6.5e15 km-3\\
-% mass flux = m_p * n * v * A_E = 0.0013863641126 kg/s/A_E\\
-% = 1.4 g/s/A_E = 5 kg/h = 120 kg/d/A_E = 44 t/a/A_E\\
+The solar wind is structured by its different sources in the solar corona. It consists of continuous streams and CME events. Their highly variable velocities result in compressed or rarefied regions at their interfaces. The solar wind is further structured by the magnetic field, which the plasma carries from its source region. Changes in its field direction and embedded magnetic structures have an influence on the plasma.\\
 
-If we expand 1~liter of air, having a standard pressure of 1~bar, to the average solar wind density of \SI{6.5}{\per\cm\cubed}, it would occupy a volume of \SI{6.5e6}{\km\cubed}.\\
-% sw density considerations:\\
-% 1 liter air @ 1 bar (need 24 ms for passing 1 dm2 area @ 15 km/h)\\
-% equals\\
-% 6.5e6 km3 = (175 km)3 solar wind @ 6.5 cm-3 (need 43900 a for passing 1 dm2 area @ 400 km/s)\\
-
-
-
-SEPs, neutral atoms...\\
-
-
-Solar-wind structures\\
-
-MHD waves (Alfvén waves)\\
-in HSSs (cite?)\\
-Alfvén speed ca. 40~km/s (Kivelson1995)\\
 
 prepare following subsections:\\
 slow/fast wind\\
@@ -355,41 +339,53 @@ prepare next subsection:\\
 different source regions: sunspots/active regions, coronal holes, and filaments.\\
 
 
+SEPs, neutral atoms...\\
+
+MHD waves (Alfvén waves)\\
+in HSSs (cite?)\\
+Alfvén speed ca. 40~km/s (Kivelson1995)\\
 
 sonic and Alfvénic critical point positions (see Sittler \& Guhathakurta (1999))\\
 sonic point and slow solar wind origin (Sheeley et al. 1997)\\
 
 
-
 \subsection{Slow and fast streams}
 %%% fast and slow solar wind
+It is observed that the continuous solar wind comes in streams roughly focused at two major velocity ranges \citep{Neugebauer1966,Schwenn1983}, slow streams around \SIrange{250}{450}{\km\per\s} and fast streams around \SIrange{450}{800}{\km\per\s} respectively.\\
 
-The ordered dipole structure in solar cycle minimum leads to open polar field regions with large coronal holes and a closed equatorial field belt/streamer belt (clearly visible in \autoref{fig:Tse2008_500_mo1}).\\
+see paper...\\
+They have different characteristics and compositions.\\
+
+%mechanisms
+McGregor2011 analyzed the empirical magnetic topology–velocity relationship, using Helios perihelion data with the Wang-Sheeley-Arge (WSA) coronal model, and found indications, that the fast and slow solar wind are generated from distinct mechanisms. (not only superradial expansion)\\
+
+slow wind sources still under debate\\
+
+%sources of fast wind
+Corona observations, made by the first space-based coronagraph located on Skylab in 1973/74, showed that the fast solar wind emerges from coronal holes \citep{Krieger1973,Hundhausen1977}.\\
+regions with open field lines -> coronal holes -> fast sw/high speed streams\\
+
+
+
+
+fast wind emerges from CHs\\
+slow wind comes from closed field streamers; different sources...\\
+
+%sources of slow wind
+regions with closed lines (trapped plasma) -> slow solar wind/streamers\\
+
+
+%solar activity dependence
+The ordered dipole structure during solar cycle minima leads to open polar field regions with large coronal holes and a large equatorial belt region with closed magnetic fields -- this state is clearly visible in Figures~\ref{fig:Tse2008_500_mo1} and \ref{fig:Banaszkiewicz1998_DQCS_model_raw}.\\
 
 sw in minimum: streamer belt and polar HSSs\\
 active regions forming equatorial streamer belt\\
-
 minimum: polar coronal holes\\
-fast solar wind emerges from CHs\\
-slow from closed field streamers; different sources...\\
-McGregor2011 analyzed the empirical magnetic topology–velocity relationship, using Helios perihelion data with the Wang-Sheeley-Arge (WSA) coronal model, and found indications, that the fast and slow solar wind are generated from distinct sources. (not only superradial expansion)\\
-open field lines (coronal holes) -> HSSs\\
 
 cycle maximum:\\
 This leads to the chaotic appearance of closed field lines even at higher latitudes/poles and coronal holes covering equatorial regions.\\
 
-
-trapped plasma, slow solar wind from streamers\\
-regions with closed lines\\
-
-regions with open lines\\
-coronal holes as sources of fast sw\\
-high speed streams\\
-
-sw plot of HSS with CIR to refer to\\
-
-\citet{Schwenn1983}: ``During the Skylab era in 1973/74 we learned that these high speed streams emerge from coronal holes \citep{Krieger1973,Hundhausen1977}.''\\
-
+only fast solar wind at higher latitudes\\
 This is confirmed by the Ulysses spacecraft, which measured the solar-wind speed in a polar orbit covering more than one solar cycle (\autoref{fig:McComas2008_Ulysses_orbit}).\\
 \begin{figure}[htb]
 	\centering
@@ -400,7 +396,6 @@ This is confirmed by the Ulysses spacecraft, which measured the solar-wind speed
 %figure source: http://onlinelibrary.wiley.com/doi/10.1029/2003GL017136/full
 %McComas200809: (a–c) Polar plots of the solar-wind speed, colored by IMF polarity for Ulysses' three polar orbits colored to indicate measured magnetic polarity. In each, the earliest times are on the left (nine o'clock position) and progress around counterclockwise. (d) Contemporaneous values for the smoothed sunspot number (black) and heliospheric current sheet tilt (red), lined up to match Figures 1a–1c. In Figures 1a–1c, the solar-wind speed is plotted over characteristic solar images for solar minimum for cycle 22 (8/17/96), solar maximum for cycle 23 (12/07/00), and solar minimum for cycle 23 (03/28/06). From the center out, we blend images from the Solar and Heliospheric Observatory (SOHO) Extreme ultraviolet Imaging Telescope (Fe XII at 1950 nm), the Mauna Loa K coronameter (700–950 nm), and the SOHO C2 white light coronagraph.
 
-visible solar-wind structures (coronagraph image; with CME and streamer)\\
 
 
 \subsection{Stream interaction regions}
@@ -479,7 +474,7 @@ coronagraph figure of CME (COR2 image, SECCHI/STEREO), see \autoref{fig:CME_COR2
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.5\textwidth]{images/CME_COR2_0120923_182400_dbc2A.png}
 	}{
-		\caption{Coronagraph image of a CME. STEREO~A, SECCHI-A COR2, COR2-A, date 0120923-182400. Credit: NASA/STEREO... find optimal event...}
+		\caption{Coronagraph image of a CME. STEREO~A, SECCHI-A COR2, COR2-A, date 20120923-182400. Credit: NASA/STEREO... find optimal event...}
 		\label{fig:CME_COR2_0120923_182400_dbc2A}
 	}
 \end{figure}
@@ -681,6 +676,22 @@ equation for the least variance linear prediction of Kp: $Kp = 0.05 + \num{2.244
 combination of both terms works best (r = 0.866)\\
 
 Merkin2013 MHD simulation of velocity shear at magnetosphere boundary with northern IMF; KH instabilities; double-vortex sheet structure\\
+
+% mass flux considerations:\\
+% mass per second per Earth disc...\\
+% R_E = 6371.008 km\\
+% A_E = pi * R_E² = 127516438.219 km²\\
+% m_p = 1.672621898e-27 kg\\
+% v = 400 km/s\\
+% n = 6.5 cm-3 = 6.5e15 km-3\\
+% mass flux = m_p * n * v * A_E = 0.0013863641126 kg/s/A_E\\
+% = 1.4 g/s/A_E = 5 kg/h = 120 kg/d/A_E = 44 t/a/A_E\\
+
+% Wikipedia: https://en.wikipedia.org/wiki/Solar_wind
+% The wind exerts a pressure at 1 AU typically in the range of 1–6 nPa (1–6×10−9 N/m2), although it can readily vary outside that range.
+% The ram pressure is a function of wind speed and density. The formula is
+% P = mp * n * V2= 1.6726×10−6 * n * V2
+% where mp is the proton mass, pressure P is in nPa (nanopascals), n is the density in particles/cm3 and V is the speed in km/s of the solar wind.[citation needed]
 
 
 \subsection{Geomagnetic indices}

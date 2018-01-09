@@ -326,7 +326,7 @@ Solar-wind quantities, such as particle flux densities, mass flux and plasma bet
 % low beta: 0.180\\	%from ranges above
 % high beta: 8.444\\	%from ranges above
 
-The solar wind is structured by its different sources in the solar corona. It consists of continuous streams and CME events. Their highly variable velocities result in compressed or rarefied regions at their interfaces. The solar wind is further structured by the magnetic field, which the plasma carries from its source region. Changes in its field direction and embedded magnetic structures have an influence on the plasma.\\
+The solar wind is structured by its different sources in the solar corona. It consists of continuous streams, variable flows, and CME events. Their highly variable velocities result in compressed or rarefied regions at their interfaces. The solar wind is further structured by the magnetic field, which the plasma carries from its source region. Changes in its field direction and embedded magnetic structures have an influence on the plasma.\\
 
 
 prepare following subsections:\\
@@ -343,7 +343,8 @@ SEPs, neutral atoms...\\
 
 MHD waves (Alfvén waves)\\
 in HSSs (cite?)\\
-Alfvén speed ca. 40~km/s (Kivelson1995)\\
+Alfvén velocity ca. 40~km/s (Kivelson1995)\\
+Alfvén velocity 56.8~km/s (Veselovsky2009)\\
 
 sonic and Alfvénic critical point positions (see Sittler \& Guhathakurta (1999))\\
 sonic point and slow solar wind origin (Sheeley et al. 1997)\\
@@ -351,10 +352,10 @@ sonic point and slow solar wind origin (Sheeley et al. 1997)\\
 
 \subsection{Slow and fast streams}
 %%% fast and slow solar wind
-It is observed that the continuous solar wind comes in streams roughly focused at two major velocity ranges \citep{Neugebauer1966,Schwenn1983}, slow and fast streams with \SIrange{250}{450}{\km\per\s} and \SIrange{450}{800}{\km\per\s} respectively. Both types possess differences in their typical characteristics and ion compositions. Apart from its higher speeds, fast solar wind has most prominently lower proton densities ($\sim$~\SI{3}{\per\cm\cubed}) and higher temperatures ($\sim$~\SI{2e5}{\K}) than the slow solar wind, which has higher densities ($\sim$~\SI{10}{\per\cm\cubed}) and lower temperatures ($\sim$~\SI{4e4}{\K}) \citep{Schwenn1990}. The fast solar wind has a nature of coming in steady high-speed streams (HSS) with a unique magnetic field polarity, whereas slow solar wind is much more variable in all its properties.\\
+It is observed that the continuous solar wind comes in streams roughly focused at two major velocity ranges \citep{Neugebauer1966,Schwenn1983}, slow and fast streams with \SIrange{250}{450}{\km\per\s} and \SIrange{450}{800}{\km\per\s} respectively. Both types possess differences in their typical characteristics and ion compositions. Apart from its higher speeds, fast solar wind has most prominently lower proton densities ($\sim$~\SI{3}{\per\cm\cubed}) and higher temperatures ($\sim$~\SI{2e5}{\K}) than the slow solar wind, which has higher densities ($\sim$~\SI{10}{\per\cm\cubed}) and lower temperatures ($\sim$~\SI{4e4}{\K}) \citep{Schwenn1990}. The fast solar wind has a nature of coming in steady high-speed streams (HSSs) with a unique magnetic field polarity, whereas slow solar wind is much more variable in all its properties except its velocity \citep{Bame1977}.
 
 %sources of fast wind
-First soft X-ray observations of the corona, made during sounding rocket flights, showed that the fast solar wind emerges from extended areas of reduced X-ray emission, subsequently called coronal holes (CHs) \citep{Krieger1973,Hundhausen1977}. The magnetic field polarities found in CHs are associated with the magnetic field directions observed in HSSs, see \autoref{fig:Hundhausen1977_fig10}.\\
+First soft X-ray observations of the corona, made during sounding rocket flights, showed clearly that the fast solar wind emerges from extended areas of reduced X-ray emission, subsequently called coronal holes (CHs) \citep{Krieger1973,Hundhausen1977}. The magnetic field polarities found in CHs are associated with the magnetic field directions observed in HSSs, see \autoref{fig:Hundhausen1977_fig10}.
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.5\textwidth]{images/Hundhausen1977_fig10.png}
@@ -363,17 +364,27 @@ First soft X-ray observations of the corona, made during sounding rocket flights
 		\label{fig:Hundhausen1977_fig10}
 	}
 \end{figure}
-
-sector boundaries...\\
-
-In coronal regions with closed magnetic field lines the plasma is trapped, though in CHs it can escape following the open magnetic field lines outwards into space, forming into HSSs.\\
-% fast wind emerges from CHs\\
-
+In coronal regions with closed magnetic field lines the plasma is trapped, though in CHs it can escape following the open magnetic field lines outwards into space. Superradial expansion of the magnetic field lines in the corona has an influence on the wind speed, actually the expansion factor is anticorrelated with the final wind velocity. As near the border of CHs the field expansion is larger, faster wind emerges from the mid regions of CHs, forming into HSSs. However, there are indications that the slow and fast solar wind are not only generated at different sources but from distinct mechanisms \citep{McGregor2011b}.
 
 %sources of slow solar wind
-different types of slow solar wind \citep{Schwenn1983}\\
+The high variability in the slow solar wind points to the existence of different types of slow wind flows, originating from separate coronal locations and mechanisms \citep{Schwenn1983}, which are still under debate. Studies using remote white-light tracing of coronal material and in-situ measurements of solar wind suggest that multiple sources of slow solar wind flows exist \citep{Wang2000,Kilpua2016}. To the best of my knowledge all the considered sources are listed in the following:
+\begin{itemize*}
+	\item Small CHs, because their plasma outflow is slower due to the high superradial expansion of its open field lines.
+	\item CH boundaries, where the plasma is slow, due to superradial expansion as well.
+	\item CH boundaries, when trapped plasma is released by reconnection between open and closed field lines.
+	\item Helmet/pseudo-streamers, where transient plasma blobs are released. Slow dense material, forming the HPS belt...
+	\item Edges of active regions, with hot outflows with speeds up to ∼100~km/s, first reported by Kojima1999...
+	\item The jets originating from coronal bright points might contribute to the slow solar wind \citep{Subramanian2010}.
+	\item Slow CMEs can be a source of slow wind as well.
+\end{itemize*}
+% Kilpua2016 generally suggested sources:\\
+% - CH boundaries, the plasma is slow due to superradial expansion of open field lines\\
+% - transient plasma blobs that are released from the helmet/pseudo-streamers\\
+% - plasma released by reconnection between open and closed field lines at the coronal hole boundaries\\
+% - hot outflows with speeds up to ∼100~km/s from the edges of active regions, first reported by Kojima1999\\
+% - jets originating from coronal bright points\\
 
-It is found to be difficult to trace the slow solar wind types to different origins and distinguish between them, because most parameters are highly variable in time \citep{Kilpua2016}. However, some indicators show tendencies to differentiate between the solar wind from different source regions. Notable indicators are elemental ion ratios, heavy ion charge states, and the specific entropy.\\
+It is found to be difficult to use in-situ measurements for tracing the slow solar wind flow types to different origins and distinguishing between them, because most properties are highly variable in time \citep{Kilpua2016}. However, some indicators show tendencies to differentiate between the solar wind from different source regions. Some notable indicators are elemental ion ratios, heavy ion charge states, and the specific entropy.\\
 
 The elemental composition of the plasma varies with height in the solar atmosphere, therefore the elemental ion ratios (e.g., $\text{He}/\text{H}$, $\text{Fe}/\text{O}$) can determine its origin.\\
 
@@ -384,11 +395,9 @@ heavy ion charge states (e.g., $\text{C}^{+6}\!/\text{C}^{+4}$, $\text{O}^{+7}\!
 
 carbon charge states are good indicators of the coronal temperature and in particular the $\text{C}^{+6}\!/\text{C}^{+4}$ ratio is sensitive to the solar wind type \citep{Landi2012}.\\
 
+tracing slow solar wind sources with the specific entropy\\
 
-the specific entropy\\
 
-
-tracing slow solar wind sources with\\
 
 different sources for the solar wind are discussed:\\
 - closed field/helmet streamers from loop cusps, magnetic sector boundaries, superradial expansion, \\
@@ -396,22 +405,12 @@ different sources for the solar wind are discussed:\\
 - active region wind -- HCS, streamer cusps\\
 - CH wind -- CH boundary\\
 
-sources of slow solar wind (Wang2000):\\
-- slow CMEs\\
-- small CHs\\
-- CH boundaries\\
-- streamer material (blobs)\\
 
 
 origin from closed magnetic structures in the solar corona, such as intermittent reconnection at the top of helmet streamers and from coronal hole boundaries \citep{Kilpua2016}\\
 
-The origin of slow wind is still under debate.\\
-
 
 the overlapping ranges of the slow and fast solar wind \citep{McGregor2011a}\\
-
-Superradial expansion has an influence on the wind speed, however, there are indications that the slow and fast solar wind are not only generated at different sources but from distinct mechanisms \citep{McGregor2011b}.\\
-
 
 
 %solar activity dependence
@@ -439,6 +438,8 @@ This is confirmed by the Ulysses spacecraft, which measured the solar-wind speed
 % ``Fast streams are found to originate from coronal holes as confirmed by Ulysses' out-of-ecliptic measurements \citep{McComas1998}. The occurrence frequency of these slow and fast streams varies strongly with solar activity and their interactions lead to phenomena such as stream interaction regions which may persist for many solar rotations ("co-rotating" interaction regions) if the coronal source regions are quasi-stationary \citep{Balogh1999}.''\\
 
 
+introduce next section: sector boundaries, stream interfaces, interaction regions...\\
+
 
 \subsection{Stream interaction regions}
 %%% SIRs/CIRs and HCS/HPS
@@ -455,6 +456,8 @@ Winterhalter1994 The heliospheric plasma sheet:\\
 "the narrow heliospheric current sheet (ca. \SIrange{3000}{10000}{\km} thick), together with the heliospheric plasma sheet in which it is embedded. The heliospheric plasma sheet region is identified by a significantly enhanced plasma beta caused by density enhancements and diminished magnetic field strength and is about 20 to 30 times the thickness of the current sheet."\\
 
 ``Low He/H values are in particular reported near solar wind sector boundaries.'' (Borrini et al., 1981)\\
+Borrini et al. (1981) had found significant depletions in $n_alpha/np$ around magnetic sector boundaries which are normally imbedded in slow solar wind.\\
+
 The particularly low specific entropy structure in the slow solar wind is the high-density and low-temperature heliospheric plasma sheet (HPS). Kilpua2016\\
 
 Corotating interaction regions (CIRs)\\

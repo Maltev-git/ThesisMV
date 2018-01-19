@@ -384,10 +384,10 @@ order=4
 
 [item:chapters/cover.tex]
 archive=true
-column=14
+column=39
 encoding=UTF-8
 highlight=LaTeX
-line=260
+line=261
 mode=LaTeX
 open=true
 order=1
@@ -404,10 +404,10 @@ order=3
 
 [item:chapters/introduction.tex]
 archive=true
-column=581
+column=650
 encoding=UTF-8
 highlight=LaTeX
-line=499
+line=308
 mode=LaTeX
 open=true
 order=2
@@ -605,10 +605,10 @@ JumpList=
 ViMarks=.,2,5,[,2,1,],2,5
 
 [view-settings,view=0,item:chapters/cover.tex]
-CursorColumn=14
-CursorLine=260
+CursorColumn=39
+CursorLine=261
 JumpList=
-ViMarks=.,260,13,[,260,13,],260,13
+ViMarks=.,261,38,[,261,15,],261,38
 
 [view-settings,view=0,item:chapters/discussion_summary.tex]
 CursorColumn=19
@@ -617,10 +617,10 @@ JumpList=
 ViMarks=.,1,18,[,1,7,],1,18
 
 [view-settings,view=0,item:chapters/introduction.tex]
-CursorColumn=581
-CursorLine=499
+CursorColumn=650
+CursorLine=308
 JumpList=
-ViMarks=.,499,580,[,499,558,],499,580
+ViMarks=.,308,641,[,308,641,],308,649
 
 [view-settings,view=0,item:chapters/paperMVVB_wrapper.tex]
 CursorColumn=0

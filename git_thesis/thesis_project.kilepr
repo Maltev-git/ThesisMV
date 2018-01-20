@@ -4,7 +4,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.1.3
-lastDocument=chapters/cover.tex
+lastDocument=chapters/introduction.tex
 masterDocument=
 name=thesis_project
 pkg_extIsRegExp=false
@@ -279,7 +279,7 @@ encoding=UTF-8
 highlight=BibTeX
 line=1453
 mode=BibTeX
-open=true
+open=false
 order=3
 
 [item:appendix/literature_bibtex_custom_entries.bib]
@@ -384,7 +384,7 @@ order=4
 
 [item:chapters/cover.tex]
 archive=true
-column=28
+column=29
 encoding=UTF-8
 highlight=LaTeX
 line=262
@@ -404,10 +404,10 @@ order=3
 
 [item:chapters/introduction.tex]
 archive=true
-column=619
+column=250
 encoding=UTF-8
 highlight=LaTeX
-line=163
+line=251
 mode=LaTeX
 open=true
 order=2
@@ -605,10 +605,10 @@ JumpList=
 ViMarks=.,2,5,[,2,1,],2,5
 
 [view-settings,view=0,item:chapters/cover.tex]
-CursorColumn=28
+CursorColumn=29
 CursorLine=262
 JumpList=
-ViMarks=.,262,27,[,262,0,],262,27
+ViMarks=.,262,28,[,262,26,],262,28
 
 [view-settings,view=0,item:chapters/discussion_summary.tex]
 CursorColumn=19
@@ -617,10 +617,10 @@ JumpList=
 ViMarks=.,1,18,[,1,7,],1,18
 
 [view-settings,view=0,item:chapters/introduction.tex]
-CursorColumn=619
-CursorLine=163
+CursorColumn=250
+CursorLine=251
 JumpList=
-ViMarks=.,163,618,[,163,618,],163,618
+ViMarks=.,251,237,[,251,218,],251,237
 
 [view-settings,view=0,item:chapters/paperMVVB_wrapper.tex]
 CursorColumn=0

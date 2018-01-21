@@ -26,21 +26,19 @@ With the magnetic flux density $\vect{B}$ (aka magnetic field), the electric dis
 
 \section{Plasma beta}
 \label{sec:plasma_beta}
-The thermal pressure of a plasma is defined as $p = n k_\text{B} T$, with the number density $n$ and the Boltzmann constant $k_\text{B}$. However, according to magnetohydrodynamics, the magnetic energy density $w_\text{mag} = \frac{B^2}{2 \mu_0}$, with the permeability constant $\mu_0$, behaves like an additional pressure that adds to the thermal pressure of a plasma \citep[p.~50]{Kivelson1995}. The ratio of the thermal pressure to the magnetic pressure determines the behavior of the plasma. If the thermal pressure dominates the magnetic pressure (warm plasma), the plasma movements transport the magnetic field else the plasma movements are guided by the magnetic field lines (cold plasma). This ratio is called plasma beta:
+The thermal pressure of a plasma is defined as $p = n k_\text{B} T$, with the number density $n$ and the Boltzmann constant $k_\text{B}$. However, according to magnetohydrodynamics (MHD), the magnetic energy density $w_\text{mag} = \frac{B^2}{2 \mu_0}$, with the magnetic field strength $B$ and the permeability constant $\mu_0$, behaves like an additional pressure that adds to the thermal pressure of a plasma \citep[p.~50]{Kivelson1995}. The ratio of the thermal pressure to the magnetic pressure determines the behavior of the plasma. If the thermal pressure dominates the magnetic pressure (warm plasma), the plasma movements transport the magnetic field else the plasma movements are guided by the magnetic field lines (cold plasma). This ratio is called plasma beta:
 \begin{align}
 	\beta &= \frac{p}{p_\text{mag}}	\,,\\
 	&= \frac{2 \mu_0 n k_\text{B} T}{B^2}	\,.
 \end{align}
-The plasma at the photosphere has typical beta values around~14 and that of the low corona around~0.2 \citep{Gary2001}. 
-Further up, the beta raises again and the region where it equals~1 is the source surface for the solar wind \citep{Schatten1969}. The solar wind usually has plasma beta values higher than~1 -- it carries the solar magnetic field away into the heliosphere. Together with the solar rotation, this effect creates the spiral form of the interplanetary magnetic field (Parker spiral). Yet in some solar wind structures, such as magnetic clouds, $\beta \ll 1$ and thus the magnetic field can still contain the plasma.\\
+The plasma at the photosphere has typical beta values around~14 and that of the low corona around~0.2 \citep{Gary2001}. Further up, beta raises again and the region where it equals~1 is defined as the source surface for the solar wind \citep{Schatten1969}.	% source surface where beta equals 1 (Schatten1969), at 0.6~Rs\\
+This surface is typically located at about \SIrange{1.2}{2.5}{\Rs} \citep{Gary2001}, more cites...\\
+% low source surface at 1.2~Rs (Gary2001)\\
+% typical value at about 2.5~Rs\\
+% source surface in the distance range of \SIrange{1.2}{4}{\Rs}\\
 
+The solar wind usually has plasma beta values higher than~1 -- it carries the solar magnetic field away into the heliosphere. Together with the solar rotation, this effect creates the spiral form of the interplanetary magnetic field (Parker spiral). Yet in some solar wind structures, such as magnetic clouds, $\beta \ll 1$ and thus the magnetic field can still contain the plasma.\\
 
-% source surface where beta equals 1 (Schatten1969)\\
-% at 0.6~Rs\\
-
-low source surface at 1.2~Rs (Gary2001)\\
-typical value at about 2.5~Rs\\
-source surface in the distance range of \SIrange{1.2}{4}{\Rs}\\
 
 % https://omniweb.gsfc.nasa.gov/ftpbrowser/bow_derivation.html
 % Plasma beta = thermal energy density (= thermal pressure) /magnetic energy density
@@ -48,55 +46,38 @@ source surface in the distance range of \SIrange{1.2}{4}{\Rs}\\
 % Beta = [(4.16*10**-5 * Tp) + 5.34] * Np/B**2 (B in nT)
 
 
-dynamic pressure $p_\text{dyn} = \rho v^2$\\
-ram pressure??\\
+%dynamic pressure $p_\text{dyn} = \rho v^2$\\
+%ram pressure??\\
 %VB1998p104
 
 
 \section{Alfvén waves}	%Alfvén velocity
 \label{sec:alfvén_waves}
-%maybe MHD waves
 
-named after Hannes~Alfvén...
-
-There exists an incompressible wave mode which is a result of bending magnetic field lines called shear Alfvén wave.
-
-In an ideal incompressible MHD plasma (viscosity $\mu = 0$ and electrical conductivity $\sigma = \infty$) the kinetic and magnetic energy density are of equal value: 
+There exists an incompressible wave mode within MHD plasmas which is a result of bending magnetic field lines \citep{Alfven1942}, now called shear Alfvén wave. Alfvén waves transport energy from the photosphere outwards and it is believed that they play a major part in the coronal heating and solar-wind accelerating process. Alfvén waves are dominant in coronal regions that have open magnetic field lines and thus are prevalent in fast solar wind \citep{Cranmer2005}. Their propagation velocity is an important parameter to characterize a plasma. In an ideal incompressible MHD plasma (viscosity $\mu = 0$ and electrical conductivity $\sigma = \infty$) the kinetic and magnetic energy density are of equal value \citep[p.~51]{Kivelson1995}: 
 \begin{align}
 	w_\text{kin} &= w_\text{mag}\\
 	\frac{\rho v^2}{2} &= \frac{B^2}{2 \mu_0}	\nonumber
 \end{align}
-with the permeability constant
-\begin{align}
-	\mu_0 &= 4 \pi \cdot \SI{e-7}{\newton\per\ampere\squared}	\nonumber
-	%&\approx \SI{1.25663e-6}{\newton\per\ampere\squared}
-\end{align}
-and the total mass density $\rho$ of the charged plasma particles.
-
-So waves propagate with the so-called Alfvén velocity
+with the permeability constant $\mu_0$ and the total mass density $\rho$ of the charged plasma particles. Thus, Alfvén waves propagate with the Alfvén velocity
 \begin{align}
 	v_\text{A} = \frac{|B|}{\sqrt{\mu_0 \rho}}	\text{\,.}
 \end{align}
-Their phase velocity is
+The wave's phase velocity is
 \begin{align}
 	v_\text{ph} = v_\text{A} \cos(\theta)
 \end{align}
-with $\theta$ the angle between wave propagation direction (k) and magnetic field line (B). => Alfvén waves travel along magnetic field lines. Alfvén waves are characterized by periodic disturbances in the magnetic field perpendicular to its direction, in the electric field, in the plasma velocity and in the current density. They do not affect the plasma density, plasma pressure and magnetic field magnitude.
+with $\theta$ as the angle between wave propagation direction and magnetic field line, that is, Alfvén waves travel along magnetic field lines. They consist of periodic disturbances in the magnetic field orthogonal to its direction, in the electric field, the plasma velocity, and the current density. Plasma density, pressure and magnetic field magnitude are not affected by them \citep[p.~51]{Kivelson1995}.
 
-Additionally, there exist two types of compressional waves within MHD plasmas, the fast-mode wave and the slow-mode wave. The phase speeds of the three MHD waves meet $v_\text{fast} \geq v_\text{A} \geq v_\text{slow}$. %block copy from Kivelson1995
+Within solar wind at \SI{1}{\au}, their typical frequency is 1--4 per hour and their average velocity is $v_\text{A} = \SI{56.8}{\km\per\s}$ \citep{Veselovsky2010}.	% at 1~au in 1963--2007\\
 
-Alfvén waves are dominant in regions that are open to the heliosphere. %copy from Cranmer2005 p.1\\
+Additionally, there exist two types of compressional wave modes within MHD plasmas, the fast-mode wave and the slow-mode wave. The phase speeds of the three MHD waves meet $v_\text{fast} \geq v_\text{A} \geq v_\text{slow}$. %block copy from Kivelson1995
 
-Alfvén waves see \citep[pp.~51ff.]{Kivelson1995}\\
+Alfvén critical surface...\\
+sonic critical surface...\\
 
+%Cranmer2005 - ON THE GENERATION, PROPAGATION, AND REFLECTION OF ALFVÉN WAVES FROM THE SOLAR PHOTOSPHERE TO THE DISTANT HELIOSPHERE
 
-Within average solar wind at 1\,au their typical frequency is 1--4 per hour (cite?) ($v_\text{A} = 53$~km/s for $B = 5.6$~nT and $\rho = 5.3$~cm$^{-3}$).
-
-
-Average Alfvén velocity at 1~au in 1963--2007 is $v_\text{A} = \SI{56.8}{\km\per\s}$ \citep{Veselovsky2010}.\\
-
-
-critical surfaces, solar wind acceleration...\\
 
 %wolfram alpha:
 %solve v = 0.001*B/sqrt(mu*rho), B=5.6*10^-9, rho=5.3*10^6*1.66*10^-27, mu=4*pi*10^-7
@@ -108,14 +89,15 @@ critical surfaces, solar wind acceleration...\\
 %slow wind: v_A=28.5km/s for r=1au; B=4.7nT; N=13.0cm-3
 %fast wind: v_A=68.7km/s for r=1au; B=5.7nT; N=3.3cm-3
 
-%Cranmer2005 - ON THE GENERATION, PROPAGATION, AND REFLECTION OF ALFVÉN WAVES FROM THE SOLAR PHOTOSPHERE TO THE DISTANT HELIOSPHERE
+%$v_\text{A} = 53$~km/s for $B = 5.6$~nT and $\rho = 5.3$~cm$^{-3}$
+
 
 
 \section{Solar surface differential rotation}
 \label{sec:solar_surface_differential_rotation}
 
 %solar rotation
-the solar rotation was first discovered from sunspots in 18XX?
+The solar differential rotation is visible on the surface and was first discovered from sunspot observations by \citet{Scheiner1630}. (double)\\
 
 %rotation period
 \citet{Bartels1934} set the synodic solar rotation period to 27~days for the definition of his solar rotation number. The Bartels' Rotation Number counts the solar rotations starting with 8 February 1832.\\

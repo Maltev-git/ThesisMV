@@ -1,6 +1,8 @@
 
-\chapter{Physics}
-\label{chap:physics}
+\chapter{Appendix}
+\label{chap:appendix}
+
+%in the end: sort sections in order of reference in work
 
 \section{Electromagnetism}	%maybe exclude this section?
 Electromagnetism is one of the four fundamental forces at the common level of energy. In all situations examined in this thesis (solar wind plasma, magnetosphere) it is by far the strongest force and the others can be neglected.\\
@@ -51,15 +53,14 @@ The solar wind usually has plasma beta values higher than~1 -- it carries the so
 %VB1998p104
 
 
-\section{Alfvén waves}	%Alfvén velocity
-\label{sec:alfvén_waves}
-
-There exists an incompressible wave mode within MHD plasmas which is a result of bending magnetic field lines \citep{Alfven1942}, now called shear Alfvén wave. Alfvén waves transport energy from the photosphere outwards and it is believed that they play a major part in the coronal heating and solar-wind accelerating process. Alfvén waves are dominant in coronal regions that have open magnetic field lines and thus are prevalent in fast solar wind \citep{Cranmer2005}. Their propagation velocity is an important parameter to characterize a plasma. In an ideal incompressible MHD plasma (viscosity $\mu = 0$ and electrical conductivity $\sigma = \infty$) the kinetic and magnetic energy density are of equal value \citep[p.~51]{Kivelson1995}: 
+\section{Alfvén velocity}
+\label{sec:alfvén_velocity}
+The incompressible wave mode within MHD plasmas, the shear Alfvén wave, consists of periodic disturbances in the magnetic field orthogonal to its direction \citep{Alfven1942}. Alfvén waves are prevalent in open coronal regions and therefore occur in fast solar wind \citep{Cranmer2005}. Their propagation velocity is an important parameter to characterize a plasma. In an ideal incompressible MHD plasma (viscosity $\mu = 0$ and electrical conductivity $\sigma = \infty$) the kinetic and magnetic energy density are of equal value \citep[p.~51]{Kivelson1995}: 
 \begin{align}
 	w_\text{kin} &= w_\text{mag}\\
 	\frac{\rho v^2}{2} &= \frac{B^2}{2 \mu_0}	\nonumber
 \end{align}
-with the permeability constant $\mu_0$ and the total mass density $\rho$ of the charged plasma particles. Thus, Alfvén waves propagate with the Alfvén velocity
+with the permeability constant $\mu_0$ and the total mass density $\rho$ of the charged plasma particles. Thus, the Alfvén velocity can be calculated from
 \begin{align}
 	v_\text{A} = \frac{|B|}{\sqrt{\mu_0 \rho}}	\text{\,.}
 \end{align}
@@ -67,16 +68,10 @@ The wave's phase velocity is
 \begin{align}
 	v_\text{ph} = v_\text{A} \cos(\theta)
 \end{align}
-with $\theta$ as the angle between wave propagation direction and magnetic field line, that is, Alfvén waves travel along magnetic field lines. They consist of periodic disturbances in the magnetic field orthogonal to its direction, in the electric field, the plasma velocity, and the current density. Plasma density, pressure and magnetic field magnitude are not affected by them \citep[p.~51]{Kivelson1995}.
-
-Within solar wind at \SI{1}{\au}, their typical frequency is 1--4 per hour and their average velocity is $v_\text{A} = \SI{56.8}{\km\per\s}$ \citep{Veselovsky2010}.	% at 1~au in 1963--2007\\
-
-Additionally, there exist two types of compressional wave modes within MHD plasmas, the fast-mode wave and the slow-mode wave. The phase speeds of the three MHD waves meet $v_\text{fast} \geq v_\text{A} \geq v_\text{slow}$. %block copy from Kivelson1995
+with $\theta$ as the angle between wave propagation direction and magnetic field line, that is, Alfvén waves travel along magnetic field lines. They consist of periodic disturbances in the magnetic field, the electric field, the plasma velocity, and the current density. Plasma density, pressure and magnetic field magnitude are not affected by them. Additionally, there exist two types of compressional wave modes within MHD plasmas, the fast-mode wave and the slow-mode wave. The phase speeds of the three MHD waves meet $v_\text{fast} \geq v_\text{A} \geq v_\text{slow}$ \citep[p.~52]{Kivelson1995}. Within solar wind at \SI{1}{\au}, the typical frequency of Alfvén waves is 1--4 per hour and their average velocity is $v_\text{A} = \SI{56.8}{\km\per\s}$ \citep{Veselovsky2010}.\\	% at 1~au in 1963--2007\\
 
 Alfvén critical surface...\\
-sonic critical surface...\\
-
-%Cranmer2005 - ON THE GENERATION, PROPAGATION, AND REFLECTION OF ALFVÉN WAVES FROM THE SOLAR PHOTOSPHERE TO THE DISTANT HELIOSPHERE
+sonic critical surfaces...\\
 
 
 %wolfram alpha:
@@ -90,7 +85,6 @@ sonic critical surface...\\
 %fast wind: v_A=68.7km/s for r=1au; B=5.7nT; N=3.3cm-3
 
 %$v_\text{A} = 53$~km/s for $B = 5.6$~nT and $\rho = 5.3$~cm$^{-3}$
-
 
 
 \section{Solar surface differential rotation}
@@ -376,3 +370,233 @@ HGI coordinates are Sun-centered with the z-axis directed along the solar rotati
 
 HGI coordinates; latitude range \SI{-7.25}{\degree}~to~\SI{-7.25}{\degree}\\
 latitude variation (see Schwenn1990, p.~127)\\
+
+
+
+\section{Astronomical constants}
+\label{sec:astronomical_constants}
+
+Astronomical unit: 1~au = 149\,597\,870\,700~m \citep{USNO2015}\\ %Astronomical constants
+Solar mass: $M_\odot = 1.9884(2)\times10^{30}$~kg \citep{USNO2015}\\ %see also Mamajek2015
+Nominal solar radius (photosphere): $R_\odot = \SI{695700}{\km}$ \citep{Mamajek2015}\\ %Astronomical constants
+Sun escape velocity: $v_\text{esc} = 617.6$~km/s (Sun Fact Sheet...)\\
+Solar rotation axis tilt: $i_\odot = 7.25$\textdegree{} \citep{USNO2015}\\ %C3; Obliquity to ecliptic
+Solar surface rotation period at equator, sidereal: 25.05~d (Sun Fact Sheet...)\\
+Nominal solar effective temperature (photosphere): $T_{\text{eff}\odot} = \SI{5772}{\kelvin}$ \citep{Mamajek2015}\\
+
+%Astronomical constants
+%http://asa.usno.navy.mil/static/files/2016/Astronomical_Constants_2016.pdf
+
+
+% \section{Abbreviations}
+% \label{sec:abbreviations}
+% 
+% Projects:
+% \begin{description*}
+% 	\item[AFFECTS] Advanced Forecast For Ensuring Communications Through Space
+% 	\item[HELCATS] Heliographic Cataloging, Analysis and Techniques Service
+% 	\item[FP7] Framework Programme 7
+% 	\item[CGAUSS] Coronagraphic German And US SolarProbePlus Survey
+% 	\item[OPTIMAP] OPerational Tool for Ionospheric Mapping And Prediction
+% \end{description*}
+% 
+% Spacecraft:\\
+% SPP -- Solar Probe Plus\\
+% WISPR -- Wide-field Imager for Solar Probe\\
+% ACE -- Advanced Composition Explorer\\
+% 	MAG -- Magnetometer\\
+% 	SWEPAM -- Solar Wind Electron Proton Alpha Monitor\\
+% 	RTSW -- Real Time Solar Wind\\
+% SDO -- Solar Dynamics Observatory\\
+% SOHO -- Solar and Heliospheric Observatory\\
+% STEREO -- Solar TErrestrial RElations Observatory\\
+% 
+% Organizations:\\
+% NASA -- National Aeronautics and Space Administration\\
+% 	SPDF -- Space Physics Data Facility\\
+% NOAA -- National Oceanic and Atmospheric Administration\\
+% 	SWPC -- Space Weather Prediction Center\\
+% UGOE -- University of Göttingen\\
+% IAG -- Institute for Astrophysics Göttingen\\
+% GFZ -- GeoForschungsZentrum\\
+% WDC-SILSO -- World Data Center-Sunspot Index and Long-term Solar Observations\\
+% 
+% Sun:\\
+% DB -- disparition brusques (disappearing filaments?; quiescent filaments?)\\
+% SSN -- sunspot number\\
+% 
+% Solar wind:\\
+% IMF -- interplanetary magnetic field\\
+% CME -- coronal mass ejection\\
+% ICME -- interplanetary coronal mass ejection\\
+% MC -- magnetic cloud\\
+% HSS -- high speed stream\\
+% CIR -- corotating interaction region\\
+% SIR -- stream interaction region\\
+% SB -- sector boundary\\
+% BDE -- bidirectional electrons\\
+% HCS -- heliospheric current sheet\\
+% HPS -- heliospheric plasma sheet\\
+% 
+% Earth:\\
+% Kp -- planetare Kennziffer\\
+% Dst -- Disturbance storm time\\
+% 
+% Coordinate systems:\\
+% GSE -- geocentric solar ecliptic\\
+% GSM -- geocentric solar magnetospheric\\
+% 
+% Theories and techniques:\\
+% MVA -- minimum variance analysis\\
+% MHD -- magnetohydrodynamic\\
+% GCS -- Graduated Cylindrical Shell\\
+% CAT -- CME Analysis Tool\\
+
+
+\section{Lognormal distribution}
+\label{sec:lognormal_distribution}
+
+This is a small summary about the lognormal probability distribution \citep[p.~780]{Bronstein2000}. The lognormal distribution is the distribution of a random variable $X$ if the logarithm of $X$ conforms to a normal distribution. Its shape is highly asymmetric, however in a semi-log plot the Gaussian bell curve is recognizable (see the second panel of \autoref{fig:lognormal_3panel_pdfcairo_plot}).
+\begin{figure}[htb]
+	%\centering
+	\fcapside[\FBwidth]{
+		\includegraphics[width=0.5\textwidth]{images/gnuplots/lognormal_3panel_pdfcairo_plot.pdf}
+	}{
+		\caption{The lognormal probability density function ($\sigma = 1, \mu = 0$) plotted in a linear, semi-log and log-log way. remove borders...}
+		\label{fig:lognormal_3panel_pdfcairo_plot}
+	}
+\end{figure}
+Its probability density function is
+\begin{align}
+	f(x) &= \frac{1}{\sigma \sqrt{2 \pi} x} \, \text{e}^{- \frac{(\ln x - \mu)^2}{2 \sigma^2}}
+\end{align}
+with the location ($\mu$) and the shape parameter ($\sigma$). Changes in $\mu$ affect both the horizontal and vertical scaling of the function, whereas $\sigma$ has an influence on its shape (see \autoref{fig:lognormal_ms_pdfcairo_plot}).\\
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.5\textwidth]{images/gnuplots/lognormal_ms_pdfcairo_plot.pdf}
+	\caption{Five lognormal distributions plotted with fixed $\sigma$ (top) and fixed $\mu$ (bottom). remove borders...}
+	\label{fig:lognormal_ms_pdfcairo_plot}
+\end{figure}
+
+Because it is a probability distribution, its area is normalized
+\begin{align}
+	\int_0^\infty f(x) \text{d} x = 1\,.
+\end{align}
+
+For a lognormally distributed random variable the geometric moments mean, standard deviation and variance are:
+\begin{align*}
+	&\mu_\text{g} = \text{e}^\mu ,\\
+	&\sigma_\text{g} = \text{e}^\sigma ,\\
+	&var_\text{g} = \text{e}^{\sigma^2}~~(!) .
+\end{align*}
+
+Its arithmetic moments are:
+\begin{align*}
+	&\mu_\text{a} = \text{e}^{\mu + \frac{\sigma^2}{2}} ,\\
+	&\sigma_\text{a} = \text{e}^{\mu + \frac{\sigma^2}{2}} \, \left(\text{e}^{\sigma^2} - 1\right) ,\\
+	&var_\text{a} = \sigma_\text{a}^2 .
+\end{align*}
+
+Other useful characteristics are the median and the mode
+\begin{align*}
+	&x_\text{median} = \text{e}^{\mu},\\
+	&x_\text{mode} = \text{e}^{\mu - \sigma^2}\,.
+\end{align*}
+Note that for the lognormal distribution its median is equal to its geometric mean.\\
+
+Applications of lognormal distributions...\\
+%Limpert2001: Lognormal Distributions across the Sciences: Keys and Clues
+%http://bioscience.oxfordjournals.org/content/51/5/341.full
+
+Most natural quantities which can only be positive are lognormally distributed. e.g. animal body sizes?, animal life expectancies, financial stock prices...; income distributions.\\
+
+%life expectancy analyses of economic, technical and biological processes. Bronstein2000
+
+
+\section{Goodness of fit}
+\label{sec:goodness_of_fit}
+
+%figure with fit residuals here
+$SSR$ -- sum of squared residuals\\
+\begin{align}
+	SSR = \sum_i (y_i - f_i)^2
+\end{align}
+data values $y_i$, fit function values $f_i$\\
+$SSR_\text{red}$ -- reduced SSR, divided by number of degrees of freedom $\nu$\\
+\begin{align}
+	SSR_\text{red} = \frac{SSR}{\nu}
+\end{align}
+$TSS$ -- total sum of squares (in relation to the data mean)\\
+\begin{align}
+	TSS = \sum_i (y_i - \bar{y})^2
+\end{align}
+with data mean $\bar{y}$\\
+%http://math.stackexchange.com/questions/1225103/whats-in-a-name-sum-of-squares
+%https://en.wikipedia.org/wiki/Goodness_of_fit
+
+$\chi^2$ -- chi-square\\
+$\chi^2_\text{red}$ -- reduced chi-square, divided by number of degrees of freedom $\nu$\\
+
+$R^2$ -- coefficient of determination\\
+$0 \leq R^2 \leq 1$, ``values can be less than zero''!. if $R^2 = 1$ -> ideal fit; if $R^2 = 0$ -> bad fit
+\begin{align}
+	R^2 &= 1 - \frac{SSR}{TSS}
+\end{align}
+``In case of a single regressor, fitted by least squares, R2 is the square of the Pearson product-moment correlation coefficient relating the regressor and the response variable.'' cite from wikipedia \\%https://en.wikipedia.org/wiki/Coefficient_of_determination
+%https://de.wikipedia.org/wiki/Bestimmtheitsma%C3%9F
+
+Kolmogorov-Smirnov K-S-Test
+%http://www.physics.csbsju.edu/stats/KS-test.html
+%http://www.wessa.net/rwasp_Reddy-Moores%20K-S%20Test.wasp
+
+
+\section{other}
+
+%minimum variance analysis
+minimum variance analysis (MVA)\\
+determining magnetic cloud configuration \citep{Bothmer1998}\\
+
+hodogramm?
+%https://en.wikipedia.org/wiki/Hodograph
+
+
+
+least-squares fit approximates mean
+linear regression
+
+robust statistics
+
+Non-parametric inferential statistical methods are mathematical procedures for statistical hypothesis testing which make no assumptions about the probability distributions of the variables being assessed. The most frequently used tests include
+- median
+- percentiles (quartiles)
+- Spearman's rank correlation coefficient
+
+histogram
+
+generalized mean
+\url{http://en.wikipedia.org/wiki/Generalized_mean}
+
+
+normal distribution
+
+% inverse erf
+% http://mathworld.wolfram.com/InverseErf.html
+% 
+% \begin{align}
+% 	erfc^{-1}(x) = erf^{-1}(1 - x)
+% \end{align}
+% 
+% quantile function: inverse cumulative distribution function (CDF) of normal distribution
+% \begin{align}
+% 	\mu - \sqrt{2}*\sigma*erfc^{-1}(2*x)
+% \end{align}
+% http://www.wolframalpha.com/input/?i=Quantile+function+normal+distribution
+
+
+auto correlation
+
+cross correlation\\
+Pearson linear correlation\\
+Spearman rank correlation
+
+Correlation in Linear Regression: \url{http://www.stat.yale.edu/Courses/1997-98/101/correl.htm}\\

@@ -64,5 +64,14 @@ ps2pdf -dEPSCrop myfile.ps myfile.pdf
 
 
 
+http://parkersolarprobe.jhuapl.edu/News-Center/Show-Article.php?articleID=62
+http://parkersolarprobe.jhuapl.edu/News-Center/admin/Press-Releases/images/articles/aa-roll-sc-into-acoustics-cell-0199.jpg
+A member of the integration and testing team prepares Parker Solar Probe for environmental testing in the Acoustic Test Chamber at NASA’s Goddard Space Flight Center in Greenbelt, Maryland.
+Credit: NASA/Johns Hopkins APL/Ed Whitman
 
- 
+
+http://parkersolarprobe.jhuapl.edu/Multimedia/ApprovedMedia/Images/Renderings/originals/SPP_ObservingSun2.jpg
+http://parkersolarprobe.jhuapl.edu/Multimedia/Images.php
+Credit: Johns Hopkins University Applied Physics Laboratory
+Artist’s concept of the Parker Solar Probe spacecraft approaching the sun. Launching in 2018, Parker Solar Probe will provide new data on solar activity and make critical contributions to our ability to forecast major space-weather events that impact life on Earth. 
+

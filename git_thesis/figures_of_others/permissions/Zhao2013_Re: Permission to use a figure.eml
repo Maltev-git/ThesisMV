@@ -1,0 +1,824 @@
+Return-path: <permissions@iop.org>
+Envelope-to: mvenzmer@astro.physik.uni-goettingen.de
+Delivery-date: Fri, 17 Nov 2017 12:34:49 +0100
+Received: from mailer.gwdg.de ([134.76.10.26])
+	by ms0.astro.physik.uni-goettingen.de with esmtps (TLSv1.2:DHE-RSA-AES256-GCM-SHA384:256)
+	(Exim 4.84_2)
+	(envelope-from <permissions@iop.org>)
+	id 1eFev3-0003EC-Ez
+	for mvenzmer@astro.physik.uni-goettingen.de; Fri, 17 Nov 2017 12:34:49 +0100
+Received: from mfilter-123-1-2.mx.srv.dfn.de ([194.95.234.60])
+	by mailer.gwdg.de with esmtps (TLSv1.2:DHE-RSA-AES256-GCM-SHA384:256)
+	(Exim 4.80)
+	(envelope-from <permissions@iop.org>)
+	id 1eFev3-0007s3-1H
+	for mvenzmer@astro.physik.uni-goettingen.de; Fri, 17 Nov 2017 12:34:49 +0100
+X-Virus-Scanned: Debian amavisd-new at mgw3-tub.srv.dfn.de
+X-Spam-Flag: NO
+X-Spam-Score: 0.569
+X-Spam-Level:
+X-Spam-Status: No, score=0.569 tagged_above=-200 required=6.2
+	tests=[BAYES_50=0.5, BOGO_HAM=-2, DKIM_SIGNED=0.1, HTML_MESSAGE=0.001,
+	HTTPS_HTTP_MISMATCH=1.989, RCVD_IN_DNSWL_MED=-0.01,
+	RCVD_IN_MSPIKE_H4=-0.01, RCVD_IN_MSPIKE_WL=-0.01, SPF_PASS=-0.001,
+	T_DKIM_INVALID=0.01] autolearn=disabled
+Received: from eu-smtp-delivery-122.mimecast.com (eu-smtp-delivery-122.mimecast.com [146.101.78.122])
+	by mfilter-123-1-2.mx.srv.dfn.de (Postfix) with ESMTPS
+	for <mvenzmer@astro.physik.uni-goettingen.de>; Fri, 17 Nov 2017 12:34:46 +0100 (CET)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=ioporg0.onmicrosoft.com; s=selector1-iop-org;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=S818rHwzVF+EdGImDdNHmFnHo60ddAvaSNUbwM/PISI=;
+ b=mJXFgVjrYROtIS0BBd9CRSn7pBfwIYvbFiBJNTlC+uPIKi/VsvV2Jcv0JqbExedxlHRmfnwRvFqp0xMc4jbLnwCAxTE5ByjqitvPnzXvqohEA12+WmDymGSDzfcoman0MlRS+Pv7l4S8Ijc9YwLal1PwkwGFpW1jeGMfMBlHz9c=
+Received: from EUR03-AM5-obe.outbound.protection.outlook.com
+ (mail-am5eur03lp0114.outbound.protection.outlook.com [213.199.154.114])
+ (Using TLS) by eu-smtp-1.mimecast.com with ESMTP id
+ uk-mta-47-H8L5CztgNoCA4jrSJ4mHgw-1; Fri, 17 Nov 2017 11:34:41 +0000
+Received: from LOXP123MB1031.GBRP123.PROD.OUTLOOK.COM (10.166.251.146) by
+ LOXP123MB1032.GBRP123.PROD.OUTLOOK.COM (10.166.251.147) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P256) id
+ 15.20.239.5; Fri, 17 Nov 2017 11:34:40 +0000
+Received: from LOXP123MB1031.GBRP123.PROD.OUTLOOK.COM ([10.166.251.146]) by
+ LOXP123MB1031.GBRP123.PROD.OUTLOOK.COM ([10.166.251.146]) with mapi id
+ 15.20.0239.007; Fri, 17 Nov 2017 11:34:40 +0000
+From: Permissions <permissions@iop.org>
+To: Malte Venzmer <mvenzmer@astro.physik.uni-goettingen.de>
+Subject: Re: Re: Permission to use a figure
+Thread-Topic: Re: Permission to use a figure
+Thread-Index: AQHTXwBbIFOIhrieU0mNG5gTqrFkHqMYcJQb
+Date: Fri, 17 Nov 2017 11:34:40 +0000
+Message-ID: <LOXP123MB1031372B2AE95AD07372FF9DA02F0@LOXP123MB1031.GBRP123.PROD.OUTLOOK.COM>
+References: <alpine.LRH.2.21.1711160915020.13582@l3-m1.stanford.edu>,<16f6f170-9fe4-b01b-b9fb-8b6346a04d33@astro.physik.uni-goettingen.de>
+In-Reply-To: <16f6f170-9fe4-b01b-b9fb-8b6346a04d33@astro.physik.uni-goettingen.de>
+Accept-Language: en-GB, en-US
+Content-Language: en-GB
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+x-originating-ip: [89.202.245.164]
+x-ms-publictraffictype: Email
+x-microsoft-exchange-diagnostics: 1;LOXP123MB1032;6:JAq0DtfB8mSzuPvbDraXBs3Iw6BtfS2wOwGO6X6CdVKQC9rkkvrV5nGlRi1MqX8ZBzBJ/RECyUWssEWzW9UoJ6vxPTJxwmj0rwiwe/K4J0gH16qP6LSn47AmAr447RBam1lA0NwA/23meaZ2h/2B4vagKt3dN7/lQUK+aTYX4d62P5WvyLQrDRybUnH28wiEGecFLKIAdaz6IvOyDDflz9m/9bbzy6ZGr9Yiz4GjNKXdO2AKXgy6SUslovIGb0lWghu7xgaMBoHWuzUQBTxVd8OBCDolZYkLpNzKVsbT6fwpm8tozeoKqxyCUpWvovub3yCLXKl/FsJmPnxsREeo9o2Mz03VgvjYHVLPN7PuL9s=;5:F7BKKiu1q0rDMiVexhDaiE6znXnRoCfAiZkjEFrGl70bHku+eepl6sITn8ddjAQRhIEsndoPWlmkQ6JYllX+f3hL8sECD3VtHCj36yio3taSKZNyOPUJLWMxef/Ypl+WdrblE6WIJAha8UKb747kHQaCFa/DdE9WSb3DP5ve6PU=;24:C6b/J9Fpv6O5Chq1kB/F0vhPSxDMXzVrWBzndQ4CVvg7u7ate3MHtM1xkO5dWWMHGMCPRjW9T4r1tlfJQpYKZ3sLJmNbWxW2StWMhXJllp0=;7:LPHBrKF2lODvVuWNZRc3tn+j6UKKPo8W937hGa5m2dwh56ocSRsaAlgl/FWxTAF2oa69vxTH1QFrzHJHsazMmMrzFyFNXzabaadhnENevOqv3vwjUt6TmGOzVM7Q0yykJyHEPAe2Ezhas9ZOSFeHNMkAAtt46ECH4OlOzePJ8gA4mef5onRznPo6rLJHO3bP/fMKtknAUpy3q6K/b3Z6ecZk6jOymFjtMjZw1dneS6FSjoteQwfJVzzN1D+C62WC
+x-ms-exchange-antispam-srfa-diagnostics: SSOS;
+x-ms-office365-filtering-correlation-id: c326f543-f876-4ee0-ce75-08d52daf3103
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(22001)(4534020)(4602075)(4627115)(201703031133081)(201702281549075)(2017052603199);SRVR:LOXP123MB1032;
+x-ms-traffictypediagnostic: LOXP123MB1032:
+x-microsoft-antispam-prvs: <LOXP123MB1032C96D5184295152EDBB55A02F0@LOXP123MB1032.GBRP123.PROD.OUTLOOK.COM>
+x-exchange-antispam-report-test: UriScan:(189930954265078)(45079756050767)(60252528090998)(17755550239193);
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(100000700101)(100105000095)(100000701101)(100105300095)(100000702101)(100105100095)(6040450)(2401047)(5005006)(8121501046)(100000703101)(100105400095)(3002001)(3231022)(93006095)(93001095)(10201501046)(6041248)(20161123555025)(20161123562025)(20161123558100)(20161123560025)(201703131423075)(201702281529075)(201702281528075)(201703061421075)(201703061406153)(20161123564025)(6072148)(201708071742011)(100000704101)(100105200095)(100000705101)(100105500095);SRVR:LOXP123MB1032;BCL:0;PCL:0;RULEID:(100000800101)(100110000095)(100000801101)(100110300095)(100000802101)(100110100095)(100000803101)(100110400095)(100000804101)(100110200095)(100000805101)(100110500095);SRVR:LOXP123MB1032;
+x-forefront-prvs: 049486C505
+x-forefront-antispam-report: SFV:NSPM;SFS:(10019020)(376002)(346002)(189002)(199003)(13464003)(24454002)(50084003)(51874003)(51914003)(252514010)(84964002)(478600001)(2950100002)(14454004)(2906002)(3846002)(575784001)(6606003)(86362001)(106356001)(966005)(413944005)(105586002)(2900100001)(19627405001)(55016002)(74316002)(25786009)(7696004)(5660300001)(45080400002)(3660700001)(6916009)(102836003)(6116002)(345774005)(3280700002)(189998001)(99286004)(97736004)(81156014)(81166006)(53376002)(54356999)(76176999)(50986999)(6506006)(8936002)(9686003)(54896002)(236005)(6306002)(33656002)(8676002)(53936002)(5890100001)(66066001)(6246003)(77096006)(53546010)(229853002)(316002)(6436002)(101416001)(786003)(7736002)(606006)(68736007);DIR:OUT;SFP:1102;SCL:1;SRVR:LOXP123MB1032;H:LOXP123MB1031.GBRP123.PROD.OUTLOOK.COM;FPR:;SPF:None;PTR:InfoNoRecords;MX:1;A:1;LANG:en;
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+MIME-Version: 1.0
+X-OriginatorOrg: iop.org
+X-MS-Exchange-CrossTenant-Network-Message-Id: c326f543-f876-4ee0-ce75-08d52daf3103
+X-MS-Exchange-CrossTenant-originalarrivaltime: 17 Nov 2017 11:34:40.6246
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: f9ee42e6-bad0-4e63-9115-f704f9ccceed
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: LOXP123MB1032
+X-MC-Unique: H8L5CztgNoCA4jrSJ4mHgw-1
+Content-Type: multipart/alternative;
+	boundary="_000_LOXP123MB1031372B2AE95AD07372FF9DA02F0LOXP123MB1031GBRP_"
+
+--_000_LOXP123MB1031372B2AE95AD07372FF9DA02F0LOXP123MB1031GBRP_
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Dear Malte Venzmer,
+
+Thank you for providing confirmation that you have received the consent of =
+the authors to reproduce content from AAS journals in your dissertation
+
+Regarding:
+
+Figure 4 -The Astrophysical Journal Letters, 774:L29 (6pp), 2013 September =
+10
+
+
+
+I am happy to confirm that permission is granted and you need take no furth=
+er action.
+
+Please include the following alongside the material:
+
+o  the source of the material, including author, article title, title of jo=
+urnal, volume number, issue number (if relevant), page range (or first page=
+ if this is the only information available) and date of first publication. =
+This material can be contained in a footnote or reference.
+o  for material being published electronically, a link back to the article =
+(via DOI)
+o  if practical and IN ALL CASES for works published under any of the Creat=
+ive Commons licences the words "=C2=A9 AAS. Reproduced with permission".
+This permission does not apply to any material/figure which is credited to =
+another source in the AAS publication or has been obtained from a third par=
+ty.  Express permission for such materials/figures must be obtained from th=
+e copyright owner.
+Kind regards,
+Christina
+
+Copyright & Permissions Team
+Gemma Alaway =E2=80=93 Senior Rights & Permissions Adviser
+Christina Colwell - Rights & Permissions Assistant
+
+Contact Details
+E-mail: permissions@iop.org<mailto:permissions@iop.org>
+For further information about copyright and how to request permission: http=
+://iopscience.iop.org/page/copyright<https://emea01.safelinks.protection.ou=
+tlook.com/?url=3Dhttp%3A%2F%2Fiopscience.iop.org%2Fpage%2Fcopyright&data=3D=
+02%7C01%7Cchristina.colwell%40iop.org%7Cc490136a905a4fd5d84f08d4f46893da%7C=
+f9ee42e6bad04e639115f704f9ccceed%7C1%7C0%7C636402177379623514&sdata=3D1v2XH=
+HSLh9r7tlMATQGJfEu4E1fGQpJ%2BbEDATENoIU4%3D&reserved=3D0>
+Please see our Author Rights Policy http://ioppublishing.org/author-rights/=
+<https://emea01.safelinks.protection.outlook.com/?url=3Dhttp%3A%2F%2Fioppub=
+lishing.org%2Fauthor-rights%2F&data=3D02%7C01%7Cchristina.colwell%40iop.org=
+%7Cc490136a905a4fd5d84f08d4f46893da%7Cf9ee42e6bad04e639115f704f9ccceed%7C1%=
+7C0%7C636402177379623514&sdata=3Dh661G6zyxEiPwVYlPPwstDEjBruIcsoy47Lo8Q8fVh=
+Q%3D&reserved=3D0>
+Please note: We do not provide signed permission forms as a separate attach=
+ment. Please print this email and provide it to your publisher as proof of =
+permission.
+
+Please note: Any statements made by IOP Publishing to the effect that autho=
+rs do not need to get permission to use any content where IOP Publishing is=
+ not the publisher is not intended to constitute any sort of legal advice. =
+Authors must make their own decisions as to the suitability of the content =
+they are using and whether they require permission for it to be published w=
+ithin their article.
+
+
+
+
+________________________________
+From: Malte Venzmer <mvenzmer@astro.physik.uni-goettingen.de>
+Sent: 16 November 2017 17:28
+To: Permissions
+Subject: Fwd: Re: Permission to use a figure
+
+Dear Christina,
+
+Below the email confirmation of Junwei Zhao's consent.
+
+Thanks for the directions and best regards,
+Malte
+
+
+-------- Forwarded Message --------
+Subject: Re: Permission to use a figure
+Date: Thu, 16 Nov 2017 09:16:40 -0800 (PST)
+From: Junwei Zhao <junwei@sun.Stanford.EDU>
+To: Malte Venzmer <mvenzmer@astro.physik.uni-goettingen.de>
+
+Dear Malte,
+
+Yes, you have my permission to use that figure in your dissertation,
+or whichever other places you deem necessary.
+
+Good luck on your dissertation writing!
+Junwei
+
+On Thu, 16 Nov 2017, Malte Venzmer wrote:
+
+> Dear Dr Zhao,
+>
+> I seek permission to use a figure from your following article in my
+> dissertation:
+>
+> "DETECTION OF EQUATORWARD MERIDIONAL FLOW AND EVIDENCE OF DOUBLE-CELL
+> MERIDIONAL CIRCULATION INSIDE THE SUN"
+> https://emea01.safelinks.protection.outlook.com/?url=3Dhttp%3A%2F%2Fiopsc=
+ience.iop.org%2Farticle%2F10.1088%2F2041-8205%2F774%2F2%2FL29&data=3D02%7C0=
+1%7Cpermissions%40iop.org%7Cc98f4f927563489bd5e008d52d177d56%7Cf9ee42e6bad0=
+4e639115f704f9ccceed%7C1%7C0%7C636464501261726099&sdata=3D3dewgIqzUSfZnzyB9=
+og4ZOOkSdSTFIj4fJb9ph1qlAc%3D&reserved=3D0
+>
+> It is about figure 4.
+>
+> Thanks in advance and best regards,
+> Malte Venzmer
+>
+>
+>
+> -------- Forwarded Message --------
+> Subject: Re: Case # 00340171 ApJL: permission to use a figure
+> Date: Thu, 16 Nov 2017 15:02:04 +0000
+> From: Permissions <permissions@iop.org>
+> To: mvenzmer@astro.physik.uni-goettingen.de
+> <mvenzmer@astro.physik.uni-goettingen.de>
+>
+> Dear Malte Venzmer,
+>
+> Thank you for your enquiry.
+>
+> AAS grants back to its authors the right to grant permission for reuse
+> of their work.  Therefore, please:
+>
+>
+>  *   Obtain consent from one of the original authors of the paper from
+> which you wish to reuse content.
+>  *   Notify us at this address once consent has been obtained from the
+> original authors, providing written evidence of such consent =E2=80=93 an=
+ email
+> confirmation will suffice.
+>  *   Give the original citation for the figure, table, or other
+> material that you plan to reproduce as well as the information about
+> where the material is to appear.
+>
+> We look forward to hearing from you once you have obtained the authors=E2=
+=80=99
+> permission.
+>
+> Kind regards,
+> Christina
+>
+> Copyright & Permissions Team
+> Gemma Alaway =E2=80=93 Senior Rights & Permissions Adviser
+> Christina Colwell - Rights & Permissions Assistant
+>
+> Contact Details
+> E-mail: permissions@iop.org<mailto:permissions@iop.org>
+> For further information about copyright and how to request permission:
+> https://emea01.safelinks.protection.outlook.com/?url=3Dhttp%3A%2F%2Fiopsc=
+ience.iop.org%2Fpage%2Fcopyright&data=3D02%7C01%7Cpermissions%40iop.org%7Cc=
+98f4f927563489bd5e008d52d177d56%7Cf9ee42e6bad04e639115f704f9ccceed%7C1%7C0%=
+7C636464501261726099&sdata=3DTx4rwRd8V0M8sFhlRyBjh3vj1A%2F9Ro0%2B%2FeJ4Gj1E=
+ir0%3D&reserved=3D0<https://emea01.safelinks.protection.outlook.com/?url=3D=
+http%3A%2F%2Fiopscience.iop.org%2Fpage%2Fcopyright&data=3D02%7C01%7Cchristi=
+na.colwell%40iop.org%7Cc490136a905a4fd5d84f08d4f46893da%7Cf9ee42e6bad04e639=
+115f704f9ccceed%7C1%7C0%7C636402177379623514&sdata=3D1v2XHHSLh9r7tlMATQGJfE=
+u4E1fGQpJ%2BbEDATENoIU4%3D&reserved=3D0>
+> Please see our Author Rights Policy
+> https://emea01.safelinks.protection.outlook.com/?url=3Dhttp%3A%2F%2Fioppu=
+blishing.org%2Fauthor-rights%2F&data=3D02%7C01%7Cpermissions%40iop.org%7Cc9=
+8f4f927563489bd5e008d52d177d56%7Cf9ee42e6bad04e639115f704f9ccceed%7C1%7C0%7=
+C636464501261726099&sdata=3D1QrfSEskyGlz5vHpQIHMgAO%2BVQLmb%2FeVrGXWXjtKKoU=
+%3D&reserved=3D0<https://emea01.safelinks.protection.outlook.com/?url=3Dhtt=
+p%3A%2F%2Fioppublishing.org%2Fauthor-rights%2F&data=3D02%7C01%7Cchristina.c=
+olwell%40iop.org%7Cc490136a905a4fd5d84f08d4f46893da%7Cf9ee42e6bad04e639115f=
+704f9ccceed%7C1%7C0%7C636402177379623514&sdata=3Dh661G6zyxEiPwVYlPPwstDEjBr=
+uIcsoy47Lo8Q8fVhQ%3D&reserved=3D0>
+> Please note: We do not provide signed permission forms as a separate
+> attachment. Please print this email and provide it to your publisher as
+> proof of permission.
+>
+> Please note: Any statements made by IOP Publishing to the effect that
+> authors do not need to get permission to use any content where IOP
+> Publishing is not the publisher is not intended to constitute any sort
+> of legal advice. Authors must make their own decisions as to the
+> suitability of the content they are using and whether they require
+> permission for it to be published within their article.
+>
+>
+>
+>
+> ________________________________
+> --------------- Original Message ---------------
+> From: mvenzmer@astro.physik.uni-goettingen.de
+> Sent: 15/11/2017
+> To: custserv@iop.org
+> Subject: ApJL: permission to use a figure
+>
+> Dear IOP science contact,
+>
+> I seek permission to use a figure of the following ApJL article in my
+> dissertation:
+>
+> https://emea01.safelinks.protection.outlook.com/?url=3Dhttp%3A%2F%2Fiopsc=
+ience.iop.org%2Farticle%2F10.1088%2F2041-8205%2F774%2F2%2FL29&data=3D02%7C0=
+1%7Ccustserv%40iop.org%7C224ba8a1adcb44edbc1908d52c1e30f4%7Cf9ee42e6bad04e6=
+39115f704f9ccceed%7C1%7C0%7C636463430532864339&sdata=3D22ZEb6t5w5TK%2BrS2t%=
+2FfTOnN%2FELnYenwhAS60lmmlUOE%3D&reserved=3D0
+>
+> Is this the correct contact for my request?
+>
+> Thanks in advance,
+> Malte Venzmer
+> ref:_00D30omsI._5000c1R0Feq:ref
+> ************************************************************************
+> This email (and attachments) are confidential and intended for the
+> addressee(s) only. If you are not the intended recipient please notify
+> the sender, delete any copies and do not take action in reliance on it.
+> Any views expressed are the author's and do not represent those of IOP,
+> except where specifically stated. IOP takes reasonable precautions to
+> protect against viruses but accepts no responsibility for loss or damage
+> arising from virus infection. For the protection of IOP's systems and
+> staff emails are scanned automatically.
+>
+> IOP Publishing Limited Registered in England under Registration No
+> 467514. Registered Office: Temple Circus, Bristol BS1 6HG England
+> Vat No GB 461 6000 84.
+> Please consider the environment before printing this e-mail.
+>
+>=0A***********************************************************************=
+*=0AThis email (and attachments) are confidential and intended for the addr=
+essee(s) only. If you are not the intended recipient please notify the send=
+er,=20=0Adelete any copies and do not take action in reliance on it. Any vi=
+ews expressed are the author's and do not represent those of IOP, except wh=
+ere=20=0Aspecifically stated. IOP takes reasonable precautions to protect a=
+gainst viruses but accepts no responsibility for loss or damage arising fro=
+m virus infection.=20=0AFor the protection of IOP's systems and staff email=
+s are scanned automatically.=0A=0AIOP Publishing Limited Registered in Engl=
+and under Registration No 467514. Registered Office: Temple Circus, Bristol=
+ BS1 6HG England=0AVat No GB 461 6000 84.=0APlease consider the environment=
+ before printing this e-mail.
+
+--_000_LOXP123MB1031372B2AE95AD07372FF9DA02F0LOXP123MB1031GBRP_
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DWindows-1=
+252">
+<style type=3D"text/css" style=3D"display:none;"><!-- P {margin-top:0;margi=
+n-bottom:0;} --></style>
+</head><body dir=3D"ltr">=0A   =20
+<div id=3D"divtagdefaultwrapper" style=3D"font-size:12pt;color:#000000;font=
+-family:Calibri,Helvetica,sans-serif;" dir=3D"ltr">
+<p><span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-seri=
+f;">Dear Malte Venzmer,</span></p>
+<p><br>
+</p>
+<p></p>
+<div>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:=0Anormal;mso-layout-grid-align:none;text-autospace:none">
+<span style=3D"font-size:=0A10.0pt;font-family:&quot;Helv&quot;,sans-serif;=
+mso-bidi-font-family:Helv;color:black"><span style=3D"font-size: 10pt; font=
+-family: Calibri,Helvetica,sans-serif;">Thank you for providing confirmatio=
+n that you have received the consent of the authors
+ to reproduce content from AAS journals </span><b style=3D"mso-bidi-font-we=
+ight:=0Anormal"><i style=3D"mso-bidi-font-style:normal"><span style=3D"font=
+-size: 10pt; font-family: Calibri,Helvetica,sans-serif;">in
+</span><span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-=
+serif;">your d</span><span style=3D"font-size: 10pt; font-family: Calibri,H=
+elvetica,sans-serif;">issertation&nbsp;</span></i></b></span></p>
+<span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif;"=
+></span>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:=0Anormal;mso-layout-grid-align:none;text-autospace:none">
+<span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif; =
+color: black;">&nbsp;</span></p>
+<span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif;"=
+></span>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:=0Anormal;mso-layout-grid-align:none;text-autospace:none">
+<b style=3D"mso-bidi-font-weight:=0Anormal"><i style=3D"mso-bidi-font-style=
+:normal"><span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,san=
+s-serif; color: black;">Regarding:</span></i></b></p>
+<span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif;"=
+></span>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:=0Anormal;mso-layout-grid-align:none;text-autospace:none">
+<b style=3D"mso-bidi-font-weight:=0Anormal"><i style=3D"mso-bidi-font-style=
+:normal"><span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,san=
+s-serif; color: black;">&nbsp;</span></i></b></p>
+<span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif;"=
+></span>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:=0Anormal;mso-layout-grid-align:none;text-autospace:none">
+<b style=3D"mso-bidi-font-weight:normal"><i style=3D"mso-bidi-font-style:no=
+rmal"><span style=3D"font-size:10.0pt;font-family:&quot;Helv&quot;,sans-ser=
+if;mso-bidi-font-family:=0AHelv;color:black"><span style=3D"font-size: 10pt=
+; font-family: Calibri,Helvetica,sans-serif;">Figure
+</span><span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-=
+serif;">4 -</span><b style=3D"mso-bidi-font-weight:normal"><i style=3D"mso-=
+bidi-font-style:normal"><span style=3D"font-size:10.0pt;font-family:&quot;H=
+elv&quot;,sans-serif;mso-bidi-font-family:=0AHelv;color:black"><b style=3D"=
+mso-bidi-font-weight:normal"><i style=3D"mso-bidi-font-style:normal"><span =
+style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif; color:=
+ black;">The
+ Astrophysical Journal Letters, 774:L29 (6pp), 2013 September 10</span></i>=
+</b></span></i></b></span></i></b><b style=3D"mso-bidi-font-weight:normal">=
+<i style=3D"mso-bidi-font-style:normal"><span style=3D"font-size:10.0pt;fon=
+t-family:&quot;Helv&quot;,sans-serif;mso-bidi-font-family:=0AHelv;color:bla=
+ck"><b style=3D"mso-bidi-font-weight:normal"><i style=3D"mso-bidi-font-styl=
+e:normal"><span style=3D"font-size:10.0pt;font-family:&quot;Helv&quot;,sans=
+-serif;mso-bidi-font-family:=0AHelv;color:black"></p>
+<div><br>
+</div>
+</span></i></b></span></i></b><b style=3D"mso-bidi-font-weight:normal"><i s=
+tyle=3D"mso-bidi-font-style:normal"><span style=3D"font-size:10.0pt;font-fa=
+mily:&quot;Helv&quot;,sans-serif;mso-bidi-font-family:=0AHelv;color:black">=
+</span></i></b><b style=3D"mso-bidi-font-weight:normal"><i style=3D"mso-bid=
+i-font-style:normal"><span style=3D"font-size:10.0pt;font-family:&quot;Helv=
+&quot;,sans-serif;mso-bidi-font-family:=0AHelv;color:black"><b style=3D"mso=
+-bidi-font-weight:normal"><i style=3D"mso-bidi-font-style:normal"><span sty=
+le=3D"font-size:10.0pt;font-family:&quot;Helv&quot;,sans-serif;mso-bidi-fon=
+t-family:=0AHelv;color:black"><br>
+</span></i></b></span></i></b>
+<p></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:=0Anormal;mso-layout-grid-align:none;text-autospace:none">
+<span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif; =
+color: black;">&nbsp;<br>
+</span></p>
+<span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif;"=
+></span>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:=0Anormal;mso-layout-grid-align:none;text-autospace:none">
+<span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif; =
+color: black;">I am happy to confirm that permission is granted and you nee=
+d take no further action.</span></p>
+<span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif;"=
+></span>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:=0Anormal;mso-layout-grid-align:none;text-autospace:none">
+<span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif; =
+color: black;">&nbsp;</span></p>
+<span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif;"=
+></span>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:=0Anormal;mso-layout-grid-align:none;text-autospace:none">
+<span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif; =
+color: black;">Please include the following alongside the material:
+</span></p>
+<span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif;"=
+></span>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:=0Anormal;mso-layout-grid-align:none;text-autospace:none">
+<span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif; =
+color: black;">&nbsp;</span></p>
+<span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif;"=
+></span>
+<p class=3D"MsoNormal" style=3D"margin-top:0cm;margin-right:0cm;margin-bott=
+om:12.0pt;=0Amargin-left:72.0pt;text-indent:-18.0pt;line-height:normal;mso-=
+layout-grid-align:=0Anone;text-autospace:none">
+<span style=3D"font-size:10.0pt;font-family:&quot;Courier New&quot;;=0Acolo=
+r:black"><span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,san=
+s-serif;">o</span><span style=3D"font-size: 10pt; font-family: Calibri,Helv=
+etica,sans-serif;">&nbsp;
+</span></span><span style=3D"font-size: 10pt; font-family: Calibri,Helvetic=
+a,sans-serif; color: black;">the source of the material, including author, =
+article title, title of journal, volume number, issue number (if relevant),=
+ page range (or first page if this
+ is the only information available) and date of first publication. This mat=
+erial can be contained in a footnote or reference.</span></p>
+<span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif;"=
+></span>
+<p class=3D"MsoNormal" style=3D"margin-top:0cm;margin-right:0cm;margin-bott=
+om:12.0pt;=0Amargin-left:72.0pt;text-indent:-18.0pt;line-height:normal;mso-=
+layout-grid-align:=0Anone;text-autospace:none">
+<span style=3D"font-size:10.0pt;font-family:&quot;Courier New&quot;;=0Acolo=
+r:black"><span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,san=
+s-serif;">o</span><span style=3D"font-size: 10pt; font-family: Calibri,Helv=
+etica,sans-serif;">&nbsp;
+</span></span><span style=3D"font-size: 10pt; font-family: Calibri,Helvetic=
+a,sans-serif; color: black;">for material being published electronically, a=
+ link back to the article (via DOI)</span></p>
+<span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif;"=
+></span>
+<p class=3D"MsoNormal" style=3D"margin-top:0cm;margin-right:0cm;margin-bott=
+om:12.0pt;=0Amargin-left:72.0pt;text-indent:-18.0pt;line-height:normal;mso-=
+layout-grid-align:=0Anone;text-autospace:none">
+<span style=3D"font-size:10.0pt;font-family:&quot;Courier New&quot;;=0Acolo=
+r:black"><span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,san=
+s-serif;">o</span><span style=3D"font-size: 10pt; font-family: Calibri,Helv=
+etica,sans-serif;">&nbsp;
+</span></span><span style=3D"font-size:10.0pt;font-family:&quot;Helv&quot;,=
+sans-serif;mso-bidi-font-family:=0AHelv;color:black"><span style=3D"font-si=
+ze: 10pt; font-family: Calibri,Helvetica,sans-serif;">if practical and IN A=
+LL CASES for works published under any of the Creative
+ Commons licences the words &quot;=C2=A9 AAS. Reproduced with permission&qu=
+ot;.</span><span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,s=
+ans-serif;">&nbsp;
+</span></span></p>
+<span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif;"=
+></span>
+<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt;line-height:normal;mso=
+-layout-grid-align:=0Anone;text-autospace:none">
+<span style=3D"font-size:10.0pt;font-family:&quot;Helv&quot;,sans-serif;=0A=
+mso-bidi-font-family:Helv;color:black"><span style=3D"font-size: 10pt; font=
+-family: Calibri,Helvetica,sans-serif;">This permission does not apply to a=
+ny material/figure which is credited to another
+ source in the AAS publication or has been obtained from a third party.</sp=
+an><span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-seri=
+f;">&nbsp;
+</span><span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-=
+serif;">Express permission for such materials/figures must be obtained from=
+ the copyright owner.</span></span></p>
+<span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif;"=
+></span>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:=0Anormal;mso-layout-grid-align:none;text-autospace:none">
+<span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif; =
+color: black;">Kind regards,</span></p>
+<span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif;"=
+></span></div>
+<span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif;"=
+>Christina</span><br>
+<p></p>
+<p><br>
+</p>
+<div id=3D"Signature">
+<div id=3D"divtagdefaultwrapper" dir=3D"ltr" style=3D"font-size: 12pt; colo=
+r: rgb(0, 0, 0); font-family: Calibri,Helvetica,sans-serif,&quot;EmojiFont&=
+quot;,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,NotoColorEmo=
+ji,&quot;Segoe UI Symbol&quot;,&quot;Android Emoji&quot;,EmojiSymbols;">
+<p></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt; font-family:&quo=
+t;Arial&quot;,sans-serif">Copyright &amp; Permissions Team</span></b><span =
+style=3D"font-size:10.0pt; font-family:&quot;Arial&quot;,sans-serif"><br>
+Gemma Alaway =E2=80=93 Senior Rights &amp; Permissions Adviser</span><span =
+style=3D""> <br>
+</span><span style=3D"font-size:10.0pt; font-family:&quot;Arial&quot;,sans-=
+serif">Christina Colwell - Rights &amp; Permissions Assistant</span><span s=
+tyle=3D"">
+<br>
+</span><span style=3D"font-size:10.0pt; font-family:&quot;Arial&quot;,sans-=
+serif"><br>
+Contact Details<br>
+E-mail: </span><span style=3D""><a id=3D"LPNoLP" href=3D"mailto:permissions=
+@iop.org"><span style=3D"font-size:10.0pt; font-family:&quot;Arial&quot;,sa=
+ns-serif; color:blue">permissions@iop.org</span></a>
+</span><span style=3D"font-size:12.0pt"></span></p>
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-size:10.0pt; font-fam=
+ily:&quot;Arial&quot;,sans-serif">For further information about copyright a=
+nd how to request permission:
+</span><span style=3D"font-size:12.0pt; font-family:&quot;Times New Roman&q=
+uot;,serif"><a id=3D"LPNoLP" href=3D"https://emea01.safelinks.protection.ou=
+tlook.com/?url=3Dhttp%3A%2F%2Fiopscience.iop.org%2Fpage%2Fcopyright&amp;dat=
+a=3D02%7C01%7Cchristina.colwell%40iop.org%7Cc490136a905a4fd5d84f08d4f46893d=
+a%7Cf9ee42e6bad04e639115f704f9ccceed%7C1%7C0%7C636402177379623514&amp;sdata=
+=3D1v2XHHSLh9r7tlMATQGJfEu4E1fGQpJ%2BbEDATENoIU4%3D&amp;reserved=3D0"><span=
+ style=3D"font-size:10.0pt; font-family:&quot;Arial&quot;,sans-serif; color=
+:blue">http://iopscience.iop.org/page/copyright</span></a>
+</span></p>
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-size:10.0pt; font-fam=
+ily:&quot;Arial&quot;,sans-serif">Please see our Author Rights Policy
+</span><span style=3D"font-size:12.0pt; font-family:&quot;Times New Roman&q=
+uot;,serif"><a id=3D"LPNoLP" href=3D"https://emea01.safelinks.protection.ou=
+tlook.com/?url=3Dhttp%3A%2F%2Fioppublishing.org%2Fauthor-rights%2F&amp;data=
+=3D02%7C01%7Cchristina.colwell%40iop.org%7Cc490136a905a4fd5d84f08d4f46893da=
+%7Cf9ee42e6bad04e639115f704f9ccceed%7C1%7C0%7C636402177379623514&amp;sdata=
+=3Dh661G6zyxEiPwVYlPPwstDEjBruIcsoy47Lo8Q8fVhQ%3D&amp;reserved=3D0"><span s=
+tyle=3D"font-size:10.0pt; font-family:&quot;Arial&quot;,sans-serif; color:b=
+lue">http://ioppublishing.org/author-rights/</span></a>
+</span></p>
+<b><span style=3D"font-size:10.0pt; font-family:&quot;Arial&quot;,sans-seri=
+f">Please note</span></b><span style=3D"font-size:10.0pt; font-family:&quot=
+;Arial&quot;,sans-serif">: We do not provide signed permission forms as a s=
+eparate attachment. Please print this email and provide
+ it to your publisher as proof of permission.</span><span style=3D"font-siz=
+e:11.0pt; font-family:&quot;Calibri&quot;,sans-serif">
+<br>
+<br>
+</span><b><span style=3D"font-size:10.0pt; font-family:&quot;Arial&quot;,sa=
+ns-serif">Please note</span></b><span style=3D"font-size:10.0pt; font-famil=
+y:&quot;Arial&quot;,sans-serif">: Any statements made by IOP Publishing to =
+the effect that authors do not need to get permission to
+ use any content where IOP Publishing is not the publisher is not intended =
+to constitute any sort of legal advice. Authors must make their own decisio=
+ns as to the suitability of the content they are using and whether they req=
+uire permission for it to be published
+ within their article.</span><span style=3D"font-size:11.0pt; font-family:&=
+quot;Calibri&quot;,sans-serif">
+<br style=3D"">
+<br style=3D"">
+</span><br>
+<p></p>
+</div>
+</div>
+<br>
+<br>
+<div style=3D"color: rgb(0, 0, 0);">
+<hr tabindex=3D"-1" style=3D"display:inline-block;width:98%">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font style=3D"font-size:11pt" face=
+=3D"Calibri, sans-serif" color=3D"#000000"><b>From:</b> Malte Venzmer &lt;m=
+venzmer@astro.physik.uni-goettingen.de&gt;<br>
+<b>Sent:</b> 16 November 2017 17:28<br>
+<b>To:</b> Permissions<br>
+<b>Subject:</b> Fwd: Re: Permission to use a figure</font>
+<div>&nbsp;</div>
+</div>
+<div class=3D"BodyFragment"><font size=3D"2"><span style=3D"font-size:10pt;=
+">
+<div class=3D"PlainText">Dear Christina,<br>
+<br>
+Below the email confirmation of Junwei Zhao's consent.<br>
+<br>
+Thanks for the directions and best regards,<br>
+Malte<br>
+<br>
+<br>
+-------- Forwarded Message --------<br>
+Subject: Re: Permission to use a figure<br>
+Date: Thu, 16 Nov 2017 09:16:40 -0800 (PST)<br>
+From: Junwei Zhao &lt;junwei@sun.Stanford.EDU&gt;<br>
+To: Malte Venzmer &lt;mvenzmer@astro.physik.uni-goettingen.de&gt;<br>
+<br>
+Dear Malte,<br>
+<br>
+Yes, you have my permission to use that figure in your dissertation,<br>
+or whichever other places you deem necessary.<br>
+<br>
+Good luck on your dissertation writing!<br>
+Junwei<br>
+<br>
+On Thu, 16 Nov 2017, Malte Venzmer wrote:<br>
+<br>
+&gt; Dear Dr Zhao,<br>
+&gt;<br>
+&gt; I seek permission to use a figure from your following article in my<br=
+>
+&gt; dissertation:<br>
+&gt;<br>
+&gt; &quot;DETECTION OF EQUATORWARD MERIDIONAL FLOW AND EVIDENCE OF DOUBLE-=
+CELL<br>
+&gt; MERIDIONAL CIRCULATION INSIDE THE SUN&quot;<br>
+&gt; <a href=3D"https://emea01.safelinks.protection.outlook.com/?url=3Dhttp=
+%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F2041-8205%2F774%2F2%2FL29=
+&amp;data=3D02%7C01%7Cpermissions%40iop.org%7Cc98f4f927563489bd5e008d52d177=
+d56%7Cf9ee42e6bad04e639115f704f9ccceed%7C1%7C0%7C636464501261726099&amp;sda=
+ta=3D3dewgIqzUSfZnzyB9og4ZOOkSdSTFIj4fJb9ph1qlAc%3D&amp;reserved=3D0">
+https://emea01.safelinks.protection.outlook.com/?url=3Dhttp%3A%2F%2Fiopscie=
+nce.iop.org%2Farticle%2F10.1088%2F2041-8205%2F774%2F2%2FL29&amp;data=3D02%7=
+C01%7Cpermissions%40iop.org%7Cc98f4f927563489bd5e008d52d177d56%7Cf9ee42e6ba=
+d04e639115f704f9ccceed%7C1%7C0%7C636464501261726099&amp;sdata=3D3dewgIqzUSf=
+ZnzyB9og4ZOOkSdSTFIj4fJb9ph1qlAc%3D&amp;reserved=3D0</a><br>
+&gt;<br>
+&gt; It is about figure 4.<br>
+&gt;<br>
+&gt; Thanks in advance and best regards,<br>
+&gt; Malte Venzmer<br>
+&gt;<br>
+&gt;<br>
+&gt;<br>
+&gt; -------- Forwarded Message --------<br>
+&gt; Subject: Re: Case # 00340171 ApJL: permission to use a figure<br>
+&gt; Date: Thu, 16 Nov 2017 15:02:04 &#43;0000<br>
+&gt; From: Permissions &lt;permissions@iop.org&gt;<br>
+&gt; To: mvenzmer@astro.physik.uni-goettingen.de<br>
+&gt; &lt;mvenzmer@astro.physik.uni-goettingen.de&gt;<br>
+&gt;<br>
+&gt; Dear Malte Venzmer,<br>
+&gt;<br>
+&gt; Thank you for your enquiry.<br>
+&gt;<br>
+&gt; AAS grants back to its authors the right to grant permission for reuse=
+<br>
+&gt; of their work.&nbsp; Therefore, please:<br>
+&gt;<br>
+&gt;<br>
+&gt;&nbsp; *&nbsp;&nbsp; Obtain consent from one of the original authors of=
+ the paper from<br>
+&gt; which you wish to reuse content.<br>
+&gt;&nbsp; *&nbsp;&nbsp; Notify us at this address once consent has been ob=
+tained from the<br>
+&gt; original authors, providing written evidence of such consent =E2=80=93=
+ an email<br>
+&gt; confirmation will suffice.<br>
+&gt;&nbsp; *&nbsp;&nbsp; Give the original citation for the figure, table, =
+or other<br>
+&gt; material that you plan to reproduce as well as the information about<b=
+r>
+&gt; where the material is to appear.<br>
+&gt;<br>
+&gt; We look forward to hearing from you once you have obtained the authors=
+=E2=80=99<br>
+&gt; permission.<br>
+&gt;<br>
+&gt; Kind regards,<br>
+&gt; Christina<br>
+&gt;<br>
+&gt; Copyright &amp; Permissions Team<br>
+&gt; Gemma Alaway =E2=80=93 Senior Rights &amp; Permissions Adviser<br>
+&gt; Christina Colwell - Rights &amp; Permissions Assistant<br>
+&gt;<br>
+&gt; Contact Details<br>
+&gt; E-mail: permissions@iop.org&lt;<a href=3D"mailto:permissions@iop.org">=
+mailto:permissions@iop.org</a>&gt;<br>
+&gt; For further information about copyright and how to request permission:=
+<br>
+&gt; <a href=3D"https://emea01.safelinks.protection.outlook.com/?url=3Dhttp=
+%3A%2F%2Fiopscience.iop.org%2Fpage%2Fcopyright&amp;data=3D02%7C01%7Cpermiss=
+ions%40iop.org%7Cc98f4f927563489bd5e008d52d177d56%7Cf9ee42e6bad04e639115f70=
+4f9ccceed%7C1%7C0%7C636464501261726099&amp;sdata=3DTx4rwRd8V0M8sFhlRyBjh3vj=
+1A%2F9Ro0%2B%2FeJ4Gj1Eir0%3D&amp;reserved=3D0&lt;https://emea01.safelinks.p=
+rotection.outlook.com/?url=3Dhttp%3A%2F%2Fiopscience.iop.org%2Fpage%2Fcopyr=
+ight&amp;data=3D02%7C01%7Cchristina.colwell%40iop.org%7Cc490136a905a4fd5d84=
+f08d4f46893da%7Cf9ee42e6bad04e639115f704f9ccceed%7C1%7C0%7C6364021773796235=
+14&amp;sdata=3D1v2XHHSLh9r7tlMATQGJfEu4E1fGQpJ%2BbEDATENoIU4%3D&amp;reserve=
+d=3D0">
+https://emea01.safelinks.protection.outlook.com/?url=3Dhttp%3A%2F%2Fiopscie=
+nce.iop.org%2Fpage%2Fcopyright&amp;data=3D02%7C01%7Cpermissions%40iop.org%7=
+Cc98f4f927563489bd5e008d52d177d56%7Cf9ee42e6bad04e639115f704f9ccceed%7C1%7C=
+0%7C636464501261726099&amp;sdata=3DTx4rwRd8V0M8sFhlRyBjh3vj1A%2F9Ro0%2B%2Fe=
+J4Gj1Eir0%3D&amp;reserved=3D0&lt;https://emea01.safelinks.protection.outloo=
+k.com/?url=3Dhttp%3A%2F%2Fiopscience.iop.org%2Fpage%2Fcopyright&amp;data=3D=
+02%7C01%7Cchristina.colwell%40iop.org%7Cc490136a905a4fd5d84f08d4f46893da%7C=
+f9ee42e6bad04e639115f704f9ccceed%7C1%7C0%7C636402177379623514&amp;sdata=3D1=
+v2XHHSLh9r7tlMATQGJfEu4E1fGQpJ%2BbEDATENoIU4%3D&amp;reserved=3D0</a>&gt;<br=
+>
+&gt; Please see our Author Rights Policy<br>
+&gt; <a href=3D"https://emea01.safelinks.protection.outlook.com/?url=3Dhttp=
+%3A%2F%2Fioppublishing.org%2Fauthor-rights%2F&amp;data=3D02%7C01%7Cpermissi=
+ons%40iop.org%7Cc98f4f927563489bd5e008d52d177d56%7Cf9ee42e6bad04e639115f704=
+f9ccceed%7C1%7C0%7C636464501261726099&amp;sdata=3D1QrfSEskyGlz5vHpQIHMgAO%2=
+BVQLmb%2FeVrGXWXjtKKoU%3D&amp;reserved=3D0&lt;https://emea01.safelinks.prot=
+ection.outlook.com/?url=3Dhttp%3A%2F%2Fioppublishing.org%2Fauthor-rights%2F=
+&amp;data=3D02%7C01%7Cchristina.colwell%40iop.org%7Cc490136a905a4fd5d84f08d=
+4f46893da%7Cf9ee42e6bad04e639115f704f9ccceed%7C1%7C0%7C636402177379623514&a=
+mp;sdata=3Dh661G6zyxEiPwVYlPPwstDEjBruIcsoy47Lo8Q8fVhQ%3D&amp;reserved=3D0"=
+>
+https://emea01.safelinks.protection.outlook.com/?url=3Dhttp%3A%2F%2Fioppubl=
+ishing.org%2Fauthor-rights%2F&amp;data=3D02%7C01%7Cpermissions%40iop.org%7C=
+c98f4f927563489bd5e008d52d177d56%7Cf9ee42e6bad04e639115f704f9ccceed%7C1%7C0=
+%7C636464501261726099&amp;sdata=3D1QrfSEskyGlz5vHpQIHMgAO%2BVQLmb%2FeVrGXWX=
+jtKKoU%3D&amp;reserved=3D0&lt;https://emea01.safelinks.protection.outlook.c=
+om/?url=3Dhttp%3A%2F%2Fioppublishing.org%2Fauthor-rights%2F&amp;data=3D02%7=
+C01%7Cchristina.colwell%40iop.org%7Cc490136a905a4fd5d84f08d4f46893da%7Cf9ee=
+42e6bad04e639115f704f9ccceed%7C1%7C0%7C636402177379623514&amp;sdata=3Dh661G=
+6zyxEiPwVYlPPwstDEjBruIcsoy47Lo8Q8fVhQ%3D&amp;reserved=3D0</a>&gt;<br>
+&gt; Please note: We do not provide signed permission forms as a separate<b=
+r>
+&gt; attachment. Please print this email and provide it to your publisher a=
+s<br>
+&gt; proof of permission.<br>
+&gt;<br>
+&gt; Please note: Any statements made by IOP Publishing to the effect that<=
+br>
+&gt; authors do not need to get permission to use any content where IOP<br>
+&gt; Publishing is not the publisher is not intended to constitute any sort=
+<br>
+&gt; of legal advice. Authors must make their own decisions as to the<br>
+&gt; suitability of the content they are using and whether they require<br>
+&gt; permission for it to be published within their article.<br>
+&gt;<br>
+&gt;<br>
+&gt;<br>
+&gt;<br>
+&gt; ________________________________<br>
+&gt; --------------- Original Message ---------------<br>
+&gt; From: mvenzmer@astro.physik.uni-goettingen.de<br>
+&gt; Sent: 15/11/2017<br>
+&gt; To: custserv@iop.org<br>
+&gt; Subject: ApJL: permission to use a figure<br>
+&gt;<br>
+&gt; Dear IOP science contact,<br>
+&gt;<br>
+&gt; I seek permission to use a figure of the following ApJL article in my<=
+br>
+&gt; dissertation:<br>
+&gt;<br>
+&gt; <a href=3D"https://emea01.safelinks.protection.outlook.com/?url=3Dhttp=
+%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F2041-8205%2F774%2F2%2FL29=
+&amp;data=3D02%7C01%7Ccustserv%40iop.org%7C224ba8a1adcb44edbc1908d52c1e30f4=
+%7Cf9ee42e6bad04e639115f704f9ccceed%7C1%7C0%7C636463430532864339&amp;sdata=
+=3D22ZEb6t5w5TK%2BrS2t%2FfTOnN%2FELnYenwhAS60lmmlUOE%3D&amp;reserved=3D0">
+https://emea01.safelinks.protection.outlook.com/?url=3Dhttp%3A%2F%2Fiopscie=
+nce.iop.org%2Farticle%2F10.1088%2F2041-8205%2F774%2F2%2FL29&amp;data=3D02%7=
+C01%7Ccustserv%40iop.org%7C224ba8a1adcb44edbc1908d52c1e30f4%7Cf9ee42e6bad04=
+e639115f704f9ccceed%7C1%7C0%7C636463430532864339&amp;sdata=3D22ZEb6t5w5TK%2=
+BrS2t%2FfTOnN%2FELnYenwhAS60lmmlUOE%3D&amp;reserved=3D0</a><br>
+&gt;<br>
+&gt; Is this the correct contact for my request?<br>
+&gt;<br>
+&gt; Thanks in advance,<br>
+&gt; Malte Venzmer<br>
+&gt; ref:_00D30omsI._5000c1R0Feq:ref<br>
+&gt; **********************************************************************=
+**<br>
+&gt; This email (and attachments) are confidential and intended for the<br>
+&gt; addressee(s) only. If you are not the intended recipient please notify=
+<br>
+&gt; the sender, delete any copies and do not take action in reliance on it=
+.<br>
+&gt; Any views expressed are the author's and do not represent those of IOP=
+,<br>
+&gt; except where specifically stated. IOP takes reasonable precautions to<=
+br>
+&gt; protect against viruses but accepts no responsibility for loss or dama=
+ge<br>
+&gt; arising from virus infection. For the protection of IOP's systems and<=
+br>
+&gt; staff emails are scanned automatically.<br>
+&gt;<br>
+&gt; IOP Publishing Limited Registered in England under Registration No<br>
+&gt; 467514. Registered Office: Temple Circus, Bristol BS1 6HG England<br>
+&gt; Vat No GB 461 6000 84.<br>
+&gt; Please consider the environment before printing this e-mail.<br>
+&gt;<br>
+&gt;<br>
+<br>
+</div>
+</span></font></div>
+</div>
+</div>
+
+
+=0A    <br />=0A    <br />=0A  =20=0A<hr />=0A<br />=0AThis email (and atta=
+chments) are confidential and intended for the addressee(s) only. If you ar=
+e not the intended recipient please notify the sender,=20=0Adelete any copi=
+es and do not take action in reliance on it. Any views expressed are the au=
+thor's and do not represent those of IOP, except where specifically=20=0Ast=
+ated. IOP takes reasonable precautions to protect against viruses but accep=
+ts no responsibility for loss or damage arising from virus infection.=20=0A=
+For the protection of IOP's systems and staff emails are scanned automatica=
+lly.=0A<br /><br />=0A<b>IOP Publishing Limited</b> Registered in England u=
+nder Registration No 467514. Registered Office: Temple Circus, Bristol BS1 =
+6HG England=0AVat No GB 461 6000 84.<br /><p>=0A<font color=3D"#009900" fac=
+e=3D"verdana,arial,helvetica" size=3D"2"> <strong>Please=0Aconsider the env=
+ironment before printing this email</strong></font>=0A</p><hr />=0A=0A=0A  =
+  </body></html>
+
+--_000_LOXP123MB1031372B2AE95AD07372FF9DA02F0LOXP123MB1031GBRP_--
+

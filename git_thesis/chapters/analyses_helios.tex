@@ -38,7 +38,7 @@ A photo of PSP during testing is shown in \autoref{fig:aa-roll-sc-into-acoustics
 \begin{figure}[htb]
 	\begin{floatrow}
 		\ffigbox{
-			\includegraphics[width=0.5\textwidth]{images/aa-roll-sc-into-acoustics-cell-0199_square.jpg}
+			\includegraphics[width=0.5\Xhsize]{figures_of_others/images/aa-roll-sc-into-acoustics-cell-0199_square.jpg}
 		}{
 			\caption{PSP in the Acoustic Test Chamber at NASA’s Goddard Space Flight Center in November 2017. Credit: \href{http://parkersolarprobe.jhuapl.edu/News-Center/Show-Article.php?articleID=62}{NASA/Johns Hopkins APL/Ed Whitman}.}
 			\label{fig:aa-roll-sc-into-acoustics-cell-0199}
@@ -46,7 +46,7 @@ A photo of PSP during testing is shown in \autoref{fig:aa-roll-sc-into-acoustics
 % http://parkersolarprobe.jhuapl.edu/News-Center/Show-Article.php?articleID=62
 % http://parkersolarprobe.jhuapl.edu/News-Center/admin/Press-Releases/images/articles/aa-roll-sc-into-acoustics-cell-0199.jpg
 		\ffigbox{
-			\includegraphics[width=0.5\textwidth]{images/SPP_ObservingSun2_square.jpg}
+			\includegraphics[width=\Xhsize]{figures_of_others/images/SPP_ObservingSun2_square.jpg}
 		}{
 			\caption{Artist’s concept of PSP near the Sun. Credit: \href{http://parkersolarprobe.jhuapl.edu/Multimedia/Images.php}{Johns Hopkins University Applied Physics Laboratory}.}
 			\label{fig:SPP_ObservingSun2}
@@ -122,7 +122,7 @@ So, in the ecliptic at a solar distance of \SI{1}{\au}, the Parker spiral's obse
 This is indeed measured at \SI{1}{\au} and is apparent from the angle's frequency distribution, using OMNI data of the time period 1963--2016, see \autoref{fig:histogram_B_angles_b}.\\
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
-		\includegraphics[width=0.6\textwidth]{images/gnuplots/histogram_B_angles_b.pdf}
+		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/histogram_B_angles_b.pdf}
 	}{
 		\caption{Frequency distributions of the magnetic field angles $\theta_B$ and $\phi_B$ in GSE coordinates. The frequencies are based on the hourly OMNI data during the period 1963--2016.}
 		\label{fig:histogram_B_angles_b}
@@ -147,7 +147,7 @@ with the scaling parameter $a$, the exponents $e_1$ and $e_2$, is used in a leas
 The resulting fit curves for mean and median field strength are plotted with respect to solar distance in \autoref{fig:radial_fit_B_thesis_skip}. In the Helios distance region \SIrange{0.3}{1.0}{\au}, the fit curves are very similar to those in the paper -- as they are expected to be. This is why this graph is visually almost indistinguishable to the corresponding one in the paper (paper \autoref{sec:solar_distance_dependency}, Figure~7).
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
-		\includegraphics[width=0.6\textwidth]{images/gnuplots/radial_fit_B_thesis_skip.pdf}
+		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/radial_fit_B_thesis_skip.pdf}
 	}{
 		\caption{Magnetic field strength with respect to solar distance. The mean and median per \SI{0.01}{\au} data bin and their fit curves are plotted as well. The hourly Helios data has a native distance resolution of \SI{0.01}{\au}, thus, to make the distribution visible in this plot, I added a random distance value of up to \SI{+-0.005}{\au}.}
 		\label{fig:radial_fit_B_thesis_skip}
@@ -224,7 +224,7 @@ Implementing the power law distance dependency~(ref{eq:}) into the lognormal fun
 fix mean and median exponents and make a distribution fit. see fit distribution in \autoref{fig:fit_fixed_B_paper_f} and resulting fit parameters in \autoref{tab:bfield_fit_parameters}.\\
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
-		\includegraphics[width=0.6\textwidth]{images/gnuplots/fit_fixed_B_paper_f.pdf}
+		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/fit_fixed_B_paper_f.pdf}
 	}{
 		\caption{Frequency distribution of the solar wind magnetic field strength with respect to solar distance. Plotted are the binned Helios data and the square-root power-law lognormal fit model with their median values (white lines).}
 		\label{fig:fit_fixed_B_paper_f}
@@ -247,7 +247,7 @@ The resulting equation, combined with the values obtained from the solar activit
 This magnetic field strength model is extrapolated to PSP's orbital range in \autoref{fig:sw_extrapolation_ssn_f}.\\
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
-		\includegraphics[width=0.6\textwidth]{images/gnuplots/sw_extrapolation_ssn_f.pdf}
+		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/sw_extrapolation_ssn_f.pdf}
 	}{
 		\caption{Radial extrapolation of the solar-wind magnetic field strength to the PSP orbit region. The median value from the model, obtained from Helios and OMNI measurements, is extrapolated to the PSP region for SSN values between solar minimum and maximum, that is, $0 \le ssn \le 200$. The lower edges of the shaded areas correspond to solar minimum, the upper edges to solar maximum. Also plotted are the radial dependencies of the analytic DQCS magnetic field model for solar minimum (violet) from \citet{Banaszkiewicz1998} and the Parker field model (red).}
 		\label{fig:sw_extrapolation_ssn_f}
@@ -257,7 +257,7 @@ This magnetic field strength model is extrapolated to PSP's orbital range in \au
 forecast to PSP orbit and mission time, see \autoref{fig:PSP_perihelia_prediction_f}\\
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
-		\includegraphics[width=0.6\textwidth]{images/gnuplots/PSP_perihelia_prediction_f.pdf}
+		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/PSP_perihelia_prediction_f.pdf}
 	}{
 		\caption{Estimated solar-wind parameter medians (solid) and their error bands (gray area) during 12~days in 2018 and 2024 with PSP's first perihelion at about \SI{0.16}{\au} and PSP's 22nd (the first closest) perihelion at \SI{0.046}{\au}. The prediction from \citet{Venzmer2017} is indicated as well (dotted).}
 		\label{fig:PSP_perihelia_prediction_f}
@@ -276,7 +276,7 @@ The estimated magnetic field strength median value of \SI{94}{\nano\tesla} for t
 The estimated frequency distributions of the solar-wind magnetic field strength at PSP's 1st and 22nd (first closest) perihelion are plotted in \autoref{fig:PSP_sw_distributions_b}.\\
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
-		\includegraphics[width=0.6\textwidth]{images/gnuplots/PSP_sw_distributions_b.pdf}
+		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/PSP_sw_distributions_b.pdf}
 	}{
 		\caption{Frequency distributions of the solar-wind magnetic field strength (OMNI data) and those estimated with the solar-wind model for PSP's 1st and 22nd (first closest) perihelion. In this plot the frequencies of both extrapolated curves are scaled for visibility to the same height as the \SI{1}{\au} distribution. The predictions from \citet{Venzmer2017} are indicated as well (dotted).}
 		\label{fig:PSP_sw_distributions_b}
@@ -368,7 +368,7 @@ quantify variation amplitudes\\
 see \autoref{fig:OMNI_monthly_freq_V_gps}
 \begin{figure}[htb]
 	\centering
-	\includegraphics[width=0.3\textwidth]{images/gnuplots/OMNI_monthly_freq_V_gps.png}
+	\includegraphics[width=0.3\textwidth]{figures_of_mine/gnuplots/OMNI_monthly_freq_V_gps.png}
 	\caption{Diagram of the velocity frequency by month for the period 1963/01--2013/08. Mean and median values are shown as well.}
 	\label{fig:OMNI_monthly_freq_V_gps}
 \end{figure}
@@ -376,7 +376,7 @@ see \autoref{fig:OMNI_monthly_freq_V_gps}
 see \autoref{fig:OMNI_monthly_freq_B_a_gps}
 \begin{figure}[htb]
 	\centering
-	\includegraphics[width=0.3\textwidth]{images/gnuplots/OMNI_monthly_freq_B_a_gps.png}
+	\includegraphics[width=0.3\textwidth]{figures_of_mine/gnuplots/OMNI_monthly_freq_B_a_gps.png}
 	\caption{Diagram of magnetic field frequency by month for the period 1963/01--2013/08. Mean and median values are shown as well as the expected course from the solar distance variation (obtained from Helios data).}
 	\label{fig:OMNI_monthly_freq_B_a_gps}
 \end{figure}
@@ -408,7 +408,7 @@ Balogh et al. (1999) p. 162 ff (origin and formation of CIRs in inner heliospher
 Helios latitude; see \autoref{fig:latitude_frequency_4_thesis_plot}
 \begin{figure}[htb]
 	\centering
-	\includegraphics[width=0.5\textwidth]{images/gnuplots/latitude_frequency_4_thesis_plot.png}
+	\includegraphics[width=0.5\textwidth]{figures_of_mine/gnuplots/latitude_frequency_4_thesis_plot.png}
 	\caption{The four solar wind parameter's HGI latitude dependency. Their mean and median values per \SI{0.1}{\degree} bin are plotted as well. random jitter...}
 	\label{fig:latitude_frequency_4_thesis_plot}
 \end{figure}
@@ -419,7 +419,7 @@ have a look on distribution widths...\\
 dependence from latitude in interval \SIrange{-7.25}{7.25}{\degree} in Helios data negligible?, see \autoref{fig:latitude_frequency_rcorrected_v3_4_thesis_plot}.\\
 \begin{figure}[htb]
 	\centering
-	\includegraphics[width=0.5\textwidth]{images/gnuplots/latitude_frequency_rcorrected_v3_4_thesis_plot.png}
+	\includegraphics[width=0.5\textwidth]{figures_of_mine/gnuplots/latitude_frequency_rcorrected_v3_4_thesis_plot.png}
 	\caption{Solar wind parameters projected to 1~au with respect to latitude. And their mean values, including weighted fit. add projected median... random jitter...}
 	\label{fig:latitude_frequency_rcorrected_v3_4_thesis_plot}
 \end{figure}

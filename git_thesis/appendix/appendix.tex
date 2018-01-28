@@ -117,7 +117,7 @@ see \autoref{fig:differential_rotation_pdfcairo_plot}
 \begin{figure}[htb]
 	%\centering
 	\fcapside[\FBwidth]{
-		\includegraphics[width=0.5\textwidth]{images/gnuplots/differential_rotation_pdfcairo_plot.pdf}
+		\includegraphics[width=0.5\textwidth]{figures_of_mine/gnuplots/differential_rotation_pdfcairo_plot.pdf}
 	}{
 		\caption{Diagram of the sidereal solar surface differential rotation. It shows the angular velocity for different latitudes. remove sides...}
 		\label{fig:differential_rotation_pdfcairo_plot}
@@ -163,6 +163,7 @@ The meridional circulation is the proposed equatorial updrift and polar downdrif
 
 
 \section{Earth orbit geometry}
+\label{sec:earth_orbit_geometry}
 
 %all from https://en.wikipedia.org/wiki/Earth's_orbit
 %see also http://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html
@@ -224,7 +225,6 @@ $X_\text{avg}(t) = a\,r_\text{E}(t)^b$\\
 % V2_med = 4.034(21)e2~km/s\\
 
 \subsection{Solar rotation axis tilt}
-%\label{sec:}
 
 The inclination of the solar equator to the ecliptic (tilt/obliquity) is $i_\odot = 7.25$\textdegree{} \citep{USNO2015}.\\	%USNO2015 C3
 
@@ -271,7 +271,7 @@ solar tilt over the year, see \autoref{fig:Solar_tilt_seasons_plot}
 \begin{figure}[htb]
 	%\centering
 	\fcapside[\FBwidth]{
-		\includegraphics[width=0.5\textwidth]{images/gnuplots/Solar_tilt_seasons_plot.pdf}
+		\includegraphics[width=0.5\textwidth]{figures_of_mine/gnuplots/Solar_tilt_seasons_plot.pdf}
 	}{
 		\caption{Projected solar tilt angle over the year as viewed from Earth. remove sides...}
 		\label{fig:Solar_tilt_seasons_plot}
@@ -458,25 +458,26 @@ Nominal solar effective temperature (photosphere): $T_{\text{eff}\odot} = \SI{57
 
 This is a small summary about the lognormal probability distribution \citep[p.~780]{Bronstein2000}. The lognormal distribution is the distribution of a random variable $X$ if the logarithm of $X$ conforms to a normal distribution. Its shape is highly asymmetric, however in a semi-log plot the Gaussian bell curve is recognizable (see the second panel of \autoref{fig:lognormal_3panel_pdfcairo_plot}).
 \begin{figure}[htb]
-	%\centering
-	\fcapside[\FBwidth]{
-		\includegraphics[width=0.5\textwidth]{images/gnuplots/lognormal_3panel_pdfcairo_plot.pdf}
-	}{
-		\caption{The lognormal probability density function ($\sigma = 1, \mu = 0$) plotted in a linear, semi-log and log-log way. remove borders...}
-		\label{fig:lognormal_3panel_pdfcairo_plot}
-	}
+	\begin{floatrow}
+		\ffigbox{
+			\includegraphics[width=0.5\Xhsize]{figures_of_mine/gnuplots/lognormal_3panel_pdfcairo_plot.pdf}
+		}{
+			\caption{The lognormal probability density function ($\sigma = 1, \mu = 0$) plotted in a linear, semi-log and log-log way. remove borders...}
+			\label{fig:lognormal_3panel_pdfcairo_plot}
+		}
+		\ffigbox{
+			\includegraphics[width=\Xhsize]{figures_of_mine/gnuplots/lognormal_ms_pdfcairo_plot.pdf}
+		}{
+			\caption{Five lognormal distributions plotted with fixed $\sigma$ (top) and fixed $\mu$ (bottom). remove borders...}
+			\label{fig:lognormal_ms_pdfcairo_plot}
+		}
+	\end{floatrow}
 \end{figure}
 Its probability density function is
 \begin{align}
 	f(x) &= \frac{1}{\sigma \sqrt{2 \pi} x} \, \text{e}^{- \frac{(\ln x - \mu)^2}{2 \sigma^2}}
 \end{align}
 with the location ($\mu$) and the shape parameter ($\sigma$). Changes in $\mu$ affect both the horizontal and vertical scaling of the function, whereas $\sigma$ has an influence on its shape (see \autoref{fig:lognormal_ms_pdfcairo_plot}).\\
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=0.5\textwidth]{images/gnuplots/lognormal_ms_pdfcairo_plot.pdf}
-	\caption{Five lognormal distributions plotted with fixed $\sigma$ (top) and fixed $\mu$ (bottom). remove borders...}
-	\label{fig:lognormal_ms_pdfcairo_plot}
-\end{figure}
 
 Because it is a probability distribution, its area is normalized
 \begin{align}

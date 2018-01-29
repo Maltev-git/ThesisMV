@@ -54,7 +54,7 @@ For the analyses performed and found in this chapter, the objectives are to esti
 \section{Long-term variations of the \Kp{}~index}
 \label{sec:long_term_variations}
 
-\subsection{Solar activity influence on the \Kp{}~index}
+\subsection{Solar activity influence}
 The \Kp{} data is obtained from the GFZ~Potsdam\footnote{GFZ~Potsdam website: \url{http://www.gfz-potsdam.de/de/kp-index/}}, where the index is currently maintained. The data used in this analysis covers the time period 1932--2016. Its frequency distribution shows that the highest frequencies occur around low \Kp{} values of 1+. Going to higher \Kp{} values, the frequencies seem to decline asymtotically towards zero (see Fig.~\ref{fig:Kp_histogram_b}) -- a \Kp{} value of 9o occurred only 29 times in this time interval.\\
 \begin{figure}[htb]
 	\begin{floatrow}
@@ -113,7 +113,7 @@ The fit parameters are $a = 0.281(43)$ and $b = 1.05(19)$ and lead to the relati
 % b 1.04923          +/- 0.19
 which is plotted in Fig.~\ref{fig:Kp_SSN_fit_d}. This means that for a SSN of $1$ the mean \Kp{} is about $1.1$ and for a SSN of 200 it is about $2.5$. The fit error band has a width of about half a \Kp~unit.
 
-\subsection{Seasonal variations of the \Kp{}~index}
+\subsection{Seasonal variations}
 On top of the yearly variations, seasonal variations exist in the magnetospheric disturbances as well. In the months May--August the \Kp{} peak frequency is higher than in the remaining months of the year, whereas in March/April and September/October the \Kp{} values \num{>3} are more abundant. This is apparent from looking at the monthly \Kp{} frequency distributions, plotted in Fig.~\ref{fig:Kp_histogram_monthly}.
 \begin{figure}[htb]
 	\begin{floatrow}
@@ -133,9 +133,9 @@ On top of the yearly variations, seasonal variations exist in the magnetospheric
 \end{figure}
 These \Kp{} changes arise from seasonal variations of the solar-wind parameters at Earth, which stem from Earth's yearly changes in orbital distance and heliographic latitude. Another seasonal effect stems from the Earth's rotation axis tilt, which changes the direction of the Earth's magnetic dipole axis to the Sun over the year (see top panel of Fig.~\ref{fig:Kp_seasonal_c}).
 
-Earth's distance to the Sun varies over the course of a year by \SI{+-1.67}{\percent} (see appendix \autoref{sec:earth_orbit_geometry}). The solar-wind parameters scale via power-law dependencies with solar distance, as is described in the following \autoref{chap:empirical_solar_wind_model_for_the_inner_heliosphere} and accordingly in \citet{Venzmer2017}. For example, if the solar-wind proton density scales with $r^{-2}$, this leads to yearly variations in density of up to \SI{3.4}{\percent}. These yearly solar-wind changes have a direct influence on the \Kp{}~index.
+Earth's distance to the Sun varies over the course of a year by \SI{+-1.67}{\percent} (see appendix \autoref{sec:sun_earth_orbit_geometry}). The solar-wind parameters scale via power-law dependencies with solar distance, as is described in the following \autoref{chap:empirical_solar_wind_model_for_the_inner_heliosphere} and accordingly in \citet{Venzmer2017}. For example, if the solar-wind proton density scales with $r^{-2}$, this leads to yearly variations in density of up to \SI{3.4}{\percent}. These yearly solar-wind changes have a direct influence on the \Kp{}~index.
 
-The Sun's rotation axis tilt angle to the ecliptic is \SI{+-7.25}{\degree} and that for Earth is \SI{+-23.44}{\degree} (cite 'NASA Earth fact sheet' or U.S. Nautical Almanac Office 2015), see also appendix \autoref{sec:earth_orbit_geometry}. The solar-wind magnetic field strength varies with heliographic latitude (cite?). Furthermore, the rate of magnetic reconnection between solar wind and the Earth's magnetosphere depends on both fields' orientation to each other (parallel/antiparallel) (see also Basics, Figure XX). The solar-wind influence on the \Kp{}~index depends on its coupling efficiency with the magnetosphere. Additionally, the tilt of the magnetic dipol axis to the rotation axis -- a few degrees for the Sun during cycle minima and about \SI{10}{\degree} for the Earth -- complicates this system even more.
+The Sun's rotation axis tilt angle to the ecliptic is \SI{+-7.25}{\degree} and that for Earth is \SI{+-23.44}{\degree} (cite 'NASA Earth fact sheet' or U.S. Nautical Almanac Office 2015), see also appendix \autoref{sec:sun_earth_orbit_geometry}. The solar-wind magnetic field strength varies with heliographic latitude (cite?). Furthermore, the rate of magnetic reconnection between solar wind and the Earth's magnetosphere depends on both fields' orientation to each other (parallel/antiparallel) (see also Basics, Figure XX). The solar-wind influence on the \Kp{}~index depends on its coupling efficiency with the magnetosphere. Additionally, the tilt of the magnetic dipol axis to the rotation axis -- a few degrees for the Sun during cycle minima and about \SI{10}{\degree} for the Earth -- complicates this system even more.
 %geomagnetic dipole tilt: Planetary fact sheet: 11.2 (Model GSFC-12/83)
 %variation range in the time period 1930--2016: 9.6--11.5° (http://wdc.kugi.kyoto-u.ac.jp/poles/polesexp.html)
 
@@ -303,7 +303,7 @@ CH analysis (Graz)\\
 L4 shift (Graz)\\
 WSA-ENLIL MHD simulation\\
 
-\subsection{SWS CME list}
+\subsection{Solar Wind Structures list}
 For the following analysis, I use the list of solar-wind structures (SWS) created and updated by \citet{Richardson2000} and \citet{Richardson2012}, who characterized the near-Earth solar-wind structures since 1963. All periods related to ICMEs in the OMNI solar-wind data set were identified and flagged.\\
 
 list identifying criteria...\\
@@ -319,6 +319,16 @@ This percentage is an average value. It varies heavily with the solar activity c
 
 % acknowledgments:\\
 % The hourly solar-wind structure list was kindly provided by Ian~Richardson of the NASA Goddard Space Flight Center and CRESST/University of Maryland via the CEDAR Database at the National Center for Atmospheric Research, which is supported by the National Science Foundation.\\
+
+
+Solar Wind Structures (SWS) list\\
+derived by Richardson.... from OMNI data (only?)
+permission received.\\
+%http://cedarweb.vsp.ucar.edu/wiki/index.php/Tools_and_Models:Solar_Wind_Structures
+characterization of near-Earth solar-wind structures since 1963\\
+SWS lists \citep{Richardson2000} and \citep{Richardson2012}
+
+
 
 \subsection{Data processing and correlation}
 Again, I calculate 3-hour extreme values using the minutely OMNI data to profit from higher correlation coefficients, as done before for the data processing of the \vBz{} analysis in Sect.~\ref{sec:data_set__data_processing_and_correlation}. The velocity has only positive values, thus its extreme values are 3-hour maximum values. The comparison between the 3-hour maximum and the 3-hour mean frequency distributions shows that their mean position shifts from a velocity of 405 to \SI{425}{\km\per\s}, see Fig.~\ref{fig:histogram_V_b}.
@@ -482,7 +492,7 @@ similar to \citet{Elliott2013}; different data time period, resolution and avera
 
 \section{Applications and outlook}
 
-"scientists develop an advanced prototype space weather warning system to ensure the operation of telecommunication and navigation systems on Earth to the threat of solar storms" AFFECTS\\
+'scientists develop an advanced prototype space weather warning system to ensure the operation of telecommunication and navigation systems on Earth to the threat of solar storms' AFFECTS\\
 
 Prototype/precursor relations are integrated into applications developed within the Advanced Forecast For Ensuring Communications Through Space (\mbox{AFFECTS}) project which ran from 2011 to 2013. The following services, accessible via the \mbox{AFFECTS} website\footnote{AFFECTS website (existent in 2017-11-19): \url{http://www.affects-fp7.eu/services/}}, contain results from this \Kp{} study (all links existent in 2017-11-19):
 \begin{itemize}
@@ -510,6 +520,51 @@ outlook:\\
 Separate structures such as CIRs and HCSs for their \Kp-impact separately...\\
 
 All provided web links in this work were existent in [date].\\
+
+
+
+\section{notes}
+
+% Alle Presis ausschlachten!\\
+% Alle Projektberichte ausschlachten!\\
+% Kp8--Liste irgendwo einweben...\\
+
+-> example events CIR/HSS and CME\\
+
+%the relation of these events was confirmed two decades ago by (who and \citet{Bothmer1993})\\
+
+
+\subsection{Solar wind structure analyses}
+How strong do different structure types influence the terrestrial magnetosphere?\\
+What kind of solar wind structures create the individual regions in this distribution?\\
+What is their individual contribution to the Kp ranges (e.g. high Kp: CMEs 70\% and CIRs 30\%)?\\
+
+ACE solar wind time series and event list\\
+sw-timeseries ACE OPTIMAP ``Zeitreihe''-events
+
+method: automatic list creation by event detection via parameter thresholds...\\
+
+sample CME analyses (MVA -> Kp)\\
+
+
+\subsection{Forecast}
+How can the impact field strength of CMEs be forecasted (V->B correlation for CMEs)?\\
+Internal solar wind correlations:\\
+B-V correlation\\
+ACE MAGSWE 64~s data -> yearly overlay plot\\
+
+applications:\\
+rssfeeds, rtsw plots\\
+CME Kp impact as part of DDC\\
+- \textit{Kp} nowcast with L1 solar wind measurements (L1 alerts, disseminated as RSS feeds; integrated in smartphone app and space weather display)\\
+- Forecast of the possible CME impact on the Earth's magnetosphere (\textit{Kp} index) from the predicted CME arrival velocity (integrated in UGOE CME forecast chain (aka DDC))\\
+
+\subsection{rt-data}
+Advanced Composition Explorer (ACE), launch date was 25 August 1997\\
+Wind, STEREO, SOHO, CELIAS\\
+rt data errors/gaps...\\
+Several services/alerts are based on the data streams from real-time measurements. (L1 alerts, etc.)\\
+DSCOVR as replacement was launched on 11~Februar 2015. It is NOAA's SWPC real-time solar-wind prime source since 27 July 2016.\footnote{\url{http://www.swpc.noaa.gov/products/real-time-solar-wind}}\\
 
 
 \section{Acknowledgments}

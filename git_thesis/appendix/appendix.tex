@@ -162,8 +162,8 @@ are listed in \autoref{tab:solar_surface_rotation_periods}.\\
 The meridional circulation is the proposed equatorial updrift and polar downdrift - a result of Reynolds stress and convective transport (cite?).\\
 
 
-\section{Earth orbit geometry}
-\label{sec:earth_orbit_geometry}
+\section{Sun-Earth orbit geometry}
+\label{sec:sun_earth_orbit_geometry}
 
 %all from https://en.wikipedia.org/wiki/Earth's_orbit
 %see also http://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html
@@ -190,7 +190,7 @@ for calculation of heliospheric distance see HORIZONS Web-Interface at \url{http
 perihelion/aphelion times...
 %http://aa.usno.navy.mil/data/docs/EarthSeasons.php
 
-\subsection{Solar distance}
+\subsection*{Solar distance}	%remove subsections?
 
 Sun-Earth distance over the course of the year.\\
 In the year 2017 Earth's perihelion was on 5~January with a distance of \SI{-1.67}{\percent} from \SI{1}{\au} (Horizons On-Line Ephemeris System\footnote{\url{http://ssd.jpl.nasa.gov/horizons.cgi}}, Solar System Dynamics Group, Jet~Propulsion Laboratory).\\
@@ -224,7 +224,7 @@ $X_\text{avg}(t) = a\,r_\text{E}(t)^b$\\
 % V2_avg = 4.132(22)e2~km/s\\
 % V2_med = 4.034(21)e2~km/s\\
 
-\subsection{Solar rotation axis tilt}
+\subsection*{Solar rotation axis tilt to the ecliptic}
 
 The inclination of the solar equator to the ecliptic (tilt/obliquity) is $i_\odot = 7.25$\textdegree{} \citep{USNO2015}.\\	%USNO2015 C3
 
@@ -278,7 +278,7 @@ solar tilt over the year, see \autoref{fig:Solar_tilt_seasons_plot}
 	}
 \end{figure}
 
-\subsection{Earth tilt}
+\subsection*{Earth rotation axis tilt to the ecliptic}
 
 
 \section{Coordinate systems}
@@ -334,7 +334,7 @@ figures for GSE and GSM
 %source: http://cdaweb.gsfc.nasa.gov/misc/NotesU.html#UY_COHO1HR_MERGED_MAG_PLASMA
 
 
-\subsection{Geocentric Solar Ecliptic}
+\subsection*{Geocentric Solar Ecliptic}
 \label{sec:geocentric_solar_ecliptic}
 
 The Geocentric Solar Ecliptic (GSE) coordinates are\\
@@ -352,7 +352,7 @@ see Jursa1985, p.~4-3\\
 ``the polar axis is the axis inclined 11.5° to the axis of rotation, intersecting the earth surface at the point 78.5°N, 291.0°E which defines the geomagnetic north pole. This was once at one time the axis of the best centered-dipole approximation to the field''\\
 
 
-\subsection{Geocentric Solar Magnetospheric}
+\subsection*{Geocentric Solar Magnetospheric}
 
 GSM - Geocentric Solar Magnetospheric\\
 X = Earth-Sun Line\\
@@ -363,13 +363,74 @@ GSM is defined with a time dependent dipole axis.\\
 the dipole axis orientation changes over time; at 1995 the northern pole was at $l = 288.59\degree$ and $b = 79.30\degree$; more recent year (2015)?... cite?\\
 % https://www.spenvis.oma.be/help/background/coortran/coortran.html#MAG
 
-\subsection{Heliographic Inertial}
+\subsection*{Heliographic Inertial}
 
 Heliographic Inertial (HGI) coordinates\\
 HGI coordinates are Sun-centered with the z-axis directed along the solar rotation axis and directed northward of the solar equator. The solar equator plane is inclined \SI{7.25}{\degree} from the ecliptic.\\
 
 HGI coordinates; latitude range \SI{-7.25}{\degree}~to~\SI{-7.25}{\degree}\\
 latitude variation (see Schwenn1990, p.~127)\\
+
+
+\section{Lognormal distribution}
+\label{sec:lognormal_distribution}
+
+This is a small summary about the lognormal probability distribution \citep[p.~780]{Bronstein2000}. The lognormal distribution is the distribution of a random variable $X$ if the logarithm of $X$ conforms to a normal distribution. Its shape is highly asymmetric, however in a semi-log plot the Gaussian bell curve is recognizable (see the second panel of \autoref{fig:lognormal_3panel_pdfcairo_plot}).
+\begin{figure}[htb]
+	\begin{floatrow}
+		\ffigbox{
+			\includegraphics[width=0.5\Xhsize]{figures_of_mine/gnuplots/lognormal_3panel_pdfcairo_plot.pdf}
+		}{
+			\caption{The lognormal probability density function ($\sigma = 1, \mu = 0$) plotted in a linear, semi-log and log-log way. remove borders...}
+			\label{fig:lognormal_3panel_pdfcairo_plot}
+		}
+		\ffigbox{
+			\includegraphics[width=\Xhsize]{figures_of_mine/gnuplots/lognormal_ms_pdfcairo_plot.pdf}
+		}{
+			\caption{Five lognormal distributions plotted with fixed $\sigma$ (top) and fixed $\mu$ (bottom). remove borders...}
+			\label{fig:lognormal_ms_pdfcairo_plot}
+		}
+	\end{floatrow}
+\end{figure}
+Its probability density function is
+\begin{align}
+	f(x) &= \frac{1}{\sigma \sqrt{2 \pi} x} \, \text{e}^{- \frac{(\ln x - \mu)^2}{2 \sigma^2}}
+\end{align}
+with the location ($\mu$) and the shape parameter ($\sigma$). Changes in $\mu$ affect both the horizontal and vertical scaling of the function, whereas $\sigma$ has an influence on its shape (see \autoref{fig:lognormal_ms_pdfcairo_plot}).\\
+
+Because it is a probability distribution, its area is normalized
+\begin{align}
+	\int_0^\infty f(x) \text{d} x = 1\,.
+\end{align}
+
+For a lognormally distributed random variable the geometric moments mean, standard deviation and variance are:
+\begin{align*}
+	&\mu_\text{g} = \text{e}^\mu ,\\
+	&\sigma_\text{g} = \text{e}^\sigma ,\\
+	&var_\text{g} = \text{e}^{\sigma^2}~~(!) .
+\end{align*}
+
+Its arithmetic moments are:
+\begin{align*}
+	&\mu_\text{a} = \text{e}^{\mu + \frac{\sigma^2}{2}} ,\\
+	&\sigma_\text{a} = \text{e}^{\mu + \frac{\sigma^2}{2}} \, \left(\text{e}^{\sigma^2} - 1\right) ,\\
+	&var_\text{a} = \sigma_\text{a}^2 .
+\end{align*}
+
+Other useful characteristics are the median and the mode
+\begin{align*}
+	&x_\text{median} = \text{e}^{\mu},\\
+	&x_\text{mode} = \text{e}^{\mu - \sigma^2}\,.
+\end{align*}
+Note that for the lognormal distribution its median is equal to its geometric mean.\\
+
+Applications of lognormal distributions...\\
+%Limpert2001: Lognormal Distributions across the Sciences: Keys and Clues
+%http://bioscience.oxfordjournals.org/content/51/5/341.full
+
+Most natural quantities which can only be positive are lognormally distributed. e.g. animal body sizes?, animal life expectancies, financial stock prices...; income distributions.\\
+
+%life expectancy analyses of economic, technical and biological processes. Bronstein2000
 
 
 
@@ -379,10 +440,10 @@ latitude variation (see Schwenn1990, p.~127)\\
 Astronomical unit: 1~au = 149\,597\,870\,700~m \citep{USNO2015}\\ %Astronomical constants
 Solar mass: $M_\odot = 1.9884(2)\times10^{30}$~kg \citep{USNO2015}\\ %see also Mamajek2015
 Nominal solar radius (photosphere): $R_\odot = \SI{695700}{\km}$ \citep{Mamajek2015}\\ %Astronomical constants
-Sun escape velocity: $v_\text{esc} = 617.6$~km/s (Sun Fact Sheet...)\\
 Solar rotation axis tilt: $i_\odot = 7.25$\textdegree{} \citep{USNO2015}\\ %C3; Obliquity to ecliptic
 Solar surface rotation period at equator, sidereal: 25.05~d (Sun Fact Sheet...)\\
 Nominal solar effective temperature (photosphere): $T_{\text{eff}\odot} = \SI{5772}{\kelvin}$ \citep{Mamajek2015}\\
+Sun escape velocity: $v_\text{esc} = 617.6$~km/s (Sun Fact Sheet...)\\
 
 %Astronomical constants
 %http://asa.usno.navy.mil/static/files/2016/Astronomical_Constants_2016.pdf
@@ -452,152 +513,3 @@ Nominal solar effective temperature (photosphere): $T_{\text{eff}\odot} = \SI{57
 % GCS -- Graduated Cylindrical Shell\\
 % CAT -- CME Analysis Tool\\
 
-
-\section{Lognormal distribution}
-\label{sec:lognormal_distribution}
-
-This is a small summary about the lognormal probability distribution \citep[p.~780]{Bronstein2000}. The lognormal distribution is the distribution of a random variable $X$ if the logarithm of $X$ conforms to a normal distribution. Its shape is highly asymmetric, however in a semi-log plot the Gaussian bell curve is recognizable (see the second panel of \autoref{fig:lognormal_3panel_pdfcairo_plot}).
-\begin{figure}[htb]
-	\begin{floatrow}
-		\ffigbox{
-			\includegraphics[width=0.5\Xhsize]{figures_of_mine/gnuplots/lognormal_3panel_pdfcairo_plot.pdf}
-		}{
-			\caption{The lognormal probability density function ($\sigma = 1, \mu = 0$) plotted in a linear, semi-log and log-log way. remove borders...}
-			\label{fig:lognormal_3panel_pdfcairo_plot}
-		}
-		\ffigbox{
-			\includegraphics[width=\Xhsize]{figures_of_mine/gnuplots/lognormal_ms_pdfcairo_plot.pdf}
-		}{
-			\caption{Five lognormal distributions plotted with fixed $\sigma$ (top) and fixed $\mu$ (bottom). remove borders...}
-			\label{fig:lognormal_ms_pdfcairo_plot}
-		}
-	\end{floatrow}
-\end{figure}
-Its probability density function is
-\begin{align}
-	f(x) &= \frac{1}{\sigma \sqrt{2 \pi} x} \, \text{e}^{- \frac{(\ln x - \mu)^2}{2 \sigma^2}}
-\end{align}
-with the location ($\mu$) and the shape parameter ($\sigma$). Changes in $\mu$ affect both the horizontal and vertical scaling of the function, whereas $\sigma$ has an influence on its shape (see \autoref{fig:lognormal_ms_pdfcairo_plot}).\\
-
-Because it is a probability distribution, its area is normalized
-\begin{align}
-	\int_0^\infty f(x) \text{d} x = 1\,.
-\end{align}
-
-For a lognormally distributed random variable the geometric moments mean, standard deviation and variance are:
-\begin{align*}
-	&\mu_\text{g} = \text{e}^\mu ,\\
-	&\sigma_\text{g} = \text{e}^\sigma ,\\
-	&var_\text{g} = \text{e}^{\sigma^2}~~(!) .
-\end{align*}
-
-Its arithmetic moments are:
-\begin{align*}
-	&\mu_\text{a} = \text{e}^{\mu + \frac{\sigma^2}{2}} ,\\
-	&\sigma_\text{a} = \text{e}^{\mu + \frac{\sigma^2}{2}} \, \left(\text{e}^{\sigma^2} - 1\right) ,\\
-	&var_\text{a} = \sigma_\text{a}^2 .
-\end{align*}
-
-Other useful characteristics are the median and the mode
-\begin{align*}
-	&x_\text{median} = \text{e}^{\mu},\\
-	&x_\text{mode} = \text{e}^{\mu - \sigma^2}\,.
-\end{align*}
-Note that for the lognormal distribution its median is equal to its geometric mean.\\
-
-Applications of lognormal distributions...\\
-%Limpert2001: Lognormal Distributions across the Sciences: Keys and Clues
-%http://bioscience.oxfordjournals.org/content/51/5/341.full
-
-Most natural quantities which can only be positive are lognormally distributed. e.g. animal body sizes?, animal life expectancies, financial stock prices...; income distributions.\\
-
-%life expectancy analyses of economic, technical and biological processes. Bronstein2000
-
-
-\section{Goodness of fit}
-\label{sec:goodness_of_fit}
-
-%figure with fit residuals here
-$SSR$ -- sum of squared residuals\\
-\begin{align}
-	SSR = \sum_i (y_i - f_i)^2
-\end{align}
-data values $y_i$, fit function values $f_i$\\
-$SSR_\text{red}$ -- reduced SSR, divided by number of degrees of freedom $\nu$\\
-\begin{align}
-	SSR_\text{red} = \frac{SSR}{\nu}
-\end{align}
-$TSS$ -- total sum of squares (in relation to the data mean)\\
-\begin{align}
-	TSS = \sum_i (y_i - \bar{y})^2
-\end{align}
-with data mean $\bar{y}$\\
-%http://math.stackexchange.com/questions/1225103/whats-in-a-name-sum-of-squares
-%https://en.wikipedia.org/wiki/Goodness_of_fit
-
-$\chi^2$ -- chi-square\\
-$\chi^2_\text{red}$ -- reduced chi-square, divided by number of degrees of freedom $\nu$\\
-
-$R^2$ -- coefficient of determination\\
-$0 \leq R^2 \leq 1$, ``values can be less than zero''!. if $R^2 = 1$ -> ideal fit; if $R^2 = 0$ -> bad fit
-\begin{align}
-	R^2 &= 1 - \frac{SSR}{TSS}
-\end{align}
-``In case of a single regressor, fitted by least squares, R2 is the square of the Pearson product-moment correlation coefficient relating the regressor and the response variable.'' cite from wikipedia \\%https://en.wikipedia.org/wiki/Coefficient_of_determination
-%https://de.wikipedia.org/wiki/Bestimmtheitsma%C3%9F
-
-Kolmogorov-Smirnov K-S-Test
-%http://www.physics.csbsju.edu/stats/KS-test.html
-%http://www.wessa.net/rwasp_Reddy-Moores%20K-S%20Test.wasp
-
-
-\section{other}
-
-%minimum variance analysis
-minimum variance analysis (MVA)\\
-determining magnetic cloud configuration \citep{Bothmer1998}\\
-
-hodogramm?
-%https://en.wikipedia.org/wiki/Hodograph
-
-
-
-least-squares fit approximates mean
-linear regression
-
-robust statistics
-
-Non-parametric inferential statistical methods are mathematical procedures for statistical hypothesis testing which make no assumptions about the probability distributions of the variables being assessed. The most frequently used tests include
-- median
-- percentiles (quartiles)
-- Spearman's rank correlation coefficient
-
-histogram
-
-generalized mean
-\url{http://en.wikipedia.org/wiki/Generalized_mean}
-
-
-normal distribution
-
-% inverse erf
-% http://mathworld.wolfram.com/InverseErf.html
-% 
-% \begin{align}
-% 	erfc^{-1}(x) = erf^{-1}(1 - x)
-% \end{align}
-% 
-% quantile function: inverse cumulative distribution function (CDF) of normal distribution
-% \begin{align}
-% 	\mu - \sqrt{2}*\sigma*erfc^{-1}(2*x)
-% \end{align}
-% http://www.wolframalpha.com/input/?i=Quantile+function+normal+distribution
-
-
-auto correlation
-
-cross correlation\\
-Pearson linear correlation\\
-Spearman rank correlation
-
-Correlation in Linear Regression: \url{http://www.stat.yale.edu/Courses/1997-98/101/correl.htm}\\

@@ -27,6 +27,8 @@ Introductory text -> motivation\\
 
 thesis goal: finding more precise relationships between parameters/quantities for being able to make better forecasts\\
 
+catch from chapter abstracts...\\
+
 %Synopsis	% Outline (chapters and their content)
 This thesis merges the solar-wind analyses of its impact on the magnetosphere, its variation with solar activity, and its evolution to Earth. This work is structured as follows. In \autoref{chap:basics} the fundamentals about the Sun, its activity, solar wind, and space weather are laid. The instruments and data are described in \autoref{chap:data}. The influences on the \Kp{}~index from solar activity, solar wind, its streams, and CMEs are analyzed in autoref{chap:chapter2}. In \autoref{chap:empirical_solar_wind_model_for_the_inner_heliosphere}, which includes the published paper on the same topic (\autoref{chap:solar_wind_predictions_for_the_parker_solar_probe_orbit}), an empirical solar-wind model for the inner heliosphere is developed and used to estimate the near-Sun solar-wind environment for the planned PSP mission. \autoref{chap:summary} summarizes the results and gives an outlook for further studies. Useful equations, constants, and abbreviations are located in the \autoref{chap:appendix}.
 
@@ -546,8 +548,13 @@ CME-plasma properties\\
 + flares and SEPs often accompany CMEs\\
 
 magnetic clouds (MCs)\\
-See BS magnetic cloud model in analyses methods chapter
-MVA...\\
+See BS magnetic cloud model in analyses methods chapter\\
+
+minimum variance analysis (MVA)\\
+determining magnetic cloud configuration \citep{Bothmer1998}\\
+hodogramm?\\
+%https://en.wikipedia.org/wiki/Hodograph
+
 
 CME with MC, solar wind in-situ measurements and impact on the magnetosphere (Kp), see \autoref{fig:ACE_64s_v7_thesis_CME_2013-6-26_6_plot}\\
 \begin{figure}[htb]
@@ -760,6 +767,8 @@ $Dst$ (read book Jursa1985 p. 4-31)]\\
 
 
 
+
+
 %%%%--  next chapter  --%%%%
 
 \chapter{Instrumentation and data sources}
@@ -870,17 +879,6 @@ The temperature scales with the distribution's width.\\
 ACE/SWEPAM\\	%https://sci-hub.ac/10.1023/A:1005040232597
 
 
-\section{Sunspot number}
-\label{sec:sunspot_number}
-
-SSN history in section basics\\
-add SSN figure of history incl. Maunder minimum?\\
-SIDC/SILSO... see paper...\\
-SSN Version~2.0\\
-WDC-SILSO -- World Data Center-Sunspot Index and Long-term Solar Observations\\
-%https://de.wikipedia.org/wiki/Sonnenfleck#Geschichte
-
-
 \section{\Kp{}~index}
 \label{sec:kp_index}
 Julius~Bartels introduced the \textit{K}~index in 1938 and designed it to measure the intensity of geomagnetic disturbances \citep{Bartels1939}. Its name originates from 'Kennziffer' -- the german word for characteristic digit. The \textit{K}~index is a measure for the maximal variation of the surface magnetic field, observed in a magnetogram within 3"~hour intervals. Its scale in the range 0--9 is a quasi-logarithmic representation of the actual magnetic field strength's variations.
@@ -941,6 +939,17 @@ Because of the effects on sensitive technical systems, methods for \Kp{} forecas
 % The results presented in this thesis rely on the \Kp{}~index, calculated and made available by the German Research Centre for Geosciences in Potsdam from data collected at magnetic observatories. We thank the involved national institutes, the INTERMAGNET network and ISGI (isgi.unistra.fr).\\
 
 
+\section{Sunspot number}
+\label{sec:sunspot_number}
+
+SSN history in section basics\\
+add SSN figure of history incl. Maunder minimum?\\
+SIDC/SILSO... see paper...\\
+SSN Version~2.0\\
+WDC-SILSO -- World Data Center-Sunspot Index and Long-term Solar Observations\\
+%https://de.wikipedia.org/wiki/Sonnenfleck#Geschichte
+
+
 \section{OMNI data set}
 \label{sec:omni_data_set}
 
@@ -968,17 +977,6 @@ Various spacecraft contribute to the interplanetary magnetic field (IMF) and sol
 	\caption{IMF and solar-wind plasma data source spacecraft for the high and the low resolution OMNI (HRO, LRO) data sets until end of 2016. The SIDC 13-month smoothed monthly SSN is plotted in the background. add cycle number...}
 	\label{fig:timeline_OMNI_SC_IDs}
 \end{figure}
-
-\subsection{Solar Wind Structures}
-Solar Wind Structures (SWS) list\\
-derived by Richardson.... from OMNI data (only?)
-see chapter2...\\
-
-permission received.\\
-
-%http://cedarweb.vsp.ucar.edu/wiki/index.php/Tools_and_Models:Solar_Wind_Structures
-characterization of near-Earth solar-wind structures since 1963\\
-SWS lists \citep{Richardson2000} and \citep{Richardson2012}
 
 
 \section{Helios probes}
@@ -1058,15 +1056,3 @@ Helios 2: 1976-01-01 - 1980-03-04\\
 Mag data availability: 54.4~\%\\
 Plasma \& orbit data availability: 91.8~\%\\
 
-
-\section{Real-time solar-wind data}
-
-Advanced Composition Explorer (ACE)\\
-s/c figure, launch date was 25 August 1997\\
-
-Wind, STEREO, SOHO, CELIAS\\
-
-data errors/gaps...\\
-Several services/alerts are based on the data streams from real-time measurements. (L1 alerts, etc.)\\
-
-DSCOVR as replacement was launched on 11~Februar 2015. It is NOAA's SWPC real-time solar-wind prime source since 27 July 2016.\footnote{\url{http://www.swpc.noaa.gov/products/real-time-solar-wind}}\\

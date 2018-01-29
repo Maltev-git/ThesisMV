@@ -29,8 +29,10 @@ thesis goal: finding more precise relationships between parameters/quantities fo
 
 catch from chapter abstracts...\\
 
+This thesis merges the solar-wind analyses of its impact on the magnetosphere, its variation with solar activity, and its evolution to Earth.\\
+
 %Synopsis	% Outline (chapters and their content)
-This thesis merges the solar-wind analyses of its impact on the magnetosphere, its variation with solar activity, and its evolution to Earth. This work is structured as follows. In \autoref{chap:basics} the fundamentals about the Sun, its activity, solar wind, and space weather are laid. The instruments and data are described in \autoref{chap:data}. The influences on the \Kp{}~index from solar activity, solar wind, its streams, and CMEs are analyzed in autoref{chap:chapter2}. In \autoref{chap:empirical_solar_wind_model_for_the_inner_heliosphere}, which includes the published paper on the same topic (\autoref{chap:solar_wind_predictions_for_the_parker_solar_probe_orbit}), an empirical solar-wind model for the inner heliosphere is developed and used to estimate the near-Sun solar-wind environment for the planned PSP mission. \autoref{chap:summary} summarizes the results and gives an outlook for further studies. Useful equations, constants, and abbreviations are located in the \autoref{chap:appendix}.
+This work is structured as follows. In \autoref{chap:basics} the fundamentals about the Sun, its activity, solar wind, and space weather are laid. The instruments and data sources are described in \autoref{chap:data}. The influences on the \Kp{}~index from solar activity, solar wind, CMEs, and solar-wind streams are analyzed in \autoref{chap:chapter2}. In \autoref{chap:empirical_solar_wind_model_for_the_inner_heliosphere}, which is followed by the published paper on the same topic (\autoref{chap:solar_wind_predictions_for_the_parker_solar_probe_orbit}), an empirical solar-wind model for the inner heliosphere is developed and used to estimate the near-Sun solar-wind environment for the planned PSP mission. \autoref{chap:summary} summarizes the results and gives an outlook for further studies. Useful equations and information are located in the \autoref{chap:appendix}.
 
 
 \chapter{Background knowledge}
@@ -774,43 +776,32 @@ $Dst$ (read book Jursa1985 p. 4-31)]\\
 \chapter{Instrumentation and data sources}
 \label{chap:data}
 %COFI -- chapter outline and flow integration
+For analyzing the solar wind and related areas on the Sun, there exist remote instruments (solar imager and coronagraphs) and in-situ instruments (magnetometer and plasma detector). In this chapter the basic principles of the latter are described, because the analyses performed in this thesis are based entirely on in-situ measurements -- except the sunspot data.
 
-%\section{Instruments}
-%\label{sec:instruments}
-
-For analyzing the solar wind and related effects on the Sun there are remote instruments (solar imager and coronagraphs) and in-situ instruments (magnetometer and plasma detector).\\
-Here the basic principles of the latter are described, because the analyses performed in this thesis are based on in-situ solar-wind measurements.\\
-
-
-%\section{Data sources}
-
-Different kind of data are used for the investigations in this thesis -- collected from observatories at various locations.\\
-
-Spacecraft / data sets\\
-
-Positions:\\
-Earth:\\
-	imager, magnetosphere\\
-L1 - first Lagrangian point:\\
-	ACE (siehe auch space weather spacecraft Liste)\\
-	Wind etc. (OMNI)\\
-	DSCOVR\\
-1~au orbit\\
-	STEREO~A and B\\
-inner heliosphere:\\
-	Helios~1 and 2\\
-	PSP\\
-outer heliosphere:\\
-	Voyager~1 and 2\\
-	Ulysses\\
-
-A time coverage overview of the data sets used in the analyses of this thesis (SSN, \Kp~index, LRO, HRO, Helios~1 and 2) is plotted in \autoref{fig:timeline_SSN_with_data_and_sc}.\\
+Different kind of data, collected from observatories at various locations, are used for the investigations performed in this thesis. In the following sections, I describe the data sets of the magnetospheric disturbance index \Kp{} and of the solar avtivity indicator sunspot number (SSN). Further, the solar-wind in-situ data sets are described, that is, the near-Earth OMNI data collections consisting of minutely and hourly data -- low resolution OMNI (LRO) and high resolution OMNI (HRO), and the data obtained from the Helios~1 and Helios~2 spacecraft in the 1970s. A time coverage overview of these data sets is plotted in \autoref{fig:timeline_SSN_with_data_and_sc}.\\
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{figures_of_mine/gnuplots/timeline_SSN_with_data_and_sc.pdf}
-	\caption{Time coverage of the \Kp~index, low and high resolution OMNI (LRO and HRO), Helios~1 and Helios~2 data sets until end of 2016. The SIDC 13-month smoothed monthly SSN is plotted in the background. add cycle number, describe colors or remove them...}
+	\caption{Time coverage of the data sets used in this thesis with the solar activity from 1932 until end of 2016. The individual data sets are the \Kp~index, the low and high resolution OMNI (LRO and HRO) collections, and the Helios~1 and Helios~2 data sets. The SIDC 13-month smoothed monthly SSN is plotted in the background for orientation. add cycle number, remove key, describe colors or remove them...}
 	\label{fig:timeline_SSN_with_data_and_sc}
 \end{figure}
+% 
+% Spacecraft / data sets\\
+% Positions:\\
+% Earth:\\
+% 	imager, magnetosphere\\
+% L1 - first Lagrangian point:\\
+% 	ACE (siehe auch space weather spacecraft Liste)\\
+% 	Wind etc. (OMNI)\\
+% 	DSCOVR\\
+% 1~au orbit\\
+% 	STEREO~A and B\\
+% inner heliosphere:\\
+% 	Helios~1 and 2\\
+% 	PSP\\
+% outer heliosphere:\\
+% 	Voyager~1 and 2\\
+% 	Ulysses\\
 
 
 \section{Magnetometer}
@@ -818,7 +809,7 @@ A time coverage overview of the data sets used in the analyses of this thesis (S
 
 Spacecraft nowadays carry two different magnetometer types, one for measuring the magnetic field direction and its strength and the other for observing the magnetic flux and detecting waves.\\
 
-A flux gate magnetometer consists of two coils around a core -- one coil with alternating current, wich is compared with the induced current signal from the other. Without external magnetic field both patterns match. The core is easier magnetized in direction of an existing external magnetic field, in which case the patterns differ. It measures...\\
+A flux-gate magnetometer consists of two coils around a core -- one coil with alternating current, wich is compared with the induced current signal from the other. Without external magnetic field both patterns match. The core is easier magnetized in direction of an existing external magnetic field, in which case the patterns differ. It measures...\\
 In a search coil magnetometer one coil is placed around a core; measures plasma waves - where?\\
 
 Because these magnetometer types are directional, they often are placed in two sets of triaxial configurations, attached on booms to minimize the influence of the spacecraft's own magnetic field.\\
@@ -826,10 +817,11 @@ L-> which is generated by surface charges?/electrons?/ionization?/the instrument
 %https://en.wikipedia.org/wiki/Spacecraft_magnetometer
 
 figures and references...!\\
-mention ground based magnetometers...!\\
+
+Ground based magnetometers measure the local magnetic field of the Earth. They already exist since...\\
 
 examples:\\
-ACE/MAG -- fluxgate magnetometer\\
+ACE/MAG -- flux-gate magnetometer\\
 
 
 \section{Plasma detector}
@@ -839,23 +831,22 @@ several spectrometers with different energy ranges\\
 
 isotope spectrometer - isotopic abundances of SEPs\\
 ionic charge analyzer - charge state of SEPs\\
-sw ion mass spectrometer - \\
-sw ion composition spectrometer - \\
+solar wind ion mass spectrometer - \\
+solar wind ion composition spectrometer - \\
 radio burst tracker\\
 
 
-A plasma detector measures the ion energy frequency distribution, which consists basically only of protons and alphas in solar wind (see \autoref{fig:ion_energy_spectrum_plot}). see also \autoref{sec:solar_wind}
-\\
+A plasma detector measures the ion energy frequency distribution, which consists basically only of protons and alphas in solar wind, see \autoref{sec:solar_wind}. I prepared a synthetic ion energy spectrum for illustration in \autoref{fig:ion_energy_spectrum_plot}).\\
 \begin{figure}[htb]
-	%\centering
 	\fcapside[\FBwidth]{
-		\includegraphics[width=0.5\textwidth]{figures_of_mine/gnuplots/ion_energy_spectrum_plot.pdf}
+		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/ion_energy_spectrum_plot.pdf}
 	}{
-		\caption{Example of an ion energy spectrum with synthetic data. Here proton and helium (alpha) peaks are distinguishable...}
+		\caption{Example of an ion energy spectrum with synthetic data. Here proton and helium (alpha) peaks are distinguishable.}
 		\label{fig:ion_energy_spectrum_plot}
 	}
 \end{figure}
 %figure adapted from source: http://www.goembel.biz/sun.html
+
 
 From the energy spectrum the velocity, density and temperature can be derived.\\
 more details...!\\
@@ -941,13 +932,9 @@ Because of the effects on sensitive technical systems, methods for \Kp{} forecas
 
 \section{Sunspot number}
 \label{sec:sunspot_number}
+The number of sunspots occuring on the solar surface is commonly used as a long-term solar activity indicator, for more information on solar activity and sunspots see \autoref{sec:solar_activity_cycle}. The international sunspot number (SSN) is maintained by the World Data Center -- Sunspot Index and Long-term Solar Observations (WDC-SILSO) at the Solar Influences Data Center (SIDC), Royal Observatory of Belgium (ROB). The SSN version~2.0, a recalibrated version introduced in July 2015, is used in this work. The SIDC provides an online catalogue\footnote{http://www.sidc.be/silso/}, where I obtained the SSN data.
 
-SSN history in section basics\\
-add SSN figure of history incl. Maunder minimum?\\
-SIDC/SILSO... see paper...\\
-SSN Version~2.0\\
-WDC-SILSO -- World Data Center-Sunspot Index and Long-term Solar Observations\\
-%https://de.wikipedia.org/wiki/Sonnenfleck#Geschichte
+Short-term predictions of the SSN are provided by several institutions. The SIDC itself provides 12-month SSN forecasts derived via different methods. The Space Weather Prediction Center (SWPC) at the National Oceanic and Atmospheric Administration (NOAA) supports the SSN prediction of the Solar Cycle~24 Prediction Panel\footnote{http://www.swpc.noaa.gov/products/solar-cycle-progression}.
 
 
 \section{OMNI data set}

@@ -1,0 +1,87 @@
+Return-path: <Geoffrey.Brown@jhuapl.edu>
+Envelope-to: mvenzmer@astro.physik.uni-goettingen.de
+Delivery-date: Mon, 29 Jan 2018 16:50:30 +0100
+Received: from mailer.gwdg.de ([134.76.10.26])
+	by ms0.astro.physik.uni-goettingen.de with esmtps (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256)
+	(Exim 4.89)
+	(envelope-from <Geoffrey.Brown@jhuapl.edu>)
+	id 1egBhW-0007uO-PS
+	for mvenzmer@astro.physik.uni-goettingen.de; Mon, 29 Jan 2018 16:50:30 +0100
+Received: from mfilter-123-1-3.mx.srv.dfn.de ([194.95.238.60])
+	by mailer.gwdg.de with esmtps (TLSv1.2:DHE-RSA-AES256-GCM-SHA384:256)
+	(Exim 4.80)
+	(envelope-from <Geoffrey.Brown@jhuapl.edu>)
+	id 1egBhW-0003Ag-M4
+	for mvenzmer@astro.physik.uni-goettingen.de; Mon, 29 Jan 2018 16:50:30 +0100
+X-Virus-Scanned: Debian amavisd-new at mgw3-erl.srv.dfn.de
+X-Spam-Flag: NO
+X-Spam-Score: -1.522
+X-Spam-Level:
+X-Spam-Status: No, score=-1.522 tagged_above=-200 required=6.2
+	tests=[BAYES_50=0.5, BOGO_HAM=-2, RCVD_IN_DNSWL_MED=-0.01,
+	SPF_HELO_PASS=-0.001, SPF_PASS=-0.001, T_RP_MATCHES_RCVD=-0.01]
+	autolearn=disabled
+Received: from aplegw01.jhuapl.edu (aplegw01.jhuapl.edu [128.244.251.168])
+	by mfilter-123-1-3.mx.srv.dfn.de (Postfix) with ESMTPS
+	for <mvenzmer@astro.physik.uni-goettingen.de>; Mon, 29 Jan 2018 16:50:28 +0100 (CET)
+Received: from pps.filterd (aplegw01.jhuapl.edu [127.0.0.1])
+	by aplegw01.jhuapl.edu (8.16.0.22/8.16.0.22) with SMTP id w0TFoLGj059470
+	for <mvenzmer@astro.physik.uni-goettingen.de>; Mon, 29 Jan 2018 10:50:21 -0500
+Received: from aplex07.dom1.jhuapl.edu (aplex07.dom1.jhuapl.edu [128.244.198.149])
+	by aplegw01.jhuapl.edu with ESMTP id 2frkbs61nf-1
+	(version=TLSv1.2 cipher=ECDHE-RSA-AES256-SHA384 bits=256 verify=NOT)
+	for <mvenzmer@astro.physik.uni-goettingen.de>; Mon, 29 Jan 2018 10:50:21 -0500
+X-CrossPremisesHeadersFilteredBySendConnector: APLEX07.dom1.jhuapl.edu
+Received: from APLEX09.dom1.jhuapl.edu (128.244.198.155) by
+ APLEX07.dom1.jhuapl.edu (128.244.198.149) with Microsoft SMTP Server (TLS) id
+ 15.0.1178.4; Mon, 29 Jan 2018 10:50:20 -0500
+Received: from APLEX09.dom1.jhuapl.edu ([fe80::c564:70e8:9bde:5a26]) by
+ APLEX09.dom1.jhuapl.edu ([fe80::c564:70e8:9bde:5a26%22]) with mapi id
+ 15.00.1178.000; Mon, 29 Jan 2018 10:50:20 -0500
+From: "Brown, Geoffrey F." <Geoffrey.Brown@jhuapl.edu>
+To: Malte Venzmer <mvenzmer@astro.physik.uni-goettingen.de>
+Subject: Re: Permission to use figures
+Thread-Topic: Permission to use figures
+Thread-Index: AQHTlqHhEI+ybaYGl0SYQV+xfTaNOqOLBHcA
+Date: Mon, 29 Jan 2018 15:50:20 +0000
+Message-ID: <AA2927AB-424E-43D9-A22A-453C232EFAA2@jhuapl.edu>
+References: <1603e4e5-c707-f752-d28d-2f95760d48d8@astro.physik.uni-goettingen.de>
+In-Reply-To: <1603e4e5-c707-f752-d28d-2f95760d48d8@astro.physik.uni-goettingen.de>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+user-agent: Microsoft-MacOutlook/f.29.0.171205
+x-ms-exchange-messagesentrepresentingtype: 1
+x-ms-exchange-transport-fromentityheader: Hosted
+x-originating-ip: [128.244.198.168]
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <84E6CF2143FCF749A8C6D61DE4B6F9C8@aplmsg.jhuapl.edu>
+Content-Transfer-Encoding: base64
+MIME-Version: 1.0
+X-OrganizationHeadersPreserved: APLEX07.dom1.jhuapl.edu
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10432:,, definitions=2018-01-29_08:,,
+ signatures=0
+
+SGVsbG8gYW5kIHRoYW5rcyBmb3Igd3JpdGluZyDigJMgeWVzLCBhbGwgdGhlIGltYWdlcyBhcmUg
+TkFTQS9Kb2hucyBIb3BraW5zIEFQTCBhbmQgY3JlYXRlZCBmb3IgdGhlIHB1YmxpYyBhbmQgYXJl
+IGZyZWUgZm9yIHVzZSwgd2l0aCBjcmVkaXQgZ2l2ZW4g4oCTIHdl4oCZbGwgY29ycmVjdCB0aGUg
+Y3JlZGl0cywgZ2xhZCB0byBoYXZlIHRoYXQgaW5mby4NCg0KQmVzdA0KR2VvZmYNCg0KDQoNCk9u
+IDEvMjYvMTgsIDc6MzMgQU0sICJNYWx0ZSBWZW56bWVyIiA8bXZlbnptZXJAYXN0cm8ucGh5c2lr
+LnVuaS1nb2V0dGluZ2VuLmRlPiB3cm90ZToNCg0KICAgIERlYXIgTXIgQnJvd24sDQogICAgDQog
+ICAgSSBzZWVrIHBlcm1pc3Npb24gdG8gdXNlIHRoZSBmb2xsb3dpbmcgdHdvIGZpZ3VyZXMgZnJv
+bSB0aGUgQVBMIHdlYnNpdGUNCiAgICBpbiBteSBQaEQgdGhlc2lzOg0KICAgIA0KICAgIGh0dHA6
+Ly9wYXJrZXJzb2xhcnByb2JlLmpodWFwbC5lZHUvTmV3cy1DZW50ZXIvYWRtaW4vUHJlc3MtUmVs
+ZWFzZXMvaW1hZ2VzL2FydGljbGVzL2FhLXJvbGwtc2MtaW50by1hY291c3RpY3MtY2VsbC0wMTk5
+LmpwZw0KICAgIGZvdW5kIGluDQogICAgaHR0cDovL3BhcmtlcnNvbGFycHJvYmUuamh1YXBsLmVk
+dS9OZXdzLUNlbnRlci9TaG93LUFydGljbGUucGhwP2FydGljbGVJRD02Mg0KICAgIENyZWRpdDog
+TkFTQS9Kb2hucyBIb3BraW5zIEFQTC9FZCBXaGl0bWFuDQogICAgDQogICAgaHR0cDovL3Bhcmtl
+cnNvbGFycHJvYmUuamh1YXBsLmVkdS9NdWx0aW1lZGlhL0FwcHJvdmVkTWVkaWEvSW1hZ2VzL1Jl
+bmRlcmluZ3Mvb3JpZ2luYWxzL1NQUF9PYnNlcnZpbmdTdW4yLmpwZw0KICAgIGZvdW5kIGluDQog
+ICAgaHR0cDovL3BhcmtlcnNvbGFycHJvYmUuamh1YXBsLmVkdS9NdWx0aW1lZGlhL0ltYWdlcy5w
+aHANCiAgICBDcmVkaXQ6IEpvaG5zIEhvcGtpbnMgVW5pdmVyc2l0eSBBcHBsaWVkIFBoeXNpY3Mg
+TGFib3JhdG9yeQ0KICAgIA0KICAgIEkgZ3Vlc3MgdGhlIGZpcnN0IG9uZSBpcyBmcmVlbHkgYXZh
+aWxhYmxlIHRocm91Z2ggTkFTQSdzIEZPSUEsIGJ1dCBJIGFtDQogICAgbm90IHN1cmUgYWJvdXQg
+dGhlIHNlY29uZCBpbGx1c3RyYXRpb24gd2l0aCBjcmVkaXQgZXhjbHVzaXZlbHkgdG8gQVBMLg0K
+ICAgIA0KICAgIFRoYW5rIHlvdSBhbmQgYmVzdCByZWdhcmRzLA0KICAgIE1hbHRlIFZlbnptZXIN
+CiAgICANCg0K

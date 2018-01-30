@@ -164,10 +164,10 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=446
+line=293
 mode=LaTeX
 open=true
-order=7
+order=5
 
 [item:appendix/curriculum_vitae.tex]
 archive=true
@@ -221,13 +221,13 @@ order=-1
 
 [item:chapters/analyses_helios.tex]
 archive=true
-column=21
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=4
+line=50
 mode=LaTeX
 open=true
-order=6
+order=4
 
 [item:chapters/chapter2.tex]
 archive=true
@@ -237,17 +237,17 @@ highlight=LaTeX
 line=137
 mode=LaTeX
 open=true
-order=3
+order=1
 
 [item:chapters/cover.tex]
 archive=true
-column=48
+column=35
 encoding=UTF-8
 highlight=LaTeX
-line=270
+line=271
 mode=LaTeX
 open=true
-order=1
+order=0
 
 [item:chapters/discussion_summary.tex]
 archive=true
@@ -256,18 +256,18 @@ encoding=UTF-8
 highlight=LaTeX
 line=1
 mode=LaTeX
-open=true
+open=false
 order=5
 
 [item:chapters/introduction.tex]
 archive=true
-column=0
+column=163
 encoding=UTF-8
 highlight=LaTeX
-line=0
+line=989
 mode=LaTeX
 open=true
-order=4
+order=2
 
 [item:chapters/paperMVVB_wrapper.tex]
 archive=true
@@ -276,7 +276,7 @@ encoding=UTF-8
 highlight=LaTeX
 line=7
 mode=LaTeX
-open=true
+open=false
 order=9
 
 [item:chapters/paperMVVB_wrapper_pdf.tex]
@@ -286,7 +286,7 @@ encoding=UTF-8
 highlight=LaTeX
 line=5
 mode=LaTeX
-open=true
+open=false
 order=0
 
 [item:notes.tex]
@@ -296,7 +296,7 @@ encoding=UTF-8
 highlight=LaTeX
 line=82
 mode=LaTeX
-open=true
+open=false
 order=8
 
 [item:paperMVVB/sections/literature_bibtex.bib]
@@ -311,10 +311,10 @@ order=-1
 
 [item:style/header.tex]
 archive=true
-column=84
+column=47
 encoding=UTF-8
 highlight=LaTeX
-line=95
+line=49
 mode=LaTeX
 open=false
 order=4
@@ -337,7 +337,7 @@ highlight=LaTeX
 line=77
 mode=LaTeX
 open=true
-order=2
+order=3
 
 [item:thesis_project.kilepr]
 archive=true
@@ -357,7 +357,7 @@ ViMarks=.,0,0,[,1,0,],-1,-1
 
 [view-settings,view=0,item:appendix/appendix.tex]
 CursorColumn=0
-CursorLine=446
+CursorLine=293
 JumpList=
 ViMarks=.,442,0,[,442,0,],442,0
 
@@ -392,10 +392,10 @@ JumpList=
 ViMarks=.,54,0,[,54,0,],54,0
 
 [view-settings,view=0,item:chapters/analyses_helios.tex]
-CursorColumn=21
-CursorLine=4
+CursorColumn=0
+CursorLine=50
 JumpList=
-ViMarks=.,4,20,[,4,20,],4,20
+ViMarks=.,49,0,[,49,0,],49,1
 
 [view-settings,view=0,item:chapters/chapter2.tex]
 CursorColumn=223
@@ -404,10 +404,10 @@ JumpList=
 ViMarks=.,137,222,[,137,219,],137,222
 
 [view-settings,view=0,item:chapters/cover.tex]
-CursorColumn=48
-CursorLine=270
+CursorColumn=35
+CursorLine=271
 JumpList=
-ViMarks=.,270,49,[,270,0,],270,49
+ViMarks=.,271,34,[,271,15,],271,34
 
 [view-settings,view=0,item:chapters/discussion_summary.tex]
 CursorColumn=0
@@ -416,10 +416,10 @@ JumpList=
 ViMarks=.,0,0,[,1,0,],-1,-1
 
 [view-settings,view=0,item:chapters/introduction.tex]
-CursorColumn=0
-CursorLine=0
+CursorColumn=163
+CursorLine=989
 JumpList=
-ViMarks=.,936,33,[,936,23,],936,33
+ViMarks=.,976,936,[,976,935,],976,936
 
 [view-settings,view=0,item:chapters/paperMVVB_wrapper.tex]
 CursorColumn=0
@@ -446,10 +446,10 @@ JumpList=
 ViMarks=.,778,73,[,778,73,],778,73
 
 [view-settings,view=0,item:style/header.tex]
-CursorColumn=84
-CursorLine=95
+CursorColumn=47
+CursorLine=49
 JumpList=
-ViMarks=.,95,0,[,95,0,],95,0
+ViMarks=.,49,46,[,49,46,],49,46
 
 [view-settings,view=0,item:style/short_commands_malte.tex]
 CursorColumn=22

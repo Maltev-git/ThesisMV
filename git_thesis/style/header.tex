@@ -47,6 +47,7 @@
 
 %##############--  hyperlinks  --#############
 \usepackage{url}		%displays urls correctly with \url{www.abc.de}
+\newcommand{\urlfoot}[1]{{\scriptsize{\url{#1}}}}	%monospace seems larger than normal text - this adapts the url textsize for footnotes
 \usepackage{hyperref}		%creates internal and external hyperlinks
 \hypersetup{
 	colorlinks = true,
@@ -128,4 +129,5 @@
 %\usepackage{lipsum}
 
 \usepackage{pdfpages}
+
 

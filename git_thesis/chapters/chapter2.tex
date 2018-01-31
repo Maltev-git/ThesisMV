@@ -135,52 +135,30 @@ These \Kp{} changes arise from seasonal variations of the solar-wind parameters 
 
 Earth's distance to the Sun varies over the course of a year by \SI{+-1.67}{\percent} (see appendix \autoref{sec:sun_earth_orbit_geometry}). The solar-wind parameters scale via power-law dependencies with solar distance, as is described in the following \autoref{chap:empirical_solar_wind_model_for_the_inner_heliosphere} and accordingly in \citet{Venzmer2017}. For example, if the solar-wind proton density scales with $r^{-2}$, this leads to yearly variations in density of up to \SI{3.4}{\percent}. These yearly solar-wind changes have a direct influence on the \Kp{}~index.
 
-The Sun's rotation axis tilt angle to the ecliptic is \SI{+-7.25}{\degree} and that for Earth is \SI{+-23.44}{\degree} (cite 'NASA Earth fact sheet' or U.S. Nautical Almanac Office 2015), see also appendix \autoref{sec:sun_earth_orbit_geometry}. The solar-wind magnetic field strength varies with heliographic latitude (cite?). Furthermore, the rate of magnetic reconnection between solar wind and the Earth's magnetosphere depends on both fields' orientation to each other (parallel/antiparallel) (see also Basics, Figure XX). The solar-wind influence on the \Kp{}~index depends on its coupling efficiency with the magnetosphere. Additionally, the tilt of the magnetic dipol axis to the rotation axis -- a few degrees for the Sun during cycle minima and about \SI{10}{\degree} for the Earth -- complicates this system even more.
+The Sun's rotation axis tilt angle to the ecliptic is \SI{+-7.25}{\degree} and that for Earth is \SI{+-23.44}{\degree} (cite 'NASA Earth fact sheet' or U.S. Nautical Almanac Office 2015), see also appendix \autoref{sec:sun_earth_orbit_geometry}. The solar-wind magnetic field strength varies with heliographic latitude (cite?). Furthermore, the rate of magnetic reconnection between solar wind and the Earth's magnetosphere depends on both fields' orientation to each other (parallel/antiparallel) (see also Basics, Figure XX). The solar-wind influence on the \Kp{}~index depends on its coupling efficiency with the magnetosphere. Additionally, the tilt of the magnetic dipole axis to the rotation axis -- a few degrees for the Sun during cycle minima (extreme during solar maximum...) and about \SI{10}{\degree} for the Earth -- complicates this system even more.
 %geomagnetic dipole tilt: Planetary fact sheet: 11.2 (Model GSFC-12/83)
 %variation range in the time period 1930--2016: 9.6--11.5° (http://wdc.kugi.kyoto-u.ac.jp/poles/polesexp.html)
 
-So the \Kp{} variation effects originate from the seasonal changing of the solar tilt, the Earth's tilt, and the Earth's distance. A thorough analysis of these seasonal variations would require a dedicated study going beyond the scope of this work, but already was performed by XXX (cites?). Thus, I just quantify the bulk magnitude of these effects (and include them as relative uncertainties). Looking at the \Kp{} frequency distributions by month -- seen in the bottom panel of Fig.~\ref{fig:Kp_seasonal_c} -- it is apparent that for high \Kp{} values ($>4$), there exist yearly frequency maxima at the equinoxes and frequency minima at the solstices. Their variation amounts to about 1~\Kp~unit.
+So the \Kp{} variation effects originate from the seasonal changing of the solar tilt, the Earth's tilt, and the Earth's distance. Thorough analyses of the seasonal variations were already performed by \citep{Cortie1912} (more cites?). Thus, I just quantify the bulk magnitude of these effects (and include them as relative uncertainties). Looking at the \Kp{} frequency distributions by month -- seen in the bottom panel of Fig.~\ref{fig:Kp_seasonal_c} -- it is apparent that for high \Kp{} values ($>4$), there exist yearly frequency maxima at the equinoxes and frequency minima at the solstices, which was described by \citep{Cortie1912}. It can be seen that this semiannual variation amounts to about 1~\Kp~unit.
 
 The changes from the \Kp{}-SSN relation (\ref{eq:kp_ssn_relation}) and the seasonal variations are of similar order (about 1~\Kp{}~unit).\\
 
-citep{Russell1973}\\
 
-the R-M effect holds that the angle between Z axis in geocentric solar magnetospheric (GSM) coordinate system and Y axis in geocentric solar equatorial (GSEQ) coordinate system plays an important role. Figure 1a shows the semiannual and diurnal variation of the angle q between the Z axis in GSM coordinate system and the Y axis in GSEQ coordinate system, that is, the controlling parameter of the R-M effect. According to the R-M effect, the probability of southward IMF increases when the angle q, which is smaller than 90 degrees, decreases, so that the dayside reconnection can be more efficient and more energy can be conveyed into the magnetosphere. citep{Zhao2012}\\
+\section{Solar wind-magnetosphere coupling function}
 
-whereas Russell et al. [2003] demonstrate that the tilt of dipole axis controls the size of dayside reconnection region and thus the reconnection rate and geomagnetic activity. Nowadays, the R-M effect is one of the most prevailing hypotheses. citep{Zhao2012}\\
-Thus, the R-M effect with positive/negative IMF polarity is more reasonable to explain seasonal and diurnal variation of geomagnetic activity under different IMF polarity and extreme solar wind conditions. citep{Zhao2012}\\
+The coupling between the solar wind and the magnetosphere is governed by reconnection and compression of the magnetic field lines (see \autoref{sec:solar_wind_magnetosphere_coupling}.\\
 
-annual Variation in Magnetic Disturbances\\
-The semiannual variation in geomagnetic activity has been recognized for a long period of time which shows the maximum appears around equinoxes while the minimum appears around solstices; by \citep{Cortie1912}\\
-
-
-
-causes (see citet{Rangarajan1997} p.~1282 and mention Bartels1963 too)\\
-read Bothmer1998 Ch 3...\\
-
-
-
-\section{Solar wind-magnetosphere coupling}
-%literature
-The coupling between the solar wind and the magnetosphere is governed by reconnection and compression of the magnetic field lines (see Basics...).\\
-
-the dayside reconnection is asymmetric\\
-half-wave rectifier coupling\\
-To describe this, coupling functions with different complexity were proposed (Newell, cites? and list).\\
-
-In this work I settle for \vBz{} as the coupling function.\\
-
-It makes sense to use the geocentric solar magnetospheric (GSM) coordinate system, which is aligned with the Earth's magnetic dipole axis.\\
-
-dayside reconnection:\\
-``$E_\text{y}$ is the rate at which southward magnetic flux is convected to the magnetosphere by the solar wind ($-v_\text{x} \cdot B_\text{z}$) in GSM coordinates,'' \citep{Russell2007}\\
+%vBzgsm relation
+In this work I settle for (\autoref{eq:coupling_vxBz}), \vBz{} as the coupling function.\\
 
 The solar wind electric field $E_y$ is the product of the proton velocity $v$ and the magnetic field z-component $B_\text{z}$:
 \begin{align}
-	?check vectors  E_\text{y} = -v_\text{x} \times B_\text{z}\,.	\label{eq:coupling_vxB}
+	?check vectors  E_\text{y} = -v_\text{x} \times B_\text{z}\,.
 \end{align}
 If not specified otherwise, $B_\text{z}$ is always meant to be in GSM coordinates hereafter.\\
 
+
+%velocity relation
 The solar wind velocity sticks mostly to its radial flow direction, that is, it only rarely deviates up to \SI{0.0}{\degree} (correct and cite...). Thus, the absolute flow speed can be used instead of the vector component.\\
 
 argue for \vBz:\\
@@ -299,7 +277,7 @@ This relation can be used together with real-time in-situ measurements from spac
 %CMEs
 CMEs are already sighted raising from their source regions on the solar surface. Some CME properties can be estimated from remote coronagraph observations and modeled to Earth, such as its propagation direction, its arrival time, and arrival velocity (cites?). Thus, early observations enable a heads-up time only depending on the CME's propagation speed to Earth. This travel duration can be more than 4~days for slow events with average solar-wind speeds, about 40~hours for fast events with speeds of \SI{1000}{\km\per\s}, and down to 20~hours and even below for the rare extreme cases, e.g., about 21~hours for the event on 23~July 2012 \citep{Russell2013,Temmer2015} and about 19~hours for the event observed by \citet{Carrington1859} on 1~September 1859.
 
-To make use of the heads-up time for CMEs, I neglect its magnetic field part, which can hardly be determined from remote observations and simplify the coupling relation (\ref{eq:coupling_vxB}) from before. Therefore, the only coupling parameter remaining is the solar-wind velocity.
+To make use of the heads-up time for CMEs, I neglect its magnetic field part, which can hardly be determined from remote observations and simplify the coupling relation (\ref{eq:coupling_vxBz}) from before. Therefore, the only coupling parameter remaining is the solar-wind velocity.
 
 \subsection{CME velocity estimation}
 methods and modeling...?\\

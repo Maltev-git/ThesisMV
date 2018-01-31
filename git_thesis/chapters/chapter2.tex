@@ -36,7 +36,7 @@ here I show...\\
 With the results presented in this chapter, I elaborate the step from the predicted CME and stream velocities to the forecast of the possible impact strength on the terrestrial magnetosphere. I derive an empirical correlation between the solar-wind speed and the geomagnetic \Kp~index, in order to obtain the capability to forecast \Kp{} values solely based on the predicted CME and stream velocities. The derived functional dependencies can be used to nowcast/forecast the \Kp~index.\\
 
 %general solar-wind nowcast; rt-data
-In-situ measurements of solar wind are made almost continuously, e.g., at the first Lagrange point (L1), in front of the magnetosphere. Since 1963 several spacecraft collected more than 50~years of data. The latest spacecraft, e.g., Wind, ACE and DSCOVR (launched in early 2015), provide real-time solar-wind data online\footnote{Wind real-time data website: \url{https://pwg.gsfc.nasa.gov/windnrt/}} \footnote{ACE real-time data website: \url{http://www.swpc.noaa.gov/products/ace-real-time-solar-wind}} \footnote{DSCOVR real-time data website: \url{http://www.swpc.noaa.gov/products/real-time-solar-wind}}.
+In-situ measurements of solar wind are made almost continuously, e.g., at the first Lagrange point (L1), in front of the magnetosphere. Since 1963 several spacecraft collected more than 50~years of data. The latest spacecraft, e.g., Wind, ACE and DSCOVR (launched in early 2015), provide real-time solar-wind data online\footnote{Wind real-time data website: \urlfoot{https://pwg.gsfc.nasa.gov/windnrt/}} \footnote{ACE real-time data website: \urlfoot{http://www.swpc.noaa.gov/products/ace-real-time-solar-wind}} \footnote{DSCOVR real-time data website: \urlfoot{http://www.swpc.noaa.gov/products/real-time-solar-wind}}.
 % solar wind impacts
 These solar-wind real-time data are used to nowcast various effects on the Earth's magnetosphere, such as the position of the magnetospheric bow shock in front of the Earth, the magnitude of geomagnetic disturbances (e.g., \Kp~index), the positions of the polar auroral ovals, the variation of the total electron content (TEC) of the ionosphere, and the positional error of global navigation satellite systems (GNSS).\\
 
@@ -45,7 +45,7 @@ These solar-wind real-time data are used to nowcast various effects on the Earth
 The velocity and the direction of CMEs can be determined in their early near-Sun stages via remote tracking with coronagraph white-light observations. Using these parameters as input for CME propagation models, their possible arrival time and arrival velocity at Earth can be derived.\\
 
 %stream velocity forecast from CHs
-Coronal holes are the origin of the fast solar wind; their area on the solar disk, seen in EUV wavelengths, correlates with the measured velocity of solar-wind streams \citep{Vrsnak2007}. This relation is used to predict the Earth-arrival velocity of solar-wind streams about 4~days in advance \citep{Rotter2012}, as is done in real-time within the empirical solar-wind forecast (ESWF) at the University of Graz\footnote{ESWF website: \url{http://swe.uni-graz.at/index.php/services/solar-wind-forecast}}.\\
+Coronal holes are the origin of the fast solar wind; their area on the solar disk, seen in EUV wavelengths, correlates with the measured velocity of solar-wind streams \citep{Vrsnak2007}. This relation is used to predict the Earth-arrival velocity of solar-wind streams about 4~days in advance \citep{Rotter2012}, as is done in real-time within the empirical solar-wind forecast (ESWF) at the University of Graz\footnote{ESWF website: \urlfoot{http://swe.uni-graz.at/index.php/services/solar-wind-forecast}}.\\
 
 %%% synopsis
 For the analyses performed and found in this chapter, the objectives are to estimate the magnetospheric impact of solar wind and to predict it for CMEs in particular. In Sect.~\ref{sec:long_term_variations} I determine the magnitudes of the long-term \Kp{} changes due to solar activity and measure the extent of seasonal variations stemming from the Earth's orbit. In order to nowcast the \Kp{}~index, I quantify the solar-wind influence on \Kp{} by deriving a functional relation with the product of solar-wind velocity and magnetic field z-component (Sect.~\ref{sec:kp_nowcast}). Finally, for the purpose of enabling \Kp{} forecasts from remote observations, I estimate the \Kp{} impact coming from CMEs and solar-wind streamers separately by deriving functional dependencies with their velocities (Sect.~\ref{sec:kp_forecast}).
@@ -55,7 +55,7 @@ For the analyses performed and found in this chapter, the objectives are to esti
 \label{sec:long_term_variations}
 
 \subsection{Solar activity influence}
-The \Kp{} data is obtained from the GFZ~Potsdam\footnote{GFZ~Potsdam website: \url{http://www.gfz-potsdam.de/de/kp-index/}}, where the index is currently maintained. The data used in this analysis covers the time period 1932--2016. Its frequency distribution shows that the highest frequencies occur around low \Kp{} values of 1+. Going to higher \Kp{} values, the frequencies seem to decline asymtotically towards zero (see Fig.~\ref{fig:Kp_histogram_b}) -- a \Kp{} value of 9o occurred only 29 times in this time interval.\\
+The \Kp{} data is obtained from the GFZ~Potsdam\footnote{GFZ~Potsdam website: \urlfoot{http://www.gfz-potsdam.de/de/kp-index/}}, where the index is currently maintained. The data used in this analysis covers the time period 1932--2016. Its frequency distribution shows that the highest frequencies occur around low \Kp{} values of 1+. Going to higher \Kp{} values, the frequencies seem to decline asymtotically towards zero (see Fig.~\ref{fig:Kp_histogram_b}) -- a \Kp{} value of 9o occurred only 29 times in this time interval.\\
 \begin{figure}[htb]
 	\begin{floatrow}
 		\ffigbox{
@@ -73,7 +73,7 @@ The \Kp{} data is obtained from the GFZ~Potsdam\footnote{GFZ~Potsdam website: \u
 	\end{floatrow}
 \end{figure}
 
-Obviously the general \Kp{} distribution (seen in Fig.~\ref{fig:Kp_histogram_b}) averages over solar activity. Solar activity is generally tracked with the international sunspot number (SSN). In the present analyses its data from the time period \citeyear{sidc1917} is used. The data is obtained from the online catalog\footnote{WDC-SIDC website: \url{http://www.sidc.be/silso/}} provided by the World Data Center -- Sunspot Index and Long-term Solar Observations (WDC-SILSO), Solar Influences Data Analysis Center (SIDC), Royal Observatory of Belgium (ROB).
+Obviously the general \Kp{} distribution (seen in Fig.~\ref{fig:Kp_histogram_b}) averages over solar activity. Solar activity is generally tracked with the international sunspot number (SSN). In the present analyses its data from the time period \citeyear{sidc1917} is used. The data is obtained from the online catalog\footnote{WDC-SIDC website: \urlfoot{http://www.sidc.be/silso/}} provided by the World Data Center -- Sunspot Index and Long-term Solar Observations (WDC-SILSO), Solar Influences Data Analysis Center (SIDC), Royal Observatory of Belgium (ROB).
 
 The \Kp{} frequency distributions' shape varies with different states of solar activity. This is visible in the yearly distributions, sorted and colored by yearly SSN in Fig.~\ref{fig:Kp_histogram_yearlySSN}.
 
@@ -143,13 +143,21 @@ So the \Kp{} variation effects originate from the seasonal changing of the solar
 
 The changes from the \Kp{}-SSN relation (\ref{eq:kp_ssn_relation}) and the seasonal variations are of similar order (about 1~\Kp{}~unit).\\
 
+citep{Russell1973}\\
+
+the R-M effect holds that the angle between Z axis in geocentric solar magnetospheric (GSM) coordinate system and Y axis in geocentric solar equatorial (GSEQ) coordinate system plays an important role. Figure 1a shows the semiannual and diurnal variation of the angle q between the Z axis in GSM coordinate system and the Y axis in GSEQ coordinate system, that is, the controlling parameter of the R-M effect. According to the R-M effect, the probability of southward IMF increases when the angle q, which is smaller than 90 degrees, decreases, so that the dayside reconnection can be more efficient and more energy can be conveyed into the magnetosphere. citep{Zhao2012}\\
+
+whereas Russell et al. [2003] demonstrate that the tilt of dipole axis controls the size of dayside reconnection region and thus the reconnection rate and geomagnetic activity. Nowadays, the R-M effect is one of the most prevailing hypotheses. citep{Zhao2012}\\
+Thus, the R-M effect with positive/negative IMF polarity is more reasonable to explain seasonal and diurnal variation of geomagnetic activity under different IMF polarity and extreme solar wind conditions. citep{Zhao2012}\\
+
+annual Variation in Magnetic Disturbances\\
+The semiannual variation in geomagnetic activity has been recognized for a long period of time which shows the maximum appears around equinoxes while the minimum appears around solstices; by \citep{Cortie1912}\\
+
+
 
 causes (see citet{Rangarajan1997} p.~1282 and mention Bartels1963 too)\\
 read Bothmer1998 Ch 3...\\
 
-
-into thesis:\\
-NASA maintains the Planetary~Fact~Sheets\footnote{NASA Planetary Fact Sheets website: \url{https://nssdc.gsfc.nasa.gov/planetary/planetfact.html}} online, which are quite useful.\\
 
 
 \section{Solar wind-magnetosphere coupling}
@@ -310,8 +318,8 @@ list identifying criteria...\\
 
 The SWS list for 1963--2016 was kindly provided by Ian~Richardson (private communication). into acknowledgments...\\
 
-SWS list for 1963--2015 by \citep{Richardson2000,Richardson2012} is available via registration at CEDARweb\footnote{CEDARweb website for Solar Wind Structures: \url{http://cedarweb.vsp.ucar.edu/wiki/index.php/Tools_and_Models:Solar_Wind_Structures} (existent in 2017-10-29)}.\\
-List of near-Earth ICMEs since January 1996 by \citet{Cane2003,Richardson2010}. Available as ACE Level~3 data for the period 1995--mid2016\footnote{ACE Level~3 data website -- list of near-Earth ICMEs: \url{http://www.srl.caltech.edu/ACE/ASC/DATA/level3/icmetable2.htm} (existent in 2017-10-29)}.\\
+SWS list for 1963--2015 by \citep{Richardson2000,Richardson2012} is available via registration at CEDARweb\footnote{CEDARweb website for Solar Wind Structures: \urlfoot{http://cedarweb.vsp.ucar.edu/wiki/index.php/Tools_and_Models:Solar_Wind_Structures} (existent in 2017-10-29)}.\\
+List of near-Earth ICMEs since January 1996 by \citet{Cane2003,Richardson2010}. Available as ACE Level~3 data for the period 1995--mid2016\footnote{ACE Level~3 data website -- list of near-Earth ICMEs: \urlfoot{http://www.srl.caltech.edu/ACE/ASC/DATA/level3/icmetable2.htm} (existent in 2017-10-29)}.\\
 
 The CME fraction in the OMNI data is \SI{15.8}{\%} during the time period 1981--2016 (this accumulates to 5.53~years).
 %and that for the period 1963--2016 is \SI{17.0}{\%} (9.01~years).\\
@@ -494,22 +502,22 @@ similar to \citet{Elliott2013}; different data time period, resolution and avera
 
 'scientists develop an advanced prototype space weather warning system to ensure the operation of telecommunication and navigation systems on Earth to the threat of solar storms' AFFECTS\\
 
-Prototype/precursor relations are integrated into applications developed within the Advanced Forecast For Ensuring Communications Through Space (\mbox{AFFECTS}) project which ran from 2011 to 2013. The following services, accessible via the \mbox{AFFECTS} website\footnote{AFFECTS website (existent in 2017-11-19): \url{http://www.affects-fp7.eu/services/}}, contain results from this \Kp{} study (all links existent in 2017-11-19):
+Prototype/precursor relations are integrated into applications developed within the Advanced Forecast For Ensuring Communications Through Space (\mbox{AFFECTS}) project which ran from 2011 to 2013. The following services, accessible via the \mbox{AFFECTS} website\footnote{AFFECTS website (existent in 2017-11-19): \urlfoot{http://www.affects-fp7.eu/services/}}, contain results from this \Kp{} study (all links existent in 2017-11-19):
 \begin{itemize}
-	\item DSCOVR real-time solar-wind with \Kp{} plot \url{http://www.affects-fp7.eu/rssfeeds/ace_ap_plot/ace_realtime_ap_plot.png}
-	\item DSCOVR real-time solar-wind and \Kp{} forecast plot \url{http://www.affects-fp7.eu/rssfeeds/ace_ap_forecast_plot/ace_realtime_ap_CH_GFT_plot.png}
-	\item RSS L1 Kp Alert: \url{http://www.affects-fp7.eu/rssfeeds/rssfeed_kp/rssfeed_kp.xml}
-	\item RSS L1 GNSS Alert: \url{http://www.affects-fp7.eu/rssfeeds/rssfeed_gnss/rssfeed_gnss.xml}
-	\item RSS L1 Aurora Alert: \url{http://www.affects-fp7.eu/rssfeeds/rssfeed_aurora/rssfeed_aurora.xml}
+	\item DSCOVR real-time solar-wind with \Kp{} plot \urltext{http://www.affects-fp7.eu/rssfeeds/ace_ap_plot/ace_realtime_ap_plot.png}
+	\item DSCOVR real-time solar-wind and \Kp{} forecast plot \urltext{http://www.affects-fp7.eu/rssfeeds/ace_ap_forecast_plot/ace_realtime_ap_CH_GFT_plot.png}
+	\item RSS L1 Kp Alert: \urltext{http://www.affects-fp7.eu/rssfeeds/rssfeed_kp/rssfeed_kp.xml}
+	\item RSS L1 GNSS Alert: \urltext{http://www.affects-fp7.eu/rssfeeds/rssfeed_gnss/rssfeed_gnss.xml}
+	\item RSS L1 Aurora Alert: \urltext{http://www.affects-fp7.eu/rssfeeds/rssfeed_aurora/rssfeed_aurora.xml}
 \end{itemize}
 
 Further applications of resulting \Kp{}-relations:
 \begin{itemize}
 	\item CME \Kp{} impact (part of UGOE DDC)
-	\item iPhone app L1 Alerts (Solar wind latest 2-hour extreme values and derived forecast values): \url{http://www.affects-fp7.eu/app-services/L1-Alerts/dataL1Alerts.txt} \url{https://itunes.apple.com/au/app/affects/id893579846}
-	\item Android app L1 Alerts... \url{https://play.google.com/store/apps/details?id=com.afects.forecasts}
+	\item iPhone app L1 Alerts (Solar wind latest 2-hour extreme values and derived forecast values): \urltext{http://www.affects-fp7.eu/app-services/L1-Alerts/dataL1Alerts.txt} \urltext{https://itunes.apple.com/au/app/affects/id893579846}
+	\item Android app L1 Alerts... \urltext{https://play.google.com/store/apps/details?id=com.afects.forecasts}
 	\item has SW-Display Kp forecast??
-	\item exclude? Kp forecast calculation: \url{http://www.astro.physik.uni-goettingen.de/~mvenzmer/kp_forecast_calculation/kp_forecast_calculation.php}
+	\item exclude? Kp forecast calculation: \urltext{http://www.astro.physik.uni-goettingen.de/~mvenzmer/kp_forecast_calculation/kp_forecast_calculation.php}
 \end{itemize}
 
 make real links...\\
@@ -564,7 +572,7 @@ Advanced Composition Explorer (ACE), launch date was 25 August 1997\\
 Wind, STEREO, SOHO, CELIAS\\
 rt data errors/gaps...\\
 Several services/alerts are based on the data streams from real-time measurements. (L1 alerts, etc.)\\
-DSCOVR as replacement was launched on 11~Februar 2015. It is NOAA's SWPC real-time solar-wind prime source since 27 July 2016.\footnote{\url{http://www.swpc.noaa.gov/products/real-time-solar-wind}}\\
+DSCOVR as replacement was launched on 11~Februar 2015. It is NOAA's SWPC real-time solar-wind prime source since 27 July 2016.\footnote{\urlfoot{http://www.swpc.noaa.gov/products/real-time-solar-wind}}\\
 
 
 \section{Acknowledgments}

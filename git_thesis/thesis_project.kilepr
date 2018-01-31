@@ -161,12 +161,12 @@ order=5
 
 [item:appendix/appendix.tex]
 archive=true
-column=0
+column=157
 encoding=UTF-8
 highlight=LaTeX
-line=293
+line=450
 mode=LaTeX
-open=true
+open=false
 order=5
 
 [item:appendix/curriculum_vitae.tex]
@@ -201,13 +201,13 @@ order=2
 
 [item:appendix/literature_bibtex_combined.bib]
 archive=true
-column=17
+column=19
 encoding=UTF-8
 highlight=BibTeX
-line=1780
+line=314
 mode=BibTeX
-open=false
-order=3
+open=true
+order=6
 
 [item:appendix/literature_bibtex_custom_entries.bib]
 archive=true
@@ -231,20 +231,20 @@ order=4
 
 [item:chapters/chapter2.tex]
 archive=true
-column=223
+column=43
 encoding=UTF-8
 highlight=LaTeX
-line=137
+line=152
 mode=LaTeX
 open=true
-order=1
+order=3
 
 [item:chapters/cover.tex]
 archive=true
-column=35
+column=45
 encoding=UTF-8
 highlight=LaTeX
-line=271
+line=272
 mode=LaTeX
 open=true
 order=0
@@ -261,10 +261,10 @@ order=5
 
 [item:chapters/introduction.tex]
 archive=true
-column=163
+column=153
 encoding=UTF-8
 highlight=LaTeX
-line=989
+line=474
 mode=LaTeX
 open=true
 order=2
@@ -311,13 +311,13 @@ order=-1
 
 [item:style/header.tex]
 archive=true
-column=47
+column=32
 encoding=UTF-8
 highlight=LaTeX
-line=49
+line=50
 mode=LaTeX
-open=false
-order=4
+open=true
+order=5
 
 [item:style/short_commands_malte.tex]
 archive=true
@@ -337,7 +337,7 @@ highlight=LaTeX
 line=77
 mode=LaTeX
 open=true
-order=3
+order=1
 
 [item:thesis_project.kilepr]
 archive=true
@@ -356,10 +356,10 @@ JumpList=
 ViMarks=.,0,0,[,1,0,],-1,-1
 
 [view-settings,view=0,item:appendix/appendix.tex]
-CursorColumn=0
-CursorLine=293
+CursorColumn=157
+CursorLine=450
 JumpList=
-ViMarks=.,442,0,[,442,0,],442,0
+ViMarks=.,450,157,[,450,157,],450,157
 
 [view-settings,view=0,item:appendix/curriculum_vitae.tex]
 CursorColumn=0
@@ -380,10 +380,10 @@ JumpList=
 ViMarks=.,697,97,[,697,97,],697,97
 
 [view-settings,view=0,item:appendix/literature_bibtex_combined.bib]
-CursorColumn=17
-CursorLine=1780
+CursorColumn=19
+CursorLine=314
 JumpList=
-ViMarks=.,1780,17,[,1780,17,],1780,17
+ViMarks=.,314,19,[,314,19,],314,19
 
 [view-settings,view=0,item:appendix/literature_bibtex_custom_entries.bib]
 CursorColumn=0
@@ -398,16 +398,16 @@ JumpList=
 ViMarks=.,49,0,[,49,0,],49,1
 
 [view-settings,view=0,item:chapters/chapter2.tex]
-CursorColumn=223
-CursorLine=137
+CursorColumn=43
+CursorLine=152
 JumpList=
-ViMarks=.,137,222,[,137,219,],137,222
+ViMarks=.,152,42,[,152,41,],152,42
 
 [view-settings,view=0,item:chapters/cover.tex]
-CursorColumn=35
-CursorLine=271
+CursorColumn=45
+CursorLine=272
 JumpList=
-ViMarks=.,271,34,[,271,15,],271,34
+ViMarks=.,272,44,[,272,27,],272,44
 
 [view-settings,view=0,item:chapters/discussion_summary.tex]
 CursorColumn=0
@@ -416,10 +416,10 @@ JumpList=
 ViMarks=.,0,0,[,1,0,],-1,-1
 
 [view-settings,view=0,item:chapters/introduction.tex]
-CursorColumn=163
-CursorLine=989
+CursorColumn=153
+CursorLine=474
 JumpList=
-ViMarks=.,976,936,[,976,935,],976,936
+ViMarks=.,976,546,[,976,539,],976,546
 
 [view-settings,view=0,item:chapters/paperMVVB_wrapper.tex]
 CursorColumn=0
@@ -446,10 +446,10 @@ JumpList=
 ViMarks=.,778,73,[,778,73,],778,73
 
 [view-settings,view=0,item:style/header.tex]
-CursorColumn=47
-CursorLine=49
+CursorColumn=32
+CursorLine=50
 JumpList=
-ViMarks=.,49,46,[,49,46,],49,46
+ViMarks=.,50,32,[,50,32,],50,32
 
 [view-settings,view=0,item:style/short_commands_malte.tex]
 CursorColumn=22

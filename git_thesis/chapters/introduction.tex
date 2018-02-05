@@ -331,7 +331,20 @@ Solar-wind quantities, such as particle flux densities, mass flux, pressures, an
 % low beta: 0.180\\	%from ranges above
 % high beta: 8.444\\	%from ranges above
 
-However, solar wind is structured by its different sources in the solar corona. It consists of fast continuous streams, slow variable flows, and CME events. These different flows have highly variable velocities, which result in compressed or rarefied regions at their interfaces. Additionally, the source region's magnetic field configuration organizes the HMF transported within the solar-wind plasma. Regardless, pronounced magnetic structures embedded in the solar wind, such as field polarity changes or magnetic clouds, still influence the properties of the plasma.\\
+However, solar wind is structured by its different sources in the solar corona. It consists of fast continuous streams, slow variable flows, and CME events. These different flows have highly variable velocities, which result in compressed or rarefied regions at their interfaces. Additionally, the source region's magnetic field configuration organizes the HMF transported within the solar-wind plasma. Regardless, pronounced magnetic structures embedded in the solar wind, such as field polarity changes or magnetic clouds, still influence the properties of the plasma.
+
+This multitude of structures is apparent in the two months -- beginning in May~2013 -- of in-situ measured solar wind, which I plotted as an example period in \autoref{fig:ACE_64s_v7_thesis_CIRs_2013-5-1_65_plot}.
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\textwidth]{figures_of_mine/gnuplots/ACE_64s_v7_thesis_CIRs_2013-5-1_65_plot.pdf}
+	\caption{Solar wind with several structures, measured at L1 during the time period 1~May to 5~June in 2013. The parameters are the magnetic field strength, its field angle in the ecliptic in GSE~coordinates, the proton velocity, density, and temperature. I indicated periods of prominent solar wind structures with color bars: HSSs in blue, CIRs in green, HCSs in purple, and CMEs in red. In the velocity panel also the field polarity is color coded -- assuming a Parker spiral angle of \SI{135}{\degree} at L1. Blank periods indicate bad or missing data. The data are 64~s measurements from the ACE spacecraft.}
+	\label{fig:ACE_64s_v7_thesis_CIRs_2013-5-1_65_plot}
+\end{figure}
+The IMF and solar wind ion parameters were measured with the MAG and SWEPAM instruments onboard the Advanced Composition Explorer (ACE) spacecraft, located around the first Lagrange point (L1). The data have a time resolution of 64~seconds and are obtained from the ACE~Science~Center web interface\footnote{ACE Science Center website: \urlfoot{http://www.srl.caltech.edu/ACE/ASC/}}.
+
+Some general solar wind tendencies can be seen from this plot: The solar-wind temperature scales with the stream velocity; compressed plasma regions enhance the magnetic field and the density; magnetic sector boundaries, HCSs, and MCs come with high densities and low temperatures; MCs in CMEs have high magnetic fields and low temperatures. I indicated the periods of solar wind structures, that is, HSSs, CIRs, HCSs, and CMEs, with colored bars -- they are further described in the following sections.\\
+
+
 
 There exist a lot more aspects/properties related to the solar wind, i.e., MHD waves, electron pitch angle, solar energetic particles, dust particles, and neutral energetic atoms. They are not covered here, because they are not of relevance to the analyses in this work.\\
 
@@ -389,7 +402,7 @@ At solar minimum the specific proton entropy is found to correlate with the $\te
 %specific entropy: $\ln\left(T_\text{p}/n_\text{p}^{\gamma - 1}\right)$ ($\gamma = 1.5$)
 
 %solar activity dependence
-The solar-wind stream pattern varies strongly with solar activity. The Sun's ordered dipole structure during solar cycle minima leads to polar regions with open magnetic fields, constituting large coronal holes, and to a large equatorial belt region with closed magnetic fields -- this state is clearly visible in Figures~\ref{fig:Tse2008_500_mo1} and \ref{fig:Banaszkiewicz1998_DQCS_model_raw}. This results in exclusively fast solar wind coming from the poles and higher latitudes, whereas active regions form an equatorial streamer belt around the Sun, emitting slow solar wind. This structure was confirmed from solar-wind speed measurements done by the Ulysses spacecraft, which flew in an out-of-ecliptic solar orbit and whose mission covered a duration of more than one solar cycle \citep{McComas200809}, see \autoref{fig:McComas2008_Ulysses_orbit}.
+The solar-wind stream pattern varies strongly with solar activity. The Sun's ordered dipole structure during solar cycle minima leads to polar regions with open magnetic fields, constituting large coronal holes, and to a large equatorial belt region with closed magnetic fields -- this state is clearly visible in Figures~\ref{fig:Tse2008_500_mo1} and \ref{fig:Banaszkiewicz1998_DQCS_model_raw}. This state results in exclusively fast solar wind coming from the poles and higher latitudes, whereas active regions form an equatorial streamer belt around the Sun, emitting slow solar wind. This structure was confirmed from solar-wind speed measurements done by the Ulysses spacecraft, which flew in an out-of-ecliptic solar orbit and whose mission covered a duration of more than one solar cycle \citep{McComas200809}, see \autoref{fig:McComas2008_Ulysses_orbit}.
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{figures_of_others/images/McComas2008_Ulysses_orbit_.png}
@@ -401,15 +414,19 @@ The solar-wind stream pattern varies strongly with solar activity. The Sun's ord
 The transition of the solar magnetic field during cycle maxima induces the chaotic appearance of closed magnetic fields at higher latitudes and even at the poles. Further, coronal holes begin to invade parts of the equatorial region, this leads to recurring phases of HSSs in the ecliptic. The succeeding streams of different velocity result in interaction regions and alternating magnetic polarities result in magnetic sector boundaries.\\
 
 
+\autoref{fig:ACE_64s_v7_thesis_CIRs_2013-5-1_65_plot}\\
+Recurrent HSSs of the same field polarity but changing peak velocity exist in this period (e.g., beginning on 6~May, 2~June, and 29~June).\\
+
+
 \subsection{Stream interaction regions}
+
+
+Stream interaction regions (SIRs)\\
 
 see \citet{Balogh2009}, p.~94:\\
 
-% interaction regions
 Corotating interaction regions (CIRs)\\
-Stream interaction regions (SIRs)\\
-in-situ measurements (example in-situ CIR/HSS plot)\\
-describe in-situ signatures of CIRs...\\
+
 
 Streams of fast wind catch slow wind\\
 -> compressions, shocks, deflections\\
@@ -429,20 +446,6 @@ formation of stream interface and stream deflection, see \autoref{fig:Owens2013_
 
 recurrent -- with a 27-day interval\\
 
-A multitude of structures appear in the solar wind. A period of solar wind, measured in~situ by the ACE spacecraft at the first Lagrange point 
-(L1), is plotted in \autoref{fig:ACE_64s_v7_thesis_CIRs_2013-5-1_65_plot}.\\
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=\textwidth]{figures_of_mine/gnuplots/ACE_64s_v7_thesis_CIRs_2013-5-1_65_plot.pdf}
-	\caption{Solar wind with several structures, measured at L1 during the time period 1~May to 5~June in 2013. The parameters are the magnetic field strength, its field angle in the ecliptic in GSE~coordinates, the proton velocity, density, and temperature. Periods of prominent solar wind structures are marked with color bars: HSSs in blue, CIRs in green, HCSs in purple, and CMEs in red. In the velocity panel also the field polarity is color coded -- assuming a Parker spiral angle of \SI{135}{\degree} at L1. Blank periods indicate bad or missing data. The data were measured with the MAG and SWEPAM instruments onboard the ACE spacecraft and are obtained from the ACE~Science~Center web interface\protect\footnotemark.}
-	\label{fig:ACE_64s_v7_thesis_CIRs_2013-5-1_65_plot}
-\end{figure}
-\footnotetext{ACE Science Center website: \urlfoot{http://www.srl.caltech.edu/ACE/ASC/}}
-MAG and SWEPAM 64-second Averaged IMF and Solar Wind Ion Parameters\\
-acknowledgements to MAG/SWEPAM Team...\\
-
-Recurrent HSSs of the same field polarity but changing peak velocity exist in this period (e.g., beginning on 6~May, 2~June, and 29~June). They are preceded by CIRs containing sector boundaries. CMEs passed on 7?~June, XXX... The 7?~June CME is displayed in higher details in \autoref{fig:ACE_64s_v7_thesis_CME_2013-6-26_6_plot}.\\
-In this plot the general solar wind tendencies can be seen: the temperature scales with the velocity; compressed regions enhance the magnetic field and the density; sector boundaries/HCSs and MCs come with enhanced densities and low temperatures; MCs in CMEs have high magnetic fields and low temperatures...\\
 
 
 their interactions lead to phenomena, such as stream interaction regions, which may persist for many solar rotations ('co-rotating' interaction regions) if the coronal source regions are quasi-stationary \citep{Balogh1999}.\\
@@ -456,6 +459,11 @@ As a consequence of the relationship between the HCS and the coronal streamer be
 
 As the CIRs move outwards, they coalesce into larger scale, merged structures (the so-called Merged Interaction Regions, or MIRs) from about 10 AU (Burlaga1985).\\
 
+
+describe in-situ signatures of CIRs; in-situ CIR/HSS plot, see \autoref{fig:ACE_64s_v7_thesis_CIRs_2013-5-1_65_plot}\\
+
+\autoref{fig:ACE_64s_v7_thesis_CIRs_2013-5-1_65_plot}\\
+Recurrent HSSs are preceded by CIRs containing sector boundaries.\\
 
 
 \subsection{Heliospheric current sheet}
@@ -556,6 +564,10 @@ minimum variance analysis (MVA)\\
 determining magnetic cloud configuration \citep{Bothmer1998}\\
 hodogramm?\\
 %https://en.wikipedia.org/wiki/Hodograph
+
+
+\autoref{fig:ACE_64s_v7_thesis_CIRs_2013-5-1_65_plot}\\
+CMEs passed on 7~June, 2013, etc.\\
 
 
 CME with MC, solar wind in-situ measurements and impact on the magnetosphere (Kp), see \autoref{fig:ACE_64s_v7_thesis_CME_2013-6-26_6_plot}\\

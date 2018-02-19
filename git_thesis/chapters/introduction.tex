@@ -280,8 +280,10 @@ The MBP's convective appearance and stochastic motions result in wavelike fluctu
 %%% field geometry from source surface on to heliopause
 The coronal plasma expands superradially, following the magnetic field lines. However, the field strength decreases with increasing solar distance and at a distance of about \SI{2.5}{\Rs} the thermal pressure becomes larger than the magnetic pressure. Thereby the magnetic field gets frozen within the plasma and is carried by the solar wind radially outwards into the heliosphere. The distance from which the solar wind propagation gets released from the magnetic field lines is called the source surface \citep{Schatten1969} and the thermal to magnetic pressure ratio is called plasma beta -- for more details on plasma beta see appendix \autoref{sec:plasma_beta}. The magnetic field changes from superradial expansion below the source surface to a radial configuration above it, this field geometry is also visible in the total eclipse image in \autoref{fig:Tse2008_500_mo1}.
 
-%%% HCS
-Under solar cycle minimum conditions, a heliospheric current sheet (HCS) separates the two different magnetic polarities originating from both polar coronal holes. The HCS is roughly located near the equatorial plane, dividing both hemispheres. The analytical solar magnetic field model for solar minimum conditions, constructed by \citet{Banaszkiewicz1998}, shows this field geometry as seen in \autoref{fig:Banaszkiewicz1998_DQCS_model_raw}. The quadrupole part of their dipole plus quadrupole plus current sheet (DQCS) model considers the closed equatorial fields and allows equatorial outflows along the current sheet.
+%%% heliospheric current sheet
+Open field lines expand over adjacent closed field regions. Above the cusps of these regions' closed loops, the surrounding plasma flows encounter each other and stream outwards, forming so-called helmet streamers. Above the helmet streamers, magnetic boundaries are created by plasma flows, carrying opposite magnetic polarity. These boundaries constitute an extensive coronal neutral line around the Sun. Within the heliosphere, the two dominating magnetic polarity regions, originating from both solar magnetic poles, are separated by the extension of this neutral line: a large plasma boundary surface, called the heliospheric current sheet (HCS) \citep{Smith2001}.
+
+Under solar cycle minimum conditions, the magnetic dipole axis is near the rotation axis and thus the HCS is roughly located near the equatorial plane, dividing both hemispheres. The analytical solar magnetic field model for solar minimum conditions, constructed by \citet{Banaszkiewicz1998}, shows this field geometry as seen in \autoref{fig:Banaszkiewicz1998_DQCS_model_raw}. The quadrupole part of their dipole plus quadrupole plus current sheet (DQCS) model considers the closed equatorial fields and allows equatorial outflow along the current sheet.
 \begin{figure}[htb]
 	\begin{floatrow}
 		\ffigbox{
@@ -291,18 +293,28 @@ Under solar cycle minimum conditions, a heliospheric current sheet (HCS) separat
 			\label{fig:Banaszkiewicz1998_DQCS_model_raw}
 		}
 		\ffigbox{
-			\includegraphics[width=\Xhsize]{figures_of_others/images/Owens2013_PFSS_Sectors_screenshot.png}
+			\includegraphics[width=\Xhsize]{figures_of_others/images/Jokipii1981_ballerina_HCS.png}
 		}{
-			\caption{Illustration of the Parker spiral formation in the ecliptic plane outside the source surface. The HCS (green) forms between solar-wind flows of opposite magnetic field polarity (red/blue). Credit: \citet[Fig.~1]{Owens2013}, adapted from \citet[Fig.~1]{Schatten1969}, licensed under \href{https://creativecommons.org/licenses/by-nc/3.0/de/}{CC BY-NC 3.0 DE}.}
-			\label{fig:Owens2013_PFSS_Sectors_screenshot}
-			%Owens2013 figure permission request: open access article
+			\caption{A simple HCS model, where its wavy surface shape solely stems from a dipole tilt of \SI{15}{\degree} to the rotation axis. Credit: \citep[Fig.~2]{Jokipii1981}, permission?...}
+			\label{fig:Jokipii1981_ballerina_HCS}
 		}
 	\end{floatrow}
 \end{figure}
-Commonly, the HCS looks more like a ballerina skirt, due to the varying tilt angle between the dipole axis and the rotation axis and also due to local magnetic field variations. 
+Commonly around solar minimum, the HCS's warped surface looks like a wavy ballerina skirt, due to the varying tilt angle between the dipole axis and the rotation axis, see \autoref{fig:Jokipii1981_ballerina_HCS}, and also due to local magnetic field variations \citep{Jokipii1981}.
+
+During the field transition at solar maximum, the dipole axis rotates to lower latitudes, crosses the solar equator, and eventually the field ends up in a reversed dipole configuration \citep{Jones2003}. During this process, the HCS rotates almost rigidly together with the dipole axis and remains a single connected structure in the inner heliosphere \citep{Jones2003}. Hence during cycle maximum, the HCS has a very complex shape, is largely inclined to the solar equator, and reaches near-polar latitudes.
 
 %%% Parker spiral
-The solar-wind source surface rotates with the Sun and thus shears the HMF into an Archimedean spiral pattern, adding an azimuthal component to the radial HMF. This geometry was anticipated by \citet{Parker1958} and is today called Parker spiral. The Parker spiral, viewed in the ecliptic plane, is illustrated in \autoref{fig:Owens2013_PFSS_Sectors_screenshot}. The solar rotation axis tilt of up to \SI{7.25}{\degree} to the ecliptic leads to a slight diving into both hemispheres of opposite polarity. Thus, together with the ballerina topology of the HCS, the Parker spiral typically has two or four sectors of different magnetic polarity, separated by the HCSs.
+The solar-wind source surface rotates with the Sun and thus shears the HMF into an Archimedean spiral pattern, adding an azimuthal component to the radial HMF. This geometry was anticipated by \citet{Parker1958} and is today called Parker spiral. The Parker spiral, viewed in the ecliptic plane, is illustrated in \autoref{fig:Owens2013_PFSS_Sectors_screenshot}. The solar rotation axis tilt of up to \SI{7.25}{\degree} to the ecliptic leads to a slight diving into both hemispheres of opposite polarity. Thus, together with the ballerina topology of the HCS, the Parker spiral has typically a structure of either two or four sectors of alternating magnetic polarity \citep{Ness1965}, which are separated by the HCS.
+\begin{figure}[htb]
+	\fcapside[\FBwidth]{
+		\includegraphics[width=0.6\textwidth]{figures_of_others/images/Owens2013_PFSS_Sectors_screenshot.png}
+	}{
+		\caption{Illustration of the Parker spiral formation in the ecliptic plane outside the source surface. The HCS (green) forms between solar-wind flows of opposite magnetic field polarity (red/blue). Credit: \citet[Fig.~1]{Owens2013}, adapted from \citet[Fig.~1]{Schatten1969}, licensed under \href{https://creativecommons.org/licenses/by-nc/3.0/de/}{CC BY-NC 3.0 DE}.}
+		\label{fig:Owens2013_PFSS_Sectors_screenshot}
+		%Owens2013 figure permission request: open access article
+	}
+\end{figure}
 
 %%% out to heliopause
 That way, the HMF is carried out to the termination shock by the solar wind. MHD simulations, based on in-situ measurements of Voyager~1 and 2 within the heliosheath, and on IBEX observations of energetic neutral atoms, provide indications about the outer structure of the heliosheath. Behind the termination shock, the magnetic sector boundaries are compressed and they reconnect, forming magnetic bubbles \citep{Opher2011}. These bubbles -- unconnected to the HMF -- flow away to the heliosheath tail region. Even beyond the termination shock, the solar wind plasma is confined and collimated by the twisted solar magnetic field and driven into a northern and a southern jet \citep{Opher2015}. Hence, the Sun's magnetosphere has likely a croissant-like shape with two turbulent tail-lobes, where eventually the solar wind and the HMF are mixed into the interstellar medium.
@@ -447,57 +459,30 @@ Due to the compression within SIRs/CIRs, the magnetic field strength and the pla
 
 \subsection{Heliospheric current sheet}
 
-% heliospheric current sheet
-The heliospheric current sheet (HCS) is the separating surface between both magnetic polarities. During solar minimum, the dipole axis is near the rotation axis -> the HCS is near the ecliptic.\\
-During the field transition at solar maximum, the dipole axis rotates to lower latitudes, crossing the equator, and eventually ending up as a reversed dipole \citep{Jones2003}.\\
+the two polarities of the dipole being separated by the warped heliospheric current sheet (HCS) \citet{Owens2013}.\\
+The large-scale regions of opposite HMF polarity are separated by the heliospheric current sheet (HCS) \citet{Owens2013}\\
 
-
-
-
-
-
-see \citet[p.~89]{Balogh2009}:\\
-The surface separating the two polarities is the Heliospheric Current Sheet (HCS), the largest recognisable plasma boundary\\
-
-%ecliptic
-the dipole generates magnetic sector structure in the ecliptic first identified by Ness and Wilcox (1965)\\
-In most cases, there are two or four magnetic sectors in each solar rotation.\\
-
-in maximum: the dominant (towards and away) polarities are separated by a HCS that is very complex in shape and reaches to high, near-polar heliolatitudes.\\
-the position of the HCS which corresponds to the extension of the coronal neutral line into the heliosphere.\\
-The HCS appears as a wavy “ballerina skirt” at around solar minimum (Thomas and Smith 1981; Jokipii and Thomas 1981), but has a very much more complex shape near solar maximum.\\
-Ulysses results are compatible with a single, topologically connected HCS at least in the inner heliosphere even around solar maximum (Jones et al. 2003).\\
-the HCS remains a single connected structure throughout the heliosphere even if largely inclined to the solar equator. In fact, there is evidence that at the time of magnetic reversal near solar maximum activity, the HCS rotates, in a first approximation, as the rigid equatorial plane of the solar dipole while the axis rotates from one pole to the other.\\
-the HCS remains an identifiable boundary between the two dominant polarities even at the highest latitudes, through the magnetic reversal process. There is, therefore, a magnetic neutral line that reaches to high heliolatitudes in the corona.\\
-
+Thus, spacecraft in near-Earth space will generally be close in heliolatitude to the HCS and will sample HMF polarities from both polar coronal holes as the Sun rotates \citet{Owens2013}.\\
 
 %in situ observations
+Periods of both two- and four-sector structures are seen. As the HCS is formed by open solar flux (OSF) of opposite polarities coming into contact by the non-radial expansion of separate coronal holes, the HCS maps to helmet streamers and is typically located within slow solar wind \citet{Owens2013}.\\
 % sector boundaries
 ``Low He/H values are in particular reported near solar wind sector boundaries.'' (Borrini et al., 1981)\\
 Borrini et al. (1981) had found significant depletions in $n_\alpha/n_\text{p}$ around magnetic sector boundaries which are normally imbedded in slow solar wind.\\
-
-HCS in-situ plot?\\
-
-equatorial ballerina model\\
-
-
-\citet{Owens2013} HCSs:\\
-the two polarities of the dipole being separated by the warped heliospheric current sheet (HCS), shown as the green dashed line in Figure 1.\\
-As noted above the large-scale regions of opposite HMF polarity are separated by the heliospheric current sheet (HCS). Near solar minimum, the HCS encircles the Sun close to the rotational equator and hence lies close to the ecliptic plane. Thus, spacecraft in near-Earth space will generally be close in heliolatitude to the HCS and will sample HMF polarities from both polar coronal holes as the Sun rotates.\\
-For a purely dipolar magnetic field typically with at least a small tilt to the rotation axis, a two-sector structure would be expected in the ecliptic plane, as sketched in Figure 1. As the quadrupolar component of the field increases, a more complex sector structure should be observed.\\
-Periods of both two- and four-sector structures are seen. As the HCS is formed by open solar flux (OSF) of opposite polarities coming into contact by the non-radial expansion of separate coronal holes, the HCS maps to helmet streamers and is typically located within slow solar wind.\\
 
 
 % heliospheric plasma sheet
 heliospheric plasma sheet (HPS)\\
 
 Crooker2004:\\
-definition: the HPS is a high-density region containing a magnetic polarity reversal associated with the passage of the HCS.\\
+definition: the HPS is a high-density region, containing a magnetic polarity reversal associated with the passage of the HCS.\\
 
 Winterhalter1994 The heliospheric plasma sheet:\\
 the narrow heliospheric current sheet (ca. \SIrange{3000}{10000}{\km} thick), together with the heliospheric plasma sheet in which it is embedded. The heliospheric plasma sheet region is identified by a significantly enhanced plasma beta caused by density enhancements and diminished magnetic field strength and is about 20 to 30 times the thickness of the current sheet.\\
 
 The particularly low specific entropy structure in the slow solar wind is the high-density and low-temperature heliospheric plasma sheet (HPS). Kilpua2016\\
+
+solar wind parameters including speed, temperature, density, and composition vary with distance from the HCS \citep{Smith2001}.\\
 
 
 
@@ -1001,7 +986,7 @@ Different kind of data, collected from observatories at various locations, are u
 Spacecraft nowadays carry two different magnetometer types, one for measuring the magnetic field direction and its strength and the other for observing the magnetic flux and detecting waves.\\
 
 A flux-gate magnetometer consists of two coils around a core -- one coil with alternating current, wich is compared with the induced current signal from the other. Without external magnetic field both patterns match. The core is easier magnetized in direction of an existing external magnetic field, in which case the patterns differ. It measures...\\
-In a search coil magnetometer one coil is placed around a core; measures plasma waves - where?\\
+In a search coil magnetometer one coil is placed around a core; measures plasma waves -- where?\\
 
 Because these magnetometer types are directional, they often are placed in two sets of triaxial configurations, attached on booms to minimize the influence of the spacecraft's own magnetic field.\\
 L-> which is generated by surface charges?/electrons?/ionization?/the instruments?\\
@@ -1193,7 +1178,7 @@ Solar wind data courtesy of R.~Schwenn, Max-Planck-Institut für Aeronomie, Lind
 
 
 
-HELIOS~1 and 2 - orbital Parameters:\\
+HELIOS~1 and 2 -- orbital Parameters:\\
 \url{http://spdf.sci.gsfc.nasa.gov/pub/data/helios/helios1/traj/}\\
 \url{http://spdf.sci.gsfc.nasa.gov/pub/data/helios/helios2/traj/}\\
 
@@ -1202,10 +1187,10 @@ HELIOS1\_COHO1HR\_MERGED\_MAG\_PLASMA\_2965.txt\\
 HELIOS2\_COHO1HR\_MERGED\_MAG\_PLASMA\_3096.txt\\
 \url{http://cdaweb.gsfc.nasa.gov}\\
 temporal coverage of merged data\\
-Helios 1: 1974-12-10 - 1981-06-14\\
+Helios 1: 1974-12-10 -- 1981-06-14\\
 Mag data availability: 42.6~\%\\
 Plasma \& orbit data availability: 76.4~\%\\
-Helios 2: 1976-01-01 - 1980-03-04\\
+Helios 2: 1976-01-01 -- 1980-03-04\\
 Mag data availability: 54.4~\%\\
 Plasma \& orbit data availability: 91.8~\%\\
 

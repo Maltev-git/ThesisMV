@@ -339,7 +339,7 @@ The properties of solar wind are highly variable in time and space. The key prop
 % 1 liter air @ 1 bar (need 24 ms for passing 1 dm2 area @ 15 km/h)\\
 % equals\\
 % 3.7e6 km3 = (155 km)3 solar wind @ 6.5 cm-3 (need 43900 a for passing 1 dm2 area @ 400 km/s)\\
-Solar-wind quantities, such as particle flux densities, mass flux, pressures, and plasma beta, can be derived from the four listed parameters. Having the parameters in the aforementioned ranges, the solar wind is a plasma with a beta mostly greater than unity, that is, the average solar wind carries the HMF and its motions are not influenced by the field direction (for more on plasma beta see appendix \ref{sec:plasma_beta}).
+Solar-wind quantities, such as particle flux densities, mass flux, pressures, and plasma beta, can be derived from the four listed parameters. Having the parameters in the aforementioned ranges, the solar wind is a plasma with a beta mostly greater than unity, that is, the average solar wind carries the HMF and its motions are not influenced by the field direction (for more on plasma beta see appendix \autoref{sec:plasma_beta}).
 % mean beta: 1.714\\	%from mean paper values
 % low beta: 0.180\\	%from ranges above
 % high beta: 8.444\\	%from ranges above
@@ -355,9 +355,9 @@ This multitude of structures is apparent in the two months -- beginning in May~2
 \end{figure}
 The IMF and solar wind ion parameters were measured with the MAG and SWEPAM instruments onboard the Advanced Composition Explorer (ACE) spacecraft, located around the first Lagrange point (L1). The data have a time resolution of 64~seconds and are obtained from the ACE~Science~Center web interface\footnote{ACE Science Center website: \urlfoot{http://www.srl.caltech.edu/ACE/ASC/}}.
 
-Some general solar wind tendencies can be seen from this plot: The temperature of the solar wind scales with its stream velocity; compressed plasma regions enhance the magnetic field and the density; magnetic sector boundaries, HCSs, and MCs come with high densities and low temperatures; MCs in CMEs have high magnetic fields and low temperatures. I indicated the periods of occurring solar wind structures, that is, HSSs, CIRs, HCSs, and CMEs, with colored bars -- these types are further described in the following sections.
+Some general solar wind tendencies can be seen from this plot: The temperature of the solar wind scales with its stream velocity; compressed plasma regions enhance the magnetic field and the density; HCSs, magnetic sector boundaries, and MCs come with high densities and low temperatures; MCs in CMEs have high magnetic fields and low temperatures. I indicated the periods of occurring solar wind structures, that is, HSSs, CIRs, HCSs, and CMEs, with colored bars -- these types are further described in the following sections.
 
-There exist a lot more aspects/properties related to the solar wind, i.e., MHD waves, electron pitch angle, solar energetic particles, dust particles, and neutral energetic atoms. Yet, they are not covered here, because their relevance to the analyses in this work is considered minor.\\
+There exist a lot more aspects/properties related to the solar wind, i.e., MHD waves, the electron pitch angle, solar energetic particles, dust particles, and neutral energetic atoms. Yet, they are not covered here, because their relevance to the analyses in this work is considered minor.\\
 
 
 shocks \& MHD waves (Alfvén waves)\\
@@ -450,45 +450,19 @@ The plasma pressure inside CIRs is increasing with heliocentric distance and the
 % MIRs
 With increasing solar distance, the leading and trailing shock fronts travel away from the stream interface. This widens the interaction regions and eventually they gain on the close-by interaction regions \citep{Burlaga1984}. Beyond \SI{10}{\au} they fuse to merged interaction regions (MIRs), which are narrower and more compressed \citep{Burlaga1985}.
 
-% HCS connection
-Near the Sun, the HCS is surrounded by slow solar wind, stemming from the coronal streamer belt. However, with increasing solar distance, the shock wave of the adjacent SIR/CIR can pass the HCS, so that sector boundaries are often found to be embedded within SIRs/CIRs \citep{Gosling1999}.
-
 % in-situ signatures of SIRs
 Due to the compression within SIRs/CIRs, the magnetic field strength and the plasma density are higher than in the ambient streams. These signatures can be seen in the in-situ solar-wind plot i \autoref{fig:ACE_64s_v7_thesis_CIRs_2013-5-1_65_plot}. The CIRs on 5~May, 1~June, and 29~June 2013 are followed by recurrent HSSs and they contain sector boundaries as well. They are not yet accompanied by strong shocks owing to the measurement location at \SI{1}{\au}.
 
 
 \subsection{Heliospheric current sheet}
-
-the two polarities of the dipole being separated by the warped heliospheric current sheet (HCS) \citet{Owens2013}.\\
-The large-scale regions of opposite HMF polarity are separated by the heliospheric current sheet (HCS) \citet{Owens2013}\\
-
-Thus, spacecraft in near-Earth space will generally be close in heliolatitude to the HCS and will sample HMF polarities from both polar coronal holes as the Sun rotates \citet{Owens2013}.\\
-
-%in situ observations
-Periods of both two- and four-sector structures are seen. As the HCS is formed by open solar flux (OSF) of opposite polarities coming into contact by the non-radial expansion of separate coronal holes, the HCS maps to helmet streamers and is typically located within slow solar wind \citet{Owens2013}.\\
-% sector boundaries
-``Low He/H values are in particular reported near solar wind sector boundaries.'' (Borrini et al., 1981)\\
-Borrini et al. (1981) had found significant depletions in $n_\alpha/n_\text{p}$ around magnetic sector boundaries which are normally imbedded in slow solar wind.\\
-
+The HCS, the boundary surface between solar-wind streams of opposite magnetic polarity, is formed by open magnetic fluxes, expanding from both sides over closed field regions and coming into contact above. At the boundary between open and closed fields, local coronal plasma gets released and flows slowly between the fast wind streams along the current sheet into the heliosphere, creating a helmet streamer. This is why near the Sun, the HCS is typically located within slow solar wind stemming from the coronal streamer belt \citet{Owens2013}. However, with increasing solar distance, the shock wave of the adjacent SIR/CIR can pass the HCS, so that sector boundaries are often found to be embedded within SIRs/CIRs \citep{Gosling1999}.
 
 % heliospheric plasma sheet
-heliospheric plasma sheet (HPS)\\
-
-Crooker2004:\\
-definition: the HPS is a high-density region, containing a magnetic polarity reversal associated with the passage of the HCS.\\
-
-Winterhalter1994 The heliospheric plasma sheet:\\
-the narrow heliospheric current sheet (ca. \SIrange{3000}{10000}{\km} thick), together with the heliospheric plasma sheet in which it is embedded. The heliospheric plasma sheet region is identified by a significantly enhanced plasma beta caused by density enhancements and diminished magnetic field strength and is about 20 to 30 times the thickness of the current sheet.\\
-
-The particularly low specific entropy structure in the slow solar wind is the high-density and low-temperature heliospheric plasma sheet (HPS). Kilpua2016\\
-
-solar wind parameters including speed, temperature, density, and composition vary with distance from the HCS \citep{Smith2001}.\\
-
+Sector boundaries in the solar wind are observed in~situ, they come with significant depletions in $\text{He}^{++}\!/\text{H}^+$ values \citep{Borrini1981}. The other solar wind parameters, such as velocity, density, and temperature, change with distance from the HCS as well \citep{Smith2001}. The HCS region itself is quite narrow with a thickness of around \SIrange{3000}{10000}{\km}; it is embedded in a region of 20--30~times its thickness, the heliospheric plasma sheet (HPS) \citep{Winterhalter1994}. The HPS contains the magnetic polarity reversal and is of low magnetic field strength and high density, resulting in a significantly enhanced value of plasma beta \citep{Crooker2004}. In the slow solar wind, the HPS can also be identified from its particularly low specific entropy, arising from its low temperature and high density \citep{Kilpua2016}.
 
 
 \subsection{Coronal mass ejections}
 \label{sec:coronal_mass_ejections}
-
 
 For many references in this section, I adhere to the historical CME review by \citet{Gopalswamy2016}.\\
 historic review; Syun-Ichi Akasofu2011\\
@@ -998,6 +972,8 @@ Ground based magnetometers measure the local magnetic field of the Earth. They a
 
 examples:\\
 ACE/MAG -- flux-gate magnetometer\\
+
+%https://en.wikipedia.org/wiki/Spacecraft_magnetometer
 
 
 \section{Plasma detector}

@@ -2,91 +2,6 @@
 \chapter{Appendix}
 \label{chap:appendix}
 
-%in the end: sort sections in order of reference in work
-
-\section{Electromagnetism}	%maybe exclude this section?
-Electromagnetism is one of the four fundamental forces at the common level of energy. In all situations examined in this thesis (solar wind plasma, magnetosphere) it is by far the strongest force and the others can be neglected.\\
-
-%Lorentz force law as the definition of E and B\\
-%The electromagnetic force F on a test charge at a given point and time is a certain function of its charge q and velocity v, which can be parameterized by exactly two vectors E and B, in the functional form: (wiki)\\
-The Lorentz force law defines the electric and magnetic field vectors $\vect{E}$ and $\vect{B}$:
-\begin{align}
-	\vect{F} = q\,(\vect{E} + \vect{v} \times \vect{B})	\,,
-\end{align}
-with the charge $q$ the force is acting on and its velocity $v$.\\
-
-The Maxwell equations in differential notation:
-\begin{align}
-	\text{div}\,\vect{B} &= 0\\
-	\text{div}\,\vect{D} &= \rho\\
-	\text{rot}\,\vect{H} &= \vect{j} + \dot{\vect{D}}\\
-	\text{rot}\,\vect{E} &= - \dot{\vect{B}}
-\end{align}
-With the magnetic flux density $\vect{B}$ (aka magnetic field), the electric displacement field $\vect{D}$, the charge density $\rho$, the magnetic field $\vect{H}$, the electric field $\vect{E}$ and the current density $\vect{j}$.\\
-%note about B naming convention within this work as magnetic field strength% maybe put into beginning...
-
-
-\section{Plasma beta}
-\label{sec:plasma_beta}
-The thermal pressure of a plasma is defined as $p = n k_\text{B} T$, with the number density $n$ and the Boltzmann constant $k_\text{B}$. However, according to magnetohydrodynamics (MHD), the magnetic energy density $w_\text{mag} = \frac{B^2}{2 \mu_0}$, with the magnetic field strength $B$ and the permeability constant $\mu_0$, behaves like an additional pressure that adds to the thermal pressure of a plasma \citep[p.~50]{Kivelson1995}. The ratio of the thermal pressure to the magnetic pressure determines the behavior of the plasma. If the thermal pressure dominates the magnetic pressure (warm plasma), the plasma movements transport the magnetic field else the plasma movements are guided by the magnetic field lines (cold plasma). This ratio is called plasma beta:
-\begin{align}
-	\beta &= \frac{p}{p_\text{mag}}	\,,\\
-	&= \frac{2 \mu_0 n k_\text{B} T}{B^2}	\,.
-\end{align}
-The plasma at the photosphere has typical beta values around~14 and that of the low corona around~0.2 \citep{Gary2001}. Further up, beta raises again and the region where it equals~1 is defined as the source surface for the solar wind \citep{Schatten1969}.	% source surface where beta equals 1 (Schatten1969), at 0.6~Rs\\
-This surface is typically located at about \SIrange{1.2}{2.5}{\Rs} \citep{Gary2001}, more cites...\\
-% low source surface at 1.2~Rs (Gary2001)\\
-% typical value at about 2.5~Rs\\
-% source surface in the distance range of \SIrange{1.2}{4}{\Rs}\\
-
-The solar wind usually has plasma beta values higher than~1 -- it carries the solar magnetic field away into the heliosphere. Together with the solar rotation, this effect creates the spiral form of the interplanetary magnetic field (Parker spiral). Yet in some solar wind structures, such as magnetic clouds, $\beta \ll 1$ and thus the magnetic field can still contain the plasma.\\
-
-
-% https://omniweb.gsfc.nasa.gov/ftpbrowser/bow_derivation.html
-% Plasma beta = thermal energy density (= thermal pressure) /magnetic energy density
-%     = D*Np*k*Tp*8pi/B**2
-% Beta = [(4.16*10**-5 * Tp) + 5.34] * Np/B**2 (B in nT)
-
-
-%dynamic pressure $p_\text{dyn} = \rho v^2$\\
-%ram pressure??\\
-%VB1998p104
-
-
-\section{Alfvén velocity}
-\label{sec:alfvén_velocity}
-The incompressible wave mode within MHD plasmas, the shear Alfvén wave, consists of periodic disturbances in the magnetic field orthogonal to its direction \citep{Alfven1942}. Alfvén waves are prevalent in open coronal regions and therefore occur in fast solar wind \citep{Cranmer2005}. Their propagation velocity is an important parameter to characterize a plasma. In an ideal incompressible MHD plasma (viscosity $\mu = 0$ and electrical conductivity $\sigma = \infty$) the kinetic and magnetic energy density are of equal value \citep[p.~51]{Kivelson1995}: 
-\begin{align}
-	w_\text{kin} &= w_\text{mag}\\
-	\frac{\rho v^2}{2} &= \frac{B^2}{2 \mu_0}	\nonumber
-\end{align}
-with the permeability constant $\mu_0$ and the total mass density $\rho$ of the charged plasma particles. Thus, the Alfvén velocity can be calculated from
-\begin{align}
-	v_\text{A} = \frac{|B|}{\sqrt{\mu_0 \rho}}	\text{\,.}
-\end{align}
-The wave's phase velocity is
-\begin{align}
-	v_\text{ph} = v_\text{A} \cos(\theta)
-\end{align}
-with $\theta$ as the angle between wave propagation direction and magnetic field line, that is, Alfvén waves travel along magnetic field lines. They consist of periodic disturbances in the magnetic field, the electric field, the plasma velocity, and the current density. Plasma density, pressure and magnetic field magnitude are not affected by them. Additionally, there exist two types of compressional wave modes within MHD plasmas, the fast-mode wave and the slow-mode wave. The phase speeds of the three MHD waves meet $v_\text{fast} \geq v_\text{A} \geq v_\text{slow}$ \citep[p.~52]{Kivelson1995}. Within solar wind at \SI{1}{\au}, the typical frequency of Alfvén waves is 1--4 per hour and their average velocity is $v_\text{A} = \SI{56.8}{\km\per\s}$ \citep{Veselovsky2010}.\\	% at 1~au in 1963--2007\\
-
-Alfvén critical surface...\\
-sonic critical surfaces...\\
-
-
-%wolfram alpha:
-%solve v = 0.001*B/sqrt(mu*rho), B=5.6*10^-9, rho=5.3*10^6*1.66*10^-27, mu=4*pi*10^-7
-
-%v_A=53.3km/s for r=1au; B=5.6nT; N=5.3cm-3
-%v_A=91.5km/s for r=0.3 au; B=37.9nT; N=82.2cm-3
-%v_A=280.6km/s for r=0.04 au; B=930.6nT; N=5274cm-3
-
-%slow wind: v_A=28.5km/s for r=1au; B=4.7nT; N=13.0cm-3
-%fast wind: v_A=68.7km/s for r=1au; B=5.7nT; N=3.3cm-3
-
-%$v_\text{A} = 53$~km/s for $B = 5.6$~nT and $\rho = 5.3$~cm$^{-3}$
-
-
 \section{Solar surface differential rotation}
 \label{sec:solar_surface_differential_rotation}
 
@@ -160,6 +75,90 @@ are listed in \autoref{tab:solar_surface_rotation_periods}.\\
 %meridional flow
 
 The meridional circulation is the proposed equatorial updrift and polar downdrift - a result of Reynolds stress and convective transport (cite?).\\
+
+
+
+% \section{Electromagnetism}	%maybe exclude this section?
+% Electromagnetism is one of the four fundamental forces at the common level of energy. In all situations examined in this thesis (solar wind plasma, magnetosphere) it is by far the strongest force and the others can be neglected.\\
+% 
+% %Lorentz force law as the definition of E and B\\
+% %The electromagnetic force F on a test charge at a given point and time is a certain function of its charge q and velocity v, which can be parameterized by exactly two vectors E and B, in the functional form: (wiki)\\
+% The Lorentz force law defines the electric and magnetic field vectors $\vect{E}$ and $\vect{B}$:
+% \begin{align}
+% 	\vect{F} = q\,(\vect{E} + \vect{v} \times \vect{B})	\,,
+% \end{align}
+% with the charge $q$ the force is acting on and its velocity $v$.\\
+% 
+% The Maxwell equations in differential notation:
+% \begin{align}
+% 	\text{div}\,\vect{B} &= 0\\
+% 	\text{div}\,\vect{D} &= \rho\\
+% 	\text{rot}\,\vect{H} &= \vect{j} + \dot{\vect{D}}\\
+% 	\text{rot}\,\vect{E} &= - \dot{\vect{B}}
+% \end{align}
+% With the magnetic flux density $\vect{B}$ (aka magnetic field), the electric displacement field $\vect{D}$, the charge density $\rho$, the magnetic field $\vect{H}$, the electric field $\vect{E}$ and the current density $\vect{j}$.\\
+% %note about B naming convention within this work as magnetic field strength% maybe put into beginning...
+
+
+\section{Plasma beta}
+\label{sec:plasma_beta}
+The thermal pressure of a plasma is defined as $p = n k_\text{B} T$, with the number density $n$ and the Boltzmann constant $k_\text{B}$. However, according to magnetohydrodynamics (MHD), the magnetic energy density $w_\text{mag} = \frac{B^2}{2 \mu_0}$, with the magnetic field strength $B$ and the permeability constant $\mu_0$, behaves like an additional pressure that adds to the thermal pressure of a plasma \citep[p.~50]{Kivelson1995}. The ratio of the thermal pressure to the magnetic pressure determines the behavior of the plasma. If the thermal pressure dominates the magnetic pressure (warm plasma), the plasma movements transport the magnetic field else the plasma movements are guided by the magnetic field lines (cold plasma). This ratio is called plasma beta:
+\begin{align}
+	\beta &= \frac{p}{p_\text{mag}}	\,,\\
+	&= \frac{2 \mu_0 n k_\text{B} T}{B^2}	\,.
+\end{align}
+The plasma at the photosphere has typical beta values around~14 and that of the low corona around~0.2 \citep{Gary2001}. Further up, beta raises again and the region where it equals~1 is defined as the source surface for the solar wind \citep{Schatten1969}.	% source surface where beta equals 1 (Schatten1969), at 0.6~Rs\\
+This surface is typically located at about \SIrange{1.2}{2.5}{\Rs} \citep{Gary2001}, more cites...\\
+% low source surface at 1.2~Rs (Gary2001)\\
+% typical value at about 2.5~Rs\\
+% source surface in the distance range of \SIrange{1.2}{4}{\Rs}\\
+
+The solar wind usually has plasma beta values higher than~1 -- it carries the solar magnetic field away into the heliosphere. Together with the solar rotation, this effect creates the spiral form of the interplanetary magnetic field (Parker spiral). Yet in some solar wind structures, such as magnetic clouds, $\beta \ll 1$ and thus the magnetic field can still contain the plasma.\\
+
+
+% https://omniweb.gsfc.nasa.gov/ftpbrowser/bow_derivation.html
+% Plasma beta = thermal energy density (= thermal pressure) /magnetic energy density
+%     = D*Np*k*Tp*8pi/B**2
+% Beta = [(4.16*10**-5 * Tp) + 5.34] * Np/B**2 (B in nT)
+
+
+%dynamic pressure $p_\text{dyn} = \rho v^2$\\
+%ram pressure??\\
+%VB1998p104
+
+
+\section{Alfvén velocity}
+\label{sec:alfvén_velocity}
+The incompressible wave mode within MHD plasmas, the shear Alfvén wave, consists of periodic disturbances in the magnetic field orthogonal to its direction \citep{Alfven1942}. Alfvén waves are prevalent in open coronal regions and therefore occur in fast solar wind \citep{Cranmer2005}. Their propagation velocity is an important parameter to characterize a plasma. In an ideal incompressible MHD plasma (viscosity $\mu = 0$ and electrical conductivity $\sigma = \infty$) the kinetic and magnetic energy density are of equal value \citep[p.~51]{Kivelson1995}: 
+\begin{align}
+	w_\text{kin} &= w_\text{mag}\\
+	\frac{\rho v^2}{2} &= \frac{B^2}{2 \mu_0}	\nonumber
+\end{align}
+with the permeability constant $\mu_0$ and the total mass density $\rho$ of the charged plasma particles. Thus, the Alfvén velocity can be calculated from
+\begin{align}
+	v_\text{A} = \frac{|B|}{\sqrt{\mu_0 \rho}}	\text{\,.}
+\end{align}
+The wave's phase velocity is
+\begin{align}
+	v_\text{ph} = v_\text{A} \cos(\theta)
+\end{align}
+with $\theta$ as the angle between wave propagation direction and magnetic field line, that is, Alfvén waves travel along magnetic field lines. They consist of periodic disturbances in the magnetic field, the electric field, the plasma velocity, and the current density. Plasma density, pressure and magnetic field magnitude are not affected by them. Additionally, there exist two types of compressional wave modes within MHD plasmas, the fast-mode wave and the slow-mode wave. The phase speeds of the three MHD waves meet $v_\text{fast} \geq v_\text{A} \geq v_\text{slow}$ \citep[p.~52]{Kivelson1995}. Within solar wind at \SI{1}{\au}, the typical frequency of Alfvén waves is 1--4 per hour and their average velocity is $v_\text{A} = \SI{56.8}{\km\per\s}$ \citep{Veselovsky2010}.\\	% at 1~au in 1963--2007\\
+
+Alfvén critical surface...\\
+sonic critical surfaces...\\
+
+
+%wolfram alpha:
+%solve v = 0.001*B/sqrt(mu*rho), B=5.6*10^-9, rho=5.3*10^6*1.66*10^-27, mu=4*pi*10^-7
+
+%v_A=53.3km/s for r=1au; B=5.6nT; N=5.3cm-3
+%v_A=91.5km/s for r=0.3 au; B=37.9nT; N=82.2cm-3
+%v_A=280.6km/s for r=0.04 au; B=930.6nT; N=5274cm-3
+
+%slow wind: v_A=28.5km/s for r=1au; B=4.7nT; N=13.0cm-3
+%fast wind: v_A=68.7km/s for r=1au; B=5.7nT; N=3.3cm-3
+
+%$v_\text{A} = 53$~km/s for $B = 5.6$~nT and $\rho = 5.3$~cm$^{-3}$
 
 
 \section{Sun-Earth orbit geometry}

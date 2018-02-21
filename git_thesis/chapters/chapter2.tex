@@ -36,7 +36,7 @@ here I show...\\
 With the results presented in this chapter, I elaborate the step from the predicted CME and stream velocities to the forecast of the possible impact strength on the terrestrial magnetosphere. I derive an empirical correlation between the solar-wind speed and the geomagnetic \Kp~index, in order to obtain the capability to forecast \Kp{} values solely based on the predicted CME and stream velocities. The derived functional dependencies can be used to nowcast/forecast the \Kp~index.\\
 
 %general solar-wind nowcast; rt-data
-In-situ measurements of solar wind are made almost continuously, e.g., at the first Lagrange point (L1), in front of the magnetosphere. Since 1963 several spacecraft collected more than 50~years of data. The latest spacecraft, e.g., Wind, ACE and DSCOVR (launched in early 2015), provide real-time solar-wind data online\footnote{Wind real-time data website: \urlfoot{https://pwg.gsfc.nasa.gov/windnrt/}} \footnote{ACE real-time data website: \urlfoot{http://www.swpc.noaa.gov/products/ace-real-time-solar-wind}} \footnote{DSCOVR real-time data website: \urlfoot{http://www.swpc.noaa.gov/products/real-time-solar-wind}}.
+In-situ measurements of solar wind are made almost continuously, e.g., at the first Lagrange point (L1), in front of the magnetosphere. Since 1963 several spacecraft collected more than 50~years of solar-wind data. The latest spacecraft, e.g., Wind, ACE and DSCOVR (launched in early 2015), provide real-time solar-wind data online\footnote{Wind real-time data website: \urlfoot{https://pwg.gsfc.nasa.gov/windnrt/}} \footnote{ACE real-time data website: \urlfoot{http://www.swpc.noaa.gov/products/ace-real-time-solar-wind}} \footnote{DSCOVR real-time data website: \urlfoot{http://www.swpc.noaa.gov/products/real-time-solar-wind}}.
 % solar wind impacts
 These solar-wind real-time data are used to nowcast various effects on the Earth's magnetosphere, such as the position of the magnetospheric bow shock in front of the Earth, the magnitude of geomagnetic disturbances (e.g., \Kp~index), the positions of the polar auroral ovals, the variation of the total electron content (TEC) of the ionosphere, and the positional error of global navigation satellite systems (GNSS).\\
 
@@ -177,8 +177,8 @@ I use this velocity relationship for obtaining \Kp{} proxies from CME and solar 
 \section{\Kp{} nowcast from in-situ solar-wind measurements}
 \label{sec:kp_nowcast}
 
-\subsection{Data set, data processing and correlation}
-\label{sec:data_set__data_processing_and_correlation}
+\subsection{Data correlation}
+\label{sec:data_correlation}
 %determine data basis
 The \Kp{} time series started in 1932 when there existed no spacecraft to measure solar wind in~situ. Thus, the surveyed time range is defined by the available in-situ solar-wind data.\\
 
@@ -319,8 +319,8 @@ SWS lists \citep{Richardson2000} and \citep{Richardson2012}
 
 
 
-\subsection{Data processing and correlation}
-Again, I calculate 3-hour extreme values using the minutely OMNI data to profit from higher correlation coefficients, as done before for the data processing of the \vBz{} analysis in Sect.~\ref{sec:data_set__data_processing_and_correlation}. The velocity has only positive values, thus its extreme values are 3-hour maximum values. The comparison between the 3-hour maximum and the 3-hour mean frequency distributions shows that their mean position shifts from a velocity of 405 to \SI{425}{\km\per\s}, see Fig.~\ref{fig:histogram_V_b}.
+\subsection{Data correlation}
+Again, I calculate 3-hour extreme values using the minutely OMNI data to profit from higher correlation coefficients, as done before for the data processing of the \vBz{} analysis in Sect.~\ref{sec:data_correlation}. The velocity has only positive values, thus its extreme values are 3-hour maximum values. The comparison between the 3-hour maximum and the 3-hour mean frequency distributions shows that their mean position shifts from a velocity of 405 to \SI{425}{\km\per\s}, see Fig.~\ref{fig:histogram_V_b}.
 %the SWS1 mean raises from 435 to 455~km/s in 3hmax data...\\
 \begin{figure}[htb]
 	\begin{floatrow}
@@ -462,13 +462,13 @@ which can be used to forecast the \Kp{}~index from the estimated stream velocity
 
 \section{Discussion and summary}
 The following results/relations are obtained from the analyses:
-\begin{itemize}
+\begin{itemize*}
 	\item solar activity: \Kp{}-SSN relation with half a \Kp{}~unit as error
 	\item seasonal variations: about 1~\Kp{}~unit
 	\item solar-wind nowcast: \Kp-\vBz{} relation (average and worst case)
 	\item CME forecast: \Kp-velocity relation (average and worst case)
 	\item stream forecast: \Kp-velocity relation (average and worst case)
-\end{itemize}
+\end{itemize*}
 
 CMEs can be faster than the maximal velocities included in the OMNI data. Instrumental effects (specify...) lead to data gaps during these periods. Yet, CME speeds of up to XX~km/s at \SI{1}{\au} were observed in-situ (cite paper ref.). A CME speed of \SI{2000}{\km\per\s} would lead on average to a theoretical \Kp{} of 12.17, however, the \Kp{} scale is capped at 9o. This maximal value is reached already at a velocity of 1489~km/s.\\
 
@@ -484,22 +484,22 @@ similar to \citet{Elliott2013}; different data time period, resolution and avera
 'scientists develop an advanced prototype space weather warning system to ensure the operation of telecommunication and navigation systems on Earth to the threat of solar storms' AFFECTS\\
 
 Prototype/precursor relations are integrated into applications developed within the Advanced Forecast For Ensuring Communications Through Space (\mbox{AFFECTS}) project which ran from 2011 to 2013. The following services, accessible via the \mbox{AFFECTS} website\footnote{AFFECTS website (existent in 2017-11-19): \urlfoot{http://www.affects-fp7.eu/services/}}, contain results from this \Kp{} study (all links existent in 2017-11-19):
-\begin{itemize}
+\begin{itemize*}
 	\item DSCOVR real-time solar-wind with \Kp{} plot \urltext{http://www.affects-fp7.eu/rssfeeds/ace_ap_plot/ace_realtime_ap_plot.png}
 	\item DSCOVR real-time solar-wind and \Kp{} forecast plot \urltext{http://www.affects-fp7.eu/rssfeeds/ace_ap_forecast_plot/ace_realtime_ap_CH_GFT_plot.png}
 	\item RSS L1 Kp Alert: \urltext{http://www.affects-fp7.eu/rssfeeds/rssfeed_kp/rssfeed_kp.xml}
 	\item RSS L1 GNSS Alert: \urltext{http://www.affects-fp7.eu/rssfeeds/rssfeed_gnss/rssfeed_gnss.xml}
 	\item RSS L1 Aurora Alert: \urltext{http://www.affects-fp7.eu/rssfeeds/rssfeed_aurora/rssfeed_aurora.xml}
-\end{itemize}
+\end{itemize*}
 
 Further applications of resulting \Kp{}-relations:
-\begin{itemize}
+\begin{itemize*}
 	\item CME \Kp{} impact (part of UGOE DDC)
 	\item iPhone app L1 Alerts (Solar wind latest 2-hour extreme values and derived forecast values): \urltext{http://www.affects-fp7.eu/app-services/L1-Alerts/dataL1Alerts.txt} \urltext{https://itunes.apple.com/au/app/affects/id893579846}
 	\item Android app L1 Alerts... \urltext{https://play.google.com/store/apps/details?id=com.afects.forecasts}
 	\item has SW-Display Kp forecast??
 	\item exclude? Kp forecast calculation: \urltext{http://www.astro.physik.uni-goettingen.de/~mvenzmer/kp_forecast_calculation/kp_forecast_calculation.php}
-\end{itemize}
+\end{itemize*}
 
 make real links...\\
 
@@ -511,8 +511,12 @@ Separate structures such as CIRs and HCSs for their \Kp-impact separately...\\
 All provided web links in this work were existent in [date].\\
 
 
+CME Kp impact as part of DDC\\
+- \textit{Kp} nowcast with L1 solar wind measurements (L1 alerts, disseminated as RSS feeds; integrated in smartphone app and space weather display)\\
+- Forecast of the possible CME impact on the Earth's magnetosphere (\textit{Kp} index) from the predicted CME arrival velocity (integrated in UGOE CME forecast chain (aka DDC))\\
 
-\section{notes}
+
+\section{notes...}
 
 % Alle Presis ausschlachten!\\
 % Alle Projektberichte ausschlachten!\\
@@ -523,41 +527,18 @@ All provided web links in this work were existent in [date].\\
 %the relation of these events was confirmed two decades ago by (who and \citet{Bothmer1993})\\
 
 
-\subsection{Solar wind structure analyses}
-How strong do different structure types influence the terrestrial magnetosphere?\\
 What kind of solar wind structures create the individual regions in this distribution?\\
 What is their individual contribution to the Kp ranges (e.g. high Kp: CMEs 70\% and CIRs 30\%)?\\
 
-ACE solar wind time series and event list\\
-sw-timeseries ACE OPTIMAP ``Zeitreihe''-events
-
-method: automatic list creation by event detection via parameter thresholds...\\
-
-sample CME analyses (MVA -> Kp)\\
+ACE solar wind time series and event list (ACE OPTIMAP ``Zeitreihe''-events)\\
 
 
-\subsection{Forecast}
 How can the impact field strength of CMEs be forecasted (V->B correlation for CMEs)?\\
-Internal solar wind correlations:\\
-B-V correlation\\
+Internal solar wind correlations: B-V correlation\\
 ACE MAGSWE 64~s data -> yearly overlay plot\\
 
-applications:\\
-rssfeeds, rtsw plots\\
-CME Kp impact as part of DDC\\
-- \textit{Kp} nowcast with L1 solar wind measurements (L1 alerts, disseminated as RSS feeds; integrated in smartphone app and space weather display)\\
-- Forecast of the possible CME impact on the Earth's magnetosphere (\textit{Kp} index) from the predicted CME arrival velocity (integrated in UGOE CME forecast chain (aka DDC))\\
 
-\subsection{rt-data}
-Advanced Composition Explorer (ACE), launch date was 25 August 1997\\
-Wind, STEREO, SOHO, CELIAS\\
-rt data errors/gaps...\\
-Several services/alerts are based on the data streams from real-time measurements. (L1 alerts, etc.)\\
+rt data errors/gaps... vs science data (see paper Kp as V replacement)\\
 DSCOVR as replacement was launched on 11~Februar 2015. It is NOAA's SWPC real-time solar-wind prime source since 27 July 2016.\footnote{\urlfoot{http://www.swpc.noaa.gov/products/real-time-solar-wind}}\\
-
-
-\section{Acknowledgments}
-The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under the grant agreement number 263506 (AFFECTS). The results presented in this paper rely on the \Kp{}~index, calculated and made available by the German Research Centre for Geosciences in Potsdam from data collected at magnetic observatories. We thank the involved national institutes, the INTERMAGNET network and ISGI (isgi.unistra.fr). The authors thank the OMNI PIs/teams for creating and making available the solar-wind in-situ data. The OMNI data are supplied by the NASA Space Science Data Coordinated Archive and the Space Physics Data Facility at NASA's Goddard Space Flight Center. Additional thanks for maintaining and providing the international sunspot number series goes to the World Data Center -- Sunspot Index and Long-term Solar Observations at the Solar Influences Data Analysis Center (SIDC), Royal Observatory of Belgium. The hourly solar wind structure list was kindly provided by Ian~Richardson of the NASA Goddard Space Flight Center and CRESST/University of Maryland via the CEDAR Database at the National Center for Atmospheric Research, which is supported by the National Science Foundation.
-
 
 

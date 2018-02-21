@@ -1,0 +1,79 @@
+Return-path: <dave.hathaway@comcast.net>
+Envelope-to: mvenzmer@astro.physik.uni-goettingen.de
+Delivery-date: Fri, 16 Feb 2018 20:26:13 +0100
+Received: from mailer.gwdg.de ([134.76.10.26])
+	by ms0.astro.physik.uni-goettingen.de with esmtps (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256)
+	(Exim 4.89)
+	(envelope-from <dave.hathaway@comcast.net>)
+	id 1emle9-00032h-HQ
+	for mvenzmer@astro.physik.uni-goettingen.de; Fri, 16 Feb 2018 20:26:13 +0100
+Received: from mfilter-123-1-2.mx.srv.dfn.de ([194.95.234.60])
+	by mailer.gwdg.de with esmtps (TLSv1.2:DHE-RSA-AES256-GCM-SHA384:256)
+	(Exim 4.80)
+	(envelope-from <dave.hathaway@comcast.net>)
+	id 1emle9-0005Ei-Er
+	for mvenzmer@astro.physik.uni-goettingen.de; Fri, 16 Feb 2018 20:26:13 +0100
+X-Virus-Scanned: Debian amavisd-new at mgw3-tub.srv.dfn.de
+X-Spam-Flag: NO
+X-Spam-Score: -1.61
+X-Spam-Level:
+X-Spam-Status: No, score=-1.61 tagged_above=-200 required=6.2
+	tests=[BAYES_50=0.5, BOGO_HAM=-2, DKIM_SIGNED=0.1, DKIM_VALID=-0.1,
+	DKIM_VALID_AU=-0.1, FREEMAIL_FROM=0.001, RCVD_IN_DNSWL_NONE=-0.0001,
+	SPF_PASS=-0.001, T_RP_MATCHES_RCVD=-0.01] autolearn=disabled
+Received: from resqmta-po-06v.sys.comcast.net (resqmta-po-06v.sys.comcast.net [96.114.154.165])
+	by mfilter-123-1-2.mx.srv.dfn.de (Postfix) with ESMTPS
+	for <mvenzmer@astro.physik.uni-goettingen.de>; Fri, 16 Feb 2018 20:26:08 +0100 (CET)
+Received: from resomta-po-19v.sys.comcast.net ([96.114.154.243])
+	by resqmta-po-06v.sys.comcast.net with ESMTP
+	id mld7esEXbbv6EmldwexHkO; Fri, 16 Feb 2018 19:26:00 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=comcast.net;
+	s=q20161114; t=1518809160;
+	bh=wQVzAGC/hSQF+T3QebLf/ht8f00liJLnvbydPqT5Lhk=;
+	h=Received:Received:From:Content-Type:Mime-Version:Date:Subject:
+	 Message-Id:To;
+	b=FV380tgzWGd0UChZuKWxLdZH14EZmqXCyFXVtb+Sd1nKNi97J9KwBZyAt1QEAcui2
+	 D3uVTqtgl2/pYA3UgdWNqsZFNVOG2P+177VYXvGthFTerMa7A2IZK70gz71y7s/Q3d
+	 zB1W6NFgc56d2srQwbzx9G6+PAG63y/m3Fx9b50N2OTosUWdZontwiCATaZdV6BUBf
+	 0s0BEInPK4Uk1GqmE7k0ehkXbsrYcuAKJjf+sSFPQwnXZ3415z4s3tA4+ymGfISFJv
+	 7GOm6IhlTuj6F3bEnlPOFzxZucqI/1LjRED/uo6BdUh/zBFCYeFWGI3+k/h9vl9s/G
+	 b05b+EEkisA8Q==
+Received: from [IPv6:2601:646:8981:8090:4d3d:4ac9:945e:64de] ([IPv6:2601:646:8981:8090:4d3d:4ac9:945e:64de])
+	by resomta-po-19v.sys.comcast.net with SMTP
+	id mldtel72ruvgamldueQ61V; Fri, 16 Feb 2018 19:25:59 +0000
+From: David Hathaway <dave.hathaway@comcast.net>
+Content-Type: text/plain;
+	charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
+Mime-Version: 1.0 (1.0)
+Date: Fri, 16 Feb 2018 11:25:57 -0800
+Subject: Re: Permission to use a figure
+Message-Id: <4F386C35-95EF-4DD1-B01F-0C356C8A9E1F@comcast.net>
+References: <1bda7205-2f0c-6123-6b9b-231df70b2b4b@astro.physik.uni-goettingen.de>
+In-Reply-To: <1bda7205-2f0c-6123-6b9b-231df70b2b4b@astro.physik.uni-goettingen.de>
+To: Malte Venzmer <mvenzmer@astro.physik.uni-goettingen.de>
+X-Mailer: iPhone Mail (15D60)
+X-CMAE-Envelope: MS4wfNMWajI6uybPf1OJbg4EoTyEWM/MulMDJ69FhBQDRtycgamkDKWkxMNArz+HlytsQKoLEiO3WiB6+jhLj63NU+rmjil+BqfnG4hxSUvddaxQSV1aL6Hq
+ 0VN4oKMLw5Jm3B7Lx391FE9QOJgdBYuHIW4IOewXjM4iNwRb0TBiUpP+vbo4+vOtNVJQqD+6jGQGaJpzRJMu47CDVXEhUQaCotP5tWCBy6uXkccoKwJ+ZLWu
+
+Permission granted. Wishing you the best on your dissertation.
+
+Sent from my iPhone
+
+> On Feb 16, 2018, at 7:24 AM, Malte Venzmer <mvenzmer@astro.physik.uni-goet=
+tingen.de> wrote:
+>=20
+> Dear Mr. Hathaway,
+>=20
+> I seek permission to use the current magnetic butterfly diagram figure
+> found in
+> http://solarcyclescience.com/solarcycle.html
+> in my dissertation.
+>=20
+> I know the older version from your review and would refer to it as well:
+> Hathaway, D. H. 2015, The Solar Cycle, Living Reviews in Solar Physics,
+> 12, 4.
+>=20
+> Thanks in advance, best regards,
+> Malte Venzmer
+

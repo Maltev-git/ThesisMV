@@ -268,20 +268,20 @@ order=5
 
 [item:chapters/front_matter.tex]
 archive=true
-column=26
+column=53
 encoding=UTF-8
 highlight=LaTeX
-line=246
+line=247
 mode=LaTeX
 open=true
 order=1
 
 [item:chapters/introduction.tex]
 archive=true
-column=0
+column=123
 encoding=UTF-8
 highlight=LaTeX
-line=480
+line=942
 mode=LaTeX
 open=true
 order=3
@@ -433,16 +433,16 @@ JumpList=
 ViMarks=.,81,38,[,81,38,],81,38
 
 [view-settings,view=0,item:chapters/front_matter.tex]
-CursorColumn=26
-CursorLine=246
+CursorColumn=53
+CursorLine=247
 JumpList=
-ViMarks=.,246,25,[,246,25,],246,25
+ViMarks=.,247,52,[,247,15,],247,52
 
 [view-settings,view=0,item:chapters/introduction.tex]
-CursorColumn=0
-CursorLine=480
+CursorColumn=123
+CursorLine=942
 JumpList=
-ViMarks=.,480,0,[,480,0,],480,0
+ViMarks=.,942,123,[,942,123,],942,123
 
 [view-settings,view=0,item:chapters/paperMVVB_wrapper.tex]
 CursorColumn=0

@@ -1,0 +1,563 @@
+Return-path: <permissions@iop.org>
+Envelope-to: mvenzmer@astro.physik.uni-goettingen.de
+Delivery-date: Wed, 28 Feb 2018 12:48:52 +0100
+Received: from mailer.gwdg.de ([134.76.10.26])
+	by ms0.astro.physik.uni-goettingen.de with esmtps (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256)
+	(Exim 4.89)
+	(envelope-from <permissions@iop.org>)
+	id 1er0E8-0008Ex-1k
+	for mvenzmer@astro.physik.uni-goettingen.de; Wed, 28 Feb 2018 12:48:52 +0100
+Received: from mfilter-123-1-3.mx.srv.dfn.de ([194.95.238.60])
+	by mailer.gwdg.de with esmtps (TLSv1.2:DHE-RSA-AES256-GCM-SHA384:256)
+	(Exim 4.80)
+	(envelope-from <permissions@iop.org>)
+	id 1er0E7-0007cX-TZ
+	for mvenzmer@astro.physik.uni-goettingen.de; Wed, 28 Feb 2018 12:48:51 +0100
+X-Virus-Scanned: Debian amavisd-new at mgw3-erl.srv.dfn.de
+X-Spam-Flag: NO
+X-Spam-Score: 0.579
+X-Spam-Level:
+X-Spam-Status: No, score=0.579 tagged_above=-200 required=6.2
+	tests=[BAYES_50=0.5, BOGO_HAM=-2, DKIM_SIGNED=0.1, HTML_MESSAGE=0.001,
+	HTTPS_HTTP_MISMATCH=1.989, RCVD_IN_DNSWL_MED=-0.01, SPF_PASS=-0.001,
+	T_DKIM_INVALID=0.01, URIBL_WHITE=-0.01] autolearn=disabled
+Received: from eu-smtp-delivery-122.mimecast.com (eu-smtp-delivery-122.mimecast.com [207.82.80.122])
+	by mfilter-123-1-3.mx.srv.dfn.de (Postfix) with ESMTPS
+	for <mvenzmer@astro.physik.uni-goettingen.de>; Wed, 28 Feb 2018 12:48:46 +0100 (CET)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=ioporg0.onmicrosoft.com; s=selector1-iop-org;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=YG9XqEW+eGdzrMzdV8s+GU8rK1zeAtpY5sUBNt+Nptk=;
+ b=nEZcFpz2WCSMEoxqXRcvEWt0JLU76phd9xoyeP8MNWzmWTjHoHwYgCahBm3eEV/QC9R8ytXXbpC1sPXVf4vjMnpVVlvYBi+fUJHHXX8JNUYlHbf6DXL7rHIcNm1DAGp5yeJiPImV/sU7kZSBZQpN5AeKRdkvy35DhbCkUsDCSe4=
+Received: from GBR01-LO2-obe.outbound.protection.outlook.com
+ (mail-lo2gbr01lp0178.outbound.protection.outlook.com [23.103.134.178])
+ (Using TLS) by eu-smtp-1.mimecast.com with ESMTP id
+ uk-mta-90-BctqrAwjOYy5YcuXVjE9wQ-1; Wed, 28 Feb 2018 11:48:43 +0000
+Received: from LOXP123MB1031.GBRP123.PROD.OUTLOOK.COM (10.166.251.146) by
+ LOXP123MB1143.GBRP123.PROD.OUTLOOK.COM (10.166.252.136) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P256) id
+ 15.20.527.15; Wed, 28 Feb 2018 11:48:42 +0000
+Received: from LOXP123MB1031.GBRP123.PROD.OUTLOOK.COM ([10.166.251.146]) by
+ LOXP123MB1031.GBRP123.PROD.OUTLOOK.COM ([10.166.251.146]) with mapi id
+ 15.20.0527.021; Wed, 28 Feb 2018 11:48:42 +0000
+From: Permissions <permissions@iop.org>
+To: Malte Venzmer <mvenzmer@astro.physik.uni-goettingen.de>
+Subject: Re: Re: Permission to use a figure
+Thread-Topic: Re: Permission to use a figure
+Thread-Index: AQHTr6tZJPFl3+MSlkOeLOCZVzeqE6O5s7on
+Date: Wed, 28 Feb 2018 11:48:42 +0000
+Message-ID: <LOXP123MB10317346DCBAA0EC02762C5EA0C70@LOXP123MB1031.GBRP123.PROD.OUTLOOK.COM>
+References: <968318d6-7916-ab9b-894b-fc5a80891844@lpl.arizona.edu>,<199380ec-72c6-4279-eba4-a3227767ae06@astro.physik.uni-goettingen.de>
+In-Reply-To: <199380ec-72c6-4279-eba4-a3227767ae06@astro.physik.uni-goettingen.de>
+Accept-Language: en-GB, en-US
+Content-Language: en-GB
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+x-originating-ip: [89.202.245.164]
+x-ms-publictraffictype: Email
+x-microsoft-exchange-diagnostics: 1;LOXP123MB1143;7:OcESRy7DxHWnX0Bfc/q9tlFtIHnHfoP4/RSznhT9tAmDr0KsjPH0a1RF5Fc0hXl0IpkgZZqyHOz9a2V4ALof81ZoFdibyN92HsFWcBYd926DAPgCPj85qWC8gO9PtYSuqJ125ikZAWmWd8R1/7z7Di5r982lpeakIR/gFr7+LVRRy2G4hkqsh1KUfJExzBlJ/WrHtizYSP5gICjFKr8BuoR7gn98HN2J6pz/xjabqNGrgXeaGOYKjRph9NbhM9BH
+x-ms-exchange-antispam-srfa-diagnostics: SSOS;
+x-ms-office365-filtering-correlation-id: 92638896-ee8b-45e5-30b6-08d57ea13753
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(7020095)(4652020)(4534165)(4627221)(201703031133081)(201702281549075)(5600026)(4604075)(3008032)(2017052603307)(7153060)(7193020);SRVR:LOXP123MB1143;
+x-ms-traffictypediagnostic: LOXP123MB1143:
+x-microsoft-antispam-prvs: <LOXP123MB11430BF1C89A6390816D6BDEA0C70@LOXP123MB1143.GBRP123.PROD.OUTLOOK.COM>
+x-exchange-antispam-report-test: UriScan:(189930954265078)(35762410373642)(45079756050767)(60252528090998);
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(8211001083)(6040501)(2401047)(8121501046)(5005006)(3002001)(3231220)(944501217)(93006095)(93001095)(10201501046)(6041288)(20161123558120)(20161123562045)(20161123560045)(20161123564045)(201703131423095)(201702281529075)(201702281528075)(20161123555045)(201703061421075)(201703061406153)(6072148)(201708071742011);SRVR:LOXP123MB1143;BCL:0;PCL:0;RULEID:;SRVR:LOXP123MB1143;
+x-forefront-prvs: 0597911EE1
+x-forefront-antispam-report: SFV:NSPM;SFS:(10019020)(376002)(366004)(396003)(346002)(39380400002)(39850400004)(189003)(51874003)(252514010)(199004)(53936002)(345774005)(3280700002)(2906002)(97736004)(478600001)(45080400002)(229853002)(33656002)(6606003)(6436002)(2950100002)(966005)(68736007)(413944005)(14454004)(6116002)(19627405001)(9686003)(55016002)(8936002)(81156014)(81166006)(102836004)(606006)(6306002)(26005)(25786009)(99286004)(186003)(6916009)(77096007)(8676002)(105586002)(106356001)(7696005)(3846002)(6506007)(76176011)(59450400001)(7736002)(316002)(53376002)(2900100001)(74316002)(66066001)(3660700001)(53546011)(6246003)(5660300001)(5890100001)(575784001)(786003)(236005)(86362001)(54896002);DIR:OUT;SFP:1102;SCL:1;SRVR:LOXP123MB1143;H:LOXP123MB1031.GBRP123.PROD.OUTLOOK.COM;FPR:;SPF:None;PTR:InfoNoRecords;MX:1;A:1;LANG:en;
+x-microsoft-antispam-message-info: QUPCRygCHvyL5T6SfSBUg3qrCmgA3fg09jLIMojese4p7OQQN2atutUDJvgKltqXe9nP1LKxBEN57ofgYUuW8RXy1XM8DQ2pu99g0Uuslxa1gNZrYC37BbzeeW03B1hQSCyNzaAQ1VvjrruUZzgQ5DrC5f1nxs+vkwrHdt5Fzfk=
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+MIME-Version: 1.0
+X-OriginatorOrg: iop.org
+X-MS-Exchange-CrossTenant-Network-Message-Id: 92638896-ee8b-45e5-30b6-08d57ea13753
+X-MS-Exchange-CrossTenant-originalarrivaltime: 28 Feb 2018 11:48:42.5045
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: f9ee42e6-bad0-4e63-9115-f704f9ccceed
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: LOXP123MB1143
+X-MC-Unique: BctqrAwjOYy5YcuXVjE9wQ-1
+Content-Type: multipart/alternative;
+	boundary="_000_LOXP123MB10317346DCBAA0EC02762C5EA0C70LOXP123MB1031GBRP_"
+
+--_000_LOXP123MB10317346DCBAA0EC02762C5EA0C70LOXP123MB1031GBRP_
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Dear Malte Venzmer,
+
+Thank you for providing confirmation that you have received the consent of =
+the authors to reproduce content from AAS journals in your thesis
+
+Regarding:
+
+Figure 2 - Astrophysical Journal, Part 1, vol. 243, Feb. 1, 1981, p. 1115-1=
+122
+
+I am happy to confirm that permission is granted and you need take no furth=
+er action.
+
+Please include the following alongside the material:
+
+o      the source of the material, including author, article title, title o=
+f journal, volume number, issue number (if relevant), page range (or first =
+page if this is the only information available) and date of first publicati=
+on. This material can be contained in a footnote or reference.
+o      for material being published electronically, a link back to the arti=
+cle (via DOI)
+o      if practical and IN ALL CASES for works published under any of the C=
+reative Commons licences the words "=C2=A9 AAS. Reproduced with permission"=
+.
+This permission does not apply to any material/figure which is credited to =
+another source in the AAS publication or has been obtained from a third par=
+ty.  Express permission for such materials/figures must be obtained from th=
+e copyright owner.
+Kind regards,
+Christina
+
+
+Copyright & Permissions Team
+Gemma Alaway =E2=80=93 Senior Rights & Permissions Adviser
+Christina Colwell - Rights & Permissions Assistant
+
+Contact Details
+E-mail: permissions@iop.org<mailto:permissions@iop.org>
+For further information about copyright and how to request permission: http=
+://iopscience.iop.org/page/copyright<https://emea01.safelinks.protection.ou=
+tlook.com/?url=3Dhttp%3A%2F%2Fiopscience.iop.org%2Fpage%2Fcopyright&data=3D=
+02%7C01%7Cchristina.colwell%40iop.org%7Cc490136a905a4fd5d84f08d4f46893da%7C=
+f9ee42e6bad04e639115f704f9ccceed%7C1%7C0%7C636402177379623514&sdata=3D1v2XH=
+HSLh9r7tlMATQGJfEu4E1fGQpJ%2BbEDATENoIU4%3D&reserved=3D0>
+Please see our Author Rights Policy http://ioppublishing.org/author-rights/=
+<https://emea01.safelinks.protection.outlook.com/?url=3Dhttp%3A%2F%2Fioppub=
+lishing.org%2Fauthor-rights%2F&data=3D02%7C01%7Cchristina.colwell%40iop.org=
+%7Cc490136a905a4fd5d84f08d4f46893da%7Cf9ee42e6bad04e639115f704f9ccceed%7C1%=
+7C0%7C636402177379623514&sdata=3Dh661G6zyxEiPwVYlPPwstDEjBruIcsoy47Lo8Q8fVh=
+Q%3D&reserved=3D0>
+Please note: We do not provide signed permission forms as a separate attach=
+ment. Please print this email and provide it to your publisher as proof of =
+permission.
+
+Please note: Any statements made by IOP Publishing to the effect that autho=
+rs do not need to get permission to use any content where IOP Publishing is=
+ not the publisher is not intended to constitute any sort of legal advice. =
+Authors must make their own decisions as to the suitability of the content =
+they are using and whether they require permission for it to be published w=
+ithin their article.
+
+
+
+
+________________________________
+From: Malte Venzmer <mvenzmer@astro.physik.uni-goettingen.de>
+Sent: 27 February 2018 09:14
+To: Permissions
+Subject: Fwd: Re: Permission to use a figure
+
+Dear IOP Copyright & Permissions Team,
+
+I seek permission to use the figure 2 from the ApJ article
+
+Effects of drift on the transport of cosmic rays. IV - Modulation by a
+wavy interplanetary current sheet
+https://emea01.safelinks.protection.outlook.com/?url=3Dhttp%3A%2F%2Fadsabs.=
+harvard.edu%2Fabs%2F1981ApJ...243.1115J&data=3D02%7C01%7Cpermissions%40iop.=
+org%7C7ec9f5b8510942a761e908d57dc27b3e%7Cf9ee42e6bad04e639115f704f9ccceed%7=
+C1%7C0%7C636553196595314308&sdata=3D2xoV6FKpnKK0da2ZKTBHtcGeZgz7LmdLLnwhFqP=
+pCCw%3D&reserved=3D0
+
+in my dissertation.
+
+Below the email confirmation of Mr. Jokipii's permission.
+
+Thanks in advance and best regards,
+Malte Venzmer
+
+
+
+-------- Forwarded Message --------
+Subject: Re: Permission to use a figure
+Date: Mon, 26 Feb 2018 08:38:44 -0700
+From: jokipii <jokipii@lpl.arizona.edu>
+To: Malte Venzmer <mvenzmer@astro.physik.uni-goettingen.de>
+
+You have my permission to use the figure.
+
+On 2/25/2018 4:44 AM, Malte Venzmer wrote:
+> Dear Mr. Jokipii,
+>
+> I seek permission to use figure 2 from your article
+>
+> Effects of drift on the transport of cosmic rays. IV - Modulation by a
+> wavy interplanetary current sheet
+> https://emea01.safelinks.protection.outlook.com/?url=3Dhttp%3A%2F%2Fadsab=
+s.harvard.edu%2Fabs%2F1981ApJ...243.1115J&data=3D02%7C01%7Cpermissions%40io=
+p.org%7C7ec9f5b8510942a761e908d57dc27b3e%7Cf9ee42e6bad04e639115f704f9ccceed=
+%7C1%7C0%7C636553196595314308&sdata=3D2xoV6FKpnKK0da2ZKTBHtcGeZgz7LmdLLnwhF=
+qPpCCw%3D&reserved=3D0
+>
+> in my dissertation.
+>
+> Best regards,
+> Malte Venzmer
+
+--
+J. R. Jokipii
+Regents' Professor Emeritus
+University of Arizona
+Tel: 520-621-4256
+Cell: 520-203-2720=0A******************************************************=
+******************=0AThis email (and attachments) are confidential and inte=
+nded for the addressee(s) only. If you are not the intended recipient pleas=
+e notify the sender,=20=0Adelete any copies and do not take action in relia=
+nce on it. Any views expressed are the author's and do not represent those =
+of IOP, except where=20=0Aspecifically stated. IOP takes reasonable precaut=
+ions to protect against viruses but accepts no responsibility for loss or d=
+amage arising from virus infection.=20=0AFor the protection of IOP's system=
+s and staff emails are scanned automatically.=0A=0AIOP Publishing Limited R=
+egistered in England under Registration No 467514. Registered Office: Templ=
+e Circus, Bristol BS1 6HG England=0AVat No GB 461 6000 84.=0APlease conside=
+r the environment before printing this e-mail.
+
+--_000_LOXP123MB10317346DCBAA0EC02762C5EA0C70LOXP123MB1031GBRP_
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DWindows-1=
+252">
+<style type=3D"text/css" style=3D"display:none;"><!-- P {margin-top:0;margi=
+n-bottom:0;} --></style>
+</head><body dir=3D"ltr">=0A   =20
+<div id=3D"divtagdefaultwrapper" style=3D"font-size:12pt;color:#000000;font=
+-family:Calibri,Helvetica,sans-serif;" dir=3D"ltr">
+<p style=3D"margin-top:0;margin-bottom:0"><span style=3D"font-family: Calib=
+ri,Helvetica,sans-serif; font-size: 10pt;">Dear Malte Venzmer,
+</span><br>
+</p>
+<p style=3D"margin-top:0;margin-bottom:0"><br>
+</p>
+<p style=3D"margin-top:0;margin-bottom:0"></p>
+<div>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:=0Anormal;mso-layout-grid-align:none;text-autospace:none">
+<span style=3D"font-size:=0A10.0pt;font-family:&quot;Calibri&quot;,sans-ser=
+if;mso-bidi-font-family:Helv;color:black"><span style=3D"font-family: Calib=
+ri,Helvetica,sans-serif; font-size: 10pt;">Thank you for providing confirma=
+tion that you have received the consent of the authors
+ to reproduce content from AAS journals </span><b style=3D"mso-bidi-font-we=
+ight:=0Anormal"><i style=3D"mso-bidi-font-style:normal"><span style=3D"font=
+-family: Calibri,Helvetica,sans-serif; font-size: 10pt;">in your thesis</sp=
+an></i></b></span></p>
+<span style=3D"font-family: Calibri,Helvetica,sans-serif; font-size: 10pt;"=
+></span>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:=0Anormal;mso-layout-grid-align:none;text-autospace:none">
+<span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif; =
+color: black;">&nbsp;</span></p>
+<span style=3D"font-family: Calibri,Helvetica,sans-serif; font-size: 10pt;"=
+></span>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:=0Anormal;mso-layout-grid-align:none;text-autospace:none">
+<b style=3D"mso-bidi-font-weight:=0Anormal"><i style=3D"mso-bidi-font-style=
+:normal"><span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,san=
+s-serif; color: black;">Regarding:</span></i></b></p>
+<span style=3D"font-family: Calibri,Helvetica,sans-serif; font-size: 10pt;"=
+></span>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:=0Anormal;mso-layout-grid-align:none;text-autospace:none">
+<b style=3D"mso-bidi-font-weight:=0Anormal"><i style=3D"mso-bidi-font-style=
+:normal"><span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,san=
+s-serif; color: black;">&nbsp;</span></i></b></p>
+<span style=3D"font-family: Calibri,Helvetica,sans-serif; font-size: 10pt;"=
+></span>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;tex=
+t-indent:=0A36.0pt;line-height:normal;mso-layout-grid-align:none;text-autos=
+pace:none">
+<b style=3D"mso-bidi-font-weight:normal"><i style=3D"mso-bidi-font-style:no=
+rmal"><span style=3D"font-size:10.0pt;font-family:&quot;Calibri&quot;,sans-=
+serif;mso-bidi-font-family:=0AHelv;color:black"><span style=3D"font-family:=
+ Calibri,Helvetica,sans-serif; font-size: 10pt;">Figure
+ 2 - </span><span style=3D"font-family: Calibri,Helvetica,sans-serif; font-=
+size: 10pt;">Astrophysical Journal, Part 1, vol. 243, Feb. 1, 1981, p. 1115=
+-1122</span><br>
+</span></i></b></p>
+<span style=3D"font-family: Calibri,Helvetica,sans-serif; font-size: 10pt;"=
+></span>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:=0Anormal;mso-layout-grid-align:none;text-autospace:none">
+<span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif; =
+color: black;">&nbsp;</span></p>
+<span style=3D"font-family: Calibri,Helvetica,sans-serif; font-size: 10pt;"=
+></span>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:=0Anormal;mso-layout-grid-align:none;text-autospace:none">
+<span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif; =
+color: black;">I am happy to confirm that permission is granted and you nee=
+d take no further action.</span></p>
+<span style=3D"font-family: Calibri,Helvetica,sans-serif; font-size: 10pt;"=
+></span>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:=0Anormal;mso-layout-grid-align:none;text-autospace:none">
+<span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif; =
+color: black;">&nbsp;</span></p>
+<span style=3D"font-family: Calibri,Helvetica,sans-serif; font-size: 10pt;"=
+></span>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:=0Anormal;mso-layout-grid-align:none;text-autospace:none">
+<span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif; =
+color: black;">Please include the following alongside the material:
+</span></p>
+<span style=3D"font-family: Calibri,Helvetica,sans-serif; font-size: 10pt;"=
+></span>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:=0Anormal;mso-layout-grid-align:none;text-autospace:none">
+<span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif; =
+color: black;">&nbsp;</span></p>
+<span style=3D"font-family: Calibri,Helvetica,sans-serif; font-size: 10pt;"=
+></span>
+<p class=3D"MsoNormal" style=3D"margin-top:0cm;margin-right:0cm;margin-bott=
+om:12.0pt;=0Amargin-left:72.0pt;text-indent:-18.0pt;line-height:normal;mso-=
+layout-grid-align:=0Anone;text-autospace:none">
+<span style=3D"font-size:10.0pt;font-family:&quot;Calibri&quot;,sans-serif;=
+=0Amso-bidi-font-family:&quot;Courier New&quot;;color:black"><span style=3D=
+"font-family: Calibri,Helvetica,sans-serif; font-size: 10pt;">o</span><span=
+ style=3D"font-family: Calibri,Helvetica,sans-serif; font-size: 10pt;">&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style=3D"font-size: 10pt; font-family: Calibri,Helvetic=
+a,sans-serif; color: black;">the source of the material, including author, =
+article title, title of journal, volume number, issue number (if relevant),=
+ page range (or first page if this
+ is the only information available) and date of first publication. This mat=
+erial can be contained in a footnote or reference.</span></p>
+<span style=3D"font-family: Calibri,Helvetica,sans-serif; font-size: 10pt;"=
+></span>
+<p class=3D"MsoNormal" style=3D"margin-top:0cm;margin-right:0cm;margin-bott=
+om:12.0pt;=0Amargin-left:72.0pt;text-indent:-18.0pt;line-height:normal;mso-=
+layout-grid-align:=0Anone;text-autospace:none">
+<span style=3D"font-size:10.0pt;font-family:&quot;Calibri&quot;,sans-serif;=
+=0Amso-bidi-font-family:&quot;Courier New&quot;;color:black"><span style=3D=
+"font-family: Calibri,Helvetica,sans-serif; font-size: 10pt;">o</span><span=
+ style=3D"font-family: Calibri,Helvetica,sans-serif; font-size: 10pt;">&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style=3D"font-size: 10pt; font-family: Calibri,Helvetic=
+a,sans-serif; color: black;">for material being published electronically, a=
+ link back to the article (via DOI)</span></p>
+<span style=3D"font-family: Calibri,Helvetica,sans-serif; font-size: 10pt;"=
+></span>
+<p class=3D"MsoNormal" style=3D"margin-top:0cm;margin-right:0cm;margin-bott=
+om:12.0pt;=0Amargin-left:72.0pt;text-indent:-18.0pt;line-height:normal;mso-=
+layout-grid-align:=0Anone;text-autospace:none">
+<span style=3D"font-size:10.0pt;font-family:&quot;Calibri&quot;,sans-serif;=
+=0Amso-bidi-font-family:&quot;Courier New&quot;;color:black"><span style=3D=
+"font-family: Calibri,Helvetica,sans-serif; font-size: 10pt;">o</span><span=
+ style=3D"font-family: Calibri,Helvetica,sans-serif; font-size: 10pt;">&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style=3D"font-size:10.0pt;font-family:&quot;Calibri&quo=
+t;,sans-serif;=0Amso-bidi-font-family:Helv;color:black"><span style=3D"font=
+-family: Calibri,Helvetica,sans-serif; font-size: 10pt;">if practical and I=
+N ALL CASES for works published under any of the
+ Creative Commons licences the words &quot;=C2=A9 AAS. Reproduced with perm=
+ission&quot;.</span><span style=3D"font-family: Calibri,Helvetica,sans-seri=
+f; font-size: 10pt;">&nbsp;
+</span></span></p>
+<span style=3D"font-family: Calibri,Helvetica,sans-serif; font-size: 10pt;"=
+></span>
+<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt;line-height:normal;mso=
+-layout-grid-align:=0Anone;text-autospace:none">
+<span style=3D"font-size:10.0pt;font-family:&quot;Calibri&quot;,sans-serif;=
+=0Amso-bidi-font-family:Helv;color:black"><span style=3D"font-family: Calib=
+ri,Helvetica,sans-serif; font-size: 10pt;">This permission does not apply t=
+o any material/figure which is credited to another
+ source in the AAS publication or has been obtained from a third party.</sp=
+an><span style=3D"font-family: Calibri,Helvetica,sans-serif; font-size: 10p=
+t;">&nbsp;
+</span><span style=3D"font-family: Calibri,Helvetica,sans-serif; font-size:=
+ 10pt;">Express permission for such materials/figures must be obtained from=
+ the copyright owner.</span></span></p>
+<span style=3D"font-family: Calibri,Helvetica,sans-serif; font-size: 10pt;"=
+></span>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:=0Anormal;mso-layout-grid-align:none;text-autospace:none">
+<span style=3D"font-size: 10pt; font-family: Calibri,Helvetica,sans-serif; =
+color: black;">Kind regards,</span></p>
+<span style=3D"font-family: Calibri,Helvetica,sans-serif; font-size: 10pt;"=
+></span></div>
+<span style=3D"font-family: Calibri,Helvetica,sans-serif; font-size: 10pt;"=
+>Christina</span><br>
+<p></p>
+<p style=3D"margin-top:0;margin-bottom:0"><br>
+</p>
+<p style=3D"margin-top:0;margin-bottom:0"><br>
+</p>
+<div id=3D"Signature">
+<div id=3D"divtagdefaultwrapper" dir=3D"ltr" style=3D"font-size: 12pt; colo=
+r: rgb(0, 0, 0); font-family: Calibri,Helvetica,sans-serif,&quot;EmojiFont&=
+quot;,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,NotoColorEmo=
+ji,&quot;Segoe UI Symbol&quot;,&quot;Android Emoji&quot;,EmojiSymbols;">
+<p></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt; font-family:&quo=
+t;Arial&quot;,sans-serif">Copyright &amp; Permissions Team</span></b><span =
+style=3D"font-size:10.0pt; font-family:&quot;Arial&quot;,sans-serif"><br>
+Gemma Alaway =E2=80=93 Senior Rights &amp; Permissions Adviser</span><span =
+style=3D""> <br>
+</span><span style=3D"font-size:10.0pt; font-family:&quot;Arial&quot;,sans-=
+serif">Christina Colwell - Rights &amp; Permissions Assistant</span><span s=
+tyle=3D"">
+<br>
+</span><span style=3D"font-size:10.0pt; font-family:&quot;Arial&quot;,sans-=
+serif"><br>
+Contact Details<br>
+E-mail: </span><span style=3D""><a href=3D"mailto:permissions@iop.org" id=
+=3D"LPNoLP"><span style=3D"font-size:10.0pt; font-family:&quot;Arial&quot;,=
+sans-serif; color:blue">permissions@iop.org</span></a>
+</span><span style=3D"font-size:12.0pt"></span></p>
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-size:10.0pt; font-fam=
+ily:&quot;Arial&quot;,sans-serif">For further information about copyright a=
+nd how to request permission:
+</span><span style=3D"font-size:12.0pt; font-family:&quot;Times New Roman&q=
+uot;,serif"><a href=3D"https://emea01.safelinks.protection.outlook.com/?url=
+=3Dhttp%3A%2F%2Fiopscience.iop.org%2Fpage%2Fcopyright&amp;data=3D02%7C01%7C=
+christina.colwell%40iop.org%7Cc490136a905a4fd5d84f08d4f46893da%7Cf9ee42e6ba=
+d04e639115f704f9ccceed%7C1%7C0%7C636402177379623514&amp;sdata=3D1v2XHHSLh9r=
+7tlMATQGJfEu4E1fGQpJ%2BbEDATENoIU4%3D&amp;reserved=3D0" id=3D"LPNoLP"><span=
+ style=3D"font-size:10.0pt; font-family:&quot;Arial&quot;,sans-serif; color=
+:blue">http://iopscience.iop.org/page/copyright</span></a>
+</span></p>
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-size:10.0pt; font-fam=
+ily:&quot;Arial&quot;,sans-serif">Please see our Author Rights Policy
+</span><span style=3D"font-size:12.0pt; font-family:&quot;Times New Roman&q=
+uot;,serif"><a href=3D"https://emea01.safelinks.protection.outlook.com/?url=
+=3Dhttp%3A%2F%2Fioppublishing.org%2Fauthor-rights%2F&amp;data=3D02%7C01%7Cc=
+hristina.colwell%40iop.org%7Cc490136a905a4fd5d84f08d4f46893da%7Cf9ee42e6bad=
+04e639115f704f9ccceed%7C1%7C0%7C636402177379623514&amp;sdata=3Dh661G6zyxEiP=
+wVYlPPwstDEjBruIcsoy47Lo8Q8fVhQ%3D&amp;reserved=3D0" id=3D"LPNoLP"><span st=
+yle=3D"font-size:10.0pt; font-family:&quot;Arial&quot;,sans-serif; color:bl=
+ue">http://ioppublishing.org/author-rights/</span></a>
+</span></p>
+<b><span style=3D"font-size:10.0pt; font-family:&quot;Arial&quot;,sans-seri=
+f">Please note</span></b><span style=3D"font-size:10.0pt; font-family:&quot=
+;Arial&quot;,sans-serif">: We do not provide signed permission forms as a s=
+eparate attachment. Please print this email and provide
+ it to your publisher as proof of permission.</span><span style=3D"font-siz=
+e:11.0pt; font-family:&quot;Calibri&quot;,sans-serif">
+<br>
+<br>
+</span><b><span style=3D"font-size:10.0pt; font-family:&quot;Arial&quot;,sa=
+ns-serif">Please note</span></b><span style=3D"font-size:10.0pt; font-famil=
+y:&quot;Arial&quot;,sans-serif">: Any statements made by IOP Publishing to =
+the effect that authors do not need to get permission to
+ use any content where IOP Publishing is not the publisher is not intended =
+to constitute any sort of legal advice. Authors must make their own decisio=
+ns as to the suitability of the content they are using and whether they req=
+uire permission for it to be published
+ within their article.</span><span style=3D"font-size:11.0pt; font-family:&=
+quot;Calibri&quot;,sans-serif">
+<br style=3D"">
+<br style=3D"">
+</span><br>
+<p></p>
+</div>
+</div>
+<br>
+<br>
+<div style=3D"color: rgb(0, 0, 0);">
+<hr style=3D"display:inline-block;width:98%" tabindex=3D"-1">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font style=3D"font-size:11pt" color=
+=3D"#000000" face=3D"Calibri, sans-serif"><b>From:</b> Malte Venzmer &lt;mv=
+enzmer@astro.physik.uni-goettingen.de&gt;<br>
+<b>Sent:</b> 27 February 2018 09:14<br>
+<b>To:</b> Permissions<br>
+<b>Subject:</b> Fwd: Re: Permission to use a figure</font>
+<div>&nbsp;</div>
+</div>
+<div class=3D"BodyFragment"><font size=3D"2"><span style=3D"font-size:11pt;=
+">
+<div class=3D"PlainText">Dear IOP Copyright &amp; Permissions Team,<br>
+<br>
+I seek permission to use the figure 2 from the ApJ article<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+Effects of drift on the transport of cosmic rays. IV - Modulation by a<br>
+wavy interplanetary current sheet<br>
+<a href=3D"https://emea01.safelinks.protection.outlook.com/?url=3Dhttp%3A%2=
+F%2Fadsabs.harvard.edu%2Fabs%2F1981ApJ...243.1115J&amp;data=3D02%7C01%7Cper=
+missions%40iop.org%7C7ec9f5b8510942a761e908d57dc27b3e%7Cf9ee42e6bad04e63911=
+5f704f9ccceed%7C1%7C0%7C636553196595314308&amp;sdata=3D2xoV6FKpnKK0da2ZKTBH=
+tcGeZgz7LmdLLnwhFqPpCCw%3D&amp;reserved=3D0">https://emea01.safelinks.prote=
+ction.outlook.com/?url=3Dhttp%3A%2F%2Fadsabs.harvard.edu%2Fabs%2F1981ApJ...=
+243.1115J&amp;data=3D02%7C01%7Cpermissions%40iop.org%7C7ec9f5b8510942a761e9=
+08d57dc27b3e%7Cf9ee42e6bad04e639115f704f9ccceed%7C1%7C0%7C63655319659531430=
+8&amp;sdata=3D2xoV6FKpnKK0da2ZKTBHtcGeZgz7LmdLLnwhFqPpCCw%3D&amp;reserved=
+=3D0</a><br>
+<br>
+in my dissertation.<br>
+<br>
+Below the email confirmation of Mr. Jokipii's permission.<br>
+<br>
+Thanks in advance and best regards,<br>
+Malte Venzmer<br>
+<br>
+<br>
+<br>
+-------- Forwarded Message --------<br>
+Subject: Re: Permission to use a figure<br>
+Date: Mon, 26 Feb 2018 08:38:44 -0700<br>
+From: jokipii &lt;jokipii@lpl.arizona.edu&gt;<br>
+To: Malte Venzmer &lt;mvenzmer@astro.physik.uni-goettingen.de&gt;<br>
+<br>
+You have my permission to use the figure.<br>
+<br>
+On 2/25/2018 4:44 AM, Malte Venzmer wrote:<br>
+&gt; Dear Mr. Jokipii,<br>
+&gt;<br>
+&gt; I seek permission to use figure 2 from your article<br>
+&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&gt; Effects of drift on the transport of cosmic rays. IV - Modulation by a=
+<br>
+&gt; wavy interplanetary current sheet<br>
+&gt; <a href=3D"https://emea01.safelinks.protection.outlook.com/?url=3Dhttp=
+%3A%2F%2Fadsabs.harvard.edu%2Fabs%2F1981ApJ...243.1115J&amp;data=3D02%7C01%=
+7Cpermissions%40iop.org%7C7ec9f5b8510942a761e908d57dc27b3e%7Cf9ee42e6bad04e=
+639115f704f9ccceed%7C1%7C0%7C636553196595314308&amp;sdata=3D2xoV6FKpnKK0da2=
+ZKTBHtcGeZgz7LmdLLnwhFqPpCCw%3D&amp;reserved=3D0">
+https://emea01.safelinks.protection.outlook.com/?url=3Dhttp%3A%2F%2Fadsabs.=
+harvard.edu%2Fabs%2F1981ApJ...243.1115J&amp;data=3D02%7C01%7Cpermissions%40=
+iop.org%7C7ec9f5b8510942a761e908d57dc27b3e%7Cf9ee42e6bad04e639115f704f9ccce=
+ed%7C1%7C0%7C636553196595314308&amp;sdata=3D2xoV6FKpnKK0da2ZKTBHtcGeZgz7Lmd=
+LLnwhFqPpCCw%3D&amp;reserved=3D0</a><br>
+&gt;<br>
+&gt; in my dissertation.<br>
+&gt;<br>
+&gt; Best regards,<br>
+&gt; Malte Venzmer<br>
+<br>
+-- <br>
+J. R. Jokipii<br>
+Regents' Professor Emeritus<br>
+University of Arizona<br>
+Tel: 520-621-4256<br>
+Cell: 520-203-2720<br>
+<br>
+</div>
+</span></font></div>
+</div>
+</div>
+
+
+=0A    <br />=0A    <br />=0A  =20=0A<hr />=0A<br />=0AThis email (and atta=
+chments) are confidential and intended for the addressee(s) only. If you ar=
+e not the intended recipient please notify the sender,=20=0Adelete any copi=
+es and do not take action in reliance on it. Any views expressed are the au=
+thor's and do not represent those of IOP, except where specifically=20=0Ast=
+ated. IOP takes reasonable precautions to protect against viruses but accep=
+ts no responsibility for loss or damage arising from virus infection.=20=0A=
+For the protection of IOP's systems and staff emails are scanned automatica=
+lly.=0A<br /><br />=0A<b>IOP Publishing Limited</b> Registered in England u=
+nder Registration No 467514. Registered Office: Temple Circus, Bristol BS1 =
+6HG England=0AVat No GB 461 6000 84.<br /><p>=0A<font color=3D"#009900" fac=
+e=3D"verdana,arial,helvetica" size=3D"2"> <strong>Please=0Aconsider the env=
+ironment before printing this email</strong></font>=0A</p><hr />=0A=0A=0A  =
+  </body></html>
+
+--_000_LOXP123MB10317346DCBAA0EC02762C5EA0C70LOXP123MB1031GBRP_--
+

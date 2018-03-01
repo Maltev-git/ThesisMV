@@ -132,3 +132,34 @@
 \usepackage{pdfpages}
 
 
+%\usepackage{multicol}
+
+\usepackage{listings}
+\lstset{
+	basicstyle={\tiny\ttfamily},
+	keepspaces=true,
+	frame=single,
+	numbers=none,
+	aboveskip=1ex,
+	breaklines=true,
+	postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+	breakatwhitespace=false,
+  tabsize=3,
+	extendedchars=true,
+	literate={ä}{{\"a}}1 {Ä}{{\"A}}1 {ö}{{\"o}}1 {Ö}{{\"O}}1 {ü}{{\"u}}1 {Ü}{{\"U}}1 {á}{{\'a}}1 {í}{{\'i}}1 {é}{{\'e}}1 {ů}{{\r{u}}}1 {ř}{{\v{r}}}1 {ě}{{\v{e}}}1
+}
+
+% list of figures thumbnails
+\newlength{\lofthumbsize}
+\setlength{\lofthumbsize}{4em}
+\newif\iflofimage
+\DeclareRobustCommand*{\lofimage}[2][]{
+  \iflofimage
+    $\vbox to \lofthumbsize{\vss
+      \hbox to \lofthumbsize{\hss\includegraphics[{width=\lofthumbsize,height=\lofthumbsize,keepaspectratio=true,#1}]{#2}\hss}
+    \vss}$
+    \quad
+  \fi
+  \ignorespaces
+}
+\lofimagefalse

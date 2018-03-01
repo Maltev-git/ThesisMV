@@ -4,7 +4,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.1.3
-lastDocument=chapters/front_matter.tex
+lastDocument=chapters/introduction.tex
 masterDocument=
 name=thesis_project
 pkg_extIsRegExp=false
@@ -121,6 +121,13 @@ Highlighting=LaTeX
 Indentation Mode=normal
 Mode=LaTeX
 
+[document-settings,item:figure_permissions.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Indentation Mode=normal
+Mode=LaTeX
+
 [document-settings,item:notes.tex]
 Bookmarks=
 Encoding=UTF-8
@@ -213,7 +220,7 @@ encoding=UTF-8
 highlight=BibTeX
 line=1404
 mode=BibTeX
-open=true
+open=false
 order=4
 
 [item:appendix/literature_bibtex_custom_entries.bib]
@@ -228,10 +235,10 @@ order=-1
 
 [item:chapters/analyses_helios.tex]
 archive=true
-column=43
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=37
+line=63
 mode=LaTeX
 open=false
 order=4
@@ -268,20 +275,20 @@ order=5
 
 [item:chapters/front_matter.tex]
 archive=true
-column=53
+column=52
 encoding=UTF-8
 highlight=LaTeX
-line=247
+line=248
 mode=LaTeX
 open=true
 order=1
 
 [item:chapters/introduction.tex]
 archive=true
-column=123
+column=93
 encoding=UTF-8
 highlight=LaTeX
-line=942
+line=77
 mode=LaTeX
 open=true
 order=3
@@ -298,13 +305,23 @@ order=9
 
 [item:chapters/paperMVVB_wrapper_pdf.tex]
 archive=true
-column=5
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=2
+line=17
 mode=LaTeX
 open=false
 order=0
+
+[item:figure_permissions.tex]
+archive=true
+column=70
+encoding=UTF-8
+highlight=LaTeX
+line=31
+mode=LaTeX
+open=true
+order=4
 
 [item:notes.tex]
 archive=true
@@ -328,10 +345,10 @@ order=-1
 
 [item:style/header.tex]
 archive=true
-column=78
+column=28
 encoding=UTF-8
 highlight=LaTeX
-line=1
+line=151
 mode=LaTeX
 open=true
 order=0
@@ -351,7 +368,7 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=0
+line=72
 mode=LaTeX
 open=true
 order=2
@@ -409,10 +426,10 @@ JumpList=
 ViMarks=.,0,0,[,1,0,],-1,-1
 
 [view-settings,view=0,item:chapters/analyses_helios.tex]
-CursorColumn=43
-CursorLine=37
+CursorColumn=0
+CursorLine=63
 JumpList=
-ViMarks=.,37,42,[,37,29,],37,42
+ViMarks=.,63,0,[,63,0,],63,0
 
 [view-settings,view=0,item:chapters/chapter2.tex]
 CursorColumn=33
@@ -433,16 +450,16 @@ JumpList=
 ViMarks=.,81,38,[,81,38,],81,38
 
 [view-settings,view=0,item:chapters/front_matter.tex]
-CursorColumn=53
-CursorLine=247
+CursorColumn=52
+CursorLine=248
 JumpList=
-ViMarks=.,247,52,[,247,15,],247,52
+ViMarks=.,248,51,[,248,47,],248,51
 
 [view-settings,view=0,item:chapters/introduction.tex]
-CursorColumn=123
-CursorLine=942
+CursorColumn=93
+CursorLine=77
 JumpList=
-ViMarks=.,942,123,[,942,123,],942,123
+ViMarks=.,77,85,[,77,85,],77,92
 
 [view-settings,view=0,item:chapters/paperMVVB_wrapper.tex]
 CursorColumn=0
@@ -451,10 +468,16 @@ JumpList=
 ViMarks=.,12,31,[,11,0,],-1,-1
 
 [view-settings,view=0,item:chapters/paperMVVB_wrapper_pdf.tex]
-CursorColumn=5
-CursorLine=2
+CursorColumn=0
+CursorLine=17
 JumpList=
 ViMarks=.,2,4,[,2,2,],2,4
+
+[view-settings,view=0,item:figure_permissions.tex]
+CursorColumn=70
+CursorLine=31
+JumpList=
+ViMarks=.,15,109,[,15,109,],15,109,a,27,1
 
 [view-settings,view=0,item:notes.tex]
 CursorColumn=36
@@ -469,10 +492,10 @@ JumpList=
 ViMarks=.,778,73,[,778,73,],778,73
 
 [view-settings,view=0,item:style/header.tex]
-CursorColumn=78
-CursorLine=1
+CursorColumn=28
+CursorLine=151
 JumpList=
-ViMarks=.,1,78,[,1,78,],1,78
+ViMarks=.,151,27,[,151,0,],151,27
 
 [view-settings,view=0,item:style/short_commands_malte.tex]
 CursorColumn=22
@@ -482,6 +505,6 @@ ViMarks=.,38,22,[,38,22,],38,22
 
 [view-settings,view=0,item:thesis.tex]
 CursorColumn=0
-CursorLine=0
+CursorLine=72
 JumpList=
-ViMarks=.,69,32,[,69,23,],69,32
+ViMarks=.,95,0,[,95,0,],95,0

@@ -235,13 +235,13 @@ order=-1
 
 [item:chapters/analyses_helios.tex]
 archive=true
-column=0
+column=178
 encoding=UTF-8
 highlight=LaTeX
-line=63
+line=55
 mode=LaTeX
-open=false
-order=4
+open=true
+order=5
 
 [item:chapters/chapter2.tex]
 archive=true
@@ -285,10 +285,10 @@ order=1
 
 [item:chapters/introduction.tex]
 archive=true
-column=93
+column=86
 encoding=UTF-8
 highlight=LaTeX
-line=77
+line=1173
 mode=LaTeX
 open=true
 order=3
@@ -315,20 +315,20 @@ order=0
 
 [item:figure_permissions.tex]
 archive=true
-column=70
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=31
+line=55
 mode=LaTeX
 open=true
 order=4
 
 [item:notes.tex]
 archive=true
-column=36
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=16
+line=0
 mode=LaTeX
 open=false
 order=8
@@ -368,7 +368,7 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=72
+line=0
 mode=LaTeX
 open=true
 order=2
@@ -426,10 +426,10 @@ JumpList=
 ViMarks=.,0,0,[,1,0,],-1,-1
 
 [view-settings,view=0,item:chapters/analyses_helios.tex]
-CursorColumn=0
-CursorLine=63
+CursorColumn=178
+CursorLine=55
 JumpList=
-ViMarks=.,63,0,[,63,0,],63,0
+ViMarks=.,55,76,[,55,12,],55,177
 
 [view-settings,view=0,item:chapters/chapter2.tex]
 CursorColumn=33
@@ -456,10 +456,10 @@ JumpList=
 ViMarks=.,248,51,[,248,47,],248,51
 
 [view-settings,view=0,item:chapters/introduction.tex]
-CursorColumn=93
-CursorLine=77
+CursorColumn=86
+CursorLine=1173
 JumpList=
-ViMarks=.,77,85,[,77,85,],77,92
+ViMarks=.,1173,85,[,1173,71,],1173,85
 
 [view-settings,view=0,item:chapters/paperMVVB_wrapper.tex]
 CursorColumn=0
@@ -474,14 +474,14 @@ JumpList=
 ViMarks=.,2,4,[,2,2,],2,4
 
 [view-settings,view=0,item:figure_permissions.tex]
-CursorColumn=70
-CursorLine=31
+CursorColumn=0
+CursorLine=55
 JumpList=
-ViMarks=.,15,109,[,15,109,],15,109,a,27,1
+ViMarks=.,5,0,[,5,0,],5,0
 
 [view-settings,view=0,item:notes.tex]
-CursorColumn=36
-CursorLine=16
+CursorColumn=0
+CursorLine=0
 JumpList=
 ViMarks=.,16,35,[,16,18,],16,35
 
@@ -505,6 +505,6 @@ ViMarks=.,38,22,[,38,22,],38,22
 
 [view-settings,view=0,item:thesis.tex]
 CursorColumn=0
-CursorLine=72
+CursorLine=0
 JumpList=
 ViMarks=.,95,0,[,95,0,],95,0

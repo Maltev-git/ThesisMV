@@ -215,12 +215,12 @@ order=2
 
 [item:appendix/literature_bibtex_combined.bib]
 archive=true
-column=367
+column=17
 encoding=UTF-8
 highlight=BibTeX
-line=1404
+line=2402
 mode=BibTeX
-open=false
+open=true
 order=4
 
 [item:appendix/literature_bibtex_custom_entries.bib]
@@ -275,7 +275,7 @@ order=5
 
 [item:chapters/front_matter.tex]
 archive=true
-column=22
+column=24
 encoding=UTF-8
 highlight=LaTeX
 line=250
@@ -288,7 +288,7 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=519
+line=537
 mode=LaTeX
 open=true
 order=3
@@ -414,10 +414,10 @@ JumpList=
 ViMarks=.,697,97,[,697,97,],697,97
 
 [view-settings,view=0,item:appendix/literature_bibtex_combined.bib]
-CursorColumn=367
-CursorLine=1404
+CursorColumn=17
+CursorLine=2402
 JumpList=
-ViMarks=.,1404,367,[,1404,367,],1404,367
+ViMarks=.,2402,17,[,2402,17,],2402,17
 
 [view-settings,view=0,item:appendix/literature_bibtex_custom_entries.bib]
 CursorColumn=0
@@ -450,16 +450,16 @@ JumpList=
 ViMarks=.,81,38,[,81,38,],81,38
 
 [view-settings,view=0,item:chapters/front_matter.tex]
-CursorColumn=22
+CursorColumn=24
 CursorLine=250
 JumpList=
-ViMarks=.,249,82,[,249,34,],249,82
+ViMarks=.,250,24,[,250,24,],250,24
 
 [view-settings,view=0,item:chapters/introduction.tex]
 CursorColumn=0
-CursorLine=519
+CursorLine=537
 JumpList=
-ViMarks=.,526,0,[,527,0,],-1,-1
+ViMarks=.,537,0,[,537,0,],537,0
 
 [view-settings,view=0,item:chapters/paperMVVB_wrapper.tex]
 CursorColumn=0

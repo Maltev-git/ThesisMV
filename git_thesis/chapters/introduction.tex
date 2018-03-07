@@ -396,7 +396,7 @@ This multitude of structures is apparent in the two months -- beginning in May~2
 	\centering
 	\includegraphics[width=\textwidth]{figures_of_mine/gnuplots/ACE_64s_v7_thesis_CIRs_2013-5-1_65_plot.pdf}
 	\caption[\lofimage{figures_of_mine/gnuplots/ACE_64s_v7_thesis_CIRs_2013-5-1_65_plot.pdf}]
-	{Solar wind with several structures, measured at L1 during the time period 1~May to 5~July in 2013. The parameters are the magnetic field strength, its field angle in the ecliptic in GSE~coordinates, the proton velocity, density, and temperature. I indicated periods of prominent solar wind structures with color bars: HSSs in blue, CIRs in green, HCSs in purple, and CMEs in red. In the velocity panel also the field polarity is color coded -- assuming a Parker spiral angle of \SI{135}{\degree} at L1. Blank periods indicate bad or missing data. The data are 64~s measurements from the ACE spacecraft.}
+	{Solar wind with several structures, measured at L1 during the time period 1~May to 5~July in 2013. The parameters are the magnetic field strength, its field angle in the ecliptic in GSE~coordinates, the proton velocity, density, and temperature. I indicated periods of prominent solar wind structures with color bars: HSSs in blue, CIRs in green, HCSs in purple, and CMEs in red. In the velocity panel also the field polarity is color coded -- assuming a Parker spiral angle of \SI{135}{\degree} at L1. Blank periods indicate bad or missing data. The data are 64~s measurements from the ACE spacecraft. density and temperature mytics; xtics outside...}
 	\label{fig:ACE_64s_v7_thesis_CIRs_2013-5-1_65_plot}
 	\addtocontents{lof}{\smallskip\protect\center I created the figure myself.\medskip}
 \end{figure}
@@ -525,30 +525,32 @@ Long before the origins of magnetospheric disturbances were actually attributed 
 
 CMEs were detected in white-light observations made by the first space-based coronagraphs on board the OSO~7 satellite \citep{Tousey1973} and the Skylab space station \citep{MacQueen1974}. These observations show the steady outflow of solar wind, broken by intermittend ejections of coronal plasma. Subsequently, the kinematic properties of CMEs were identified from the white-light images \citep{MacQueen1980}. Now, coronagraphs observe the corona and hence CMEs continuously from the first Lagrange point in front of Earth with the SOHO spacecraft and from changing equatorial perspectives with the STEREO~Ahead (A) and Behind (B) spacecraft. The image of the corona from 23~September 2012, made by the SECCHI/COR2 coronagraph onboard STEREO~A, shows a CME to the top right, see \autoref{fig:CME_COR2_0120923_182400_dbc2A}.\\
 \begin{figure}[htb]
-	\fcapside[\FBwidth]{
-		\includegraphics[width=0.6\textwidth]{figures_of_others/images/CME_COR2_0120923_182400_dbc2A.png}
-	}{
-		\caption[\lofimage{figures_of_others/images/CME_COR2_0120923_182400_dbc2A.png}...]
-		{Image of the solar corona out to \SI{15}{\Rs} from 23~September 2012 taken by the SECCHI/COR2 coronagraph onboard the STEREO~A spacecraft. The solar disk is covered by the occulter disk and its position is indicated by the white circle. The bright blob to the top right is the CME; the smooth elongated radial lines are solar wind streamers. Courtesy of STEREO/COR2 consortium, NASA. ...find event with shock and flux rope?}
-		\label{fig:CME_COR2_0120923_182400_dbc2A}
-	}
-\end{figure}
+	\begin{floatrow}
+		\ffigbox{
+			\includegraphics[width=0.45\textwidth]{figures_of_others/images/CME_COR2_0120923_182400_dbc2A.png}
+		}{
+			\caption[\lofimage{figures_of_others/images/CME_COR2_0120923_182400_dbc2A.png}...]
+			{Image of the solar corona out to \SI{15}{\Rs} from 23~September 2012 taken by the SECCHI/COR2 coronagraph onboard the STEREO~A spacecraft. The solar disk is covered by the occulter disk and its position is indicated by the white circle. The bright blob to the top right is the CME; the smooth elongated radial lines are solar wind streamers. Courtesy of \href{https://stereo.gsfc.nasa.gov/gallery/copyright.shtml}{STEREO/COR2 consortium (NASA)}. ...find event with shock and flux rope?}
+			\label{fig:CME_COR2_0120923_182400_dbc2A}
+		}
 % https://stereo.gsfc.nasa.gov/gallery/copyright.shtml
-
-It was early determined by \citet{Gold1962} that solar ejecta should drive shock waves ahead. In fact, shocks with trailing low proton temperatures caused by fast CMEs were then found in in-situ measurements \citep{Gosling1973,Gosling1974}. \citet{Burlaga1981} analyzed magnetic field and plasma in-situ data from five spacecraft and identified a shock wave with a trailing turbulent sheath region followed by an organized helical magnetic structure that they called magnetic cloud (MC). MCs have an enhanced magnetic field, a smooth rotation in the azimuthal magnetic field component and they show low densities and temperatures \citep{Burlaga1981}. Thus, MCs have a low thermal to magnetic pressure ratio (i.e., a small plasma beta) and the magnetic field dominates the plasma. Furthermore, the overall pressure in MCs is higher than in the ambient solar wind, resulting in the expansion of MCs on their way out. Shock-driving CMEs containing a helical MC are actually identified with magnetic flux ropes that expand self-similarly and that remain in connection with the solar surface \citep{Chen1997}.\\
-...the shape of a 3-part CME/MFR is seen in \autoref{fig:Marubashi2007_fig1}\\
-\begin{figure}[htb]
-	\fcapside[\FBwidth]{
-		\includegraphics[width=0.3\textwidth]{figures_of_others/images/Marubashi2007_fig1.png}
-	}{
-		\caption[\lofimage{figures_of_others/images/Marubashi2007_fig1.png}...]
-		{Schema of a magnetic flux rope structure in a CME. The arrows depict a passing of its flank (F) and its apex (A). Credit: {\citet[left panel of Fig.~1]{Marubashi2007}}, licensed under \href{https://creativecommons.org/licenses/by/3.0/}{CC BY 3.0}.}
-		\label{fig:Marubashi2007_fig1}
-	}
+		\ffigbox{
+			\includegraphics[width=0.3\textwidth]{figures_of_others/images/Marubashi2007_fig1.png}
+		}{
+			\caption[\lofimage{figures_of_others/images/Marubashi2007_fig1.png}...]
+			{Schema of a magnetic flux rope structure in a CME. The arrows depict passings through its flank (F) and its apex (A). Credit: {\citet[left panel of Fig.~1]{Marubashi2007}}, licensed under \href{https://creativecommons.org/licenses/by/3.0/}{CC BY 3.0}.}
+			\label{fig:Marubashi2007_fig1}
+		}
+	\end{floatrow}
 \end{figure}
+
+3-part structure figure...\\
+abbreviate to MFR?\\
+
+It was early determined by \citet{Gold1962} that solar ejecta should drive shock waves ahead. In fact, shocks with trailing low proton temperatures caused by fast CMEs were then found in in-situ measurements \citep{Gosling1973,Gosling1974}. \citet{Burlaga1981} analyzed magnetic field and plasma in-situ data from five spacecraft and identified a shock wave with a trailing turbulent sheath region followed by an organized helical magnetic structure that they called magnetic cloud (MC). MCs have an enhanced magnetic field, a smooth rotation in the azimuthal magnetic field component and they show low densities and temperatures \citep{Burlaga1981}. Thus, MCs have a low thermal to magnetic pressure ratio (i.e., a small plasma beta) and the magnetic field dominates the plasma. Furthermore, the overall pressure in MCs is higher than in the ambient solar wind, resulting in the expansion of MCs on their way out. Shock-driving CMEs containing a helical MC are actually identified with magnetic flux ropes that expand self-similarly and that remain in connection with the solar surface \citep{Chen1997}. The shape and magnetic topology of such a magnetic flux rope is pictured in \autoref{fig:Marubashi2007_fig1}. It is apparent that in-situ measurements should look significantly different depending on where the CME is pierced.
 
 % CME in-situ plot
-Three CMEs can be seen in the solar-wind measurements showed previously in \autoref{fig:ACE_64s_v7_thesis_CIRs_2013-5-1_65_plot}, passing by the ACE spacecraft at L1 on 24~May, 6~June, and 27~June in 2013. The latter CME is presented in detail in \autoref{fig:ACE_64s_v7_thesis_CME_2013-6-26_6_plot}, it has a well-structured MC. In addition to the solar-wind in-situ parameters, I indicated the shock, compression zone and the MC with dotted lines, and plotted the geomagnetic \Kp{}~index in order to visualize the CME's impact on the magnetosphere. This MC contains a sector boundary and is trailed by an interaction region caused by the following HSS.\\
+Three CMEs can be seen in the solar-wind in-situ measurements showed previously in \autoref{fig:ACE_64s_v7_thesis_CIRs_2013-5-1_65_plot}, passing by the ACE spacecraft at L1 on 24~May, 6~June, and 27~June in 2013. The latter CME is presented in detail in \autoref{fig:ACE_64s_v7_thesis_CME_2013-6-26_6_plot}, it has a well-structured MC. In addition to showing the solar-wind in-situ parameters, I indicated the shock, compression zone and the MC with dotted lines, and plotted the geomagnetic \Kp{}~index in order to visualize the CME's impact on the magnetosphere. This MC contains a sector boundary and is trailed by an interaction region caused by a following HSS.
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{figures_of_mine/gnuplots/ACE_64s_v7_thesis_CME_2013-6-26_6_plot.pdf}
@@ -559,9 +561,9 @@ Three CMEs can be seen in the solar-wind measurements showed previously in \auto
 \end{figure}
 
 % BSS
-Solar wind in-situ measurements show the magnetic structure of CMEs. In  particular, the orientation of magnetic flux ropes can be determined via applying a minimum variance analysis (MVA) to the MCs' magnetic field components \citep{Sonnerup1967,Burlaga1982}. A MVA determines the direction of minimum variance in the sequence of field vectors passing by during a MC encounter. This direction is interpreted as the principal axis of the flux rope.\\
+Solar wind in-situ measurements show the magnetic structure of CMEs. In  particular, the orientation of magnetic flux ropes can be determined via applying a minimum variance analysis (MVA) to the MCs' magnetic field components \citep{Sonnerup1967,Burlaga1982}. A MVA determines the direction of minimum variance in the sequence of field vectors passing by during a MC encounter. This direction is interpreted as the principal axis of the flux rope.
 
-\citet{Bothmer1998} used the MVA on an extensive set of MCs they found in the data of the Helios~1 and~2 probes. They related the results with the magnetic polarity structures of the MCs' apparent solar source regions: Connecting the derived flux rope directions with the orientation of disappearing filaments and magnetic neutral lines, they recognized a scheme that is able to infer the orientation and helicity of magnetic clouds found in CMEs. This Bothmer-Schwenn scheme (BSS) relates these magnetic flux rope properties to whether the solar cycle number is even or odd and depending on which solar hemisphere the CME originates from (northern/southern) -- utilizing that the hemispheric polarity is alternating with each solar cycle, see \autoref{fig:Bothmer1998_fig18}.\\
+\citet{Bothmer1998} used the MVA on an extensive set of MCs they found in the data of the Helios~1 and~2 probes. They related the results with the magnetic polarity structures of the MCs' apparent solar source regions: Connecting the derived flux rope directions with the orientation of disappearing filaments and magnetic neutral lines, they recognized a scheme that is able to infer the orientation and helicity of magnetic clouds found in CMEs. This Bothmer-Schwenn scheme (BSS) relates these magnetic flux rope properties to whether the solar cycle number is even or odd and depending on which solar hemisphere the CME originates from (northern/southern) -- utilizing that the hemispheric polarity is alternating with each solar cycle, see \autoref{fig:Bothmer1998_fig18}.
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{figures_of_others/images/Bothmer1998_fig18.png}
@@ -569,23 +571,52 @@ Solar wind in-situ measurements show the magnetic structure of CMEs. In  particu
 	{Explaining sketch of the BSS. The two rows represent odd ($n$) and even ($n + 1$) solar cycles. The magnetic polarity of sunspots, the structure of filaments, their helicity, and the flux rope type of magnetic clouds. Credit: {\citet[Fig.~18]{Bothmer1998}}, \textcopyright~EGS -- Springer-Verlag, reproduced with permission.}
 	\label{fig:Bothmer1998_fig18}
 \end{figure}
+As the probability is greater than \SI{80}{\percent} that the magnetic topology of an active region conforms to the hemispheric rule \citep{Wang2013}, a MC configuration predicted with the BSS is expected to have a reliability that is of the same order \citep{Savani2015}.
 
-As the probability is greater than \SI{80}{\percent} that the magnetic topology of an active region conforms to the hemispheric rule \citep{Wang2013}, a MC configuration predicted with the BSS is expected to have a reliability that is of the same order \citep{Savani2015}.\\
-
-The MC plotted in \autoref{fig:ACE_64s_v7_thesis_CME_2013-6-26_6_plot} occured in solar cycle~24. Its IMF z-component changes from positive (northern) to negative (southern) values, during this process, the field angle in the ecliptic, $\phi$, stays pointing roughly towards \SI{270}{\degree} (west). Thus, it has a NWS configuration, which is expected from the BSS during even numbered solar cycles for CMEs coming from the northern hemisphere.\\
-look at hemisphere of source region...\\
+The MC plotted in \autoref{fig:ACE_64s_v7_thesis_CME_2013-6-26_6_plot} occured in solar cycle~24. Its IMF z-component changes from positive (northern) to negative (southern) values, during this process, the field angle in the ecliptic, $\phi$, stays pointing roughly towards \SI{270}{\degree} (west). Thus, it has a NWS configuration, which is expected from the BSS during even numbered solar cycles for CMEs with source regions located in the northern hemisphere.
 
 %white-light structure
-The combination of white-light images with in-situ data enables relating the observed structures of CMEs. Even disturbances in front of fast CMEs can be identified as shock waves from the white-light images made by the SOHO coronagraph \citep{Sheeley2000}. The diffuse leading feature of a CME is the shock sheath, its brightness is caused by the density jump after the shock, which itself is not visible in coronagraphs. The trailing void is identical to the low density of the magnetic flux rope, which drives the whole structure.\\
+The combination of white-light images with in-situ data enables relating the observed structures of CMEs. Even disturbances in front of fast CMEs can be identified as shock waves from the white-light images made by the SOHO coronagraph \citep{Sheeley2000}. The diffuse leading feature of a CME is the shock sheath, its brightness is caused by the density jump after the shock, which itself is not visible in coronagraphs. The trailing void is identical to the low density of the magnetic flux rope, which drives the whole structure.
 
-% CME redefinition
-The revelation that all CMEs may be flux ropes \citep{Vourlidas2013,Marubashi2015} led to the expansion of the CME definition based on white-light images made by \citet{Hundhausen1984}. \citet{Vourlidas2013,Vourlidas2014} include magnetic flux ropes in their CME redefinition: \textit{``A CME is the eruption of a coherent magnetic, twist-carrying coronal structure with angular width of at least \SI{40}{\degree} and able to reach beyond \SI{10}{\Rs} which occurs on a time scale of a few minutes to several hours.''}\\
+The CME described before is indeed coming from the northern hemisphere, as can be seen from the STEREO~A coronagraph image in \autoref{fig:STEREO_A_COR2_20130624_022400_dbc2A} three days earlier and from its position in relation to Earth at that time, see \autoref{fig:STEREO_positions_w_269707595}.
+\begin{figure}[htb]
+	\begin{floatrow}
+		\ffigbox{
+			\includegraphics[width=0.45\textwidth]{figures_of_others/images/STEREO_A_COR2_20130624_022400_dbc2A.png}
+		}{
+			\caption[\lofimage{figures_of_others/images/STEREO_A_COR2_20130624_022400_dbc2A.png}]
+			{Image of the solar corona from 24~June 2013 made with the same coronagraph as the image in \autoref{fig:CME_COR2_0120923_182400_dbc2A}. The CME is the extended structure to the upper left. Courtesy of \href{https://stereo.gsfc.nasa.gov/gallery/copyright.shtml}{STEREO/COR2 consortium (NASA)}.}
+			\label{fig:STEREO_A_COR2_20130624_022400_dbc2A}
+		}
+% https://secchi.nrl.navy.mil/sccimages/
+% https://stereo-ssc.nascom.nasa.gov/browse/2013/06/24/index.shtml
+		\ffigbox{
+			\includegraphics[width=\Xhsize]{figures_of_others/images/STEREO_positions_w_269707595.png}
+		}{
+			\caption[\lofimage{figures_of_others/images/STEREO_positions_w_269707595.png}]
+			{Positions of the STEREO~A and~B spacecraft for 24~June 2013 02:24~UT. This figure is made with the online \href{https://stereo-ssc.nascom.nasa.gov/cgi-bin/make_where_gif}{STEREO Orbit Tool} at the STEREO Science Center website\protect\footnotemark.}
+			\label{fig:STEREO_positions_w_269707595}
+		}
+% https://stereo-ssc.nascom.nasa.gov/cgi-bin/make_where_gif
+	\end{floatrow}
+\end{figure}
+\footnotetext{STEREO Science Center website: \urlfoot{https://stereo-ssc.nascom.nasa.gov/}}
+Apparently, only the lower part of the CME grazes the ecliptic and arrives at Earth.\\
 
 % CBS
 Relating white-light CME images to observations of magnetic neutral lines on the solar surface, \citet{Cremades2004} interpreted the white-light appearances of CMEs and developed a scheme for the CMEs' 3D orientation depending on the neutral lines' orientation and location on the solar surface. The scheme is based on the topology of the flux rope model and the observation that its main axis stays roughly aligned to the underlying neutral line during the eruption process. Thus, \citet{Cremades2004} concluded that CMEs look systematically different depending on their source region's position and magnetic configuration.\\
-see fig...\\
+see \autoref{fig:Cremades2004_fig15}\\
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\textwidth]{figures_of_others/images/Cremades2004_fig15.png}
+	\caption[\lofimage{figures_of_others/images/Cremades2004_fig15.png}]
+	{CME projection scheme for frontside events. Note that for events originating from the backside panel a) has to be mirrored vertically. Credit: {\citet[Fig.~15]{Cremades2004}}, \textcopyright~ESO, permission...}
+	\label{fig:Cremades2004_fig15}
+\end{figure}
 This scheme is effective for CMEs with source regions located less than \SI{50}{\degree} from the solar equator \citep{Webb2012}.\\
 
+% CME redefinition
+The revelation that all CMEs may be flux ropes \citep{Vourlidas2013,Marubashi2015} led to the expansion of the CME definition based on white-light images made by \citet{Hundhausen1984}. \citet{Vourlidas2013,Vourlidas2014} include magnetic flux ropes in their CME redefinition: \textit{``A CME is the eruption of a coherent magnetic, twist-carrying coronal structure with angular width of at least \SI{40}{\degree} and able to reach beyond \SI{10}{\Rs} which occurs on a time scale of a few minutes to several hours.''}\\
 
 % CME forecast; 3D models
 Because of the CMEs' possible strong impact on the terrestrial magnetosphere it is important to know in advance if and when they arrive at Earth. Knowing the geometry of a CME, it is possible to infer its direction and speed from white-light images. Through kinematic forward-modeling techniques that take advantage of the self-similar expansion observed in CMEs, it is possible to derive an estimated arrival time at Earth.\\
@@ -631,7 +662,7 @@ early CME deceleration: The results by \citet{Sachdeva2017} indicate that due to
 Much higher or lower peak values at \SI{1}{\au} have been observed in extraordinary events, such as the 23~July 2012 CME with a speed of over \SI{2000}{\km\per\s} and a peak field strength of about \SI{100}{\nT} that was observed by STEREO~A \citep{Russell2013}. paperMBBV\\
 The maximum speed exceeds 3000 km/s, but only in a couple of cases. About 50 CMEs had a speed exceeding 2000 km/s (Solwind detected only one CME with a speed of ~2000 km/s). \citet{Gopalswamy2010} suggested that one does not observe CMEs with speeds exceeding ~4000 km/s because of the limit on the maximum free energy that can be stored in solar active regions. The limit was estimated to be $\sim\,10^{36}$~erg assuming a hypothetical active region with the largest area ever observed containing the largest magnetic field strength ever observed in sunspots. A single CME usually does not exhaust all the available free energy. The largest kinetic energy observed was $1.2x10^{33}$~erg for the Halloween 2003 CME on October 28 \citep{Gopalswamy2005}.\\
 This study suggests that the speed of CMEs may not be much higher than 3000 km/s, consistent with the free energy available in active regions. An important practical implication of such a speed limit is that the Sun-Earth travel times of CME-driven shocks may not be less than 0.5~day \citep{Gopalswamy2005}.\\
-From these results, one can infer that CMEs may not have speeds far greater than 3000 km/s. This speed limit has a practical implication that CME-driven shocks take at least half a day to reach Earth after their launch at the Sun \citep{Gopalswamy2005}.\\ 
+From these results, one can infer that CMEs may not have speeds far greater than 3000 km/s. This speed limit has a practical implication that CME-driven shocks take at least half a day to reach Earth after their launch at the Sun \citep{Gopalswamy2005}.\\
 
 
 %open questions

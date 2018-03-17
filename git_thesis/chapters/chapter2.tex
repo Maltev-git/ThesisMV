@@ -23,7 +23,7 @@ The obtained functional relations enable empirical estimations of the mean \Kp{}
 
 \section{Introduction}
 %%% motivation
-It is known since the early 19th~century that variations in the solar wind evoke disturbances in the magnetosphere \citep{Bartels1962}. Especially strong disturbances, called geomagnetic storms, can be provoked by coronal mass ejections (CMEs), which are embedded within the solar wind. The causes of the strongest geomagnetic storms are the compression of the solar-wind magnetic field lines within the CME shock front and the enhanced field strenghts of magnetic clouds, which are enclosed in CMEs \citep{Bothmer1993}. The consequences of strong geomagnetic disturbances are a threat to sensitive technical systems and exposed humans. Therefore it is important to know when magnetospheric disturbances will occur and how large they will become.\\
+It is known since the early 19th~century that variations in the solar wind evoke disturbances in the magnetosphere \citep{Bartels1962}. Especially strong disturbances, called geomagnetic storms, can be provoked by coronal mass ejections (CMEs), which are embedded within the solar wind. The causes of the strongest geomagnetic storms are the compression of the solar-wind magnetic field lines within the CME shock front and the enhanced field strenghts of magnetic clouds, which are enclosed in CMEs \citep{Bothmer1993,Bothmer1995}. The consequences of strong geomagnetic disturbances are a threat to sensitive technical systems and exposed humans. Therefore it is important to know when magnetospheric disturbances will occur and how large they will become.\\
 
 \Kp{} is designed for... (cite?). I use this magnetospheric disturbance index to correlate it with near-Earth solar-wind measurements. More detailed information on the \Kp{}~index can be found in \autoref{sec:kp_index}.\\
 
@@ -280,7 +280,15 @@ The mean MAD is about 0.7~\Kp{}~units. Thus, the solar-wind dependency relation 
 \end{align}
 This relation can be used together with real-time in-situ measurements from spacecraft located at L1 (see Section~XX rt sources) to nowcast the actual \Kp~index.
 
-produce sw example plot Bz, v, Kp, vBz, Kp*\\
+solar wind example plot in \autoref{fig:example_sw_plot_vBz2013-6-26_6}\\
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\textwidth]{figures_of_mine/chapter2/example_sw_plot_vBz2013-6-26_6.pdf}
+	\caption[\lofimage{figures_of_mine/chapter2/example_sw_plot_vBz2013-6-26_6.pdf}]
+	{Solar wind measurements, \Kp{} index and estimated \Kp{} for the time period 26~June to 2~July 2013. The parameters in the panels are: magnetic field strength, magnetic field z"~component (in GSE coordinates, ACE data), \Kp{}~index, \vBz{}, and derived \Kp{} estimate. The solar wind data is from ACE... The \Kp{} data is obtained from the GFZ~Potsdam. replace ACE with OMNI data...}
+	\label{fig:example_sw_plot_vBz2013-6-26_6}
+	\addtocontents{lof}{\smallskip\protect\center I created the figure myself.\medskip}
+\end{figure}
 
 
 \section{\Kp{} forecast from remote CME and stream observations}
@@ -490,10 +498,18 @@ The following results/relations are obtained from the analyses:
 	\item stream forecast: \Kp-velocity relation (average and worst case)
 \end{itemize*}
 
-CMEs can be faster than the maximal velocities included in the OMNI data. Instrumental effects (specify...) lead to data gaps during these periods. Yet, CME speeds of up to XX~km/s at \SI{1}{\au} were observed in-situ (cite paper ref.). According to \autoref{eq:kpvsv_dependency_function}, a CME speed of \SI{2000}{\km\per\s} would lead on average to a theoretical \Kp{} of 12.2, however, the \Kp{} scale is capped at 9o. A \Kp{} of 9o is reached already at a velocity of 1489~km/s, see fig.~XX.\\
+CMEs can be faster than the maximal velocities included in the OMNI data. Instrumental effects (specify...) lead to data gaps during these periods. Yet, CME speeds of up to XX~km/s at \SI{1}{\au} were observed (cite?). According to \autoref{eq:kpvsv_dependency_function}, a CME speed of \SI{2000}{\km\per\s} at L1 would lead on average to a theoretical \Kp{} of 12.2, however, the \Kp{} scale is capped at 9o. A \Kp{} of 9o is reached already at a velocity of \SI{1489}{\km\per\s}, see \autoref{fig:Kp_2dhistogram_V_sws123_fit_f}.
 % 2000 km/s -> 12.17~Kp
+\begin{figure}
+	\fcapside[\FBwidth]{
+		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_V_sws123_fit_f.pdf}
+	}{
+		\caption{Logarithmic fit curves for CMEs (dashed line) and streams (dotted line) with their corresponding mean MAD bands (shaded areas).}
+		\label{fig:Kp_2dhistogram_V_sws123_fit_f}
+	}
+\end{figure}
 
-Solar-wind streams cannot be faster than 1000~km/s (limited coronal temperatures/never observed (cites?)). That is why streams on average provoke \Kp{} values below 5o.\\
+The maximal velocity of regular solar wind is limited by the coronal temperatures \citep{Parker1958} and is observed to be around \SI{900}{\km\per\s}. That is why streams on average provoke \Kp{} values below 5o.\\
 
 comparison:\\
 \Kp-velocity correlation\\

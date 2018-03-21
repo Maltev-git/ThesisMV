@@ -175,12 +175,12 @@ order=5
 
 [item:appendix/appendix.tex]
 archive=true
-column=0
+column=13
 encoding=UTF-8
 highlight=LaTeX
-line=4
+line=513
 mode=LaTeX
-open=false
+open=true
 order=5
 
 [item:appendix/curriculum_vitae.tex]
@@ -245,10 +245,10 @@ order=5
 
 [item:chapters/chapter2.tex]
 archive=true
-column=235
+column=101
 encoding=UTF-8
 highlight=LaTeX
-line=461
+line=570
 mode=LaTeX
 open=true
 order=4
@@ -275,7 +275,7 @@ order=5
 
 [item:chapters/front_matter.tex]
 archive=true
-column=22
+column=102
 encoding=UTF-8
 highlight=LaTeX
 line=265
@@ -285,10 +285,10 @@ order=1
 
 [item:chapters/introduction.tex]
 archive=true
-column=87
+column=153
 encoding=UTF-8
 highlight=LaTeX
-line=551
+line=569
 mode=LaTeX
 open=true
 order=3
@@ -390,8 +390,8 @@ JumpList=
 ViMarks=.,20,58,[,20,58,],20,58
 
 [view-settings,view=0,item:appendix/appendix.tex]
-CursorColumn=0
-CursorLine=4
+CursorColumn=13
+CursorLine=513
 JumpList=
 ViMarks=.,4,0,[,4,0,],4,0
 
@@ -432,10 +432,10 @@ JumpList=
 ViMarks=.,468,29,[,467,3,],468,29
 
 [view-settings,view=0,item:chapters/chapter2.tex]
-CursorColumn=235
-CursorLine=461
+CursorColumn=101
+CursorLine=570
 JumpList=
-ViMarks=.,461,235,[,461,235,],461,235
+ViMarks=.,570,100,[,570,95,],570,100
 
 [view-settings,view=0,item:chapters/discussion_summary.tex]
 CursorColumn=0
@@ -450,16 +450,16 @@ JumpList=
 ViMarks=.,81,38,[,81,38,],81,38
 
 [view-settings,view=0,item:chapters/front_matter.tex]
-CursorColumn=22
+CursorColumn=102
 CursorLine=265
 JumpList=
-ViMarks=.,264,29,[,264,15,],264,29
+ViMarks=.,265,101,[,265,71,],265,101
 
 [view-settings,view=0,item:chapters/introduction.tex]
-CursorColumn=87
-CursorLine=551
+CursorColumn=153
+CursorLine=569
 JumpList=
-ViMarks=.,608,624,[,608,610,],608,624
+ViMarks=.,569,152,[,569,152,],569,152
 
 [view-settings,view=0,item:chapters/paperMVVB_wrapper.tex]
 CursorColumn=0

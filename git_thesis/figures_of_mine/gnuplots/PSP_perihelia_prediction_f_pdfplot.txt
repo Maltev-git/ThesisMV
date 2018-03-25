@@ -1,0 +1,185 @@
+set terminal pdfcairo enhanced font "arial,12" fontscale 0.5 lw 1 size 8.8cm,4.0cm rounded
+set output "PSP_perihelia_prediction_f.pdf"
+
+####--  Data files  --####
+datafile_SSN_yearly = "../SSN_SIDC/SN_y_tot_V2.0.txt"
+datafile_SPP_orbit_1hour = "../SPP_trajectory/SPP_orbit_1hour.txt"
+datafile_Vmedian = "../Python_calculate_Vmedian/table_perihelion_first_Vmedian.txt"
+
+####--  Variables and functions  --####
+au = 149597870.700	#km
+
+# SSN_yearly = "`cat SSN_yearly.txt`"	#yearly SSN 1700--2016
+# ssn(x) = word(SSN_yearly,x+263-1962) + 0
+# SSN_m = "`cat SSN_m.txt`"	# monthly SSN 1749-01--2017-01
+# ssn_m(x) = word(SSN_m,int((x-1749.0)*12.0+1.0)) + 0
+SSN_ms = "`cat ../SSN_SIDC/SN_ms_block_SSN.txt`"	# monthly smoothed SSN 1749-01--2017-01
+ssn_ms(x) = word(SSN_ms,int((x-1749.0)*12.0+1.0)) + 0
+SSN_ms_err = "`cat ../SSN_SIDC/SN_ms_block_err.txt`"	# monthly smoothed SSN 1749-01--2017-01
+ssn_ms_err(x) = word(SSN_ms_err,int((x-1749.0)*12.0+1.0)) + 0
+SSN_swpc_predict = "20.7 20.9 21.0 21.4 22.2 22.2 21.7 21.6 22.0 22.6 23.1 23.2 22.7 21.4 20.3 19.2 18.2 17.2 16.3 15.4 14.5 13.7 12.9 12.2 11.5 10.8 10.1 9.5 8.9 8.3 7.8 7.3 6.8 6.4 5.9 5.5 5.1 4.8 4.4 4.1"
+SSN_swpc_predict_max = "21.7 22.9 24 26.4 27.2 28.2 28.7 28.6 30 31.6 32.1 33.2 32.7 31.4 30.3 29.2 28.2 27.2 26.3 25.4 24.5 23.7 22.9 22.2 21.5 20.8 20.1 19.5 18.9 18.3 17.8 17.3 16.8 16.4 15.9 15.5 15.1 14.8 14.4 14.1"
+SSN_swpc_predict_min = "19.7 18.9 18 16.4 17.2 16.2 14.7 14.6 14 13.6 14.1 13.2 12.7 11.4 10.3 9.2 8.2 7.2 6.3 5.4 4.5 3.7 2.9 2.2 1.5 0.8 0.1 0 0 0 0 0 0 0 0 0 0 0 0 0"
+ssn_swpc_predict(x) = x<2016.75||x>=2021.0?NaN:(word(SSN_swpc_predict,int((x-2016.0)*12.0-8.0)) + 0)
+ssn_swpc_predict_max(x) = x<2016.75||x>=2021.0?NaN:(word(SSN_swpc_predict_max,int((x-2016.0)*12.0-8.0)) + 0)
+ssn_swpc_predict_min(x) = x<2016.75||x>=2021.0?NaN:(word(SSN_swpc_predict_min,int((x-2016.0)*12.0-8.0)) + 0)
+# SIDC_ms 1749-01--2017-01 + swpc predict 2016-09--2019-12 + cycle 24 2010-01--now (total 1849-01--2026-08)
+SSN_ms_with_predict = "`cat SSN_ms_with_predict.txt`"
+ssn_ms_with_predict(x) = x<1749.0?NaN:(word(SSN_ms_with_predict,int((x-1749.0)*12.0)) + 0)
+# column to row: awk 'BEGIN{ORS=FS} {print $1}' SPP_orbit.txt > SPP_orbit2.txt
+SPP_orbit = "`cat SPP_orbit.txt`"
+spp_orbit(x) = x<2018.57922||x>2025.6669?1.0:(word(SPP_orbit,int((x-2018.0)*8760.0-5074.0+48.0)) + 0.0)/au
+
+
+# square-root power-law function
+aa_med = 3.833
+e_b = -1.858
+e_b2 = -1.32
+med(r) = aa_med * ((r**e_b)**2.0 + (r**e_b2)**2.0)**0.5
+median_new(ssn,r) = (a_med * ssn + b_med) / sqrt(2.0) * ((r**e_b)**2.0 + (r**e_b2)**2.0)**0.5
+aa_med_err = 0.027
+e_b_err = 0.042
+e_b2_err = 0.12
+# Wolfram alpha:
+# df/db, f(r) = a * sqrt(r^(2 b) + r^(2 c))
+# (d)/(db)(f(r) = a sqrt(r^(2 b) + r^(2 c))) = (a r^(2 b) log(r))/sqrt(r^(2 b) + r^(2 c))
+# df/db = a * (r**b)**2.0 * log(r) / sqrt((r**b)**2.0 + (r**c)**2.0)
+# = (a_med * ssn + b_med) / sqrt(2.0) * (r**e_b)**2.0 * log(r) / ((r**e_b)**2.0 + (r**e_b2)**2.0)**0.5
+median_new_err(ssn,ssn_err,r) = sqrt((((r**e_b)**2.0 + (r**e_b2)**2.0)**0.5 / sqrt(2.0) * ssn * a_med_err)**2.0 + (((r**e_b)**2.0 + (r**e_b2)**2.0)**0.5 / sqrt(2.0) * b_med_err)**2.0 + (((r**e_b)**2.0 + (r**e_b2)**2.0)**0.5 / sqrt(2.0) * a_med * ssn_err)**2.0 + ((a_med * ssn + b_med) / sqrt(2.0) * (r**e_b)**2.0 * log(r) / ((r**e_b)**2.0 + (r**e_b2)**2.0)**0.5 * e_b_err)**2.0 + ((a_med * ssn + b_med) / sqrt(2.0) * (r**e_b2)**2.0 * log(r) / ((r**e_b)**2.0 + (r**e_b2)**2.0)**0.5 * e_b2_err)**2.0)
+
+median(ssn,r) = (a_med * ssn + b_med) * r**dist_exp
+mean(ssn,r) = median(ssn,r) * c_avg
+sigma(ssn,r) = sqrt(2.0 * log(mean(ssn,r) / median(ssn,r)))
+W(ssn,r,n) = 1.0 / (sqrt(2.0*pi) * sigma(ssn,r) * n) * exp(-log(n / median(ssn,r))**2.0 / (2.0 * sigma(ssn,r)**2.0))
+median_err(ssn,ssn_err,r) = sqrt(((a_med * ssn + b_med) * r**dist_exp * dist_exp_err)**2.0 + (r**dist_exp * b_med_err)**2.0 + (ssn * r**dist_exp * a_med_err)**2.0 + (a_med * r**dist_exp * ssn_err)**2.0)
+
+
+median_static(r) = a_med_static * r**dist_exp
+median_helios(r) = a_med_helios * r**dist_exp
+
+####--  Styles  --####
+set style line 1 lt 1 lw 1 lc rgb "white"
+set style line 2 lt 1 lw 1 lc rgb "light-red"
+set style line 3 lt 1 lw 1 lc rgb "web-green"
+set style line 4 lt 1 lw 1 lc rgb "web-blue"
+set style line 5 lt 1 lw 1 lc rgb "yellow"
+set style line 6 lt 1 lw 1 lc rgb "brown"
+set style line 7 lt 1 lw 1 lc rgb "light-blue"
+set style line 8 lt 1 lw 1 lc rgb "dark-blue"
+set style line 9 lt 1 lw 1 lc rgb "dark-violet"
+set style line 10 lt 1 lw 1 lc rgb "black"
+set style line 11 lt 1 lw 1 lc rgb "grey"
+set style line 12 lt 1 lw 1 lc rgb "grey50"
+
+set multiplot\
+	layout 1,2\
+	margins 0.115,0.955,0.23,0.97\
+	spacing 0.15,0
+# #############
+# lm = 0.058	#left margin
+# rm = 0.93
+# bm = 0.038
+# tm = 0.99
+# spx = 0.15	#spacing x
+# spy = 0.07	#spacing y
+# pw = (rm - lm - spx)/4.0	#panel width
+# rmi = lm + 2*pw	#inner position
+# lmi = lm + spx + 2*pw	#inner position
+# ph = (tm - bm - spy)/2.0	#panel height
+# mgapt = bm + ph + spy
+# mgapb = bm + ph
+# #############
+
+set key left bottom reverse Left box opaque
+set key width -1
+set key font ",11"
+set key samplen 2
+unset key
+
+set border 3
+set xtics nomirror
+set ytics nomirror
+
+set view map
+
+set grid back
+set tics scale 0.5
+set ytics offset 0.3,0
+
+#set xlabel "First perihelion 2018"
+
+####--  plot  --####
+ssn_err(x) = 20
+
+####--  B-field  --####
+# solar distance exponent
+dist_exp = -1.662
+dist_exp_err = sqrt(0.11**2.0 + 0.011**2.0)	#combination of uncertainties: delta e and fit error
+# yearly variation function parameters
+a_med = 0.01309	#amplitude
+a_med_err = 0.019e-3
+b_med = 4.285	#baseline
+b_med_err = 0.017
+c_avg = 1.08786
+c_avg_err = 0.078e-2
+delta = 0.0
+
+#static sw model
+a_med_static = 5.661
+
+#Helios sw model
+a_med_helios = 5.358
+a_avg_helios = 5.705
+
+constSSN = 220
+set xrange [2018.8137:2018.8466]
+set xtics 2018.8137, 1.0/91.5
+set format x ""
+#set xtics add("01.10." 2018.7507, "22.10." 2018.8082, "24.10." 2018.8137, "26.10." 2018.8192, "28.10." 2018.8247, "30.10." 2018.8301, "01.11." 2018.8356, "03.11." 2018.8411, "05.11." 2018.8466)
+set xtics add("" 2018.8082, "24/10" 2018.8137, "28/10" 2018.8247, "01/11" 2018.8356, "05/11" 2018.8466)
+set xtics add("" 2018.8082, "24 Oct" 2018.8137, "28 Oct" 2018.8247, "1 Nov" 2018.8356, "5 Nov" 2018.8466)
+set xtics add("" 2018.8082, "24.10." 2018.8137, "28.10." 2018.8247, "01.11." 2018.8356, "05.11." 2018.8466)
+set mxtics 4
+set ylabel "Magnetic field [nT]" offset 1.5,0
+set yrange [0:120]
+set ytics 20
+set mytics 2
+set xlabel "1st perihelion" offset 0,0.2
+plot\
+	for [i=-8:8:1] median_new(ssn_swpc_predict(x+delta),spp_orbit(x)) + i / 8.0 * median_new_err(ssn_swpc_predict(x+delta),ssn_swpc_predict_max(x+delta) - ssn_swpc_predict(x+delta),spp_orbit(x)) with lines title "Median error" ls 11 lw 2 dt 1,\
+	median(ssn_swpc_predict(x+delta),spp_orbit(x)) with lines title "Median (SWPC predicted SSN)" ls 10 lw 2 dt 3,\
+	median_new(ssn_swpc_predict(x+delta),spp_orbit(x)) with lines title "Median (SWPC predicted SSN)" ls 10 lw 2 dt 1,\
+	NaN notitle
+# 	median_helios(spp_orbit(x)) with lines title "Helios extrapolated median" ls 9 lw 2 dt 3,\
+# 	median_static(spp_orbit(x)) with lines title "OMNI extrapolated median" ls 2 lw 2 dt 3,\
+# 	median(constSSN,spp_orbit(x)) with lines title "median ".sprintf("(constant SSN of %g)",constSSN) ls 3 lw 2 dt 3,\
+
+x = 2018.8301
+print median(ssn_swpc_predict(x+delta),spp_orbit(x))
+print median_new(ssn_swpc_predict(x+delta),spp_orbit(x))
+
+
+delta = 0.0 - 11.0
+
+constSSN = 220
+set xrange [2024.9481:2024.9809]
+set xtics 2024.9481, 1.0/91.5
+set format x ""
+set xtics add("01.12." 2024.9126, "05.12." 2024.9290, "12.12." 2024.9481, "16.12." 2024.9590, "20.12." 2024.9699, "24.12." 2024.9809)
+set mxtics 4
+set ylabel "Magnetic field [nT]" offset 1.9,0
+set yrange [0:2000]
+set ytics 500
+set mytics 5
+set xlabel "22nd perihelion" offset 0,0.2
+plot\
+	for [i=0:8:1] median_new(ssn_ms(x+delta),spp_orbit(x)) - i / 8.0 * median_new_err(ssn_ms(x+delta),0.5*ssn_ms(x+delta),spp_orbit(x)) with lines title "Median error" ls 11 lw 2 dt 1,\
+	for [i=0:15:1] median_new(ssn_ms(x+delta),spp_orbit(x)) + i / 15.0 * median_new_err(ssn_ms(x+delta),ssn_ms(x+delta),spp_orbit(x)) with lines title "Median error" ls 11 lw 2 dt 1,\
+	median(ssn_ms(x+delta),spp_orbit(x)) with lines title "Median (11 years shifted actual SSN)" ls 10 lw 2 dt 3,\
+	median_new(ssn_ms(x+delta),spp_orbit(x)) with lines title "Median (11 years shifted actual SSN)" ls 10 lw 2 dt 1,\
+	NaN notitle
+	
+x = 2024.9666
+print median(ssn_ms(x+delta),spp_orbit(x))
+print median_new(ssn_ms(x+delta),spp_orbit(x))
+

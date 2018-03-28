@@ -4,7 +4,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.1.3
-lastDocument=chapters/front_matter.tex
+lastDocument=chapters/discussion_summary.tex
 masterDocument=
 name=thesis_project
 pkg_extIsRegExp=false
@@ -175,12 +175,12 @@ order=5
 
 [item:appendix/appendix.tex]
 archive=true
-column=13
+column=414
 encoding=UTF-8
 highlight=LaTeX
-line=513
+line=118
 mode=LaTeX
-open=false
+open=true
 order=5
 
 [item:appendix/curriculum_vitae.tex]
@@ -215,13 +215,13 @@ order=2
 
 [item:appendix/literature_bibtex_combined.bib]
 archive=true
-column=24
+column=22
 encoding=UTF-8
 highlight=BibTeX
-line=2287
+line=2518
 mode=BibTeX
-open=false
-order=4
+open=true
+order=6
 
 [item:appendix/literature_bibtex_custom_entries.bib]
 archive=true
@@ -235,33 +235,33 @@ order=-1
 
 [item:chapters/analyses_helios.tex]
 archive=true
-column=485
+column=12
 encoding=UTF-8
 highlight=LaTeX
-line=261
+line=264
 mode=LaTeX
 open=false
 order=4
 
 [item:chapters/chapter2.tex]
 archive=true
-column=166
+column=151
 encoding=UTF-8
 highlight=LaTeX
-line=288
+line=313
 mode=LaTeX
 open=true
 order=4
 
 [item:chapters/discussion_summary.tex]
 archive=true
-column=0
+column=139
 encoding=UTF-8
 highlight=LaTeX
-line=1
+line=34
 mode=LaTeX
-open=false
-order=5
+open=true
+order=7
 
 [item:chapters/formal_titlepage.tex]
 archive=true
@@ -275,20 +275,20 @@ order=5
 
 [item:chapters/front_matter.tex]
 archive=true
-column=15
+column=54
 encoding=UTF-8
 highlight=LaTeX
-line=268
+line=269
 mode=LaTeX
 open=true
 order=1
 
 [item:chapters/introduction.tex]
 archive=true
-column=51
+column=266
 encoding=UTF-8
 highlight=LaTeX
-line=889
+line=1220
 mode=LaTeX
 open=true
 order=3
@@ -365,10 +365,10 @@ order=-1
 
 [item:thesis.tex]
 archive=true
-column=0
+column=121
 encoding=UTF-8
 highlight=LaTeX
-line=0
+line=15
 mode=LaTeX
 open=true
 order=2
@@ -390,10 +390,10 @@ JumpList=
 ViMarks=.,20,58,[,20,58,],20,58
 
 [view-settings,view=0,item:appendix/appendix.tex]
-CursorColumn=13
-CursorLine=513
+CursorColumn=414
+CursorLine=118
 JumpList=
-ViMarks=.,4,0,[,4,0,],4,0
+ViMarks=.,118,413,[,118,409,],118,413
 
 [view-settings,view=0,item:appendix/curriculum_vitae.tex]
 CursorColumn=0
@@ -414,10 +414,10 @@ JumpList=
 ViMarks=.,697,97,[,697,97,],697,97
 
 [view-settings,view=0,item:appendix/literature_bibtex_combined.bib]
-CursorColumn=24
-CursorLine=2287
+CursorColumn=22
+CursorLine=2518
 JumpList=
-ViMarks=.,2287,24,[,2287,24,],2287,24
+ViMarks=.,2518,22,[,2518,22,],2518,22
 
 [view-settings,view=0,item:appendix/literature_bibtex_custom_entries.bib]
 CursorColumn=17
@@ -426,22 +426,22 @@ JumpList=
 ViMarks=.,78,17,[,78,17,],78,17
 
 [view-settings,view=0,item:chapters/analyses_helios.tex]
-CursorColumn=485
-CursorLine=261
+CursorColumn=12
+CursorLine=264
 JumpList=
-ViMarks=.,261,484,[,261,482,],261,484
+ViMarks=.,289,360,[,289,360,],289,370
 
 [view-settings,view=0,item:chapters/chapter2.tex]
-CursorColumn=166
-CursorLine=288
+CursorColumn=151
+CursorLine=313
 JumpList=
-ViMarks=.,243,746,[,243,746,],243,785
+ViMarks=.,316,348,[,316,348,],316,348
 
 [view-settings,view=0,item:chapters/discussion_summary.tex]
-CursorColumn=0
-CursorLine=1
+CursorColumn=139
+CursorLine=34
 JumpList=
-ViMarks=.,0,0,[,1,0,],-1,-1
+ViMarks=.,34,139,[,34,139,],34,139
 
 [view-settings,view=0,item:chapters/formal_titlepage.tex]
 CursorColumn=38
@@ -450,16 +450,16 @@ JumpList=
 ViMarks=.,81,38,[,81,38,],81,38
 
 [view-settings,view=0,item:chapters/front_matter.tex]
-CursorColumn=15
-CursorLine=268
+CursorColumn=54
+CursorLine=269
 JumpList=
-ViMarks=.,268,42,[,268,30,],268,42
+ViMarks=.,269,53,[,269,49,],269,53
 
 [view-settings,view=0,item:chapters/introduction.tex]
-CursorColumn=51
-CursorLine=889
+CursorColumn=266
+CursorLine=1220
 JumpList=
-ViMarks=.,891,46,[,891,17,],891,46
+ViMarks=.,1220,265,[,1220,264,],1220,265
 
 [view-settings,view=0,item:chapters/paperMVVB_wrapper.tex]
 CursorColumn=0
@@ -504,7 +504,7 @@ JumpList=
 ViMarks=.,38,22,[,38,22,],38,22
 
 [view-settings,view=0,item:thesis.tex]
-CursorColumn=0
-CursorLine=0
+CursorColumn=121
+CursorLine=15
 JumpList=
 ViMarks=.,90,139,[,90,133,],90,139

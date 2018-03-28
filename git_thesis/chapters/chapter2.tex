@@ -149,7 +149,7 @@ On top of the yearly variations, seasonal variations exist in the magnetospheric
 \end{figure}
 These \Kp{} changes arise from seasonal variations of the solar-wind parameters at Earth, which stem from Earth's yearly changes in orbital distance and heliographic latitude. Another seasonal effect stems from the Earth's rotation axis tilt, which changes the direction of the Earth's magnetic dipole axis to the Sun over the year (see top panel of \autoref{fig:Kp_seasonal_d}).
 
-Earth's distance to the Sun varies over the course of a year by \SI{+-1.67}{\percent} (see appendix \autoref{sec:sun_earth_orbit_geometry}). The solar-wind parameters scale via power-law dependencies with solar distance, as it is described in the following \autoref{chap:empirical_solar_wind_model_for_the_inner_heliosphere} and accordingly in \citet{Venzmer2017}. For example, the solar-wind proton density scales with about $r^{-2}$, this leads to yearly variations in density of up to \SI{3.4}{\percent}. These yearly solar-wind changes have a direct influence on the \Kp{}~index.
+Earth's distance to the Sun varies over the course of a year by \SI{+-1.67}{\percent} (see appendix \autoref{sec:sun_earth_orbit_geometry}). The solar-wind parameters scale via power-law dependencies with solar distance, as it is described in the following \autoref{chap:empirical_solar_wind_model_for_the_inner_heliosphere} and accordingly in \citet{Venzmer2018}. For example, the solar-wind proton density scales with about $r^{-2}$, this leads to yearly variations in density of up to \SI{3.4}{\percent}. These yearly solar-wind changes have a direct influence on the \Kp{}~index.
 
 The Sun's rotation axis tilt angle to the ecliptic is \SI{+-7.25}{\degree} and that for Earth is \SI{+-23.44}{\degree}, see also appendix \autoref{sec:sun_earth_orbit_geometry}. The solar-wind magnetic field strength varies with heliographic latitude (cite?). The solar-wind influence on the \Kp{}~index depends on its coupling efficiency with the magnetosphere. Furthermore, the rate of magnetic reconnection between solar wind and the Earth's magnetosphere depends on both fields' orientation to each other (parallel/antiparallel). Additionally, the tilt of the magnetic dipole axis to the rotation axis -- a few degrees for the Sun during cycle minima (extreme during solar maxima...) and about \SI{10}{\degree} for the Earth -- complicates this system even more.
 %geomagnetic dipole tilt: Planetary fact sheet: 11.2 (Model GSFC-12/83)
@@ -193,6 +193,9 @@ I use this velocity relationship for obtaining \Kp{} proxies from CME and solar 
 \label{sec:data_correlation}
 %determine data basis
 The \Kp{} time series started in 1932 when there existed no spacecraft to measure solar wind in~situ. Thus, the maximal surveyed time range is defined by the available in-situ solar-wind data.\\
+
+Savani2017:\\
+``Although Kp is defined for 3 h periods, predicted variations in the IMF are made on shorter time scales and can influence the level of geomagnetic activity (e.g., geomagnetically induced currents). Hence, averaging the IMF over intervals that match those of Kp may suppress features that are important drivers of geomagnetic activity. Nevertheless, for the purpose of this paper, we choose to average the Kp estimate from the field vectors predicted by the BSS model over the same 3 h intervals as the Kp values, as this currently represents the service provided by NOAA/SWPC.''\\
 
 %argue for averaging method
 The \Kp{}~index represents maximal variations within 3-hour time intervals (see \autoref{sec:kp_index}). Any solar-wind parameter that will be correlated with \Kp{} also has to have the same time resolution. In addition to adapting the time resolution, it has to be considered by which means this should be done. Simple 3-hour average values are expected to have a weaker correlation than the solar-wind parameter's 3-hourly maximal variation.
@@ -309,6 +312,10 @@ same velocity -> different \Kp{} effect\\
 CMEs are already sighted raising from their source regions on the solar surface. Some CME properties can be estimated from remote coronagraph observations and modeled to Earth, such as its propagation direction, its arrival time, and arrival velocity (cites?). Thus, early observations enable a heads-up time depending on the CME's propagation speed to Earth. This travel duration can be more than 4~days for slow events with average solar-wind speeds, about 40~hours for fast events with speeds of \SI{1000}{\km\per\s}, and down to 20~hours and even below for the rare extreme cases, e.g., about 21~hours for the event on 23~July 2012 \citep{Russell2013,Temmer2015} and about 19~hours for the event observed by \citet{Carrington1859} on 1~September 1859. The theoretical minimal heads-up time for CMEs is estimated to be half a day \citep{Gopalswamy2005}.
 
 To make use of the heads-up time for CMEs, I neglect its magnetic field part, which is difficult to determine from remote observations and simplify the coupling relation (\ref{eq:coupling_vxBz}) from before. Therefore, the only coupling parameter remaining is the solar-wind velocity.
+
+Savani2017:\\
+``\textit{Prior evidence has suggested the reason be due to southerly IMF strength being the most dominant solar wind parameter for driving geomagnetic activity at Earth. The strong correlation of solar wind speed to geomagnetic activity is evident during CME conditions but is only considered the most dominant parameter during high-speed streams} [Holappa et al., 2014].''\\
+
 
 \subsection{Velocity forecast methods}
 

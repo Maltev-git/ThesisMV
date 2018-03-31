@@ -13,7 +13,7 @@ This chapter is constructed as follows, the PSP mission, its scientific goals, a
 
 
 %%% contributions and copyright
-The major part of this chapter is published as ``Solar-wind predictions for the Parker Solar Probe orbit'' in \citet{Venzmer2018} (replace arXiv cite with aanda's), which is referred to as 'the paper' in this work. The article, published online on 20~March 2018 in Astronomy and Astrophysics (A\&A), is included following this chapter, denoted as \autoref{chap:solar_wind_predictions_for_the_parker_solar_probe_orbit}, and \textbf{not yet} reproduced with permission, \textcopyright~ESO.
+The major part of this chapter is published under the title ``Solar-wind predictions for the Parker Solar Probe orbit'' in \citet{Venzmer2018}, which is referred to as 'the paper' in this work. The article, published online on 20~March 2018 in Astronomy and Astrophysics (A\&A), is included following this chapter, denoted as \autoref{chap:solar_wind_predictions_for_the_parker_solar_probe_orbit}, copyright to ESO and reproduced with permission.
 
 The analyses described in the paper were entirely done by me, as well as the tables, figures and equations. My coauthor Volker~Bothmer contributed to the text and the anonymous referee helped clarifying a few aspects. The text was further improved by the A\&A language editor Joshua~Neve.\\
 % my own contributions to the paper (percentages):\\
@@ -71,7 +71,7 @@ Sun angular diameter comparison, see presi S³\\
 
 \section{Paper content}
 % from paper:
-We obtained lognormal representations of the frequency distributions’ shapes of the four key solar wind parameters magnetic field strength, proton velocity, density and temperature. We derived analytical relations for the parameters’ solar activity dependencies and for their solar distance scaling. An empirical solar wind model was build from the combination of the obtained frequency distributions, SSN dependence relations and solar distance dependence functions, representing the solar wind’s solar activity and distance behavior. This empirical model was fed with SSN predictions and extrapolated to the orbit of PSP. We estimated solar wind median values during PSP’s first perihelion and modeled the values for PSP’s closest perihelia.\\
+We obtain lognormal representations of the frequency distributions’ shapes of the four key solar wind parameters magnetic field strength, proton velocity, density and temperature. We derive analytical relations for the parameters’ solar activity dependencies and for their solar distance scaling. An empirical solar wind model is build from the combination of the obtained frequency distributions, SSN dependence relations and solar distance dependence functions, representing the solar wind’s solar activity and distance behavior. This empirical model is fed with SSN predictions and is extrapolated to the orbit of PSP. We estimate solar wind median values during PSP’s first perihelion and model the values for PSP’s closest perihelia.\\
 
 In order to derive the solar wind environment for the PSP orbit, finally the general solar wind model derived in the previous sections will be extrapolated to the PSP orbit, taking into account predictions of the SSN.\\
 
@@ -112,11 +112,7 @@ The angle becomes $\phi_B(\SI{1}{\au}) = \SI{-46.23}{\degree}$ when using the Su
 
 During solar cycle minimum, the solar wind in the equatorial plane outside the source surface originates from polar regions at about \SI{+-60}{\degree} heliolatitude. This leads to a slightly underwound Parker spiral, because of the slower rotation rate at higher latitudes \citep{Banaszkiewicz1998}. Using the differential rotation rate $\omega(\SI{+-60}{\degree}) = \SI{13.69}{\degree\per\day}$ (see appendix \autoref{eq:omega_differential}), the field angle becomes $\phi_B(\SI{1}{\au}) = \SI{-44.84}{\degree}$.\\
 
-So, in the ecliptic at a solar distance of \SI{1}{\au}, the Parker spiral's observed magnetic field angle $\phi_B$ is centered most of the time at \SI{-45}{\degree} or for the opposite field polarity at \SI{135}{\degree}.\\
-
-As the solar rotation axis tilt to the ecliptic normal only has a maximum angle of \SI{7.2}{\degree}, I choose to neglect it in this calculation.\\
-
-Indeed, this is apparent from the angle's frequency distribution and confirmed by measurements made at \SI{1}{\au}, such as the OMNI data of the time period 1963--2016 plotted in \autoref{fig:histogram_B_angles_c}.\\
+As the solar rotation axis tilt to the ecliptic normal only has a maximum angle of \SI{7.2}{\degree}, I consider its influence on $\phi_B$ minor, and choose to neglect it in this calculation. Thus from theory, in the ecliptic at a solar distance of \SI{1}{\au}, the Parker spiral's observed magnetic field angle $\phi_B$ is centered most of the time at \SI{-45}{\degree} or for the opposite field polarity at \SI{135}{\degree}. Indeed, this is confirmed by the angle's frequency distribution, apparent in measurements made at \SI{1}{\au}, such as the OMNI data of the time period 1963--2016 plotted in \autoref{fig:histogram_B_angles_c}.\\
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/histogram_B_angles_c.pdf}
@@ -130,7 +126,7 @@ For $\phi_B$ being in average centered around these two directions, both vector 
 \begin{align}
 	B(\SI{1}{\au}) &= B_0 \cdot \sqrt{2}	&\text{with}	&	&	\left(\frac{\omega\cdot\SI{1}{\au}}{v_\text{sw}}\right) &= 1\,.
 \end{align}
-However this way, $\omega$ and $v_\text{sw}$ are treated as constants and their variations with time are neglected.\\
+However this way, $\omega$ and $v_\text{sw}$ are treated as time independent constants.\\
 
 %%% fit %%%
 Considering the longitudinal field component, the magnetic field strength's distance dependency is derived in a similar way to that in the paper, see paper \autoref{sec:paper_solar_distance_dependency}. Also, the same Helios data set is used for the fit as is in the paper.
@@ -152,10 +148,10 @@ The resulting fit curves for the mean and median field strength are plotted with
 \end{figure}
 The resulting fit parameters are presented in \autoref{tab:bfield_fit_parameters}\footnote{
 %GUM statement
-Concerning the error notation I adhere to the parentheses notation documented in the ``Guide to the expression of uncertainty in measurement'' (GUM) published by \citet{GUM2008}, where the numbers in parentheses are the errors on the corresponding last digits of the quoted value.
-}.
+Concerning the error notation, I adhere to the parentheses notation documented in the ``Guide to the expression of uncertainty in measurement'' (GUM) published by \citet{GUM2008}, where the numbers in parentheses are the errors on the corresponding last digits of the quoted value.
+}.	% end footnote
 \begin{table*}
-	\caption{Fit coefficients for the curve fits (\autoref{eq:sqare_power_law}) and for the distribution fit (using the lognormal function from the paper (Equation~4)), derived from the combined Helios~1 and 2 data. The numbers in parentheses are the errors on the corresponding last digits of the quoted value. The crossing distance indicates where the median and mean fits intersect each other. This distance is calculated numerically and that is why the error is only estimated.}
+	\caption{Fit coefficients for the curve fits (\autoref{eq:sqare_power_law}) and for the distribution fit (using the lognormal function of Equation~(4) from the paper), derived from the combined Helios~1 and 2 data. The numbers in parentheses are the errors on the corresponding last digits of the quoted value. The crossing distance indicates where the median and mean fits intersect each other. This distance is calculated numerically and its corresponding error only represents an estimated value.}
 	\label{tab:bfield_fit_parameters}
 	\centering
 	\sisetup{table-figures-integer=1, table-figures-decimal=4, table-figures-exponent=0}
@@ -202,22 +198,21 @@ Concerning the error notation I adhere to the parentheses notation documented in
 % 1267.19055342511	this fit; is 33 % higher
 % 950.841158464094	paper fit
 
-In this fit, the weighted sum of the squared residuals (WSSR) slighly improved compared to the simple power-law function $x(r) = d \cdot r^e$ in \citet{Venzmer2018}, \SI{6}{\%} for the median and \SI{9}{\%} for the mean. However, the mean and median fit curves are fairly similar and still cross each other at a similar value as in the paper.\\
+The weighted sum of the squared residuals (WSSR) of this fit slighly improved in comparison to that of the simple power-law function $x(r) = d \cdot r^e$ used in \citet{Venzmer2018} -- \SI{6}{\%} for the median and \SI{9}{\%} for the mean. However, the mean and median fit curves are fairly similar and still cross each other at a similar value as in the paper.\\
 
-The obtained fit parameter values are similar to the theoretical values -- however, the exponents $e_{1, med} = -1.852$ and $e_{1, avg} = -1.740$ are up to \SI{13}{\%} larger and lead to a less steep slope near the Sun. However, they are about \SI{12}{\%} smaller than the power-law exponents derived in the paper, which have values of \num{-1.655} and \num{-1.546}.\\
+The here obtained fit parameter values are closer to the theoretical values than those derived in the paper. The exponents $e_{1, med} = -1.852$ and $e_{1, avg} = -1.740$ are up to \SI{13}{\%} larger than the theoretical exponent $2$ and lead to a less steep slope near the Sun. However, they are about \SI{12}{\%} smaller than the power-law exponents derived in the paper, which have values of \num{-1.655} and \num{-1.546}.\\
 
-From \autoref{fig:sw_extrapolation_ssn_median_g} it can be seen that both fits agree in the Helios data range, but the new fit curve is slightly curved.\\ 
+It can be seen from \autoref{fig:sw_extrapolation_ssn_median_g} that although the new fit curve is slightly curved, both fits are congruent in the Helios data range.\\ 
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/sw_extrapolation_ssn_median_g.pdf}
 	}{
-		\caption{Magnetic field strength fit curves with respect to solar distance. Plotted are the derived absolute median field strength and its radial and azimuthal components. I added the absolute median field strength from the paper (Equation 10) as well.}
+		\caption{Magnetic field strength fit curves with respect to solar distance. Plotted are the derived absolute median field strength and its radial and azimuthal components. I added the absolute median field strength from Equation (10) of the paper as well. The orbital distance ranges from PSP and the Helios probes are indicated by the blue and green lines.}
 		\label{fig:sw_extrapolation_ssn_median_g}
 	}
 \end{figure}
 
-
-In the following paragraph I use the same method and reasoning as in the paper \autoref{sec:paper_solar_distance_dependency}, thus I do not explain them in detail here again.\\
+In the following paragraph I use the same method and reasoning as explained in the paper \autoref{sec:paper_solar_distance_dependency}, thus I do not go into detail here.\\
 
 ...and it can be fitted via a lognormal function\\
 
@@ -248,7 +243,7 @@ The result of this analysis can be used to scale the SSN-relation derived in the
 \begin{align}
 	B(ssn,r) = \frac{B(ssn)}{\sqrt{2}} \cdot \sqrt{\left(r^{e_1}\right)^2 + \left(r^{e_2}\right)^2}	\,.
 \end{align}
-The resulting equation, combined with the values obtained from the solar activity analysis in the paper \autoref{sec:paper_solar_activity_dependence_of_the_solar_wind_frequency_distributions}, gives
+The resulting equation, combined with the values obtained from the solar activity analysis in the paper \autoref{sec:paper_solar_activity_dependence_of_the_solar_wind_frequency_distributions}, yields
 \begin{align}
 	B_\text{med}(ssn,r) &= \left(\SI{0.0131}{\nT} \cdot ssn + \SI{4.29}{\nT}\right) \cdot \sqrt{\left(r^{-1.86}\right)^2 + \left(r^{-1.3}\right)^2}	\,,\\
 	B_\text{avg}(ssn,r) &= 1.0879 \cdot B_\text{med}(ssn,r)\,.
@@ -259,7 +254,7 @@ This magnetic field strength model is extrapolated to PSP's orbital range in \au
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/sw_extrapolation_ssn_g.pdf}
 	}{
-		\caption{Radial extrapolation of the solar-wind magnetic field strength to the PSP orbit region. The median value from the model, obtained from Helios and OMNI measurements, is extrapolated to the PSP region for SSN values between solar minimum and maximum, that is, $0 \le ssn \le 200$. The lower edges of the shaded areas correspond to solar minimum, the upper edges to solar maximum. I also plot the radial dependency of the field model by \citet{Parker1958}, normed to \SI{1}{\au} (red).}
+		\caption{Radial extrapolation of the solar-wind magnetic field strength to the PSP orbit region. The median value from the model, obtained from Helios and OMNI measurements, is extrapolated to the PSP region for SSN values between solar minimum and maximum, that is, $0 \le ssn \le 200$. The lower edges of the shaded areas correspond to solar minimum, the upper edges to solar maximum. I also added the radial dependency of the field model by \citet{Parker1958}, normed to \SI{1}{\au} (red). The orbital distance ranges from PSP and the Helios probes are indicated by the blue and green lines.}
 		\label{fig:sw_extrapolation_ssn_g}
 	}
 \end{figure}
@@ -269,7 +264,7 @@ Using the SSN prediction as described in the paper, the solar-wind environment i
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/PSP_perihelia_prediction_f.pdf}
 	}{
-		\caption{Estimated solar-wind parameter medians (solid lines) and their error bands (gray area) during 12~days in 2018 and 2024 with PSP's first perihelion at about \SI{0.16}{\au} and PSP's 22nd (the first closest) perihelion at \SI{0.046}{\au}. I indicated the prediction from \citet{Venzmer2018} is as well (dotted lines).}
+		\caption{Estimated solar-wind parameter medians (solid lines) and their error bands (gray area) during 12~days in 2018 and 2024 with PSP's first perihelion at about \SI{0.16}{\au} and PSP's 22nd (the first closest) perihelion at \SI{0.046}{\au}. I indicated the prediction from \citet{Venzmer2018} as well (dotted lines).}
 		\label{fig:PSP_perihelia_prediction_f}
 	}
 \end{figure}
@@ -302,7 +297,7 @@ comparison with Burlaga1984: Large-scale IMF...; found for 1-5 au: B(r) = 4.75 s
 
 
 \section{Outlook}
-Currently, the solar-wind model described in this chapter/the paper is purely empirical and its four solar-wind quantities are characterized independently from each other. In further steps, theoretical relations connecting the parameters could be introduced to make the model self-consistent. For example, flux conservation could be implemented into the radial distance dependencies, relating the two parameters density and velocity (see section~XX), and also the velocity within the magnetic field's $\vect{B}_\phi$-component (\autoref{eq:b_phi_vector}) could be respected as a variable (not as a constant as it is done in the previous section).\\
+Currently, the solar-wind model described in this chapter and the paper is purely empirical and its four solar-wind quantities are characterized independently from each other. In further steps, theoretical relations connecting the parameters could be introduced to make the model self-consistent. For example, flux conservation could be implemented into the radial distance dependencies, relating the two parameters density and velocity (see section~XX). Or also, the velocity within the magnetic field's $\vect{B}_\phi$-component (\autoref{eq:b_phi_vector}) could be respected as a variable (not as a constant as it is done in the previous section).\\
 
 inclusion of seasonal effects into the model, see \autoref{fig:OMNI_monthly_freq_V_gps} and \autoref{fig:OMNI_monthly_freq_B_a_gps}; or error estimation...\\
 

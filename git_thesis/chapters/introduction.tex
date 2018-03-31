@@ -2,10 +2,9 @@
 \chapter{Introduction}
 \label{chap:introduction}
 
-Motivation\\
-%Kurzer Text zur Motivation für diese Arbeit; wie es zum Thema kam und wie das Ziel erreicht wurde
+Background -> problems -> motivation -> methods -> results\\
 
-% Questions this work asks:\\	%Fragestellungen ausformuliert
+% Questions this work asks:\\
 % 	How strong is the solar-wind influence on the terrestrial magnetosphere?\\
 % 	How often occur certain solar-wind ranges?\\
 % 	How strong do different structure types influence the terrestrial magnetosphere?\\
@@ -21,6 +20,20 @@ Motivation\\
 % 	(How does the solar wind get accelerated?)\\
 % 	(How is this related to the coronal heating problem?)\\
 
+% Kp estimate from sw
+The abundance of modern technological systems that are sensitive to disturbances in the terrestrial mangetic field increases.\\
+These include critical systems, such as ..., whose potential disruptions would not only have severe economical impacts but would affect human lives as well.\\
+The disturbances in the terrestrial magnetic field (geomagnetic storms) are evoked by the field's interaction with streams of particles emitted by the Sun (solar wind).\\
+Variations in some solar wind parameters lead to a direct response in geomagnetic activity.\\
+This work aims to quantify this response for different solar wind forecast situations.\\
+For when magnetic field and velocity information is available and for when only velocity information is available and it is known wether it is ambient solar wind or a CME event.\\
+
+% PSP sw estimate from Helios
+Open key questions are which mechanisms heat the corona and accelerate the solar wind.\\
+The PSP mission is intended to clarify this.\\
+As it is the first s/c to fly that near to the Sun, the solar wind environment is not known.\\
+This is the motivation for the second part of this work.\\
+This work derives estimates of that solar-wind environment.\\
 
 thesis goal: finding more precise relationships between parameters/quantities for being able to make better forecasts\\
 
@@ -30,7 +43,7 @@ This thesis presents quantitative analyses of the solar-wind impact strengh on t
 
 
 %Synopsis	% Outline (chapters and their content)
-I structured this work as follows: In \autoref{chap:basics} the fundamentals about the Sun, its activity, solar wind, and space weather are laid. The instruments and data sources are described in \autoref{chap:data}. The influences on the \Kp{}~index from solar activity, solar wind, CMEs, and solar-wind streams are analyzed in \autoref{chap:chapter2}. In \autoref{chap:empirical_solar_wind_model_for_the_inner_heliosphere}, which is followed by the published paper on the same topic (\autoref{chap:solar_wind_predictions_for_the_parker_solar_probe_orbit}), an empirical solar-wind model for the inner heliosphere is developed and used to estimate the near-Sun solar-wind environment for the planned PSP mission. \autoref{chap:summary} summarizes the results and gives an outlook for further studies. Useful equations and information are located in the \autoref{chap:appendix}.
+I structured this work as follows: The fundamentals about the Sun, its activity, solar wind, and space weather are laid in \autoref{chap:basics}. The instrumentation and data sources used in this work are described in \autoref{chap:data}. The influences on the \Kp{}~index from solar activity, solar wind, CMEs, and solar-wind streams are analyzed in \autoref{chap:chapter2}. In \autoref{chap:empirical_solar_wind_model_for_the_inner_heliosphere}, which is followed by the published paper on the same topic (integrated as \autoref{chap:solar_wind_predictions_for_the_parker_solar_probe_orbit}), an empirical solar-wind model for the inner heliosphere is developed and used to estimate the near-Sun solar-wind environment for the planned PSP mission. \autoref{chap:summary} summarizes the results and gives an outlook for further studies. Useful equations and information are located in the \autoref{chap:appendix}.
 
 
 
@@ -511,8 +524,10 @@ Due to the compression within SIRs, the magnetic field strength and the plasma d
 \subsection{Heliospheric current sheet}
 The HCS, the boundary surface between solar-wind streams of opposite magnetic polarity, is formed by open magnetic fluxes, expanding from both sides over closed field regions and coming into contact above. At the boundary between open and closed fields, local coronal plasma gets released and flows slowly between the fast wind streams along the current sheet into the heliosphere, creating a helmet streamer. This is why near the Sun, the HCS is typically located within slow solar wind stemming from the coronal streamer belt \citep{Owens2013}. However, with increasing solar distance, the shock wave of the adjacent SIR can pass the HCS, so that sector boundaries are often found to be embedded within SIRs \citep{Gosling1999}.
 
+why HCS? what currents are there...\\
+
 % heliospheric plasma sheet
-Sector boundaries in the solar wind are observed in~situ, they come with significant depletions in $\text{He}^{++}\!/\text{H}^+$ values \citep{Borrini1981}. The other solar wind parameters, such as velocity, density, and temperature, change with distance from the HCS as well \citep{Smith2001}. The HCS region itself is quite narrow with a thickness of around \SIrange{3000}{10000}{\km}; it is embedded in a region of 20--30~times its thickness, the heliospheric plasma sheet (HPS) \citep{Winterhalter1994}. The HPS contains the magnetic polarity reversal and is of low magnetic field strength and high density, resulting in a significantly enhanced value of plasma beta \citep{Crooker2004}. In the slow solar wind, the HPS can also be identified from its particularly low specific entropy, arising from its low temperature and high density \citep{Kilpua2016}.
+When sector boundaries in the solar wind are observed in~situ, they come with significant depletions in $\text{He}^{++}\!/\text{H}^+$ values \citep{Borrini1981}. The other solar wind parameters, such as velocity, density, and temperature, change with distance from the HCS as well \citep{Smith2001}. The HCS region itself is quite narrow with a thickness of around \SIrange{3000}{10000}{\km}; it is embedded in a region of 20--30~times its thickness, the heliospheric plasma sheet (HPS) \citep{Winterhalter1994}. The HPS contains the magnetic polarity reversal and is of low magnetic field strength and high density, resulting in a significantly enhanced value of plasma beta \citep{Crooker2004}. In the slow solar wind, the HPS can also be identified from its particularly low specific entropy, arising from its low temperature and high density \citep{Kilpua2016}.
 
 
 \subsection{Coronal mass ejections}
@@ -619,13 +634,6 @@ However, CMEs generally do not have a perfect flux rope geometry: Often their mo
 
 
 
-
-% CME forecast
-It is important to know in advance if and when CMEs arrive at Earth, because of their possible strong impact on the terrestrial magnetosphere. Knowing the geometry of a CME, it is possible to infer its direction and speed from white-light images. Through kinematic forward-modeling techniques that take advantage of the self-similar expansion observed in CMEs, it is possible to derive an estimated arrival time at Earth. As MCs are the drivers for most severe geomagnetic disturbances \citep{Bothmer1995,Cane2003}, it is also important to forecast their magnetic field strength and configuration.
-
-% 3D models
-An early 3D model for a general CME geometry is the ice-cream cone model, which assumes a simple bubble-like CME structure \citep{Fisher1984}. Though, building on the the study by \citet{Cremades2004}, \citet{Thernisien2006} created the more complex graduated cylindrical shell (GCS) model for flux rope-like CMEs. This model assumes an empirically derived electron distribution in order to create synthetic coronagraph images. The GCS model is successfully applied to images of CMEs with well-developed white-light structure \citep{Bosman2012} and is implemented as a part of current CME forecast procedures.\\
-
 CME formation/initiation...\\
 
 
@@ -729,7 +737,8 @@ Bothmer2007book: ``Space weather can be understood as a field of research that w
 thermosphere, on space- and ground-based technological systems, and beyond that, on their endangering effects to life and health.''\\
 
 
-\subsection{Solar influence on Earth}
+%\subsection{Solar influence on Earth}
+Solar influence on Earth\\
 
 solar wind's impact on Earth\\
 
@@ -740,9 +749,11 @@ there are several types of solar-terrestrial relations, \citet{Bartels1962} list
 a) irregular flare and CME effects (Carrington)\\
 b) 11"~year solar cycle effects\\
 c) 27"~day solar rotation effects\\
-d) daily Earth rotation effects (X"-ray and light)\\
+d) daily Earth rotation effects (X"~ray and light)\\
 
-seasonal effects from Earth orbital distance, inclination (solar rotation axis angle) and Earth tilt (see \autoref{fig:Hundhausen1977_fig20bcd} and \autoref{fig:fig1_cut})\\
+seasonal effects from Earth orbital distance, inclination (solar rotation axis angle) and Earth tilt; make geometry fig?\\
+
+see \autoref{fig:Hundhausen1977_fig20bcd} and \autoref{fig:fig1_cut}\\
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=0.5\textwidth]{figures_of_others/images/Hundhausen1977_fig20bcd.png}
@@ -800,7 +811,7 @@ Kraaikamp2015: \url{https://www.swsc-journal.org/articles/swsc/pdf/2015/01/swsc1
 ``Flares are one of the three major components of space weather – next to coronal mass ejections (CMEs) and solar energetic particles (SEPs) – and pose significant threats to satellites, radio communication, and navigation by Global Navigation Satellite Systems.'' from Kraaikamp2015\\
 
 
-\subsection{Magnetosphere}
+\section{Magnetosphere}
 \label{sec:magnetosphere}
 
 the name magnetosphere was proposed by \citet{Gold1959}\\
@@ -887,25 +898,8 @@ three ways for solar wind momentum and energy transfer into magnetosphere:\\
 
 
 
-\subsection{Geomagnetic indices}
-\label{sec:geomagnetic_indices}
-Geomagnetic observatories are distributed widely over the globe, measuring the local magnetic field at their position. Several sets of stations, covering specific regions, are defined to monitor the state of different parts of the magnetospheric system. Magnetic measurements from these sets define several geomagnetic indices. The International Association of Geomagnetism and Aeronomy (IAGA) supports the following global geomagnetic indices which are serviced by the International Service of Geomagnetic Indices (ISGI)\footnote{ISGI website: \urlfoot{http://isgi.unistra.fr/}}:
-The $aa$~index is designed to represent the amplitude of the global geomagnetic activity, normalized to a geomagnetic latitude of \SI{+-50}{\degree}. The $am$~index characterizes the global geomagnetic activity. The \Kp{}~index is designed to measure geomagnetic disturbances from solar particle radiation -- it is described in more detail in \autoref{sec:kp_index}. The $Dst$~index monitors the intensity of the magnetospheric ring current. The $PC$~index monitors the polar cap magnetic activity -- it approximates the amount of energy which entered the magnetosphere through solar-wind coupling. The $AE$~index and its relatives $AU$, $AL$ and $AO$ measure the magnetic effects of the northern auroral electrojet.
-The first three listed indices (\textit{aa}, \textit{am} and \Kp{}) are calculated from different sets of local 3"~hourly $K$~indices, which measure the local magnetic disturbances at the observatories.\\
-% There exist several sub-indices that are based on some of those listed above, e.g., ap, Ap, Cp, C9, Aa, Kpa, an, as, Kpm, Am, An, and As.\\
-
-[for \Kp{}, $AA$ and $Dst$ read Section 7.4 in book \citet{Bothmer2007}...\\
-$Dst$ (read book Jursa1985 p. 4-31)]\\
-
-\citet{Lockwood2014} even used geomagnetic indices to reconstruct the near-Earth solar wind magnetic field strength and velocity back to 1845.\\
-
-
-
-
-
-
-\subsection{Solar-wind coupling to the magnetosphere}
-\label{sec:solar_wind_coupling_to_the_magnetosphere}
+\subsection{Solar-wind coupling}
+\label{sec:solar_wind_coupling}
 
 for overview see chapter~4 in Bothmer2007book\\
 
@@ -1048,7 +1042,23 @@ where $A = 2.18, B = 5.20 * 10^5$ , and with the velocity and magnetic field mea
 
 
 
-\subsection{Forecasting methods}
+\subsection{Geomagnetic indices}
+\label{sec:geomagnetic_indices}
+Geomagnetic observatories are distributed widely over the globe, measuring the local magnetic field at their position. Several sets of stations, covering specific regions, are defined to monitor the state of different parts of the magnetospheric system. Magnetic measurements from these sets define several geomagnetic indices. The International Association of Geomagnetism and Aeronomy (IAGA) supports the following global geomagnetic indices which are serviced by the International Service of Geomagnetic Indices (ISGI)\footnote{ISGI website: \urlfoot{http://isgi.unistra.fr/}}:
+The $aa$~index is designed to represent the amplitude of the global geomagnetic activity, normalized to a geomagnetic latitude of \SI{+-50}{\degree}. The $am$~index characterizes the global geomagnetic activity. The \Kp{}~index is designed to measure geomagnetic disturbances from solar particle radiation -- it is described in more detail in \autoref{sec:kp_index}. The $Dst$~index monitors the intensity of the magnetospheric ring current. The $PC$~index monitors the polar cap magnetic activity -- it approximates the amount of energy which entered the magnetosphere through solar-wind coupling. The $AE$~index and its relatives $AU$, $AL$ and $AO$ measure the magnetic effects of the northern auroral electrojet.
+The first three listed indices (\textit{aa}, \textit{am} and \Kp{}) are calculated from different sets of local 3"~hourly $K$~indices, which measure the local magnetic disturbances at the observatories.\\
+% There exist several sub-indices that are based on some of those listed above, e.g., ap, Ap, Cp, C9, Aa, Kpa, an, as, Kpm, Am, An, and As.\\
+
+[for \Kp{}, $AA$ and $Dst$ read Section 7.4 in book \citet{Bothmer2007}...\\
+$Dst$ (read book Jursa1985 p. 4-31)]\\
+
+\citet{Lockwood2014} even used geomagnetic indices to reconstruct the near-Earth solar wind magnetic field strength and velocity back to 1845.\\
+
+
+\subsection{\Kp{}~index}
+
+
+\section{Forecast methods}
 
 Methods:\\
 - MC Kp impact forecast; Savani2015+Savani2017\\
@@ -1085,15 +1095,32 @@ constant-alpha force-free magnetic clouds \citep{Burlaga1988}:\\
 
 
 
+\subsection{CME forecast}
+
+
+% CME forecast
+It is important to know in advance if and when CMEs arrive at Earth, because of their possible strong impact on the terrestrial magnetosphere. Knowing the geometry of a CME, it is possible to infer its direction and speed from white-light images. Through kinematic forward-modeling techniques that take advantage of the self-similar expansion observed in CMEs, it is possible to derive an estimated arrival time at Earth. As MCs are the drivers for most severe geomagnetic disturbances \citep{Bothmer1995,Cane2003}, it is also important to forecast their magnetic field strength and configuration.
+
+% 3D models
+An early 3D model for a general CME geometry is the ice-cream cone model, which assumes a simple bubble-like CME structure \citep{Fisher1984}. Though, building on the the study by \citet{Cremades2004}, \citet{Thernisien2006} created the more complex graduated cylindrical shell (GCS) model for flux rope-like CMEs. This model assumes an empirically derived electron distribution in order to create synthetic coronagraph images. The GCS model is successfully applied to images of CMEs with well-developed white-light structure \citep{Bosman2012} and is implemented as a part of current CME forecast procedures.\\
+
+
+\subsection{Stream forecast}
+
+
+\subsection{\Kp~forecast}
+
+
+
 
 %%%%--  next chapter  --%%%%
 
 \chapter{Instrumentation and data description}
 \label{chap:data}
 %COFI -- chapter outline and flow integration
-For analyzing the solar wind and related areas on the Sun, there exist remote instruments (solar imagers and coronagraphs) and in-situ instruments (magnetometers and plasma detectors). In this chapter the basic principles of the latter are described, because the analyses performed in this thesis are based entirely on in-situ measurements -- except of the sunspot time series.
+For analyzing the solar wind and related areas on the Sun, there exist remote instruments, such as solar imagers and coronagraphs, and in-situ instruments, such as magnetometers and plasma detectors. In this chapter the basic principles of the latter are described, because the analyses performed in this thesis are based entirely on in-situ measurements -- except for the sunspot time series.
 
-Different kind of data, collected from observatories at various locations, are used for the investigations performed in this thesis. In the following sections, I describe the data sets of the magnetospheric disturbance index \Kp{} and of the solar avtivity indicator sunspot number (SSN). Further, the solar-wind in-situ data sets are described: the near-Earth OMNI data collections consisting of minutely and hourly data, that is, low resolution OMNI (LRO) and high resolution OMNI (HRO), and the data obtained from the Helios~1 and Helios~2 spacecraft in the 1970s. I plotted a time coverage overview of these data sets in relation to the solar activity cycles in \autoref{fig:timeline_SSN_with_data_and_sc}.\\
+Different kind of data, collected from observatories at various locations, are used for the investigations performed in this thesis. In the following sections, I describe the data sets of the magnetospheric disturbance index \Kp{} and of the solar activity indicator sunspot number (SSN). Further, the solar-wind in-situ data sets are described: the near-Earth OMNI data collections consisting of minutely and hourly data, that is, low resolution OMNI (LRO) and high resolution OMNI (HRO), and the data obtained from the Helios~1 and Helios~2 spacecraft in the 1970s. I plotted a time coverage overview of these data sets in relation to the solar activity cycles in \autoref{fig:timeline_SSN_with_data_and_sc}.\\
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{figures_of_mine/gnuplots/timeline_SSN_with_data_and_sc.pdf}
@@ -1191,7 +1218,7 @@ The temperature scales with the distribution's width.\\
 ACE/SWEPAM\\	%https://sci-hub.ac/10.1023/A:1005040232597
 
 
-\section{\Kp{}~index}
+\section{\Kp{}~data}
 \label{sec:kp_index}
 Julius~Bartels introduced the \textit{K}~index in 1938 and designed it to measure the intensity of geomagnetic disturbances \citep{Bartels1939}. Its name originates from 'Kennziffer' -- the german word for characteristic digit. The \textit{K}~index is a measure for the maximal variation of the surface magnetic field, observed in a magnetogram within 3"~hour intervals. Its scale in the range 0--9 is a quasi-logarithmic representation of the actual magnetic field strength's variations.
 

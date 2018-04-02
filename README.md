@@ -9,6 +9,8 @@ git config --global user.email "maltev@gmx.de"
 git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=3600'
 
+git config --global push.default simple
+
 git config --list
 ```
 
@@ -35,6 +37,15 @@ git status
 git diff
 git ls-tree master
 git ls-files
+```
+
+### shorten pull command
+```
+git pull origin master
+git branch --set-upstream-to origin/master
+or:
+git branch -u origin/master
+git pull
 ```
 
 ### working

@@ -60,13 +60,19 @@ Magnetosphere
 
 In first-order approximation, the terrestrial magnetic field can be seen as a dipole, aligned with the rotation axis of the Earth. Its magnetic south pole is located near the geographic North Pole and there is currently only a small tilt of about \SI{9.5}{\degree} between both axes that varies slightly over the years \citep{Thebault2015}. At the Earth's surface, this dipole approximation neglects major field irregularities, such as the South Atlantic Anomaly. The magnetic field strength on the surface at the poles is around \SI{60}{\micro\tesla}, whereas at the equator it is about half that magnitude \citep{Thebault2015}.
 
-The field's strength decreases while it extends out into space. The influence of the geomagnetic field ends at the magnetopause (or bow shock?), where its pressure balances that of the onstreaming solar wind pressure.
+The field's strength decreases while it extends out into space. The influence of the geomagnetic field ends at the magnetopause (or bow shock?), where its pressure balances that of the solar wind pressure.
 
-The solar wind flow shapes the geomagnetic field into a teardrop which is called magnetosphere (Gold...). The solar wind compression at the front of the magnetopause creates a bow shock whose distance to Earth is around XX~Re, but varies largely under extreme solar wind conditions. Its so-called magnetotail has a size of XX~Re and points away from the Sun.
+The solar wind flow shapes the geomagnetic field into a teardrop form, called magnetosphere (Gold...). The solar wind compression at the front of the magnetopause creates a bow shock, whose distance to Earth is in average around XX~Re, but varies largely under extreme solar wind conditions (cite?). Its so-called magnetotail has a size of XX~Re and points away from the Sun (cite?).
 
 
 size of cavity
-bow shock, tail
+
+
+Where the terrestrial magnetic field and the IMF come into antiparallel contact, the magnetosphere opens up to the HMF and reconnection of the field lines occurs. At the reconnection location an X"~line exists that accelerates jets of particles. Its location on the magnetopause shifts depending on the IMF direction.
+
+during northern IMF
+
+during southern IMF
 
 
 

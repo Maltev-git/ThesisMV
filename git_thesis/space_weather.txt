@@ -58,27 +58,24 @@ Predictions of magnetospheric disturbances are based on knowledge of the solar w
 
 Magnetosphere
 
-In first-order approximation, the terrestrial magnetic field can be seen as a dipole, aligned with the rotation axis of the Earth. There is only a small tilt of about XX~degree between both axes that varies over the years and the magnetic south pole is located near the geographic North Pole.
+In first-order approximation, the terrestrial magnetic field can be seen as a dipole, aligned with the rotation axis of the Earth. Its magnetic south pole is located near the geographic North Pole and there is currently only a small tilt of about \SI{9.5}{\degree} between both axes that varies slightly over the years \citep{Thebault2015}. At the Earth's surface, this dipole approximation neglects major field irregularities, such as the South Atlantic Anomaly. The magnetic field strength on the surface at the poles is around \SI{60}{\micro\tesla}, whereas at the equator it is about half that magnitude \citep{Thebault2015}.
 
+The field's strength decreases while it extends out into space. The influence of the geomagnetic field ends at the magnetopause (or bow shock?), where its pressure balances that of the onstreaming solar wind pressure.
 
-field strength surface to outside; equator to poles 30/60~µT
-field extends outwards
+The solar wind flow shapes the geomagnetic field into a teardrop which is called magnetosphere (Gold...). The solar wind compression at the front of the magnetopause creates a bow shock whose distance to Earth is around XX~Re, but varies largely under extreme solar wind conditions. Its so-called magnetotail has a size of XX~Re and points away from the Sun.
 
-pressure balance
 
 size of cavity
-
 bow shock, tail
 
 
 
 
-
 locations of reconnection
-
 opening and closing flux rate
 
 influx of solar wind plasma
+KH turbulence
 
 current system
 
@@ -96,30 +93,33 @@ substorms
 
 	Solar-wind coupling
 
+locations of reconnection
+opening and closing flux rate
+
+southward IMF
+half-wave rectifier
+both Newell relations
 
 
 
 	Geomagnetic indices
-
-
-
+Ok
 	Kp index
-
+Ok
 
 
 Forecast methods
 
+	CME forecast to Earth
+CME forecast methods and models
 
-	CME forecast
-
-
-	Stream forecast
-
-
+	Stream forecast to Earth
+Stream forecast methods and models
 
 	Kp forecast
-
-
+Kp-flux rate relation
+Kp prediction models/methods
+This paper adds more empirical relations.
 
 
 
@@ -134,3 +134,20 @@ Forecast methods
 	Kp forecast
 
 
+##########################
+
+
+@ARTICLE{Thebault2015,
+   author = {{Th{\'e}bault}, E. and {Finlay}, C.~C. and {Beggan}, C.~D. and {Alken}, P. and {Aubert}, J. and {Barrois}, O. and {Bertrand}, F. and {Bondar}, T. and {Boness}, A. and {Brocco}, L. and {Canet}, E. and {Chambodut}, A. and {Chulliat}, A. and {Co{\"i}sson}, P. and {Civet}, F. and {Du}, A. and {Fournier}, A. and {Fratter}, I. and {Gillet}, N. and {Hamilton}, B. and {Hamoudi}, M. and {Hulot}, G. and {Jager}, T. and {Korte}, M. and {Kuang}, W. and {Lalanne}, X. and {Langlais}, B. and {L{\'e}ger}, J.-M. and {Lesur}, V. and {Lowes}, F.~J. and {Macmillan}, S. and {Mandea}, M. and {Manoj}, C. and {Maus}, S. and {Olsen}, N. and {Petrov}, V. and {Ridley}, V. and {Rother}, M. and {Sabaka}, T.~J. and {Saturnino}, D. and {Schachtschneider}, R. and {Sirol}, O. and {Tangborn}, A. and {Thomson}, A. and {T{\o}ffner-Clausen}, L. and {Vigneron}, P. and {Wardinski}, I. and {Zvereva}, T.},
+    title = "{International Geomagnetic Reference Field: the 12th generation}",
+  journal = {Earth, Planets, and Space},
+ keywords = {Geomagnetism, Field modeling, IGRF},
+     year = 2015,
+    month = may,
+   volume = 67,
+      eid = {79},
+    pages = {79},
+      doi = {10.1186/s40623-015-0228-9},
+   adsurl = {http://adsabs.harvard.edu/abs/2015EP%26S...67...79T},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}

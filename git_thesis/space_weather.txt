@@ -125,28 +125,36 @@ Ok
 
 Forecast methods
 
+	Kp forecast
+Kp-flux rate relation
+Kp prediction models/methods
+This paper adds more empirical relations.
+
 	CME forecast to Earth
 CME forecast methods and models
 
 	Stream forecast to Earth
 Stream forecast methods and models
 
-	Kp forecast
-Kp-flux rate relation
-Kp prediction models/methods
-This paper adds more empirical relations.
+
+
+
+
+
+
 
 
 
 space weather
 magnetosphere
-	Solar-wind coupling
+	Solar-wind coupling (qualitative)
+	Geomagnetic storms (causes?)
 	Geomagnetic indices
 	Kp index
 Forecast methods
+	Kp forecast (quantitative)
 	CME forecast
 	Stream forecast
-	Kp forecast
 
 
 ##########################

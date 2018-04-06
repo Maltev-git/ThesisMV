@@ -1,0 +1,334 @@
+Return-path: <kelly@upcolorado.com>
+Envelope-to: mvenzmer@astro.physik.uni-goettingen.de
+Delivery-date: Thu, 05 Apr 2018 18:36:27 +0200
+Received: from mailer.gwdg.de ([134.76.10.26])
+	by ms0.astro.physik.uni-goettingen.de with esmtps (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256)
+	(Exim 4.89)
+	(envelope-from <kelly@upcolorado.com>)
+	id 1f47sB-0003Ol-Ge
+	for mvenzmer@astro.physik.uni-goettingen.de; Thu, 05 Apr 2018 18:36:27 +0200
+Received: from mfilter-123-1-2.mx.srv.dfn.de ([194.95.234.60])
+	by mailer.gwdg.de with esmtps (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256)
+	(Exim 4.90_1)
+	(envelope-from <kelly@upcolorado.com>)
+	id 1f47sB-0002aZ-DJ
+	for mvenzmer@astro.physik.uni-goettingen.de; Thu, 05 Apr 2018 18:36:27 +0200
+X-Virus-Scanned: Debian amavisd-new at mgw3-tub.srv.dfn.de
+X-Spam-Flag: NO
+X-Spam-Score: 0.574
+X-Spam-Level:
+X-Spam-Status: No, score=0.574 tagged_above=-200 required=6.2
+	tests=[BAYES_50=0.5, BOGO_UNSURE=0.01, DKIM_SIGNED=0.1,
+	DKIM_VALID=-0.1, HTML_MESSAGE=0.001, HTML_OBFUSCATE_10_20=0.093,
+	RCVD_IN_DNSWL_NONE=-0.0001, RCVD_IN_MSPIKE_H3=-0.01,
+	RCVD_IN_MSPIKE_WL=-0.01, URIBL_WHITE=-0.01] autolearn=disabled
+Received: from mail-yb0-f173.google.com (mail-yb0-f173.google.com [209.85.213.173])
+	by mfilter-123-1-2.mx.srv.dfn.de (Postfix) with ESMTPS
+	for <mvenzmer@astro.physik.uni-goettingen.de>; Thu,  5 Apr 2018 18:36:21 +0200 (CEST)
+Received: by mail-yb0-f173.google.com with SMTP id p126-v6so5505881ybg.8
+        for <mvenzmer@astro.physik.uni-goettingen.de>; Thu, 05 Apr 2018 09:36:21 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=upcolorado-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=m7ov6gQoik8Lq4Ar2v7nT6aX6/ayVsbN3FqhZrqum+s=;
+        b=sVKUwlz14QqzfCCZksoTpoc7jZUAiaSwuN8h8tOAgZqeCzdxLHQyKB/nNijPgQlB9M
+         B/JT56EWiCVK0YpgdzT1HjL2taaHGdlEWK9vJE4jxD9quQIbI7VHa8eNsFJ3KJipBlqR
+         Q2mNLUmvFJcKXXwPVE4T5J7Q5rtX03p4jlokNRQ4djHPzVhrf5Rf/pY50lGQWc25nqs0
+         XJYhb89MU/yVsKMlIEfKqinDoeTq8KYV4kMqzFA/APXhl4Gg/1/aZ9UwTyc3hqaZ81JN
+         59u0Ro76766idOlbzgwCa/d10CAU46H91E0yI2pzUCbTULJ82zucMj8s4BIKwNDzV/XV
+         EerQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=m7ov6gQoik8Lq4Ar2v7nT6aX6/ayVsbN3FqhZrqum+s=;
+        b=TshvraetkHGc2aTvlOD24lWu/puPBQu9KAEFG94AQIWwhGZoW/iHP80eVp9ng9tGPL
+         C9jyYG7HHzTL9oFgCiObqv9eDf0JkgRj8LH5DOjP0z7J/Zw5I+0/xAUOpfgeOGPrDzrM
+         SXjqY6D4jVbCLPctmaxASiZCja1eG6zvBqugogukl8fm1sKvRjW4NuZYgMYG9/STKQAa
+         WHYVwKbhotd9Qjbf+wkZkjJU1H1oUGP7FccNPqNkoG2ikEhwsDhZIwjU7ZgGYm1b3byM
+         /xFs3w5EBv2ta2iX49kqq1vDyqZ+Q0d+j6qPoMWpegly6q85mUkfmiE+aNMAIIm5A8Lp
+         lJNg==
+X-Gm-Message-State: ALQs6tDOzUCfciKDpO6goUqsZGsu1U9Iv7W/Xmw4awaCIv9wW/wUwt1l
+	F4nnvkt/zvmLWHoqVzYAplZ3kvkQ0XxbGergTikMVA==
+X-Google-Smtp-Source: AIpwx4/4PqozzyJofUJZE91I2ZFt6Cf1tql4RpaoY95FR7pwX8iv/5jQeinWmoePn3awOpPaf7EP2IFX5DIF3Ju4Oyw=
+X-Received: by 10.129.85.150 with SMTP id j144mr4760911ywb.361.1522946179702;
+ Thu, 05 Apr 2018 09:36:19 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 2002:a25:d9ce:0:0:0:0:0 with HTTP; Thu, 5 Apr 2018 09:36:19 -0700 (PDT)
+In-Reply-To: <c2c40807-fade-baba-5087-2b5caae51ede@astro.physik.uni-goettingen.de>
+References: <CAHTZCYnUQaF7f0a=2xGrj5WXXSQN2daZcPrXtiqOMtQXy+cQwg@mail.gmail.com>
+ <c2c40807-fade-baba-5087-2b5caae51ede@astro.physik.uni-goettingen.de>
+From: Kelly Lenkevich <kelly@upcolorado.com>
+Date: Thu, 5 Apr 2018 10:36:19 -0600
+Message-ID: <CAHTZCYkmSScWcHyDUdDqZ9x5GuPXK9yW0Pch6V5br+wT_y3R7A@mail.gmail.com>
+Subject: Re: Permission to use figure
+To: Malte Venzmer <mvenzmer@astro.physik.uni-goettingen.de>
+Content-Type: multipart/alternative; boundary="001a113f17660db8e505691c8a69"
+
+--001a113f17660db8e505691c8a69
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Malte,
+Since it is a noncommercial license, you are still good to go, free of
+charge for this use. I am sorry for not being clear about this! If you were
+to publish your dissertation or a revised version of it for commercial use,
+you will need additional permission. I hope this helps.
+
+Best,
+Kelly
+
+On Sun, Mar 11, 2018 at 10:40 AM, Malte Venzmer <
+mvenzmer@astro.physik.uni-goettingen.de> wrote:
+
+> Dear Kelly,
+>
+> Thank you. Thus, I have to inquire further whether I need an additional
+> permission:
+>
+> Subject: Figures 10 and 20 of the article
+> An interplanetary view of coronal holes
+> http://adsabs.harvard.edu/abs/1977chhs.conf..225H
+>
+> In order to obtain a PhD at my university, a thesis is required to be
+> published according to the PhD regulations of the University of
+> G=C3=B6ttingen. The university will publish my work electronically under =
+the
+> Creative Commons License 4.0:
+> https://ediss.uni-goettingen.de/help/deposit-license
+>
+> This is a noncommercial license - do I need an additional permission for
+> that as well?
+>
+> Thank you, best regards,
+> Malte
+>
+>
+>
+>
+>
+>
+> On 03/09/18 18:42, Kelly Lenkevich wrote:
+> > Hi Malte,
+> > Thanks for your recent inquiry about using one of our figures in your
+> > upcoming dissertation. Since the dissertation will not be used
+> > commercially, you are more than welcome to use this figure free of
+> charge.
+> > You will, however, need to gain additional permission if you ever plan =
+to
+> > publish your dissertation with this figure included.
+> >
+> > An interplanetary view of coronal holes
+> > http://adsabs.harvard.edu/abs/1977chhs.conf..225H
+> >
+> > The article is part of this book:
+> > https://openlibrary.org/works/OL6689983W/Coronal_holes_and_
+> > high_speed_wind_streams
+> >
+> > Please let me know if you need anything else at this time!
+> >
+> > Best,
+> > Kelly
+> >
+>
+
+
+
+--=20
+.   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
+.   .
+*Kelly Anne Lenkevich | Editorial Assistant*
+
+*U**N**I**V**E**R**S**I**T**Y P**R**E**S**S O**F C**O**L**O**R**A**D**O & U=
+*
+*T**A**H S**T**A**T**E U**N**I**V**E**RS* *I**T**Y P**R**E**S**S*
+245 Century Circle
+<https://maps.google.com/?q=3D245+Century+Circle%C2%A0:+Suite+202+:+Louisvi=
+lle,+CO+80027&entry=3Dgmail&source=3Dg>
+ : Suite 202 : Louisville, CO 80027
+<https://maps.google.com/?q=3D245+Century+Circle%C2%A0:+Suite+202+:+Louisvi=
+lle,+CO+80027&entry=3Dgmail&source=3Dg>
+ | www.upcolorado.com
+Direct (720) 406-8849 x 806 <(720)%20406-8849> | Toll-Free (855) 777-6113 x
+806 <(855)%20777-6113>
+
+Through Amazon Smile, you can donate 0.5% of your purchases to the
+nonprofit of your choice.
+Make University Press of Colorado/Utah State University
+Press your nonprofit of choice today <http://smile.amazon.com/ch/84-0847037=
+>
+.
+
+--001a113f17660db8e505691c8a69
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi Malte,<div>Since it is a noncommercial license, you are=
+ still good to go, free of charge for this use. I am sorry for not being cl=
+ear about this! If you were to publish your dissertation or a revised versi=
+on of it for commercial use, you will need additional permission. I hope th=
+is helps.</div><div><br></div><div>Best,</div><div>Kelly</div></div><div cl=
+ass=3D"gmail_extra"><br><div class=3D"gmail_quote">On Sun, Mar 11, 2018 at =
+10:40 AM, Malte Venzmer <span dir=3D"ltr">&lt;<a href=3D"mailto:mvenzmer@as=
+tro.physik.uni-goettingen.de" target=3D"_blank">mvenzmer@astro.physik.uni-g=
+oettingen.de</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" sty=
+le=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Dear K=
+elly,<br>
+<br>
+Thank you. Thus, I have to inquire further whether I need an additional<br>
+permission:<br>
+<br>
+Subject: Figures 10 and 20 of the article<br>
+<span class=3D"">An interplanetary view of coronal holes<br>
+<a href=3D"http://adsabs.harvard.edu/abs/1977chhs.conf..225H" rel=3D"norefe=
+rrer" target=3D"_blank">http://adsabs.harvard.edu/abs/<wbr>1977chhs.conf..2=
+25H</a><br>
+<br>
+</span>In order to obtain a PhD at my university, a thesis is required to b=
+e<br>
+published according to the PhD regulations of the University of<br>
+G=C3=B6ttingen. The university will publish my work electronically under th=
+e<br>
+Creative Commons License 4.0:<br>
+<a href=3D"https://ediss.uni-goettingen.de/help/deposit-license" rel=3D"nor=
+eferrer" target=3D"_blank">https://ediss.uni-goettingen.<wbr>de/help/deposi=
+t-license</a><br>
+<br>
+This is a noncommercial license - do I need an additional permission for<br=
+>
+that as well?<br>
+<br>
+Thank you, best regards,<br>
+Malte<br>
+<div class=3D"HOEnZb"><div class=3D"h5"><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+On 03/09/18 18:42, Kelly Lenkevich wrote:<br>
+&gt; Hi Malte,<br>
+&gt; Thanks for your recent inquiry about using one of our figures in your<=
+br>
+&gt; upcoming dissertation. Since the dissertation will not be used<br>
+&gt; commercially, you are more than welcome to use this figure free of cha=
+rge.<br>
+&gt; You will, however, need to gain additional permission if you ever plan=
+ to<br>
+&gt; publish your dissertation with this figure included.<br>
+&gt;<br>
+&gt; An interplanetary view of coronal holes<br>
+&gt; <a href=3D"http://adsabs.harvard.edu/abs/1977chhs.conf..225H" rel=3D"n=
+oreferrer" target=3D"_blank">http://adsabs.harvard.edu/abs/<wbr>1977chhs.co=
+nf..225H</a><br>
+&gt;<br>
+&gt; The article is part of this book:<br>
+&gt; <a href=3D"https://openlibrary.org/works/OL6689983W/Coronal_holes_and_=
+" rel=3D"noreferrer" target=3D"_blank">https://openlibrary.org/works/<wbr>O=
+L6689983W/Coronal_holes_and_</a><br>
+&gt; high_speed_wind_streams<br>
+&gt;<br>
+&gt; Please let me know if you need anything else at this time!<br>
+&gt;<br>
+&gt; Best,<br>
+&gt; Kelly<br>
+&gt;<br>
+</div></div></blockquote></div><br><br clear=3D"all"><div><br></div>-- <br>=
+<div class=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=
+=3D"ltr"><div><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=
+=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr=
+"><div style=3D"color:rgb(0,0,0);font-family:Calibri,sans-serif;font-size:1=
+4px"><div dir=3D"ltr"><div dir=3D"ltr"><div style=3D"font-size:medium;font-=
+family:Calibri"><span style=3D"font-family:Calibri,Verdana,Helvetica,Arial"=
+>.=C2=A0=C2=A0 .=C2=A0=C2=A0 .=C2=A0=C2=A0 .=C2=A0=C2=A0 . =C2=A0=C2=A0</sp=
+an><span style=3D"font-family:Calibri,Verdana,Helvetica,Arial">.=C2=A0=C2=
+=A0 .=C2=A0=C2=A0 .=C2=A0=C2=A0 .=C2=A0=C2=A0 . =C2=A0=C2=A0</span><span st=
+yle=3D"font-family:Calibri,Verdana,Helvetica,Arial">.=C2=A0=C2=A0 .=C2=A0=
+=C2=A0 .=C2=A0=C2=A0 .=C2=A0=C2=A0 . =C2=A0=C2=A0</span><span style=3D"font=
+-family:Calibri,Verdana,Helvetica,Arial">.=C2=A0=C2=A0 .=C2=A0=C2=A0 .=C2=
+=A0=C2=A0 .=C2=A0=C2=A0 . =C2=A0 .</span></div><div style=3D"font-size:medi=
+um;font-family:Calibri"><span style=3D"font-family:verdana,sans-serif"><b><=
+font color=3D"#3d85c6">Kelly Anne Lenkevich=C2=A0</font><font color=3D"#d0e=
+0e3">|</font><font color=3D"#3d85c6">=C2=A0</font><font color=3D"#76a5af">E=
+ditorial Assistant</font></b></span></div><div style=3D"font-family:Calibri=
+"><span style=3D"font-family:verdana,sans-serif;font-size:6px"><b><font col=
+or=3D"#76a5af"><br></font></b></span></div><div><b style=3D"font-size:10px;=
+color:rgb(61,133,198);font-family:verdana,sans-serif">U</b><b style=3D"font=
+-size:10px;color:rgb(61,133,198);font-family:verdana,sans-serif">N</b><b st=
+yle=3D"font-size:10px;color:rgb(61,133,198);font-family:verdana,sans-serif"=
+>I</b><b style=3D"font-size:10px;color:rgb(61,133,198);font-family:verdana,=
+sans-serif">V</b><b style=3D"font-size:10px;color:rgb(61,133,198);font-fami=
+ly:verdana,sans-serif">E</b><b style=3D"font-size:10px;color:rgb(61,133,198=
+);font-family:verdana,sans-serif">R</b><b style=3D"font-size:10px;color:rgb=
+(61,133,198);font-family:verdana,sans-serif">S</b><b style=3D"font-size:10p=
+x;color:rgb(61,133,198);font-family:verdana,sans-serif">I</b><b style=3D"fo=
+nt-size:10px;color:rgb(61,133,198);font-family:verdana,sans-serif">T</b><b =
+style=3D"font-size:10px;color:rgb(61,133,198);font-family:verdana,sans-seri=
+f">Y P</b><b style=3D"font-size:10px;color:rgb(61,133,198);font-family:verd=
+ana,sans-serif">R</b><b style=3D"font-size:10px;color:rgb(61,133,198);font-=
+family:verdana,sans-serif">E</b><b style=3D"font-size:10px;color:rgb(61,133=
+,198);font-family:verdana,sans-serif">S</b><b style=3D"font-size:10px;color=
+:rgb(61,133,198);font-family:verdana,sans-serif">S O</b><b style=3D"font-si=
+ze:10px;color:rgb(61,133,198);font-family:verdana,sans-serif">F C</b><b sty=
+le=3D"font-size:10px;color:rgb(61,133,198);font-family:verdana,sans-serif">=
+O</b><b style=3D"font-size:10px;color:rgb(61,133,198);font-family:verdana,s=
+ans-serif">L</b><b style=3D"font-size:10px;color:rgb(61,133,198);font-famil=
+y:verdana,sans-serif">O</b><b style=3D"font-size:10px;color:rgb(61,133,198)=
+;font-family:verdana,sans-serif">R</b><b style=3D"font-size:10px;color:rgb(=
+61,133,198);font-family:verdana,sans-serif">A</b><b style=3D"font-size:10px=
+;color:rgb(61,133,198);font-family:verdana,sans-serif">D</b><b style=3D"fon=
+t-size:10px;color:rgb(61,133,198);font-family:verdana,sans-serif">O &amp; U=
+</b><b style=3D"font-size:10px;color:rgb(61,133,198);font-family:verdana,sa=
+ns-serif">T</b><b style=3D"font-size:10px;color:rgb(61,133,198);font-family=
+:verdana,sans-serif">A</b><b style=3D"font-size:10px;color:rgb(61,133,198);=
+font-family:verdana,sans-serif">H S</b><b style=3D"font-size:10px;color:rgb=
+(61,133,198);font-family:verdana,sans-serif">T</b><b style=3D"font-size:10p=
+x;color:rgb(61,133,198);font-family:verdana,sans-serif">A</b><b style=3D"fo=
+nt-size:10px;color:rgb(61,133,198);font-family:verdana,sans-serif">T</b><b =
+style=3D"font-size:10px;color:rgb(61,133,198);font-family:verdana,sans-seri=
+f">E U</b><b style=3D"font-size:10px;color:rgb(61,133,198);font-family:verd=
+ana,sans-serif">N</b><b style=3D"font-size:10px;color:rgb(61,133,198);font-=
+family:verdana,sans-serif">I</b><b style=3D"font-size:10px;color:rgb(61,133=
+,198);font-family:verdana,sans-serif">V</b><b style=3D"font-size:10px;color=
+:rgb(61,133,198);font-family:verdana,sans-serif">E</b><b style=3D"font-size=
+:10px;color:rgb(61,133,198);font-family:verdana,sans-serif">RS</b><b style=
+=3D"color:rgb(61,133,198);font-family:verdana,sans-serif;font-size:2px">=C2=
+=A0</b><b style=3D"font-size:10px;color:rgb(61,133,198);font-family:verdana=
+,sans-serif">I</b><b style=3D"font-size:10px;color:rgb(61,133,198);font-fam=
+ily:verdana,sans-serif">T</b><b style=3D"font-size:10px;color:rgb(61,133,19=
+8);font-family:verdana,sans-serif">Y P</b><b style=3D"font-size:10px;color:=
+rgb(61,133,198);font-family:verdana,sans-serif">R</b><b style=3D"font-size:=
+10px;color:rgb(61,133,198);font-family:verdana,sans-serif">E</b><b style=3D=
+"font-size:10px;color:rgb(61,133,198);font-family:verdana,sans-serif">S</b>=
+<b style=3D"font-size:10px;color:rgb(61,133,198);font-family:verdana,sans-s=
+erif">S</b></div><div><span style=3D"font-size:10px;color:rgb(118,165,175);=
+font-family:verdana,sans-serif"><a href=3D"https://maps.google.com/?q=3D245=
++Century+Circle%C2%A0:+Suite+202+:+Louisville,+CO+80027&amp;entry=3Dgmail&a=
+mp;source=3Dg" style=3D"color:rgb(17,85,204)" target=3D"_blank">245 Century=
+ Circle</a>=C2=A0<a href=3D"https://maps.google.com/?q=3D245+Century+Circle=
+%C2%A0:+Suite+202+:+Louisville,+CO+80027&amp;entry=3Dgmail&amp;source=3Dg" =
+style=3D"color:rgb(17,85,204)" target=3D"_blank">: Suite 202 : Louisville, =
+CO 80027</a>=C2=A0|=C2=A0<a href=3D"http://www.upcolorado.com/" style=3D"co=
+lor:rgb(17,85,204)" target=3D"_blank">www.upcolorado.com</a></span></div><d=
+iv style=3D"font-size:medium;font-family:Calibri"><span style=3D"font-size:=
+10px"><span style=3D"color:rgb(118,165,175);font-family:verdana,sans-serif"=
+>Direct=C2=A0<a href=3D"tel:(720)%20406-8849" value=3D"+17204068849" style=
+=3D"color:rgb(17,85,204)" target=3D"_blank">(720) 406-8849 x 806</a>=C2=A0|=
+=C2=A0</span><font face=3D"verdana,sans-serif" color=3D"#76a5af">Toll-Free=
+=C2=A0<a href=3D"tel:(855)%20777-6113" value=3D"+18557776113" style=3D"colo=
+r:rgb(17,85,204)" target=3D"_blank">(855) 777-6113 x 806</a></font></span><=
+br></div></div></div></div><div style=3D"color:rgb(0,0,0);font-family:Calib=
+ri,sans-serif;font-size:medium"><div dir=3D"ltr"><div dir=3D"ltr"><div styl=
+e=3D"font-family:Calibri"><font face=3D"verdana,sans-serif"><br></font></di=
+v><div style=3D"font-family:Calibri"><font face=3D"verdana,sans-serif" colo=
+r=3D"#76a5af" size=3D"1">Through=C2=A0Amazon=C2=A0Smile,=C2=A0you=C2=A0can =
+donate=C2=A00.5% of your purchases to the nonprofit of your choice.=C2=A0</=
+font></div><div style=3D"font-family:Calibri"><font face=3D"verdana,sans-se=
+rif" color=3D"#76a5af" size=3D"1"><a href=3D"http://smile.amazon.com/ch/84-=
+0847037" style=3D"color:rgb(17,85,204)" target=3D"_blank">Make University P=
+ress of Colorado/Utah State University Press=C2=A0your=C2=A0nonprofit of ch=
+oice today</a>.</font></div></div></div></div></div></div></div></div></div=
+></div></div></div></div></div></div>
+</div>
+
+--001a113f17660db8e505691c8a69--

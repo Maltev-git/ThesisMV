@@ -822,10 +822,7 @@ substorms
 substorm distance about 10 Re (VB)\\
 
 
-
-
-
-\subsection{Solar-wind coupling}
+\subsection{Solar-wind coupling mechanisms}
 \label{sec:solar_wind_coupling}
 
 locations of reconnection
@@ -835,6 +832,16 @@ southward IMF
 half-wave rectifier
 both Newell relations
 
+\subsection{Magnetopause reconnection}
+
+
+\subsection{Dungey convection cycle}
+
+
+\subsection{Russell-McPherron effect}
+
+
+\subsection{Geomagnetic storms}
 
 
 \subsection{Geomagnetic indices}
@@ -863,23 +870,23 @@ Stream forecast methods and models
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-% space weather
+% Space weather
 % 
-% magnetosphere
-% structure
-% Solar-wind coupling mechanisms (reconnection, turbulence, ...)
-% current sheets, currents, plasma regions
-% Dungey convection cycle (Bz; unsteady/continuous reconnection; substorms; two-cell convection)
-% seasonal variations (R-M effect)
+% Magnetosphere
+% Structure (current sheets, currents, plasma regions)
+% Solar wind interaction processes/coupling mechanisms (list all: reconnection, turbulence, ...)
+% Magnetopause reconnection (Bz)
+% Dungey convection cycle (unsteady/continuous reconnection; substorms; two-cell convection)
+% Russell-McPherron effect (seasonal variations)
 % Geomagnetic storms
-% 
+%
 % Geomagnetic indices
 % Kp index
 % 
 % Forecast methods
 % Kp forecast
-% CME forecast
-% Stream forecast
+% CME forecast to Earth
+% Stream forecast to Earth
 
 
 
@@ -889,15 +896,11 @@ Stream forecast methods and models
 
 Bothmer2007book: ``Space weather can be understood as a field of research that will provide new insights into the complex influences and effects of the Sun and other cosmic sources on interplanetary space, the Earth's magnetosphere, ionosphere, and thermosphere, on space- and ground-based technological systems, and beyond that, on their endangering effects to life and health.''\\
 
-
 % solar terrestrial relations
 \citet{Carrington1859} observed a brightening on the Sun on 1~September 1859 and noted a strong geomagnetic storm that occurred 17~hours later.\\
 Carrington made first connection between terrestrial magnetic field and solar flares. correct?\\
 
-solar wind's impact on Earth\\
-
-Even in ``ancient'' times (when?) a correlation between solar particles and disturbances in the magnetosphere were known of (Bartels1962).\\
-
+Even in ``ancient'' times (when?) a correlation between solar particles and disturbances in the magnetosphere were known of \citep{Bartels1962}.\\
 
 %see Bartels1962:
 there are several types of solar-terrestrial relations, \citet{Bartels1962} listed:\\	%Zuordnung solarer Beobachtungen zu terrestrischen\\
@@ -908,27 +911,22 @@ d) daily Earth rotation effects (X"~ray and light)\\
 
 seasonal effects from Earth orbital distance, inclination (solar rotation axis angle) and Earth tilt; make geometry fig?\\
 
-% ionosphere effects
-X"~ray fluxes from flares are also responsible for producing sudden, short-lived enhancements in the electron content of the ionosphere (TEC), known as sudden ionospheric disturbances. cite from Gosling1993\\
+% flare impact and ionosphere
+``Flares are one of the three major components of space weather – next to coronal mass ejections (CMEs) and solar energetic particles (SEPs) – and pose significant threats to satellites, radio communication, and navigation by Global Navigation Satellite Systems.'' from Kraaikamp2015\\
+Kraaikamp2015: \url{https://www.swsc-journal.org/articles/swsc/pdf/2015/01/swsc140062.pdf}\\
 
-% ionosphere and its related effects
-its variations due to solar radiation (day/night cycle and flares)\\
+X"~ray fluxes from flares are also responsible for producing sudden, short-lived enhancements in the electron content of the ionosphere (TEC), known as sudden ionospheric disturbances. cite from \citet{Gosling1993}\\
+
+ionospheric variations due to solar radiation (day/night cycle and flares)\\
 ionosphere -> TEC -> GNSS error\\
 
-% flare impact
 see description in SWPC flares: \url{https://www.swpc.noaa.gov/products/goes-x-ray-flux}\\
-
-Kraaikamp2015: \url{https://www.swsc-journal.org/articles/swsc/pdf/2015/01/swsc140062.pdf}\\
-``Flares are one of the three major components of space weather – next to coronal mass ejections (CMEs) and solar energetic particles (SEPs) – and pose significant threats to satellites, radio communication, and navigation by Global Navigation Satellite Systems.'' from Kraaikamp2015\\
-
 
 
 \section{Magnetosphere}
 
 the name magnetosphere was proposed by \citet{Gold1959}\\
-
 The cavity is called the magnetosphere. It has a relatively well-defined outer boundary, the magnetopause.\\
-
 The magnetosphere's shape is formed by the dynamic pressure balance. The structure is similar to the heliosphere in the ISM.\\
 
 bow shock, magnetotail, magnetosheath, magnetopause, see \autoref{fig:Davies1990_magnetosphere_sharpened}\\
@@ -941,36 +939,29 @@ bow shock, magnetotail, magnetosheath, magnetopause, see \autoref{fig:Davies1990
 \end{figure}
 % http://digital-library.theiet.org/content/books/ew/pbew031e
 
-Earth magnetic field strength at a height of \SI{36000}{\km} (geostationary): $\approx$\SI{100}{\nT} (cites?)\\
+% magnetopause front distance
+magnetopause front distance: the dynamic ram pressure from the solar wind is equal to the magnetic pressure from the Earth's magnetic field. about \SI{10}{\RE}; under extreme SW conditions geosynchronous Earth orbit (GEO) satellite crossings at \SI{6.6}{\RE}\\
 
+DeKeyser2005:\\
+The magnetospheric field magnitude decreases with increasing distance from Earth, but less rapidly than a dipole field in a vacuum. Indeed, the surface current induces a magnetic field that adds to the geomagnetic field inward of the magnetopause, while it prevents the Earth’s field lines from penetrating into the magnetosheath, where the field is relatively weak. Just before the magnetopause is encountered, at about \SI{8.2}{\RE}, the measured field is about twice that of the dipole (see e.g., Chapman and Bartels, 1940). In the magnetosheath, the field intensity is usually lower and has larger variability, reflecting the fluctuations in the interplanetary magnetic field.\\
+
+% bow shock
 bow shock standoff distance:	\citep[p.~112]{Bothmer2007}\\
 \begin{align}
-	d = \frac{107.4}{1 R_\text{E}} (N V^2)^{-1/6}
+	d = 107.4 (N V^2)^{-1/6}
 \end{align}
+with distance in \RE{}\\
+
+% tail
+tail length around \SI{100}{\RE}; plasmoids...\\
 
 
-% magnetosphere seasonal variations
-add ecliptic and terrestrial tilt angle; with plasmoid?\\
 
-% R-M effect
-annual Variation in Magnetic Disturbances\\
-The semiannual variation in geomagnetic activity has been recognized for a long period of time which shows the maximum appears around equinoxes while the minimum appears around solstices; by \citep{Cortie1912}\\
-
-A model, in which the interaction, ordered in solar magnetospheric (GSM) coordinates, is zero for northward components of the interplanetary field while the interaction is proportional to magnitude of the southward components predicts the correct phase and provides a yearly variation in the strength of the interaction sufficient to cause the observed effect. \citep{Russell1973}\\
-This mechanism is the varying probability throughout the year of a southward component of the interplanetary magnetic field as seen by the magnetosphere. This arises from the changing orientation between the solar equatorial coordinate system (GSEQ), in which the interplanetary field is ordered, and the solar magnetospheric coordinate system (GSM), in which the interaction with the interplanetary field is ordered. \citep{Russell1973}\\
-
-the R-M effect holds that the angle between Z axis in geocentric solar magnetospheric (GSM) coordinate system and Y axis in geocentric solar equatorial (GSEQ) coordinate system plays an important role. Figure 1a shows the semiannual and diurnal variation of the angle q between the Z axis in GSM coordinate system and the Y axis in GSEQ coordinate system, that is, the controlling parameter of the R-M effect. According to the R-M effect, the probability of southward IMF increases when the angle q, which is smaller than 90 degrees, decreases, so that the dayside reconnection can be more efficient and more energy can be conveyed into the magnetosphere. \citep{Zhao2012}\\
-
-whereas Russell et al. [2003] demonstrate that the tilt of dipole axis controls the size of dayside reconnection region and thus the reconnection rate and geomagnetic activity. Nowadays, the R-M effect is one of the most prevailing hypotheses. \citep{Zhao2012}\\
-Thus, the R-M effect with positive/negative IMF polarity is more reasonable to explain seasonal and diurnal variation of geomagnetic activity under different IMF polarity and extreme solar wind conditions. \citep{Zhao2012}\\
-
-% magnetosphere disturbances (storms)
-
-
-ring current systems\\
+DeKeyser2005:\\
+the magnetopause is almost always in rapidly changing inward-outward motion with typical speeds of tens of km/s. The magnetopause does not have much mass, so its speed can change abruptly, and by large amounts, in response to even minor changes in the magnetosheath pressure. The amplitude of the radial motion of the magnetopause can be several Earth radii.\\
 
 current layer on magnetopause\\
-
+ring current systems\\
 the magnetosphere's current system, see \autoref{fig:DeKeyser2005_magnetosphere}\\
 \begin{figure}[htb]
 	\centering
@@ -980,17 +971,19 @@ the magnetosphere's current system, see \autoref{fig:DeKeyser2005_magnetosphere}
 	\label{fig:DeKeyser2005_magnetosphere}
 \end{figure}
 
-DeKeyser2005:\\
-The magnetospheric field magnitude decreases with increasing distance from Earth, but less rapidly than a dipole field in a vacuum. Indeed, the surface current induces a magnetic field that adds to the geomagnetic field inward of the magnetopause, while it prevents the Earth’s field lines from penetrating into the magnetosheath, where the field is relatively weak. Just before the magnetopause is encountered, at about 8.2 R E, the measured field is about twice that of the dipole (see e.g., Chapman and Bartels, 1940). In the magnetosheath, the field intensity is usually lower and has larger variability, reflecting the fluctuations in the interplanetary magnetic field.\\
+radiation belts\\
 
-DeKeyser2005:\\
-the magnetopause is almost always in rapidly changing inward-outward motion with typical speeds of tens of km/s. The magnetopause does not have much mass, so its speed can change abruptly, and by large amounts, in response to even minor changes in the magnetosheath pressure. The amplitude of the radial motion of the magnetopause can be several Earth radii.\\
-
+\subsection{Magnetopause reconnection}
 DeKeyser2005:\\
 Over the years, evidence has been mounting that the dominant transport of plasma across the magnetopause is caused by magnetic field reconnection. This process is discussed in detail in Phan et al. (2005). It implies an X-line geometry at the magnetopause. The magnetopause then has a small, non-zero normal magnetic field component with opposite sign on either side of an X-line or reconnection site.\\
 
 Phan2005, Magnetopause Processes:\\
 In its simplest description, the magnetopause is an impenetrable boundary that separates the solar wind from Earth’s magnetosphere. The well-established existence of plasma of dominantly solar wind origin inside the magnetosphere does, however, imply that solar wind plasma is able to penetrate the magnetopause. Establishing the mechanisms by which this occurs is one of the greatest challenges of magnetospheric physics. Candidate processes include magnetic reconnection, the Kelvin-Helmholtz instability, diffusion, and impulsive penetration.\\
+
+Phan2005, Magnetopause Processes:\\
+Reconnection is an important mechanism for plasma transport that results in changes of magnetic topology. The process is initiated in a narrow ‘diffusion region’. Though macroscopically the occurrence of reconnection is well established, the microphysical processes that lead to reconnection are still not well understood.\\
+
+reconnection X"~line (the line along which oppositely directed magnetic field lines reconnect); add figure...\\
 
 Phan2005, Magnetopause Processes:\\
 at the magnetopause, the large-scale spatial and temporal nature of reconnection is still not well understood. One of the unanswered questions is whether reconnection at the magnetopause is necessarily intermittent, or can be continuous, or even quasi-steady.\\
@@ -1018,7 +1011,28 @@ Phan2005, Magnetopause Processes:\\
 The Cluster results indicate that the KHI occurs at the flank magnetopause and that it may lead to solar wind entry, perhaps via non-reconnection associated processes, for northward solar-wind magnetic field. But the microphysical processes that cause the plasma transport in the KH vortices, which would control the rate at which mass and energy from the solar wind are transferred, remain to be understood.\\
 
 
+\subsection{Russell-McPherron effect}
+% magnetosphere seasonal variations
+annual Variation in Magnetic Disturbances\\
+The semiannual variation in geomagnetic activity has been recognized for a long period of time which shows the maximum appears around equinoxes while the minimum appears around solstices; by \citep{Cortie1912}\\
+
+A model, in which the interaction, ordered in solar magnetospheric (GSM) coordinates, is zero for northward components of the interplanetary field while the interaction is proportional to magnitude of the southward components predicts the correct phase and provides a yearly variation in the strength of the interaction sufficient to cause the observed effect. \citep{Russell1973}\\
+This mechanism is the varying probability throughout the year of a southward component of the interplanetary magnetic field as seen by the magnetosphere. This arises from the changing orientation between the solar equatorial coordinate system (GSEQ), in which the interplanetary field is ordered, and the solar magnetospheric coordinate system (GSM), in which the interaction with the interplanetary field is ordered. \citep{Russell1973}\\
+
+the R-M effect holds that the angle between Z axis in geocentric solar magnetospheric (GSM) coordinate system and Y axis in geocentric solar equatorial (GSEQ) coordinate system plays an important role. Figure 1a shows the semiannual and diurnal variation of the angle q between the Z axis in GSM coordinate system and the Y axis in GSEQ coordinate system, that is, the controlling parameter of the R-M effect. According to the R-M effect, the probability of southward IMF increases when the angle q, which is smaller than 90 degrees, decreases, so that the dayside reconnection can be more efficient and more energy can be conveyed into the magnetosphere. \citep{Zhao2012}\\
+
+whereas Russell et al. [2003] demonstrate that the tilt of dipole axis controls the size of dayside reconnection region and thus the reconnection rate and geomagnetic activity. Nowadays, the R-M effect is one of the most prevailing hypotheses. \citep{Zhao2012}\\
+Thus, the R-M effect with positive/negative IMF polarity is more reasonable to explain seasonal and diurnal variation of geomagnetic activity under different IMF polarity and extreme solar wind conditions. \citep{Zhao2012}\\
+
+solar-terrestrial tilt angle and orbit geometry figure?\\
+
+
+% magnetosphere disturbances (storms)
+
+
+
 \subsection{Solar-wind coupling} (qualitative)
+
 at Earth the solar wind total energy flux ($1.45~\text{mW/m}^2$) is only about one millionth of the solar radiation flux (see \citet[p.~153]{Schwenn1990})\\
 
 %solar wind intake
@@ -1037,10 +1051,6 @@ reconnection behind the cusps or at the front of the magnetopause (see \autoref{
 	}
 \end{figure}
 
-reconnection X"~line (the line along which oppositely directed magnetic field lines reconnect); add figure...\\
-
-Phan2005, Magnetopause Processes:\\
-Reconnection is an important mechanism for plasma transport that results in changes of magnetic topology. The process is initiated in a narrow ‘diffusion region’. Though macroscopically the occurrence of reconnection is well established, the microphysical processes that lead to reconnection are still not well understood.\\
 
 Solar wind interaction processes with the magnetosphere:\\
 there are several underlying physical mechanisms, whose contribution is not yet quantified'?'\\

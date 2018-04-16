@@ -1,5 +1,5 @@
 
-\chapter{Empirical solar-wind model for the inner heliosphere}
+\chapter{Empirical solar wind model for the inner heliosphere}
 \label{chap:empirical_solar_wind_model_for_the_inner_heliosphere}
 
 \section{Introduction}
@@ -9,7 +9,7 @@ The analyses in the previous chapter are focused on the solar wind's influence o
 context of motivation in thesis and paper introduction and context of results in thesis\\
 
 %COFI -- chapter outline and flow integration
-This chapter is constructed as follows, the PSP mission, its scientific goals, and the spacecraft are described, I introduce the analyses done in the publication \citet{Venzmer2018}, which is a major part of this chapter. An alternative to the magnetic field solar distance dependency is derived, which changes the power law from our article to support a Parker magnetic field geometry. An outlook is given, describing different effects that further could be analysed, quantified, and implemented into the solar-wind model, such as flux conservation, seasonal and latitudinal effects, and the distance behavior of solar-wind structures.\\
+This chapter is constructed as follows, the PSP mission, its scientific goals, and the spacecraft are described, I introduce the analyses done in the publication \citet{Venzmer2018}, which is a major part of this chapter. An alternative to the magnetic field solar distance dependency is derived, which changes the power law from our article to support a Parker magnetic field geometry. An outlook is given, describing different effects that further could be analysed, quantified, and implemented into the solar wind model, such as flux conservation, seasonal and latitudinal effects, and the distance behavior of solar wind structures.\\
 
 
 %%% contributions and copyright
@@ -84,13 +84,13 @@ In our article, we scaled the magnetic field strength via a power-law function a
 
 A possibly more accurate distance dependency for the model is derived in the following.\\
 
-The coronal magnetic field near the Sun rotates rigidly, holding on to the coronal plasma. At the solar-wind source surface (at around \SI{2.5}{\Rs}), where the thermal plasma pressure overcomes the magnetic pressure, the magnetic field gets radially transported outwards, maintaining only its radial vector component $\vect{B}_r$. From there on, the solar rotation begins to shear the magnetic field, building up a longitudinal component $\vect{B}_\phi$ as well. The solar-wind magnetic field model formulated by \citet{Parker1958} has the following components in spherical coordinates ($\theta$ is the colatitude):
+The coronal magnetic field near the Sun rotates rigidly, holding on to the coronal plasma. At the solar wind source surface (at around \SI{2.5}{\Rs}), where the thermal plasma pressure overcomes the magnetic pressure, the magnetic field gets radially transported outwards, maintaining only its radial vector component $\vect{B}_r$. From there on, the solar rotation begins to shear the magnetic field, building up a longitudinal component $\vect{B}_\phi$ as well. The solar wind magnetic field model formulated by \citet{Parker1958} has the following components in spherical coordinates ($\theta$ is the colatitude):
 \begin{align}
 	\vect{B}_r(r) &= B_0 \left(\frac{r_0}{r}\right)^2 \cdot \vect{e}_r\,,\\
 	\vect{B}_\phi(r) &= -B_0 \left(\frac{r_0}{r}\right)^2 \cdot \frac{\omega\,r\,\sin\theta}{v_\text{sw}} \cdot \vect{e}_\phi	\,,	\label{eq:b_phi_vector}\\
 	\vect{B}_\theta(r) &= 0 \cdot \vect{e}_\theta\,.
 \end{align}
-$B_0$ represents the radial field component at the solar distance $r_0$. The solar surface equatorial angular rotation rate $\omega$ and the solar-wind velocity $v_\text{sw}$ are involved as well. From these equations it can be seen that $\vect{B}_r$ scales with increasing solar distance with $r^{-2}$, as it is expected for a spherical outflow, and $\vect{B}_\phi$ scales with $r^{-1}$ as expected for a two-dimensional point source. In-situ observations support the component's scaling according to these theoretical exponents, although in slow solar wind the scaling for $\vect{B}_\phi$ deviates somewhat from theory \citep{Mariani1978}.
+$B_0$ represents the radial field component at the solar distance $r_0$. The solar surface equatorial angular rotation rate $\omega$ and the solar wind velocity $v_\text{sw}$ are involved as well. From these equations it can be seen that $\vect{B}_r$ scales with increasing solar distance with $r^{-2}$, as it is expected for a spherical outflow, and $\vect{B}_\phi$ scales with $r^{-1}$ as expected for a two-dimensional point source. In-situ observations support the component's scaling according to these theoretical exponents, although in slow solar wind the scaling for $\vect{B}_\phi$ deviates somewhat from theory \citep{Mariani1978}.
 
 From the magnetic field's absolute value
 \begin{align}
@@ -108,7 +108,7 @@ The magnetic field angle in the solar equatorial plane is distance dependent and
 \begin{align}
 	\phi_B(r) &= \arctan\left(-\frac{\omega \cdot r}{v_\text{sw}}\right)\,.
 \end{align}
-The angle becomes $\phi_B(\SI{1}{\au}) = \SI{-46.23}{\degree}$ when using the Sun's equatorial angular velocity $\omega_\text{eq} = \SI{14.37}{\degree\per\day}$ (for more details on solar rotation see appendix \autoref{sec:solar_surface_differential_rotation}) and the median solar-wind velocity $v_\text{sw} = \SI{416}{\km\per\s}$ from our paper.
+The angle becomes $\phi_B(\SI{1}{\au}) = \SI{-46.23}{\degree}$ when using the Sun's equatorial angular velocity $\omega_\text{eq} = \SI{14.37}{\degree\per\day}$ (for more details on solar rotation see appendix \autoref{sec:solar_surface_differential_rotation}) and the median solar wind velocity $v_\text{sw} = \SI{416}{\km\per\s}$ from our paper.
 
 During solar cycle minimum, the solar wind in the equatorial plane outside the source surface originates from polar regions at about \SI{+-60}{\degree} heliolatitude. This leads to a slightly underwound Parker spiral, because of the slower rotation rate at higher latitudes \citep{Banaszkiewicz1998}. Using the differential rotation rate $\omega(\SI{+-60}{\degree}) = \SI{13.69}{\degree\per\day}$ (see appendix \autoref{eq:omega_differential}), the field angle becomes $\phi_B(\SI{1}{\au}) = \SI{-44.84}{\degree}$.\\
 
@@ -237,7 +237,7 @@ see fit distribution in \autoref{fig:fit_fixed_B_paper_f} and resulting fit para
 \end{figure}
 
 % from paper:\\
-% 'In order to estimate the solar-wind environment for the PSP orbit, we combine the results from the solar-wind frequency distributions’ solar-activity relationships and their distance dependencies derived from the OMNI and Helios data. The result is an empirical solar-wind model for the inner heliosphere which is then extrapolated to the PSP orbit in Sect.~ref{sec:}.'\\
+% 'In order to estimate the solar wind environment for the PSP orbit, we combine the results from the solar wind frequency distributions’ solar-activity relationships and their distance dependencies derived from the OMNI and Helios data. The result is an empirical solar wind model for the inner heliosphere which is then extrapolated to the PSP orbit in Sect.~ref{sec:}.'\\
 
 The result of this analysis can be used to scale the SSN-relation derived in the paper:
 \begin{align}
@@ -254,17 +254,17 @@ This magnetic field strength model is extrapolated to PSP's orbital range in \au
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/sw_extrapolation_ssn_g.pdf}
 	}{
-		\caption{Radial extrapolation of the solar-wind magnetic field strength to the PSP orbit region. The median value from the model, obtained from Helios and OMNI measurements, is extrapolated to the PSP region for SSN values between solar minimum and maximum, that is, $0 \le ssn \le 200$. The lower edges of the shaded areas correspond to solar minimum, the upper edges to solar maximum. I also added the radial dependency of the field model by \citet{Parker1958}, normed to \SI{1}{\au} (red). The orbital distance ranges from PSP and the Helios probes are indicated by the blue and green lines.}
+		\caption{Radial extrapolation of the solar wind magnetic field strength to the PSP orbit region. The median value from the model, obtained from Helios and OMNI measurements, is extrapolated to the PSP region for SSN values between solar minimum and maximum, that is, $0 \le ssn \le 200$. The lower edges of the shaded areas correspond to solar minimum, the upper edges to solar maximum. I also added the radial dependency of the field model by \citet{Parker1958}, normed to \SI{1}{\au} (red). The orbital distance ranges from PSP and the Helios probes are indicated by the blue and green lines.}
 		\label{fig:sw_extrapolation_ssn_g}
 	}
 \end{figure}
 
-Using the SSN prediction as described in the paper, the solar-wind environment is forecasted to PSP's orbit and mission time, see \autoref{fig:PSP_perihelia_prediction_f}.\\
+Using the SSN prediction as described in the paper, the solar wind environment is forecasted to PSP's orbit and mission time, see \autoref{fig:PSP_perihelia_prediction_f}.\\
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/PSP_perihelia_prediction_f.pdf}
 	}{
-		\caption{Estimated solar-wind parameter medians (solid lines) and their error bands (gray area) during 12~days in 2018 and 2024 with PSP's first perihelion at about \SI{0.16}{\au} and PSP's 22nd (the first closest) perihelion at \SI{0.046}{\au}. I indicated the prediction from \citet{Venzmer2018} as well (dotted lines).}
+		\caption{Estimated solar wind parameter medians (solid lines) and their error bands (gray area) during 12~days in 2018 and 2024 with PSP's first perihelion at about \SI{0.16}{\au} and PSP's 22nd (the first closest) perihelion at \SI{0.046}{\au}. I indicated the prediction from \citet{Venzmer2018} as well (dotted lines).}
 		\label{fig:PSP_perihelia_prediction_f}
 	}
 \end{figure}
@@ -277,12 +277,12 @@ Using the SSN prediction as described in the paper, the solar-wind environment i
 
 The estimated magnetic field strength median value of \SI{94}{\nano\tesla} for PSP's first perihelion is \SI{8}{\%} higher than that derived in the paper. However, the median value for the first closest perihelion is even \SI{32}{\%} higher with \SI{1241}{\nano\tesla}.\\
 
-The estimated frequency distributions of the solar-wind magnetic field strength at PSP's 1st and 22nd (first closest) perihelion are plotted in \autoref{fig:PSP_sw_distributions_c}.
+The estimated frequency distributions of the solar wind magnetic field strength at PSP's 1st and 22nd (first closest) perihelion are plotted in \autoref{fig:PSP_sw_distributions_c}.
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/PSP_sw_distributions_c.pdf}
 	}{
-		\caption{Frequency distributions of the solar-wind magnetic field strength (OMNI data) and those estimated with the solar-wind model for PSP's 1st and 22nd (first closest) perihelion. In this plot the frequencies of both extrapolated curves are scaled for visibility to the same height as the \SI{1}{\au} distribution. I indicated the prediction from \citet{Venzmer2018} is as well (dotted lines).}
+		\caption{Frequency distributions of the solar wind magnetic field strength (OMNI data) and those estimated with the solar wind model for PSP's 1st and 22nd (first closest) perihelion. In this plot the frequencies of both extrapolated curves are scaled for visibility to the same height as the \SI{1}{\au} distribution. I indicated the prediction from \citet{Venzmer2018} is as well (dotted lines).}
 		\label{fig:PSP_sw_distributions_c}
 	}
 \end{figure}
@@ -297,16 +297,16 @@ comparison with Burlaga1984: Large-scale IMF...; found for 1-5 au: B(r) = 4.75 s
 
 
 \section{Outlook}
-Currently, the solar-wind model described in this chapter and the paper is purely empirical and its four solar-wind quantities are characterized independently from each other. In further steps, theoretical relations connecting the parameters could be introduced to make the model self-consistent. For example, flux conservation could be implemented into the radial distance dependencies, relating the two parameters density and velocity (see section~XX). Or also, the velocity within the magnetic field's $\vect{B}_\phi$-component (\autoref{eq:b_phi_vector}) could be respected as a variable (not as a constant as it is done in the previous section).\\
+Currently, the solar wind model described in this chapter and the paper is purely empirical and its four solar wind quantities are characterized independently from each other. In further steps, theoretical relations connecting the parameters could be introduced to make the model self-consistent. For example, flux conservation could be implemented into the radial distance dependencies, relating the two parameters density and velocity (see section~XX). Or also, the velocity within the magnetic field's $\vect{B}_\phi$-component (\autoref{eq:b_phi_vector}) could be respected as a variable (not as a constant as it is done in the previous section).\\
 
 inclusion of seasonal effects into the model, see \autoref{fig:OMNI_monthly_freq_V_gps} and \autoref{fig:OMNI_monthly_freq_B_a_gps}; or error estimation...\\
 
 latitudinal effects...\\
 
-further investigations should be done into solar-wind structure extrapolations\\
-solar-wind structure investigation. solar-wind structures differ from the average distance scaling laws, e.g., MCs show a different extrapolation behavior (cite?).\\
+further investigations should be done into solar wind structure extrapolations\\
+solar wind structure investigation. solar wind structures differ from the average distance scaling laws, e.g., MCs show a different extrapolation behavior (cite?).\\
 
-Data captured from spacecraft that studied Mercury (perihelion distance of \SI{0.3}{\au}), such as Mariner~10 and MESSENGER, could be included to refine the distance dependency of the solar-wind model.
+Data captured from spacecraft that studied Mercury (perihelion distance of \SI{0.3}{\au}), such as Mariner~10 and MESSENGER, could be included to refine the distance dependency of the solar wind model.
 %MESSENGER: B-field 2004--2011
 However, PSP's near-Sun in-situ measurements, starting in fall 2018, will eventually reveal how accurate the predictions of the derived models are.\\
 

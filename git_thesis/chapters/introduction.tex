@@ -749,43 +749,57 @@ At the front of the magnetopause, the incoming solar wind ions and electrons are
 
 \subsection{Solar wind coupling mechanisms}
 \label{sec:solar_wind_coupling}
-
-There exist different mechanisms how solar wind couples to the magnetosphere and deposits energy into it.\\
-
-Solar wind interaction processes with the magnetosphere\\
-there are several underlying physical mechanisms\\
-ways for solar wind momentum and energy transfer into magnetosphere:\\
+There exist several ways of how solar wind couples to the magnetosphere and deposits energy and plasma within. The contributions of the different mechanisms by which energy is transferred and solar wind plasma is able to penetrate the magnetopause are not yet established \citep{Phan2005}. The major interaction processes and underlying physical mechanisms are magnetic reconnection, compression, turbulence and are described in the following.
 \begin{itemize*}
-	\item reconnection
-	\item compression
-	\item turbulence\\
-	KH; waves/eddies
+	\item Magnetic reconnection occurs where the IMF comes into antiparallel contact with the terrestrial magnetic field. At this region on the magnetopause, the magnetosphere opens up to the IMF and reconnection of the field lines occurs, resulting in a change of the magnetic topology \citep{Phan2005}. The oppositely directed magnetic field lines reconnect along a line with an X"~geometry at the magnetopause. The reconnection process at this so-called X"~line harbors a narrow diffusion region, where the plasma ions and electrons decouple to get accelerated in jets of particles by the reconnected field lines \citep{Phan2005}, see the \autoref{fig:NASA_reconnection}.
+	\begin{figure}[htb]
+		\fcapside[\FBwidth]{
+			\includegraphics[width=0.5\textwidth]{figures_of_others/images/NASA_reconnection.png}
+		}{
+			\caption[\lofimage{figures_of_others/images/NASA_reconnection.png}]
+			{Schema of an X"~line reconnection region. The dashed arrowed lines represent magnetic field lines and their direction. The large arrows indicate the plasma flow direction and the shaded areas are the ion and electron diffusion regions. The red crosses represent the four Magnetospheric Multiscale (MMS) spacecraft that are built to analyze the magnetopause reconnection. Credit: \href{https://mms.gsfc.nasa.gov/science.html}{NASA/GSFC MMS mission}.}
+			\label{fig:NASA_reconnection}
+		}
+	\end{figure}
+	% https://mms.gsfc.nasa.gov/images/science_page/science_2_lg.png
+	% https://mms.gsfc.nasa.gov/science.html
+	Thus, the magnetopause is left with a small magnetic field normal to it that has an opposite polarity on each side of the X"~line \citep{DeKeyser2005}.
+	
+	Although the microphysical processes leading to magnetic reconnection are yet little understood \citep{Phan2005}, there is evidence that magnetic reconnection is the dominant plasma transport mechanism into the magnetosphere \citep{DeKeyser2005}.
+	
+	The reconnection location on the magnetopause shifts depending on the direction of the IMF. During periods of southern IMF, the terrestrial field and IMF are antiparallel at the subsolar point of the magnetosphere, owing to the Earth's dipole orientation. The rate of reconnection becomes highest in this case, whereas, when the IMF is directed northward, reconnection tailward of the polar cusps has been observed \citep{Phan2005}. The magnetic flux opened at the front of the magnetosphere is in average balanced by reconnections in the magnetotail, closing the field again. This process is part of the Dungey convection cycle which is described in the next \autoref{sec:dungey_convection_cycle}.
+	
+	\item High solar wind pressure during times when the IMF direction is parallel to the terrestrial magnetic field leads to compression of the sunward magnetosphere.
+	
+	
+	\item Turbulence, due to Kelvin-Helmholtz (KH) instability created from solar wind drag at the flanks of the magnetosphere.
+	
+	\citep{Alfven1942} viscous interaction (of turbulent nature) is a viable source of drag force/solar storm energy input into magnetosphere\\
+
+	
 	\item induction
 	\item (solar wind influx)\\
 	solar wind plasma entering the magnetosphere
+	\item diffusion
+	\item impulsive penetration
 \end{itemize*}
 
 
-\citep{Phan2005}:\\
-In its simplest description, the magnetopause is an impenetrable boundary that separates the solar wind from Earth’s magnetosphere. The well-established existence of plasma of dominantly solar wind origin inside the magnetosphere does, however, imply that solar wind plasma is able to penetrate the magnetopause. Establishing the mechanisms by which this occurs is one of the greatest challenges of magnetospheric physics. Candidate processes include magnetic reconnection, the Kelvin-Helmholtz (KH) instability, diffusion, and impulsive penetration.\\
+
 
 
 
 %%%%--  reconnection  --%%%%
-two extreme cases of Bz orientation: parallel/antiparallel\\
-
-reconnection X"~line (the line along which oppositely directed magnetic field lines reconnect); add figure...\\
 
 %%%%--  turbulence  --%%%%
-turbulence with sw (KH or RT instabilities)\\
 
-Axford1964 viscous interaction (of turbulent nature, KH/RT instabilities, KH instabilities at the flanks of the magnetosphere) is a viable source of drag force/solar storm energy input into magnetosphere\\
-
-Otto\&Nykyri1982 KH instabilities/vortices force magnetic reconnection even at northern IMF and are able to account for observed mass flux\\
+\citep{Otto2003} KH instabilities/vortices force magnetic reconnection even at northern IMF and are able to account for observed mass flux\\
 
 solar wind influx\\
 
 Merkin2013 MHD simulation of velocity shear at magnetosphere boundary with northern IMF; KH instabilities; double-vortex sheet structure\\
+
+figure?\\
 
 allow reconnection even during episodes of northern IMF\\
 
@@ -793,7 +807,6 @@ allow reconnection even during episodes of northern IMF\\
 The Cluster results indicate that the KHI occurs at the flank magnetopause and that it may lead to solar wind entry, perhaps via non-reconnection associated processes, for northward solar wind magnetic field. But the microphysical processes that cause the plasma transport in the KH vortices, which would control the rate at which mass and energy from the solar wind are transferred, remain to be understood.\\
 
 %%%%--  compression  --%%%%
-compression at the front during northern IMF\\
 
 
 %%%%--  induction  --%%%%
@@ -812,16 +825,16 @@ radiation belts\\
 
 
 \subsection{Magnetopause reconnection}
-southward IMF\\
-half-wave rectifier\\
 locations of reconnection\\
-during northern IMF\\
-during southern IMF\\
-figure...\\
-Where the terrestrial magnetic field and the IMF come into antiparallel contact, the magnetosphere opens up to the HMF and reconnection of the field lines occurs. At the reconnection location an X"~line exists that accelerates jets of particles. Its location on the magnetopause shifts depending on the IMF direction.\\
+Its location on the magnetopause shifts depending on the IMF direction. two extreme cases of Bz orientation
+\\
+during northern IMF parallel\\
+during southern IMF antiparallel\\
+half-wave rectifier\\
 
 
 \subsection{Dungey convection cycle}
+\label{sec:dungey_convection_cycle}
 plasmoids in magnetotail\\
 opening and closing flux rate\\
 
@@ -833,10 +846,11 @@ substorm cycle...\\
 
 \subsection{Geomagnetic storms}
 geomagnetic storms\\
+geomagnetic storms (several days, caused by CMEs)\\
+
 substorms\\
 substorm distance about 10 Re (VB)\\
-geomagnetic storms (several days, from CMEs)\\
-substorms (few hours, from CIRs??)\\
+substorms (few hours, frequently, occur when plasmoids separate in the tail)\\
 
 
 \subsection{Geomagnetic indices}
@@ -890,28 +904,8 @@ Stream forecast methods and models\\
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Space weather}
 \section{Magnetosphere}
 \subsection{Magnetopause reconnection}
-
-see \autoref{fig:NASA_reconnection}\\
-\begin{figure}[htb]
-	\fcapside[\FBwidth]{
-		\includegraphics[width=0.5\textwidth]{figures_of_others/images/NASA_reconnection.png}
-	}{
-		\caption[\lofimage{figures_of_others/images/NASA_reconnection.png}]
-		{Schema of a reconnection region. The dashed arrowed lines represent magnetic field lines and their direction. The large arrows indicate the plasma flow direction and the red crosses the Magnetospheric Multiscale (MMS) spacecraft. change figure?... Credit: \href{https://mms.gsfc.nasa.gov/science.html}{NASA/GSFC MMS mission}.}
-		\label{fig:NASA_reconnection}
-	}
-\end{figure}
-% https://mms.gsfc.nasa.gov/images/science_page/science_2_lg.png
-% https://mms.gsfc.nasa.gov/science.html
-
-DeKeyser2005:\\
-Over the years, evidence has been mounting that the dominant transport of plasma across the magnetopause is caused by magnetic field reconnection. This process is discussed in detail in Phan et al. (2005). It implies an X-line geometry at the magnetopause. The magnetopause then has a small, non-zero normal magnetic field component with opposite sign on either side of an X-line or reconnection site.\\
-
-Phan2005, Magnetopause Processes:\\
-Reconnection is an important mechanism for plasma transport that results in changes of magnetic topology. The process is initiated in a narrow ‘diffusion region’. Though macroscopically the occurrence of reconnection is well established, the microphysical processes that lead to reconnection are still not well understood.\\
 
 Phan2005, Magnetopause Processes:\\
 at the magnetopause, the large-scale spatial and temporal nature of reconnection is still not well understood. One of the unanswered questions is whether reconnection at the magnetopause is necessarily intermittent, or can be continuous, or even quasi-steady.\\
@@ -924,6 +918,7 @@ The fundamental question is whether reconnection is intrinsically intermittent, 
 
 Phan2005, Magnetopause Processes:\\
 Both intermittent and continuous (and even quasi-steady) reconnection have been convincingly observed. The accumulated evidence suggests that the steadiness of the solar wind determines the steadiness of reconnection. When the IMF and solar wind pressure are stable, reconnection at the local magnetopause can be continuous. If the IMF direction changes, the reconnection site moves and reconnection at the local magnetopause can become intermittent, but viewed globally, reconnection at the magnetopause never ceases.\\
+
 
 Phan2005, Magnetopause Processes:\\
 Tailward-of-the-cusp reconnection has been observed only when the IMF has a northward component.

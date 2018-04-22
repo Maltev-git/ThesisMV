@@ -703,6 +703,7 @@ Notable space weather effects on the rest of the solar system bodies:
 \begin{itemize*}
 	\item Inner solar wind structures can strip off cometary tails and enhance atmospheric losses in bodies without magnetosphere.
 	\item Other planetary magnetospheres are impacted in similar ways as the terrestrial is.
+	\item Induced magnetospheres on nonmagnetic bodies are affected by the varying external plasma of the solar wind \citep{Luhmann2004}.
 	\item The average solar wind pressure and HMF scale with solar activity and therefore modulate the shape and size of the heliosphere. As cosmic rays are influenced by the HMF, the local cosmic ray radiation level scales inversely with solar activity.
 	\item Even the passing of strong MCs lead to reductions in local cosmic ray radiation, which are called Forbush decreases.
 	\item The solar system regions outside of protective magnetospheres suffer from episodes of enhanced solar radiation. This becomes important in the near future, when space weather directly impacts humans on space missions to Moon or Mars.
@@ -749,63 +750,53 @@ At the front of the magnetopause, the incoming solar wind ions and electrons are
 
 \subsection{Solar wind coupling mechanisms}
 \label{sec:solar_wind_coupling}
-There exist several ways of how solar wind couples to the magnetosphere and deposits energy and plasma within. The contributions of the different mechanisms by which energy is transferred and solar wind plasma is able to penetrate the magnetopause are not yet established \citep{Phan2005}. The major interaction processes and underlying physical mechanisms are magnetic reconnection, compression, turbulence and are described in the following.
-\begin{itemize*}
-	\item Magnetic reconnection occurs where the IMF comes into antiparallel contact with the terrestrial magnetic field. At this region on the magnetopause, the magnetosphere opens up to the IMF and reconnection of the field lines occurs, resulting in a change of the magnetic topology \citep{Phan2005}. The oppositely directed magnetic field lines reconnect along a line with an X"~geometry at the magnetopause. The reconnection process at this so-called X"~line harbors a narrow diffusion region, where the plasma ions and electrons decouple to get accelerated in jets of particles by the reconnected field lines \citep{Phan2005}, see the \autoref{fig:NASA_reconnection}.
-	\begin{figure}[htb]
-		\fcapside[\FBwidth]{
-			\includegraphics[width=0.5\textwidth]{figures_of_others/images/NASA_reconnection.png}
-		}{
-			\caption[\lofimage{figures_of_others/images/NASA_reconnection.png}]
-			{Schema of an X"~line reconnection region. The dashed arrowed lines represent magnetic field lines and their direction. The large arrows indicate the plasma flow direction and the shaded areas are the ion and electron diffusion regions. The red crosses represent the four Magnetospheric Multiscale (MMS) spacecraft that are built to analyze the magnetopause reconnection. Credit: \href{https://mms.gsfc.nasa.gov/science.html}{NASA/GSFC MMS mission}.}
-			\label{fig:NASA_reconnection}
-		}
-	\end{figure}
-	% https://mms.gsfc.nasa.gov/images/science_page/science_2_lg.png
-	% https://mms.gsfc.nasa.gov/science.html
-	Thus, the magnetopause is left with a small magnetic field normal to it that has an opposite polarity on each side of the X"~line \citep{DeKeyser2005}.
-	
-	Although the microphysical processes leading to magnetic reconnection are yet little understood \citep{Phan2005}, there is evidence that magnetic reconnection is the dominant plasma transport mechanism into the magnetosphere \citep{DeKeyser2005}.
-	
-	The reconnection location on the magnetopause shifts depending on the direction of the IMF. During periods of southern IMF, the terrestrial field and IMF are antiparallel at the subsolar point of the magnetosphere, owing to the Earth's dipole orientation. The rate of reconnection becomes highest in this case, whereas, when the IMF is directed northward, reconnection tailward of the polar cusps has been observed \citep{Phan2005}. The magnetic flux opened at the front of the magnetosphere is in average balanced by reconnections in the magnetotail, closing the field again. This process is part of the Dungey convection cycle which is described in the next \autoref{sec:dungey_convection_cycle}.
-	
-	\item High solar wind pressure during times when the IMF direction is parallel to the terrestrial magnetic field leads to compression of the sunward magnetosphere.
-	
-	\item Viscous interaction with the solar wind plasma is also able to insert energy into the magnetosphere \citep{Alfven1942}. Solar wind drag at the flanks of the magnetopause creates Kelvin-Helmholtz (KH) instabilites in form of turbulent eddies. It is observed that even during northern IMF, these turbulent vortices are able to channel solar wind plasma into the magnetosphere -- either through forced magnetic reconnection or non-reconnection processes \citep{Otto2003,Phan2005}. MHD simulations of the velocity shear at the magnetopause during northern IMF suggest the presence of a double-vortex sheet structure \citep{Merkin2013}.
-	
-	see \autoref{fig:Merkin2013_fig5_turbulence}
-	\begin{figure}[htb]
-		\fcapside[\FBwidth]{
-			\includegraphics[width=0.6\textwidth]{figures_of_others/images/Merkin2013_fig5_turbulence.png}
-		}{
-			\caption[\lofimage{figures_of_others/images/Merkin2013_fig5_turbulence.png}]
-			{Schemata showing reconnection in a turbulent vortex, forming between the magnetosphere (MSP) and the magnetosheath (MSH, shaded area) during parallel magnetic fields. The boundary magnetic field line is indicated by the arrowed line, the plasma flow direction by the gray arrows, and the locations of reconnection by crosses. Credit: {\citet[Fig.~5]{Merkin2013}}, \textcopyright~American Geophysical Union, get permission...}
-			\label{fig:Merkin2013_fig5_turbulence}
-		}
-	\end{figure}
-	
-	\item Induction of currents created by solar wind interaction.	%??
-	
-\end{itemize*}
+There exist several ways of how solar wind couples to the magnetosphere and deposits energy and plasma within. The contributions of the different mechanisms by which energy is transferred and solar wind plasma is able to penetrate the magnetopause are not yet established \citep{Phan2005}. High solar wind pressure during times when the IMF direction is parallel to the terrestrial magnetic field leads to compression of the sunward magnetosphere and enhances its potential energy. Solar wind energy is also transferred via the induction of currents. However, the major interaction processes and underlying physical mechanisms are magnetic reconnection and turbulence, they are described in the following.
 
+Magnetic reconnection occurs where the IMF comes into antiparallel contact with the terrestrial magnetic field. At this region on the magnetopause, the magnetosphere opens up to the IMF and reconnection of the field lines occurs, resulting in a change of the magnetic topology \citep{Phan2005}. The oppositely directed magnetic field lines reconnect along a line with an X"~geometry at the magnetopause. The reconnection process at this so-called X"~line harbors a narrow diffusion region, where the plasma ions and electrons decouple to get accelerated in jets of particles by the reconnected field lines \citep{Phan2005}, see the \autoref{fig:NASA_reconnection}.
+\begin{figure}[htb]
+	\fcapside[\FBwidth]{
+		\includegraphics[width=0.5\textwidth]{figures_of_others/images/NASA_reconnection.png}
+	}{
+		\caption[\lofimage{figures_of_others/images/NASA_reconnection.png}]
+		{Schema of an X"~line reconnection region. The dashed arrowed lines represent magnetic field lines and their direction. The large arrows indicate the plasma flow direction and the shaded areas are the ion and electron diffusion regions. The red crosses represent the four Magnetospheric Multiscale (MMS) spacecraft that are built to analyze the magnetopause reconnection. Credit: \href{https://mms.gsfc.nasa.gov/science.html}{NASA/GSFC MMS mission}.}
+		\label{fig:NASA_reconnection}
+	}
+\end{figure}
+% https://mms.gsfc.nasa.gov/images/science_page/science_2_lg.png
+% https://mms.gsfc.nasa.gov/science.html
+Thus, the magnetopause is left with a small magnetic field normal to it that has an opposite polarity on each side of the X"~line \citep{DeKeyser2005}.
 
----------------\\
+The reconnection location on the magnetopause shifts depending on the direction of the IMF. During periods of southern IMF, the terrestrial field and IMF are antiparallel at the subsolar point of the magnetosphere, owing to the Earth's dipole orientation. The rate of reconnection becomes highest in this case, whereas, when the IMF is directed northward, reconnection tailward of the polar cusps has been observed \citep{Phan2005}. The magnetic flux opened at the front of the magnetosphere is in average balanced by reconnections in the magnetotail, closing the field again. This process is part of the Dungey convection cycle which is described in the next \autoref{sec:dungey_convection_cycle}.
 
+Although the microphysical processes leading to magnetic reconnection are yet little understood \citep{Phan2005}, there is evidence that magnetic reconnection is the dominant plasma transport mechanism into the magnetosphere \citep{DeKeyser2005}.
 
-ring current systems\\
-
-auroral ovals\\
-``Reconnection erodes the magnetopause, causing the auroral oval to move lower in latitude. The By polarity shifts the auroral oval either toward dawn or toward dusk.''\\
-
-radiation belts\\
+Viscous interaction with the solar wind plasma is also able to insert energy into the magnetosphere \citep{Alfven1942}. Solar wind drag at the flanks of the magnetopause creates Kelvin-Helmholtz (KH) instabilites in form of turbulent eddies. It is observed that even during northern IMF, these turbulent vortices are able to channel solar wind plasma into the magnetosphere -- either through forced magnetic reconnection (see \autoref{fig:Merkin2013_fig5_turbulence}) or non-reconnection processes \citep{Otto2003,Phan2005}. MHD simulations of the velocity shear at the magnetopause during northern IMF suggest the presence of a double-vortex sheet structure \citep{Merkin2013}.
+\begin{figure}[htb]
+	\fcapside[\FBwidth]{
+		\includegraphics[width=0.6\textwidth]{figures_of_others/images/Merkin2013_fig5_turbulence.png}
+	}{
+		\caption[\lofimage{figures_of_others/images/Merkin2013_fig5_turbulence.png}]
+		{Schemata showing reconnection in a turbulent vortex, forming between the magnetosphere (MSP) and the magnetosheath (MSH, shaded area) during parallel magnetic fields. The boundary magnetic field line is indicated by the arrowed line, the plasma flow direction by the gray arrows, and the locations of reconnection by crosses. Credit: {\citet[Fig.~5]{Merkin2013}}, \textcopyright~American Geophysical Union, get permission...}
+		\label{fig:Merkin2013_fig5_turbulence}
+	}
+\end{figure}
 
 
 \subsection{Dungey convection cycle}
 \label{sec:dungey_convection_cycle}
 
-half-wave rectifier\\
+% magnetopause reconnection
+When solar wind conditions are steady, the reconnection process at the sunward magnetopause is found to be steady as well \citep{Phan2005}.  During changing IMF direction, the reconnection site moves and intermittent reconnection has been locally observed, but the overall reconnection keeps being continuous and never ceases \citep{Phan2005}. The rate of reconnection scales with the dynamic pressure of the solar wind.\\
+
+The magnetic field component normal to the magnetopause undergoes regular bipolar oscillations that are interpreted as temporary reconnection events, transferring magnetic flux to the magnetotail. These flux transfer events (FTEs) occur with a period of about eight minutes \citep{Russell1996}.\\
+
+% Dungey convection cycle
+
+
+
 plasmoids in magnetotail\\
 opening and closing flux rate\\
+half-wave rectifier\\
 
 definition of geomagnetic storm versus substorm...\\
 substorm cycle...\\
@@ -894,25 +885,7 @@ Stream forecast methods and models\\
 \subsection{Magnetopause reconnection}
 
 Phan2005, Magnetopause Processes:\\
-at the magnetopause, the large-scale spatial and temporal nature of reconnection is still not well understood. One of the unanswered questions is whether reconnection at the magnetopause is necessarily intermittent, or can be continuous, or even quasi-steady.\\
-
-Phan2005, Magnetopause Processes:\\
-When the IMF changes, the reconnection site moves and flux transfer events (FTEs) (presumably due to intermittent reconnection) can be formed. The accumulated evidence suggests that the key controlling factor of the steadiness of the reconnection process is the steadiness of the solar wind and IMF. Thus intermittency does not appear to be a fundamental property of the reconnection process at the magnetopause.\\
-
-Phan2005, Magnetopause Processes:\\
-The fundamental question is whether reconnection is intrinsically intermittent, even when the solar wind plasma and magnetic field orientation are steady. We describe two studies, one for southward and the other for northward IMF, which provide evidence that reconnection at the magnetopause is continuous when the solar wind conditions are steady. When the IMF changes direction, a joint IMAGE-Cluster study reveals that the reconnection site moves, but reconnection never stops. Thus reconnection is still continuous in a global sense but may appear intermittent (or transient) at the local magnetopause.\\
-
-Phan2005, Magnetopause Processes:\\
-Both intermittent and continuous (and even quasi-steady) reconnection have been convincingly observed. The accumulated evidence suggests that the steadiness of the solar wind determines the steadiness of reconnection. When the IMF and solar wind pressure are stable, reconnection at the local magnetopause can be continuous. If the IMF direction changes, the reconnection site moves and reconnection at the local magnetopause can become intermittent, but viewed globally, reconnection at the magnetopause never ceases.\\
-
-
-Phan2005, Magnetopause Processes:\\
-Tailward-of-the-cusp reconnection has been observed only when the IMF has a northward component.
-The occurrence rate of cusp reconnection is near 100\% when the IMF is northward.\\
-
-Phan2005, Magnetopause Processes:\\
 Cluster findings include:\\
-Convincing evidence for both intermittent and continuous reconnection at the magnetopause has been obtained from multi-point observations. Reconnection at the local magnetopause is continuous when the IMF is stable. When the IMF orientation changes, the reconnection site moves but reconnection never ceases. Thus reconnection may be intermittent at the local magnetopause but continuous on a global scale. Changes in the solar wind dynamic pressure can also change the reconnection rate and produce flux transfer events.\\
 A strong ‘guide field’ detected at a reconnection X-line, i.e., a finite magnetic field along the X-line, has provided direct evidence for component merging.\\
 Tailward-of-the-cusp reconnection has been found to occur only when the IMF has a northward component. The occurrence rate of cusp reconnection is nearly 100\% when the IMF has a northward component, implying that cusp reconnection in the northern and southern hemispheres must be common. The high occurrence rate (in contrast to a rate of 50\% at the subsolar magnetopause) is thought to be due to the presence of a plasma depletion layer. In this layer, the plasma beta is reduced, rendering the magnetosheath flow sub-Alfvenic and allowing the establishment of a stable X-line at the high-latitude magnetopause.\\
 
@@ -948,6 +921,18 @@ reconnection behind the cusps or at the front of the magnetopause (see \autoref{
 		\caption[\lofimage{figures_of_others/images/Bothmer2007book_p116_fig4_8_sw.png}]
 		{Sketch indicating where reconnection of magnetic field lines on the magnetopause occurs, for the cases of northward (upper panel) and southward (lower panel) IMF. The central dot indicates the position of Earth and the arrowed lines the direction of the magnetic field. The locations of X"~line reconnection are denoted with N and the short arrows indicate the movement of the field lines. Credit: {\citet[p.~116, Fig.~4.8]{Bothmer2007}}, adapted from {\citet{Dungey1961,Dungey1963}}. get permission...}
 		\label{fig:Bothmer1998book_p116_fig4_8_sw}
+	}
+\end{figure}
+
+
+see \autoref{fig:Kivelson1995_fig9_11_dungey_cycle}\\
+\begin{figure}[htb]
+	\fcapside[\FBwidth]{
+		\includegraphics[width=0.6\textwidth]{figures_of_others/images/Kivelson1995_fig9_11_dungey_cycle.png}
+	}{
+		\caption[\lofimage{figures_of_others/images/Kivelson1995_fig9_11_dungey_cycle.png}]
+		{Dungey's magnetic convection cycle illustrated in a cut through the magnetosphere (top) and on the two-cell ionosphere polar cap (bottom). The numbers on the magnetic field lines (arrowed lines) correspond to the numbered positions in the two-cell polar cap convection cycle. Credit: {\citet[Fig.~9.11]{Hughes1995}}, \textcopyright~Cambridge University Press, get permission...}
+		\label{fig:Kivelson1995_fig9_11_dungey_cycle}
 	}
 \end{figure}
 
@@ -1204,6 +1189,15 @@ abbreviate magnetic flux rope to MFR?\\
 % HCS
 why HCS? what currents are there...\\
 why is the CS not the divide between both polarities?\\
+
+
+% magnetosphere
+ring current systems\\
+
+auroral ovals\\
+``Reconnection erodes the magnetopause, causing the auroral oval to move lower in latitude. The By polarity shifts the auroral oval either toward dawn or toward dusk.''\\
+
+radiation belts\\
 
 
 

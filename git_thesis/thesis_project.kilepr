@@ -94,7 +94,7 @@ Indentation Mode=normal
 Mode=LaTeX
 
 [document-settings,item:chapters/introduction.tex]
-Bookmarks=54,904,667,1211,379,719,300,521,182,879,914,48,253,933
+Bookmarks=716,54,904,667,379,300,521,182,914,48,881,1204,253,933,1206
 Encoding=UTF-8
 Highlighting=LaTeX
 Indentation Mode=normal
@@ -188,10 +188,10 @@ order=-1
 
 [item:appendix/literature_bibtex.bib]
 archive=true
-column=20
+column=19
 encoding=UTF-8
 highlight=BibTeX
-line=2194
+line=2438
 mode=BibTeX
 open=false
 order=4
@@ -258,20 +258,20 @@ order=5
 
 [item:chapters/front_matter.tex]
 archive=true
-column=14
+column=29
 encoding=UTF-8
 highlight=LaTeX
-line=307
+line=310
 mode=LaTeX
 open=true
 order=2
 
 [item:chapters/introduction.tex]
 archive=true
-column=367
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=795
+line=838
 mode=LaTeX
 open=true
 order=3
@@ -385,10 +385,10 @@ JumpList=
 ViMarks=.,3,0,[,3,0,],3,0
 
 [view-settings,view=0,item:appendix/literature_bibtex.bib]
-CursorColumn=20
-CursorLine=2194
+CursorColumn=19
+CursorLine=2438
 JumpList=
-ViMarks=.,2194,20,[,2194,20,],2194,20
+ViMarks=.,2438,19,[,2438,19,],2438,19
 
 [view-settings,view=0,item:appendix/literature_bibtex_combined.bib]
 CursorColumn=15
@@ -427,16 +427,16 @@ JumpList=
 ViMarks=.,81,38,[,81,38,],81,38
 
 [view-settings,view=0,item:chapters/front_matter.tex]
-CursorColumn=14
-CursorLine=307
+CursorColumn=29
+CursorLine=310
 JumpList=
-ViMarks=.,303,0,[,303,0,],303,1
+ViMarks=.,310,28,[,310,28,],310,28
 
 [view-settings,view=0,item:chapters/introduction.tex]
-CursorColumn=367
-CursorLine=795
+CursorColumn=0
+CursorLine=838
 JumpList=
-ViMarks=.,795,366,[,795,365,],795,366,a,719,0,b,521,0,c,379,0,d,300,0,e,253,0,f,182,0,g,54,0,h,48,0,i,933,0,j,667,0,k,904,0,l,905,0,m,879,0,n,1211,0,o,1213,0,p,914,0
+ViMarks=.,838,0,[,838,0,],838,0,a,716,0,b,521,0,c,379,0,d,300,0,e,253,0,f,182,0,g,54,0,h,48,0,i,933,0,j,667,0,k,904,0,l,905,0,m,881,0,n,1204,0,o,1206,0,p,914,0
 
 [view-settings,view=0,item:chapters/paperMVVB_wrapper.tex]
 CursorColumn=0

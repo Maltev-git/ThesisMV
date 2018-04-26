@@ -673,7 +673,7 @@ The existence of a direct solar-terrestrial relation was known of early on. \cit
 
 The major driving forces behind severe space weather events are CMEs, solar X"~ray flares, and solar energetic particle (SEP) events. Most of the terrestrial space weather effects are introduced through their influence on the magnetosphere, ionosphere, and upper atmosphere. Space weather events are commonly classified into geomagnetic storms, solar radiation storms, and radio blackouts\footnote{NOAA Space Weather Scales website: \urlfoot{https://www.swpc.noaa.gov/noaa-scales-explanation}}.
 
-The solar wind's internal structures, such as CMEs and CIRs, affect the magnetosphere and can cause disturbances in its magnetic field, that is, geomagnetic storms and substorms, both are described in more detail in the following sections. Notable consequences of these disturbances in the terrestrial magnetic field are listed in the following:
+The solar wind's internal structures, such as CMEs and CIRs, affect the magnetosphere and can cause disturbances in its magnetic field, that is, geomagnetic storms and substorms, both are described in more detail in the following section. Notable consequences of these disturbances in the terrestrial magnetic field are listed in the following:
 \begin{itemize*}
 	\item Impact on the magnetic navigation and behavior of animals, such as migratory birds \citep{Moore1977} and whales \citep{Vanselow2017}.
 	\item Stronger auroral activity and shifting of the auroral oval to lower latitudes\footnote{NOAA/SWPC Tips on Viewing the Aurora: \urlfoot{https://www.swpc.noaa.gov/content/tips-viewing-aurora}}.
@@ -821,7 +821,9 @@ During reconnection at the sunward magnetopause, the magnetic field component no
 % tail reconnection/substorms
 The reconnection in the magnetotail occurs in regular intermittent reconnection bursts. These bursts can produce magnetic plasmoids that release from the tail and are swept away with the solar wind. This pulsed reconnection has a period of a few hours and is the major nightside flux closure process \citep{Milan2007}. The subsequent effects on the magnetosphere are called substorms. Their duration varies greatly around an average value of \SI{70}{\minute} and they vary in intensity as well. Substorms create sudden brightenings and increased activity in the aurora, which also show characteristic patterns matching the substorm cycle. Substorms are found to occur spontaneously during southward IMF periods, however, in \SI{60}{\percent} of the cases they are triggered by changing upstream solar wind conditions -- either by switches in the IMF orientation or by shocks in the solar wind ram pressure \citep{Milan2007}.\\
 
-The continuous reconnection on the sunward magnetopause builds up the polar cap flux and thus increases stress in the magnetotail, which leads there to regular reconnection bursts, releasing the flux again.
+The arrival of extreme solar wind conditions, such as found in CMEs and CIRs, generates geomagnetic disturbances larger than substorms, these geomagnetic storms are described in \autoref{sec:geomagnetic_storms}.\\
+
+The continuous reconnection on the sunward magnetopause builds up the polar cap flux and thus increases stress in the magnetotail, which leads there to regular reconnection bursts, releasing the flux again.\\
 
 
 \subsection{Russell-McPherron effect}
@@ -836,16 +838,28 @@ solar-terrestrial tilt angle and orbit geometry figure? half-wave rectifier...\\
 \subsection{Geomagnetic storms}
 \label{sec:geomagnetic_storms}
 
+Geomagnetic storms are major disturbances in the geomagnetic field and are generated under extreme solar wind conditions.\\
+
+
+
 
 
 
 
 ----------------\\
 
+Carrington1859\\
+Forbush1937\\
+Dungey1961\\
+
 geomagnetic storms (several days, caused by CMEs)\\
 
-difference to geomagnetic storms\\
+substorm difference to geomagnetic storms\\
 
+defined by the disturbance storm time $Dst$~index, which is a measure for the ring current intensity\\
+% http://wdc.kugi.kyoto-u.ac.jp/dstdir/dst2/onDstindex.html
+The Dst index represents the axially symmetric disturbance magnetic field at the dipole equator on the Earth's surface. Major disturbances in Dst are negative, namely decreases in the geomagnetic field. These field decreases are produced mainly by the equatorial current system in the magnetosphere, usually referred to as the ring current. The neutral sheet current flowing across the magnetospheric tail makes a small contribution to the field decreases near the Earth. Positive variations in Dst are mostly caused by the compression of the magnetosphere from solar wind pressure increases.\\
+% http://www.iaga-aiga.org/publications/bulletins/
 
 \subsection{Geomagnetic indices}
 \label{sec:geomagnetic_indices}
@@ -899,12 +913,22 @@ Stream forecast methods and models\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Magnetosphere}
-\subsection{Geomagnetic storms} (causes)
+\subsection{Geomagnetic storms}
 
 Solar wind influences the terrestrial magnetosphere and can cause strong disturbances therein that are called geomagnetic storms.\\
 
 % Forbush decreases
 Forbush1937 found the rapid reduction in cosmic ray intensity (Forbush decrease) during geomagnetic storms (caused by CMEs).\\
+
+% Bz importance for geomagnetic storms
+connection between geomagnetic disturbances and the southward component of the external interplanetary magnetic field (\citep{Dungey1961}; Fairfield and Cahill Jr 1966).\\
+
+%CME's Bz causes GSs
+The critical connection between CMEs and geomagnetic storms was made by \citet{Wilson1987}, who found that the southward component of the magnetic field in magnetic clouds is responsible for the storms. \citet{Wilson1987} performed a superposed epoch analysis of 19 magnetic clouds and found that the Dst index simultaneously decreased to a large negative value at the onset of a large, sustained southward magnetic field in the magnetic cloud; the storm recovery started when the magnetic field turned northward.\\
+Results from this study clearly show that magnetic clouds (bubbles) are associated with geomagnetic storms and that the association is statistically significant. \citet{Wilson1987}\\
+
+\citep{Zhang1988}: The magnitude of the change in the Dst index for the case when southward fields arrive first is comparable to that for the case when northward fields arrive first, and the phase is such that geomagnetic activity is associated with southward fields.\\
+
 
 % different causes of geomagnetic storms
 \citet{Gosling1993} pointed out that the emphasis on flares is misplaced as far as geomagnetic storms and large SEP events are concerned and he referred to this as 'solar flare myth'. \citet{Gosling1993}'s conclusions represented the culmination of research on CMEs in the 1970s and 1980s bringing them to the forefront as the main players in affecting Earth’s space environment.\\
@@ -914,16 +938,9 @@ and large solar energetic particle (SEP) events \citep{Gosling1993}\\
 
 88 major geomagnetic storms: single ICME, multiple ICME, and CIR events; numbers 53 (60\%), 24 (27\%), and 11 (13\%) \citep{Zhang2007}.\\
 
-%CME's Bz causes GSs
-The critical connection between CMEs and geomagnetic storms was made by \citet{Wilson1987}, who found that the southward component of the magnetic field in magnetic clouds is responsible for the storms. \citet{Wilson1987} performed a superposed epoch analysis of 19 magnetic clouds and found that the Dst index simultaneously decreased to a large negative value at the onset of a large, sustained southward magnetic field in the magnetic cloud; the storm recovery started when the magnetic field turned northward.\\
-Results from this study clearly show that magnetic clouds (bubbles) are associated with geomagnetic storms and that the association is statistically significant. \citet{Wilson1987}\\
-
-% Bz importance for geomagnetic storms
-connection between geomagnetic disturbances and the southward component of the external interplanetary magnetic field (\citep{Dungey1961}; Fairfield and Cahill Jr 1966).\\
-\citep{Zhang1988}: The magnitude of the change in the Dst index for the case when southward fields arrive first is comparable to that for the case when northward fields arrive first, and the phase is such that geomagnetic activity is associated with southward fields.\\
-
 Savani2017:\\
 As CMEs usually generate the most geoeffective events [e.g., Tsurutani and Gonzalez, 1997; Zhang et al., 2007; Zhang and Moldwin, 2014],
+
 
 % wiki ring current:
 The particles of the ring current produce a magnetic field in opposition to the Earth's magnetic field and so an Earthly observer observes a decrease in the magnetic field in this area. The negative deflection of the Earth's magnetic field due to the ring current is measured by the Dst index.\\

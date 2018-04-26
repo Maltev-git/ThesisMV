@@ -825,24 +825,35 @@ The continuous reconnection on the sunward magnetopause builds up the polar cap 
 
 
 \subsection{Russell-McPherron effect}
-Geomagnetic activity varies semiannually with the maxima around the equinoxes and the minima around solstices \citep{Cortie1912}. \citet{Russell1973} described a model that is able to predict the correct phase and the observed variation in strength seen yearly in geomagnetic activity: They define a solar wind-magnetosphere interaction in GSM coordinates that is set to zero during northward IMF and is otherwise proportional to the southward IMF component. The mechanism then is provided by the changing probability over the year of getting a north- or southward IMF, viewed in the GSM-frame of the magnetosphere. As solar wind and IMF are naturally ordered in the solar equatorial coordinate system (GSEQ), their flow angle against the magnetosphere undergoes seasonal changes. This variation in the tilt angle is shown to be sufficient to generate the observed effect \citep{Russell1973}.\\
+\label{sec:russell_mcpherron_effect}
+Geomagnetic activity varies semiannually with the maxima around the equinoxes and the minima around solstices \citep{Cortie1912}. \citet{Russell1973} suggested a model, the Russell-McPherron (R-M) effect, that is able to predict the correct phase and the observed variation in strength seen yearly in geomagnetic activity. They define a solar wind-magnetosphere interaction in GSM coordinates that is set to zero during northward IMF and is otherwise proportional to the southward IMF component. As solar wind and IMF are naturally ordered in the geocentric solar equatorial (GSEQ) coordinate system, their flow angle against the magnetosphere undergoes seasonal changes. The mechanism then is provided by the changing probability over the year of getting a north- or southward IMF, viewed in the GSM-frame of the magnetosphere. This variation is found to be sufficient to generate the observed effect \citep{Russell1973}. An additional factor to the interaction of the R-M effect is the IMF tilt angle which is shown to regulate the extent of the sunward reconnection region and therefore the reconnection rate and geomagnetic activity \citep{Russell2003}.
+
+There exist other hypotheses describing the semiannual variation: the axial and the equinoctial hypothesis. However, the R-M effect is the most prevailing and is even able to explain the variation of geomagnetic activity under extreme solar wind conditions, such as interplanetary shocks \citep{Zhao2012}.\\
+
+solar-terrestrial tilt angle and orbit geometry figure? half-wave rectifier...\\
+
+
+\subsection{Geomagnetic storms}
+\label{sec:geomagnetic_storms}
+
+
 
 
 
 ----------------\\
 
-
-\subsection{Geomagnetic storms}
-geomagnetic storms\\
 geomagnetic storms (several days, caused by CMEs)\\
 
 difference to geomagnetic storms\\
+
 
 \subsection{Geomagnetic indices}
 \label{sec:geomagnetic_indices}
 
 \subsection{\Kp~index}
 \label{sec:kp_index}
+
+\subsection{Coupling functions}
 
 
 \section{Forecast methods}
@@ -851,6 +862,7 @@ both Newell relations\\
 
 
 \subsection{\Kp~forecast}
+\label{sec:kp_forecast}
 Kp-flux rate relation\\
 Kp prediction models/methods\\
 This paper adds more empirical relations.\\
@@ -871,7 +883,7 @@ Stream forecast methods and models\\
 % Solar wind coupling mechanisms (list all: reconnection, turbulence, ...)
 % Dungey convection cycle (unsteady/continuous reconnection; substorms; two-cell convection)
 % Russell-McPherron effect (seasonal variations)
-% Geomagnetic storms
+% Geomagnetic storms (difference to substorms; types of triggering events (CMEs, CIRs, ...))
 %
 % Geomagnetic indices
 % Kp index
@@ -887,79 +899,6 @@ Stream forecast methods and models\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Magnetosphere}
-\subsection{Russell-McPherron effect}
-
-A model, in which the interaction, ordered in solar magnetospheric (GSM) coordinates, is zero for northward components of the interplanetary field while the interaction is proportional to magnitude of the southward components predicts the correct phase and provides a yearly variation in the strength of the interaction sufficient to cause the observed effect. \citep{Russell1973}\\
-This mechanism is the varying probability throughout the year of a southward component of the interplanetary magnetic field as seen by the magnetosphere. This arises from the changing orientation between the solar equatorial coordinate system (GSEQ), in which the interplanetary field is ordered, and the solar magnetospheric coordinate system (GSM), in which the interaction with the interplanetary field is ordered. \citep{Russell1973}\\
-
-the R-M effect holds that the angle between Z axis in geocentric solar magnetospheric (GSM) coordinate system and Y axis in geocentric solar equatorial (GSEQ) coordinate system plays an important role. Figure 1a shows the semiannual and diurnal variation of the angle q between the Z axis in GSM coordinate system and the Y axis in GSEQ coordinate system, that is, the controlling parameter of the R-M effect. According to the R-M effect, the probability of southward IMF increases when the angle q, which is smaller than 90 degrees, decreases, so that the dayside reconnection can be more efficient and more energy can be conveyed into the magnetosphere. \citep{Zhao2012}\\
-
-whereas Russell et al. [2003] demonstrate that the tilt of dipole axis controls the size of dayside reconnection region and thus the reconnection rate and geomagnetic activity. Nowadays, the R-M effect is one of the most prevailing hypotheses. \citep{Zhao2012}\\
-Thus, the R-M effect with positive/negative IMF polarity is more reasonable to explain seasonal and diurnal variation of geomagnetic activity under different IMF polarity and extreme solar wind conditions. \citep{Zhao2012}\\
-
-solar-terrestrial tilt angle and orbit geometry figure?\\
-
-
-% magnetosphere disturbances (storms)
-
-
-\subsection{Solar wind coupling} (qualitative)
-
-at Earth the solar wind total energy flux ($1.45~\text{mW/m}^2$) is only about one millionth of the solar radiation flux (see \citet[p.~153]{Schwenn1990})\\
-
-reconnection behind the cusps or at the front of the magnetopause (see \autoref{fig:Bothmer1998book_p116_fig4_8_sw})\\
-\begin{figure}[htb]
-	\fcapside[\FBwidth]{
-		\includegraphics[width=0.6\textwidth]{figures_of_others/images/Bothmer2007book_p116_fig4_8_sw.png}
-	}{
-		\caption[\lofimage{figures_of_others/images/Bothmer2007book_p116_fig4_8_sw.png}]
-		{Sketch indicating where reconnection of magnetic field lines on the magnetopause occurs, for the cases of northward (upper panel) and southward (lower panel) IMF. The central dot indicates the position of Earth and the arrowed lines the direction of the magnetic field. The locations of X"~line reconnection are denoted with N and the short arrows indicate the movement of the field lines. Credit: {\citet[p.~116, Fig.~4.8]{Bothmer2007}}, adapted from {\citet{Dungey1961,Dungey1963}}. get permission...}
-		\label{fig:Bothmer1998book_p116_fig4_8_sw}
-	}
-\end{figure}
-
-for overview see chapter~4 in Bothmer2007book\\
-
-E-field produced by solar wind acts on magnetospheric plasma\\	%VBth p124
-\begin{align}
-	\textbf{E}_\text{IMF} = -\textbf{V} \times \textbf{B}_\text{IMF}
-\end{align}
-from Lorentz force F = -e vxB\\
-E = -F/e\\
-Because of high plasma conductivity the E-field is not existent.\\
-
-% two-part solar wind coupling
-\citet{Newell2007} and \citet{Newell2008}: coupling consists of merging and viscous part (reconnection and turbulence)\\
-merging part: universal sw-magnetosphere coupling function; rate magnetic flux is opened at the magnetopause ($d\Phi_\text{MP}/dt$)\\
-viscous part: reconnection due to Kelvin-Helmholtz instabilies at the boundary ($n^{1/2} v^2$)\\
-equation for the least variance linear prediction of Kp: $Kp = 0.05 + \num{2.244e-4} d\Phi_\text{MP}/dt + \num{2.844e-6} n^{1/2} v^2$\\
-combination of both terms works best (r = 0.866)\\
-
-``the classical twin-cell convection streamlines. Pulsed nightside reconnection is occurring as part of the magnetospheric substorm cycle''\\
-
-dayside reconnection:\\
-``$E_\text{y}$ is the rate at which southward magnetic flux is convected to the magnetosphere by the solar wind ($-v_\text{x} \cdot B_\text{z}$) in GSM coordinates,'' \citep{Russell2007}\\
-
-In this work I settle for \vBz{} as the coupling function -- that is why I focus on this relation here.\\
-
-The solar wind electric field $E_y$ is the product of the proton velocity $v$ and the magnetic field z-component $B_\text{z}$:
-\begin{align}
-	E_\text{y} = -v_\text{x} \times B_\text{z}\,.	\label{eq:coupling_vxBz}
-\end{align}
-
-Savani2017:\\
-...a function is required that characterizes the coupling of the solar wind to the magnetosphere. Many functions that couple the solar wind to a wide variety of magnetospheric activity have been proposed in the past, often incorporating the magnetic field orientation [Lockwood et al., 2013, and references therein]. A recent study suggests that one parameter correlates best with 9 out of 10 indices of terrestrial activity [Newell et al., 2007]. This parameter, $d\phi/dt$, represents the rate at which magnetic flux is opened at the magnetopause and is defined as\\
-\begin{align}
-	\frac{\text{d}\phi}{\text{d}t} = v^{4/3} |B|^{2/3} \sin^{8/3}(\theta_c/2)
-\end{align}
-where v is the velocity of the solar wind; |B| is the magnetic field magnitude; and the interplanetary magnetic field (IMF) clock angle is defined by $\theta_c = \tan^{-1}(By/Bz)$. The predicted magnetic field time series in GSM coordinate system is used to calculate a theoretical magnetic flux rate.
-
-Savani2017:\\
-Extended periods of southward magnetic field, often found within and surrounding Earth-directed CMEs, result in periods of enhanced reconnection on Earth’s dayside and energy input into the magnetosphere. In contrast, northward directed fields inhibit reconnection, resulting in a weaker magnetospheric response \citep{Dungey1961}.
-
-Milan2006: ``We find no evidence for a low background rate of nightside reconnection between these events and conclude that substorms and other large reconnection bursts provide the major or only source of flux closure on the nightside.''\\
-
-
 \subsection{Geomagnetic storms} (causes)
 
 Solar wind influences the terrestrial magnetosphere and can cause strong disturbances therein that are called geomagnetic storms.\\
@@ -1004,6 +943,61 @@ The first three listed indices (\textit{aa}, \textit{am} and \Kp{}) are calculat
 \subsection{\Kp~index}
 
 The MC plotted in \autoref{fig:ACE_64s_v7_thesis_CME_2013-6-26_6} created a \Kp{} of 6+.\\
+
+
+
+\subsection{Coupling functions}
+
+at Earth the solar wind total energy flux ($1.45~\text{mW/m}^2$) is only about one millionth of the solar radiation flux (see \citet[p.~153]{Schwenn1990})\\
+
+reconnection behind the cusps or at the front of the magnetopause (see \autoref{fig:Bothmer1998book_p116_fig4_8_sw})\\
+\begin{figure}[htb]
+	\fcapside[\FBwidth]{
+		\includegraphics[width=0.6\textwidth]{figures_of_others/images/Bothmer2007book_p116_fig4_8_sw.png}
+	}{
+		\caption[\lofimage{figures_of_others/images/Bothmer2007book_p116_fig4_8_sw.png}]
+		{Sketch indicating where reconnection of magnetic field lines on the magnetopause occurs, for the cases of northward (upper panel) and southward (lower panel) IMF. The central dot indicates the position of Earth and the arrowed lines the direction of the magnetic field. The locations of X"~line reconnection are denoted with N and the short arrows indicate the movement of the field lines. Credit: {\citet[p.~116, Fig.~4.8]{Bothmer2007}}, adapted from {\citet{Dungey1961,Dungey1963}}. get permission...}
+		\label{fig:Bothmer1998book_p116_fig4_8_sw}
+	}
+\end{figure}
+
+for overview see chapter~4 in Bothmer2007book\\
+
+E-field produced by solar wind acts on magnetospheric plasma\\	%VBth p124
+\begin{align}
+	\textbf{E}_\text{IMF} = -\textbf{V} \times \textbf{B}_\text{IMF}
+\end{align}
+from Lorentz force F = -e vxB\\
+E = -F/e\\
+Because of high plasma conductivity the E-field is not existent.\\
+
+% two-part solar wind coupling
+\citet{Newell2007} and \citet{Newell2008}: coupling consists of merging and viscous part (reconnection and turbulence)\\
+merging part: universal sw-magnetosphere coupling function; rate magnetic flux is opened at the magnetopause ($d\Phi_\text{MP}/dt$)\\
+viscous part: reconnection due to Kelvin-Helmholtz instabilies at the boundary ($n^{1/2} v^2$)\\
+equation for the least variance linear prediction of Kp: $Kp = 0.05 + \num{2.244e-4} d\Phi_\text{MP}/dt + \num{2.844e-6} n^{1/2} v^2$\\
+combination of both terms works best (r = 0.866)\\
+
+dayside reconnection:\\
+``$E_\text{y}$ is the rate at which southward magnetic flux is convected to the magnetosphere by the solar wind ($-v_\text{x} \cdot B_\text{z}$) in GSM coordinates,'' \citep{Russell2007}\\
+
+In this work I settle for \vBz{} as the coupling function -- that is why I focus on this relation here.\\
+
+The solar wind electric field $E_y$ is the product of the proton velocity $v$ and the magnetic field z-component $B_\text{z}$:
+\begin{align}
+	E_\text{y} = -v_\text{x} \times B_\text{z}\,.	\label{eq:coupling_vxBz}
+\end{align}
+
+Savani2017:\\
+...a function is required that characterizes the coupling of the solar wind to the magnetosphere. Many functions that couple the solar wind to a wide variety of magnetospheric activity have been proposed in the past, often incorporating the magnetic field orientation [Lockwood et al., 2013, and references therein]. A recent study suggests that one parameter correlates best with 9 out of 10 indices of terrestrial activity [Newell et al., 2007]. This parameter, $d\phi/dt$, represents the rate at which magnetic flux is opened at the magnetopause and is defined as\\
+\begin{align}
+	\frac{\text{d}\phi}{\text{d}t} = v^{4/3} |B|^{2/3} \sin^{8/3}(\theta_c/2)
+\end{align}
+where v is the velocity of the solar wind; |B| is the magnetic field magnitude; and the interplanetary magnetic field (IMF) clock angle is defined by $\theta_c = \tan^{-1}(By/Bz)$. The predicted magnetic field time series in GSM coordinate system is used to calculate a theoretical magnetic flux rate.
+
+Savani2017:\\
+Extended periods of southward magnetic field, often found within and surrounding Earth-directed CMEs, result in periods of enhanced reconnection on Earth’s dayside and energy input into the magnetosphere. In contrast, northward directed fields inhibit reconnection, resulting in a weaker magnetospheric response \citep{Dungey1961}.
+
 
 \section{Forecast methods}
 "The principal users affected by geomagnetic storms are the electrical power grid, spacecraft operations, users of radio signals that reflect off of or pass through the ionosphere, and observers of the aurora." NOAA cite\\

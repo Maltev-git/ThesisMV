@@ -816,7 +816,7 @@ Continuous reconnection on the sunward magnetopause builds up the polar cap flux
 During sunward reconnection, the magnetic field component normal to the magnetopause undergoes regular bipolar oscillations that are interpreted as temporary reconnection events, transferring magnetic flux to the magnetotail. These flux transfer events occur with a period of about eight minutes \citep{Russell1996}. When solar wind conditions are steady, the reconnection process at the sunward magnetopause is found to be steady as well \citep{Phan2005}. During changing IMF direction, the reconnection site moves and intermittent reconnection has been locally observed, but the overall reconnection keeps being continuous and never ceases \citep{Phan2005}.
 
 % tail reconnection/substorms
-The reconnection in the magnetotail occurs in regular intermittent reconnection bursts. These bursts can produce magnetic plasmoids that release from the tail and are swept away with the solar wind. This pulsed reconnection has a period of a few hours and is the major nightside flux closure process \citep{Milan2007}. The subsequent effects on the magnetosphere are called substorms. Their duration varies greatly around an average value of \SI{70}{\minute} and they vary in intensity as well. Substorms create sudden brightenings and increased activity in the aurora, which also show characteristic patterns matching the substorm cycle. Substorms are found to occur spontaneously during southward IMF periods, however, in \SI{60}{\percent} of the cases they are triggered by changing upstream solar wind conditions -- either by switches in the IMF orientation or by shocks in the solar wind ram pressure \citep{Milan2007}.
+The reconnection in the magnetotail occurs in regular intermittent reconnection bursts. These bursts can produce magnetic plasmoids that release from the tail and are swept away with the solar wind. This pulsed reconnection has a period of a few hours and is the major nightside flux closure process \citep{Milan2007}. The subsequent effects on the magnetosphere are called substorms. Their duration varies greatly around an average value of 70~minutes and they vary in intensity as well. Substorms create sudden brightenings and increased activity in the aurora, which also show characteristic patterns matching the substorm cycle. Substorms are found to occur spontaneously during southward IMF periods, however, in \SI{60}{\percent} of the cases they are triggered by changing upstream solar wind conditions -- either by switches in the IMF orientation or by shocks in the solar wind ram pressure \citep{Milan2007}.
 
 The arrival of extreme solar wind conditions, such as found in CMEs and CIRs, generates geomagnetic disturbances larger than substorms, these geomagnetic storms are described in \autoref{sec:geomagnetic_storms}.
 
@@ -830,47 +830,64 @@ There exist other hypotheses describing the semiannual variation: the axial and 
 solar-terrestrial tilt angle and orbit geometry figure? half-wave rectifier...\\
 
 
+\subsection{Geomagnetic indices}
+\label{sec:geomagnetic_indices}
+In order to monitor the state of the magnetospheric system and disturbances therein, geomagnetic observatories are distributed widely over the globe, measuring the local magnetic field at their position. Several sets of stations, covering specific regions, are defined to monitor the state of different parts of the magnetospheric system. Magnetic measurements from these sets define a multitude of geomagnetic indices. The International Association of Geomagnetism and Aeronomy (IAGA) supports the following global geomagnetic indices which are serviced by the International Service of Geomagnetic Indices (ISGI)\footnote{ISGI website: \urlfoot{http://isgi.unistra.fr/}}:
+The $aa$~index is designed to represent the amplitude of the global geomagnetic activity, normalized to a geomagnetic latitude of \SI{+-50}{\degree}. The $am$~index characterizes the global geomagnetic activity. The \Kp{}~index is designed to measure geomagnetic disturbances from solar particle radiation -- it is described in more detail in the following section. The $Dst$~index monitors the intensity of the magnetospheric ring current. The $PC$~index monitors the polar cap magnetic activity -- it approximates the amount of energy which entered the magnetosphere through solar wind coupling. The $AE$~index and its relatives $AU$, $AL$ and $AO$ measure the magnetic effects of the northern auroral electrojet.
+The first three listed indices ($aa$, $am$ and \Kp{}) are calculated from different sets of local 3"~hourly $K$~indices, which measure the local magnetic disturbances at the observatories.\\
+% There exist several sub-indices that are based on some of those listed above, e.g., ap, Ap, Cp, C9, Aa, Kpa, an, as, Kpm, Am, An, and As.\\
+
+
+\citet{Lockwood2014} even used geomagnetic indices (including $aa$) to reconstruct the near-Earth IMF strength and solar wind flow speed back to 1845.\\
+
+
+
 \subsection{Geomagnetic storms}
 \label{sec:geomagnetic_storms}
-Geomagnetic storms are major disturbances in the geomagnetic field, generated under extreme solar wind conditions.\\
+Geomagnetic storms are major disturbances in the geomagnetic field, generated under extreme solar wind conditions. Solar wind injects plasma and energy into the magnetosphere, varying the number of particles in the magnetospheric equatorial current system that is located between \SIrange{2}{7}{\RE} \citep{Gonzalez1994}. When this ring current is increased, it generates an enhanced magnetic field of opposite polarity to the magnetospheric field. This leads to a decrease in the local terrestrial magnetic field.
 
-Solar wind injects plasma and energy into the magnetosphere, varying the number of particles in the magnetospheric equatorial current system. When this ring current is increased, it generates an enhanced magnetic field of opposite polarity to the magnetospheric field. This leads to a decrease in the local terrestrial magnetic field.\\
+% Dst index
+The decrease is measured by the disturbance storm time index $Dst$, which is derived by magnetic field measurements made by four magnetic observatories located at the dipole equator \citep{Sugiura1991}. Thus, $Dst$ represents the intensity of the ring current and is a quantitative measure for geomagnetic disturbances. The $Dst$~index is derived and published through the IAGA at the World Data Center for Geomagnetism, Kyoto\footnote{WDC for Geomagnetism, Kyoto $Dst$~index service: \urlfoot{http://wdc.kugi.kyoto-u.ac.jp/dstdir/index.html}}.
 
-The decrease is measured by the disturbance storm time $Dst$~index, which measures the magnetic field at the dipole equator on the Earth's surface and thus represents the intensity of the ring current.\\
+Historically, the size of geomagnetic storms was defined as the peak negative disturbance in the $Dst$~index. Though, the onset of a geomagnetic storm is typically an aprupt increase in $Dst$, called storm sudden commencement (SSC). The initial positive $Dst$~values last a few hours and are caused by the compression of the magnetosphere due to the increased pressure of arriving shocked solar wind plasma. The intensity of a geomagnetic storm can be measured by the minimum $Dst$ that is reached in its main phase -- $Dst$ falls below \SI{-50}{\nano\tesla} during moderate storms and below \SI{-100}{\nano\tesla} during intense storms \citep{Gonzalez1994}. The main phase lasts a few hours, but the recovery to average $Dst$ levels is gradual and can take up to several days.\\
 
-Major negative disturbances in the $Dst$~index define geomagnetic storms, that is, if $Dst$ reaches values less than -50? (cite?). Geomagnetic storms last a few hours, but the duration for recovery can take up to several days.\\
+However, for the assessment of overall geomagnetic activity, another index has been more widely used than $Dst$, the \Kp{}~index \citep{Gonzalez1994}.\\
 
-average and maximal storm $Dst$ values...\\
 
-Positive $Dst$ disturbances occur during compression of the magnetosphere due to increased solar wind pressure.\\
+Furthermore, field-aligned currents connect to currents in the auroral ionosphere, the auroral electrojets, these generate large magnetic disturbances as well. Collectively with the ring current, these currents contribute to the total planetary geomagnetic disturbances. The disturbances are quantified on the ground with the planetary geomagnetic disturbance index \Kp{}.\\
+
+
+
+
+NOAA/SWPC: \Kp{} is the basis for one of the three NOAA Space Weather Scales, the Geomagnetic Storm, or G-Scale, that is used to describe space weather that can disrupt systems on Earth.\\
+
 
 % solar wind causes
-\citet{Carrington1859} was the first to associate a geomagnetic storm with an event of solar origin, that is, he noticed a major solar flare appearing a few hours before the storm. The corresponding solar event is known as the Carrington event, as the resulting geomagnetic storm is assumed to be the largest ever observed. \citet{Forbush1937} found a rapid reduction in cosmic-ray intensity occurring parallel to a geomagnetic storm, now known as Forbush decreases, and attributed both to a common external cause. Eventually \citet{Wilson1987} demonstrated the connection between geomagnetic storms and MCs by finding simultaneous decreases in the $Dst$ index during episodes of southward IMF within MCs. The order in which north- and southward IMF appears in an MC does not matter for the final observed $Dst$ magnitude, but the $Dst$ activity is always in phase with the southward field \citep{Zhang1988}. \citet{Gosling1993} established that CMEs rather than flares are the main cause of major geomagnetic storms and large SEP events. Indeed, single and multiple CME events are found to be the most geoeffective solar wind structures in that they are accountable for about \SI{87}{\%} of the major geomagnetic storms, whereas the remainder is produced by CIR events \citep{Zhang2007}.\\
-
-
+\citet{Carrington1859} was the first to associate a geomagnetic storm with an event of solar origin, that is, he noticed a major solar flare appearing a few hours before the storm. The corresponding solar event is known as the Carrington event, as the resulting geomagnetic storm is assumed to be the largest ever observed. \citet{Forbush1937} found a rapid reduction in cosmic-ray intensity occurring parallel to a geomagnetic storm, now known as Forbush decreases, and attributed both to a common external cause. Eventually \citet{Wilson1987} demonstrated the connection between geomagnetic storms and MCs by finding simultaneous decreases in the $Dst$~index during episodes of southward IMF within MCs. The order in which north- and southward IMF appears in an MC does not matter for the final observed $Dst$ magnitude, but the $Dst$ activity is always in phase with the southward field \citep{Zhang1988}. \citet{Gosling1993} established that CMEs rather than flares are the main cause of major geomagnetic storms and large SEP events. Indeed, single and multiple CME events are found to be the most geoeffective solar wind structures in that they are accountable for about \SI{87}{\%} of the major geomagnetic storms, whereas the remainder is produced by CIR events \citep{Zhang2007}.\\
 
 
 ----------------\\
 
-substorm difference to geomagnetic storms\\
-
-% http://wdc.kugi.kyoto-u.ac.jp/dstdir/dst2/onDstindex.html
-% http://www.iaga-aiga.org/publications/bulletins/
+NOAA/SWPC:\\
+Storms also result in intense currents in the magnetosphere, changes in the radiation belts, and changes in the ionosphere, including heating the ionosphere and upper atmosphere region called the thermosphere.\\
 
 
-\subsection{Geomagnetic indices}
-\label{sec:geomagnetic_indices}
+% difference to substorms
+During geomagnetic storms, substorms occur in higher frequencies and can overlap each other (cite?).\\
+
+the main phase of storms has been observed to be always accompanied by substorms \citep{Gonzalez1994}\\
+
+
 
 \subsection{\Kp~index}
 \label{sec:kp_index}
-
-\subsection{Coupling functions}
-
 
 \section{Forecast methods}
 \label{sec:forecast_methods}
 both Newell relations\\
 
+\subsection{Coupling functions}
+\label{sec:coupling_functions}
 
 \subsection{\Kp~forecast}
 \label{sec:kp_forecast}
@@ -894,14 +911,12 @@ Stream forecast methods and models\\
 % Solar wind coupling mechanisms (list all: reconnection, turbulence, ...)
 % Dungey convection cycle (unsteady/continuous reconnection; substorms; two-cell convection)
 % Russell-McPherron effect (seasonal variations)
-% Geomagnetic storms (difference to substorms; types of triggering events (CMEs, CIRs, ...))
-%
 % Geomagnetic indices
-% Kp index
 %
-% Coupling functions
+% Geomagnetic storms (difference to substorms; types of triggering events (CMEs, CIRs, Dst, Kp, ...)
 %
 % Forecast methods
+% Coupling functions
 % Kp forecast
 % CME forecast to Earth
 % Stream forecast to Earth
@@ -910,20 +925,9 @@ Stream forecast methods and models\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Magnetosphere}
-\subsection{Geomagnetic indices}
-Geomagnetic observatories are distributed widely over the globe, measuring the local magnetic field at their position. Several sets of stations, covering specific regions, are defined to monitor the state of different parts of the magnetospheric system. Magnetic measurements from these sets define several geomagnetic indices. The International Association of Geomagnetism and Aeronomy (IAGA) supports the following global geomagnetic indices which are serviced by the International Service of Geomagnetic Indices (ISGI)\footnote{ISGI website: \urlfoot{http://isgi.unistra.fr/}}:
-The $aa$~index is designed to represent the amplitude of the global geomagnetic activity, normalized to a geomagnetic latitude of \SI{+-50}{\degree}. The $am$~index characterizes the global geomagnetic activity. The \Kp{}~index is designed to measure geomagnetic disturbances from solar particle radiation -- it is described in more detail in the following section. The $Dst$~index monitors the intensity of the magnetospheric ring current. The $PC$~index monitors the polar cap magnetic activity -- it approximates the amount of energy which entered the magnetosphere through solar wind coupling. The $AE$~index and its relatives $AU$, $AL$ and $AO$ measure the magnetic effects of the northern auroral electrojet.
-The first three listed indices (\textit{aa}, \textit{am} and \Kp{}) are calculated from different sets of local 3"~hourly $K$~indices, which measure the local magnetic disturbances at the observatories.\\
-% There exist several sub-indices that are based on some of those listed above, e.g., ap, Ap, Cp, C9, Aa, Kpa, an, as, Kpm, Am, An, and As.\\
-
-
-\citet{Lockwood2014} even used geomagnetic indices to reconstruct the near-Earth solar wind magnetic field strength and velocity back to 1845. which indices?\\
-
-
 \subsection{\Kp~index}
 
 The MC plotted in \autoref{fig:ACE_64s_v7_thesis_CME_2013-6-26_6} created a \Kp{} of 6+.\\
-
 
 
 \subsection{Coupling functions}
@@ -1147,6 +1151,10 @@ A strong ‘guide field’ detected at a reconnection X-line, i.e., a finite mag
 Tailward-of-the-cusp reconnection has been found to occur only when the IMF has a northward component. The occurrence rate of cusp reconnection is nearly 100\% when the IMF has a northward component, implying that cusp reconnection in the northern and southern hemispheres must be common. The high occurrence rate (in contrast to a rate of 50\% at the subsolar magnetopause) is thought to be due to the presence of a plasma depletion layer. In this layer, the plasma beta is reduced, rendering the magnetosheath flow sub-Alfvenic and allowing the establishment of a stable X-line at the high-latitude magnetopause.\\
 
 look into printed paper collection...\\
+
+% geomagnetic indices
+\citet{Lockwood2014} even used geomagnetic indices (including $aa$) to reconstruct the near-Earth IMF strength and solar wind flow speed back to 1845.\\
+
 
 
 

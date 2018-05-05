@@ -4,7 +4,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.1.3
-lastDocument=chapters/front_matter.tex
+lastDocument=chapters/introduction.tex
 masterDocument=
 name=thesis_project
 pkg_extIsRegExp=false
@@ -94,7 +94,7 @@ Indentation Mode=normal
 Mode=LaTeX
 
 [document-settings,item:chapters/introduction.tex]
-Bookmarks=667,521,780,300,746,379,823,1156,48,715,900,54,832,840,253,921,1143,182
+Bookmarks=667,521,780,300,1151,746,379,823,48,899,715,54,832,840,1136,253,920,182
 Encoding=UTF-8
 Highlighting=LaTeX
 Indentation Mode=normal
@@ -188,10 +188,10 @@ order=-1
 
 [item:appendix/literature_bibtex.bib]
 archive=true
-column=135
+column=0
 encoding=UTF-8
 highlight=BibTeX
-line=845
+line=491
 mode=BibTeX
 open=false
 order=4
@@ -258,20 +258,20 @@ order=5
 
 [item:chapters/front_matter.tex]
 archive=true
-column=25
+column=39
 encoding=UTF-8
 highlight=LaTeX
-line=319
+line=320
 mode=LaTeX
 open=true
 order=2
 
 [item:chapters/introduction.tex]
 archive=true
-column=0
+column=14
 encoding=UTF-8
 highlight=LaTeX
-line=877
+line=914
 mode=LaTeX
 open=true
 order=3
@@ -385,10 +385,10 @@ JumpList=
 ViMarks=.,3,0,[,3,0,],3,0
 
 [view-settings,view=0,item:appendix/literature_bibtex.bib]
-CursorColumn=135
-CursorLine=845
+CursorColumn=0
+CursorLine=491
 JumpList=
-ViMarks=.,845,135,[,845,135,],845,135
+ViMarks=.,490,1,[,478,0,],-1,-1
 
 [view-settings,view=0,item:appendix/literature_bibtex_combined.bib]
 CursorColumn=15
@@ -427,16 +427,16 @@ JumpList=
 ViMarks=.,81,38,[,81,38,],81,38
 
 [view-settings,view=0,item:chapters/front_matter.tex]
-CursorColumn=25
-CursorLine=319
+CursorColumn=39
+CursorLine=320
 JumpList=
-ViMarks=.,319,24,[,319,22,],319,24
+ViMarks=.,320,38,[,320,15,],320,38
 
 [view-settings,view=0,item:chapters/introduction.tex]
-CursorColumn=0
-CursorLine=877
+CursorColumn=14
+CursorLine=914
 JumpList=
-ViMarks=.,840,0,[,840,0,],840,0,a,715,0,b,521,0,c,379,0,d,300,0,e,253,0,f,182,0,g,54,0,h,48,0,i,832,0,j,667,0,k,921,0,l,922,0,m,900,0,n,1143,0,o,1156,0,r,823,0,s,780,0,t,746,0,u,840,0
+ViMarks=.,914,13,[,914,5,],914,13,a,715,0,b,521,0,c,379,0,d,300,0,e,253,0,f,182,0,g,54,0,h,48,0,i,832,0,j,667,0,k,920,0,l,933,0,m,899,0,n,1136,0,o,1151,0,r,823,0,s,780,0,t,746,0,u,840,0
 
 [view-settings,view=0,item:chapters/paperMVVB_wrapper.tex]
 CursorColumn=0

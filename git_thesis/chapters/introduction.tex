@@ -838,25 +838,25 @@ The first three listed indices ($aa$, $am$ and \Kp{}) are calculated from differ
 % There exist several sub-indices that are based on some of those listed above, e.g., ap, Ap, Cp, C9, Aa, Kpa, an, as, Kpm, Am, An, and As.\\
 
 
-\subsection{Geomagnetic storms}
+\section{Geomagnetic storms}
 \label{sec:geomagnetic_storms}
-Geomagnetic storms are major disturbances in the geomagnetic field, generated under extreme solar wind conditions. Solar wind injects plasma and energy into the magnetosphere, varying the number of particles in the magnetospheric equatorial current system that is located between \SIrange{2}{7}{\RE} \citep{Gonzalez1994}. When this ring current is increased, it generates an enhanced magnetic field of opposite polarity to the magnetospheric field. This leads to a decrease in the local terrestrial magnetic field.
+Geomagnetic storms are major disturbances in the geomagnetic field, generated under extreme solar wind conditions.
+
+difference to substorms...\\
+
+Solar wind injects plasma and energy into the magnetosphere, varying the number of particles in the magnetospheric equatorial current system, the so-called ring current, illustrated in Figures~\ref{fig:Davies1990_magnetosphere_sharpened} and~\ref{fig:DeKeyser2005_magnetosphere}. The ring current is located between \SIrange{2}{7}{\RE} \citep{Gonzalez1994}. When the ring current is increased, it generates an enhanced magnetic field of opposite polarity to the magnetospheric field. This leads to a decrease in the local terrestrial magnetic field.
 
 % Dst index
-The decrease is measured by the disturbance storm time index $Dst$, which is derived by magnetic field measurements made by four magnetic observatories located at the dipole equator \citep{Sugiura1991}. Thus, $Dst$ represents the intensity of the ring current and is a quantitative measure for geomagnetic disturbances. The $Dst$~index is derived and published through the IAGA at the World Data Center for Geomagnetism, Kyoto\footnote{WDC for Geomagnetism, Kyoto $Dst$~index service: \urlfoot{http://wdc.kugi.kyoto-u.ac.jp/dstdir/index.html}}.
+The decrease is measured by the disturbance storm time index $Dst$, which is derived by magnetic field measurements made by four magnetic observatories located at the dipole equator \citep{Sugiura1991}. Thus, $Dst$ represents the intensity of the ring current and is a quantitative measure for geomagnetic disturbances. The $Dst$~index is derived and published through the IAGA at the World Data Center for Geomagnetism in Kyoto\footnote{WDC for Geomagnetism, Kyoto; $Dst$~index service: \urlfoot{http://wdc.kugi.kyoto-u.ac.jp/dstdir/index.html}}.
 
-Historically, the size of geomagnetic storms was defined as the peak negative disturbance in the $Dst$~index. Though, the onset of a geomagnetic storm is typically an aprupt increase in $Dst$, called storm sudden commencement (SSC). The initial positive $Dst$~values last a few hours and are caused by the compression of the magnetosphere due to the increased pressure of arriving shocked solar wind plasma. The intensity of a geomagnetic storm can be measured by the minimum $Dst$ that is reached in its main phase -- $Dst$ falls below \SI{-50}{\nano\tesla} during moderate storms and below \SI{-100}{\nano\tesla} during intense storms \citep{Gonzalez1994}. The main phase lasts a few hours, but the recovery to average $Dst$ levels is gradual and can take up to several days.\\
+Historically, the size of a geomagnetic storm was defined as the peak negative disturbance in the $Dst$~index. Though, the onset of a geomagnetic storm is typically an aprupt increase in $Dst$, referred to as a storm sudden commencement (SSC). The initial periods of positive $Dst$ last some hours and are caused by the compression of the magnetosphere due to the increased pressure of arriving shocked solar wind plasma. The intensity of a geomagnetic storm can be measured by the minimum $Dst$ that is reached in its main phase -- $Dst$ falls below \SI{-50}{\nano\tesla} during moderate storms and below \SI{-100}{\nano\tesla} during intense storms \citep{Gonzalez1994}. The main phase lasts a few hours, but the recovery to average $Dst$ levels is gradual and can take up to several days.
 
-However, for the assessment of overall geomagnetic activity, another index has been more widely used than $Dst$, the \Kp{}~index \citep{Gonzalez1994}.\\
+% Kp index
+However, for the assessment of overall geomagnetic activity, another index has been more widely used than $Dst$, the \Kp{}~index \citep{Gonzalez1994}. Now, \Kp{} is the basis for NOAA's G"~Scale\footnote{NOAA Space Weather Scales website: \urlfoot{https://www.swpc.noaa.gov/noaa-scales-explanation}} that describes the severity of geomagnetic storms.\\
 
+Field-aligned currents, called Birkeland currents, connect ionospheric currents located in the nightside auroral oval, the auroral electrojets, to the magnetopause and the partial ring current \citep{Coxon2014}, see \autoref{fig:DeKeyser2005_magnetosphere}. In addition to the ring current, this current system generates large magnetic disturbances as well. Collectively, all currents contribute to the planetary geomagnetic disturbances, which are quantified on the ground with the planetary geomagnetic disturbance index \Kp{}, see also \autoref{sec:kp_data}.\\
 
-Furthermore, field-aligned currents connect to currents in the auroral ionosphere, the auroral electrojets, these generate large magnetic disturbances as well. Collectively with the ring current, these currents contribute to the total planetary geomagnetic disturbances. The disturbances are quantified on the ground with the planetary geomagnetic disturbance index \Kp{}.\\
-
-
-
-
-NOAA/SWPC: \Kp{} is the basis for one of the three NOAA Space Weather Scales, the Geomagnetic Storm, or G-Scale, that is used to describe space weather that can disrupt systems on Earth.\\
-
+more about Kp...\\
 
 % solar wind causes
 \citet{Carrington1859} was the first to associate a geomagnetic storm with an event of solar origin, that is, he noticed a major solar flare appearing a few hours before the storm. The corresponding solar event is known as the Carrington event, as the resulting geomagnetic storm is assumed to be the largest ever observed. \citet{Forbush1937} found a rapid reduction in cosmic-ray intensity occurring parallel to a geomagnetic storm, now known as Forbush decreases, and attributed both to a common external cause. Eventually \citet{Wilson1987} demonstrated the connection between geomagnetic storms and MCs by finding simultaneous decreases in the $Dst$~index during episodes of southward IMF within MCs. The order in which north- and southward IMF appears in an MC does not matter for the final observed $Dst$ magnitude, but the $Dst$ activity is always in phase with the southward field \citep{Zhang1988}. \citet{Gosling1993} established that CMEs rather than flares are the main cause of major geomagnetic storms and large SEP events. Indeed, single and multiple CME events are found to be the most geoeffective solar wind structures in that they are accountable for about \SI{87}{\%} of the major geomagnetic storms, whereas the remainder is produced by CIR events \citep{Zhang2007}.\\
@@ -873,10 +873,9 @@ During geomagnetic storms, substorms occur in higher frequencies and can overlap
 
 the main phase of storms has been observed to be always accompanied by substorms \citep{Gonzalez1994}\\
 
-
-
 \subsection{\Kp~index}
 \label{sec:kp_index}
+
 
 \section{Forecast methods}
 \label{sec:forecast_methods}
@@ -913,17 +912,23 @@ Stream forecast methods and models\\
 %
 % Forecast methods
 % Coupling functions
-% Kp forecast
+% Kp now- and forecast
 % CME forecast to Earth
 % Stream forecast to Earth
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Magnetosphere}
-\subsection{\Kp~index}
+\section{Forecast methods}
+"The principal users affected by geomagnetic storms are the electrical power grid, spacecraft operations, users of radio signals that reflect off of or pass through the ionosphere, and observers of the aurora." NOAA cite\\
 
-The MC plotted in \autoref{fig:ACE_64s_v7_thesis_CME_2013-6-26_6} created a \Kp{} of 6+.\\
+
+Methods:\\
+- MC Kp impact forecast; Savani2015+Savani2017\\
+- WSA-ENLIL sw forecast (CMEs without B-field)\\
+- CH sw forecast (Uni Graz)\\
+- NOAA/SWPC; see Savani2017\\
+- NASA/SWRC; see Savani2017\\
 
 
 \subsection{Coupling functions}
@@ -961,7 +966,7 @@ combination of both terms works best (r = 0.866)\\
 dayside reconnection:\\
 ``$E_\text{y}$ is the rate at which southward magnetic flux is convected to the magnetosphere by the solar wind ($-v_\text{x} \cdot B_\text{z}$) in GSM coordinates,'' \citep{Russell2007}\\
 
-In this work I settle for \vBz{} as the coupling function -- that is why I focus on this relation here.\\
+In this work I settle and work with \vBz{} as the coupling function.\\
 
 The solar wind electric field $E_y$ is the product of the proton velocity $v$ and the magnetic field z-component $B_\text{z}$:
 \begin{align}
@@ -978,18 +983,6 @@ where v is the velocity of the solar wind; |B| is the magnetic field magnitude; 
 
 % Bz importance for geomagnetic storms
 connection between geomagnetic disturbances and the southward component of the external interplanetary magnetic field (\citep{Dungey1961}; Fairfield and Cahill Jr 1966).\\
-
-
-\section{Forecast methods}
-"The principal users affected by geomagnetic storms are the electrical power grid, spacecraft operations, users of radio signals that reflect off of or pass through the ionosphere, and observers of the aurora." NOAA cite\\
-
-
-Methods:\\
-- MC Kp impact forecast; Savani2015+Savani2017\\
-- WSA-ENLIL sw forecast (CMEs without B-field)\\
-- CH sw forecast (Uni Graz)\\
-- NOAA/SWPC; see Savani2017\\
-- NASA/SWRC; see Savani2017\\
 
 \subsection{\Kp~forecast} (quantitative)
 
@@ -1151,6 +1144,8 @@ look into printed paper collection...\\
 % geomagnetic indices
 \citet{Lockwood2014} even used geomagnetic indices (including $aa$) to reconstruct the near-Earth IMF strength and solar wind flow speed back to 1845.\\
 
+% Kp index
+The MC plotted in \autoref{fig:ACE_64s_v7_thesis_CME_2013-6-26_6} created a \Kp{} of 6+.\\
 
 
 
@@ -1263,7 +1258,7 @@ ACE/SWEPAM\\	%https://sci-hub.ac/10.1023/A:1005040232597
 \label{sec:kp_data}
 Julius~Bartels introduced the \textit{K}~index in 1938 and designed it to measure the intensity of geomagnetic disturbances \citep{Bartels1939}. Its name originates from 'Kennziffer' -- the german word for characteristic digit. The \textit{K}~index is a measure for the maximal variation of the surface magnetic field, observed in a magnetogram within 3"~hour intervals. Its scale in the range 0--9 is a quasi-logarithmic representation of the actual magnetic field strength's variations.
 
-The Planetary \textit{K}~index (\Kp{}) is a planetary geomagnetic disturbance index, introduced by Bartels in 1949 at the Institute for Geophysics, University of Göttingen \citep{Bartels1949}. \Kp{} is the weighted average of 13 \textit{Ks}~indices, which are the standardized versions of the local \textit{K} indices measured at 13 observatories. These contributing observatories are located around \SI{+-50}{\degree} geomagnetic latitude and their distribution is biased towards Europe, see the map in \autoref{fig:Kp_map}.
+The Planetary \textit{K}~index (\Kp{}) is a planetary geomagnetic disturbance index, introduced by Bartels in 1949 at the Institute for Geophysics, University of Göttingen \citep{Bartels1949}. \Kp{} is the weighted average of 13 \textit{Ks}~indices, which are the standardized versions of the local \textit{K} indices measured at 13 observatories. These contributing observatories are located around \SI{+-50}{\degree} geomagnetic latitude and their distribution is biased towards Europe, as cab be seen in the map in \autoref{fig:Kp_map}.
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_others/images/Kp_map.jpg}
@@ -1286,7 +1281,7 @@ To benefit from its higher precision, its scale, in the range 0--9 as well, is f
 \end{figure}
 %ftp://ftp.gfz-potsdam.de/pub/home/obs/kp-ap/music/
 
-The \Kp{}~index can be converted to the 3"~hour equivalent $ap$~index, which represents the magnetic field strength at a surface position of about \SI{50}{\degree} dipole latitude. The conversion is done via a table specified by Bartels, in which the value of the \textit{ap}~index is scaled in units of \SI{2}{nT}, as seen in \autoref{tab:kp_to_ap_table}.
+The \Kp{}~index can be converted to the 3"~hour equivalent $ap$~index, which represents the magnetic field strength at a surface position of about \SI{+-50}{\degree} dipole latitude. The conversion is done via a table specified by Bartels, in which the value of the \textit{ap}~index is scaled in units of \SI{2}{nT}, as seen in \autoref{tab:kp_to_ap_table}.
 \begin{table}
 	\caption{Table for the fixed conversion from the \Kp~index to the equivalent \textit{ap}~index, which represents the magnetic field strength in units of \SI{2}{nT}.}
 	\label{tab:kp_to_ap_table}

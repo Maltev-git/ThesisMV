@@ -897,27 +897,27 @@ The \Kp{}~index can be converted to the 3"~hour equivalent $ap$~index, which rep
 \end{table}
 There are further geomagnetic indices which are derived from the \Kp{}~index. They include $Ap$, the daily $ap$ average, $Cp$, the daily $ap$ sum mapped via a fixed table to the range \numrange{0}{2.5}, and $C9$, a mapping of $Cp$ via a fixed table to the range \numrange{0}{9}. The definitions of Q"~days (quiet days) and D"~days (disturbed days) are also obtained from the \Kp{}~index.
 
-The IAGA adopted the \Kp{}~index in 1954. The \Kp{}~index was maintained in Göttingen until January 1997 -- now the German Research Centre for Geosciences (GFZ) in Potsdam supplies the \Kp{}~index and thereof derived indices. See also the \Kp{} data description in \autoref{sec:kp_data}.\\
-
-
-----------------\\
+The IAGA adopted the \Kp{}~index in 1954. The \Kp{}~index was maintained in Göttingen until January 1997 -- now the German Research Centre for Geosciences (GFZ) in Potsdam supplies the \Kp{}~index and thereof derived indices. See also the \Kp{} data description in \autoref{sec:kp_data}.
 
 
 \section{Geomagnetic activity forecast}
 \label{sec:geomagnetic_activity_forecast}
-
-The timing and intensity of geomagnetic storms is sought to be foercasted from knowledge about the upcoming solar wind conditions. This means that there are two unknowns: how does the magnetized solar wind plasma couple to the magnetosphere and which solar wind will arrive at the magnetopause?\\
-
-In technical terms: as the \Kp~index is the measure for the size of geomagnetic disturbances, a function relating \Kp{} to solar wind quantities is needed.\\
-
---> existing coupling functions...\\
+The timing and intensity of geomagnetic storms is sought to be forecasted from knowledge about the upcoming solar wind conditions. This means that there are two questions to this task: First, how does the magnetized solar wind plasma result in magnetospheric disturbances? Therefore, as the \Kp~index is the measure for the size of geomagnetic disturbances, a function relating \Kp{} to solar wind parameters is essential. Second, what conditions will the solar wind have when arriving at the magnetopause? Hence, a forecast using remote observations is required that is able to predict the arrival time and conditions of solar wind streams and CMEs. Both questions are addressed in the following two sections.
 
 
 \subsection{Coupling functions}
 \label{sec:coupling_functions}
+
+As mentioned before, the IMF direction...\\
+
+
+----------------\\
+
+--> existing coupling functions...\\
+
 both Newell relations\\
 
-% kp_forecast
+% Kp now- and forecast
 Kp-flux rate relation\\
 Kp prediction models/methods\\
 This paper adds more empirical relations.\\
@@ -946,41 +946,42 @@ Kp nowcast with L1 data; f/c see next sec.\\
 % Russell-McPherron effect (seasonal variations)
 % Geomagnetic indices
 %
-% Geomagnetic storms (difference to substorms; types of triggering events (CMEs, CIRs, Dst, Kp, ...)
+% Geomagnetic storms (difference to substorms; types of triggering events (CMEs, CIRs, Dst, ...)
+% Kp index
 %
-% Forecast methods
+% Geomagnetic activity forecast
 % Coupling functions
-% Kp now- and forecast
-% CME forecast to Earth
-% Stream forecast to Earth
+% Solar wind forecast to Earth
+% Kp forecast
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Forecast methods}
-"The principal users affected by geomagnetic storms are the electrical power grid, spacecraft operations, users of radio signals that reflect off of or pass through the ionosphere, and observers of the aurora." NOAA cite\\
 
-
-Methods:\\
-- MC Kp impact forecast; Savani2015+Savani2017\\
-- WSA-ENLIL sw forecast (CMEs without B-field)\\
-- CH sw forecast (Uni Graz)\\
 - NOAA/SWPC; see Savani2017\\
 - NASA/SWRC; see Savani2017\\
+
+CME forecast:\\
+- WSA-ENLIL CMEs without B-field forecast\\
+- MC Kp impact forecast; Savani2015+Savani2017\\
+- UGOE CME forecast chain (DDC)\\
+
+Stream forecast:\\
+- CH sw forecast (Uni Graz)\\
+- WSA-ENLIL sw forecast (CMEs without B-field)\\
 
 
 \subsection{Coupling functions}
 
-at Earth the solar wind total energy flux ($1.45~\text{mW/m}^2$) is only about one millionth of the solar radiation flux (see \citet[p.~153]{Schwenn1990})\\
-
-reconnection behind the cusps or at the front of the magnetopause (see \autoref{fig:Bothmer1998book_p116_fig4_8_sw})\\
+half-wave rectifier compared to Newell's IMF clock angle factor, see \autoref{fig:figures_of_mine/gnuplots/coupling_angle}\\
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
-		\includegraphics[width=0.6\textwidth]{figures_of_others/images/Bothmer2007book_p116_fig4_8_sw.png}
+		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/coupling_angle.png}
 	}{
-		\caption[\lofimage{figures_of_others/images/Bothmer2007book_p116_fig4_8_sw.png}]
-		{Sketch indicating where reconnection of magnetic field lines on the magnetopause occurs, for the cases of northward (upper panel) and southward (lower panel) IMF. The central dot indicates the position of Earth and the arrowed lines the direction of the magnetic field. The locations of X"~line reconnection are denoted with N and the short arrows indicate the movement of the field lines. Credit: {\citet[p.~116, Fig.~4.8]{Bothmer2007}}, adapted from {\citet{Dungey1961,Dungey1963}}. get permission...}
-		\label{fig:Bothmer1998book_p116_fig4_8_sw}
+		\caption[\lofimage{figures_of_mine/gnuplots/coupling_angle.png}]
+		{IMF clock angle ($\theta_c$) dependency of the coupling functions' relative amplitudes. I plotted Newell's relation (black) and the half-wave rectifier (purple).}
+		\label{fig:figures_of_mine/gnuplots/coupling_angle}
 	}
 \end{figure}
 
@@ -1102,6 +1103,7 @@ Cranmer2017:\\
 Complicating our understanding even more is the fact that processes such as turbulence, stream-stream interactions, and Coulomb collisions can make it difficult to unambiguously map a parcel measured at 1 AU back down to its coronal source.\\
 
 
+
 \section{notes...}
 
 These events (GS) are able to disturb sensitive technical systems. Understanding the properties of the solar wind helps with the prediction and protection of humanity's assets.\\
@@ -1168,7 +1170,11 @@ why HCS? what currents are there...\\
 why is the CS not the divide between both polarities?\\
 
 % space weather
+"The principal users affected by geomagnetic storms are the electrical power grid, spacecraft operations, users of radio signals that reflect off of or pass through the ionosphere, and observers of the aurora." NOAA cite\\
+
 strong radio bursts...\\
+
+at Earth the solar wind total energy flux ($1.45~\text{mW/m}^2$) is only about one millionth of the solar radiation flux (see \citet[p.~153]{Schwenn1990})\\
 
 % magnetosphere
 ring current systems\\
@@ -1181,6 +1187,17 @@ A strong ‘guide field’ detected at a reconnection X-line, i.e., a finite mag
 Tailward-of-the-cusp reconnection has been found to occur only when the IMF has a northward component. The occurrence rate of cusp reconnection is nearly 100\% when the IMF has a northward component, implying that cusp reconnection in the northern and southern hemispheres must be common. The high occurrence rate (in contrast to a rate of 50\% at the subsolar magnetopause) is thought to be due to the presence of a plasma depletion layer. In this layer, the plasma beta is reduced, rendering the magnetosheath flow sub-Alfvenic and allowing the establishment of a stable X-line at the high-latitude magnetopause.\\
 
 look into printed paper collection...\\
+
+reconnection behind the cusps or at the front of the magnetopause (see \autoref{fig:Bothmer1998book_p116_fig4_8_sw})\\
+\begin{figure}[htb]
+	\fcapside[\FBwidth]{
+		\includegraphics[width=0.6\textwidth]{figures_of_others/images/Bothmer2007book_p116_fig4_8_sw.png}
+	}{
+		\caption[\lofimage{figures_of_others/images/Bothmer2007book_p116_fig4_8_sw.png}]
+		{Sketch indicating where reconnection of magnetic field lines on the magnetopause occurs, for the cases of northward (upper panel) and southward (lower panel) IMF. The central dot indicates the position of Earth and the arrowed lines the direction of the magnetic field. The locations of X"~line reconnection are denoted with N and the short arrows indicate the movement of the field lines. Credit: {\citet[p.~116, Fig.~4.8]{Bothmer2007}}, adapted from {\citet{Dungey1961,Dungey1963}}. get permission...}
+		\label{fig:Bothmer1998book_p116_fig4_8_sw}
+	}
+\end{figure}
 
 % geomagnetic indices
 \citet{Lockwood2014} even used geomagnetic indices (including $aa$) to reconstruct the near-Earth IMF strength and solar wind flow speed back to 1845.\\

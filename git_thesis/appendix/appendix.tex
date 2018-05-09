@@ -78,18 +78,12 @@ The meridional circulation is the proposed equatorial updrift and polar downdrif
 
 
 
-\section{Electromagnetism}	%maybe exclude this section?
-Electromagnetism is one of the four fundamental forces at the common level of energy. In all situations examined in this thesis (solar wind plasma, magnetosphere) it is by far the strongest force and the others can be neglected.\\
-
-%Lorentz force law as the definition of E and B\\
-%The electromagnetic force F on a test charge at a given point and time is a certain function of its charge q and velocity v, which can be parameterized by exactly two vectors E and B, in the functional form: (wiki)\\
+\section{Electrical field at the magnetopause}
 The Lorentz force law defines the electric and magnetic field vectors $\vect{E}$ and $\vect{B}$:
 \begin{align}
-	\vect{F} = q\,(\vect{E} + \vect{v} \times \vect{B})	\,,
+	\vect{F} = q\,(\vect{E} + \vect{v} \times \vect{B})	\,.
 \end{align}
-with the charge $q$ the force is acting on and its velocity $v$.\\
-
-Full Ohm's law:
+It describes the force $\vect{F}$ that acts on a charge $q$ with velocity $v$. The full Ohm's law accounts for the Lorentz force:
 \begin{align}
 	\vect{j} &= \sigma(\vect{E} + \vect{v} \times \vect{B})	& \Longleftrightarrow	&	&	\vect{E} &= - \vect{v} \times \vect{B} + \frac{\vect{j}}{\sigma}	\,.
 \end{align}
@@ -97,17 +91,38 @@ Solar wind is often approximated as an ideal MHD plasma having an infinite condu
 \begin{align}
 	\vect{E} = - \vect{v} \times \vect{B}	\,.
 \end{align}
-
-
-The Maxwell equations in differential notation:
+Assuming the solar wind flows into the x-direction ($v_\text{y} = v_\text{z} = 0$), the resulting electrical field components become
 \begin{align}
-	\text{div}\,\vect{B} &= 0\\
-	\text{div}\,\vect{D} &= \rho\\
-	\text{rot}\,\vect{H} &= \vect{j} + \dot{\vect{D}}\\
-	\text{rot}\,\vect{E} &= - \dot{\vect{B}}
+	\vect{E} = \begin{bmatrix}
+		E_\text{x}\\
+		E_\text{y}\\
+		E_\text{z}\\
+	\end{bmatrix} = \begin{bmatrix}
+		0\\
+		- v_\text{x} \cdot B_\text{z}\\
+		v_\text{x} \cdot B_\text{y}
+	\end{bmatrix}	\,.
 \end{align}
-With the magnetic flux density $\vect{B}$ (aka magnetic field), the electric displacement field $\vect{D}$, the charge density $\rho$, the magnetic field $\vect{H}$, the electric field $\vect{E}$ and the current density $\vect{j}$.\\
-%note about B naming convention within this work as magnetic field strength% maybe put into beginning...
+If in addition the magnetic field is strictly orientated along the z-axis, the only non-zero electrical field component remaining is $E_\text{y}$:
+\begin{align}
+	|\vect{E}| = - v_\text{x} \cdot B_\text{z}	\,.
+\end{align}
+Reconnection occurs only where the magnetic fields of the solar wind and magnetopause are antiparallel. Due to the magnetosphere's dipole topology, this is the case at the equator of the sunward magnetopause (when using GSM coordinates).
+
+However, reconnection can occur on the whole magnetopause surface facing the solar wind, that is, even at higher latitudes where $B_\text{z}$ is not the only field component. Thus, it makes sense to use the magnetic field's absolute value $|B|$ and its clock angle $\theta_c = \tan^{-1}\left(\frac{B_\text{y}}{B_\text{z}}\right)$ instead of just the field's $B_\text{z}$ component.\\
+
+
+
+% Electromagnetism is one of the four fundamental forces at the common level of energy. In all situations examined in this thesis (solar wind plasma, magnetosphere) it is by far the strongest force and the others can be neglected.
+% The Maxwell equations in differential notation:
+% \begin{align}
+% 	\text{div}\,\vect{B} &= 0\\
+% 	\text{div}\,\vect{D} &= \rho\\
+% 	\text{rot}\,\vect{H} &= \vect{j} + \dot{\vect{D}}\\
+% 	\text{rot}\,\vect{E} &= - \dot{\vect{B}}
+% \end{align}
+% With the magnetic flux density $\vect{B}$ (aka magnetic field), the electric displacement field $\vect{D}$, the charge density $\rho$, the magnetic field $\vect{H}$, the electric field $\vect{E}$ and the current density $\vect{j}$.\\
+% %note about B naming convention within this work as magnetic field strength
 
 
 \section{Plasma beta}

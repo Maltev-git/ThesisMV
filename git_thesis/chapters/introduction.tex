@@ -902,13 +902,23 @@ The IAGA adopted the \Kp{}~index in 1954. The \Kp{}~index was maintained in Göt
 
 \section{Geomagnetic activity forecast}
 \label{sec:geomagnetic_activity_forecast}
-The timing and intensity of geomagnetic storms is sought to be forecasted from knowledge about the upcoming solar wind conditions. This means that there are two questions to this task: First, how does the magnetized solar wind plasma result in magnetospheric disturbances? Therefore, as the \Kp~index is the measure for the size of geomagnetic disturbances, a function relating \Kp{} to solar wind parameters is essential. Second, what conditions will the solar wind have when arriving at the magnetopause? Hence, a forecast using remote observations is required that is able to predict the arrival time and conditions of solar wind streams and CMEs. Both questions are addressed in the following two sections.
+The timing and intensity of geomagnetic storms is sought to be forecasted from knowledge about the upcoming solar wind conditions. This means that there are two questions to this task: First, how does the magnetized solar wind plasma result in magnetospheric disturbances? Therefore, as the \Kp~index is the measure for the size of geomagnetic disturbances, a function relating \Kp{} to solar wind parameters is essential. Second, what state will the arriving solar wind be in at the magnetopause? Hence, a forecast using remote observations is required which is able to predict the arrival time and conditions of solar wind streams and CMEs. Both questions are addressed in the following two sections.
 
 
 \subsection{Coupling functions}
 \label{sec:coupling_functions}
+One physical quantity reflects the coupling intensity between solar wind and the magnetosphere: the dayside reconnection rate. In order to estimate the reconnection rate, several relations are being used (Lockwood2013?).
 
-As mentioned before, the IMF direction...\\
+The most prominent way to quantify the reconnection rate is the induced electrical field $\vect{E}$. It represents the rate at which southward magnetic flux is transported to the magnetosphere \citep{Russell2007} check therein...:
+\begin{align}
+	|\vect{E}| = - v_\text{x} \cdot B_\text{z}	\,.
+\end{align}
+see Appendix \autoref{sec:electrical_field_at_the_magnetopause}\\
+
+The rate magnetic flux is opened at the magnetopause $\text{d}\Phi / \text{d}t$.\\
+
+
+
 
 
 ----------------\\
@@ -974,6 +984,16 @@ Stream forecast:\\
 
 \subsection{Coupling functions}
 
+% Bz importance for geomagnetic storms
+connection between geomagnetic disturbances and the southward component of the external interplanetary magnetic field (\citep{Dungey1961}; Fairfield and Cahill Jr 1966).\\
+
+In this work I settle and work with \vBz{} as the coupling function, because by the time performing the analyses I was not aware of the other.\\
+
+The solar wind electric field $E_y$ is the product of the proton velocity $v$ and the magnetic field z-component $B_\text{z}$:
+\begin{align}
+	|\vect{E}| = -v_\text{x} \cdot B_\text{z}\,.	\label{eq:coupling_vxBz}
+\end{align}
+
 half-wave rectifier compared to Newell's IMF clock angle factor, see \autoref{fig:figures_of_mine/gnuplots/coupling_angle}\\
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
@@ -985,16 +1005,6 @@ half-wave rectifier compared to Newell's IMF clock angle factor, see \autoref{fi
 	}
 \end{figure}
 
-for overview see chapter~4 in Bothmer2007book\\
-
-E-field produced by solar wind acts on magnetospheric plasma\\	%VBth p124
-\begin{align}
-	\textbf{E}_\text{IMF} = -\textbf{V} \times \textbf{B}_\text{IMF}
-\end{align}
-from Lorentz force F = -e vxB\\
-E = -F/e\\
-Because of high plasma conductivity the E-field is not existent.\\
-
 % two-part solar wind coupling
 \citet{Newell2007} and \citet{Newell2008}: coupling consists of merging and viscous part (reconnection and turbulence)\\
 merging part: universal sw-magnetosphere coupling function; rate magnetic flux is opened at the magnetopause ($d\Phi_\text{MP}/dt$)\\
@@ -1002,26 +1012,12 @@ viscous part: reconnection due to Kelvin-Helmholtz instabilies at the boundary (
 equation for the least variance linear prediction of Kp: $Kp = 0.05 + \num{2.244e-4} d\Phi_\text{MP}/dt + \num{2.844e-6} n^{1/2} v^2$\\
 combination of both terms works best (r = 0.866)\\
 
-dayside reconnection:\\
-``$E_\text{y}$ is the rate at which southward magnetic flux is convected to the magnetosphere by the solar wind ($-v_\text{x} \cdot B_\text{z}$) in GSM coordinates,'' \citep{Russell2007}\\
-
-In this work I settle and work with \vBz{} as the coupling function.\\
-
-The solar wind electric field $E_y$ is the product of the proton velocity $v$ and the magnetic field z-component $B_\text{z}$:
-\begin{align}
-	E_\text{y} = -v_\text{x} \times B_\text{z}\,.	\label{eq:coupling_vxBz}
-\end{align}
-
 Savani2017:\\
 ...a function is required that characterizes the coupling of the solar wind to the magnetosphere. Many functions that couple the solar wind to a wide variety of magnetospheric activity have been proposed in the past, often incorporating the magnetic field orientation [Lockwood et al., 2013, and references therein]. A recent study suggests that one parameter correlates best with 9 out of 10 indices of terrestrial activity [Newell et al., 2007]. This parameter, $d\phi/dt$, represents the rate at which magnetic flux is opened at the magnetopause and is defined as\\
 \begin{align}
 	\frac{\text{d}\phi}{\text{d}t} = v^{4/3} |B|^{2/3} \sin^{8/3}(\theta_c/2)
 \end{align}
 where v is the velocity of the solar wind; |B| is the magnetic field magnitude; and the interplanetary magnetic field (IMF) clock angle is defined by $\theta_c = \tan^{-1}(By/Bz)$. The predicted magnetic field time series in GSM coordinate system is used to calculate a theoretical magnetic flux rate.\\
-
-
-% Bz importance for geomagnetic storms
-connection between geomagnetic disturbances and the southward component of the external interplanetary magnetic field (\citep{Dungey1961}; Fairfield and Cahill Jr 1966).\\
 
 half-wave rectifier, ref to R-M effect...\\
 
@@ -1204,6 +1200,9 @@ reconnection behind the cusps or at the front of the magnetopause (see \autoref{
 
 % Kp index
 The MC plotted in \autoref{fig:ACE_64s_v7_thesis_CME_2013-6-26_6} created a \Kp{} of 6+.\\
+
+% vBz
+for overview see chapter~4 in Bothmer2007book\\
 
 
 

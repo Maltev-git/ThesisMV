@@ -745,7 +745,7 @@ At the front of the magnetopause, the incoming solar wind ions and electrons are
 
 
 \subsection{Solar wind coupling mechanisms}
-\label{sec:solar_wind_coupling}
+\label{sec:solar_wind_coupling_mechanisms}
 There exist several ways of how solar wind couples to the magnetosphere and deposits energy and plasma within. The contributions of the different mechanisms by which energy is transferred and solar wind plasma is able to penetrate the magnetopause are not yet established \citep{Phan2005}. High solar wind pressure during times when the IMF direction is parallel to the terrestrial magnetic field leads to compression of the sunward magnetosphere and enhances its potential energy. Solar wind energy is also transferred via the induction of currents. However, the major interaction processes are magnetic reconnection and turbulence -- their underlying physical mechanisms are described in the following.
 
 Magnetic reconnection occurs where the IMF comes into antiparallel contact with the terrestrial magnetic field. At these regions on the magnetopause, the magnetosphere opens up to the IMF and reconnection of the field lines occurs, resulting in a change of the local magnetic topology \citep{Phan2005}. The oppositely directed magnetic field lines reconnect along a line that shows an X"~geometry. The reconnection process at this so-called X"~line harbors a narrow diffusion region, where the plasma ions and electrons decouple to get accelerated in jets of particles by the reconnected field lines \citep{Phan2005}, see the \autoref{fig:NASA_reconnection}.
@@ -902,26 +902,79 @@ The IAGA adopted the \Kp{}~index in 1954. The \Kp{}~index was maintained in Göt
 
 \section{Geomagnetic activity forecast}
 \label{sec:geomagnetic_activity_forecast}
-The timing and intensity of geomagnetic storms is sought to be forecasted from knowledge about the upcoming solar wind conditions. This means that there are two questions to this task: First, how does the magnetized solar wind plasma result in magnetospheric disturbances? Therefore, as the \Kp~index is the measure for the size of geomagnetic disturbances, a function relating \Kp{} to solar wind parameters is essential. Second, what state will the arriving solar wind be in at the magnetopause? Hence, a forecast using remote observations is required which is able to predict the arrival time and conditions of solar wind streams and CMEs. Both questions are addressed in the following two sections.
+The timing and intensity of geomagnetic storms is sought to be forecasted from knowledge about the upcoming solar wind conditions. This means that there are two questions to this task:
+
+First, how does the incoming magnetized solar wind plasma result in magnetospheric disturbances? Therefore, as the \Kp~index is the measure for the size of geomagnetic disturbances, a function relating \Kp{} to solar wind parameters is essential.
+
+Second, what state will the arriving solar wind be in at the magnetopause? Hence, a forecast using remote observations is required which is able to predict the arrival time and conditions of solar wind streams and CMEs. Both questions are addressed in the following two sections.
 
 
 \subsection{Coupling functions}
 \label{sec:coupling_functions}
-One physical quantity reflects the coupling intensity between solar wind and the magnetosphere: the dayside reconnection rate. In order to estimate the reconnection rate, several relations are being used (Lockwood2013?).
+In order to quantify geomagnetic activity, it is necessary to find solar wind coupling functions that correlate well with geomagnetic indices. These relations can be used to connect solar wind parameters with geomagnetic indices via an empirically fitted function.
 
-The most prominent way to quantify the reconnection rate is the induced electrical field $\vect{E}$. It represents the rate at which southward magnetic flux is transported to the magnetosphere \citep{Russell2007} check therein...:
+The major interaction mechanisms between solar wind and magnetosphere are magnetic reconnection and viscous turbulence, as mentioned previously in \autoref{sec:solar_wind_coupling_mechanisms}.
+
+% merging functions
+In general, the rate magnetic flux is opened at the magnetopause depends on the following independent factors \citep{Newell2007}:
+\begin{itemize*}
+	\item The rate magnetic flux is transported towards the magnetopause, represented by the solar wind velocity.
+	\item The amount of opened flux, which scales with the IMF strength.
+	\item The merging probability, which depends on the IMF clock angle.
+	\item The length of the reconnection X"~line on the magnetopause.
+\end{itemize*}
+
+Several different solar wind coupling functions were introduced in order to estimate the magnetic flux opening rate.
+
+The most prominent way to quantify the reconnection rate is the induced electrical field $\vect{E}$. It represents the rate at which southward magnetic flux is transported to the magnetosphere \citep[p.~103]{Russell2007}:
 \begin{align}
 	|\vect{E}| = - v_\text{x} \cdot B_\text{z}	\,.
 \end{align}
-see Appendix \autoref{sec:electrical_field_at_the_magnetopause}\\
+See the Appendix \autoref{sec:electrical_field_at_the_magnetopause} for how this relation is derived.\\
+
+
+
+
+
+list:\\
+R-M effect\\
+half-wave rectifier\\
+\vBz{}, $v$, $B_\text{z}$\\
+$E_\text{y}$\\
+Newell relation\\
+
+
+% viscous functions
+viscous functions\\
+Newell: $n^{1/2} \cdot v^2$\\
+
+
+
+One physical quantity reflects the coupling intensity between solar wind and the magnetosphere: the dayside reconnection rate.\\
+
+----------------\\
+
+
+there are functions approximating the reconnection rate depending on the clock angle\\
+- v: the solar wind velocity represents the rate at which IMF field lines are convected toward the magnetopause \citep{Newell2007}\\
+Bz\\
+half-wave rectifier vBs\\
+- IMF field lines impacting the magnetopause merge with the probability depending on the IMF clock angle; this factor is empirical \citep{Newell2007}\\
+The amount of flux opened is clearly proportional to BT\\
+
 
 The rate magnetic flux is opened at the magnetopause $\text{d}\Phi / \text{d}t$.\\
 
 
+The rate magnetic flux is opened at the magnetopause is a function of four factors, namely the rate at which field lines are convected toward the magnetopause, the probability that they subsequently merge, the strength of the IMF (and thus the amount of flux opened), and the length of the merging line along the magnetopause. \citep{Newell2007}\\
+
+
+\citep[p.~103]{Russell2007}\\
+This half-wave rectification has an important implication on how the reconnection rate must be controlled by the IMF direction and where reconnection occurs.\\
+the simplest coupling function between the solar wind and the Earth magnetosphere is the half wave rectifier. It is controlled by the component of the interplanetary field perpendicular to the solar wind flow and its clock angle around the flow.\\
 
 
 
-----------------\\
 
 --> existing coupling functions...\\
 
@@ -994,14 +1047,16 @@ The solar wind electric field $E_y$ is the product of the proton velocity $v$ an
 	|\vect{E}| = -v_\text{x} \cdot B_\text{z}\,.	\label{eq:coupling_vxBz}
 \end{align}
 
-half-wave rectifier compared to Newell's IMF clock angle factor, see \autoref{fig:figures_of_mine/gnuplots/coupling_angle}\\
+
+fraction of field lines which merge\\
+half-wave rectifier compared to Newell's IMF clock angle factor, see \autoref{fig:figures_of_mine/gnuplots/coupling_angle_b}\\
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
-		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/coupling_angle.png}
+		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/coupling_angle_b.pdf}
 	}{
-		\caption[\lofimage{figures_of_mine/gnuplots/coupling_angle.png}]
-		{IMF clock angle ($\theta_c$) dependency of the coupling functions' relative amplitudes. I plotted Newell's relation (black) and the half-wave rectifier (purple).}
-		\label{fig:figures_of_mine/gnuplots/coupling_angle}
+		\caption[\lofimage{figures_of_mine/gnuplots/coupling_angle_b.png}]
+		{IMF clock angle ($\theta_c$) dependency of the coupling functions' relative amplitudes. The different coupling functions include the half-wave rectifier (black). I plotted the GSM coordinate directions in the upper left. add (Newell et al.) and remove example arrow and change colors...}
+		\label{fig:figures_of_mine/gnuplots/coupling_angle_b}
 	}
 \end{figure}
 

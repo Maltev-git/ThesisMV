@@ -823,7 +823,7 @@ The arrival of extreme solar wind conditions, such as found in CMEs and CIRs, ge
 
 \subsection{Russell-McPherron effect}
 \label{sec:russell_mcpherron_effect}
-Geomagnetic activity varies semiannually with the maxima around the equinoxes and the minima around solstices \citep{Cortie1912}. \citet{Russell1973} suggested a model, the Russell-McPherron (R-M) effect, that is able to predict the correct phase and the observed variation in strength seen yearly in geomagnetic activity. They define a solar wind-magnetosphere interaction in GSM coordinates that is set to zero during northward IMF and is otherwise proportional to the southward IMF component. As solar wind and IMF are naturally ordered in the geocentric solar equatorial (GSEQ) coordinate system, their flow angle against the magnetosphere undergoes seasonal changes. The mechanism then is provided by the changing probability over the year of getting a north- or southward IMF, viewed in the GSM-frame of the magnetosphere. This variation is found to be sufficient to generate the observed effect \citep{Russell1973}.
+Geomagnetic activity varies semiannually with the maxima around the equinoxes and the minima around solstices \citep{Cortie1912}. \citet{Russell1973} suggested a model, now called the Russell-McPherron (R-M) effect, that is able to predict the correct phase and the observed variation in strength seen yearly in geomagnetic activity. They define a solar wind-magnetosphere interaction in GSM coordinates that is set to zero during northward IMF and is otherwise proportional to the southward IMF component -- analog to a half-wave rectifier. As solar wind and IMF are naturally ordered in the geocentric solar equatorial (GSEQ) coordinate system, their flow angle against the magnetosphere undergoes seasonal changes. The mechanism then is provided by the changing probability over the year of getting a north- or southward IMF, viewed in the GSM-frame of the magnetosphere. This variation is found to be sufficient to generate the observed effect \citep{Russell1973}.
 
 In addition to the R-M effect, the interaction depends on the dipole tilt angle to the solar wind, which is shown to regulate the extent of the sunward reconnection region and therefore the reconnection rate and geomagnetic activity \citep{Russell2003}. There exist other hypotheses describing the semiannual variation: the axial and the equinoctial hypotheses. However, the R-M effect is the most prevailing and is even able to explain the variation of geomagnetic activity under extreme solar wind conditions, such as interplanetary shocks \citep{Zhao2012}.
 
@@ -911,12 +911,12 @@ Second, what state will the arriving solar wind be in at the magnetopause? Hence
 
 \subsection{Coupling functions}
 \label{sec:coupling_functions}
-In order to quantify geomagnetic activity, it is necessary to find solar wind coupling functions that correlate well with geomagnetic indices. These relations can be used to connect solar wind parameters with geomagnetic indices via an empirically fitted function.
+In order to quantify geomagnetic activity, solar wind coupling functions that correlate well with geomagnetic indices are necessary. These relations can then be used to connect solar wind parameters with geomagnetic indices via empirically fitted functions.
 
 The major interaction mechanisms between solar wind and magnetosphere are magnetic reconnection and viscous turbulence, as mentioned previously in \autoref{sec:solar_wind_coupling_mechanisms}.
 
 % merging functions
-In general, the rate magnetic flux is opened at the magnetopause depends on the following independent factors \citep{Newell2007}:
+According to \citet{Newell2007}, the rate magnetic flux is opened at the magnetopause generally depends on the following independent factors:
 \begin{itemize*}
 	\item The rate magnetic flux is transported towards the magnetopause, represented by the solar wind velocity.
 	\item The amount of opened flux, which scales with the IMF strength.
@@ -924,31 +924,48 @@ In general, the rate magnetic flux is opened at the magnetopause depends on the 
 	\item The length of the reconnection X"~line on the magnetopause.
 \end{itemize*}
 
-Several different solar wind coupling functions were introduced in order to estimate the magnetic flux opening rate.
-
-The most prominent way to quantify the reconnection rate is the induced electrical field $\vect{E}$. It represents the rate at which southward magnetic flux is transported to the magnetosphere \citep[p.~103]{Russell2007}:
-\begin{align}
-	|\vect{E}| = - v_\text{x} \cdot B_\text{z}	\,.
-\end{align}
-See the Appendix \autoref{sec:electrical_field_at_the_magnetopause} for how this relation is derived.\\
-
-
-Here I list and discuss only a few of the most used merging coupling functions. There exist a lot more based on combinations of the same physical quantities.
+Many solar wind coupling functions with differing complexity were proposed in order to characterize the interaction process with the magnetosphere. There exist a lot of functions based on combinations of the same physical quantities, often including the IMF direction \citep{Newell2007,Lockwood2013}. Here I list and discuss only a few of the most used merging coupling functions that estimate the magnetic flux opening rate.
 \begin{itemize*}
 	\item $v$, the solar wind velocity (cite?).
 	\item $B$, the IMF strength (cite?).
-	\item $E_\text{y}$, the sw? electrical field, represented by \vBz{} (cite?).
-	\item The half-wave rectifier, Bs or vBs?, figure? (cite?).
+	\item $B_\text{z}$, the IMF z"~component. \citet{Fairfield1966} deduced from early satellite IMF measurements that the southern IMF component is linked with geomagnetic disturbances, whereas a northward IMF is connected with quiet geomagnetic conditions.
+	\item $\vect{E}$, the solar wind electrical field -- with some assumptions often reduced to $E_\text{y}$. It is one of the most prominent coupling functions and represents the rate at which southward magnetic flux is transported to the magnetosphere \citep[p.~103]{Russell2007}:
+	\begin{align}
+		\vect{E} &= -\vect{v} \times \vect{B}	\,,\\
+		|\vect{E}| &= E_\text{y} = -v_\text{x} \cdot B_\text{z}	\,.	\label{eq:coupling_vxBz}
+	\end{align}
+	How this relation is derived and which assumptions are made for the reduction to $E_\text{y}$ is described in the Appendix \autoref{sec:electrical_field_at_the_magnetopause}.
+	\item IMF clock angle. 
+	
+	\item $B_\text{s}$, the half-wave rectifier as defined by \citep{Russell1973}, see also the R-M effect in \autoref{sec:russell_mcpherron_effect}. It describes a simple interaction in GSM coordinates that is proportional to the southward IMF component and zero during northward IMF:
+	\begin{align}
+		B_\text{s} =
+		\begin{cases}
+			\,0 &\text{for } B_\text{z} > 0	\,,\\
+			\,-B_\text{z} &\text{for } B_\text{z} \le 0	\,.
+		\end{cases}	\label{eq:half_wave_rectifier}
+	\end{align}
+	figure...?\\
 	\item The Newell relation \citep{Newell2007}.
-	\item The Russell-McPherron effect  (cite?).
 \end{itemize*}
 
 
+
+
+\citep{Lockwood2013}\\
+% https://link.springer.com/content/pdf/10.12942%2Flrsp-2013-4.pdf
+Because Bs is discontinuous in slope around Bs = 0, a form such as B sin**4(theta/2) is often preferred, where the IMF “clock angle”. This has a very similar form to Bs at large |Bs| but is continuous in slope around zero.\\
+The power density in the solar wind at Earth is dominated by the kinetic energy of the bulk flow of the particles and so the square of the solar wind velocity is another important factor. Hence a simple “coupling function”, designed to quantify the effect of the solar wind on geomagnetic activity, is $B_\text{s} \cdot v^2$.\\
+the epsilon parameter, based on the energy density in the solar wind hitting the Earth’s space environment\\
+P-alpha, which is the power coupled into the magnetosphere. It is the product of the power density in the solar wind, times the cross sectional area of the magnetosphere presented to the solar wind, times the fraction of the incident power that crosses the magnetopause.\\
+
+
+
+
 % viscous functions
-It was found that coupling functions have the highest correlation, if they consist of a merging term combined with a viscous term \citep{Newell2008}. As the viscous term describes another kind of interaction process, it is independent from the reconnection term. It usually depends on the solar wind plasma quantities velocity and density.\\
+It was found that coupling functions have the highest correlation, if they consist of a merging term combined with a viscous term \citep{Newell2008}. As the viscous term describes another kind of interaction process, that is, reconnections due to Kelvin-Helmholtz instabilies at the flanks of the magnetopause, it is independent from the dayside reconnection term. It usually depends on the solar wind plasma quantities velocity and density.\\
 
-\citet{Newell2008} deduced that the best combination is $\text{d}\Phi / \text{d}t$ together with $n^{1/2} \cdot v^2$.\\
-
+\citet{Newell2008} deduced that the best combination is $\text{d}\Phi / \text{d}t$ together with $\sqrt{n} \cdot v^2$.\\
 
 In order to relate the coupling functions to geomagnetic indices, relations are obtained by empirically fitting both time series. This thesis adds more empirical relations to the \Kp~index -- for the cases when only $v$ or \vBz{} are known.\\
 
@@ -961,15 +978,9 @@ In order to relate the coupling functions to geomagnetic indices, relations are 
 there are functions approximating the reconnection rate depending on the clock angle\\
 - IMF field lines impacting the magnetopause merge with the probability depending on the IMF clock angle; this factor is empirical \citep{Newell2007}\\
 
-
 The rate magnetic flux is opened at the magnetopause $\text{d}\Phi / \text{d}t$.\\
 
-
-\citep[p.~103]{Russell2007}\\
-This half-wave rectification has an important implication on how the reconnection rate must be controlled by the IMF direction and where reconnection occurs.\\
-the simplest coupling function between the solar wind and the Earth magnetosphere is the half wave rectifier. It is controlled by the component of the interplanetary field perpendicular to the solar wind flow and its clock angle around the flow.\\
-
-
+Newell's relation is being implemented into forecast procedures (Savani2017)\\
 
 
 % Kp now- and forecast
@@ -993,7 +1004,7 @@ Kp nowcast with L1 data; f/c see next sec.\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Space weather
-% 
+%
 % Magnetosphere
 % Structure (currents, plasma regions)
 % Solar wind coupling mechanisms (list all: reconnection, turbulence, ...)
@@ -1006,8 +1017,8 @@ Kp nowcast with L1 data; f/c see next sec.\\
 %
 % Geomagnetic activity forecast
 % Coupling functions
-% Solar wind forecast to Earth
 % Kp forecast
+% Solar wind forecast to Earth
 
 
 
@@ -1029,16 +1040,7 @@ Stream forecast:\\
 
 \subsection{Coupling functions}
 
-% Bz importance for geomagnetic storms
-connection between geomagnetic disturbances and the southward component of the external interplanetary magnetic field (\citep{Dungey1961}; Fairfield and Cahill Jr 1966).\\
-
 In this work I settle and work with \vBz{} as the coupling function, because by the time performing the analyses I was not aware of the other.\\
-
-The solar wind electric field $E_y$ is the product of the proton velocity $v$ and the magnetic field z-component $B_\text{z}$:
-\begin{align}
-	|\vect{E}| = -v_\text{x} \cdot B_\text{z}\,.	\label{eq:coupling_vxBz}
-\end{align}
-
 
 fraction of field lines which merge\\
 half-wave rectifier compared to Newell's IMF clock angle factor, see \autoref{fig:figures_of_mine/gnuplots/coupling_angle_b}\\
@@ -1065,8 +1067,6 @@ Savani2017:\\
 	\frac{\text{d}\phi}{\text{d}t} = v^{4/3} |B|^{2/3} \sin^{8/3}(\theta_c/2)
 \end{align}
 where v is the velocity of the solar wind; |B| is the magnetic field magnitude; and the interplanetary magnetic field (IMF) clock angle is defined by $\theta_c = \tan^{-1}(By/Bz)$. The predicted magnetic field time series in GSM coordinate system is used to calculate a theoretical magnetic flux rate.\\
-
-half-wave rectifier, ref to R-M effect...\\
 
 
 \subsection{\Kp~forecast} (quantitative)
@@ -1151,8 +1151,6 @@ Complicating our understanding even more is the fact that processes such as turb
 
 These events (GS) are able to disturb sensitive technical systems. Understanding the properties of the solar wind helps with the prediction and protection of humanity's assets.\\
 
-reference to \citet{Bothmer2007}, maybe images\\
-
 put fig. somewhere earlier (p.~10?): see \autoref{fig:Hundhausen1977_fig20bcd}\\
 \begin{figure}[htb]
 	\centering
@@ -1168,9 +1166,6 @@ The weaker solar activity cycle 24 seems to have important consequences for CMEs
 The total pressure in the heliosphere (magnetic + plasma) is reduced by ca. 40\%, which leads to the anomalous expansion of CMEs explaining the increased slope. The excess CME expansion contributes to the diminished effectiveness of CMEs in producing magnetic storms during cycle 24, both because the magnetic content of the CMEs is diluted and also because of the weaker ambient fields \citep{Gopalswamy2014}.\\
 
 the dayside reconnection is asymmetric\\
-half-wave rectifier coupling\\
-To describe this, coupling functions with different complexity were proposed (Newell, cites? and list).\\
-Newell's relation is being implemented into forecast procedures (Savani2017)\\
 
 causes (see citet{Rangarajan1997} p.~1282 and mention Bartels1963 too)\\
 read Bothmer1998 Ch 3...\\
@@ -1178,17 +1173,20 @@ read Bothmer1998 Ch 3...\\
 
 \citet{Sonnerup1967}: The rotational discontinuity seems to occur predominantly during magnetic storms and two of these cases, involving substantial normal-field components, provide compelling evidence that field reconnection takes place during the storm main phase.\\
 
-read Milan2009\\	% http://adsabs.harvard.edu/abs/2009GeoRL..3618101M
-
 % mass flux considerations:\\
 % mass per second per Earth disc...\\
 % R_E = 6371.008 km\\
-% A_E = pi * R_E² = 127516438.219 km²\\
+% A_E = pi * R_E² = 127 516 438.219 km²\\
 % m_p = 1.672621898e-27 kg\\
 % v = 400 km/s\\
 % n = 6.5 cm-3 = 6.5e15 km-3\\
-% mass flux = m_p * n * v * A_E = 0.0013863641126 kg/s/A_E\\
-% = 1.4 g/s/A_E = 5 kg/h = 120 kg/d/A_E = 44 t/a/A_E\\
+% mass flux_E = m_p * n * v * A_E = 0,554538384917 kg/s\\
+% = 555 g/s = 1996 kg/h = 48 t/d = 17487 t/a\\
+% mass per second per magnetosphere disc...\\
+% R_MP = 15 * R_E
+% A_MP = pi * R_MP² = 28 691 198 599.3 km²\\
+% mass flux_MP = 124,772770348 kg/s\\
+% = 449 t/h = 10 780 t/d = 3 934 834 t/a\\
 
 % Wikipedia: https://en.wikipedia.org/wiki/Solar_wind
 % The wind exerts a pressure at 1 AU typically in the range of 1–6 nPa (1–6×10−9 N/m2), although it can readily vary outside that range.
@@ -1220,8 +1218,6 @@ strong radio bursts...\\
 at Earth the solar wind total energy flux ($1.45~\text{mW/m}^2$) is only about one millionth of the solar radiation flux (see \citet[p.~153]{Schwenn1990})\\
 
 % magnetosphere
-ring current systems\\
-
 radiation belts\\
 
 Phan2005, Magnetopause Processes:\\
@@ -1241,6 +1237,11 @@ reconnection behind the cusps or at the front of the magnetopause (see \autoref{
 		\label{fig:Bothmer1998book_p116_fig4_8_sw}
 	}
 \end{figure}
+
+% sw coupling mechanisms
+\citep[p.~103]{Russell2007}\\
+This half-wave rectification has an important implication on how the reconnection rate must be controlled by the IMF direction and where reconnection occurs.\\
+include reconnection location figure?\\
 
 % geomagnetic indices
 \citet{Lockwood2014} even used geomagnetic indices (including $aa$) to reconstruct the near-Earth IMF strength and solar wind flow speed back to 1845.\\

@@ -94,7 +94,7 @@ Indentation Mode=normal
 Mode=LaTeX
 
 [document-settings,item:chapters/introduction.tex]
-Bookmarks=667,521,780,300,1226,857,746,379,823,48,715,902,1013,830,54,836,911,1029,992,253,182,1255
+Bookmarks=667,1222,521,780,300,1003,1040,857,746,379,823,48,715,902,830,54,836,911,1024,253,182,1256
 Encoding=UTF-8
 Highlighting=LaTeX
 Indentation Mode=normal
@@ -188,10 +188,10 @@ order=-1
 
 [item:appendix/literature_bibtex.bib]
 archive=true
-column=0
+column=21
 encoding=UTF-8
 highlight=BibTeX
-line=491
+line=1529
 mode=BibTeX
 open=false
 order=4
@@ -228,10 +228,10 @@ order=5
 
 [item:chapters/chapter2.tex]
 archive=true
-column=776
+column=8
 encoding=UTF-8
 highlight=LaTeX
-line=250
+line=262
 mode=LaTeX
 open=false
 order=4
@@ -258,20 +258,20 @@ order=5
 
 [item:chapters/front_matter.tex]
 archive=true
-column=33
+column=35
 encoding=UTF-8
 highlight=LaTeX
-line=327
+line=328
 mode=LaTeX
 open=true
 order=2
 
 [item:chapters/introduction.tex]
 archive=true
-column=37
+column=24
 encoding=UTF-8
 highlight=LaTeX
-line=1042
+line=937
 mode=LaTeX
 open=true
 order=3
@@ -385,10 +385,10 @@ JumpList=
 ViMarks=.,3,0,[,3,0,],3,0
 
 [view-settings,view=0,item:appendix/literature_bibtex.bib]
-CursorColumn=0
-CursorLine=491
+CursorColumn=21
+CursorLine=1529
 JumpList=
-ViMarks=.,490,1,[,478,0,],-1,-1
+ViMarks=.,1529,21,[,1529,21,],1529,21
 
 [view-settings,view=0,item:appendix/literature_bibtex_combined.bib]
 CursorColumn=15
@@ -409,10 +409,10 @@ JumpList=
 ViMarks=.,308,184,[,308,184,],308,193
 
 [view-settings,view=0,item:chapters/chapter2.tex]
-CursorColumn=776
-CursorLine=250
+CursorColumn=8
+CursorLine=262
 JumpList=
-ViMarks=.,250,742,[,250,742,],250,775
+ViMarks=.,266,0,[,263,0,],267,0
 
 [view-settings,view=0,item:chapters/discussion_summary.tex]
 CursorColumn=0
@@ -427,16 +427,16 @@ JumpList=
 ViMarks=.,81,38,[,81,38,],81,38
 
 [view-settings,view=0,item:chapters/front_matter.tex]
-CursorColumn=33
-CursorLine=327
+CursorColumn=35
+CursorLine=328
 JumpList=
-ViMarks=.,327,15,[,327,15,],327,32
+ViMarks=.,328,34,[,328,33,],328,34
 
 [view-settings,view=0,item:chapters/introduction.tex]
-CursorColumn=37
-CursorLine=1042
+CursorColumn=24
+CursorLine=937
 JumpList=
-ViMarks=.,952,238,[,952,229,],952,238,a,715,0,b,521,0,c,379,0,d,300,0,e,253,0,f,182,0,g,54,0,h,48,0,i,830,0,j,667,0,k,1013,0,l,1029,0,m,992,0,n,1226,0,o,1255,0,p,857,0,q,902,0,r,823,0,s,780,0,t,746,0,u,836,0,v,911,0
+ViMarks=.,959,269,[,959,269,],959,269,a,715,0,b,521,0,c,379,0,d,300,0,e,253,0,f,182,0,g,54,0,h,48,0,i,830,0,j,667,0,k,1024,0,l,1040,0,m,1003,0,n,1222,0,o,1256,0,p,857,0,q,902,0,r,823,0,s,780,0,t,746,0,u,836,0,v,911,0
 
 [view-settings,view=0,item:chapters/paperMVVB_wrapper.tex]
 CursorColumn=0

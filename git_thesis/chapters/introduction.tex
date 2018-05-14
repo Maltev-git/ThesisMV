@@ -927,15 +927,10 @@ According to \citet{Newell2007}, the rate magnetic flux is opened at the magneto
 Many solar wind coupling functions with differing complexity were proposed in order to characterize the interaction process with the magnetosphere. There exist a lot of functions based on combinations of the same physical quantities, often including the IMF direction \citep{Newell2007,Lockwood2013}. Here I list and discuss only a few of the most used merging coupling functions that estimate the magnetic flux opening rate.
 \begin{itemize*}
 	\item $v$, the solar wind velocity (cite?).
+	
 	\item $B$, the IMF strength (cite?).
+	
 	\item $B_\text{z}$, the IMF z"~component. \citet{Fairfield1966} deduced from early satellite IMF measurements that the southern IMF component is linked with geomagnetic disturbances, whereas a northward IMF is connected with quiet geomagnetic conditions.
-	\item $\vect{E}$, the solar wind electrical field -- with some assumptions often reduced to $E_\text{y}$. It is one of the most prominent coupling functions and represents the rate at which southward magnetic flux is transported to the magnetosphere \citep[p.~103]{Russell2007}:
-	\begin{align}
-		\vect{E} &= -\vect{v} \times \vect{B}	\,,\\
-		|\vect{E}| &= E_\text{y} = -v_\text{x} \cdot B_\text{z}	\,.	\label{eq:coupling_vxBz}
-	\end{align}
-	How this relation is derived and which assumptions are made for the reduction to $E_\text{y}$ is described in the Appendix \autoref{sec:electrical_field_at_the_magnetopause}.
-	\item IMF clock angle. 
 	
 	\item $B_\text{s}$, the half-wave rectifier as defined by \citep{Russell1973}, see also the R-M effect in \autoref{sec:russell_mcpherron_effect}. It describes a simple interaction in GSM coordinates that is proportional to the southward IMF component and zero during northward IMF:
 	\begin{align}
@@ -946,7 +941,22 @@ Many solar wind coupling functions with differing complexity were proposed in or
 		\end{cases}	\label{eq:half_wave_rectifier}
 	\end{align}
 	figure...?\\
-	\item The Newell relation \citep{Newell2007}.
+	
+	\item $|\vect{B}| \sin^n\left(\theta_c / 2\right)$, a term depending on the IMF clock angle $\theta_c$ and in shape similar to the half-wave rectifier. However, it is continuous around zero and therefore often preferred over $B_\text{s}$ \citep{Lockwood2013}. The IMF clock angle is defined as $\theta_c = \tan^{-1}\left(B_\text{y} / B_\text{z}\right)$ and the exponent is often chosen as $n = 2$ or $n = 4$.
+	
+	\item $\vect{E}$, the solar wind electrical field -- with some assumptions often reduced to $E_\text{y}$. It is one of the most prominent coupling functions and represents the rate at which southward magnetic flux is transported to the magnetosphere \citep[p.~103]{Russell2007}:
+	\begin{align}
+		\vect{E} &= -\vect{v} \times \vect{B}	\,,\\
+		|\vect{E}| &= E_\text{y} = -v_\text{x} B_\text{z}	\,.	\label{eq:coupling_vxBz}
+	\end{align}
+	How this relation is derived and which assumptions are made for the reduction to $E_\text{y}$ is described in the Appendix \autoref{sec:electrical_field_at_the_magnetopause}.
+	
+	\item $\text{d}\Phi / \text{d}t$, a relation derived by \citet{Newell2007} that empirically represents the rate magnetic flux is opened at the magnetopause. It shows the highest correlation with multiple geomagnetic indices out of various coupling functions.
+	describe individual terms...\\
+	\begin{align}
+		\frac{\text{d}\Phi}{\text{d}t} &= v^{4/3} |\vect{B}|^{2/3} \sin^{8/3}\left(\frac{\theta_c}{2}\right)	\label{eq:newell_merging_function}
+	\end{align}
+
 \end{itemize*}
 
 
@@ -954,7 +964,6 @@ Many solar wind coupling functions with differing complexity were proposed in or
 
 \citep{Lockwood2013}\\
 % https://link.springer.com/content/pdf/10.12942%2Flrsp-2013-4.pdf
-Because Bs is discontinuous in slope around Bs = 0, a form such as B sin**4(theta/2) is often preferred, where the IMF “clock angle”. This has a very similar form to Bs at large |Bs| but is continuous in slope around zero.\\
 The power density in the solar wind at Earth is dominated by the kinetic energy of the bulk flow of the particles and so the square of the solar wind velocity is another important factor. Hence a simple “coupling function”, designed to quantify the effect of the solar wind on geomagnetic activity, is $B_\text{s} \cdot v^2$.\\
 the epsilon parameter, based on the energy density in the solar wind hitting the Earth’s space environment\\
 P-alpha, which is the power coupled into the magnetosphere. It is the product of the power density in the solar wind, times the cross sectional area of the magnetosphere presented to the solar wind, times the fraction of the incident power that crosses the magnetopause.\\
@@ -975,12 +984,7 @@ In order to relate the coupling functions to geomagnetic indices, relations are 
 ----------------\\
 
 
-there are functions approximating the reconnection rate depending on the clock angle\\
-- IMF field lines impacting the magnetopause merge with the probability depending on the IMF clock angle; this factor is empirical \citep{Newell2007}\\
-
-The rate magnetic flux is opened at the magnetopause $\text{d}\Phi / \text{d}t$.\\
-
-Newell's relation is being implemented into forecast procedures (Savani2017)\\
+IMF field lines impacting the magnetopause merge with the probability depending on the IMF clock angle; this factor is empirical \citep{Newell2007}\\
 
 
 % Kp now- and forecast
@@ -989,6 +993,9 @@ Kp prediction models/methods\\
 This paper adds more empirical relations.\\
 
 Kp nowcast with L1 data; f/c see next sec.\\
+
+Newell's relation is being implemented into forecast procedures \citep{Savani2017}.\\
+
 
 
 \subsection{Solar wind forecast to Earth}
@@ -1043,14 +1050,14 @@ Stream forecast:\\
 In this work I settle and work with \vBz{} as the coupling function, because by the time performing the analyses I was not aware of the other.\\
 
 fraction of field lines which merge\\
-half-wave rectifier compared to Newell's IMF clock angle factor, see \autoref{fig:figures_of_mine/gnuplots/coupling_angle_b}\\
+half-wave rectifier compared to Newell's IMF clock angle factor, see \autoref{fig:coupling_angle_b}\\
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/coupling_angle_b.pdf}
 	}{
 		\caption[\lofimage{figures_of_mine/gnuplots/coupling_angle_b.png}]
 		{IMF clock angle ($\theta_c$) dependency of the coupling functions' relative amplitudes. The different coupling functions include the half-wave rectifier (black). I plotted the GSM coordinate directions in the upper left. add (Newell et al.) and remove example arrow and change colors...}
-		\label{fig:figures_of_mine/gnuplots/coupling_angle_b}
+		\label{fig:coupling_angle_b}
 	}
 \end{figure}
 
@@ -1233,7 +1240,7 @@ reconnection behind the cusps or at the front of the magnetopause (see \autoref{
 		\includegraphics[width=0.6\textwidth]{figures_of_others/images/Bothmer2007book_p116_fig4_8_sw.png}
 	}{
 		\caption[\lofimage{figures_of_others/images/Bothmer2007book_p116_fig4_8_sw.png}]
-		{Sketch indicating where reconnection of magnetic field lines on the magnetopause occurs, for the cases of northward (upper panel) and southward (lower panel) IMF. The central dot indicates the position of Earth and the arrowed lines the direction of the magnetic field. The locations of X"~line reconnection are denoted with N and the short arrows indicate the movement of the field lines. Credit: {\citet[p.~116, Fig.~4.8]{Bothmer2007}}, adapted from {\citet{Dungey1961,Dungey1963}}. get permission...}
+		{Sketch indicating where reconnection of magnetic field lines on the magnetopause occurs, for the cases of northward (upper panel) and southward (lower panel) IMF. The central dot indicates the position of Earth and the arrowed lines the direction of the magnetic field. The locations of X"~line reconnection are denoted with N and the short arrows indicate the movement of the field lines. Credit: {\citet[p.~116, Fig.~4.8]{Russell2007}}, \textcopyright~Praxis Publishing, get permission..., adapted from {\citet{Dungey1961,Dungey1963}}.}
 		\label{fig:Bothmer1998book_p116_fig4_8_sw}
 	}
 \end{figure}
@@ -1252,6 +1259,17 @@ The MC plotted in \autoref{fig:ACE_64s_v7_thesis_CME_2013-6-26_6} created a \Kp{
 % vBz
 for overview see chapter~4 in Bothmer2007book\\
 
+
+regions of antiparallel magnetic fields on the magnetosphere, see \autoref{fig:Russell2007_fig4_10_VBbook_magnetopause_reconnection_regions}\\
+\begin{figure}[htb]
+	\fcapside[\FBwidth]{
+		\includegraphics[width=0.6\textwidth]{figures_of_others/images/Russell2007_fig4_10_VBbook_magnetopause_reconnection_regions.png}
+	}{
+		\caption[\lofimage{figures_of_others/images/Russell2007_fig4_10_VBbook_magnetopause_reconnection_regions.png}]
+		{Regions of antiparallel magnetic fields on the magnetosphere for different IMF directions derived from a simulation. Credit: {\citet[Fig.~4.10]{Russell2007}}, \textcopyright~Praxis Publishing, get permission..., after {\citet[Fig.~2]{Luhmann1984}}.}
+		\label{fig:Russell2007_fig4_10_VBbook_magnetopause_reconnection_regions}
+	}
+\end{figure}
 
 
 %%%%--  next chapter  --%%%%

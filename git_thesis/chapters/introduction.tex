@@ -927,7 +927,7 @@ According to \citet{Newell2007}, the rate magnetic flux is opened at the magneto
 	\item The rate magnetic flux is transported towards the magnetopause, represented by the solar wind velocity.
 	\item The amount of opened flux, which scales with the IMF strength.
 	\item The merging probability, which depends on the IMF clock angle.
-	\item The length of the reconnection X"~line on the magnetopause.
+	\item The extent of the reconnection region, represented by the length of the X"~line on the magnetopause.
 \end{itemize*}
 Many solar wind coupling functions were proposed in order to characterize the interaction process with the magnetosphere. They consist of functional terms of differing complexity, mostly including and approximating some of the above factors. There exist a lot of functions based on combinations of the same physical quantities, often including the IMF direction \citep{Newell2007,Lockwood2013}. Here I list and discuss a few of the most used coupling functions:
 \begin{itemize*}
@@ -937,7 +937,7 @@ Many solar wind coupling functions were proposed in order to characterize the in
 	
 	\item $B_\text{z}$, the IMF z"~component. \citet{Fairfield1966} deduced from early satellite IMF measurements that the southern IMF component is linked with geomagnetic disturbances, whereas a northward IMF is connected with quiet geomagnetic conditions.
 	
-	\item $B_\text{s}$, the half-wave rectifier as defined by \citep{Russell1973}, see also the R-M effect in \autoref{sec:russell_mcpherron_effect}. It describes a simple interaction in GSM coordinates that is proportional to the southward IMF component and zero during northward IMF:
+	\item $B_\text{s}$, the half-wave rectifier as defined by \citet{Russell1973}, see also the R-M effect in \autoref{sec:russell_mcpherron_effect}. It describes a simple interaction in GSM coordinates that is proportional to the southward IMF component and zero during northward IMF:
 	\begin{align}
 		B_\text{s} =
 		\begin{cases}
@@ -952,25 +952,25 @@ Many solar wind coupling functions were proposed in order to characterize the in
 			\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/coupling_angle_c.pdf}
 		}{
 			\caption[\lofimage{figures_of_mine/gnuplots/coupling_angle_c.png}]
-			{IMF clock angle ($\theta_c$) dependency of the coupling functions' relative amplitudes. The different coupling functions include the IMF clock angle factor by \citet{Newell2007} and the half-wave rectifier (black). I plotted the GSM coordinate directions in the upper left for orientation.}
+			{IMF clock angle ($\theta_c$) dependency of the coupling functions' relative amplitudes. The different coupling functions include the IMF clock angle factor by \citet{Newell2007} and the half-wave rectifier (black). I plotted the GSM coordinate directions in the upper left for orientation. move arrows to the lower left...}
 			\label{fig:coupling_angle_c}
 		}
 	\end{figure}
 	
-	\item $\vect{E}$, the solar wind electrical field which is with the help of some assumptions often reduced to $E_\text{y}$. It is one of the most prominent coupling functions and represents the rate at which southward magnetic flux is transported to the magnetosphere \citep[p.~103]{Russell2007}:
+	\item $\vect{E}$, the solar wind electrical field which is with the help of some assumptions often reduced to $E_\text{y}$:
 	\begin{align}
 		\vect{E} &= -\vect{v} \times \vect{B}	\,,\\
 		|\vect{E}| &\approx -v_\text{x} B_\text{z} =  E_\text{y}	\,.	\label{eq:coupling_vxBz}
 	\end{align}
-	How this relation is derived and which assumptions are made for the reduction to $E_\text{y}$ is described in the Appendix \autoref{sec:electrical_field_at_the_magnetopause}.
+	It is one of the most prominent coupling functions and represents the rate at which southward magnetic flux is transported to the magnetosphere \citep[p.~103]{Russell2007}. How this relation is derived and which assumptions are made for the reduction to $E_\text{y}$ is described in the Appendix \autoref{sec:electrical_field_at_the_magnetopause}.
 	
-	\item $\text{d}\Phi_\text{MP} / \text{d}t$, a relation derived by \citet{Newell2007} that represents the rate magnetic flux is opened at the magnetopause. It shows the highest correlation with 9 out of 10 geomagnetic indices out of various tested coupling functions, aiming to be an universal solar wind-magnetosphere coupling function.
+	\item $\text{d}\Phi_\text{MP} / \text{d}t$, a relation derived by \citet{Newell2007} that represents the rate magnetic flux is opened at the magnetopause:
 	\begin{align}
 		\frac{\text{d}\Phi_\text{MP}}{\text{d}t} &= v^{4/3} |\vect{B}|^{2/3} \sin^{8/3}\left(\frac{\theta_c}{2}\right)	\label{eq:newell_merging_function}
 	\end{align}
-	The value of the exponent, $n = 8/3$, is determined empirically \citep{Newell2007}.
+	The X"~line length is approximated with $\left(v / |\vect{B}|\right)^{1/3}$ and is included within the first two factors. The value of the sinus exponent, $n = 8/3$, is determined empirically. This relation shows the highest correlation with 9 out of 10 geomagnetic indices out of various tested coupling functions, aiming to be an universal solar wind-magnetosphere coupling function \citep{Newell2007}.
 	
-	\item $B_\text{s} v^2$, the power density in the solar wind, containing the kinetic energy of the bulk flow \citep{Lockwood2013}.
+	\item $B_\text{s} v^2$, the power density in the solar wind, containing the kinetic energy of the bulk particle flow \citep{Lockwood2013}.
 	
 	\item $\epsilon$, the epsilon parameter which is based on the solar wind's energy density \citep{Lockwood2013}.
 	\begin{align}
@@ -987,9 +987,7 @@ Many solar wind coupling functions were proposed in order to characterize the in
 \end{itemize*}
 
 % viscous functions
-It was found that coupling functions have the highest correlation, if they consist of a merging term combined with a viscous term \citep{Newell2008}. As the viscous term describes another kind of interaction process, that is, reconnections due to Kelvin-Helmholtz instabilies at the flanks of the magnetosphere, it is independent from the dayside reconnection term. It usually depends on the solar wind plasma quantities velocity and density.\\
-
-\citet{Newell2008} deduced that the best combination is $\text{d}\Phi / \text{d}t$ together with $\sqrt{n} \cdot v^2$, resulting in a correlation coefficient of $r = 0.866$ for \Kp{}.\\
+It was found that coupling functions show the highest correlation, if they consist of a merging term combined with a viscous term \citep{Newell2008}. As the viscous term describes another kind of interaction process, that is, reconnections due to Kelvin-Helmholtz instabilies at the flanks of the magnetosphere, it is independent from the dayside reconnection term. The viscous term accounts for the smaller fraction of variance and usually depends on the solar wind plasma quantities velocity and density. \citet{Newell2008} deduced that one of the best combinations for \Kp{} is the merging term $\text{d}\Phi / \text{d}t$ together with the viscous term $\sqrt{n} \cdot v^2$, resulting in a correlation coefficient of $r = 0.866$.
 
 In order to relate the coupling functions to geomagnetic indices, relations are obtained by empirically fitting both time series. This thesis adds more empirical relations to the \Kp~index -- for the cases when only $v$ or \vBz{} are known.\\
 

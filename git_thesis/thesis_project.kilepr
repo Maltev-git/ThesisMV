@@ -4,7 +4,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.1.3
-lastDocument=chapters/introduction.tex
+lastDocument=chapters/front_matter.tex
 masterDocument=
 name=thesis_project
 pkg_extIsRegExp=false
@@ -94,7 +94,7 @@ Indentation Mode=normal
 Mode=LaTeX
 
 [document-settings,item:chapters/introduction.tex]
-Bookmarks=667,521,300,746,379,1045,48,715,790,867,54,833,912,1245,1060,1024,840,1211,917,253,846,182
+Bookmarks=667,521,300,746,1044,1229,379,48,715,790,867,54,833,1203,1059,912,1023,840,917,253,846,182
 Encoding=UTF-8
 Highlighting=LaTeX
 Indentation Mode=normal
@@ -258,20 +258,20 @@ order=5
 
 [item:chapters/front_matter.tex]
 archive=true
-column=35
+column=26
 encoding=UTF-8
 highlight=LaTeX
-line=331
+line=332
 mode=LaTeX
 open=true
 order=2
 
 [item:chapters/introduction.tex]
 archive=true
-column=271
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=970
+line=1210
 mode=LaTeX
 open=true
 order=3
@@ -427,16 +427,16 @@ JumpList=
 ViMarks=.,81,38,[,81,38,],81,38
 
 [view-settings,view=0,item:chapters/front_matter.tex]
-CursorColumn=35
-CursorLine=331
+CursorColumn=26
+CursorLine=332
 JumpList=
-ViMarks=.,331,34,[,331,15,],331,34
+ViMarks=.,332,25,[,332,15,],332,25
 
 [view-settings,view=0,item:chapters/introduction.tex]
-CursorColumn=271
-CursorLine=970
+CursorColumn=0
+CursorLine=1210
 JumpList=
-ViMarks=.,970,192,[,970,192,],970,192,a,715,0,b,521,0,c,379,0,d,300,0,e,253,0,f,182,0,g,54,0,h,48,0,i,840,0,j,667,0,k,1045,0,l,1060,0,m,1024,0,n,1211,0,o,1245,0,p,867,0,q,912,0,r,833,0,s,790,0,t,746,0,u,846,0,v,917,0
+ViMarks=.,1210,0,[,1210,0,],1210,0,a,715,0,b,521,0,c,379,0,d,300,0,e,253,0,f,182,0,g,54,0,h,48,0,i,840,0,j,667,0,k,1044,0,l,1059,0,m,1023,0,n,1203,0,o,1229,0,p,867,0,q,912,0,r,833,0,s,790,0,t,746,0,u,846,0,v,917,0
 
 [view-settings,view=0,item:chapters/paperMVVB_wrapper.tex]
 CursorColumn=0

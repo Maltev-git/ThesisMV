@@ -26,7 +26,7 @@ These include critical systems, such as ..., whose potential disruptions would n
 The disturbances in the terrestrial magnetic field (geomagnetic storms) are evoked by the field's interaction with streams of particles emitted by the Sun (solar wind).\\
 Variations in some solar wind parameters lead to a direct response in geomagnetic activity.\\
 This work aims to quantify this response for different solar wind forecast situations.\\
-For when magnetic field and velocity information is available and for when only velocity information is available and it is known wether it is ambient solar wind or a CME event.\\
+For when magnetic field and velocity information is available and for when only velocity information is available and it is known whether it is ambient solar wind or a CME event.\\
 
 % PSP sw estimate from Helios
 Open key questions are which mechanisms heat the corona and accelerate the solar wind.\\
@@ -912,7 +912,7 @@ The IAGA adopted the \Kp{}~index in 1954. The \Kp{}~index was maintained in Göt
 
 \section{Geomagnetic activity forecast}
 \label{sec:geomagnetic_activity_forecast}
-The timing and intensity of geomagnetic storms is sought to be forecasted from knowledge about the upcoming solar wind conditions. This means that there are two questions to this task: First, how does the incoming magnetized solar wind plasma result in magnetospheric disturbances? Therefore, as the \Kp~index is the measure for the size of geomagnetic disturbances, a function relating \Kp{} to solar wind parameters is essential. Second, what state will the arriving solar wind be in at the magnetopause? Hence, a forecast using remote observations is required which is able to predict the arrival time and conditions of solar wind streams and CMEs. Both questions are addressed in the following two sections.
+The timing and intensity of geomagnetic storms is sought to be forecasted from knowledge about the upcoming solar wind conditions. This means that there are two questions to this task: First, how does the incoming magnetized solar wind plasma result in magnetospheric disturbances? Therefore, as the \Kp~index is the measure for the size of geomagnetic disturbances, a function relating \Kp{} to solar wind parameters is essential. Second, what state will the arriving solar wind be in at the magnetopause? Hence, a forecast using remote observations is required which is able to predict the arrival time and conditions of solar wind streams and CMEs. Both questions are addressed in the following sections.
 
 
 \subsection{Coupling functions}
@@ -995,21 +995,20 @@ In order to relate the coupling functions to geomagnetic indices, relations are 
 
 
 ----------------\\
-\subsection{\Kp{} forecast}
+\subsection{\Kp{} forecast models}
 
 % Kp now- and forecast
-Kp-flux rate relation\\
 Kp prediction models/methods\\
 Newell's relation is being implemented into forecast procedures \citep{Savani2017}.\\
-
-This paper adds more empirical relations.\\
-In this work I settle and work with \vBz{} as the coupling function, because by the time performing the analyses I was not aware of the other.\\
 
 Kp nowcast with L1 data; f/c see next sec.\\
 
 \citet{Newell2008}\\
 equation for the least variance linear prediction of Kp: $Kp = 0.05 + \num{2.244e-4} d\Phi_\text{MP}/dt + \num{2.844e-6} n^{1/2} v^2$\\
+Kp-flux rate relation\\
 
+This paper adds more empirical relations.\\
+In this work I settle and work with \vBz{} as the coupling function, because by the time performing the analyses I was not aware of the other.\\
 
 
 \subsection{Solar wind forecast to Earth}
@@ -1062,14 +1061,11 @@ Stream forecast:\\
 
 Space weather effects can be directly attributed to CME sub-structures. While the outermost structure (shock) accelerates particles and causes sudden commencement, the interior structures (sheath and flux rope) cause geomagnetic storms if they possess a strong southward component of the magnetic field \citep{Gopalswamy2016}.\\
 
-see Wing Kp model description...\\
-%https://www.swpc.noaa.gov/products/wing-kp
-
 % Bz prediction
 Southward interplanetary field can also occur in the shock sheaths (Gonzalez and Tsurutani 1987; Gosling and McComas 1987), which have been shown to be equally important in causing geomagnetic storms \citep{Tsurutani1988}.\\
 The results of this study indicate the equal importance of both sheath fields or draped fields and driver gas fields for the generation of major geomagnetic storms. Because of the importance of the sheath fields the intensity and duration of geomagnetic storms cannot be predicted by solar observations of active regions alone \citep{Tsurutani1988}.\\
 
-read Savani2015: Predicting the magnetic vectors within coronal mass ejections arriving at Earth: 2. Geomagnetic response\\
+Savani2015: Predicting the magnetic vectors within coronal mass ejections arriving at Earth: 2. Geomagnetic response\\
 
 It makes sense to use the geocentric solar magnetospheric (GSM) coordinate system, which is aligned with the Earth's magnetic dipole axis.\\
 
@@ -1077,27 +1073,28 @@ Savani2015:\\
 The compressed solar wind plasma in between supersonic magnetic flux rope obstacles and their driven shock fronts has not been addressed in this article, even though they have been shown to be significant drivers of magnetospheric storms [Huttunen and Koskinen, 2004].\\
 
 Savani2017:\\
-The correlation coefficient of $d\phi/dt$ with the \Kp~index is $r = 0.76$ [see Newell et al., 2007, Table 3]. A Kp prediction is then generated by the empirical correlation.\\
+The correlation coefficient of $d\phi/dt$ with the \Kp~index is $r = 0.76$ [see Newell et al., 2007, Table 3]. A Kp prediction is then generated by the empirical correlation:
 \begin{align}
 	\Kp(BSS) = 9.5 - e^{A-B(d\phi/dt)}
 \end{align}
 where $A = 2.18, B = 5.20 * 10^5$ , and with the velocity and magnetic field measured in km/s and nT, respectively [Emmons et al., 2013; Mays et al., 2015a].\\
 
+Wing \Kp{} model, 1- and 4"~hour prediction\\
+%https://www.swpc.noaa.gov/products/wing-kp
 
-\subsection{CME forecast}
+\subsection{CME forecast to Earth}
 
 Predicting the magnetic field variations in ICMEs from solar observations is a central subject for space weather forecasting because a long-lasting southward-directed  field is a primary driver of major geomagnetic storms \citep{Zhang2007}.\\
 
-Identification of a flux rope near the Sun makes it easier to predict the expected magnetic configuration at Earth, modified by the interaction with the solar wind on its way to Earth.\\
+Identification of a flux rope near the Sun makes it easier to predict the expected magnetic configuration at Earth, modified by the interaction with the solar wind on its way to Earth. (cite?)\\
 
 Bz prediction:\\
-read Savani2015: Predicting the magnetic vectors within coronal mass ejections arriving at Earth: 1. Initial architecture\\
+Savani2015: Predicting the magnetic vectors within coronal mass ejections arriving at Earth: 1. Initial architecture\\
 
 Savani2015:\\
 Thus, models used for routine CME forecasts by various space weather services do not include magnetic structures within the simulated CMEs [e.g., Zheng et al., 2013; Shiota et al., 2014]. For example, ENLIL models the propagation of CMEs from ~20 solar radii (Rs ) to beyond Earth at 215 Rs and includes the background solar wind magnetic field. However, the CME is simplified to a high-pressure plasma pulse with a size and propagation direction estimated from solar imagery [Zheng et al., 2013]. CME arrival time predictions from these models provide lead times of ~2–3 days, and their accuracy has been well investigated [Taktakishvili et al., 2010; Vršnak et al., 2014; Colaninno et al., 2013]. In contrast, the important magnetic vector information is only revealed when in situ measurements are made by spacecraft upstream of Earth at the first Lagrangian position (L1) ~1 h prior to the CME arriving at Earth, thereby severely limiting the lead time available for reliable, magnetic field-based, storm warnings.\\
 Savani2015:\\
 In this paper, we highlight three key components of a proof of concept developed to improve the prediction of a storm’s severity: (1) the use of the hemispheric helicity rule to provide a robust initial magnetic configuration at the Sun; (2) define a “volume of influence” of the CME, within the heliosphere, for which the Earth’s trajectory can be estimated; and (3) incorporating magnetic vectors from a simplified magnetic flux rope model to create a time series upstream of Earth.\\
-
 
 constant-alpha force-free (CAFF) flux ropes (Burlaga1988)\\
 
@@ -1119,18 +1116,13 @@ An early 3D model for a general CME geometry is the ice-cream cone model, which 
 
 
 % CME kinematics
-Depending on wether CMEs are faster or slower than the surrounding solar wind, they decelerate/accelerate on their way through the heliosphere due to the drag forces. Fast CMEs already decelerate substantially during their first few solar radii \citep{Sachdeva2017}. In case a CME interacts with a preceding CME, they both travel on with an intermediate speed \citep{Manoharan2004,Temmer2012}.
+Depending on whether CMEs are faster or slower than the surrounding solar wind, they decelerate/accelerate on their way through the heliosphere due to solar wind drag forces. Fast CMEs already decelerate substantially during their first few solar radii \citep{Sachdeva2017}. In case a CME interacts with a preceding CME, they both travel on with an intermediate speed \citep{Manoharan2004,Temmer2012}.
 
 % extreme events
 Extreme CME velocities above \SI{2000}{\km\per\s} near the Sun are rare, nevertheless, in some cases speeds around \SI{3000}{\km\per\s} were measured. From the free energy available in active regions, \citet{Gopalswamy2005} concluded that CME speeds cannot be far greater than \SI{3000}{\km\per\s}. This would implicate that CMEs need at least half a day to travel from their source region on the Sun to reach Earth. \citet{Gopalswamy2010} even estimated a maximal limit of free energy active regions can store, which means that CMEs with \SI{4000}{\km\per\s} are not possible. Faster CMEs usually come with higher magnetic field strengths, for example the CME observed by STEREO~A on 23~July 2012 had a shock speed of about \SI{2000}{\km\per\s} at \SI{1}{\au} and its magnetic field magnitude reached values of up to \SI{100}{\nT} \citep{Russell2013}.\\
 
 
-% halo CMEs:
-observed coronal transient: 3d structure, directed at Earth, associated with shock wave; \citep{Howard1982} -> halo CME\\
-
-
-\subsection{Stream forecast}
-
+%Stream forecast
 Cranmer2017:\\
 Complicating our understanding even more is the fact that processes such as turbulence, stream-stream interactions, and Coulomb collisions can make it difficult to unambiguously map a parcel measured at 1 AU back down to its coronal source.\\
 
@@ -1216,17 +1208,6 @@ Tailward-of-the-cusp reconnection has been found to occur only when the IMF has 
 
 look into printed paper collection...\\
 
-reconnection behind the cusps or at the front of the magnetopause (see \autoref{fig:Bothmer1998book_p116_fig4_8_sw})\\
-\begin{figure}[htb]
-	\fcapside[\FBwidth]{
-		\includegraphics[width=0.6\textwidth]{figures_of_others/images/Bothmer2007book_p116_fig4_8_sw.png}
-	}{
-		\caption[\lofimage{figures_of_others/images/Bothmer2007book_p116_fig4_8_sw.png}]
-		{Sketch indicating where reconnection of magnetic field lines on the magnetopause occurs, for the cases of northward (upper panel) and southward (lower panel) IMF. The central dot indicates the position of Earth and the arrowed lines the direction of the magnetic field. The locations of X"~line reconnection are denoted with N and the short arrows indicate the movement of the field lines. Credit: {\citet[p.~116, Fig.~4.8]{Russell2007}}, \textcopyright~Praxis Publishing, reproduced with permission, adapted from {\citet{Dungey1961,Dungey1963}}.}
-		\label{fig:Bothmer1998book_p116_fig4_8_sw}
-	}
-\end{figure}
-
 % sw coupling mechanisms
 \citep[p.~103]{Russell2007}\\
 This half-wave rectification has an important implication on how the reconnection rate must be controlled by the IMF direction and where reconnection occurs.\\
@@ -1240,6 +1221,9 @@ The MC plotted in \autoref{fig:ACE_64s_v7_thesis_CME_2013-6-26_6} created a \Kp{
 
 % vBz
 for overview see chapter~4 in Bothmer2007book\\
+
+% halo CMEs:
+observed coronal transient: 3d structure, directed at Earth, associated with shock wave; \citep{Howard1982} -> halo CME\\
 
 
 

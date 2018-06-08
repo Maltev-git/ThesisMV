@@ -537,6 +537,49 @@ The following results/relations are obtained from the analyses:
 	\item stream forecast: \Kp-velocity relation (average and worst case)
 \end{itemize*}
 
+% prediction performance
+In order to evaluate the models' prediction performances, their forecast errors are calculated. Forecast errors are the difference between the predicted and the actual value.\\
+
+This method is commonly used for forecast models \citep{Wing2005}.\\
+
+model performance, see \autoref{fig:model_performance_b}\\
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\textwidth]{figures_of_mine/chapter2/model_performance_b.pdf}
+	\caption[\lofimage{figures_of_mine/chapter2/model_performance_b.pdf}]
+	{Prediction performance of the three derived empirical \Kp{} relations. These forecast errors are calculated from the same data and time range as the relations themselves. The errorbars denote one positive and negative standard deviation. Perfect predictions are indicated by the gray lines.}
+	\label{fig:model_performance_b}
+\end{figure}
+
+
+The derived empirical functions do not cover the whole \Kp{} range from 0 to 9 within the distributions of observed values. Only the \Kp{} ranges with more than one observed data point are considered for deriving the relations' prediction performances. This excludes the \Kp{} 9 values and in case of the velocity relation for streams also the \Kp{} values 7.7 and above.\\
+
+% vBz performance
+The derived function (\ref{eq:kpvsvbz_dependency_function_negative} + \ref{eq:kpvsvbz_dependency_function_positive}) does only coincide with significant data in the \Kp{} range 1 to 8.7. Especially because the minimum of the \vBz{} function is larger than 0.7~\Kp{}, as can be seen from \autoref{fig:Kp_2dhistogram_VBzgsm_sws_fit_e}. The model performs reasonably well at and below a \Kp{} of 5 with forecast errors smaller than 1~\Kp~unit. Larger \Kp~values are underestimated and deviate up to 1.7~\Kp~units from the predicted values.\\
+
+% v CME performance
+In the case of the velocity relation for CMEs, the derived function (\ref{eq:kpvsv_CME_dependency_function}) does only coincide with significant data in the \Kp{} range 1.3 to 6.3, as can be seen from \autoref{fig:Kp_2dhistogram_V_sws1_fit_e}. The magnitude is overestimated below a \Kp{} of 3 and underestimated above. In the range between a \Kp{} of 1 and 5 the forecast errors are smaller than 1.3~\Kp~units. Above, the error rises up to 4~\Kp~units at a \Kp{} of 8.7.\\
+
+% v stream performance
+For the velocity relation for streams, the derived function (\ref{eq:kpvsv_stream_dependency_function}) does only coincide with significant data in the \Kp{} range 0.3 to 4.3, as can be seen from \autoref{fig:log_offset_fit_function}. The magnitude is overestimated below a \Kp{} of 2 and underestimated above. Throughout the valid range the forecast errors are smaller than 1.3~\Kp~units. Above, the error rises up to 4~\Kp~units at a \Kp{} of 7.3.\\
+
+
+As expected, the model which is based on the \vBz{} relation is more accurate than those based purely on the velocity.\\
+
+
+% true skill score
+true skill scores, see \autoref{fig:true_skill_score}\\
+\begin{figure}
+	\fcapside[\FBwidth]{
+		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/true_skill_score.pdf}
+	}{
+		\caption{True skill scores for the three relations as a function of \Kp{} threshold.}
+		\label{fig:true_skill_score}
+	}
+\end{figure}
+
+
+
 CMEs can be faster than the maximal velocities included in the OMNI data. Instrumental effects (specify...) lead to data gaps during these periods. Yet, CME speeds of up to XX~km/s at \SI{1}{\au} were observed (cite?). According to \autoref{eq:kpvsv_CME_dependency_function}, a CME speed of \SI{2000}{\km\per\s} at L1 would lead on average to a theoretical \Kp{} of 12.2, however, the \Kp{} scale is capped at 9o. A \Kp{} of 9o is reached already at a velocity of \SI{1489}{\km\per\s}, see \autoref{fig:Kp_2dhistogram_V_sws123_fit_f}.
 % 2000 km/s -> 12.17~Kp
 \begin{figure}

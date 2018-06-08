@@ -423,6 +423,49 @@ HGI coordinates; latitude range \SI{-7.25}{\degree}~to~\SI{-7.25}{\degree}\\
 latitude variation (see Schwenn1990, p.~127)\\
 
 
+\section{True skill score}
+\label{sec:true_skill_score}
+
+The true skill score (TSS) is a measure for...\\
+
+skill score table:\\
+
+
+The TSS is calculated as follows:
+\begin{align}
+	TSS &= H - F\\
+		&= (YY*NN - fa*miss)/((YY+miss)*(fa+NN))	\label{eq:true_skill_score}
+\end{align}
+hit rate $H$\\
+false alarm rate $F$\\
+
+
+
+% calculate skill score table
+% generic contingency table
+% hits		false alarms
+% misses	correct nulls
+% 
+% f/c
+% 	Y	N
+% Y	YY	YN
+% N	NY	NN
+% observed
+% 
+% x	y
+% z	w
+% 
+% true skill score
+% TSS=(x*w-y*z)/((x+y)*(z+w))=H-F
+% hit rate H
+% false alarm rate F
+% It does express the hit rate relative to the false alarm rate, and will remain positive as long as H is greater than F.
+% 
+% chance hits
+% ch=((x+y)*(x+z))/(w+x+y+z)
+
+
+
 \section{Lognormal distribution}
 \label{sec:lognormal_distribution}
 

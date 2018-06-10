@@ -382,7 +382,7 @@ Again, I calculate 3-hour extreme values using the minutely OMNI data to profit 
 The CME part and solar wind stream part of the data can be examined separately, filtering the CME related periods using the SWS list. Their frequency distributions show that the CME share is rising in faster solar wind until eventually in the region above about \SI{900}{\km\per\s} there only exist CMEs, see \autoref{fig:histogram_V_b}.
 
 The CME part of the data is correlated with the \Kp~index independently from the remaining solar wind streams, see \autoref{fig:cc_lag_sws_d}. The correlation for CME related data is lower than that for the regular solar wind (all data). Its maximal correlation coefficient with a value of 0.51 is without time shift, see Table~\ref{tab:correlation_coefficients_kpvsv}.
-\begin{table*}
+\begin{table}
 	\caption{Time lags with the highest correlation coefficients for the \Kp{}-velocity relation for the whole OMNI data, for stream data, and for CME data. The values are based on the 3-hour maximum of the minutely high resolution OMNI data from the time period 1981--2016.}
 	\label{tab:correlation_coefficients_kpvsv}
 	\centering
@@ -395,7 +395,7 @@ The CME part of the data is correlated with the \Kp~index independently from the
 		CMEs	&0	&0.511\\
 		\hline
 	\end{tabular}
-\end{table*}
+\end{table}
 % the best lag times are:\\
 % sws: +6 h\\
 % sws1: 0 h\\
@@ -561,7 +561,7 @@ The derived function (\ref{eq:kpvsvbz_dependency_function_negative} + \ref{eq:kp
 In the case of the velocity relation for CMEs, the derived function (\ref{eq:kpvsv_CME_dependency_function}) does only coincide with significant data in the \Kp{} range 1.3 to 6.3, as can be seen from \autoref{fig:Kp_2dhistogram_V_sws1_fit_e}. The magnitude is overestimated below a \Kp{} of 3 and underestimated above. In the range between a \Kp{} of 1 and 5 the forecast errors are smaller than 1.3~\Kp~units. Above, the error rises up to 4~\Kp~units at a \Kp{} of 8.7.\\
 
 % v stream performance
-For the velocity relation for streams, the derived function (\ref{eq:kpvsv_stream_dependency_function}) does only coincide with significant data in the \Kp{} range 0.3 to 4.3, as can be seen from \autoref{fig:log_offset_fit_function}. The magnitude is overestimated below a \Kp{} of 2 and underestimated above. Throughout the valid range the forecast errors are smaller than 1.3~\Kp~units. Above, the error rises up to 4~\Kp~units at a \Kp{} of 7.3.\\
+For the velocity relation for streams, the derived function (\ref{eq:kpvsv_stream_dependency_function}) does only coincide with significant data in the \Kp{} range 0.3 to 4.3, as can be seen from \autoref{fig:Kp_2dhistogram_V_sws23_fit_e}. The magnitude is overestimated below a \Kp{} of 2 and underestimated above. Throughout the valid range the forecast errors are smaller than 1.3~\Kp~units. Above, the error rises up to 4~\Kp~units at a \Kp{} of 7.3.\\
 
 
 As expected, the model which is based on the \vBz{} relation is more accurate than those based purely on the velocity.\\

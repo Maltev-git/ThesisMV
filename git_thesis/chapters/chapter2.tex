@@ -542,13 +542,15 @@ In order to evaluate the models' prediction performances, their forecast errors 
 
 This method is commonly used for forecast models \citep{Wing2005}.\\
 
-model performance, see \autoref{fig:model_performance_b}\\
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=\textwidth]{figures_of_mine/chapter2/model_performance_b.pdf}
-	\caption[\lofimage{figures_of_mine/chapter2/model_performance_b.pdf}]
-	{Prediction performance of the three derived empirical \Kp{} relations. These forecast errors are calculated from the same data and time range as the relations themselves. The errorbars denote one positive and negative standard deviation. Perfect predictions are indicated by the gray lines.}
-	\label{fig:model_performance_b}
+model performance, see \autoref{fig:model_performance_c}\\
+\begin{figure}
+	\fcapside[\FBwidth]{
+		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/model_performance_c.pdf}
+	}{
+		\caption[\lofimage{figures_of_mine/chapter2/model_performance_c.pdf}]
+		{Prediction performance of \Kp{} persistence and the three derived empirical \Kp{} relations. These forecast errors are calculated from the same data and time range as the relations themselves. The errorbars denote one positive and negative standard deviation. Perfect predictions are indicated by the gray lines.}
+		\label{fig:model_performance_c}
+	}
 \end{figure}
 
 
@@ -573,7 +575,7 @@ true skill scores, see \autoref{fig:true_skill_score}\\
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/true_skill_score.pdf}
 	}{
-		\caption{True skill scores for the three relations as a function of \Kp{} threshold.}
+		\caption{True skill scores for the three relations as a function of \Kp{} threshold. The persistence of the previous \Kp{} value is indicated by the black line.}
 		\label{fig:true_skill_score}
 	}
 \end{figure}

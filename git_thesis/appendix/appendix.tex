@@ -424,10 +424,9 @@ latitude variation (see Schwenn1990, p.~127)\\
 
 \section{True skill statistic}
 \label{sec:true_skill_statistic}
+The true skill statistic (TSS) or true skill score is a means for measuring the predictive value of a variable. It was developed by \citet{Hanssen1965} for evaluating different predictors for rain and dry weather conditions. It is also often called the Hanssen-Kuipers skill score or the Hanssen-Kuipers discriminant.
 
-The true skill statistic (TSS) or true skill score is a means for measuring the predictive value of a variable. It was developed by \citet{Hanssen1965} for evaluating different rain predictors. It is also often called the Hanssen-Kuipers skill score or the Hanssen-Kuipers discriminant.
-
-The TSS is based on a contingency table that categorizes forecasted and observed events, see the \autoref{tab:contingency_table}.\\
+As with other skill scores, the TSS is based on a contingency table that categorizes forecasted and observed events, see the \autoref{tab:contingency_table}.
 \begin{table}[htb]
 	\caption{Generic contingency table for categorizing forecasted and observed events. The designations for the event counts are given in parentheses.}
 	\label{tab:contingency_table}
@@ -445,28 +444,34 @@ The TSS is based on a contingency table that categorizes forecasted and observed
 	\end{tabular}
 \end{table}
 
-The TSS is the difference between the hit rate $H = n_\text{H} / (n_\text{H} + n_\text{M})$ (probability of detection) and the false alarm rate $F = n_\text{FA} / (n_\text{FA} + n_\text{CN})$. Thus it is calculated as follows:
+Some important ratios can be derived from this table: The probabilities of detection and of false detection (i.e., the hit rate and the false alarm rate)
 \begin{align}
-	TSS &= H - F\\
+	\mathit{POD} = \frac{n_\text{H}}{n_\text{H} + n_\text{M}}	&	&\text{and}	&	&\mathit{POFD} = \frac{n_\text{FA}}{n_\text{FA} + n_\text{CN}}	\,,
+\end{align}
+as well as the false alarm and detection failure ratios
+\begin{align}
+	\mathit{FAR} = \frac{n_\text{FA}}{n_\text{FA} + n_\text{H}}	&	&\text{and}	&	&\mathit{DFR} = \frac{n_\text{M}}{n_\text{M} + n_\text{N}}	\,.
+\end{align}
+
+The TSS is the difference between the hit rate and the false alarm rate\footnote{False alarm rate -- not to be confused with false alarm ratio.} and thus the TSS is calculated as follows \citep[Eq.~15]{Hanssen1965}:
+\begin{align}
+	\mathit{TSS} &= \mathit{POD} - \mathit{POFD}\\
 		&= \frac{n_\text{H} \cdot n_\text{CN} - n_\text{FA} \cdot n_\text{M}}{\left(n_\text{H}+n_\text{M}\right) (n_\text{FA}+n_\text{CN})}	\,.	\label{eq:true_skill_score}
 \end{align}
-The TSS is in the range from -1 to 1, with 1 representing an ideal prediction, 0 a random prediction, and -1 an ideal negative prediction. The TSS is positive if the hit rate is higher than the false alarm rate.\\
+Its value is in the range from -1 to 1, with 1 representing an ideal prediction, 0 a random prediction, and -1 an ideal negative prediction. The TSS is positive if the hit rate is higher than the false alarm rate.
 
-The TSS is commonly applied to evaluate and compare space weather prediction methods, especially in forecasting the \Kp~index \citep{Detman1999,Wing2005,Savani2017}.\\
+In the case of rare event forecasting, the contingency table is dominated by correct nulls and the TSS approaches the hit rate. \citet{Doswell1990} show that the Heidke skill score is superior in these situations, in that it considers correct null forecasts in a controlled way. They recommend to use the Heidke skill score in preference to TSS for rare event forecasting.
+
+Other often applied skill scores are the threat score, also called critical success index or Gilbert score, and the equitable threat score. However, the TSS is commonly applied to evaluate and compare space weather prediction methods, especially in forecasting the \Kp~index \citep{Detman1999,Wing2005,Savani2017}.\\
 
 
-or the true skill statistic\\
 variables can be tested for their predictive value\\
+forecast verification, forecast quality, the 2x2 verification problem\\
+% Fraction Correct is given by [0,1]\\
 
 % chance hits
 % ch=((x+y)*(x+z))/(w+x+y+z)
 
-% https://www.nssl.noaa.gov/users/brooks/public_html/feda/note/2x2.html
-forecast verification, forecast quality, performance in rare-event situations, the 2x2 verification problem\\
-Threat Score (TS) or the Critical Success Index (CSI) is given by [0,1]\\
-The Hit Rate or Fraction Correct is given by [0,1]\\
-The probability of detection (POD) is given by[0,1]\\
-The false alarm ratio (FAR) is given by [1,0]\\
 
 
 \section{Lognormal distribution}

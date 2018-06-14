@@ -1004,8 +1004,10 @@ As the \Kp~index is the measure for the size of geomagnetic disturbances, many s
 	\begin{align}
 		\Kp = 9.5 - \exp\left(2.18 - \num{5.20e5} \left(\frac{\text{d}\Phi}{\text{d}t}\right)\right)	\,,
 	\end{align}
-	with the velocity measured in \si{\km\per\s} and the magnetic field in \si{\nano\tesla}.\\
+	with the velocity measured in \si{\km\per\s} and the magnetic field in \si{\nano\tesla}.
 	
+	\item The present study adds more empirical \Kp{} relations -- for the cases when only the solar wind velocity $v$ or its electric field \vBz{} are known, see \autoref{chap:chapter2}.
+
 \end{itemize*}
 
 The present study adds more empirical \Kp{} relations -- for the cases when only the solar wind velocity $v$ or its electric field \vBz{} are known.\\
@@ -1023,19 +1025,26 @@ Kp prediction methods\\
 
 List of \Kp{} prediction models (now- and forecast):
 \begin{itemize*}
-	\item The Wing \Kp{} models have 1- and 4"~hour predictions. They are based on neural network models that take as input the solar wind real-time measurements made at L1 and the current \Kp{} nowcast \citep{Wing2005}. The model is provided by the U.S. Air Force Weather Agency and hosted at NOAA/SWPC: \urltext{https://www.swpc.noaa.gov/products/wing-kp}.
+	\item The GFZ~Potsdam calculates a nowcast \Kp~index from the already available magnetic observations and provides it at: \urltext{https://www.gfz-potsdam.de/en/kp-index/}.
+	
+	\item The Wing APL models provide 1- and 4"~hour \Kp{} predictions. They are based on neural network models that take as input the solar wind real-time measurements made at L1 and the current \Kp{} nowcast \citep{Wing2005}. The models are provided by the U.S. Air Force Weather Agency and hosted at NOAA/SWPC: \urltext{https://www.swpc.noaa.gov/products/wing-kp}.
 
-	\item Kp quicklook, GFZ~Potsdam
-	\item Aleksei's f/c model; Ukraine
-	\item Newell's coupling relation is being implemented into forecast procedures \citep{Savani2017}.
+	NOAA/SWPC; see Savani2017\\
+	
+	NASA/SWRC; see Savani2017\\
+	
+	\item The $\text{d}\Phi / \text{d}t$ coupling relation is being implemented into CME forecast procedures \citep{Savani2017}.
+	
 	\item Elliott2013? Kp-v
+	
+	\item Aleksei's f/c model; Ukraine
+	
 	\item \citet{Bala2012}; their \Kp{} forecast website: \urltext{http://mms.rice.edu/realtime/forecast.html}.
 	Improvements in short-term forecasting of geomagnetic activity; Ramkumar Bala and Patricia Reiff 2012\\
 	We have improved our space weather forecasting algorithms to now predict Dst and AE in addition to Kp for up to 6 h of forecast times. These predictions can be accessed in real time at \url{http://mms.rice. edu/realtime/forecast.html}. In addition, in the event of an ongoing or imminent activity, e-mail alerts based on key discriminator levels have been going out to our subscribers since October 2003. The neural network–based algorithms utilize ACE data to generate full 1, 3, and 6 h ahead predictions of these indices from the Boyle index (Boyle1997), an empirical approximation that estimates the Earth's polar cap potential using solar wind parameters. Our models yield correlation coefficients of over 0.88, 0.86, and 0.83 for 1 h predictions of Kp, Dst, and AE, respectively, and 0.86, 0.84, and 0.80 when predicting the same but 3 h ahead.\\
+	
 \end{itemize*}
 
-- NOAA/SWPC; see Savani2017\\
-- NASA/SWRC; see Savani2017\\
 
 
 

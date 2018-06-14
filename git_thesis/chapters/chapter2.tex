@@ -611,14 +611,16 @@ In order to compare their \Kp{} forecast skill metrics with other models, \citet
 Obviously the defined \Kp{} threshold is of little use for the stream velocity relation as by this definition geomagnetic storms cannot be predicted.\\
 
 % comparison
-The E"~field model has a TSS of 0.33 at a \Kp{} of 5 and can be compared with the Wing APL model~3 \citep[Fig.~13]{Wing2005}. The Wing APL model~3 predicts \Kp{} 1~hour in advance and uses the solar wind parameters $n, v_\text{x}, |\vect{B}|$, and $B_\text{z}$ as input sources for a neural network. The additionally considered parameters density and magnetic field strength boost the corresponding TSS to about 0.7.\\
+The E"~field model has a TSS of 0.33 at a \Kp{} of 5, this can be compared with the Wing APL models \citep[Fig.~13]{Wing2005}. The Wing APL model~3 predicts \Kp{} 1~hour in advance and uses the solar wind parameters $n, v_\text{x}, |\vect{B}|$, and $B_\text{z}$ as input sources for a neural network based model. The additionally considered parameters density and magnetic field strength boost the corresponding TSS to about 0.7. The Wing APL model~3 incorporates \Kp{} nowcast values in addition to the solar wind parameters and achieves this way a TSS of about 0.8.\\
 
-
-Costello model (neural network, input: sw): about 0.45\\
-Wing APL model 1 (1 h, neural network, input: Kp nowcast + sw): about 0.8\\
-Wing APL model 2 (4 h, neural network, input: Kp nowcast + sw): about 0.7\\
-Wing APL model 3 (1 h, neural network, input: sw): about 0.7\\
 BSS model for eight CME events has $\mathit{TSS} = 0.34$ \citep[Tab.~3]{Savani2017}\\
+
+
+% Costello model (neural network, input: sw): about 0.45\\
+% Wing APL model 1 (1 h, neural network, input: Kp nowcast + sw): about 0.8\\
+% Wing APL model 2 (4 h, neural network, input: Kp nowcast + sw): about 0.7\\
+% Wing APL model 3 (1 h, neural network, input: sw): about 0.7\\
+% BSS model for eight CME events has $\mathit{TSS} = 0.34$ \citep[Tab.~3]{Savani2017}\\
 
 
 % extreme CME speeds

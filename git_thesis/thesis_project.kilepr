@@ -94,7 +94,7 @@ Indentation Mode=normal
 Mode=LaTeX
 
 [document-settings,item:chapters/introduction.tex]
-Bookmarks=667,521,300,746,379,48,715,790,867,54,833,1092,1240,1095,912,1098,840,917,253,1215,846,182,1071
+Bookmarks=667,521,1224,300,746,1080,379,48,715,790,867,54,833,912,840,1101,1249,917,253,1104,846,182,1107
 Encoding=UTF-8
 Highlighting=LaTeX
 Indentation Mode=normal
@@ -231,7 +231,7 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=615
+line=3
 mode=LaTeX
 open=true
 order=4
@@ -258,10 +258,10 @@ order=5
 
 [item:chapters/front_matter.tex]
 archive=true
-column=28
+column=33
 encoding=UTF-8
 highlight=LaTeX
-line=342
+line=343
 mode=LaTeX
 open=true
 order=2
@@ -271,7 +271,7 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=1356
+line=1047
 mode=LaTeX
 open=true
 order=3
@@ -410,9 +410,9 @@ ViMarks=.,308,184,[,308,184,],308,193
 
 [view-settings,view=0,item:chapters/chapter2.tex]
 CursorColumn=0
-CursorLine=615
+CursorLine=3
 JumpList=
-ViMarks=.,615,0,[,615,0,],615,0
+ViMarks=.,622,0,[,622,0,],622,0
 
 [view-settings,view=0,item:chapters/discussion_summary.tex]
 CursorColumn=0
@@ -427,16 +427,16 @@ JumpList=
 ViMarks=.,81,38,[,81,38,],81,38
 
 [view-settings,view=0,item:chapters/front_matter.tex]
-CursorColumn=28
-CursorLine=342
+CursorColumn=33
+CursorLine=343
 JumpList=
-ViMarks=.,342,24,[,342,15,],342,24
+ViMarks=.,343,32,[,343,15,],343,32
 
 [view-settings,view=0,item:chapters/introduction.tex]
 CursorColumn=0
-CursorLine=1356
+CursorLine=1047
 JumpList=
-ViMarks=.,1025,354,[,1025,354,],1025,354,a,715,0,b,521,0,c,379,0,d,300,0,e,253,0,f,182,0,g,54,0,h,48,0,i,840,0,j,667,0,k,1092,0,l,1095,0,m,1071,0,n,1215,0,o,1240,0,p,867,0,q,912,0,r,833,0,s,790,0,t,746,0,u,846,0,v,917,0,w,1098,0
+ViMarks=.,1045,0,[,1045,0,],1045,0,a,715,0,b,521,0,c,379,0,d,300,0,e,253,0,f,182,0,g,54,0,h,48,0,i,840,0,j,667,0,k,1101,0,l,1104,0,m,1080,0,n,1224,0,o,1249,0,p,867,0,q,912,0,r,833,0,s,790,0,t,746,0,u,846,0,v,917,0,w,1107,0
 
 [view-settings,view=0,item:chapters/paperMVVB_wrapper.tex]
 CursorColumn=0

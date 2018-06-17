@@ -94,7 +94,7 @@ Indentation Mode=normal
 Mode=LaTeX
 
 [document-settings,item:chapters/introduction.tex]
-Bookmarks=519,704,779,300,857,822,379,48,902,830,54,1091,907,1241,1094,836,1097,655,1214,253,735,182,1070
+Bookmarks=704,519,779,300,857,822,379,48,902,830,54,1091,907,1241,1094,836,1097,655,1214,253,735,182,1070
 Encoding=UTF-8
 Highlighting=LaTeX
 Indentation Mode=normal
@@ -258,20 +258,20 @@ order=5
 
 [item:chapters/front_matter.tex]
 archive=true
-column=24
+column=29
 encoding=UTF-8
 highlight=LaTeX
-line=345
+line=346
 mode=LaTeX
 open=true
 order=2
 
 [item:chapters/introduction.tex]
 archive=true
-column=965
+column=9
 encoding=UTF-8
 highlight=LaTeX
-line=824
+line=854
 mode=LaTeX
 open=true
 order=3
@@ -427,16 +427,16 @@ JumpList=
 ViMarks=.,81,38,[,81,38,],81,38
 
 [view-settings,view=0,item:chapters/front_matter.tex]
-CursorColumn=24
-CursorLine=345
+CursorColumn=29
+CursorLine=346
 JumpList=
-ViMarks=.,345,24,[,345,24,],345,24
+ViMarks=.,346,28,[,346,27,],346,28
 
 [view-settings,view=0,item:chapters/introduction.tex]
-CursorColumn=965
-CursorLine=824
+CursorColumn=9
+CursorLine=854
 JumpList=
-ViMarks=.,824,965,[,824,965,],824,965,a,704,0,b,519,0,c,379,0,d,300,0,e,253,0,f,182,0,g,54,0,h,48,0,i,830,0,j,655,0,k,1091,0,l,1094,0,m,1070,0,n,1214,0,o,1241,0,p,857,0,q,902,0,r,822,0,s,779,0,t,735,0,u,836,0,v,907,0,w,1097,0
+ViMarks=.,852,43,[,852,23,],852,43,a,704,0,b,519,0,c,379,0,d,300,0,e,253,0,f,182,0,g,54,0,h,48,0,i,830,0,j,655,0,k,1091,0,l,1094,0,m,1070,0,n,1214,0,o,1241,0,p,857,0,q,902,0,r,822,0,s,779,0,t,735,0,u,836,0,v,907,0,w,1097,0
 
 [view-settings,view=0,item:chapters/paperMVVB_wrapper.tex]
 CursorColumn=0

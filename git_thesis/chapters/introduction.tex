@@ -381,7 +381,7 @@ That way, the magnetic field and its structures are carried out to the terminati
 \section{Solar wind}
 \label{sec:solar_wind}
 %%% sw history
-It is observed that cometary tails lag a few degrees from the radial direction with respect to the Sun, sometimes they also show fluctuations and become kinked. As such behavior could not be explained by interaction with sunlight pressure, eventually \citet{Biermann1951} concluded that cometary ion tails are influenced by a continuous flow of particles from the Sun.	%Kivelson1995, p14+91
+It is observed that cometary ion tails point away from the Sun and lag only a few degrees from the radial direction, sometimes they also show fluctuations and become kinked. As such behavior could not be explained by interaction with sunlight pressure, eventually \citet{Biermann1951} concluded that cometary ion tails are influenced by a continuous flow of particles from the Sun.	%Kivelson1995, p14+91
 \citet{Parker1958} considered the consequences of Biermann's conclusions and built a solar wind model, adopting an expanding isothermal solar atmosphere. Parker also incorporated the implications for the solar magnetic field in his model and hence he laid the theoretical foundations for a continuous supersonic radial outflow of magnetized plasma. Thus, the existence of the solar wind was postulated before the first satellites measured it in~situ in 1959 \citep{Gringauz1960,Neugebauer1966}. Since that time, spacecraft are able to measure the solar wind almost continuously with magnetometer and plasma instruments in~situ (see \autoref{chap:data}). Pronounced solar wind structures, such as CMEs and streamers, become visible with the use of space-based coronagraph imagers. From Earth, the near-Sun outflow geometry of solar wind can be observed only during solar eclipses, see the eclipse photo in \autoref{fig:Tse2008_500_mo1}.
 
 %%% plasma composition, parameter ranges and properties
@@ -402,7 +402,7 @@ Solar wind quantities, such as particle flux densities, mass flux, pressures, an
 % low beta: 0.180\\	%from ranges above
 % high beta: 8.444\\	%from ranges above
 
-However, solar wind is structured by its different sources in the solar corona. It consists of fast continuous streams, slow variable flows, and transient CME events. These different flows have highly variable velocities, which result in compressed or rarefied regions at their interfaces. Additionally, the source region's magnetic field configuration organizes the HMF, transported within the solar wind plasma. Regardless, pronounced magnetic structures embedded in the solar wind, such as field polarity changes or magnetic clouds, still influence the properties of the plasma.
+However, solar wind is structured by its different sources in the solar corona. It consists of fast continuous streams, slow variable flows, and transient CME events. These different flows have highly variable velocities, which result in compressed or rarefied regions at their interfaces. Additionally, the source region's magnetic field configuration organizes the interplanetary magnetic field (IMF), transported within the solar wind plasma. Regardless, pronounced magnetic structures embedded in the solar wind, such as field polarity changes or magnetic clouds, still influence the properties of the plasma.
 
 This multitude of structures is apparent in the two months -- beginning in May~2013 -- of in-situ measured solar wind, which I present as an example period in \autoref{fig:ACE_64s_v7_thesis_CIRs_2013-5-1_65_plot}.
 \begin{figure}[htb]
@@ -424,18 +424,27 @@ Some general solar wind tendencies can be seen from this plot: The temperature o
 It is observed at \SI{1}{\au} that the continuous solar wind comes in streams roughly focused at two major velocity ranges \citep{Neugebauer1966,Schwenn1983}, slow and fast streams with \SIrange{250}{450}{\km\per\s} and \SIrange{450}{800}{\km\per\s} respectively. Both types possess differences in their typical characteristics and ion compositions. Apart from its higher speeds, fast solar wind has most prominently lower proton densities ($\sim$\,\SI{3}{\per\cm\cubed}) and higher temperatures ($\sim$\,\SI{2e5}{\K}) than the slow solar wind, which has higher densities ($\sim$\,\SI{10}{\per\cm\cubed}) and lower temperatures ($\sim$\,\SI{4e4}{\K}) \citep{Schwenn1990}. The fast solar wind has a nature of coming in steady high-speed streams (HSSs) with a unique magnetic field polarity, whereas slow solar wind is much more variable in all its properties except its velocity \citep{Bame1977}. HSSs are further overlaid with Alfvén waves, which modulate the stream velocity with typical periods of \SIrange{15}{60}{\minute}.
 
 %sources of fast wind
-First soft X-ray observations of the corona, made during sounding rocket flights in the early 1970s, showed clearly that the fast solar wind emerges from extended areas of reduced X-ray emission, subsequently called coronal holes (CHs) \citep{Krieger1973,Hundhausen1977}. The magnetic field polarities found in CHs are associated with the magnetic field directions observed in HSSs, as seen in \autoref{fig:Hundhausen1977_fig10_cut}.
+First soft X-ray observations of the corona, made during sounding rocket flights in the early 1970s, showed clearly that the fast solar wind emerges from extended areas of reduced X-ray emission, subsequently called coronal holes (CHs) \citep{Krieger1973,Hundhausen1977}. A small equatorial CH, located near the center of the solar disk, is shown in the SDO/AIA image taken on 29~May 2013, see \autoref{fig:20130529_000119_1024_0193}. This particular CH is responsible for the HSS observed at L1 on 1--5~June 2013, visible in the previous solar wind plot in \autoref{fig:ACE_64s_v7_thesis_CIRs_2013-5-1_65_plot}.
 \begin{figure}[htb]
-	\fcapside[\FBwidth]{
-		\includegraphics[width=0.5\textwidth]{figures_of_others/images/Hundhausen1977_fig10_cut.png}
-	}{
-		\caption[\lofimage{figures_of_others/images/Hundhausen1977_fig10_cut.png}]
-		{Solar wind velocity with respect to its estimated source longitude (top) and coronal brightness contour map at \SI{0.5}{\Rs} above the photosphere (bottom) for the Carrington rotation 1616. The velocity is based on IMP spacecraft data, back-extrapolated to \SI{20}{\Rs}. Brightness values below a fixed threshold are shaded corresponding to the magnetic field polarity ($+$/$-$) of the underlying photosphere. The map is based on observations from the K-coronameter at the Manua~Loa Observatory. Credit: {\citet[Fig.~10]{Hundhausen1977}}, \textcopyright~Colorado Associated University Press, reproduced with permission.}
-		\label{fig:Hundhausen1977_fig10_cut}
-	}
-	\addtocontents{lof}{\smallskip\protect\center additional permission for publishing pending...\medskip}
+	\begin{floatrow}
+		\ffigbox{
+			\includegraphics[width=0.45\textwidth]{figures_of_others/images/20130529_000119_1024_0193.jpg}
+		}{
+			\caption[\lofimage{figures_of_others/images/20130529_000119_1024_0193.jpg}]
+			{Image of the solar corona during solar cycle maximum from 29~May 2013, seen in a wavelength of \SI{193}{\angstrom}. The dark area near the center of the solar disk is an equatorial CH, typical for high solar activity conditions. Credit: NASA/SDO and the AIA, EVE and HMI science teams.}
+			\label{fig:20130529_000119_1024_0193}
+		}
+		\ffigbox{
+			\includegraphics[width=0.83\Xhsize]{figures_of_others/images/Hundhausen1977_fig10_cut.png}
+		}{
+			\caption[\lofimage{figures_of_others/images/Hundhausen1977_fig10_cut.png}]
+			{Solar wind velocity with respect to its estimated source longitude (top) and coronal brightness contour map at \SI{0.5}{\Rs} above the photosphere (bottom) for the Carrington rotation 1616. The velocity is based on IMP spacecraft data, back-extrapolated to \SI{20}{\Rs}. Brightness values below a fixed threshold are shaded corresponding to the magnetic field polarity ($+$/$-$) of the underlying photosphere. The map is based on observations from the K-coronameter at the Manua~Loa Observatory. Credit: {\citet[Fig.~10]{Hundhausen1977}}, \textcopyright~Colorado Associated University Press, reproduced with permission.}
+			\label{fig:Hundhausen1977_fig10_cut}
+		}
+		\addtocontents{lof}{\smallskip\protect\center additional permission for publishing pending...\medskip}
+	\end{floatrow}
 \end{figure}
-In coronal regions with closed magnetic field lines, the plasma is trapped, though in CHs it can escape, following the open magnetic field lines outwards into space. Wave-particle interactions heat and accelerate the ions in CHs, likely leading to the emission of the fast solar wind \citep{Hollweg2002}. Superradial expansion of the magnetic field lines in the corona has an influence on the wind speed -- actually the expansion factor is anticorrelated with the final wind velocity \citep{Wang1990}. As the field expansion is larger near the border of CHs, faster wind emerges from the mid regions of CHs, forming into HSSs. However, there are indications that the slow and fast solar wind are not only generated at different sources but from distinct mechanisms \citep{McGregor2011b}.
+The magnetic field polarities found in CHs are associated with the magnetic field directions observed in HSSs, as seen in \autoref{fig:Hundhausen1977_fig10_cut}. In coronal regions with closed magnetic field lines, the plasma is trapped, though in CHs it can escape, following the open magnetic field lines outwards into space. Wave-particle interactions heat and accelerate the ions in CHs, likely leading to the emission of the fast solar wind \citep{Hollweg2002}. Superradial expansion of the magnetic field lines in the corona has an influence on the wind speed -- actually the expansion factor is anticorrelated with the final wind velocity \citep{Wang1990}. As the field expansion is larger near the border of CHs, faster wind emerges from the mid regions of CHs, forming into HSSs. However, there are indications that the slow and fast solar wind are not only generated at different sources but from distinct mechanisms \citep{McGregor2011b}.
 
 %sources of slow solar wind
 The high variability in the slow solar wind points to the existence of different types of slow wind flows, originating from separate coronal locations and mechanisms \citep{Schwenn1983}. It is still under debate if the variability is produced by the formation mechanism of the slow solar wind or if the variability is caused during the acceleration/propagation phase \citep{Sanchez-Diaz2016}. Still, at least a part of its variability can be attributed to the interactions between slow and fast solar wind, which result in a general reduction in velocity differences and thus let solar winds of different speeds (having different properties as well) converge to a common intermediate speed regime in the range \SIrange{400}{500}{\km\per\s} \citep{McGregor2011a,Sanchez-Diaz2016}. Studies using remote white-light tracing of coronal material and in-situ measurements of solar wind suggest that multiple sources of slow solar wind flows exist \citep{Wang2000,Kilpua2016}. To the best of my knowledge, the generally considered sources are listed in the following:
@@ -445,7 +454,7 @@ The high variability in the slow solar wind points to the existence of different
 	\item Helmet/pseudo-streamers in active regions, where transient plasma blobs are released from the cusps of closed field loops \citep{Wang1998,Wang2000}. This slow and dense material is associated with the heliospheric plasma sheet belt.
 	\item Edges of active regions, which have hot plasma outflows with a single mangetic polarity \citep{Kojima1999}.
 	\item Jets originating from coronal bright points might contribute to the slow solar wind \citep{Subramanian2010}.
-	\item Slow unidentified CMEs may contribute to slow wind observations as well.
+	\item Slow unidentified CMEs can contribute to slow wind observations as well, as noted by \citet{Wang2000}.
 \end{itemize*}
 % Kilpua2016 generally suggested sources:\\
 % - CH boundaries, the plasma is slow due to superradial expansion of open field lines\\
@@ -541,17 +550,18 @@ They are emitted in the low corona and are drifting to lower frequencies over ti
 % type~III radio burst (spikes): parallel to flares; track electron beams through decreasing sw plasma density along Parker spiral; frequency scales with distance\\
 % type~IV radio burst: broadband quasi–continuum features associated with the decay phase of solar flares. They are attributed to electrons trapped in closed field lines in the post–flare arcades\\
 
-CMEs were detected in the white-light observations of the K"~corona made by the first space-based coronagraphs on board the OSO~7 satellite \citep{Tousey1973} and the Skylab space station \citep{MacQueen1974}. These observations show the steady outflow of solar wind, broken by intermittent ejections of coronal plasma. Subsequently, the kinematic properties of CMEs were identified from the white-light images \citep{MacQueen1980}. Now, coronagraphs observe the corona and hence CMEs continuously from the first Lagrange point (L1) in front of Earth with the SOHO spacecraft and from changing equatorial perspectives with the STEREO~Ahead (A) and Behind (B) spacecraft. The image of the corona from 23~September 2012, made by the SECCHI/COR2 coronagraph onboard STEREO~A, shows a CME to the top right, see \autoref{fig:CME_COR2_0120923_182400_dbc2A}.
+CMEs were detected in the white-light observations of the K"~corona made by the first space-based coronagraphs on board the OSO~7 satellite \citep{Tousey1973} and the Skylab space station \citep{MacQueen1974}. These observations show the steady outflow of solar wind, broken by intermittent ejections of coronal plasma. Subsequently, the kinematic properties of CMEs were identified from the white-light images \citep{MacQueen1980}. Now, coronagraphs observe the corona and hence CMEs continuously from the first Lagrange point (L1) in front of Earth with the SOHO spacecraft and from changing equatorial perspectives with the STEREO~Ahead (A) and Behind (B) spacecraft. The image of the corona from 26~February 2000, made by the LASCO/C3 coronagraph onboard SOHO, shows such a CME with a detailed three-part structure, see \autoref{fig:20000226_lightbulb_CME_c3full}. This typical structure consists of a bright frontal loop, trailed by a dark cavity with a bright core.
 \begin{figure}[htb]
 	\begin{floatrow}
 		\ffigbox{
-			\includegraphics[width=0.45\textwidth]{figures_of_others/images/CME_COR2_0120923_182400_dbc2A.png}
+			\includegraphics[width=0.45\textwidth]{figures_of_others/images/20000226_lightbulb_CME_c3full.png}
 		}{
-			\caption[\lofimage{figures_of_others/images/CME_COR2_0120923_182400_dbc2A.png}Courtesy of \href{https://stereo.gsfc.nasa.gov/gallery/copyright.shtml}{STEREO/COR2 consortium (NASA)}.]
-			{Image of the solar corona out to \SI{15}{\Rs} from 23~September 2012 taken by the SECCHI/COR2 coronagraph onboard the STEREO~A spacecraft. The solar disk is covered by the occulter disk and its position is indicated by the white circle. The bright blob to the top right is the CME; the smooth elongated radial lines are solar wind streamers. Courtesy of \href{https://stereo.gsfc.nasa.gov/gallery/copyright.shtml}{STEREO/COR2 consortium (NASA)}.}
-			\label{fig:CME_COR2_0120923_182400_dbc2A}
+			\caption[\lofimage{figures_of_others/images/20000226_lightbulb_CME_c3full.png}]
+			{Image of the solar corona out to \SI{30}{\Rs} from 26~February 2000 taken by the LASCO/C3 coronagraph onboard the SOHO spacecraft. The solar disk is covered by the occulter disk and its position is indicated by the white circle. The bright blob at the top is a CME with a detailed three-part structure; the smooth elongated radial lines are solar wind streamers. Courtesy of SOHO/LASCO consortium. SOHO is a project of international cooperation between ESA and NASA.}
+			\label{fig:20000226_lightbulb_CME_c3full}
 		}
-% https://stereo.gsfc.nasa.gov/gallery/copyright.shtml
+% https://sohowww.nascom.nasa.gov/hotshots/2000_02_26/
+% https://sohowww.nascom.nasa.gov/data/summary/copyright.html
 		\ffigbox{
 			\includegraphics[width=0.3\textwidth]{figures_of_others/images/Marubashi2007_fig1.png}
 		}{
@@ -601,16 +611,17 @@ The CME described before is indeed coming from the northern hemisphere, as can b
 			\includegraphics[width=0.45\textwidth]{figures_of_others/images/STEREO_A_COR2_20130624_022400_dbc2A.png}
 		}{
 			\caption[\lofimage{figures_of_others/images/STEREO_A_COR2_20130624_022400_dbc2A.png}Courtesy of \href{https://stereo.gsfc.nasa.gov/gallery/copyright.shtml}{STEREO/COR2 consortium (NASA)}.]
-			{Image of the solar corona from 24~June 2013 made with the same coronagraph as the image in \autoref{fig:CME_COR2_0120923_182400_dbc2A}. The CME is the extended structure to the upper left. Courtesy of \href{https://stereo.gsfc.nasa.gov/gallery/copyright.shtml}{STEREO/COR2 consortium (NASA)}.}
+			{Image of the solar corona out to \SI{15}{\Rs} from 24~June 2013 taken by the SECCHI/COR2 coronagraph onboard the STEREO~A spacecraft. The solar disk is covered by the occulter disk and its position is indicated by the white circle. The CME is the extended structure to the upper left; the smooth elongated radial lines are solar wind streamers. Courtesy of \href{https://stereo.gsfc.nasa.gov/gallery/copyright.shtml}{STEREO/COR2 consortium (NASA)}.}
 			\label{fig:STEREO_A_COR2_20130624_022400_dbc2A}
 		}
 % https://secchi.nrl.navy.mil/sccimages/
 % https://stereo-ssc.nascom.nasa.gov/browse/2013/06/24/index.shtml
+% https://stereo.gsfc.nasa.gov/gallery/copyright.shtml
 		\ffigbox{
 			\includegraphics[width=\Xhsize]{figures_of_others/images/STEREO_positions_w_269707595.png}
 		}{
 			\caption[\lofimage{figures_of_others/images/STEREO_positions_w_269707595.png}]
-			{Positions of the STEREO~A and~B spacecraft for 24~June 2013 02:24~UT. This figure is made with the online \href{https://stereo-ssc.nascom.nasa.gov/cgi-bin/make_where_gif}{STEREO Orbit Tool} at the STEREO Science Center website\protect\footnotemark.}
+			{Positions of the STEREO~A and~B spacecraft relative to Sun and Earth for 24~June 2013 02:24~UT. This figure is made with the online \href{https://stereo-ssc.nascom.nasa.gov/cgi-bin/make_where_gif}{STEREO Orbit Tool} at the STEREO Science Center website\protect\footnotemark.}
 			\label{fig:STEREO_positions_w_269707595}
 		}
 % https://stereo-ssc.nascom.nasa.gov/cgi-bin/make_where_gif
@@ -627,7 +638,7 @@ Relating CME white-light images to observations of magnetic neutral lines on the
 	{White-light CME projection scheme for frontside events, showing the case for each quadrant of the solar disk. (a)~Schema showing the expected white-light appearance of CMEs and the orientation of the underlying magnetic neutral lines. (b)~White-light images of CME example events, made with the LASCO C2 coronagraph on the SOHO spacecraft. (c)~Details (prominences and post-eruptive arcades) of the source regions related to the CMEs shown in panel~(b). Note that for events originating from the backside, panel~(a) has to be mirrored vertically. Credit: {\citet[Fig.~15]{Cremades2004}}, \textcopyright~ESO, reprinted with permission.}
 	\label{fig:Cremades2004_fig15}
 \end{figure}
-For the solar backside, the neutral lines are reversed and according to the scheme so are the CME orientations -- thus the broad CME appearing behind the solar limb seen in \autoref{fig:CME_COR2_0120923_182400_dbc2A} matches this scheme. The scheme can effectively be applied for CMEs with source regions located less than \SI{50}{\degree} from the solar equator \citep{Webb2012}.
+For the solar backside, the neutral lines are reversed and according to the scheme so are the CME orientations -- thus the broad CME appearing behind the solar limb seen in \autoref{fig:STEREO_A_COR2_20130624_022400_dbc2A} matches this scheme. The scheme can effectively be applied for CMEs with source regions located less than \SI{50}{\degree} from the solar equator \citep{Webb2012}.
 
 This white-light CME projection scheme as well as the BSS for MCs are based on the notion that the orientation of flux ropes propagating outwards generally stays aligned with the neutral polarity inversion line on the solar surface where the filament erupted \citep{Marubashi1997,Bothmer1998}. In fact, it is shown that flux ropes are not likely to rotate significantly after their initiation but commonly maintain the orientation of their main axis parallel to the magnetic neutral line even in interplanetary space \citep{Marubashi2015}. However, during and shortly after their eruption, CMEs are frequently observed to be deflected to other directions by the surrounding coronal magnetic field structure \citep{Sterling2011}.
 

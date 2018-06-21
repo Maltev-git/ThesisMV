@@ -949,14 +949,14 @@ Many coupling functions were proposed in order to characterize the solar wind's 
 		\end{cases}	\label{eq:half_wave_rectifier}
 	\end{align}
 	
-	\item $|\vect{B}| \sin^n\left(\theta_c / 2\right)$, a term depending on the IMF clock angle $\theta_c$ and in shape similar to the half-wave rectifier. However, it is continuous around zero and therefore often preferred over $B_\text{s}$ \citep{Lockwood2013}. The IMF clock angle is defined as $\theta_c = \tan^{-1}\left(B_\text{y} / B_\text{z}\right)$ and the exponent is often chosen as $n = 2$ or $n = 4$, see also \autoref{fig:coupling_angle_d}. The term stands for the fraction of IMF field lines which merge with the magnetopause, that is, the merging probability of those IMF field lines which impact the magnetopause.
+	\item $|\vect{B}| \sin^n\left(\theta_c / 2\right)$, a term depending on the IMF clock angle $\theta_c$ and in shape similar to the half-wave rectifier. However, it is continuous around zero and therefore often preferred over $B_\text{s}$ \citep{Lockwood2013}. The IMF clock angle is defined as $\theta_c = \tan^{-1}\left(B_\text{y} / B_\text{z}\right)$ and the exponent is often chosen as $n = 2$ or $n = 4$, see also \autoref{fig:coupling_angle_e}. The term stands for the fraction of IMF field lines which merge with the magnetopause, that is, the merging probability of those IMF field lines which impact the magnetopause.
 	\begin{figure}[htb]
 		\fcapside[\FBwidth]{
-			\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/coupling_angle_d.pdf}
+			\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/coupling_angle_e.pdf}
 		}{
-			\caption[\lofimage{figures_of_mine/gnuplots/coupling_angle_d.png}]
-			{IMF clock angle ($\theta_c$) dependency of the coupling functions' relative amplitudes. The different coupling functions include the IMF clock angle factor by \citet{Newell2007} and the half-wave rectifier (black). I added the GSM coordinate directions in the lower left for orientation. ...add Boyle et al...}
-			\label{fig:coupling_angle_d}
+			\caption[\lofimage{figures_of_mine/gnuplots/coupling_angle_e.png}]
+			{IMF clock angle ($\theta_c$) dependency of the coupling functions' relative amplitudes. The different functions include the IMF clock angle factor by \citet{Newell2007} and the half-wave rectifier (black). I added the GSM coordinate directions in the lower left for orientation.}
+			\label{fig:coupling_angle_e}
 		}
 	\end{figure}
 	
@@ -1254,9 +1254,9 @@ NASA's Space Weather Research Center (SWRC); the derived Kp estimates using real
 \chapter{Instrumentation and data description}
 \label{chap:data}
 %COFI -- chapter outline and flow integration
-For analyzing the solar wind and related areas on the Sun, there exist remote instruments, such as solar imagers and coronagraphs, and in-situ instruments, such as magnetometers and plasma detectors. In this chapter the basic principles of the latter are described, because the analyses performed in this thesis are based entirely on in-situ measurements -- except for the sunspot time series.
+For analyzing the solar wind and related areas on the Sun, there exist remote instruments, such as solar imagers and coronagraphs, and in-situ instruments, such as magnetometers and plasma detectors. The basic principles of the latter are described in this chapter, because the analyses performed in this thesis are based entirely on in-situ measurements -- except of course the sunspot time series.
 
-Different kind of data, collected from observatories at various locations, are used for the investigations performed in this thesis. In the following sections, I describe the data sets of the magnetospheric disturbance index \Kp{} and of the solar activity indicator sunspot number (SSN). Further, the solar wind in-situ data sets are described: the near-Earth OMNI data collections consisting of minutely and hourly data, that is, low resolution OMNI (LRO) and high resolution OMNI (HRO), and the data obtained from the Helios~1 and Helios~2 spacecraft in the 1970s. I prepared a time coverage overview of these data sets in relation to the solar activity cycles in \autoref{fig:timeline_SSN_with_data_and_sc}.\\
+Different kind of data, collected from observatories at various locations, are used for the investigations performed in this thesis. In the following sections I also describe these data sets: the magnetospheric disturbance index \Kp{}, the solar activity indicator sunspot number (SSN), and the solar wind in-situ data sets. The solar wind in-situ data sets are the near-Earth OMNI data collections consisting of minutely and hourly data, that is, low resolution OMNI (LRO) and high resolution OMNI (HRO), and the data obtained from the Helios~1 and Helios~2 spacecraft in the 1970s. I prepared a time coverage overview of all data sets in relation to the solar activity cycles in \autoref{fig:timeline_SSN_with_data_and_sc}.\\
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{figures_of_mine/gnuplots/timeline_SSN_with_data_and_sc.pdf}
@@ -1265,7 +1265,7 @@ Different kind of data, collected from observatories at various locations, are u
 	\label{fig:timeline_SSN_with_data_and_sc}
 	\addtocontents{lof}{\smallskip\protect\center I created the figure myself.\medskip}
 \end{figure}
-% 
+
 % Spacecraft / data sets\\
 % Positions:\\
 % Earth:\\
@@ -1285,29 +1285,53 @@ Different kind of data, collected from observatories at various locations, are u
 
 
 \section{Magnetometer}
-%\label{sec:magnetometer}
+\label{sec:magnetometer}
 
 Spacecraft nowadays carry two different magnetometer types, one for measuring the magnetic field direction and its strength and the other for observing the magnetic flux and detecting waves.\\
 
-A flux-gate magnetometer consists of two coils around a core -- one coil with alternating current, wich is compared with the induced current signal from the other. Without external magnetic field both patterns match. The core is easier magnetized in direction of an existing external magnetic field, in which case the patterns differ. It measures...\\
+% fluxgate magnetometer
+A fluxgate magnetometer consists of two coils around a core -- one coil with alternating current. This current is then compared with the current signal induced into the other coil. Without an external magnetic field both current patterns match. However, the core is easier magnetized in direction of an existing external magnetic field, in this case a differing pattern is detected. Modern fluxgate magnetometers are designed in a ring core geometry with advanced magnetic core materials, such as molybdenum-permalloy.\\
+% https://helios.gsfc.nasa.gov/ace/mag.html
+
+% search coil magnetometer
 In a search coil magnetometer one coil is placed around a core; measures plasma waves -- where?\\
+measures magnetic field fluctuations and waves...\\
+measures low frequency magnetic field fluctuations and waves in three directions (tri-axial)\\
 
-Because these magnetometer types are directional, they often are placed in two sets of triaxial configurations, attached on booms to minimize the influence of the spacecraft's own magnetic field.\\
-L-> which is generated by surface charges?/electrons?/ionization?/the instruments?\\
-%https://en.wikipedia.org/wiki/Spacecraft_magnetometer
+% http://themis.ssl.berkeley.edu/scm_faqs.shtml
+% https://en.wikipedia.org/wiki/Spacecraft_magnetometer
 
-figures and references...!\\
+% https://www.nasa.gov/mission_pages/themis/spacecraft/SCM.html
+``Search coil magnetometers are basically copper coils wound around a high magnetic permeability core. This magnetic core concentrates magnetic field lines - and the magnetic fluctuations they carry - inside the coils. The fluctuations induce currents and electric voltage drops inside the core that can be measured and recorded by the instrument's electronics circuits.''\\
 
-Ground based magnetometers measure the local magnetic field of the Earth. They already exist since...\\
+search coil magnetometer, see \autoref{fig:searchcoil_magnetometer}\\
+\begin{figure}[htb]
+	\fcapside[\FBwidth]{
+		\includegraphics[width=0.5\textwidth]{figures_of_others/images/searchcoil_magnetometer.jpg}
+	}{
+		\caption[\lofimage{figures_of_others/images/searchcoil_magnetometer.jpg}]
+		{Engineering test unit of the search coil magnetometers on the THEMIS satellites launched in 2007. Credit: \href{https://www.nasa.gov/mission_pages/themis/spacecraft/SCM.html}{NASA}, 2007.}
+		\label{fig:searchcoil_magnetometer}
+	}
+\end{figure}
+% https://www.nasa.gov/mission_pages/themis/spacecraft/SCM.html
+% https://www.nasa.gov/sites/default/files/thumbnails/image/168038main_scm_etu_1_lg.jpg
+
+These magnetometer types are directional, therefore they are usually placed in a set of triaxial configuration. In order to minimize the influence of the spacecraft's own magnetic field, the magnetometers are usually placed away from the spacecraft's body, attached on the ends of solar panels or booms -- often actually two redundant sets at opposite sides. In case of the ACE spacecraft two triaxial magnetometers are mounted \SI{4.2}{\meter} from its center \citep{Smith1998}.\\
+
+The ACE/MAG magnetometers have a resolution of a few measurements per second and an accuracy of about \SI{0.1}{\nano\tesla} \citep{Smith1998}.\\
+
+Ground based magnetometers measure the local magnetic field of the Earth. They have to be housed in controlled temperature environment and away from magnetic interferences.\\
+
+
 
 examples:\\
-ACE/MAG -- flux-gate magnetometer\\
+ACE/MAG -- fluxgate magnetometer; figure of box??\\
 
-%https://en.wikipedia.org/wiki/Spacecraft_magnetometer
 
 
 \section{Plasma detector}
-%\label{sec:plasma_detector}
+\label{sec:plasma_detector}
 
 several spectrometers with different energy ranges\\
 

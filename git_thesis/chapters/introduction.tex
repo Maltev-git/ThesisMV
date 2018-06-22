@@ -923,14 +923,14 @@ In order to quantify geomagnetic activity, solar wind coupling functions that co
 % merging and viscous functions
 The major interaction mechanisms between solar wind and magnetosphere are magnetic reconnection and viscous turbulence, as mentioned previously in \autoref{sec:solar_wind_coupling_mechanisms}. \citet{Newell2008} found recently that coupling functions show the highest correlation when they consist of a merging term combined with a viscous term.
 % merging functions
-The rate magnetic flux is opened at the magnetopause (i.e., merges with the IMF) generally depends on the following independent factors \citep{Newell2007}:
+The rate magnetic flux merges with the IMF (i.e., is opened at the magnetopause) generally depends on the following independent factors \citep{Newell2007}:
 \begin{itemize*}
 	\item The rate magnetic flux is transported towards the magnetopause, represented by the solar wind velocity.
 	\item The amount of opened flux, which scales with the IMF strength.
 	\item The merging probability, which depends on the IMF clock angle.
 	\item The extent of the reconnection region, represented by the length of the X"~line on the magnetopause.
 \end{itemize*}
-As the viscous term describes another kind of interaction process, that is, reconnections due to Kelvin-Helm\-holtz instabilies at the flanks of the magnetosphere, it is independent from the dayside reconnection term. The viscous term accounts for the smaller fraction of variance and usually depends on the solar wind plasma quantities velocity and density.
+As the viscous term describes another kind of interaction process, that is, reconnections due to Kelvin-Helm\-holtz instabilies at the flanks of the magnetosphere, it is independent from the dayside reconnection term. The viscous term accounts for the smaller fraction of variance and usually depends on the solar wind plasma quantities velocity and density \citep{Newell2008}.
 
 Many coupling functions were proposed in order to characterize the solar wind's interaction processes with the magnetosphere. They consist of functional terms of differing complexity, mostly including and approximating some of the factors listed above. There exist a lot of coupling functions based on combinations of the same physical quantities, often including the IMF direction \citep{Newell2007,Lockwood2013}. Here I list and discuss a few of the most used coupling factors and functions:
 \begin{itemize*}
@@ -949,7 +949,7 @@ Many coupling functions were proposed in order to characterize the solar wind's 
 		\end{cases}	\label{eq:half_wave_rectifier}
 	\end{align}
 	
-	\item $|\vect{B}| \sin^n\left(\theta_c / 2\right)$, a term depending on the IMF clock angle $\theta_c$ and in shape similar to the half-wave rectifier. However, it is continuous around zero and therefore often preferred over $B_\text{s}$ \citep{Lockwood2013}. The IMF clock angle is defined as $\theta_c = \tan^{-1}\left(B_\text{y} / B_\text{z}\right)$ and the exponent is often chosen as $n = 2$ or $n = 4$, see also \autoref{fig:coupling_angle_e}. The term stands for the fraction of IMF field lines which merge with the magnetopause, that is, the merging probability of those IMF field lines which impact the magnetopause.
+	\item $|\vect{B}| \sin^n\left(\theta_c / 2\right)$, a term depending on the IMF clock angle $\theta_c$ and in shape similar to the half-wave rectifier. However, it is continuous around zero and therefore often preferred over $B_\text{s}$ \citep{Lockwood2013}. The IMF clock angle is defined as $\theta_c = \tan^{-1}\left(B_\text{y} / B_\text{z}\right)$ and the exponent $n$ is often chosen to be between 2 and 4, see also \autoref{fig:coupling_angle_e}. The term stands for the fraction of IMF field lines which merge with the magnetopause, that is, the merging probability of those IMF field lines which impact the magnetopause.
 	\begin{figure}[htb]
 		\fcapside[\FBwidth]{
 			\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/coupling_angle_e.pdf}
@@ -979,11 +979,11 @@ Many coupling functions were proposed in order to characterize the solar wind's 
 	\end{align}
 	The coupling exponent $\alpha$ depends on the coupling to the solar wind Alfvén Mach number and has a value around 0.4.
 
-	\item $\Phi_\text{A}$, the Boyle index, which represents the steady state asymptotic polar cap potential drop measured in \si{\kilo\volt} \citep{Boyle1997}:
+	\item $\Phi_\text{A}$, the Boyle index, which represents the steady state asymptotic polar cap potential drop \citep{Boyle1997}:
 	\begin{align}
 		\Phi_\text{A} = \num{1.01e-4} v^2 + 11.7\,|\vect{B}| \sin^{3}\left(\frac{\theta_c}{2}\right)	\,,
 	\end{align}
-	with the velovity in \si{\km\per\s} and the magnetic field in \si{\nano\tesla}. \citet{Boyle1997} note that the viscous $v^2$ dependence is better represented by an additional term rather than a modulation of the merging term.
+	measured in \si{\kilo\volt} with the velovity in \si{\km\per\s} and the magnetic field in \si{\nano\tesla}. \citet{Boyle1997} note that the viscous $v^2$ dependence is better represented by an additional term rather than being a modulation of the latter merging term.
 	
 	\item $\text{d}\Phi / \text{d}t$, a relation derived by \citet{Newell2007}. It represents the rate magnetic flux is opened at the magnetopause:
 	\begin{align}
@@ -1023,7 +1023,7 @@ A few of the currently existing \Kp{} prediction models are listed below, includ
 	\item NOAA's Space Weather Prediction Center (SWPC) provides an estimated \Kp~index using ground-based real-time magnetometer measurements from a set of eight international observatories. The Planetary $K$"~index nowcast is availabe at the SWPC:\\
 	\urltext{https://www.swpc.noaa.gov/products/planetary-k-index}.
 	
-	\item The Wing APL models provide 1- and 4"~hour \Kp{} predictions. They are based on neural network models that take as input the solar wind real-time measurements made at L1 and the current \Kp{} nowcast \citep{Wing2005}. The Wing \Kp{} models are provided by the U.S. Air Force Weather Agency and hosted on the website of the SWPC:\\
+	\item The Wing APL models provide 1- and 4"~hour \Kp{} predictions. They are based on neural network models that take as input the solar wind real-time measurements made at L1 and the current \Kp{} nowcast \citep{Wing2005}. The Wing \Kp{} models are provided by the U.S. Air Force Weather Agency and are hosted on the website of the SWPC:\\
 	\urltext{https://www.swpc.noaa.gov/products/wing-kp}.
 	
 	\item \citet{Bala2012} developed \Kp{} prediction models that offer 1- and 3"~hour forecast times. Their models are also based on artificial neural networks that use real-time solar wind measurements. They utilize the Boyle index, an empirical approximation for the polar cap potential, as a coupling function. The model predictions can be accessed in real-time from the Magnetospheric Multiscale (MMS) Space Weather Forecast website at Rice University:\\
@@ -1038,7 +1038,7 @@ A few of the currently existing \Kp{} prediction models are listed below, includ
 
 \subsection{CME and stream forecast to Earth}
 % Storm causes
-Most major geomagnetic storms are caused by CMEs, but it is also clear that they can directly be attributed to the sub-structures of CMEs. The shock causes a sudden commencement, though the interior structures create geomagnetic storms if carrying a significant southward IMF. \citet{Tsurutani1988} showed that the compressed solar wind field in the sheath region behind the shock and the magnetic flux rope field are of equal importance for the generation of geomagnetic storms. This is the reason why the geomagnetic storms' intensity and duration cannot be predicted only from remote solar observations of active regions.\\
+In this work I denote solar wind without CMEs simply as solar wind streams, that is, including slow/fast solar wind and interaction regions. Solar wind streams may cause enhanced geomagnetic activity, however, most major geomagnetic storms are caused by CMEs. The continuous nature of solar wind streams and the event-like appearance of CMEs, rooted in their distinct generation mechanisms, require entirely different forecast methods. In the following I note some techniques that are in use to predict important properties of solar wind streams and CMEs.\\
 
 % CME forecast
 It is important to know in advance if and when CMEs arrive at Earth, because of their possible strong impact on the terrestrial magnetosphere. Knowing the geometry of a CME, it is possible to infer its direction and speed from white-light images. Through kinematic forward-modeling techniques that take advantage of the self-similar expansion observed in CMEs, it is possible to derive an estimated arrival time at Earth. As MCs are the drivers for most severe geomagnetic disturbances \citep{Bothmer1995,Cane2003}, it is also important to forecast their magnetic field strength and configuration.
@@ -1052,27 +1052,38 @@ Depending on whether CMEs are faster or slower than the surrounding solar wind, 
 % extreme events
 Extreme CME velocities above \SI{2000}{\km\per\s} near the Sun are rare, nevertheless, in some cases speeds around \SI{3000}{\km\per\s} were measured. From the free energy available in active regions, \citet{Gopalswamy2005} concluded that CME speeds cannot be far greater than \SI{3000}{\km\per\s}. This would implicate that CMEs need at least half a day to travel from their source region on the Sun to reach Earth. \citet{Gopalswamy2010} even estimated a maximal limit of free energy active regions can store, which means that CMEs with \SI{4000}{\km\per\s} are not possible. Faster CMEs usually come with higher magnetic field strengths, for example the CME observed by STEREO~A on 23~July 2012 had a shock speed of about \SI{2000}{\km\per\s} at \SI{1}{\au} and its magnetic field magnitude reached values of up to \SI{100}{\nT} \citep{Russell2013}.\\
 
+% magnetic substructures
+It is clear that geomagnetic storms can directly be attributed to the sub-structures of CMEs. The shock causes a sudden commencement, though the interior structures create geomagnetic storms if carrying a significant southward IMF. \citet{Tsurutani1988} showed that the compressed solar wind field in the sheath region behind the shock and the magnetic flux rope field are of equal importance for the generation of geomagnetic storms. This is the reason why the geomagnetic storms' intensity and duration cannot be predicted only from remote solar observations of active regions.\\
 
 
+
+arrival time calculation error: still around 6~hours...\\
 
 
 % CME forecast methods and models
 CME forecast:\\
 - WSA-ENLIL CMEs without B-field forecast\\
-- MC forecast; Savani2015: Predicting the magnetic vectors within coronal mass ejections arriving at Earth: 2. Geomagnetic response\\
+- MC forecast; Savani2015: Predicting the magnetic vectors within coronal mass ejections arriving at Earth: 1. Initial architecture\\
+- CCMC: a multitude of competing techniques\\
 - UGOE CME forecast chain (DDC)\\
 
 
-
-
-%stream velocity forecast from CHs
-Coronal holes are the origin of the fast solar wind; their area on the solar disk, seen in EUV wavelengths, correlates with the measured velocity of solar wind streams \citep{Vrsnak2007}. This relation is used to predict the Earth-arrival velocity of solar wind streams about 4~days in advance \citep{Rotter2012}, as is done in real-time within the empirical solar wind forecast (ESWF) at the University of Graz\footnote{ESWF website: \urlfoot{http://swe.uni-graz.at/index.php/services/solar wind-forecast}}.\\
-+27~day forecast...\\
+% stream forecast
+\citep{Cranmer2017}:\\
+``Complicating our understanding even more is the fact that processes such as turbulence, stream-stream interactions, and Coulomb collisions can make it difficult to unambiguously map a parcel measured at 1 AU back down to its coronal source.''\\
 
 % Stream forecast methods and models
-Stream forecast:\\
-- CH sw forecast (Uni Graz)\\
-- WSA-ENLIL sw forecast (CMEs without B-field)\\
+\begin{itemize*}
+	%stream velocity forecast from CHs
+	\item Coronal holes are the origin of the fast solar wind; their area on the solar disk, seen in EUV wavelengths, correlates with the measured velocity of solar wind streams \citep{Vrsnak2007}. This relation is used to predict the Earth-arrival velocity of solar wind streams about 4~days in advance \citep{Rotter2012}, as is done in real-time within the empirical solar wind forecast (ESWF) at the University of Graz\footnote{ESWF website: \urlfoot{http://swe.uni-graz.at/index.php/services/solar wind-forecast}}.
+	
+	\item 27~day (1 solar rotation) shift forecast...
+	
+	\item L5/STEREO shift forecast...
+	
+	\item numerical MHD simulation of solar wind flow from source surface; WSA-ENLIL forecast
+	
+\end{itemize*}
 
 
 
@@ -1107,9 +1118,6 @@ Predicting the magnetic field variations in ICMEs from solar observations is a c
 
 Identification of a flux rope near the Sun makes it easier to predict the expected magnetic configuration at Earth, modified by the interaction with the solar wind on its way to Earth. (cite?)\\
 
-Bz prediction:\\
-Savani2015: Predicting the magnetic vectors within coronal mass ejections arriving at Earth: 1. Initial architecture\\
-
 Savani2015:\\
 Thus, models used for routine CME forecasts by various space weather services do not include magnetic structures within the simulated CMEs [e.g., Zheng et al., 2013; Shiota et al., 2014]. For example, ENLIL models the propagation of CMEs from ~20 solar radii (Rs ) to beyond Earth at 215 Rs and includes the background solar wind magnetic field. However, the CME is simplified to a high-pressure plasma pulse with a size and propagation direction estimated from solar imagery [Zheng et al., 2013]. CME arrival time predictions from these models provide lead times of ~2–3 days, and their accuracy has been well investigated [Taktakishvili et al., 2010; Vršnak et al., 2014; Colaninno et al., 2013]. In contrast, the important magnetic vector information is only revealed when in situ measurements are made by spacecraft upstream of Earth at the first Lagrangian position (L1) ~1 h prior to the CME arriving at Earth, thereby severely limiting the lead time available for reliable, magnetic field-based, storm warnings.\\
 Savani2015:\\
@@ -1125,11 +1133,6 @@ adjusted BSS scheme (Savani2015)\\
 
 Savani2017:\\
 inferring the magnetic field direction along the trajectory of Earth through the CME would be a major advance in geomagnetic activity prediction.\\
-
-
-%Stream forecast
-Cranmer2017:\\
-Complicating our understanding even more is the fact that processes such as turbulence, stream-stream interactions, and Coulomb collisions can make it difficult to unambiguously map a parcel measured at 1 AU back down to its coronal source.\\
 
 
 
@@ -1151,11 +1154,8 @@ put fig. somewhere earlier (p.~10?): see \autoref{fig:Hundhausen1977_fig20bcd}\\
 The weaker solar activity cycle 24 seems to have important consequences for CMEs in the heliosphere: CMEs expand anomalously due to reduced heliospheric pressure leading to the increased observed rate of small CMEs, halos originating far from the disk center, and mild space weather (\citep{Gopalswamy2014}, 2015a; Petrie 2015).\\
 The total pressure in the heliosphere (magnetic + plasma) is reduced by ca. 40\%, which leads to the anomalous expansion of CMEs explaining the increased slope. The excess CME expansion contributes to the diminished effectiveness of CMEs in producing magnetic storms during cycle 24, both because the magnetic content of the CMEs is diluted and also because of the weaker ambient fields \citep{Gopalswamy2014}.\\
 
-the dayside reconnection is asymmetric\\
-
 causes (see citet{Rangarajan1997} p.~1282 and mention Bartels1963 too)\\
 read Bothmer1998 Ch 3...\\
-
 
 \citet{Sonnerup1967}: The rotational discontinuity seems to occur predominantly during magnetic storms and two of these cases, involving substantial normal-field components, provide compelling evidence that field reconnection takes place during the storm main phase.\\
 
@@ -1180,18 +1180,8 @@ read Bothmer1998 Ch 3...\\
 % P = mp * n * V2= 1.6726×10−6 * n * V2
 % where mp is the proton mass, pressure P is in nPa (nanopascals), n is the density in particles/cm3 and V is the speed in km/s of the solar wind.[citation needed]
 
-
-sources of southward Bz:\\
-- MCs\\
-- compressed material in front of CMEs (highest driving velocities)\\
-- SIRs/CIRs front of HSSs\\
-- sw streams\\
-
-
-% CMEs
-3-part structure figure ... find event with shock and flux rope?\\
 abbreviate magnetic flux rope to MFR?\\
- 
+
 % HCS
 why HCS? what currents are there...\\
 why is the CS not the divide between both polarities?\\
@@ -1204,8 +1194,6 @@ strong radio bursts...\\
 at Earth the solar wind total energy flux ($1.45~\text{mW/m}^2$) is only about one millionth of the solar radiation flux (see \citet[p.~153]{Schwenn1990})\\
 
 % magnetosphere
-radiation belts\\
-
 Phan2005, Magnetopause Processes:\\
 Cluster findings include:\\
 A strong ‘guide field’ detected at a reconnection X-line, i.e., a finite magnetic field along the X-line, has provided direct evidence for component merging.\\
@@ -1238,11 +1226,11 @@ This work adopts these assumptions and treats the solar wind throughout as a pro
 The differences in our study are the usage of high resolution solar wind data.\\
 
 % Kp forecast models
-Aleksei's f/c model; Ukraine; developed within AFFECTS project Space Research Institute of NAS of Ukraine and SSA of Ukraine, Ukraine (SRI NASU-NSAU)\\
+% Aleksei's f/c model; Ukraine; developed within AFFECTS project Space Research Institute of NAS of Ukraine and SSA of Ukraine, Ukraine (SRI NASU-NSAU)\\
 % http://www.ikd.kiev.ua/index.php?option=com_content&view=article&id=22%3A2011-02-09-12-19-54&catid=12&Itemid=15&lang=en
 
-The $\text{d}\Phi / \text{d}t$ coupling relation is being implemented into CME forecast procedures \citep{Savani2017}.\\
-NASA's Space Weather Research Center (SWRC); the derived Kp estimates using real-time in-situ data from L1 are currently implemented within the CCMC integrated Space Weather Analysis System (iSWA); Community Coordinated Modeling Center (CCMC) at the Goddard Space Flight Center\\
+% The $\text{d}\Phi / \text{d}t$ coupling relation is being implemented into CME forecast procedures \citep{Savani2017}.\\
+% NASA's Space Weather Research Center (SWRC); the derived Kp estimates using real-time in-situ data from L1 are currently implemented within the CCMC integrated Space Weather Analysis System (iSWA); Community Coordinated Modeling Center (CCMC) at the Goddard Space Flight Center\\
 
 % coupling functions
 \citet{Elliott2013}: The \Kp~index and solar wind speed relationship: Insights for improving space weather forecasts\\

@@ -312,7 +312,6 @@ The projected tilt angle to Earth over the year is\\
 
 solar tilt over the year, see \autoref{fig:Solar_tilt_seasons_plot}
 \begin{figure}[htb]
-	%\centering
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.5\textwidth]{figures_of_mine/gnuplots/Solar_tilt_seasons_plot.pdf}
 	}{
@@ -327,24 +326,90 @@ solar tilt over the year, see \autoref{fig:Solar_tilt_seasons_plot}
 \section{GSE, GSM, and HGI coordinate systems}
 \label{sec:coordinate_systems}
 
+A wise choice of coordinate system often eases the understanding and the calculation of a given problem, especially in geo- and astrophysics there exist an abundance of different coordinate systems.\\
+
+In the following, the coordinate systems used in this thesis are described. I use 
+GSE coordinates for the sw plots in the basics\\
+GSM coordinates throughout chapter2\\
+HGI coordinates for Helios chapter\\
+
+
+% GSE - Geocentric Solar Ecliptic
+\subsection*{Geocentric Solar Ecliptic coordinates}
+
+The Geocentric Solar Ecliptic (GSE) coordinates are\\
+    X = Earth-Sun Line\\
+    Z = Ecliptic North Pole
+
+GSE coordinates are used in ACE solar wind data, etc.
+
+%http://www.srl.caltech.edu/ACE/ASC/coordinate_systems.html
+%https://www.spenvis.oma.be/help/background/coortran/coortran.html
+%http://adsabs.harvard.edu/abs/1992P%26SS...40..711H
+
+see Jursa1985, p.~4-3\\
+``the polar axis is the axis inclined 11.5° to the axis of rotation, intersecting the earth surface at the point 78.5°N, 291.0°E which defines the geomagnetic north pole. This was once at one time the axis of the best centered-dipole approximation to the field''\\
+
+
+% GSM - Geocentric Solar Magnetospheric
+\subsection*{Geocentric Solar Magnetospheric coordinates}
+
+GSM - Geocentric Solar Magnetospheric\\
+X = Earth-Sun Line\\
+Z = Projection of dipole axis on GSE YZ plane\\
+%(Z-axis (positive) is perpendicular to the X-axis and parallel to the projection of the negative dipole moment on a plane perpendicular to the X-axis (the northern magnetic pole is in the same hemisphere as the tail of the magnetic moment vector).)\\
+
+GSM is defined with a time dependent dipole axis.\\
+the dipole axis orientation changes over time; at 1995 the northern pole was at $l = 288.59\degree$ and $b = 79.30\degree$; more recent year (2015)?... cite?\\
+% https://www.spenvis.oma.be/help/background/coortran/coortran.html#MAG
+
+
+% HGI - Heliographic Inertial
+\subsection*{Heliographic Inertial coordinates}
+
+Heliographic Inertial (HGI) coordinates\\
+HGI coordinates are Sun-centered with the z-axis directed along the solar rotation axis and directed northward of the solar equator. The solar equator plane is inclined \SI{7.25}{\degree} from the ecliptic.\\
+
+HGI coordinates; latitude range \SI{-7.25}{\degree}~to~\SI{-7.25}{\degree}\\
+latitude variation (see Schwenn1990, p.~127)\\
+
+
+%HGI - Heliographic Inertial coordinates
+%The HGI coordinates are Sun-centered and inertially fixed with respect to an X-axis directed along the intersection line of the ecliptic and solar equatorial planes, and defines zero of the longitude, HGI_LONG. The solar equator plane is inclined at 7.25 degrees from the ecliptic. This direction was towards ecliptic longitude of 74.367 deg on 1 January 1900 at 12:00 UT; because of the precession of the Earth's equator, this longitude increases by 1.4 deg/century. The Z-axis is directed perpendicular to and northward of the solar equator, and the Y-axis completes the right-handed set. The longitude, HGI_LONG increase from zero in the X-direction towards Y-direction.The latitude HG_LAT increases to +90 deg towards the north pole, and to -90 deg towards south pole.These Lat/Long are designated as HLAT & HILON in output
+
+% The Heliographic Inertial (HGI) coordinates are Sun-centered and inertially
+% fixed with respect to an X-axis directed along the intersection line of the
+% ecliptic and solar equatorial  planes. The solar equator plane is inclined at
+% 7.25 degrees from the ecliptic. This direction was towards ecliptic longitude of
+% 74.36 degrees  on  1  January  1900  at  1200  UT; because of precession of the
+% celestial equator, this longitude increases by 1.4 degrees/century. The Z axis
+% is directed perpendicular and northward from the solar equator, and the Y-axis
+% completes the right-handed set. This system differs from the usual heliographic
+% coordinates (e.g. Carrington longitudes) which are fixed in the frame of the
+% rotating Sun.
+%source: http://cdaweb.gsfc.nasa.gov/misc/NotesU.html#UY_COHO1HR_MERGED_MAG_PLASMA
+
+
+
 % GEOPHYSICAL COORDINATE TRANSFORMATIONS, CHRISTOPHER T. RUSSELL
 % http://jsoc.stanford.edu/doc/keywords/Chris_Russel/Geophysical%20Coordinate%20Transformations.htm
 
 % SPENVIS
 % https://www.spenvis.oma.be/help/background/background.html
 
-
-Coordinate systems used in this thesis:\\
-GSE - Geocentric Solar Ecliptic\\
-GSM - Geocentric Solar Magnetospheric\\
-%RTN - Radial Tangential Normal\\
-%SE - Solar Ecliptic\\
-%SSE - Sun-centered Solar Ecliptic\\
-HGI - Heliographic Inertial\\
-
 refer to \citet{Hapgood1992} for GSE and GSM\\
 
 figures for GSE and GSM
+
+
+-------------\\
+
+% GSE - Geocentric Solar Ecliptic\\
+% GSM - Geocentric Solar Magnetospheric\\
+% RTN - Radial Tangential Normal\\
+% SE - Solar Ecliptic\\
+% SSE - Sun-centered Solar Ecliptic\\
+% HGI - Heliographic Inertial\\
 
 % RTN - Radial Tangential Normal
 %     Spacecraft centered coordinate system. 
@@ -367,59 +432,6 @@ figures for GSE and GSM
 %The SE is a heliocentric coordinate system with the Z-axis normal to and northward from the ecliptic plane. The X-axis extends toward the first point of Aries (Vernal Equinox, i.e. to the Sun from Earth in the first day of Spring). The Y-axis completes the right handed set. The Vernal Equinox direction changes slowly; commonly invoked equinox epochs are (1) B-1950, (2) Mean-of-(current) Date, and (3) J-2000. The ecliptic longitude SE_LONG increases from zero in the x-direction towards Y-direction; the latitude, SE_LAT increases to +90 deg towards north ecliptic pole and to -90 deg towards south pole.These Lat/Long are designated as ELAT and ELON in output.
 
 %SSE - Sun-centered Solar Ecliptic coordinates
-
-%HGI - Heliographic Inertial coordinates
-%The HGI coordinates are Sun-centered and inertially fixed with respect to an X-axis directed along the intersection line of the ecliptic and solar equatorial planes, and defines zero of the longitude, HGI_LONG. The solar equator plane is inclined at 7.25 degrees from the ecliptic. This direction was towards ecliptic longitude of 74.367 deg on 1 January 1900 at 12:00 UT; because of the precession of the Earth's equator, this longitude increases by 1.4 deg/century. The Z-axis is directed perpendicular to and northward of the solar equator, and the Y-axis completes the right-handed set. The longitude, HGI_LONG increase from zero in the X-direction towards Y-direction.The latitude HG_LAT increases to +90 deg towards the north pole, and to -90 deg towards south pole.These Lat/Long are designated as HLAT & HILON in output
-
-% The Heliographic Inertial (HGI) coordinates are Sun-centered and inertially
-% fixed with respect to an X-axis directed along the intersection line of the
-% ecliptic and solar equatorial  planes. The solar equator plane is inclined at
-% 7.25 degrees from the ecliptic. This direction was towards ecliptic longitude of
-% 74.36 degrees  on  1  January  1900  at  1200  UT; because of precession of the
-% celestial equator, this longitude increases by 1.4 degrees/century. The Z axis
-% is directed perpendicular and northward from the solar equator, and the Y-axis
-% completes the right-handed set. This system differs from the usual heliographic
-% coordinates (e.g. Carrington longitudes) which are fixed in the frame of the
-% rotating Sun.
-%source: http://cdaweb.gsfc.nasa.gov/misc/NotesU.html#UY_COHO1HR_MERGED_MAG_PLASMA
-
-
-\subsection*{Geocentric Solar Ecliptic}
-\label{sec:geocentric_solar_ecliptic}
-
-The Geocentric Solar Ecliptic (GSE) coordinates are\\
-GSE - Geocentric Solar Ecliptic\\
-    X = Earth-Sun Line\\
-    Z = Ecliptic North Pole
-
-GSE coordinates are used in ACE solar wind data, etc.
-
-%http://www.srl.caltech.edu/ACE/ASC/coordinate_systems.html
-%https://www.spenvis.oma.be/help/background/coortran/coortran.html
-%http://adsabs.harvard.edu/abs/1992P%26SS...40..711H
-
-see Jursa1985, p.~4-3\\
-``the polar axis is the axis inclined 11.5° to the axis of rotation, intersecting the earth surface at the point 78.5°N, 291.0°E which defines the geomagnetic north pole. This was once at one time the axis of the best centered-dipole approximation to the field''\\
-
-
-\subsection*{Geocentric Solar Magnetospheric}
-
-GSM - Geocentric Solar Magnetospheric\\
-X = Earth-Sun Line\\
-Z = Projection of dipole axis on GSE YZ plane\\
-%(Z-axis (positive) is perpendicular to the X-axis and parallel to the projection of the negative dipole moment on a plane perpendicular to the X-axis (the northern magnetic pole is in the same hemisphere as the tail of the magnetic moment vector).)\\
-
-GSM is defined with a time dependent dipole axis.\\
-the dipole axis orientation changes over time; at 1995 the northern pole was at $l = 288.59\degree$ and $b = 79.30\degree$; more recent year (2015)?... cite?\\
-% https://www.spenvis.oma.be/help/background/coortran/coortran.html#MAG
-
-\subsection*{Heliographic Inertial}
-
-Heliographic Inertial (HGI) coordinates\\
-HGI coordinates are Sun-centered with the z-axis directed along the solar rotation axis and directed northward of the solar equator. The solar equator plane is inclined \SI{7.25}{\degree} from the ecliptic.\\
-
-HGI coordinates; latitude range \SI{-7.25}{\degree}~to~\SI{-7.25}{\degree}\\
-latitude variation (see Schwenn1990, p.~127)\\
 
 
 \section{True skill statistic}

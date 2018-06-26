@@ -1274,66 +1274,73 @@ Different kind of data, collected from observatories at various locations, are u
 
 \section{Magnetometer}
 \label{sec:magnetometer}
-
-Spacecraft nowadays carry two different magnetometer types, one for measuring the magnetic field direction and its strength and the other for observing the magnetic flux and detecting waves.\\
+Almost every interplanetary spacecraft carries magnetometers as they provide useful information about the local space environment, they also have low weight, low power requirements, and a low data rate \citep{Ness1970}. There are different magnetometer types -- prevalent types are fluxgate magnetometers for measuring the magnetic field direction and its strength and search coil magnetometers for observing the magnetic flux and detecting waves. Some spacecraft carry both magnetometer types, as is the case with the HELIOS, WIND, and THEMIS spacecraft. All magnetic field data employed in the present study was measured by fluxgate magnetometers.
 
 % fluxgate magnetometer
-A fluxgate magnetometer consists of two coils around a core -- one coil with alternating current. This current is then compared with the current signal induced into the other coil. Without an external magnetic field both current patterns match. However, the core is easier magnetized in direction of an existing external magnetic field, in this case a differing pattern is detected. Modern fluxgate magnetometers are designed in a ring core geometry with advanced magnetic core materials, such as molybdenum-permalloy.\\
-% https://helios.gsfc.nasa.gov/ace/mag.html
+A fluxgate magnetometer consists of two coils around a core -- one coil with alternating current. This current is then compared with the current signal induced into the other coil. Without an external magnetic field both current patterns match. However, the core is easier magnetized in direction of an existing external magnetic field, in this case a differing pattern is detected \citep{Ness1970}. Modern fluxgate magnetometers are designed in a ring core geometry with advanced magnetic core materials, such as molybdenum-permalloy.
 
-% search coil magnetometer
-In a search coil magnetometer one coil is placed around a core; measures plasma waves -- where?\\
-measures magnetic field fluctuations and waves...\\
-measures low frequency magnetic field fluctuations and waves in three directions (tri-axial)\\
+Fluxgate magnetometers are directional, therefore they are usually placed in a set of triaxial configuration. In order to minimize the influence of the spacecraft's own magnetic field, the magnetometers are usually placed away from the spacecraft's body, attached on the ends of solar panels or booms -- often actually two redundant sets at opposite sides.
 
-% http://themis.ssl.berkeley.edu/scm_faqs.shtml
-% https://en.wikipedia.org/wiki/Spacecraft_magnetometer
-
-% https://www.nasa.gov/mission_pages/themis/spacecraft/SCM.html
-``Search coil magnetometers are basically copper coils wound around a high magnetic permeability core. This magnetic core concentrates magnetic field lines - and the magnetic fluctuations they carry - inside the coils. The fluctuations induce currents and electric voltage drops inside the core that can be measured and recorded by the instrument's electronics circuits.''\\
-
-search coil magnetometer, see \autoref{fig:searchcoil_magnetometer}\\
+% ACE/MAG
+In case of the ACE spacecraft, two triaxial fluxgate magnetometers are mounted \SI{4.2}{\meter} from its center \citep{Smith1998}. The MAG instrument, before integration onto the ACE spacecraft, is pictured in \autoref{fig:ACE_fluxgate_magnetometer}. It has a resolution of a few measurements per second and an accuracy of about \SI{0.1}{\nano\tesla}.
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
-		\includegraphics[width=0.5\textwidth]{figures_of_others/images/searchcoil_magnetometer.jpg}
+		\includegraphics[width=0.5\textwidth]{figures_of_others/images/ACE_fluxgate_magnetometer.jpg}
 	}{
-		\caption[\lofimage{figures_of_others/images/searchcoil_magnetometer.jpg}]
-		{Engineering test unit of the search coil magnetometers on the THEMIS satellites launched in 2007. Credit: \href{https://www.nasa.gov/mission_pages/themis/spacecraft/SCM.html}{NASA}, 2007.}
-		\label{fig:searchcoil_magnetometer}
+		\caption[\lofimage{figures_of_others/images/ACE_fluxgate_magnetometer.jpg}]
+		{MAG instrument from the ACE spacecraft. Pictured is the electronics box and one of the two fluxgate magnetometer sensors. Credit: \href{https://helios.gsfc.nasa.gov/ace/mag.html}{NASA/GSFC}.}
+		\label{fig:ACE_fluxgate_magnetometer}
 	}
 \end{figure}
-% https://www.nasa.gov/mission_pages/themis/spacecraft/SCM.html
-% https://www.nasa.gov/sites/default/files/thumbnails/image/168038main_scm_etu_1_lg.jpg
-
-These magnetometer types are directional, therefore they are usually placed in a set of triaxial configuration. In order to minimize the influence of the spacecraft's own magnetic field, the magnetometers are usually placed away from the spacecraft's body, attached on the ends of solar panels or booms -- often actually two redundant sets at opposite sides. In case of the ACE spacecraft two triaxial magnetometers are mounted \SI{4.2}{\meter} from its center \citep{Smith1998}.\\
-
-The ACE/MAG magnetometers have a resolution of a few measurements per second and an accuracy of about \SI{0.1}{\nano\tesla} \citep{Smith1998}.\\
-
-Ground based magnetometers measure the local magnetic field of the Earth. They have to be housed in controlled temperature environment and away from magnetic interferences.\\
 
 
+% Ground based magnetometers measure the local magnetic field of the Earth. They have to be housed in controlled temperature environment and away from magnetic interferences.\\
 
-examples:\\
-ACE/MAG -- fluxgate magnetometer; figure of box??\\
 
+% % search coil magnetometer
+% In a search coil magnetometer one coil is placed around a core; measures plasma waves -- where?\\
+% measures magnetic field fluctuations and waves...\\
+% measures low frequency magnetic field fluctuations and waves in three directions (tri-axial)\\
+% 
+% % http://themis.ssl.berkeley.edu/scm_faqs.shtml
+% % https://en.wikipedia.org/wiki/Spacecraft_magnetometer
+% 
+% % https://www.nasa.gov/mission_pages/themis/spacecraft/SCM.html
+% ``Search coil magnetometers are basically copper coils wound around a high magnetic permeability core. This magnetic core concentrates magnetic field lines - and the magnetic fluctuations they carry - inside the coils. The fluctuations induce currents and electric voltage drops inside the core that can be measured and recorded by the instrument's electronics circuits.''\\
+% 
+% search coil magnetometer, see \autoref{fig:searchcoil_magnetometer}\\
+% \begin{figure}[htb]
+% 	\fcapside[\FBwidth]{
+% 		\includegraphics[width=0.5\textwidth]{figures_of_others/images/searchcoil_magnetometer.jpg}
+% 	}{
+% 		\caption[\lofimage{figures_of_others/images/searchcoil_magnetometer.jpg}]
+% 		{Engineering test unit of the search coil magnetometers on the THEMIS satellites launched in 2007. Credit: \href{https://www.nasa.gov/mission_pages/themis/spacecraft/SCM.html}{NASA}, 2007.}
+% 		\label{fig:searchcoil_magnetometer}
+% 	}
+% \end{figure}
+% % https://www.nasa.gov/mission_pages/themis/spacecraft/SCM.html
+% % https://www.nasa.gov/sites/default/files/thumbnails/image/168038main_scm_etu_1_lg.jpg
 
 
 \section{Plasma detector}
 \label{sec:plasma_detector}
 
-several spectrometers with different energy ranges\\
+There exist several spectrometer types with different energy ranges:\\
 
-isotope spectrometer - isotopic abundances of SEPs\\
+An isotope spectrometer -- isotopic abundances of SEPs\\
 ionic charge analyzer - charge state of SEPs\\
 solar wind ion mass spectrometer - \\
 solar wind ion composition spectrometer - \\
-radio burst tracker\\
+
+
+ACE/SWEPAM-I \citep{McComas1998a}\\
+% https://swepam.lanl.gov/
 
 
 A plasma detector measures the ion energy frequency distribution, which consists basically only of protons and alphas in solar wind. I prepared a synthetic ion energy spectrum for illustration in \autoref{fig:ion_energy_spectrum_plot}.\\
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
-		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/ion_energy_spectrum_plot.pdf}
+		\includegraphics[width=0.5\textwidth]{figures_of_mine/gnuplots/ion_energy_spectrum_plot.pdf}
 	}{
 		\caption[\lofimage{figures_of_mine/gnuplots/ion_energy_spectrum_plot.pdf}]
 		{Example of an ion energy spectrum for which I prepared some synthetic data points, including a small helium peak. capitalize Proton...}
@@ -1342,7 +1349,7 @@ A plasma detector measures the ion energy frequency distribution, which consists
 	\addtocontents{lof}{\smallskip\protect\center I created the figure myself.\medskip}
 \end{figure}
 %figure adapted from source: http://www.goembel.biz/sun.html
-...read \url{http://www.goembel.biz/sun.html}\\
+...read \urltext{http://www.goembel.biz/sun.html}\\
 
 The velocity, density, and temperature can be derived from the energy spectrum.\\
 more details...!\\
@@ -1363,7 +1370,18 @@ The temperature scales with the distribution's width.\\
 % resolution of the experiment is better in the energy dimension than in the
 % angular dimensions.''
 
-ACE/SWEPAM\\	%https://sci-hub.ac/10.1023/A:1005040232597
+the ion spectrometer Solar Wind Electron, Proton, and Alpha Monitor (SWEPAM-I), see \autoref{fig:ACE_SWEPAM_I}\\
+\begin{figure}[htb]
+	\fcapside[\FBwidth]{
+		\includegraphics[width=0.5\textwidth]{figures_of_others/images/ACE_SWEPAM_I.jpg}
+	}{
+		\caption[\lofimage{figures_of_mine/gnuplots/ACE_SWEPAM_I.jpg}]
+		{Ion spectrometer SWEPAM-I onboard the ACE spacecraft. The cylindrical part is the sensor head and the box behind houses the electronics and power supplies. Credit: \href{https://swepam.lanl.gov/}{Los Alamos National Laboratory}.}
+		\label{fig:ACE_SWEPAM_I}
+	}
+\end{figure}
+% copyright
+% https://lanl.gov/resources/web-policies/copyright-legal.php
 
 
 \section{\Kp{}~data}

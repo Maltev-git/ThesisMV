@@ -55,13 +55,13 @@ The \Kp{} data is obtained from the GFZ~Potsdam\footnote{GFZ~Potsdam website: \u
 \begin{figure}[htb]
 	\begin{floatrow}
 		\ffigbox{
-			\includegraphics[width=0.5\Xhsize]{figures_of_mine/chapter2/Kp_histogram_b.pdf}
+			\includegraphics[width=0.46\textwidth]{figures_of_mine/chapter2/Kp_histogram_b.pdf}
 		}{
 			\caption{\Kp{} frequency distribution for the time period 1932--2016. The inset shows a zoomed-in view of the high-value tail. The \Kp{} data is obtained from the GFZ~Potsdam.}
 			\label{fig:Kp_histogram_b}
 		}
 		\ffigbox{
-			\includegraphics[width=\Xhsize]{figures_of_mine/chapter2/Kp_histogram_yearlySSN_b.pdf}
+			\includegraphics[width=0.95\Xhsize]{figures_of_mine/chapter2/Kp_histogram_yearlySSN_b.pdf}
 		}{
 			\caption{Yearly \Kp{} frequency distributions during the period 1932--2016, sorted and colored by yearly SSN. All distributions are normed to be of equal area. The \Kp{} data is obtained from the GFZ~Potsdam and the yearly SSN data from the SILSO World Data Center.}
 			\label{fig:Kp_histogram_yearlySSN_b}
@@ -122,28 +122,28 @@ On top of the yearly variations, seasonal variations exist in the magnetospheric
 \begin{figure}[htb]
 	\begin{floatrow}
 		\ffigbox{
-			\includegraphics[width=0.5\Xhsize]{figures_of_mine/chapter2/Kp_histogram_monthly.pdf}
+			\includegraphics[width=0.46\textwidth]{figures_of_mine/chapter2/Kp_histogram_monthly.pdf}
 		}{
 			\caption{Average monthly \Kp{} frequency distributions of the time period 1932--2016, colored by month of the year. The \Kp{} data is obtained from the GFZ~Potsdam.}
 			\label{fig:Kp_histogram_monthly}
 		}
 		\ffigbox{
-			\includegraphics[width=\Xhsize]{figures_of_mine/chapter2/Kp_seasonal_d.pdf}
+			\includegraphics[width=0.46\textwidth]{figures_of_mine/chapter2/Kp_seasonal_e.pdf}
 		}{
-			\caption{Seasonal changes in the solar tilt angle to Earth, Earth tilt angle to Sun, and Earth distance to Sun -- the curves are approximated with trigonometric fuctions (top panel). \Kp{} frequency distributions by month for the time period 1932--2016 (bottom panel) with median (white dashed) and quartile values (white dotted). The other dotted lines mark the upper eighth, 16th, 32nd, and 64th parts. The bin size is 1~month and \SI{1/3}{\Kp}~unit respectively.}
-			\label{fig:Kp_seasonal_d}
+			\caption{\Kp{} frequency distributions by month for the time period 1932--2016 with median (white dashed) and quartile values (white dotted). The other dotted lines mark the upper eighth, 16th, 32nd, and 64th parts. The bin size is 1~month and \SI{1/3}{\Kp}~unit respectively.}
+			\label{fig:Kp_seasonal_e}
 		}
 	\end{floatrow}
 \end{figure}
-These \Kp{} changes arise from seasonal variations of the solar wind parameters at Earth, which stem from Earth's yearly changes in orbital distance and heliographic latitude. Another seasonal effect stems from the Earth's rotation axis tilt, which changes the direction of the Earth's magnetic dipole axis to the Sun over the year (see top panel of \autoref{fig:Kp_seasonal_d}).
+These \Kp{} changes arise from seasonal variations of the solar wind parameters at Earth, which stem from Earth's yearly changes in orbital distance and heliographic latitude. Another seasonal effect stems from the Earth's rotation axis tilt, which changes the direction of the Earth's magnetic dipole axis to the Sun over the year.
 
-Earth's distance to the Sun varies over the course of a year by \SI{+-1.67}{\percent} (see appendix \autoref{sec:sun_earth_orbit_geometry}). The solar wind parameters scale via power-law dependencies with solar distance, as it is described in the following \autoref{chap:empirical_solar_wind_model_for_the_inner_heliosphere} and accordingly in \citet{Venzmer2018}. For example, the solar wind proton density scales with about $r^{-2}$, this leads to yearly variations in density of up to \SI{3.4}{\percent}. These yearly solar wind changes have a direct influence on the \Kp{}~index.
+Earth's distance to the Sun varies over the course of a year by \SI{+-1.67}{\percent}, see appendix \autoref{sec:sun_earth_orbit_geometry}. The solar wind parameters scale via power-law dependencies with solar distance, as it is described in the following \autoref{chap:empirical_solar_wind_model_for_the_inner_heliosphere} and accordingly in \citet{Venzmer2018}. For example, the solar wind proton density scales with about $r^{-2}$, this leads to yearly variations in density of up to \SI{3.4}{\percent}. These yearly solar wind changes have a direct influence on the \Kp{}~index.
 
 The Sun's rotation axis tilt angle to the ecliptic is \SI{+-7.25}{\degree} and that for Earth is \SI{+-23.44}{\degree}, see also appendix \autoref{sec:sun_earth_orbit_geometry}. The solar wind magnetic field strength varies with heliographic latitude (cite?). The solar wind influence on the \Kp{}~index depends on its coupling efficiency with the magnetosphere. Furthermore, the rate of magnetic reconnection between solar wind and the Earth's magnetosphere depends on both fields' orientation to each other (parallel/antiparallel). Additionally, the tilt of the magnetic dipole axis to the rotation axis -- a few degrees for the Sun during cycle minima (extreme during solar maxima...) and about \SI{10}{\degree} for the Earth -- complicates this system even more.
 %geomagnetic dipole tilt: Planetary fact sheet: 11.2 (Model GSFC-12/83)
 %variation range in the time period 1930--2016: 9.6--11.5° (http://wdc.kugi.kyoto-u.ac.jp/poles/polesexp.html)
 
-So the \Kp{} variation effects originate from the seasonal change in the solar tilt, the Earth's tilt, and the Earth's distance. Thorough analyses of the seasonal variations were already performed by \citep{Cortie1912} (more cites!?). Thus, I just quantify the bulk magnitude of these effects in order to consider them as relative uncertainties when using the solar activity relation (\ref{eq:kp_ssn_relation}). Looking at the \Kp{} frequency distributions by month -- seen in the bottom panel of \autoref{fig:Kp_seasonal_d} -- it is apparent that for high \Kp{} values ($>4$), there exist yearly frequency maxima at the equinoxes and frequency minima at the solstices, as described by \citep{Cortie1912}. It can be seen from the plotted quantiles that this semiannual variation amounts to $1/3$~\Kp~unit at small \Kp~values and up to 4/3~units at higher \Kp~values.
+So the \Kp{} variation effects originate from the seasonal change in the solar tilt, the Earth's tilt, and the Earth's distance. Thorough analyses of the seasonal variations were already performed by \citep{Cortie1912} (more cites!?). Thus, I just quantify the bulk magnitude of these effects in order to consider them as relative uncertainties when using the solar activity relation (\ref{eq:kp_ssn_relation}). Looking at the \Kp{} frequency distributions by month -- seen in \autoref{fig:Kp_seasonal_e} -- it is apparent that for high \Kp{} values ($>4$), there exist yearly frequency maxima at the equinoxes and frequency minima at the solstices, as described by \citep{Cortie1912}. It can be seen from the plotted quantiles that this semiannual variation amounts to $1/3$~\Kp~unit at small \Kp~values and up to 4/3~units at higher \Kp~values.
 
 
 \section{\Kp{} nowcast from in-situ solar wind measurements}

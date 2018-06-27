@@ -207,31 +207,23 @@ sonic point and slow solar wind origin (Sheeley et al. 1997)\\
 
 \section{Sun-Earth orbit geometry}
 \label{sec:sun_earth_orbit_geometry}
+All interactions between Sun and Earth are governed by the geometry of Earth's orbit and the orientations of both bodies' rotation axes.\\
+
+The Earth orbit defines the ecliptic plane which sets a convenient basis for a few coordinate systems. The orbital parameters of Earth are the semimajor axis $a = \SI{1.000001018}{\au}$ and the eccentricity $e = \num{0.0167086}$. Thus, the Sun-Earth distance at perihelion and are: (cite?, accuracy?)
+\begin{align*}
+	r_\text{p} &= a (1 - e)	&	&\text{and}	&	r_\text{a} &= a (1 + e)\\
+		&= \SI{0.98329}{\au}	\,,	&	&	&	&= \SI{1.0167}{\au}	\,.
+\end{align*}
+%perihelion, point on solar orbit with minimum distance to Sun\\
+%aphelion, point on solar orbit with maximum distance to Sun\\
+
+for calculation of heliospheric distance see the HORIZONS Web-Interface at \urltext{http://ssd.jpl.nasa.gov/horizons.cgi}\\
+
+perihelion/aphelion times...\\
+%http://aa.usno.navy.mil/data/docs/EarthSeasons.php
 
 %all from https://en.wikipedia.org/wiki/Earth's_orbit
 %see also http://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html
-orbit defines ecliptic\\
-
-Earth orbit parameters (cite?):\\
-semimajor axis: $a = 1.000001018$~au\\
-eccentricity: $e = 0.0167086$~au\\
-%perihelion, point on solar orbit with minimum distance to Sun\\
-%aphelion, point on solar orbit with maximum distance to Sun\\
-distance at perihelion: (formula cite?, accuracy?)\\
-\begin{align}
-	r_\text{p} &= a (1 - e)\\
-		&= 0.98329~\text{au}	\nonumber
-\end{align}
-distance at aphelion:\\
-\begin{align}
-	r_\text{p} &= a (1 + e)\\
-		&= 1.0167~\text{au}	\nonumber
-\end{align}
-
-for calculation of heliospheric distance see HORIZONS Web-Interface at \url{http://ssd.jpl.nasa.gov/horizons.cgi}
-
-perihelion/aphelion times...
-%http://aa.usno.navy.mil/data/docs/EarthSeasons.php
 
 \subsection*{Solar distance}	%remove subsections?
 
@@ -378,17 +370,15 @@ The following ratios, derived from this kind of table, reveal relevant informati
 	\mathit{PC} = \frac{n_\text{H} + n_\text{CN}}{n_\text{H} + n_\text{FA} + n_\text{M} + n_\text{CN}}	\,,
 \end{align}
 the probabilities of detection and of false detection (i.e., the hit rate and the false alarm rate)
-\begin{align}
-	\mathit{POD} = \frac{n_\text{H}}{n_\text{H} + n_\text{M}}	&	&\text{and}	&	&\mathit{POFD} = \frac{n_\text{FA}}{n_\text{FA} + n_\text{CN}}	\,,
-\end{align}
-as well as the false alarm and detection failure ratios
-\begin{align}
-	\mathit{FAR} = \frac{n_\text{FA}}{n_\text{FA} + n_\text{H}}	&	&\text{and}	&	&\mathit{DFR} = \frac{n_\text{M}}{n_\text{M} + n_\text{CN}}	\,.
-\end{align}
+\begin{align*}
+	\mathit{POD} &= \frac{n_\text{H}}{n_\text{H} + n_\text{M}}	&	&\text{and}	&	\mathit{POFD} &= \frac{n_\text{FA}}{n_\text{FA} + n_\text{CN}}	\,,
+	\intertext{as well as the false alarm and detection failure ratios}
+	\mathit{FAR} &= \frac{n_\text{FA}}{n_\text{FA} + n_\text{H}}	&	&\text{and}	&	\mathit{DFR} &= \frac{n_\text{M}}{n_\text{M} + n_\text{CN}}	\,.
+\end{align*}
 The TSS is the difference between the hit rate and the false alarm rate\footnote{False alarm rate -- not to be confused with false alarm ratio.} and thus it is calculated as follows \citep[Eq.~15]{Hanssen1965}:
 \begin{align}
 	\mathit{TSS} &= \mathit{POD} - \mathit{POFD}\\
-		&= \frac{n_\text{H} \cdot n_\text{CN} - n_\text{FA} \cdot n_\text{M}}{\left(n_\text{H}+n_\text{M}\right) (n_\text{FA}+n_\text{CN})}	\,.	\label{eq:true_skill_score}
+		&= \frac{n_\text{H} \cdot n_\text{CN} - n_\text{FA} \cdot n_\text{M}}{\left(n_\text{H}+n_\text{M}\right) (n_\text{FA}+n_\text{CN})}	\,.	\nonumber	\label{eq:true_skill_score}
 \end{align}
 Its value is in the range from -1 to 1, with 1 representing an ideal prediction, 0 a random prediction, and -1 an ideal negative prediction. The TSS is positive if the hit rate is higher than the false alarm rate.
 
@@ -401,64 +391,47 @@ In the case of rare event forecasting, the contingency table is dominated by cor
 
 \section{Lognormal distribution}
 \label{sec:lognormal_distribution}
-
-This is a small summary about the lognormal probability distribution \citep[p.~780]{Bronstein2000}. The lognormal distribution is the distribution of a random variable $X$ if the logarithm of $X$ conforms to a normal distribution. Its shape is highly asymmetric, however in a semi-log plot the Gaussian bell curve is recognizable (see the second panel of \autoref{fig:lognormal_3panel_pdfcairo_plot}).
+This is a small summary about the lognormal probability distribution. The lognormal distribution is the distribution of a random variable $X$ if the logarithm of $X$ conforms to a normal distribution \citep[p.~780]{Bronstein2000}. Its shape is highly asymmetric, however in a semi-log plot the Gaussian bell curve is recognizable, see \autoref{fig:lognormal_3panel_pdfcairo_plot}.
 \begin{figure}[htb]
 	\begin{floatrow}
 		\ffigbox{
 			\includegraphics[width=0.5\Xhsize]{figures_of_mine/gnuplots/lognormal_3panel_pdfcairo_plot.pdf}
 		}{
-			\caption{The lognormal probability density function ($\sigma = 1, \mu = 0$) plotted in a linear, semi-log and log-log way. remove borders...}
+			\caption{Lognormal probability density function plotted in a linear, semi-log and log-log way with $\sigma = 1$ and $\mu = 0$. remove borders...}
 			\label{fig:lognormal_3panel_pdfcairo_plot}
 		}
 		\ffigbox{
 			\includegraphics[width=\Xhsize]{figures_of_mine/gnuplots/lognormal_ms_pdfcairo_plot.pdf}
 		}{
-			\caption{Five lognormal distributions plotted with fixed $\sigma$ (top) and fixed $\mu$ (bottom). remove borders...}
+			\caption{Sets of five different lognormal distributions plotted with a fixed $\sigma$ (top) and a fixed $\mu$ (bottom). remove borders... add Gaussian?}
 			\label{fig:lognormal_ms_pdfcairo_plot}
 		}
 	\end{floatrow}
 \end{figure}
 Its probability density function is
 \begin{align}
-	f(x) &= \frac{1}{\sigma \sqrt{2 \pi} x} \, \text{e}^{- \frac{(\ln x - \mu)^2}{2 \sigma^2}}
+	f(x) &= \frac{1}{\sigma \sqrt{2 \pi} x} \, \text{e}^{- \frac{(\ln x - \mu)^2}{2 \sigma^2}}	\,,
 \end{align}
-with the location ($\mu$) and the shape parameter ($\sigma$). Changes in $\mu$ affect both the horizontal and vertical scaling of the function, whereas $\sigma$ has an influence on its shape (see \autoref{fig:lognormal_ms_pdfcairo_plot}).\\
+with the location ($\mu$) and the shape parameter ($\sigma$). Changes in $\mu$ affect both the horizontal and vertical scaling of the function, whereas $\sigma$ has an influence on its shape, see the graphs with different $\mu$ and $\sigma$ in \autoref{fig:lognormal_ms_pdfcairo_plot}.
 
-Because it is a probability distribution, its area is normalized
-\begin{align}
-	\int_0^\infty f(x) \text{d} x = 1\,.
-\end{align}
-
-For a lognormally distributed random variable the geometric moments mean, standard deviation and variance are:
+A lognormal distribution adheres to the general properties noted in the following. As it is a probability distribution, its area is normalized:
 \begin{align*}
-	&\mu_\text{g} = \text{e}^\mu ,\\
-	&\sigma_\text{g} = \text{e}^\sigma ,\\
-	&var_\text{g} = \text{e}^{\sigma^2}~~(!) .
+	\int_0^\infty f(x) \text{d} x = 1	\,.
 \end{align*}
-
-Its arithmetic moments are:
+For a lognormally distributed random variable, the geometric moments mean, standard deviation, and variance are calculated from:
 \begin{align*}
-	&\mu_\text{a} = \text{e}^{\mu + \frac{\sigma^2}{2}} ,\\
-	&\sigma_\text{a} = \text{e}^{\mu + \frac{\sigma^2}{2}} \, \left(\text{e}^{\sigma^2} - 1\right) ,\\
-	&var_\text{a} = \sigma_\text{a}^2 .
+	&\mu_\text{g} = \text{e}^\mu	\,,	&	&\sigma_\text{g} = \text{e}^\sigma	\,,	&	&\text{var}_\text{g} = \text{e}^{\sigma^2}	\,.\\
+	\intertext{Whereas its arithmetic moments are derived from:}
+	&\mu_\text{a} = \text{e}^{\mu + \frac{\sigma^2}{2}}	\,,	&	&\sigma_\text{a} = \text{e}^{\mu + \frac{\sigma^2}{2}} \, \left(\text{e}^{\sigma^2} - 1\right)	\,,	&	&\text{var}_\text{a} = \sigma_\text{a}^2\,.
 \end{align*}
-
-Other useful characteristics are the median and the mode
+Further useful characteristics are the position of the median and the mode:
 \begin{align*}
-	&x_\text{median} = \text{e}^{\mu},\\
-	&x_\text{mode} = \text{e}^{\mu - \sigma^2}\,.
+	&x_\text{median} = \text{e}^{\mu}	\,,\\
+	&x_\text{mode} = \text{e}^{\mu - \sigma^2}	\,.
 \end{align*}
-Note that for the lognormal distribution its median is equal to its geometric mean.\\
+Note that for the lognormal distribution its median is equal to its geometric mean.
 
-Applications of lognormal distributions...\\
-%Limpert2001: Lognormal Distributions across the Sciences: Keys and Clues
-%http://bioscience.oxfordjournals.org/content/51/5/341.full
-
-Most natural quantities which can only be positive are lognormally distributed. e.g. animal body sizes?, animal life expectancies, financial stock prices...; income distributions.\\
-
-%life expectancy analyses of economic, technical and biological processes. Bronstein2000
-
+Most distributions in nature deviate from the simple Gaussian shape and are to some extent skewed. Indeed, almost all natural quantities which can only be positive are lognormally distributed. Such distributions are found in all fields of sciences \citep{Limpert2001}, for example in biology (size and weight of individuals in populations; species abundance), in medicine (latency periods and survival times of diseases), in social sciences (age of marriage), in linguistics (lengths of words and sentences), in economics (household income), and in geophysics (distribution of mineral resources in the Earth's crust). Obviously measurements of certain solar wind quantities and geomagnetic indices conform to lognormal distributions as well.
 
 
 \section{Astronomical constants}

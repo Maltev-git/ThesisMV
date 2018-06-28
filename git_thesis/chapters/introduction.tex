@@ -1274,10 +1274,11 @@ Different kind of data, collected from observatories at various locations, are u
 
 \section{Magnetometer}
 \label{sec:magnetometer}
-Almost every interplanetary spacecraft carries magnetometers as they provide useful information about the local space environment, they also have low weight, low power requirements, and a low data rate \citep{Ness1970}. There are different magnetometer types -- prevalent types are fluxgate magnetometers for measuring the magnetic field direction and its strength and search coil magnetometers for observing the magnetic flux and detecting waves. Some spacecraft carry both magnetometer types, as is the case with the HELIOS, WIND, and THEMIS spacecraft. All magnetic field data employed in the present study was measured by fluxgate magnetometers.
+A magnetometer monitors the local magnetic field environment. Almost every interplanetary spacecraft carries magnetometers as apart from providing useful information they also have low weight, low power requirements, and a low data rate \citep{Ness1970}. There are different magnetometer types -- prevalent types are fluxgate magnetometers for measuring the magnetic field direction and its strength and search coil magnetometers for observing the magnetic flux and detecting waves. Some spacecraft carry both magnetometer types, as is the case with the HELIOS, WIND, and THEMIS spacecraft. All magnetic field data employed in the present study was measured by fluxgate magnetometers.
 
 % fluxgate magnetometer
 A fluxgate magnetometer consists of two coils around a core -- one coil with alternating current. This current is then compared with the current signal induced into the other coil. Without an external magnetic field both current patterns match. However, the core is easier magnetized in direction of an existing external magnetic field, in this case a differing pattern is detected \citep{Ness1970}. Modern fluxgate magnetometers are designed in a ring core geometry with advanced magnetic core materials, such as molybdenum-permalloy.
+% http://sprg.ssl.berkeley.edu/impact/instruments_mag.html
 
 Fluxgate magnetometers are directional, therefore they are usually placed in a set of triaxial configuration. In order to minimize the influence of the spacecraft's own magnetic field, the magnetometers are usually placed away from the spacecraft's body, attached on the ends of solar panels or booms -- often actually two redundant sets at opposite sides.
 
@@ -1293,9 +1294,7 @@ In case of the ACE spacecraft, two triaxial fluxgate magnetometers are mounted \
 	}
 \end{figure}
 
-
 % Ground based magnetometers measure the local magnetic field of the Earth. They have to be housed in controlled temperature environment and away from magnetic interferences.\\
-
 
 % % search coil magnetometer
 % In a search coil magnetometer one coil is placed around a core; measures plasma waves -- where?\\
@@ -1322,42 +1321,39 @@ In case of the ACE spacecraft, two triaxial fluxgate magnetometers are mounted \
 % % https://www.nasa.gov/sites/default/files/thumbnails/image/168038main_scm_etu_1_lg.jpg
 
 
-\section{Plasma detector}
-\label{sec:plasma_detector}
+\section{Solar wind spectrometer}
+\label{sec:solar_wind_spectrometer}
+A plasma spectrometer monitors the energy spectrum of the detected flow of charged particles. These plasma detectors detect the energy spectra and directions of the bulk particle flows. The energy spectra are used to further determine the bulk velocity, temperature, and density.
 
-There exist several spectrometer types with different energy ranges:\\
+Spectrometers measuring solar wind plasma are specified into electron and ion instruments. There exist several ion spectrometer types which cover different energy ranges for measuring the different solar wind particle species, such as SEPs, and cosmic rays. There are different instrument types for analyzing the masses, elemental composition, isotopic abundances, and charge states.
 
-An isotope spectrometer -- isotopic abundances of SEPs\\
-ionic charge analyzer - charge state of SEPs\\
-solar wind ion mass spectrometer - \\
-solar wind ion composition spectrometer - \\
+Solar wind consists almost entirely from protons and alpha ions. The dedicated instruments are built with particle sensors based on Faraday cups or electrostatic analyzers. Faraday cup instruments monitor the solar wind currently on the WIND and DSCOVR spacecraft located near L1, whereas an electrostatic analyzer instrument was in operation on the Ulysses spacecraft. The ACE spacecraft carries the enhanced flight spare instrument from Ulysses.\\
 
-
-ACE/SWEPAM-I \citep{McComas1998a}\\
-% https://swepam.lanl.gov/
-
-
-A plasma detector measures the ion energy frequency distribution, which consists basically only of protons and alphas in solar wind. I prepared a synthetic ion energy spectrum for illustration in \autoref{fig:ion_energy_spectrum_plot}.\\
+Electrostatic analyzers are equipped with channel electron multipiers which allow for the detection of every incident particle. However, they only obtain the energy per charge~p. Their energy range is chosen to enclose the proton and alpha ion distributions, in case of the ion spectrometer Solar Wind Electron Proton Alpha Monitor (SWEPAM-I) onboard the ACE spacecraft the energy range is \SIrange{260}{36000}{\electronvolt\per q} \citep{McComas1998a}. An image of the SWEPAM-I instrument is shown in \autoref{fig:ACE_SWEPAM_I}.\\
 \begin{figure}[htb]
-	\fcapside[\FBwidth]{
-		\includegraphics[width=0.5\textwidth]{figures_of_mine/gnuplots/ion_energy_spectrum_plot.pdf}
-	}{
-		\caption[\lofimage{figures_of_mine/gnuplots/ion_energy_spectrum_plot.pdf}]
-		{Example of an ion energy spectrum for which I prepared some synthetic data points, including a small helium peak. capitalize Proton...}
-		\label{fig:ion_energy_spectrum_plot}
-	}
-	\addtocontents{lof}{\smallskip\protect\center I created the figure myself.\medskip}
+	\begin{floatrow}
+		\ffigbox[\FBwidth][]{
+			\includegraphics[width=0.46\textwidth]{figures_of_others/images/ACE_SWEPAM_I.jpg}
+		}{
+			\caption[\lofimage{figures_of_mine/gnuplots/ACE_SWEPAM_I.jpg}]
+			{Ion spectrometer SWEPAM-I onboard the ACE spacecraft. The cylindrical part is the sensor head and the box behind houses the electronics and power supplies. Credit: \href{https://swepam.lanl.gov/}{Los Alamos National Laboratory}.}
+			\label{fig:ACE_SWEPAM_I}
+			% copyright
+			% https://lanl.gov/resources/web-policies/copyright-legal.php
+		}
+		\ffigbox[\Xhsize]{
+			\includegraphics[width=0.46\textwidth]{figures_of_mine/gnuplots/ion_energy_spectrum_plot.pdf}
+		}{
+			\caption[\lofimage{figures_of_mine/gnuplots/ion_energy_spectrum_plot.pdf}]
+			{Example of an ion energy spectrum for which I prepared some synthetic data points, including a small helium peak. capitalize Proton... move key from boundary... remove units...}
+			\label{fig:ion_energy_spectrum_plot}
+			% http://www.goembel.biz/sun.html
+		}
+		\addtocontents{lof}{\smallskip\protect\center I created the figure myself.\medskip}
+	\end{floatrow}
 \end{figure}
-%figure adapted from source: http://www.goembel.biz/sun.html
-...read \urltext{http://www.goembel.biz/sun.html}\\
 
-The velocity, density, and temperature can be derived from the energy spectrum.\\
-more details...!\\
-
-The bulk velocity is derived from the distribution's average energy (or position of Maxwell-Boltzmann distribution?).\\
-The number density is the area of the distribution.\\
-The temperature scales with the distribution's width.\\
-
+A plasma ion detector only provides an energy spectrum -- the velocity, density, and temperature of the proton and alpha ions have to be derived from it. Both ion populations can overlap under extremely hot conditions \citep{Bame1992}. The individual frequency distribution's peak energy indicates the bulk velocity, its area shows the number density, and its width scales with the temperature. I prepared a synthetic ion energy spectrum for illustration in \autoref{fig:ion_energy_spectrum_plot}. The experiment calculates these solar wind properties by numerical integration over specified energy ranges. The automatism has its limits (e.g., very low temperatures cannot be assessed correctly), however a manual fit of two superimposed Maxwell-Boltzmann curves to the energy distributions can overcome this \citep{Bame1992}.
 % source: ftp://spdf.gsfc.nasa.gov/pub/data/ulysses/plasma/swoops/ion/swoops_ion_users_guide_update_20030214.txt
 % ``Plasma parameters are calculated by numerical integration of velocity-weighted
 % ion distributions over a E/q range chosen to include the thermal proton and
@@ -1369,19 +1365,6 @@ The temperature scales with the distribution's width.\\
 % of background have been removed from the integration. The velocity space 
 % resolution of the experiment is better in the energy dimension than in the
 % angular dimensions.''
-
-the ion spectrometer Solar Wind Electron, Proton, and Alpha Monitor (SWEPAM-I), see \autoref{fig:ACE_SWEPAM_I}\\
-\begin{figure}[htb]
-	\fcapside[\FBwidth]{
-		\includegraphics[width=0.5\textwidth]{figures_of_others/images/ACE_SWEPAM_I.jpg}
-	}{
-		\caption[\lofimage{figures_of_mine/gnuplots/ACE_SWEPAM_I.jpg}]
-		{Ion spectrometer SWEPAM-I onboard the ACE spacecraft. The cylindrical part is the sensor head and the box behind houses the electronics and power supplies. Credit: \href{https://swepam.lanl.gov/}{Los Alamos National Laboratory}.}
-		\label{fig:ACE_SWEPAM_I}
-	}
-\end{figure}
-% copyright
-% https://lanl.gov/resources/web-policies/copyright-legal.php
 
 
 \section{\Kp{}~data}

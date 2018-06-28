@@ -233,78 +233,59 @@ The cosine approximation
 \begin{align}
 	r_\text{E}(t) = 1 - 0.0167 \cdot \cos\left(2 \pi \left(t - 2017 - \frac{5}{365}\right)\right)\,,
 \end{align}
-with $t$ in years, suffices for the plot of the seasonal changes in Earth's solar distance presented in \autoref{fig:Sun_Earth_geometry_gps}.
+with $t$ in years, suffices for the plot of the seasonal changes in Earth's solar distance presented in \autoref{fig:Sun_Earth_geometry}.
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
-		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/Sun_Earth_geometry_gps.pdf}
+		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/Sun_Earth_geometry.pdf}
 	}{
 		\caption{Seasonal changes of the Sun's and the Earth's tilt angles to the ecliptic and of the Earth's solar distance. The curves are approximated with trigonometric fuctions.}
-		\label{fig:Sun_Earth_geometry_gps}
+		\label{fig:Sun_Earth_geometry}
 	}
 \end{figure}
-The distance variation has implications for the magnitude of the solar wind quantities measured at Earth, as most of them follow a power law distance dependency.
+The total distance variation of \SI{3.34}{\%} has implications for the magnitude of the solar wind quantities measured at Earth, as most of them follow a power law distance dependency. Thus for example, the density varies about \SI{6.7}{\percent} between summer and winter because it scales with $r^{-2}$.
 
 % perihelion/aphelion times:
 %http://aa.usno.navy.mil/data/docs/EarthSeasons.php
 
 % seasonal variation function:\\
-% $X_\text{avg}(t) = a\,r_\text{E}(t)^b$\\
-% B_avg = 5.969(29)~nT\\
-% B_med = 5.435(24)~nT\\
-% N_avg = 6.329(85)~cm-3\\
-% N_med = 4.858(60)~cm-3\\
-% T_avg = 1.198(16)e5~K\\
-% T_med = 7.17(12)e4~K\\
-% V1_avg = 4.132(22)e2~km/s\\
-% V1_med = 4.034(21)e2~km/s\\
-% V2_avg = 4.132(22)e2~km/s\\
-% V2_med = 4.034(21)e2~km/s\\
+% $x_\text{avg}(t) = a\,r_\text{E}(t)^b$\\
+% values according to paper Venzmer2018, table 4:
+% B_avg = 5.705(28)~nT\\
+% B_med = 5.358(25)~nT\\
+% n_avg = 6.845(47)~cm-3\\
+% n_med = 5.424(33)~cm-3\\
+% T_avg = 10.72(14)e5~K\\
+% T_med = 6.357(64)e4~K\\
+% v_avg = 4.47(11)e2~km/s\\
+% v_med = 4.13(13)e2~km/s\\
+% n_avg_p = 7.09 cm-3
+% n_avg_a = 6.61 cm-3
+% v_avg_p = 446.3 km/s
+% v_avg_a = 447.7 km/s
+% 
+% % solar wind ram pressure (n*v^2) at perihelion:
+% p_p = 1.41e18 m-1
+% p_a = 1.32e18 m-1
+% -> ram pressure varies by 6\% through the year\\
 
 
 \subsection*{Solar rotation axis tilt to the ecliptic}
-
-The inclination of the solar equator to the ecliptic (tilt/obliquity) is $i_\odot = 7.25$\textdegree{} \citep{USNO2015}.\\	%USNO2015 C3
-
-the rotation axis is tilted from the ecliptic normal\\
-
-
-Viewed from Earth the projected solar rotation axis tilt angle varies as the Earth is moving on its orbit.\\
-
-At the time XX the angle is zero.\\
-
-The projected tilt angle to Earth over the year is\\
-
-% Stonyhurst disk
-% 
-% Calculation of solar tilt angle at given time
-% solar tilt/obliquity to ecliptic: i_sun = 7.25\degrees (Sun fact sheet: \url{http://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html)}
-% modulate this angle with a sine over the year:
+The heliosphere is structured by the orientation of the solar rotation axis, e.g., the overall solar wind properties change with angular distance from the solar equator. The solar equator is inclined to the ecliptic by $i_\odot = \SI{7.25}{\degree}$\footnote{NASA's Sun Fact Sheet: \urlfoot{http://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html}}. Thus, viewed from Earth, the projected solar rotation axis tilt angle varies as the Earth is moving on its orbit. The seasonal change is plotted in \autoref{fig:Sun_Earth_geometry}, where the projected tilt at a given time is calculated by modulating $i_\odot$ with a sine, using the equation in \citet{Hapgood1992} and time of the vernal equinox. The projected tilt is zero at the equinoxes, the vernal equinox in 2016 was on 20~March.
+% vernal_equinox = 2016.0 + 2.0/12.0 + 20.0/366.0
 % projected tilt from Earth: i_proj = i_sun * sin(beta)
 % this years vernal equinox: eq = 2015.0 + 2.0/12.0 + 20.0/365.0 = 2015.2215
 % actual separation angle from vernal equinox position: phi = (today - eq) * 360
-% 
-% ecliptic longitude: \url{http://cohoweb.gsfc.nasa.gov/helios/plan_des.html}
 % Ecliptic longitude of ascending node of the Sun's equator
-% http://sspg1.bnsc.rl.ac.uk/SEG/Coordinates/angles.htm
-
-%Hapgood (1992), Space Physics Coordinate Transformations: A User Guide
-\citet{Hapgood1992}:
-\begin{align}
-	\omega = 73.67 + 0.013\,958 * (today - 1850.0)	%#why? yearly change
-\end{align}
 % beta = phi - omega
-% 
-% Meridians (longitude lines)
-% 
-% Parallels (latitude lines)
-
-
-% vernal_equinox = 2016.0 + 2.0/12.0 + 20.0/366.0
+% omega = 73.67 + 0.013\,958 * (today - 1850.0)
 % tilt(x) = 7.25 * sin(-(73.67 + 0.013958 * (x - 1850.0)) + (-vernal_equinox + x) * 360.0)
-% 
-% 	tilt(2016.0+(x-1.0)/12.0) with lines title "sine approx." ls 2 lw 2,\
+% tilt(2016.0+(x-1.0)/12.0) with lines title "sine approx." ls 2 lw 2,\
+
 
 \subsection*{Earth rotation axis tilt to the ecliptic}
+The orientation of the Earth's rotation axis to the Sun defines the solar wind flow angle onto the magnetosphere. The Earth's obliquity of the ecliptic is \SI{23.439279}{\degree} \citep{Luzum2011}.\\
+
+The seasonal change, seen in \autoref{fig:Sun_Earth_geometry}, is reflected in geomagnetic indices as well.
 
 
 \section{GSE, GSM, and HGI coordinate systems}
@@ -431,19 +412,22 @@ Most distributions in nature deviate from the simple Gaussian shape and are to s
 \section{Astronomical constants}
 \label{sec:astronomical_constants}
 
-Astronomical unit: $\SI{1}{\au} = \SI{149597870.700}{\km}$ \citep{USNO2015}\\ %Astronomical constants
-Solar mass: $M_\odot = \SI{1.9884(2)e30}{\kg}$ \citep{USNO2015}\\ %see also Mamajek2015
-Nominal solar radius (photosphere): $R_\odot = \SI{695700}{\km}$ \citep{Mamajek2015}\\ %Astronomical constants
-Solar rotation axis tilt: $i_\odot = \SI{7.25}{\degree}$ \citep{USNO2015}\\ %C3; Obliquity to ecliptic
-Solar surface rotation period at equator, sidereal: 25.05~d (Sun Fact Sheet...)\\
+Astronomical unit: $\SI{1}{\au} = \SI{149597870.700}{\km}$ \citep{Luzum2011}\\
+Solar mass: $M_\odot = \SI{1.9884(2)e30}{\kg}$ \citep{USNAO2017}\\
+Nominal solar radius (photosphere): $R_\odot = \SI{695700}{\km}$ \citep{Mamajek2015}\\
 Nominal solar effective temperature (photosphere): $T_{\text{eff}\odot} = \SI{5772}{\kelvin}$ \citep{Mamajek2015}\\
+Solar rotation axis tilt to ecliptic: $i_\odot = \SI{7.25}{\degree}$ (Sun fact sheet...)\\ %C3; Obliquity to ecliptic
+Solar surface rotation period at equator, sidereal: 25.05~d (Sun Fact Sheet...)\\
 Sun escape velocity: $v_\text{esc} = \SI{617.6}{\km\per\s}$ (Sun Fact Sheet...)\\
 
-%Astronomical constants
-%http://asa.usno.navy.mil/static/files/2016/Astronomical_Constants_2016.pdf
+Online resources:\\
+IAU Division I Working Group, Numerical Standards for Fundamental Astronomy, IAU 2009 values and best estimates: \urltext{http://maia.usno.navy.mil/NSFA/}\\
+\citep{Luzum2011}\\
 
-NASA maintains the Planetary~Fact~Sheets online\footnote{NASA Planetary Fact Sheets website: \urlfoot{https://nssdc.gsfc.nasa.gov/planetary/planetfact.html}}.\\
+The Astronomical Almanac Online: \urltext{http://asa.usno.navy.mil/static/files/2016/Astronomical_Constants_2016.pdf}\\
+\citep{USNAO2017}\\
 
+NASA's Planetary~Fact~Sheets: \urltext{https://nssdc.gsfc.nasa.gov/planetary/planetfact.html}}\\
 
 
 % \section{Abbreviations}

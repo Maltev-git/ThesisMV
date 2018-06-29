@@ -4,50 +4,35 @@
 
 \section{Solar surface differential rotation}
 \label{sec:solar_surface_differential_rotation}
-
-%solar rotation
-The solar differential rotation is visible on the surface and was first discovered from sunspot observations by \citet{Scheiner1630}. (double)\\
+%surface differential rotation
+The differential rotation of the solar surface is visible from sunspot observations and was first discovered by \citet{Scheiner1630}. It is caused by transport of angular momentum away from the rotation axis resulting from the Sun's inner thermal convective circulation.
 
 %rotation period
-\citet{Bartels1934} set the synodic solar rotation period to 27~days for the definition of his solar rotation number. The Bartels' Rotation Number counts the solar rotations starting with 8 February 1832.\\
-Carrington solar rotation period of 27.2753~days (Where Carrington Rotation Number is based upon, starting with November 9, 1853; Wikipedia...)\\
-%synodic rotation period of 27.2753 days (or a sidereal period of 25.38 days; This chosen period roughly corresponds to rotation at a latitude of 16~deg (sic), which is consistent with the typical latitude of sunspots and corresponding periodic solar activity; cite from https://en.wikipedia.org/wiki/Solar_rotation
-
-Solar surface rotation period at 16\degree{} latitude:\\
-sidereal: 25.38~d (of 609.12~h Sun Fact Sheet...), synodic: 27.2753~d (derived)\\
-
-rotation axis tilt (see next section)\\
-
-%surface differential rotation
-The Sun's inner thermal convective circulation results in a differential rotation caused by transport of angular momentum away from the rotation axis.
+\citet{Bartels1934} set the average synodic solar rotation period to 27~days for the definition of his solar rotation number. The Bartels Rotation Number counts the solar rotations starting with 8~February 1832. Carrington determined a more accurate average solar rotation period of 27.2753~days, which is valid for solar latitudes of \SI{+-16}{\degree} where sunspots usually are found. He defined the Carrington Rotation Number based upon this period, starting with 9~November 1853 (cite?).\\
+% sidereal: 25.38~d (of 609.12~h Sun Fact Sheet...), synodic: 27.2753~d (derived)
 
 %best-fitting function
-The Sun's sidereal differential angular velocity best-fitting function with values as stated in (Sun~Fact~Sheet...)\footnote{NASA's \textit{Sun~Fact~Sheet} (\url{http://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html}, accessed 2016-08-19).} is
+The Sun's sidereal differential angular velocity is described by the best-fitting function\footnote{NASA's Sun Fact Sheet: \urlfoot{http://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html}}:
 \begin{align}
-	\omega_\odot(\theta) = \omega_\text{eq} + B \sin^2(\theta) + C \sin^4(\theta)	\label{eq:omega_differential}
+	\omega_\odot(\theta) = \omega_\text{eq} + B \sin^2(\theta) + C \sin^4(\theta)	\,,	\label{eq:omega_differential}
 \end{align}
-with the heliolatitude $\theta$, the equatorial angular velocity $\omega_\text{eq} = \SI{14.37}{\degree\per\day}$, the coefficients $B = \SI{-2.33}{\degree\per\day}$, and $C = \SI{-1.56}{\degree\per\day}$ (see \autoref{fig:differential_rotation_pdfcairo_plot}).
-
-see \autoref{fig:differential_rotation_pdfcairo_plot}
+with the heliolatitude $\theta$, the equatorial angular velocity $\omega_\text{eq} = \SI{14.37}{\degree\per\day}$, the coefficients $B = \SI{-2.33}{\degree\per\day}$, and $C = \SI{-1.56}{\degree\per\day}$. The function is plotte in \autoref{fig:differential_rotation_pdfcairo_plot}.
 \begin{figure}[htb]
-	%\centering
 	\fcapside[\FBwidth]{
-		\includegraphics[width=0.5\textwidth]{figures_of_mine/gnuplots/differential_rotation_pdfcairo_plot.pdf}
+		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/differential_rotation_pdfcairo_plot.pdf}
 	}{
-		\caption{Diagram of the sidereal solar surface differential rotation. It shows the angular velocity for different latitudes. remove sides...}
+		\caption{Diagram showing the angular velocity of the sidereal solar surface differential rotation for different latitudes. remove sides and y2axis... +x2axis with rotation period?}
 		\label{fig:differential_rotation_pdfcairo_plot}
 	}
 \end{figure}
-
-\noindent Thus, the solar equatorial rotation period (sidereal) is
+Thus, the solar equatorial sidereal rotation period is $T_\odot^\text{eq} = \SI{25.05}{\day}$ and the synodic period is
 \begin{align}
-	T_\odot^\text{eq} &= 360\degree / A\\
-	&= 25.05~\text{d}	\nonumber\\
-\shortintertext{and the synodic period is}
-	T_\odot^\text{eq,syn} &= 1/(1/T_\odot^\text{eq} - 1/T_\text{Earth})\\
-	&= 26.90~\text{d}	\nonumber
+	T_\odot^\text{eq,syn} &= \left(\frac{1}{T_\odot^\text{eq}} - \frac{1}{T_\text{E}}\right)^{-1}\\
+	&= \SI{26.90}{\day}	\,,	\nonumber
 \end{align}
-with the Earth's orbital rotation period $T_\text{Earth} = 365.25$~d (1/100 Julian century).\\
+with the Earth's orbital rotation period $T_\text{E} = \SI{365.25}{\day}$ (1/100 Julian century).\\
+
+
 
 Solar surface rotation period at equator\\
 sidereal: 25.05~d (Sun Fact Sheet...), synodic: 26.90~d (derived)\\
@@ -55,12 +40,12 @@ Solar surface rotation period at poles:\\
 sidereal: 34.35~d (diff. rot. formula), synodic: 37.92~d (derived)\\
 are listed in \autoref{tab:solar_surface_rotation_periods}.\\
 \begin{table}[htb]\small
-	\caption{Solar surface rotation periods for the equator, \SI{+-16}{\degree}~latitudes and the poles in sidereal and synodic rotation.}
+	\caption{Solar surface rotation periods for the equator, \SI{+-16}{\degree}~latitudes and the poles in sidereal and synodic rotation. accuracy to two digits...}
 	\label{tab:solar_surface_rotation_periods}
 	\centering
 	\begin{tabular}{llll}
 		\hline\hline
-				&Equator	&\SI{+-16}{\degree}~latitudes	&Poles\\
+		Rotation	&Equator	&\SI{+-16}{\degree}~latitudes	&Poles\\
 				&\multicolumn{1}{c}{[d]}	&\multicolumn{1}{c}{[d]}	&\multicolumn{1}{c}{[d]}\\
 		\hline
 		Sidereal	&25.05	&25.38	&34.35\\
@@ -70,10 +55,10 @@ are listed in \autoref{tab:solar_surface_rotation_periods}.\\
 	\end{tabular}
 \end{table}
 
+Pulkkinen1998:\\
+the solar differential rotation is continuously changing. During the present century, the rotation rate seems to have been slowing down, and so the concept of a global mean differential rotation may not be fully applicable.
 
-%meridional flow
-
-The meridional circulation is the proposed equatorial updrift and polar downdrift - a result of Reynolds stress and convective transport (cite?).\\
+rotation axis tilt (see next section)\\
 
 
 \section{Electric field at the magnetopause}

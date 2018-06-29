@@ -8,7 +8,7 @@
 The differential rotation of the solar surface is visible from sunspot observations and was first discovered by \citet{Scheiner1630}. It is caused by transport of angular momentum away from the rotation axis resulting from the Sun's inner thermal convective circulation.
 
 %rotation period
-\citet{Bartels1934} set the average synodic solar rotation period to 27~days for the definition of his solar rotation number. The Bartels Rotation Number counts the solar rotations starting with 8~February 1832. Carrington determined a more accurate average solar rotation period of 27.2753~days, which is valid for solar latitudes of \SI{+-16}{\degree} where sunspots usually are found. He defined the Carrington Rotation Number based upon this period, starting with 9~November 1853 (cite?).\\
+\citet{Bartels1934} set the average synodic solar rotation period to 27~days for the definition of his solar rotation number. The Bartels Rotation Number counts the solar rotations starting with 8~February 1832. Carrington determined a more accurate average solar rotation period of 27.2753~days, which is valid for solar latitudes of \SI{+-16}{\degree} where sunspots usually are found. He defined the Carrington Rotation Number based upon this period, starting with 9~November 1853 (cite?).
 % sidereal: 25.38~d (of 609.12~h Sun Fact Sheet...), synodic: 27.2753~d (derived)
 
 %best-fitting function
@@ -16,21 +16,22 @@ The Sun's sidereal differential angular velocity is described by the best-fittin
 \begin{align}
 	\omega_\odot(\theta) = \omega_\text{eq} + B \sin^2(\theta) + C \sin^4(\theta)	\,,	\label{eq:omega_differential}
 \end{align}
-with the heliolatitude $\theta$, the equatorial angular velocity $\omega_\text{eq} = \SI{14.37}{\degree\per\day}$, the coefficients $B = \SI{-2.33}{\degree\per\day}$, and $C = \SI{-1.56}{\degree\per\day}$. The function is plotte in \autoref{fig:differential_rotation_pdfcairo_plot}.
+with the heliolatitude $\theta$, the equatorial angular velocity $\omega_\text{eq} = \SI{14.37}{\degree\per\day}$, the coefficients $B = \SI{-2.33}{\degree\per\day}$, and $C = \SI{-1.56}{\degree\per\day}$. This function is plotted in \autoref{fig:differential_rotation}.
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
-		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/differential_rotation_pdfcairo_plot.pdf}
+		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/differential_rotation.pdf}
 	}{
-		\caption{Diagram showing the angular velocity of the sidereal solar surface differential rotation for different latitudes. remove sides and y2axis... +x2axis with rotation period?}
-		\label{fig:differential_rotation_pdfcairo_plot}
+		\caption{Diagram showing the angular velocity of the sidereal solar surface differential rotation over solar latitude.}
+		\label{fig:differential_rotation}
 	}
+	\addtocontents{lof}{\smallskip\protect\center I created the figure myself.\medskip}
 \end{figure}
 Thus, the solar equatorial sidereal rotation period is $T_\odot^\text{eq} = \SI{25.05}{\day}$ and the synodic period is
 \begin{align}
 	T_\odot^\text{eq,syn} &= \left(\frac{1}{T_\odot^\text{eq}} - \frac{1}{T_\text{E}}\right)^{-1}\\
 	&= \SI{26.90}{\day}	\,,	\nonumber
 \end{align}
-with the Earth's orbital rotation period $T_\text{E} = \SI{365.25}{\day}$ (1/100 Julian century).\\
+with a Julian year as the Earth's orbital rotation period, $T_\text{E} = \SI{365.25}{\day}$.\\
 
 
 
@@ -45,8 +46,8 @@ are listed in \autoref{tab:solar_surface_rotation_periods}.\\
 	\centering
 	\begin{tabular}{llll}
 		\hline\hline
-		Rotation	&Equator	&\SI{+-16}{\degree}~latitudes	&Poles\\
-				&\multicolumn{1}{c}{[d]}	&\multicolumn{1}{c}{[d]}	&\multicolumn{1}{c}{[d]}\\
+		\multirow{2}{*}{Rotation}	&Equator	&\SI{+-16}{\degree}~latitudes	&Poles\\
+				&[d]	&\multicolumn{1}{c}{[d]}	&\multicolumn{1}{c}{[d]}\\
 		\hline
 		Sidereal	&25.05	&25.38	&34.35\\
 		Synodic	&26.90	&27.2753$^\text{a}$	&37.92\\
@@ -226,6 +227,7 @@ with $t$ in years, suffices for the plot of the seasonal changes in Earth's sola
 		\caption{Seasonal changes of the Sun's and the Earth's tilt angles to the ecliptic and of the Earth's solar distance. The curves are approximated with trigonometric fuctions.}
 		\label{fig:Sun_Earth_geometry}
 	}
+	\addtocontents{lof}{\smallskip\protect\center I created the figure myself.\medskip}
 \end{figure}
 The total distance variation of \SI{3.34}{\%} has implications for the magnitude of the solar wind quantities measured at Earth, as most of them follow a power law distance dependency. Thus for example, the density varies about \SI{6.7}{\percent} between summer and winter because it scales with $r^{-2}$.
 

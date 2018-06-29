@@ -168,10 +168,10 @@ order=5
 
 [item:appendix/appendix.tex]
 archive=true
-column=15
+column=58
 encoding=UTF-8
 highlight=LaTeX
-line=30
+line=33
 mode=LaTeX
 open=true
 order=4
@@ -373,10 +373,10 @@ JumpList=
 ViMarks=.,26,49,[,26,49,],26,53
 
 [view-settings,view=0,item:appendix/appendix.tex]
-CursorColumn=15
-CursorLine=30
+CursorColumn=58
+CursorLine=33
 JumpList=
-ViMarks=.,30,15,[,30,15,],30,15
+ViMarks=.,33,57,[,33,57,],33,57
 
 [view-settings,view=0,item:appendix/curriculum_vitae.tex]
 CursorColumn=0

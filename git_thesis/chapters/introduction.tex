@@ -1028,7 +1028,7 @@ A few of the currently existing \Kp{} prediction models are listed below, includ
 	\urltext{http://mms.rice.edu/mms/forecast.php}.
 % 	correlation coefficients of over 0.88 for 1 h predictions of Kp and 0.86 for 3 h ahead
 	
-	\item The SWPC provides \Kp{} predictions of about half an hour ahead based on established relations between solar wind parameters and \Kp{}. They use solar wind real-time data from spacecraft at L1. The SWPC also publishes 3"~day predictions made manually by experienced forecasters that interprete ENLIL simulation results. The 3"~Day Geomagnetic Forecast website:\\
+	\item The SWPC provides \Kp{} predictions of about half an hour ahead based on established relations between solar wind parameters and \Kp{}. They use solar wind real-time data from spacecraft at L1. The SWPC also publishes 3"~day predictions made manually by experienced forecasters that interprete WSA-Enlil simulation results. The 3"~Day Geomagnetic Forecast website:\\
 	\urltext{https://www.swpc.noaa.gov/products/3-day-geomagnetic-forecast}.
 	
 \end{itemize*}
@@ -1045,22 +1045,19 @@ In this work I denote solar wind without CMEs simply as solar wind streams, that
 The occurrence of solar wind streams at Earth depends on the size and location of CHs. As the coronal configuration changes only slowly, the resulting streams generally are steady and periodic with the solar rotation. All these characteristics are harnessed by different prediction methods to estimate the properties of the solar wind arriving at Earth within the near future.
 
 % stream velocity forecast from CHs
-Coronal holes are the origin of the fast solar wind. Their area on the solar disk -- seen in EUV wavelengths -- correlates with the measured velocity of solar wind streams \citep{Vrsnak2007}. This relation is used to predict the Earth-arrival velocity of solar wind streams about 4~days in advance \citep{Rotter2012}, as is done in real-time within the empirical solar wind forecast (ESWF) at the University of Graz\footnote{ESWF website: \urlfoot{http://swe.uni-graz.at/index.php/services/solar wind-forecast}}.
+Coronal holes are the origin of the fast solar wind. Their area on the solar disk -- seen in EUV wavelengths -- correlates with the measured velocity of solar wind streams \citep{Vrsnak2007}. This relation is used to predict the Earth-arrival velocity of solar wind streams about 4~days in advance \citep{Rotter2012}, as is done in real-time within the empirical solar wind forecast (ESWF) at the University of Graz\footnote{ESWF website: \urlfoot{http://swe.uni-graz.at/index.php/services/solar-wind-forecast}}.
 
 % solar wind time shift
-Coronal holes may grow or shrink to some extent during one solar rotation. However, they usually exist over many rotations and thus lead to recurrent HSSs and CIRs. This steadyness is utilized to forecast the solar wind one solar rotation in advance, simply by shifting the in-situ measurements by 27~days. The prediction accuracy can be further enhanced with shortening this period to a few days by obtaining in-situ data from spacecraft trailing the Earth in its orbit around the Sun. This is possible with the STEREO spacecraft and with a potential mission located at the fifth Lagrange point (L5).
+Coronal holes may grow or shrink to some extent during one solar rotation. However, they usually exist over many rotations and thus lead to recurrent HSSs and CIRs. This steadyness is utilized to forecast the solar wind one solar rotation in advance, simply by shifting the in-situ measurements by 27~days. The prediction accuracy can be further enhanced by shortening this period to a few days using in-situ data from spacecraft trailing the Earth in its orbit around the Sun. This is possible with the STEREO spacecraft and with a potential mission located at the fifth Lagrange point (L5). This method is applied together with an analyis of CH sizes in the STEREO+CH persistence model \citep{Temmer2018} developed at the University of Graz, a 4"~day real-time forecast is hosted on their website\footnote{STEREO+CH website: \urlfoot{http://swe.uni-graz.at/index.php/services/solar-wind-forecast-stereo-ch}}.
 
 % ENLIL
-Another prediction approach is the numerical MHD simulation of the solar wind flow from the Sun to Earth, using remote observations of the Sun and its corona. This allows forecast times of \SIrange{3}{4}{\day}, the solar wind's travel time to \SI{1}{\au}. The WSA-ENLIL model achieves this with two steps. First, the information of solar images is used to get the configuration of the source surface. From there the solar wind is propagated outwards.\\
-
-cite and link...\\
+Another prediction approach is the numerical MHD simulation of the solar wind flow from the Sun to Earth, using remote observations of the Sun and its corona. This allows forecast times of 3~to 4~days, the solar wind's average travel time to \SI{1}{\au}. The WSA-Enlil model achieves this in two steps \citep{Pizzo2011}. First, observations of the solar surface magnetic field are used to approximate the expansion of the corona and hence get the outflow at the source surface. Second, a steady solar wind flow is propagated outwards to Earth. WSA-Enlil real-time model results are provided by NOAA's SWPC\footnote{WSA-Enlil Solar Wind Prediction website: \urlfoot{https://www.swpc.noaa.gov/products/wsa-enlil-solar-wind-prediction}}.
 
 Precise solar wind predictions will be very difficult to achieve, as it is already hard to trace solar wind measurements made at \SI{1}{\au} unambiguously back to its coronal source \citep{Cranmer2017}. It is not only complicated by stream-stream interactions but by internal solar wind processes, such as turbulence, as well.
 
 
-% CME forecast
 \subsubsection*{CME forecast}
-
+% CME forecast
 It is important to know in advance if and when CMEs arrive at Earth, because of their possible strong impact on the terrestrial magnetosphere. Knowing the geometry of a CME, it is possible to infer its direction and speed from white-light images. Through kinematic forward-modeling techniques that take advantage of the self-similar expansion observed in CMEs, it is possible to derive an estimated arrival time at Earth. As MCs are the drivers for most severe geomagnetic disturbances \citep{Bothmer1995,Cane2003}, it is also important to forecast their magnetic field strength and configuration.
 
 % 3D models
@@ -1082,7 +1079,7 @@ arrival time calculation error: still around 6~hours...\\
 
 % CME forecast methods and models
 CME forecast:\\
-- WSA-ENLIL CMEs without B-field forecast\\
+- WSA-Enlil CMEs without B-field forecast \citep{Pizzo2011}\\
 - MC forecast; Savani2015: Predicting the magnetic vectors within coronal mass ejections arriving at Earth: 1. Initial architecture\\
 - CCMC: a multitude of competing techniques\\
 - UGOE CME forecast chain (DDC)\\
@@ -1135,6 +1132,12 @@ adjusted BSS scheme (Savani2015)\\
 Savani2017:\\
 inferring the magnetic field direction along the trajectory of Earth through the CME would be a major advance in geomagnetic activity prediction.\\
 
+
+CME velocity estimation\\
+methods and modeling...?\\
+GCS, CAD modeling -> propagation direction and apex height-time profile -> acceleration and velocity kinematics...\\
+
+CMEs are already sighted raising from their source regions on the solar surface. Some CME properties can be estimated from remote coronagraph observations and modeled to Earth, such as its propagation direction, its arrival time, and arrival velocity (cites?). Thus, early observations enable a heads-up time depending on the CME's propagation speed to Earth. This travel duration can be more than 4~days for slow events with average solar wind speeds, about 40~hours for fast events with speeds of \SI{1000}{\km\per\s}, and down to 20~hours and even below for the rare extreme cases, e.g., about 21~hours for the event on 23~July 2012 \citep{Russell2013,Temmer2015} and about 19~hours for the event observed by \citet{Carrington1859} on 1~September 1859. The theoretical minimal heads-up time for CMEs is estimated to be half a day \citep{Gopalswamy2005}.
 
 
 \section{notes...}

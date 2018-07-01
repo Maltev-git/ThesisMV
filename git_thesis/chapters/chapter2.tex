@@ -10,13 +10,15 @@ Impact estimations derived from empirical correlations between in-situ solar win
 Variations in the Earth's magnetosphere are largely evoked by influence through the solar wind. These magnetospheric disturbances have diverse effects on the terrestrial environment. Especially the effects of severe geomagnetic storms created by coronal mass ejections (CMEs) pose various threats to sensitive technical systems and exposed humans. Thus, the development of quantitative forecasts for magnetospheric impacts caused by solar wind and CMEs is of major importance. The analyses in this chapter are based on my work done for the project Advanced Forecast For Ensuring Communications Through Space (AFFECTS).
 
 %aims
-The goals of this study are to estimate the magnetospheric impact from solar activity in general, from solar wind and also to predict it for CMEs in particular. Empirical dependencies between specific solar wind parameters and the magnetospheric disturbance index~\Kp{} are presented. These dependencies allow to nowcast the \Kp~index from upstream (L1) solar wind in-situ measurements. Hence, also the magnetospheric impact of CMEs is estimated solely based on their arrival velocities, predicted from coronagraph observations. The prediction of solar wind stream velocities, e.g., from coronal hole observations, enables to estimate their impact as well.
+The goals of this study are to estimate the magnetospheric impact from solar wind and also to predict it for CMEs and streams in particular. Empirical dependencies between specific solar wind parameters and the magnetospheric disturbance index~\Kp{} are presented. These dependencies allow to nowcast the \Kp~index from upstream (L1) solar wind in-situ measurements. Hence, also the magnetospheric impact of CMEs is estimated solely based on their arrival velocities that may be predicted from coronagraph observations. The prediction of solar wind stream velocities, e.g., obtained from coronal hole observations, enables to estimate their impact as well.
 
 %methods
-First, I estimate the long-term variations of the yearly average \Kp{}~values, which are contributed by solar activity. This is achieved via logarithmic fitting of a yearly sunspot number (SSN) dependency. In order to nowcast the \Kp~index from general solar wind conditions, I apply a correlation with the product of the parameters velocity and magnetic field z-component in GSM coordinates (\vBz{}). In order to forecast the \Kp~index from estimated CME and stream velocities, I furthermore filter the solar wind data, using flagged CME times from the solar wind structures (SWS) list provided by \citet{Richardson2012}. The solar wind data considered in these analyses consists of 35~years (1981--2016) of high-resolution minutely OMNI data, which is composed of multi-spacecraft intercalibrated in-situ measurements from \SI{1}{\au}. I analyze the \Kp{} frequency distributions with respect to the depending parameters \vBz{} and velocity, derive their mean \Kp{} per interval and further compile functional dependencies via logarithmic fitting.
+First, I estimate the long-term variations of the \Kp~index which are contributed by solar activity and seasonal effects. A functional dependency of the average yearly \Kp~index on the yearly sunspot number (SSN) is derived. In order to nowcast the \Kp~index from general solar wind conditions, I apply a correlation with the solar wind electric field -- the product of the parameters velocity and magnetic field z-component in GSM coordinates: $E = v B_\text{z}$. A suitable logarithmic function is constructed and its fit to the data results in a functional relation between $E$ and \Kp{}. For the purpose of forecasting the \Kp~index from estimated CME and stream velocities, I furthermore filter the solar wind data, using flagged CME times from the solar wind structures (SWS) list provided by \citet{Richardson2012}. Logarithmic fits to the data yield in separate \Kp{} relations for CMEs and streams.
+
+The solar wind data considered in these analyses consists of 35~years (1981--2016) of high-resolution minutely OMNI data, which is composed of multi-spacecraft intercalibrated in-situ measurements from \SI{1}{\au}. I analyze the \Kp{} frequency distributions with respect to the depending parameters $E$ and velocity, derive their mean \Kp{} per interval and further compile functional dependencies via logarithmic fitting. I evaluate the relations' prediction performance by analyzing their forecast errors and conparing their true skill statistic.
 
 %results
-The obtained functional relations enable empirical estimations of the mean \Kp{} impact from measured solar activity, in-situ solar wind, and remotely determined CME and stream velocities.
+As the obtained functional relations are simple, they cannot compete with ANNs, \Kp{} persistence, or full-fledged solar wind coupling functions. However, they enable empirical estimations of the mean \Kp{} impact from measured solar activity, in-situ solar wind, and remotely determined CME and stream velocities.
 
 %conclusions
 
@@ -27,31 +29,31 @@ Since the early 19th~century it is known that variations in the solar wind evoke
 
 \Kp{} is designed for... (cite?). I use this magnetospheric disturbance index to correlate it with near-Earth solar wind measurements. More detailed information on the \Kp{}~index can be found in \autoref{sec:kp_index}.\\
 
+%results
+With the results presented in this chapter, I elaborate the step from solar wind properties at Earth to the forecast of the possible impact strength on the terrestrial magnetosphere. I derive empirical correlations between the solar wind properties and the geomagnetic \Kp~index, in order to obtain the capability to forecast \Kp{} values. The derived functional dependencies can be used to nowcast/forecast the \Kp~index.\\
+
 differences to existing studies...\\
 
-%results
-With the results presented in this chapter, I elaborate the step from the predicted CME and stream velocities to the forecast of the possible impact strength on the terrestrial magnetosphere. I derive an empirical correlation between the solar wind speed and the geomagnetic \Kp~index, in order to obtain the capability to forecast \Kp{} values solely based on the predicted CME and stream velocities. The derived functional dependencies can be used to nowcast/forecast the \Kp~index.\\
-
 %general solar wind nowcast; rt-data
-In-situ measurements of solar wind are made almost continuously, e.g., at the first Lagrange point (L1), in front of the magnetosphere. Since 1963 several spacecraft collected more than 50~years of solar wind data. The latest spacecraft, e.g., Wind, ACE and DSCOVR (launched in early 2015), provide real-time solar wind data online\footnote{Wind real-time data website: \urlfoot{https://pwg.gsfc.nasa.gov/windnrt/}} \footnote{ACE real-time data website: \urlfoot{http://www.swpc.noaa.gov/products/ace-real-time-solar wind}} \footnote{DSCOVR real-time data website: \urlfoot{http://www.swpc.noaa.gov/products/real-time-solar wind}}.
+In-situ measurements of solar wind are made almost continuously, e.g., at the first Lagrange point (L1), in front of the magnetosphere. Since 1963 several spacecraft collected more than 50~years of solar wind data. The latest spacecraft, that is, Wind, ACE, and DSCOVR (launched in early 2015), provide real-time solar wind data online\footnote{Wind real-time data website: \urlfoot{https://pwg.gsfc.nasa.gov/windnrt/}} \footnote{ACE real-time data website: \urlfoot{http://www.swpc.noaa.gov/products/ace-real-time-solar wind}} \footnote{DSCOVR real-time data website: \urlfoot{http://www.swpc.noaa.gov/products/real-time-solar wind}}.
 % solar wind impacts
-These solar wind real-time data are used to nowcast various effects on the Earth's magnetosphere, such as the position of the magnetospheric bow shock in front of the Earth, the magnitude of geomagnetic disturbances (e.g., \Kp~index), the positions of the polar auroral ovals, the variation of the total electron content (TEC) of the ionosphere, and the positional error of global navigation satellite systems (GNSS).\\
+These solar wind real-time data are used to nowcast various effects on the Earth's magnetosphere, such as the position of the magnetospheric bow shock in front of the Earth, the magnitude of geomagnetic disturbances, the positions of the polar auroral ovals, the variation of the total electron content (TEC) of the ionosphere, and the positional error of global navigation satellite systems (GNSS).\\
 
 
 %CME velocity forecast
 The velocity and the direction of CMEs can be determined in their early near-Sun stages via remote tracking with coronagraph white-light observations. Using these parameters as input for CME propagation models, their possible arrival time and arrival velocity at Earth can be derived.\\
 
-There are efforts to predict the direction and strength of the magnetic field from the flux rope geometry and orientation \citep{Savani2015}. However, the compressed solar wind magnetic field in the sheath region is of at least similar importance for magnetospheric disturbances \citep{Huttunen2004}. As the solar wind Bz is quite random with low autocorrelation time, its prediction is not yet implemented in the current forecast.\\
+There are efforts to predict the direction and strength of the magnetic field from the flux rope geometry and orientation \citep{Savani2015}. However, the compressed solar wind magnetic field in the sheath region is of at least similar importance for magnetospheric disturbances \citep{Huttunen2004}. As the solar wind $B_\text{z}$ is quite random with low autocorrelation time, its prediction is not yet implemented in the current forecasts (cite?).\\
 
 %%% synopsis
-The objectives of the analyses performed and found in this chapter are to estimate the magnetospheric impact of solar wind and to predict it for CMEs in particular. In \autoref{sec:long_term_variations} I determine the magnitudes of the long-term \Kp{} changes due to solar activity and measure the extent of seasonal variations stemming from the Earth's orbit. In order to nowcast the \Kp{}~index, I quantify the solar wind influence on \Kp{} by deriving a functional relation with the product of solar wind velocity and magnetic field z-component (\autoref{sec:kp_nowcast}). Finally, for the purpose of enabling \Kp{} forecasts from remote observations, I estimate the \Kp{} impact coming from CMEs and solar wind streamers separately by deriving functional dependencies with their velocities (\autoref{sec:kp_forecast_from_remote_CME_and_stream_observations}).
+The objectives of the analyses performed and found in this chapter are to estimate the magnetospheric impact of solar wind and to predict it for CMEs and streams in particular. In \autoref{sec:long_term_variations} I determine the magnitudes of the long-term \Kp{} changes due to solar activity and measure the extent of seasonal variations stemming from the Earth's orbit. In order to nowcast the \Kp{}~index, I quantify the solar wind influence on \Kp{} by deriving a functional relation with the solar wind E-field (\autoref{sec:kp_nowcast}). Finally, for the purpose of enabling \Kp{} forecasts from remote observations, I estimate the \Kp{} impact coming from CMEs and streams separately by deriving functional dependencies with their velocities (\autoref{sec:kp_forecast_from_remote_CME_and_stream_observations}).
 
 
 \section{Long-term variations of the \Kp{}~index}
 \label{sec:long_term_variations}
 
 \subsection{Solar activity influence}
-The \Kp{} data is obtained from the GFZ~Potsdam\footnote{GFZ~Potsdam website: \urlfoot{http://www.gfz-potsdam.de/de/kp-index/}}, where the index is currently maintained. The data used in this analysis covers the time period 1932--2016, see also \ref{sec:kp_data}. Its frequency distribution shows that the highest frequencies occur around low \Kp{} values of 1+. Going to higher \Kp{} values, the frequencies decline asymtotically towards zero (see \autoref{fig:Kp_histogram_b}) -- a \Kp{} value of 9o occurred only 29 times in this time interval.\\
+The \Kp{} data is obtained from the GFZ~Potsdam, where the index is currently maintained\footnote{GFZ~Potsdam \Kp~index website: \urlfoot{http://www.gfz-potsdam.de/en/kp-index/}}. The data used in this analysis covers the time period 1932--2016, see also \autoref{sec:kp_data}. Its frequency distribution shows that the highest frequencies occur around low \Kp{} values of 1+, see \autoref{fig:Kp_histogram_b}. Going to higher \Kp{} values, the frequencies decline asymptotically towards zero -- a \Kp{} value of 9o occurred only 29 times in this time interval.\\
 \begin{figure}[htb]
 	\begin{floatrow}
 		\ffigbox{
@@ -68,14 +70,13 @@ The \Kp{} data is obtained from the GFZ~Potsdam\footnote{GFZ~Potsdam website: \u
 		}
 	\end{floatrow}
 \end{figure}
+Obviously, the general \Kp{} distribution as seen in \autoref{fig:Kp_histogram_b} averages over solar activity. Solar activity is generally tracked with the international sunspot number (SSN). SSN data from the time period \citeyear{sidc1917} is used in the present analyses. The data is obtained from the online catalog\footnote{WDC-SILSO website: \urlfoot{http://www.sidc.be/silso/}} provided by the World Data Center -- Sunspot Index and Long-term Solar Observations (WDC-SILSO), Solar Influences Data Analysis Center (SIDC), Royal Observatory of Belgium (ROB).
 
-Obviously the general \Kp{} distribution (seen in \autoref{fig:Kp_histogram_b}) averages over solar activity. Solar activity is generally tracked with the international sunspot number (SSN). In the present analyses SSN data from the time period \citeyear{sidc1917} is used. The data is obtained from the online catalog\footnote{WDC-SIDC website: \urlfoot{http://www.sidc.be/silso/}} provided by the World Data Center -- Sunspot Index and Long-term Solar Observations (WDC-SILSO), Solar Influences Data Analysis Center (SIDC), Royal Observatory of Belgium (ROB).
-
-The \Kp{} frequency distributions' shape varies with different states of solar activity (cite?). This is visible in the yearly distributions, sorted and colored by yearly SSN in \autoref{fig:Kp_histogram_yearlySSN_b}.
+The \Kp{} frequency distributions' shape varies with solar activity (cite?). This is visible in the yearly distributions, sorted and colored by yearly SSN in \autoref{fig:Kp_histogram_yearlySSN_b}.
 
 The distribution's peak position scales with SSN, that is, a high yearly SSN results in a higher abundance of large \Kp{} values as well (cite?).
 
-The time series of yearly average \Kp{} values of the years 1932--2016 shows an imprint of the solar cycles (see the top graphs in \autoref{fig:yearly_kp-ssn_correlation_c}).
+The time series of yearly average \Kp{} values from the years 1932--2016 shows a solar cycle imprint, see the top graphs in \autoref{fig:yearly_kp-ssn_correlation_c}.
 \begin{figure}
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/yearly_kp-ssn_correlation_c.pdf}
@@ -84,10 +85,10 @@ The time series of yearly average \Kp{} values of the years 1932--2016 shows an 
 		\label{fig:yearly_kp-ssn_correlation_c}
 	}
 \end{figure}
-The \Kp{} pattern follows the solar cycle minima and maxima as well as the changes in magnitude between solar cycles (cite?). The yearly mean \Kp{} shifts about 1~unit for both variations separately. As expected, the \Kp{}~index correlation with solar activity shows an 11-year period (cite?) (see bottom graph in \autoref{fig:yearly_kp-ssn_correlation_c}). The highest correlation coefficient of 0.60 is found with a time lag of $-1$~year, that is, the yearly average \Kp{} follows the SSN of the previous year.
+The \Kp{} pattern follows the solar cycle minima and maxima as well as the changes in magnitude between solar cycles (cite?). The yearly mean \Kp{} shifts about 1~\Kp~unit for both variations separately. As expected, the correlation with solar activity shows an 11-year period, see bottom graph in \autoref{fig:yearly_kp-ssn_correlation_c}. The highest correlation coefficient of 0.60 is found with a time lag of $-1$~year, that is, the yearly average \Kp{} follows the SSN of the previous year.
 %Kp-ssn cc: 0.5971
 
-The yearly mean \Kp~index with respect to the 1-year lagged SSN shows a raise with increasing SSN, this is seen in \autoref{fig:Kp_SSN_fit_d}.
+The yearly mean \Kp~index with respect to the 1-year lagged SSN shows a raise with increasing SSN, as seen from \autoref{fig:Kp_SSN_fit_d}.
 \begin{figure}
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_SSN_fit_d.pdf}
@@ -96,18 +97,19 @@ The yearly mean \Kp~index with respect to the 1-year lagged SSN shows a raise wi
 		\label{fig:Kp_SSN_fit_d}
 	}
 \end{figure}
-I perform a fit in order to obtain an analytical relation for this dependency. \Kp{} itself is a quasi-logarithmic index, so it is apparent to use a logarithmic fit function:
+In order to obtain an analytical relation for this dependency, perform a least-squares regression fit. \Kp{} itself is a quasi-logarithmic index, so it is apparent to use a logarithmic fit function:
 \begin{align}
 	f(x) = a \cdot \ln(x) + b	\,.	\label{eq:log_fit_function}
 \end{align}
-The fit parameters are $a = 0.281(43)$ and $b = 1.05(19)$ and lead to the relation
+The resulting fit parameters are $a = 0.281(43)$ and $b = 1.05(19)$; the numbers in parentheses are the estimated standard deviations.
+They lead to the relation
 \begin{align}
 	\Kp(ssn) = 0.28 \cdot \ln(ssn) + 1.1	\,,	\label{eq:kp_ssn_relation}
 \end{align}
 % log fit parameters:
 % a 0.281126         +/- 0.04267
 % b 1.04923          +/- 0.19
-which is plotted in \autoref{fig:Kp_SSN_fit_d}. This means that for a SSN of 1 the mean \Kp{} is $1.05(20)$ and for a SSN of 300 it is $2.65(31)$. The numbers in parentheses are the errors on the corresponding last digits of the quoted value. They are calculated via error propagation from the estimated standard deviations of the fit parameters.
+which is plotted in \autoref{fig:Kp_SSN_fit_d}. This means that for an average yearly SSN of 1 the mean \Kp{} is $1.05(20)$ and for a SSN of 300 it is $2.65(31)$. The numbers in parentheses are the errors on the corresponding last digits of the quoted value. They are calculated via error propagation from the estimated standard deviations of the fit parameters.
 % SSN	Kp	Kp_err
 % 1	1.0492	0.189
 % 10	1.6965	0.213
@@ -118,7 +120,7 @@ which is plotted in \autoref{fig:Kp_SSN_fit_d}. This means that for a SSN of 1 t
 
 
 \subsection{Seasonal variations}
-On top of the yearly variations, seasonal variations exist in the magnetospheric disturbances as well. In the months May--August the \Kp{} peak frequency is higher than in the remaining months of the year, whereas in March/April and September/October the \Kp{} values \num{>3} are more abundant (cite?). This is apparent from looking at the monthly \Kp{} frequency distributions, plotted in \autoref{fig:Kp_histogram_monthly}.
+On top of the yearly variations, seasonal variations exist in the magnetospheric disturbances as well. In the months May--August the \Kp{} peak frequency is higher than in the remaining months of the year, whereas in March/April and September/October \Kp{} values larger than 3 are more abundant. This is apparent from looking at the monthly \Kp{} frequency distributions plotted in \autoref{fig:Kp_histogram_monthly}.
 \begin{figure}[htb]
 	\begin{floatrow}
 		\ffigbox{
@@ -135,15 +137,15 @@ On top of the yearly variations, seasonal variations exist in the magnetospheric
 		}
 	\end{floatrow}
 \end{figure}
-These \Kp{} changes arise from seasonal variations of the solar wind parameters at Earth, which stem from Earth's yearly changes in orbital distance and heliographic latitude. Another seasonal effect stems from the Earth's rotation axis tilt, which changes the direction of the Earth's magnetic dipole axis to the Sun over the year.
+These \Kp{} changes arise from seasonal variations of the solar wind parameters at Earth, which stem from Earth's yearly changes in orbital distance and heliographic latitude. The Earth's rotation axis tilt adds another seasonal effect, the tilt changes the direction of the Earth's magnetic dipole axis to the Sun over the year.
 
-Earth's distance to the Sun varies over the course of a year by \SI{+-1.67}{\percent}, see appendix \autoref{sec:sun_earth_orbit_geometry}. The solar wind parameters scale via power-law dependencies with solar distance, as it is described in the following \autoref{chap:empirical_solar_wind_model_for_the_inner_heliosphere} and accordingly in \citet{Venzmer2018}. For example, the solar wind proton density scales with about $r^{-2}$, this leads to yearly variations in density of up to \SI{3.4}{\percent}. These yearly solar wind changes have a direct influence on the \Kp{}~index.
+Earth's distance to the Sun varies over the course of a year by \SI{+-1.67}{\percent}, see appendix \autoref{sec:sun_earth_orbit_geometry}. The solar wind parameters scale via power-law dependencies with solar distance, as it is described in the following \autoref{chap:empirical_solar_wind_model_for_the_inner_heliosphere} and accordingly in \citet{Venzmer2018}. For example, the solar wind proton density scales with about $r^{-2}$, this leads to a yearly variation in density of about \SI{6.7}{\percent}. These yearly solar wind variations have direct influence on the \Kp{}~index.
 
 The Sun's rotation axis tilt angle to the ecliptic is \SI{+-7.25}{\degree} and that for Earth is \SI{+-23.44}{\degree}, see also appendix \autoref{sec:sun_earth_orbit_geometry}. The solar wind magnetic field strength varies with heliographic latitude (cite?). The solar wind influence on the \Kp{}~index depends on its coupling efficiency with the magnetosphere. Furthermore, the rate of magnetic reconnection between solar wind and the Earth's magnetosphere depends on both fields' orientation to each other (parallel/antiparallel). Additionally, the tilt of the magnetic dipole axis to the rotation axis -- a few degrees for the Sun during cycle minima (extreme during solar maxima...) and about \SI{10}{\degree} for the Earth -- complicates this system even more.
 %geomagnetic dipole tilt: Planetary fact sheet: 11.2 (Model GSFC-12/83)
 %variation range in the time period 1930--2016: 9.6--11.5° (http://wdc.kugi.kyoto-u.ac.jp/poles/polesexp.html)
 
-So the \Kp{} variation effects originate from the seasonal change in the solar tilt, the Earth's tilt, and the Earth's distance. Thorough analyses of the seasonal variations were already performed by \citep{Cortie1912} (more cites!?). Thus, I just quantify the bulk magnitude of these effects in order to consider them as relative uncertainties when using the solar activity relation (\ref{eq:kp_ssn_relation}). Looking at the \Kp{} frequency distributions by month -- seen in \autoref{fig:Kp_seasonal_e} -- it is apparent that for high \Kp{} values ($>4$), there exist yearly frequency maxima at the equinoxes and frequency minima at the solstices, as described by \citep{Cortie1912}. It can be seen from the plotted quantiles that this semiannual variation amounts to $1/3$~\Kp~unit at small \Kp~values and up to 4/3~units at higher \Kp~values.
+So the \Kp{} variation effects originate from the seasonal change in the solar tilt, the Earth's tilt, and the Earth's distance. Thorough analyses of the seasonal variations were already performed by \citep{Cortie1912} (more cites?). Thus, I just quantify the bulk magnitude of these effects in order to consider them as relative uncertainties when using the solar activity relation (\ref{eq:kp_ssn_relation}). Looking at the \Kp{} frequency distributions by month -- seen in \autoref{fig:Kp_seasonal_e} -- it is apparent that for high values ($\Kp{} > 4$), there exist yearly frequency maxima at the equinoxes and frequency minima at the solstices, as was early described by \citet{Cortie1912}. It is evident from the plotted quantiles that this semiannual variation amounts to $1/3$~\Kp~unit at small \Kp~values and up to 4/3~\Kp~units at higher \Kp~values.
 
 
 \section{\Kp{} nowcast from in-situ solar wind measurements}

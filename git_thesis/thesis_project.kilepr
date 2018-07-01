@@ -168,13 +168,13 @@ order=5
 
 [item:appendix/appendix.tex]
 archive=true
-column=0
+column=44
 encoding=UTF-8
 highlight=LaTeX
-line=284
+line=91
 mode=LaTeX
-open=false
-order=4
+open=true
+order=5
 
 [item:appendix/curriculum_vitae.tex]
 archive=true
@@ -228,10 +228,10 @@ order=6
 
 [item:chapters/chapter2.tex]
 archive=true
-column=832
+column=19
 encoding=UTF-8
 highlight=LaTeX
-line=147
+line=179
 mode=LaTeX
 open=true
 order=4
@@ -258,20 +258,20 @@ order=5
 
 [item:chapters/front_matter.tex]
 archive=true
-column=35
+column=81
 encoding=UTF-8
 highlight=LaTeX
-line=355
+line=366
 mode=LaTeX
 open=true
 order=2
 
 [item:chapters/introduction.tex]
 archive=true
-column=310
+column=422
 encoding=UTF-8
 highlight=LaTeX
-line=1030
+line=951
 mode=LaTeX
 open=true
 order=3
@@ -373,10 +373,10 @@ JumpList=
 ViMarks=.,26,49,[,26,49,],26,53
 
 [view-settings,view=0,item:appendix/appendix.tex]
-CursorColumn=0
-CursorLine=284
+CursorColumn=44
+CursorLine=91
 JumpList=
-ViMarks=.,268,379,[,268,372,],268,379
+ViMarks=.,91,43,[,91,42,],91,43
 
 [view-settings,view=0,item:appendix/curriculum_vitae.tex]
 CursorColumn=0
@@ -409,10 +409,10 @@ JumpList=
 ViMarks=.,312,260,[,312,259,],312,260
 
 [view-settings,view=0,item:chapters/chapter2.tex]
-CursorColumn=832
-CursorLine=147
+CursorColumn=19
+CursorLine=179
 JumpList=
-ViMarks=.,147,831,[,147,831,],147,831
+ViMarks=.,179,18,[,179,10,],179,18
 
 [view-settings,view=0,item:chapters/discussion_summary.tex]
 CursorColumn=0
@@ -427,16 +427,16 @@ JumpList=
 ViMarks=.,81,38,[,81,38,],81,38
 
 [view-settings,view=0,item:chapters/front_matter.tex]
-CursorColumn=35
-CursorLine=355
+CursorColumn=81
+CursorLine=366
 JumpList=
-ViMarks=.,365,0,[,365,0,],365,0
+ViMarks=.,366,51,[,366,40,],366,51
 
 [view-settings,view=0,item:chapters/introduction.tex]
-CursorColumn=310
-CursorLine=1030
+CursorColumn=422
+CursorLine=951
 JumpList=
-ViMarks=.,1030,309,[,1030,307,],1030,309,a,715,0,b,528,0,c,379,0,d,300,0,e,253,0,f,182,0,g,54,0,h,48,0,i,841,0,j,666,0,k,1109,0,m,1088,0,n,1200,0,o,1243,0,p,868,0,q,913,0,r,833,0,s,790,0,t,746,0,u,847,0,v,918,0,w,1112,0
+ViMarks=.,949,24,[,949,16,],949,24,a,715,0,b,528,0,c,379,0,d,300,0,e,253,0,f,182,0,g,54,0,h,48,0,i,841,0,j,666,0,k,1109,0,m,1088,0,n,1200,0,o,1243,0,p,868,0,q,913,0,r,833,0,s,790,0,t,746,0,u,847,0,v,918,0,w,1112,0
 
 [view-settings,view=0,item:chapters/paperMVVB_wrapper.tex]
 CursorColumn=0

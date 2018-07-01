@@ -936,8 +936,6 @@ Many coupling functions were proposed in order to characterize the solar wind's 
 \begin{itemize*}
 	\item $v$, the solar wind velocity. At an early stage, \citet{Snyder1963} found a strong correlation of the daily average velocity with geomagnetic activity from Mariner~2 solar wind measurements.
 	
-	\item $B$, the IMF strength. The long-term average IMF strength is observed to be proportional to the level of geomagnetic activity \citep{Stamper1999,Lockwood2013}.
-	
 	\item $B_\text{z}$, the IMF z"~component. \citet{Fairfield1966} deduced from early satellite IMF measurements that the southern IMF component is linked with geomagnetic disturbances, whereas a northward IMF is connected with quiet geomagnetic conditions.
 	
 	\item $B_\text{s}$, the half-wave rectifier as defined by \citet{Russell1973}, see also the R-M effect in \autoref{sec:russell_mcpherron_effect}. It describes a simple interaction in GSM coordinates that is proportional to the southward IMF component and zero during northward IMF:
@@ -949,13 +947,15 @@ Many coupling functions were proposed in order to characterize the solar wind's 
 		\end{cases}	\label{eq:half_wave_rectifier}
 	\end{align}
 	
+	\item $B$, the absolute IMF magnitude. The long-term average IMF strength is observed to be proportional to the level of geomagnetic activity \citep{Stamper1999,Lockwood2013}. This is due to the fact that the IMF orientation is averaged out on yearly timescales and the average southward IMF component becomes proportional to $B$.
+	
 	\item $|\vect{B}| \sin^n\left(\theta_c / 2\right)$, a term depending on the IMF clock angle $\theta_c$ and in shape similar to the half-wave rectifier. However, it is continuous around zero and therefore often preferred over $B_\text{s}$ \citep{Lockwood2013}. The IMF clock angle is defined as $\theta_c = \tan^{-1}\left(B_\text{y} / B_\text{z}\right)$ and the exponent $n$ is often chosen to be between 2 and 4, see also \autoref{fig:coupling_angle_e}. The term stands for the fraction of IMF field lines which merge with the magnetopause, that is, the merging probability of those IMF field lines which impact the magnetopause.
 	\begin{figure}[htb]
 		\fcapside[\FBwidth]{
 			\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/coupling_angle_e.pdf}
 		}{
 			\caption[\lofimage{figures_of_mine/gnuplots/coupling_angle_e.png}]
-			{IMF clock angle ($\theta_c$) dependency of the coupling functions' relative amplitudes. The different functions include the IMF clock angle factor by \citet{Newell2007} and the half-wave rectifier (black). I added the GSM coordinate directions in the lower left for orientation.}
+			{IMF clock angle ($\theta_c$) dependency of the coupling functions' relative amplitudes. The different functions include the IMF clock angle factor by \citet{Newell2007} and the half-wave rectifier (black). I added the GSM coordinate directions in the lower left for orientation. ...half-wave is -cos(theta)!!}
 			\label{fig:coupling_angle_e}
 		}
 	\end{figure}
@@ -1325,8 +1325,8 @@ In case of the ACE spacecraft, two triaxial fluxgate magnetometers are mounted \
 % % https://www.nasa.gov/sites/default/files/thumbnails/image/168038main_scm_etu_1_lg.jpg
 
 
-\section{Solar wind spectrometer}
-\label{sec:solar_wind_spectrometer}
+\section{Plasma spectrometer}
+\label{sec:plasma_spectrometer}
 A plasma spectrometer monitors the energy spectrum of the detected flow of charged particles. These plasma detectors detect the energy spectra and directions of the bulk particle flows. The energy spectra are used to further determine the bulk velocity, temperature, and density.
 
 Spectrometers measuring solar wind plasma are specified into electron and ion instruments. There exist several ion spectrometer types which cover different energy ranges for measuring the different solar wind particle species, such as SEPs, and cosmic rays. There are different instrument types for analyzing the masses, elemental composition, isotopic abundances, and charge states.

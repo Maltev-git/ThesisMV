@@ -68,40 +68,32 @@ It describes the force $\vect{F}$ that acts on a charge $q$ with velocity $v$. T
 \begin{align}
 	\vect{j} &= \sigma(\vect{E} + \vect{v} \times \vect{B})	& \Longleftrightarrow	&	&	\vect{E} &= - \vect{v} \times \vect{B} + \frac{\vect{j}}{\sigma}	\,.
 \end{align}
-Solar wind is often approximated as an ideal MHD plasma having an infinite conductivity ($\sigma = \infty$). Thus electric fields do not generate electric currents $\vect{j}$:
+Solar wind is often approximated as an ideal MHD plasma having an infinite conductivity ($\sigma = \infty$). In this case electric fields do not generate electric currents $\vect{j}$:
 \begin{align}
 	\vect{E} = - \vect{v} \times \vect{B}	\,.
 \end{align}
-Assuming the solar wind flows into the x-direction ($v_\text{y} = v_\text{z} = 0$), the resulting electric field components become
+Assuming a strict radial solar wind flow -- the x"~direction when using GSM coordinates ($v_\text{y} = v_\text{z} = 0$) -- the resulting electric field components become
 \begin{align}
 	\vect{E} =& \begin{bmatrix}
-		E_\text{x}\\
-		E_\text{y}\\
-		E_\text{z}\\
-	\end{bmatrix} = \begin{bmatrix}
 		0\\
 		- v_\text{x} \cdot B_\text{z}\\
 		v_\text{x} \cdot B_\text{y}
-	\end{bmatrix}	\,,\\
-		=& \begin{bmatrix}
-		0\\
-		- v_\text{x} \cdot |\vect{B_\text{yz}}| \cdot \cos(\theta_c)\\
-		v_\text{x} \cdot |\vect{B_\text{yz}}| \cdot \sin(\theta_c)\\
 	\end{bmatrix}	\,.
 \end{align}
-If in addition the magnetic field is strictly orientated along the z-axis, the only non-zero electric field component remaining is $E_\text{y}$:
+Reconnection occurs only where the magnetic fields of the solar wind and magnetopause are antiparallel. Due to the magnetosphere's dipole topology, this is the case at the equator of the sunward magnetopause. If in addition the magnetospheric field is orientated along the z"~axis, the only remaining electric field component that contributes is
 \begin{align}
-	\vect{E} = - v_\text{x} \cdot B_\text{z}	\,.
+	E_\text{y} = - v_\text{x} \cdot B_\text{z}	\,.
 \end{align}
-Reconnection occurs only where the magnetic fields of the solar wind and magnetopause are antiparallel. Due to the magnetosphere's dipole topology, this is the case at the equator of the sunward magnetopause (when using GSM coordinates).
 
-However, reconnection can occur on the whole magnetopause surface facing the solar wind, that is, even at higher latitudes where $B_\text{z}$ is not the only field component. Thus, it makes sense to use the magnetic field's absolute value $|B|$ and its clock angle $\theta_c = \tan^{-1}\left(\frac{B_\text{y}}{B_\text{z}}\right)$ instead of just the field's $B_\text{z}$ component.\\
-
-
-Lockwood2013:\\
-on timescales of T = 1 yr, the IMF orientation factor is averaged out and the average southward IMF component and, hence, the level of geomagnetic activity, is proportional to B , as first noted by Stamper et al. (1999). This is the basic reason that we are able to make deductions about B from geomagnetic activity when averaging is done on annual timescales.\\
-
-the distribution of annual values of the ratio B/ [ B sin 4 ( theta / 2)]. The mean value of this distribution is 3.251 and the standard deviation is 0.369.\\
+At the rest of the magnetopause surface facing the solar wind, the magnetospheric field deviates from the z"~direction, especially at higher latitudes. However, reconnection can occur there too if the solar wind magnetic field clock angle is oriented accordingly, see also \autoref{fig:Russell2007_fig4_10_VBbook_magnetopause_reconnection_regions_modified}. Thus, it makes sense to use the magnetic field's clock angle, which is defined as $\theta_c = \tan^{-1}\left(B_\text{y} / B_\text{z}\right)$, instead of just the field's $B_\text{z}$ component. The electric field becomes then
+\begin{align}
+	\vect{E} =& \begin{bmatrix}
+		0\\
+		- v_\text{x} \cdot |\vect{B_\text{yz}}| \, \cos(\theta_c)\\
+		v_\text{x} \cdot |\vect{B_\text{yz}}| \cdot \sin(\theta_c)\\
+	\end{bmatrix}	\,,
+\end{align}
+with $E_\text{y}$ containing the half-wave rectifier, see also \autoref{fig:coupling_angle_e}.
 
 
 % Electromagnetism is one of the four fundamental forces at the common level of energy. In all situations examined in this thesis (solar wind plasma, magnetosphere) it is by far the strongest force and the others can be neglected.

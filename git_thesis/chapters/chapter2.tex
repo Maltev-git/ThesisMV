@@ -194,17 +194,21 @@ Savani2017:\\
 %argue for averaging method
 The \Kp{}~index represents maximal variations within 3-hour time intervals (see \autoref{sec:kp_index}). Any solar wind parameter that will be correlated with \Kp{}, obviously also has to have the same time resolution. In addition to adapting the time resolution, it has to be considered by which means this should be done. Simple 3-hour average values are expected to have a weaker correlation than the solar wind parameter's 3-hourly maximal variation.
 %argue for high resolution, deliberate between hourly and minutely data
-The 3-hour maximal variations should obviously be stronger when using high resolution data. Thus, to be able to correlate \Kp{} with solar wind data, high resolution data (that is, much shorter than 3~hours) are needed to determine the maximal solar wind variations within each 3-hour interval.\\
+It is self-evident that the 3"~hour maximal variations are higher when using high resolution data. Thus, to be able to correlate \Kp{} with solar wind data, high resolution data, that is, much shorter than the 3"~hour resolution, are needed to determine the maximal solar wind variations within each 3"~hour interval.\\
 
-The OMNI data set collects the longest continuous solar wind measurements at \SI{1}{\au}. The longest time coverage has the hourly OMNI data set (since 1963), however, I choose to use the minutely OMNI data with the time range 1981--2016, to benefit from the stronger correlation (see Figs?).\\
+The OMNI data collection constitutes the longest continuous solar wind measurements made at \SI{1}{\au}. There exist two OMNI data sets with different time resolution -- the hourly version extends back to 1963 and the minutely version extends back to 1981. Although it is shorter, I choose to apply the minutely data set, in order to benefit from the higher resolution. Thus, the work presented in this chapter is based on the minutely OMNI data set with a time duration spanning from 1981 until end of 2016.\\
 
-The \Kp{}-\vBz{} Pearson correlation coefficients for 3-hour mean and minimum data are plotted in \autoref{fig:cc_lag_data_d_KpvsVBzgsm}.
+vBz...\\
+
+The data is reduced to 3"~hour averages and 3"~hour minima in order to match the \Kp{} data resolution and evaluate the advantage of high resolution data. The \Kp{}-\vBz{} Pearson correlation coefficients for the two differently processed data versions are plotted over time shift in \autoref{fig:cc_lag_data_d_KpvsVBzgsm}. The data with 3"~hour minimum processing shows a much better correlation than the 3"~hour average data. Both curves show a negative correlation and their minima lie at a time shift of zero, with coefficients of $r_\text{min} = -0.72$ and $r_\text{avg} = -0.36$.
+
+The OMNI data represents the solar wind at the location of the magnetospheric bow shock. It takes the plasma only a couple of minutes to arrive at the magnetopause and influence the geomagnetic field. Therefore the best correlation at the time shift of zero is expected as it is merely tested in coarse 3"~hour steps.\\
 \begin{figure}[htb]
 	\begin{floatrow}
 		\ffigbox{
-			\includegraphics[width=0.5\Xhsize]{figures_of_mine/chapter2/cc_lag_data_d_KpvsVBzgsm.pdf}
+			\includegraphics[width=0.46\textwidth]{figures_of_mine/chapter2/cc_lag_data_d_KpvsVBzgsm.pdf}
 		}{
-			\caption{\Kp-\vBz{} correlation coefficients for different time shifts up to \num{+-24}~hours. The minutely OMNI data from 1981--2016 is processed with mean (black) and minimum (red) 3-hour averaging.}
+			\caption{\Kp-\vBz{} correlation coefficients for different time shifts up to \num{+-24}~hours. The minutely OMNI data from 1981--2016 is reduced to 3"~hour averages (black line) and 3"~hour minima (red line).}
 			\label{fig:cc_lag_data_d_KpvsVBzgsm}
 		}
 %highest correlation coefficients:
@@ -212,9 +216,9 @@ The \Kp{}-\vBz{} Pearson correlation coefficients for 3-hour mean and minimum da
 %mean:	0.00000    -0.362237
 %max:	0.00000     0.293137
 		\ffigbox{
-			\includegraphics[width=\Xhsize]{figures_of_mine/chapter2/histogram_VBzgsm.pdf}
+			\includegraphics[width=0.46\textwidth]{figures_of_mine/chapter2/histogram_VBzgsm.pdf}
 		}{
-			\caption{Frequency distributions of \vBz{} for 3-hour mean (black) and minimum (red) minutely OMNI data from 1981--2016.}
+			\caption{Frequency distributions for the \vBz{} product. The minutely OMNI data from 1981--2016 is reduced to 3"~hour averages (black line) and 3"~hour minima (red line).}
 			\label{fig:histogram_VBzgsm}
 		}
 %vBz frequency shifts:
@@ -223,7 +227,9 @@ The \Kp{}-\vBz{} Pearson correlation coefficients for 3-hour mean and minimum da
 % max shift: -750
 	\end{floatrow}
 \end{figure}
-The largest correlation is found for the 3-hour minimum data without time shift. It is a negative correlation whose coefficient is $-0.72$. The \Kp{}-\vBz{} frequency distribution is asymmetrically shifted to negative values when using 3-hour minimum values, this is visible in \autoref{fig:histogram_VBzgsm}.
+
+The reduction to 3"~hour minimum values shifts the \vBz{} frequency distribution asymmetrically to negative values, whereas the averaged data is scattered around zero, see \autoref{fig:histogram_VBzgsm}.
+
 
 
 \subsection{Functional dependency for solar wind}

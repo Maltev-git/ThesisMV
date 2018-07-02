@@ -46,7 +46,7 @@ The velocity and the direction of CMEs can be determined in their early near-Sun
 There are efforts to predict the direction and strength of the magnetic field from the flux rope geometry and orientation \citep{Savani2015}. However, the compressed solar wind magnetic field in the sheath region is of at least similar importance for magnetospheric disturbances \citep{Huttunen2004}. As the solar wind $B_\text{z}$ is quite random with low autocorrelation time, its prediction is not yet implemented in the current forecasts (cite?).\\
 
 %%% synopsis
-The objectives of the analyses performed and found in this chapter are to estimate the magnetospheric impact of solar wind and to predict it for CMEs and streams in particular. In \autoref{sec:long_term_variations} I determine the magnitudes of the long-term \Kp{} changes due to solar activity and measure the extent of seasonal variations stemming from the Earth's orbit. In order to nowcast the \Kp{}~index, I quantify the solar wind influence on \Kp{} by deriving a functional relation with the solar wind E-field (\autoref{sec:kp_nowcast}). Finally, for the purpose of enabling \Kp{} forecasts from remote observations, I estimate the \Kp{} impact coming from CMEs and streams separately by deriving functional dependencies with their velocities (\autoref{sec:kp_forecast_from_remote_CME_and_stream_observations}).
+The objectives of the analyses performed and found in this chapter are to estimate the magnetospheric impact of solar wind and to predict it for CMEs and streams in particular. In \autoref{sec:long_term_variations} I determine the magnitudes of the long-term \Kp{} changes due to solar activity and measure the extent of seasonal variations stemming from the Earth's orbit. In order to nowcast the \Kp{}~index, I quantify the solar wind influence on \Kp{} by deriving a functional relation with the solar wind E-field (\autoref{sec:relation_between_sw_efield_and_kp}). Finally, for the purpose of enabling \Kp{} forecasts from remote observations, I estimate the \Kp{} impact coming from CMEs and streams separately by deriving functional dependencies with their velocities (\autoref{sec:relations_between_cme_stream_v_and_kp}).
 
 
 \section{Long-term variations of the \Kp{}~index}
@@ -148,8 +148,10 @@ The Sun's rotation axis tilt angle to the ecliptic is \SI{+-7.25}{\degree} and t
 So the \Kp{} variation effects originate from the seasonal change in the solar tilt, the Earth's tilt, and the Earth's distance. Thorough analyses of the seasonal variations were already performed by \citep{Cortie1912} (more cites?). Thus, I just quantify the bulk magnitude of these effects in order to consider them as relative uncertainties when using the solar activity relation (\ref{eq:kp_ssn_relation}). Looking at the \Kp{} frequency distributions by month -- seen in \autoref{fig:Kp_seasonal_e} -- it is apparent that for high values ($\Kp{} > 4$), there exist yearly frequency maxima at the equinoxes and frequency minima at the solstices, as was early described by \citet{Cortie1912}. It is evident from the plotted quantiles that this semiannual variation amounts to $1/3$~\Kp~unit at small \Kp~values and up to 4/3~\Kp~units at higher \Kp~values.
 
 
-\section{\Kp{} nowcast from in-situ solar wind measurements}
-\label{sec:kp_nowcast}
+\section{Relation between solar wind electric field and \Kp~index}
+\label{sec:relation_between_sw_efield_and_kp}
+
+\Kp{} nowcast from in-situ solar wind measurements...\\
 
 \subsection{Coupling function}
 
@@ -231,10 +233,10 @@ The OMNI data represents the solar wind at the location of the magnetospheric bo
 The reduction to 3"~hour minimum values shifts the \vBz{} frequency distribution asymmetrically to negative values, whereas the averaged data is scattered around zero, see \autoref{fig:histogram_VBzgsm}.
 
 
-
 \subsection{Functional dependency for solar wind}
+An empirical relation between \vBz{} and \Kp{} is sought by processing the data distribution and fitting an appropriate function to it.
 %distribution
-The frequency distribution in \Kp-\vBz{} space is shaped like a candle flame, inclined to negative values by a light breeze, see top panel in \autoref{fig:Kp_2dhistogram_VBzgsm_sws_e}.
+The frequency distribution in \Kp-\vBz{} space is shaped like a candle flame, inclined to negative values by a light breeze, see top panel in \autoref{fig:Kp_2dhistogram_VBzgsm_sws_e}. The negative correlation is already apparent.
 \begin{figure}
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_VBzgsm_sws_e.pdf}
@@ -244,14 +246,13 @@ The frequency distribution in \Kp-\vBz{} space is shaped like a candle flame, in
 	}
 \end{figure}
 %dependency
-In order to determine a functional dependency, I focus on the relative frequencies per \vBz-interval and their mean \Kp{} values, which are plotted in the bottom panel of \autoref{fig:Kp_2dhistogram_VBzgsm_sws_e}. The mean absolute deviation (MAD) of the mean has a mean size of \SI{0.7}{\Kp}~units. This probability distribution is asymmetrically V-shaped around zero, having a larger and steeper negative arm than positive arm. The asymmetry also exists for 3-hour mean data, thus this effect is not a result of the data reducing method (3-hour minimum) (fig...?). Rather the steeper negative arm is a consequence of the half-wave rectifier coupling of the solar wind magnetic field direction to the magnetosphere, as described in \autoref{sec:solar_wind_coupling_mechanisms}.\\
+In order to determine a functional dependency, I focus on the relative frequencies per \vBz-interval and their mean \Kp{} values, which are plotted in the bottom panel of \autoref{fig:Kp_2dhistogram_VBzgsm_sws_e}. The mean absolute deviation (MAD) of the mean has a mean size of \SI{0.7}{\Kp}~units. This probability distribution is asymmetrically V-shaped around zero, having a larger and steeper negative arm than positive arm.\\
 %MAD: 2.211/3 = 0.737 Kp units
 
-stress that it is an empirical fit...\\
-using an appropriate type of a fit function...\\
+The asymmetry also exists for 3"~hour mean data, thus this effect is not a result of the data reducing method (3-hour minimum) (fig...?). Rather the steeper negative arm is a consequence of the half-wave rectifier coupling of the solar wind magnetic field direction to the magnetosphere, as described in \autoref{sec:solar_wind_coupling_mechanisms}.\\
 
 %determine fitting functions
-Since the \Kp~index has a quasi-logarithmic scaling (see \autoref{sec:kp_index}), a logarithmic function is the obvious choice as a fit function. Furthermore, the depending argument consists of a product of two solar wind parameters which individually scale logarithmically with \Kp{}. These reasons are why I use the logarithm of a parabola for the fitting approach:
+The appropriate type of function has to be constructed for the empirical fit. Since the \Kp~index has a quasi-logarithmic scaling (see \autoref{sec:kp_index}), a logarithmic function is the obvious choice as a fit function. Furthermore, the depending argument consists of a product of two solar wind parameters which individually scale logarithmically with \Kp{}. These reasons are why I use the logarithm of a parabola for the fitting approach:
 \begin{align}
 	f(x) &= \ln\left(x^2\right)	\,.	\label{eq:log_square_function}
 \end{align}
@@ -303,15 +304,18 @@ It can be seen that in this period the \Kp{} estimate traces the actual \Kp{}~in
 
 
 
-\section{\Kp{} forecast from remote CME and stream observations}
-\label{sec:kp_forecast_from_remote_CME_and_stream_observations}
+\section{Relations between CME/stream velocities and \Kp~index}
+\label{sec:relations_between_cme_stream_v_and_kp}
 
+% separating CMEs and streams
+\Kp{} forecast from remote CME and stream observations...\\
 It makes sense to separately look at CMEs and solar wind streams -> see event comparison fig.\\
 same velocity -> different \Kp{} effect\\
+The different CME and stream forecast methods are described in \autoref{sec:cme_and_stream_forecast_to_earth}.\\
 
-velocity forecast methods, see basics...\\
+% velocity as coupling function
+The IMF strength and orientation is difficult to determine from remote observations. The solar wind velocity is the only coupling parameter which is to a certain degree reliably forecastable. Therefore, the heads-up time of remote observations can be made still use of.\\
 
-To make use of the heads-up time for CMEs, I neglect its magnetic field part, which is difficult to determine from remote observations and simplify the coupling relation (\ref{eq:coupling_vxBz}) from before. Therefore, the only coupling parameter remaining is the solar wind velocity.
 
 Savani2017:\\
 ``\textit{Prior evidence has suggested the reason be due to southerly IMF strength being the most dominant solar wind parameter for driving geomagnetic activity at Earth. The strong correlation of solar wind speed to geomagnetic activity is evident during CME conditions but is only considered the most dominant parameter during high-speed streams} [Holappa et al., 2014].''\\

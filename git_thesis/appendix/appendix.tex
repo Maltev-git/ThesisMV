@@ -116,11 +116,11 @@ The thermal pressure of a plasma is defined as $p = n k_\text{B} T$, with the nu
 	&= \frac{2 \mu_0 n k_\text{B} T}{B^2}	\,.	\nonumber
 \end{align}
 The plasma at the photosphere has typical beta values around~14 and that of the low corona around~0.2 \citep{Gary2001}. Further up, beta raises again and the region where it equals~1 is defined as the source surface for the solar wind \citep{Schatten1969}.	% source surface where beta equals 1 (Schatten1969), at 0.6~Rs\\
-This surface is typically located at about \SIrange{1.2}{2.5}{\Rs} \citep{Gary2001}, more cites...\\
+This surface is typically located at about \SIrange{1.2}{2.5}{\Rs} \citep{Gary2001}.
 % low source surface at 1.2~Rs (Gary2001)\\
 % typical value at about 2.5~Rs\\
-% source surface in the distance range of \SIrange{1.2}{4}{\Rs}\\
-The solar wind usually has plasma beta values higher than~1 -- it carries the solar magnetic field away into the heliosphere. Together with the solar rotation, this effect creates the spiral form of the interplanetary magnetic field (Parker spiral). Yet in some solar wind structures, such as magnetic clouds, $\beta \ll 1$ and thus the magnetic field can still contain the plasma. Indeed, a change in plasma beta is a good predictor for the location of magnetic flux ropes in CME structures \citep{Riley2013,Savani2013}.
+
+The solar wind usually has plasma beta values higher than~1 -- the solar magnetic field is carried away into the heliosphere. Together with the solar rotation, this effect creates the spiral form of the interplanetary magnetic field (Parker spiral). Yet in some solar wind structures, such as magnetic clouds, $\beta \ll 1$ and thus the magnetic field can still contain the plasma. Indeed, a change in plasma beta is a good predictor for the location of magnetic flux ropes in CME structures \citep{Riley2013,Savani2013}.
 
 % https://omniweb.gsfc.nasa.gov/ftpbrowser/bow_derivation.html
 % Plasma beta = thermal energy density (= thermal pressure) /magnetic energy density
@@ -136,26 +136,19 @@ The solar wind usually has plasma beta values higher than~1 -- it carries the so
 \section{Alfvén velocity}
 \label{sec:alfvén_velocity}
 The incompressible wave mode within MHD plasmas, the shear Alfvén wave, consists of periodic disturbances in the magnetic field orthogonal to its direction \citep{Alfven1942}. Alfvén waves are prevalent in open coronal regions and therefore occur in fast solar wind \citep{Cranmer2005}. Their propagation velocity is an important parameter to characterize a plasma. In an ideal incompressible MHD plasma (viscosity $\mu = 0$ and electrical conductivity $\sigma = \infty$) the kinetic and magnetic energy density are of equal value \citep[p.~51]{Kivelson1995}: 
-\begin{align}
-	w_\text{kin} &= w_\text{mag}\\
-	\frac{\rho v^2}{2} &= \frac{B^2}{2 \mu_0}	\nonumber
-\end{align}
-with the permeability constant $\mu_0$ and the total mass density $\rho$ of the charged plasma particles. Thus, the Alfvén velocity can be calculated from
+\begin{align*}
+	w_\text{kin} &= w_\text{mag}	& \Longleftrightarrow	&	&	\frac{\rho v^2}{2} &= \frac{B^2}{2 \mu_0}	\,,
+\end{align*}
+with the permeability constant $\mu_0$ and the total mass density $\rho$ of the charged plasma particles. Thus, the Alfvén velocity can be calculated via
 \begin{align}
 	v_\text{A} = \frac{|B|}{\sqrt{\mu_0 \rho}}	\text{\,.}
 \end{align}
-The wave's phase velocity is
-\begin{align}
-	v_\text{ph} = v_\text{A} \cos(\theta)
-\end{align}
-with $\theta$ as the angle between wave propagation direction and magnetic field line, that is, Alfvén waves travel along magnetic field lines. They consist of periodic disturbances in the magnetic field, the electric field, the plasma velocity, and the current density. Plasma density, pressure and magnetic field magnitude are not affected by them. Additionally, there exist two types of compressional wave modes within MHD plasmas, the fast-mode wave and the slow-mode wave. The phase speeds of the three MHD waves meet $v_\text{fast} \geq v_\text{A} \geq v_\text{slow}$ \citep[p.~52]{Kivelson1995}. Within solar wind at \SI{1}{\au}, the typical frequency of Alfvén waves is 1--4 per hour and their average velocity is $v_\text{A} = \SI{56.8}{\km\per\s}$ \citep{Veselovsky2010}.\\	% at 1~au in 1963--2007\\
+The wave's phase velocity is $v_\text{ph} = v_\text{A} \cos(\theta)$, with $\theta$ as the angle between wave propagation direction and magnetic field line, that is, Alfvén waves travel along magnetic field lines. They consist of periodic disturbances in the magnetic field, the electric field, the plasma velocity, and the current density. Plasma density, pressure, and magnetic field magnitude are not affected by them.
+
+Additionally, there exist two types of compressional wave modes within MHD plasmas, the fast-mode wave and the slow-mode wave. The phase speeds of the three MHD waves meet $v_\text{fast} \geq v_\text{A} \geq v_\text{slow}$ \citep[p.~52]{Kivelson1995}. Within solar wind at \SI{1}{\au}, the typical frequency of Alfvén waves is 1--4 per hour and their average velocity is $v_\text{A} = \SI{56.8}{\km\per\s}$ \citep{Veselovsky2010}.\\	% at 1~au in 1963--2007\\
 
 Alfvén critical surface...\\
 sonic critical surfaces...\\
-
-shocks \& MHD waves (Alfvén waves)\\
-Alfvén velocity ca. 40~km/s (Kivelson1995)\\
-Alfvén velocity 56.8~km/s (Veselovsky2009)\\
 
 sonic and Alfvénic critical point positions (see Sittler \& Guhathakurta (1999))\\
 sonic point and slow solar wind origin (Sheeley et al. 1997)\\
@@ -174,11 +167,11 @@ sonic point and slow solar wind origin (Sheeley et al. 1997)\\
 %$v_\text{A} = 53$~km/s for $B = 5.6$~nT and $\rho = 5.3$~cm$^{-3}$
 
 
-\section{Sun-Earth orbit geometry}
+\section{Sun-Earth distance and rotation axes tilt}
 \label{sec:sun_earth_orbit_geometry}
 All interactions between Sun and Earth are governed by the geometry of Earth's orbit and the orientations of both bodies' rotation axes. The Earth orbit defines the ecliptic plane which is a convenient reference base for a few coordinate systems, see appendix \autoref{sec:coordinate_systems}.
 
-\subsection*{Solar distance}
+% \subsection*{Solar distance}
 The Sun-Earth distance can be derived from the orbital parameters of Earth\footnote{NASA's Earth Fact Sheet: \urlfoot{http://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html}}, the semimajor axis $a = \SI{1}{\au}$ and the eccentricity $e = \num{0.0167}$. Hence, the perihelion and aphelion distances are:
 \begin{align*}
 	r_\text{p} &= a (1 - e)	&	&\text{and}	&	r_\text{a} &= a (1 + e)\\
@@ -239,7 +232,7 @@ The total distance variation of \SI{3.34}{\%} has implications for the magnitude
 % -> ram pressure varies by 6\% through the year\\
 
 
-\subsection*{Solar rotation axis tilt to the ecliptic}
+% \subsection*{Solar rotation axis tilt to the ecliptic}
 The heliosphere is structured by the orientation of the solar rotation axis, e.g., the overall solar wind properties change with angular distance from the solar equator. The solar equator is inclined to the ecliptic by $i_\odot = \SI{7.25}{\degree}$\footnote{NASA's Sun Fact Sheet: \urlfoot{http://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html}}. Thus, viewed from Earth, the projected solar rotation axis tilt angle varies as the Earth is moving on its orbit. The seasonal change is plotted in \autoref{fig:Sun_Earth_geometry}, where the projected tilt at a given time is calculated by modulating $i_\odot$ with a sine, using the equation in \citet{Hapgood1992} and the time of vernal equinox. The projected tilt is zero at the equinoxes -- the vernal equinox in 2016 was on 20~March.
 % vernal_equinox = 2016.0 + 2.0/12.0 + 20.0/366.0
 % projected tilt from Earth: i_proj = i_sun * sin(beta)
@@ -252,18 +245,18 @@ The heliosphere is structured by the orientation of the solar rotation axis, e.g
 % tilt(2016.0+(x-1.0)/12.0) with lines title "sine approx." ls 2 lw 2,\
 
 
-\subsection*{Earth rotation axis tilt to the ecliptic}
-The orientation of the Earth's rotation axis to the Sun defines the solar wind flow angle onto the magnetosphere. The Earth's obliquity of the ecliptic is \SI{23.439279}{\degree} \citep{Luzum2011}. The resulting seasonal change, seen in \autoref{fig:Sun_Earth_geometry}, influences the solar wind coupling efficiency with the magnetosphere and is reflected in geomagnetic activity as well.
+% \subsection*{Earth rotation axis tilt to the ecliptic}
+The orientation of the Earth's rotation axis to the Sun defines the solar wind flow angle onto the magnetosphere. The Earth's obliquity of the ecliptic is \SI{23.44}{\degree} and the resulting seasonal variation, seen in \autoref{fig:Sun_Earth_geometry}, influences the solar wind coupling efficiency with the magnetosphere and is reflected in geomagnetic activity as well.
 
 
 \section{GSE, GSM, and HGI coordinate systems}
 \label{sec:coordinate_systems}
 
-A wise choice of coordinate system often eases the understanding and the calculation of a given problem, especially in geo- and astrophysics there exist an abundance of different coordinate systems. The coordinate systems used in this thesis are Earth- and Sun-centered and are described in the following. Three different Cartesian systems are used: GSE, GSM, and HGI coordinates.
+A wise choice of coordinate system often eases the understanding and the calculation of a given problem, especially in geo- and astrophysics there exist an abundance of different coordinate systems. The coordinate systems used in this work are Earth- and Sun-centered and are described in the following. Three different Cartesian systems are applied: GSE, GSM, and HGI coordinates.
 
 % GSE - Geocentric Solar Ecliptic
 \subsection*{Geocentric Solar Ecliptic coordinates}
-The Geocentric Solar Ecliptic (GSE) coordinates are centered at Earth and oriented with its orbit around the Sun. The system's x"~axis points in direction of the Sun and its z"~axis in direction of the ecliptic north pole \citep{Russell1971,Hapgood1992}. The y"~axis completes the right-handed orthogonal system.
+The Geocentric Solar Ecliptic (GSE) coordinates are centered at Earth and oriented with the ecliptic plane. The system's x"~axis points in direction of the Sun and its z"~axis in direction of the ecliptic north pole \citep{Russell1971,Hapgood1992}. The y"~axis completes the right-handed orthogonal system.
 Thus compared to a fixed coordinate system, the GSE system completes one rotation around its z"~axis per year.
 % Russell1971
 % http://jsoc.stanford.edu/doc/keywords/Chris_Russel/Geophysical%20Coordinate%20Transformations.htm
@@ -275,14 +268,14 @@ GSE coordinates are preferably used when looking at near-Earth solar wind measur
 % GSM - Geocentric Solar Magnetospheric
 \subsection*{Geocentric Solar Magnetospheric coordinates}
 The Geocentric Solar Magnetospheric (GSM) coordinates are also centered at Earth but oriented with its magnetic dipole axis. The x"~axis points in direction of the Sun and the z"~axis is parallel to the projection of the magnetic dipole axis on the plane normal to the x"~axis \citep{Russell1971,Hapgood1992}. Its direction is towards the negative magnetic pole located near the geographic North Pole. The dipole axis is defined by the centered geomagnetic dipole which is the best approximation to the International Geomagnetic Reference Field \citep{Thebault2015}. Again, the y"~axis completes the right-handed orthogonal system.
-Relative to the GSE system, the GSM system shows a wobbling rotation around its x"~axis. The amplitude varies in time and is dependent on the tilt of the Earth's rotation axis to the ecliptic normal (\SI{23.44}{\degree}) and the tilt of the dipole axis, which itself slightly changes over the years. Most of the last century, the tilt had an angle near \SI{11.5}{\degree} from the geographic poles, yet the current (2015) angular distance is \SI{9.53}{\degree} \citep{Thebault2015}.
+Relative to the GSE system, the GSM system shows a wobbling rotation around its x"~axis. The amplitude varies in time and is derived by the tilt of the Earth's rotation axis to the ecliptic normal (\SI{23.44}{\degree}) and the tilt of the dipole axis, which itself slightly changes over the years. Most of the last century, the tilt had an angle near \SI{11.5}{\degree} from the geographic poles, yet the current (2015) angular distance is \SI{9.53}{\degree} \citep{Thebault2015}.
 
 GSM coordinates are useful in problems regarding the magnetosphere. These coordinates are applied throughout \autoref{chap:chapter2}.
 
 % HGI - Heliographic Inertial
 \subsection*{Heliographic Inertial coordinates}
 The Heliographic Inertial (HGI) coordinates are centered at the Sun and oriented with its rotation axis. The z"~axis points northward parallel to the Sun's rotation axis. The x"~axis is parallel to the intersection line between the solar equatorial plane and the ecliptic plane \citep{Burlaga1984a}, which are inclined by \SI{7.25}{\degree}. This x"~axis points to the longitude of the ascending node which was at \SI{74.367}{\degree} on 1~January 1900 at 12:00~UT, but increases slowly with time (about \SI{1.4}{\degree} per century) due to the Earth's precession\footnote{Numbers according to NASA's COHOWeb documentation: \urlfoot{https://omniweb.gsfc.nasa.gov/coho/html/cw_data.html}}. The y"~axis completes the right-handed orthogonal system.
-Over one year, the position of Earth oscillates within the HGI latitude range of \SI{+-7.25}{\degree}.
+Over one year, the position of Earth oscillates within a HGI latitude range of \SI{+-7.25}{\degree}.
 
 HGI coordinates are useful when looking at processes concerning the solar wind in the heliosphere. These coordinates are applied for the processing of the Helios data, e.g., in Figures~\ref{fig:Helios_r_b_ssn}, \ref{fig:Helios12_orbits_ecliptic_polar}, and \ref{fig:helios_data_frequency}.
 
@@ -323,7 +316,8 @@ The TSS is the difference between the hit rate and the false alarm rate\footnote
 \end{align}
 Its value is in the range from -1 to 1, with 1 representing an ideal prediction, 0 a random prediction, and -1 an ideal negative prediction. The TSS is positive if the hit rate is higher than the false alarm rate.
 
-In the case of rare event forecasting, the contingency table is dominated by correct nulls and the TSS approaches the hit rate. \citet{Doswell1990} show that the Heidke skill score is superior in these situations, in that it considers correct null forecasts in a controlled way. They recommend to use the Heidke skill score in preference to TSS for rare event forecasting. Other often applied skill scores are the threat score, also called critical success index or Gilbert score, and the equitable threat score. However, the TSS is commonly applied to evaluate and compare space weather prediction methods, especially in forecasting the \Kp~index \citep{Detman1999,Wing2005,Savani2017}.
+In the case of rare event forecasting, the contingency table is dominated by correct nulls and the TSS approaches the hit rate. \citet{Doswell1990} show that the Heidke skill score is superior in these situations, in that it considers correct null forecasts in a controlled way. They recommend to use the Heidke skill score in preference to TSS for rare event forecasting. Other often applied skill scores are the threat score, also called critical success index or Gilbert score, and the equitable threat score. However, the TSS is commonly applied to evaluate and compare space weather prediction methods, especially in forecasting the \Kp~index \citep{Detman1999,Wing2005,Savani2017}. The TSS is used in the verification analysis of operational geomagnetic storm forecasts as well, for example at the SIDC\footnote{SIDC's Verification Analysis of the SIDC Forecast website: \urlfoot{http://sidc.be/forecastverification/K_index_storm_5+.php}}.
+
 
 % Fraction Correct is given by [0,1]\\
 % chance hits
@@ -367,7 +361,7 @@ For a lognormally distributed random variable, the geometric moments mean, stand
 	\intertext{Whereas its arithmetic moments are derived from:}
 	&\mu_\text{a} = \text{e}^{\mu + \frac{\sigma^2}{2}}	\,,	&	&\sigma_\text{a} = \text{e}^{\mu + \frac{\sigma^2}{2}} \, \left(\text{e}^{\sigma^2} - 1\right)	\,,	&	&\text{var}_\text{a} = \sigma_\text{a}^2\,.
 \end{align*}
-Further useful characteristics are the position of the median and the mode:
+Further useful characteristics are the positions of the median and the mode:
 \begin{align*}
 	&x_\text{median} = \text{e}^{\mu}	\,,\\
 	&x_\text{mode} = \text{e}^{\mu - \sigma^2}	\,.
@@ -381,21 +375,29 @@ Most distributions in nature deviate from the simple Gaussian shape and are to s
 \label{sec:astronomical_constants}
 
 Astronomical unit: $\SI{1}{\au} = \SI{149597870.700}{\km}$ \citep{Luzum2011}\\
-Solar mass: $M_\odot = \SI{1.9884(2)e30}{\kg}$ \citep{USNAO2017}\\
 Nominal solar radius (photosphere): $R_\odot = \SI{695700}{\km}$ \citep{Mamajek2015}\\
 Nominal solar effective temperature (photosphere): $T_{\text{eff}\odot} = \SI{5772}{\kelvin}$ \citep{Mamajek2015}\\
-Solar rotation axis tilt to ecliptic: $i_\odot = \SI{7.25}{\degree}$ (Sun fact sheet...)\\ %C3; Obliquity to ecliptic
-Solar surface rotation period at equator, sidereal: 25.05~d (Sun Fact Sheet...)\\
-Sun escape velocity: $v_\text{esc} = \SI{617.6}{\km\per\s}$ (Sun Fact Sheet...)\\
+Solar rotation axis tilt to ecliptic: $i_\odot = \SI{7.25}{\degree}$ (NASA's Sun Fact Sheet\footnote{NASA's Sun Fact Sheet website: \urlfoot{http://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html}})\\ %C3; Obliquity to ecliptic
+Earth rotation axis tilt to ecliptic: $i_\text{E} = \SI{23.439279}{\degree}$ \citep{Luzum2011}\\ %C3; Obliquity to ecliptic
 
-Online resources:\\
-IAU Division I Working Group, Numerical Standards for Fundamental Astronomy, IAU 2009 values and best estimates: \urltext{http://maia.usno.navy.mil/NSFA/}\\
-\citep{Luzum2011}\\
+\noindent Notable online resources for astronomical constants:
+\begin{itemize*}
+	\item IAU 2009 values and best estimates, IAU Division I Working Group, Numerical Standards for Fundamental Astronomy \citet{Luzum2011}:\\
+	\urltext{http://maia.usno.navy.mil/NSFA/}
+	
+	\item The Astronomical Almanac Online, \citet{USNAO2017}:\\
+	\urltext{http://asa.usno.navy.mil/static/files/2016/Astronomical_Constants_2016.pdf}
+	
+	\item NASA's Planetary~Fact~Sheets:\\
+	\urltext{https://nssdc.gsfc.nasa.gov/planetary/planetfact.html}
+	
+\end{itemize*}
 
-The Astronomical Almanac Online: \urltext{http://asa.usno.navy.mil/static/files/2016/Astronomical_Constants_2016.pdf}\\
-\citep{USNAO2017}\\
 
-NASA's Planetary~Fact~Sheets: \urltext{https://nssdc.gsfc.nasa.gov/planetary/planetfact.html}}\\
+% Solar mass: $M_\odot = \SI{1.9884(2)e30}{\kg}$ \citep{USNAO2017}\\
+% Sun escape velocity: $v_\text{esc} = \SI{617.6}{\km\per\s}$ (Sun Fact Sheet...)\\
+% Solar surface rotation period at equator, sidereal: 25.05~d (Sun Fact Sheet...)\\
+
 
 
 % \section{Abbreviations}

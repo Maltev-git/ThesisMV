@@ -567,7 +567,7 @@ The E"~field relation reaches its peak at a \Kp{} of 2 with a TSS of 0.63, it th
 The persistence forecast clearly outperforms the other prediction models, especially in the high \Kp{} range. However, as \citet{Detman1999} stated, it has no warning value because it can only predict a high \Kp{} value after a high \Kp{} value was already observed. Thus, the persistence always misses the onset of a geomagnetic storm, whereas solar wind based models can provide at least a nowcast if not actually a short lead time from the distance of the in-situ measurement location at L1.\\
 
 % statistics summary table
-In order to compare their \Kp{} forecast skill metrics with other models, \citet{Savani2017} use a threshold of $\Kp{} \geq 5$. They choose this value because of the NOAA/SWPC geomagnetic storm scale (G"~scale) definition: The G"~scale starts with G1, which translates to a \Kp{} of 5. I stick to this definition and provide a statistics summary of the \Kp{} persistence and the three derived models in \autoref{tab:model_statistics_table}.
+In order to compare their \Kp{} forecast skill metrics with other models, \citet{Savani2017} use a threshold of $\Kp{} \geq 5$. They choose this value because of the geomagnetic storm scale (G"~scale) developed by NOAA's SWPC. The G"~scale relates the \Kp~index to five levels from G1 to G5\footnote{NOAA Space Weather Scales website: \urlfoot{http://www.swpc.noaa.gov/noaa-scales-explanation}}. The starting level G1 translates to a \Kp{} of 5. I stick to this definition and provide a statistics summary of the \Kp{} persistence and the three derived models in \autoref{tab:model_statistics_table}.
 \begin{table}[htb]
 	\caption{Statistics of the different prediction models. The metrics are calculated for a threshold hit criteria of $\Kp{} \geq 5$.}
 	\label{tab:model_statistics_table}
@@ -641,8 +641,6 @@ Prototype/precursor relations are integrated into applications developed within 
 	\item RSS feed: \href{http://www.affects-fp7.eu/rssfeeds/rssfeed_aurora/rssfeed_aurora.xml}{L1 Aurora Alert} -- threshold based RSS feed that gets triggered when a specified auroral location is reached... The value is derived from the \Kp{} estimate.
 \end{itemize*}
 
-note: repair RSS feeds before submitting!\\
-
 \noindent Further applications of resulting \Kp{}-relations:
 \begin{itemize*}
 	\item CME \Kp{} impact (part of UGOE DDC)
@@ -650,6 +648,8 @@ note: repair RSS feeds before submitting!\\
 	\item Android app L1 Alerts... \urltext{https://play.google.com/store/apps/details?id=com.afects.forecasts}
 	\item has SW-Display Kp forecast??
 \end{itemize*}
+
+The present study adds more empirical \Kp{} relations -- for the cases when only the solar wind velocity $v$ or its electric field \vBz{} are known. The derived \Kp{} relations are part of the UGOE/IAG CME forecast chain.\\
 
 outlook:\\
 Separate structures such as CIRs and HCSs for their \Kp-impact separately...\\
@@ -665,6 +665,11 @@ In the present study, the solar activity is neglected for deriving the empirical
 
 
 \section{notes...}
+
+Savani2017:\\
+The Kp difference of 1.5 is tested as there is evidence that a limitation in accuracy is present in the underlying empirical Kp formulation [Mays et al., 2015a]. [...] which is approximately consistent with recent results by Mays et al. [2015a], the Kp empirical formulation is accurate to about Kp = 1.5.\\
+
+Zhang2015 do with their data: ``The (OMNI) data have been lagged by 5~min to allow for propagation from the nose of bow shock to the magnetopause.''\\
 
 What kind of solar wind structures create the individual regions in this distribution? (B-V-Kp circle plot)\\
 What is their individual contribution to the Kp ranges (e.g. high Kp: CMEs 70\% and CIRs 30\%)?\\

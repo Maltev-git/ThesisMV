@@ -8,7 +8,7 @@
 The differential rotation of the solar surface is visible from sunspot observations and was first discovered by \citet{Scheiner1630}. It is caused by transport of angular momentum away from the rotation axis due to the Sun's inner thermal convective circulation.
 
 %rotation period
-\citet{Bartels1934} set the average synodic solar rotation period to 27~days for the definition of his solar rotation number. The Bartels Rotation Number counts the solar rotations starting with 8~February 1832. Carrington determined a more accurate average solar rotation period of 27.2753~days, which is valid for solar latitudes of \SI{+-16}{\degree}, where sunspots usually are found. He defined the Carrington Rotation Number based upon this period, starting with 9~November 1853.
+\citet{Bartels1934} set the average synodic solar rotation period to 27~days for the definition of his solar rotation number. The Bartels Rotation Number counts the solar rotations starting with 8~February 1832. Later, Carrington determined a more accurate average solar rotation period of 27.2753~days, which is valid for solar latitudes of \SI{+-16}{\degree}, where sunspots usually are found. He defined the Carrington Rotation Number based upon this period, starting with 9~November 1853.
 % http://wso.stanford.edu/words/Coordinates.html
 % sidereal: 25.38~d (of 609.12~h Sun Fact Sheet...), synodic: 27.2753~d (derived)
 
@@ -17,12 +17,12 @@ The Sun's sidereal differential angular velocity can be approximated by the func
 \begin{align}
 	\omega_\odot(\theta) = \omega_\text{eq} + B \sin^2(\theta) + C \sin^4(\theta)	\,,	\label{eq:omega_differential}
 \end{align}
-with the heliolatitude $\theta$, the equatorial angular velocity $\omega_\text{eq} = \SI{14.37}{\degree\per\day}$, the coefficients $B = \SI{-2.33}{\degree\per\day}$, and $C = \SI{-1.56}{\degree\per\day}$. This function is plotted in \autoref{fig:differential_rotation}.
+with the heliolatitude $\theta$, the equatorial angular velocity $\omega_\text{eq} = \SI{14.37}{\degree\per\day}$, and the coefficients $B = \SI{-2.33}{\degree\per\day}$ and $C = \SI{-1.56}{\degree\per\day}$. I plotted this function in \autoref{fig:differential_rotation}.
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/differential_rotation.pdf}
 	}{
-		\caption{Diagram showing the angular velocity of the sidereal solar surface differential rotation over solar latitude.}
+		\caption{Diagram showing the angular velocity of the sidereal solar surface differential rotation over solar latitude. The upper x-axis shows the corresponding sidereal rotation period.}
 		\label{fig:differential_rotation}
 	}
 	\addtocontents{lof}{\smallskip\protect\center I created the figure myself.\medskip}
@@ -65,14 +65,14 @@ The Lorentz force law defines the electric and magnetic field vectors $\vect{E}$
 	\vect{F} = q\,(\vect{E} + \vect{v} \times \vect{B})	\,.
 \end{align}
 It describes the force $\vect{F}$ that acts on a charge $q$ with velocity $v$. The full Ohm's law accounts for the Lorentz force:
-\begin{align}
+\begin{align*}
 	\vect{j} &= \sigma(\vect{E} + \vect{v} \times \vect{B})	& \Longleftrightarrow	&	&	\vect{E} &= - \vect{v} \times \vect{B} + \frac{\vect{j}}{\sigma}	\,.
-\end{align}
-Solar wind is often approximated as an ideal MHD plasma having an infinite conductivity ($\sigma = \infty$). In this case electric fields do not generate electric currents $\vect{j}$:
+\end{align*}
+Solar wind is often approximated as an ideal MHD plasma having an infinite conductivity ($\sigma = \infty$). In this case electric fields do not generate electric currents ($\vect{j} / \sigma = 0$):
 \begin{align}
 	\vect{E} = - \vect{v} \times \vect{B}	\,.
 \end{align}
-Assuming a strict radial solar wind flow -- the x"~direction when using GSM coordinates ($v_\text{y} = v_\text{z} = 0$) -- the resulting electric field components become
+Assuming a strict radial solar wind flow -- in x"~direction when using GSM coordinates ($v_\text{y} = v_\text{z} = 0$) -- the resulting electric field components become
 \begin{align}
 	\vect{E} =& \begin{bmatrix}
 		0\\
@@ -110,22 +110,17 @@ with $E_\text{y}$ containing the half-wave rectifier, see also \autoref{fig:coup
 
 \section{Plasma beta}
 \label{sec:plasma_beta}
-The thermal pressure of a plasma is defined as $p = n k_\text{B} T$, with the number density $n$ and the Boltzmann constant $k_\text{B}$. However, according to magnetohydrodynamics (MHD), the magnetic energy density $w_\text{mag} = \frac{B^2}{2 \mu_0}$, with the magnetic field strength $B$ and the permeability constant $\mu_0$, behaves like an additional pressure that adds to the thermal pressure of a plasma \citep[p.~50]{Kivelson1995}. The ratio of the thermal pressure to the magnetic pressure determines the behavior of the plasma. If the thermal pressure dominates the magnetic pressure (warm plasma), the plasma movements transport the magnetic field, else the plasma movements are guided by the magnetic field lines (cold plasma). This ratio is called plasma beta:
+The thermal pressure of a plasma is defined as $p = n k_\text{B} T$, with the number density $n$ and the Boltzmann constant $k_\text{B}$. However, according to magnetohydrodynamics (MHD), the magnetic energy density $w_\text{mag} = B^2 / (2 \mu_0)$, with the magnetic field strength $B$ and the permeability constant $\mu_0$, behaves like an additional pressure that adds to the thermal pressure of a plasma \citep[p.~50]{Kivelson1995}. The ratio of the thermal pressure to the magnetic pressure determines the behavior of the plasma. If the thermal pressure dominates the magnetic pressure (warm plasma), the plasma movements transport the magnetic field, else the plasma movements are guided by the magnetic field lines (cold plasma). This ratio is called plasma beta:
 \begin{align}
 	\beta &= \frac{p}{p_\text{mag}}	\,,\\
-	&= \frac{2 \mu_0 n k_\text{B} T}{B^2}	\,.
+	&= \frac{2 \mu_0 n k_\text{B} T}{B^2}	\,.	\nonumber
 \end{align}
 The plasma at the photosphere has typical beta values around~14 and that of the low corona around~0.2 \citep{Gary2001}. Further up, beta raises again and the region where it equals~1 is defined as the source surface for the solar wind \citep{Schatten1969}.	% source surface where beta equals 1 (Schatten1969), at 0.6~Rs\\
 This surface is typically located at about \SIrange{1.2}{2.5}{\Rs} \citep{Gary2001}, more cites...\\
 % low source surface at 1.2~Rs (Gary2001)\\
 % typical value at about 2.5~Rs\\
 % source surface in the distance range of \SIrange{1.2}{4}{\Rs}\\
-
-The solar wind usually has plasma beta values higher than~1 -- it carries the solar magnetic field away into the heliosphere. Together with the solar rotation, this effect creates the spiral form of the interplanetary magnetic field (Parker spiral). Yet in some solar wind structures, such as magnetic clouds, $\beta \ll 1$ and thus the magnetic field can still contain the plasma.\\
-
-Savani2017:\\
-``\textit{By using statistical analysis, Riley and Richardson [2013] suggest that a distinct magnetic flux rope object may be contained within an overall propagating CME structure and that the plasma beta is a good predictor variable. Savani et al. [2013b] used simulations to confirm that such a scenario of a distinct coherent core obstacle can occur within the CME structure and that a transition in plasma beta can be observed}.''\\
-
+The solar wind usually has plasma beta values higher than~1 -- it carries the solar magnetic field away into the heliosphere. Together with the solar rotation, this effect creates the spiral form of the interplanetary magnetic field (Parker spiral). Yet in some solar wind structures, such as magnetic clouds, $\beta \ll 1$ and thus the magnetic field can still contain the plasma. Indeed, a change in plasma beta is a good predictor for the location of magnetic flux ropes in CME structures \citep{Riley2013,Savani2013}.
 
 % https://omniweb.gsfc.nasa.gov/ftpbrowser/bow_derivation.html
 % Plasma beta = thermal energy density (= thermal pressure) /magnetic energy density

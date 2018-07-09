@@ -1047,7 +1047,7 @@ rtsw L1\\
 \subsection{Stream and CME forecast to Earth}
 \label{sec:stream_and_cme_forecast_to_earth}
 % Storm causes
-Here I denote solar wind without CMEs simply as solar wind streams, that is, including slow/fast solar wind and interaction regions. Solar wind streams may cause enhanced geomagnetic activity, however, most major geomagnetic storms are caused by CMEs. The continuous nature of solar wind streams and the event-like appearance of CMEs, rooted in their distinct generation mechanisms, require entirely different forecast methods. In the following I note some techniques that are in use to predict important properties of solar wind streams and CMEs.
+Solar wind streams may cause enhanced geomagnetic activity, however, most major geomagnetic storms are caused by CMEs. Here I denote solar wind without CMEs simply as solar wind streams, that is, including slow/fast solar wind and interaction regions. The continuous nature of solar wind streams and the event-like appearance of CMEs, rooted in their distinct generation mechanisms, require entirely different forecast methods. In the following I note some forecast techniques that are in use to predict important properties of solar wind streams and CMEs.
 
 \subsubsection*{Stream forecast}
 % stream forecast
@@ -1057,10 +1057,10 @@ The occurrence of fast and slow solar wind streams at Earth depends on the size 
 Coronal holes are the origin of the fast solar wind. Their area on the solar disk -- seen in EUV wavelengths -- correlates with the measured velocity of solar wind streams \citep{Vrsnak2007}. This relation is used to predict the Earth-arrival velocity of solar wind streams about 4~days in advance \citep{Rotter2012}, as is done in real-time within the empirical solar wind forecast (ESWF) at the University of Graz\footnote{ESWF website: \urlfoot{http://swe.uni-graz.at/index.php/services/solar-wind-forecast}}.
 
 % solar wind time shift
-Coronal holes may grow or shrink to some extent from one solar rotation to the next. However, they usually exist over many rotations and thus lead to recurrent HSSs and CIRs. This steadyness is utilized to forecast the solar wind one solar rotation in advance, simply by shifting the in-situ measurements by 27~days. The prediction accuracy can be further enhanced by shortening this period to a few days using in-situ data from spacecraft trailing the Earth in its orbit around the Sun. This is possible with the STEREO spacecraft and with a potential spacecraft mission located at the fifth Lagrange point (L5). This method is applied together with an analyis of CH sizes in the STEREO+CH persistence model \citep{Temmer2018} developed at the University of Graz, a 4"~day real-time forecast is hosted on their website\footnote{STEREO+CH website: \urlfoot{http://swe.uni-graz.at/index.php/services/solar-wind-forecast-stereo-ch}}.
+Coronal holes may grow or shrink to some extent from one solar rotation to the next. However, they usually exist over many rotations and thus lead to recurrent HSSs and CIRs. This steadyness is utilized to forecast the solar wind one solar rotation in advance, simply by shifting the in-situ measurements by 27~days. The prediction accuracy can be further enhanced by shortening this period to a few days using in-situ data from spacecraft trailing the Earth in its orbit around the Sun. This is possible with the STEREO spacecraft and with a potential spacecraft mission located at the fifth Lagrange point (L5). The method is applied together with an analysis of CH sizes in the STEREO+CH persistence model \citep{Temmer2018} developed at the University of Graz, a 4"~day real-time forecast is hosted on their website\footnote{STEREO+CH website: \urlfoot{http://swe.uni-graz.at/index.php/services/solar-wind-forecast-stereo-ch}}.
 
 % ENLIL
-Another prediction approach is the numerical MHD simulation of the solar wind flow from the Sun to Earth, using remote observations of the Sun and its corona. This allows forecast times of 3~to 4~days, the solar wind's average travel time to \SI{1}{\au}. The WSA-Enlil model achieves this in two steps \citep{Pizzo2011}. First, observations of the solar surface magnetic field are used to approximate the expansion of the corona and hence get the outflow parameters at the source surface. Second, a steady solar wind flow is propagated outwards to Earth. WSA-Enlil real-time model results are provided by NOAA's SWPC\footnote{WSA-Enlil Solar Wind Prediction website: \urlfoot{https://www.swpc.noaa.gov/products/wsa-enlil-solar-wind-prediction}}.
+Another prediction approach is the numerical MHD simulation of the solar wind flow from the Sun to Earth, using remote observations of the Sun and its corona. This allows forecast times of 3~to 4~days -- the solar wind's average travel time to \SI{1}{\au}. The WSA-Enlil model achieves this in two steps \citep{Pizzo2011}. First, observations of the solar surface magnetic field are used to approximate the expansion of the corona and hence get the outflow parameters at the source surface. Second, a steady solar wind flow is propagated outwards to Earth. WSA-Enlil real-time model results are provided by NOAA's SWPC\footnote{WSA-Enlil Solar Wind Prediction website: \urlfoot{https://www.swpc.noaa.gov/products/wsa-enlil-solar-wind-prediction}}.
 
 Precise solar wind predictions are very difficult to achieve, as it is already hard to trace solar wind measurements made at \SI{1}{\au} unambiguously back to its coronal source \citep{Cranmer2017}. Not only stream-stream interactions and internal solar wind processes, such as turbulence, complicate this, but interactions with CMEs as well.
 
@@ -1068,65 +1068,32 @@ Precise solar wind predictions are very difficult to achieve, as it is already h
 \subsubsection*{CME forecast}
 CMEs are already sighted raising from their source regions on the solar surface and some of their properties can be estimated from remote observations and modeled to Earth.
 % CME forecast
-Knowing the geometry of a CME, it is possible to infer its direction and speed from white-light images. Through kinematic forward-modeling techniques that take advantage of the self-similar expansion observed in CMEs, it is possible to derive an estimated arrival time at Earth. As MCs are the drivers for most severe geomagnetic disturbances \citep{Bothmer1995,Cane2003}, it is also important to forecast their magnetic field strength and configuration.
+Knowing the geometry of a CME, it is possible to infer its direction and speed from white-light images. Through kinematic forward-modeling techniques, that take advantage of the self-similar expansion observed in CMEs, it is possible to derive an estimated arrival time at Earth. As MCs are the drivers for most severe geomagnetic disturbances \citep{Bothmer1995,Cane2003}, it is also important to forecast their magnetic field strength and configuration.
 
 % 3D models
 An early 3D model for a general CME geometry is the ice-cream cone model, which assumes a simple bubble-like CME structure \citep{Fisher1984}. Though, building on the the white-light CME projection scheme study by \citet{Cremades2004}, \citet{Thernisien2006} created the more complex graduated cylindrical shell (GCS) model for flux rope-like CMEs. This model assumes an empirically derived electron distribution in order to create synthetic coronagraph images. The GCS model is successfully applied to images of CMEs with well-developed white-light structure \citep{Bosman2012} and is implemented as a part of current CME forecast procedures.
 
 Early observations enable a heads-up time depending on the CME's propagation speed to Earth. This travel duration can be more than 4~days for slow events with average solar wind speeds, about 40~hours for fast events with speeds of \SI{1000}{\km\per\s}, and down to 20~hours and even below for the rare extreme cases, e.g., about 21~hours for the event on 23~July 2012 \citep{Russell2013,Temmer2015} and about 19~hours for the event observed by \citet{Carrington1859} on 1~September 1859.
-
 % extreme events
 Extreme CME velocities above \SI{2000}{\km\per\s} near the Sun are rare, nevertheless, in some cases speeds around \SI{3000}{\km\per\s} were measured. From the free energy available in active regions, \citet{Gopalswamy2005} concluded that CME speeds cannot be far greater than \SI{3000}{\km\per\s}. This would implicate that CMEs need at least half a day to travel from their source region on the Sun to reach Earth. \citet{Gopalswamy2010} even estimated a maximal limit of free energy active regions can store, which means that CMEs with \SI{4000}{\km\per\s} are not possible. Thus, the theoretical minimal heads-up time for CMEs is estimated to be half a day \citep{Gopalswamy2005}.
 
 % CME kinematics
 Calculating CME kinematics is a difficult task: Depending on whether CMEs are faster or slower than the surrounding solar wind, they decelerate/accelerate on their way through the heliosphere due to solar wind drag forces. Fast CMEs already decelerate substantially during their first few solar radii \citep{Sachdeva2017}. In case a CME interacts with a preceding CME, they both travel on with an intermediate speed \citep{Manoharan2004,Temmer2012}.
-
-The average prediction errors of CME arrival times are still within a range 14--20~hours and they also deteriorate with solar activity \citep{Vrsnak2014}. The average difference between CME forecast times and arrival times was about 15~hours in 2017 -- for predictions submitted to the CME~Scoreboard\footnote{CCMC's CME~Scoreboard website: \urlfoot{https://kauai.ccmc.gsfc.nasa.gov/CMEscoreboard/}} which is developed by the Community Coordinated Modeling Center (CCMC).\\
+The average prediction errors of CME arrival times are still within a range of 14--20~hours and they also deteriorate with increasing solar activity \citep{Vrsnak2014}. The average difference between CME forecast times and arrival times was about 15~hours in 2017 -- for predictions submitted to the CME~Scoreboard\footnote{CCMC's CME~Scoreboard website: \urlfoot{https://kauai.ccmc.gsfc.nasa.gov/CMEscoreboard/}} which is developed by the Community Coordinated Modeling Center (CCMC).
 
 % magnetic field forecast
-The geomagnetic activity predictions benefit from an inferred magnetic field strength and direction along the line Earth passes through the CME \citep{Savani2017}.
-
+Geomagnetic activity predictions benefit from an inferred magnetic field strength and direction along the line Earth passes through the CME \citep{Savani2017}.
 Fast CMEs usually come with high magnetic field strengths as well, for example the CME observed by STEREO~A on 23~July 2012 had a shock speed of about \SI{2000}{\km\per\s} at \SI{1}{\au} and its magnetic field magnitude reached values of up to \SI{100}{\nT} \citep{Russell2013}.
 
 % magnetic substructures
 It is clear that geomagnetic storms can directly be attributed to the sub-structures of CMEs. The shock causes a sudden commencement, though the interior structures create geomagnetic storms if carrying a significant southward magnetic field. \citet{Tsurutani1988} showed that the compressed solar wind field in the sheath region behind the shock and the magnetic flux rope field are of equal importance for the generation of geomagnetic storms. Thus, the magnetic field vectors in the flux rope as well as in the sheath need to be forecasted.
-
-% flux rope prediction
-There are effords to predict the magnetic field vectors in the flux rope.\\
-
-
-
-
-Savani2015:\\
-The compressed solar wind plasma in between supersonic magnetic flux rope obstacles and their driven shock fronts has not been addressed in this article, even though they have been shown to be significant drivers of magnetospheric storms [Huttunen and Koskinen, 2004].\\
-Savani2017:\\
-This event highlights the need to forecast the field vectors not only in the flux rope but also in the sheath [e.g., Huttunen and Koskinen, 2004].\\
-
-
-
-This is the reason why the geomagnetic storms' intensity and duration cannot be predicted only from remote solar observations of active regions.\\
-
-
-
-
+% flux rope and sheath prediction
+There are effective efforts to predict the direction and strength of the magnetic field from the remotely determined geometry and orientation of the flux rope \citep{Savani2015}. However, geomagnetic activity caused by MCs is easier to model than that caused by the compressed magnetic field in CME sheath regions or post-shock streams \citep{Huttunen2004}. One important reason is that the solar wind's $B_\text{z}$ component is quite random -- it has a much lower autocorrelation time than the $B_\text{x}$ and $B_\text{y}$ components, which makes $B_\text{z}$ more difficult to forecast using prior values \citep{Elliott2013}. Infact, a remote prediction of the IMF direction in compression regions is not yet implemented into current forecasts. This is one reason why the intensity and duration of geomagnetic storms still cannot be predicted reliably from remote solar observations only.
 
 % CME forecast methods and models
-Savani2015:\\
-Thus, models used for routine CME forecasts by various space weather services do not include magnetic structures within the simulated CMEs [e.g., Zheng et al., 2013; Shiota et al., 2014]. For example, ENLIL models the propagation of CMEs from ~20 solar radii (Rs ) to beyond Earth at 215 Rs and includes the background solar wind magnetic field. However, the CME is simplified to a high-pressure plasma pulse with a size and propagation direction estimated from solar imagery [Zheng et al., 2013]. CME arrival time predictions from these models provide lead times of ~2–3 days, and their accuracy has been well investigated [Taktakishvili et al., 2010; Vršnak et al., 2014; Colaninno et al., 2013].\\
+There exist multiple methods to forecast the CME arrival parameters at Earth, see the CCMC's CME~Scoreboard. However, methods that routinely forecast CMEs do not include internal magnetic structures and shocks \citep{Savani2015}. One prominent method is the implementation of a plasma cloud into the WSA-Enlil solar wind model, where the size and direction of the cloud is derived from remote solar images \citep{Zheng2013}.
 
-Savani2015:\\
-In this paper, we highlight three key components of a proof of concept developed to improve the prediction of a storm’s severity: (1) the use of the hemispheric helicity rule to provide a robust initial magnetic configuration at the Sun; (2) define a “volume of influence” of the CME, within the heliosphere, for which the Earth’s trajectory can be estimated; and (3) incorporating magnetic vectors from a simplified magnetic flux rope model to create a time series upstream of Earth.\\
-
-constant-alpha force-free (CAFF) flux ropes (Burlaga1988)\\
-
-adjusted BSS scheme (Savani2015)\\
-
-CME forecast methods and models:\\
-- WSA-Enlil CMEs without B-field forecast \citep{Pizzo2011}\\
-- MC forecast; Savani2015: Predicting the magnetic vectors within coronal mass ejections arriving at Earth: 1. Initial architecture\\
-- CCMC: a multitude of competing techniques\\
-- UGOE CME forecast chain (DDC)\\
-
+A recently proposed method includes the prediction of the magnetic flux rope configuration inside a CME \citep{Savani2015}. It applies the adjusted BSS-scheme to obtain the initial magnetic configuration of the flux rope at the Sun. The direction and orientation of the CME is then modeled with the GCS-model. A simple model of a constant-alpha force-free flux rope \citep{Burlaga1988} is finally fit into a determined MC volume of influence. This procedure allows the construction of a magnetic field time series predicted for hitting Earth.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1148,9 +1115,8 @@ CME forecast methods and models:\\
 % Kp forecast methods (empirical functions, neural networks, model list)
 % CME and stream forecast to Earth (incl. storm causes; methods and model list)
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \section{notes...}
 
@@ -1370,7 +1336,7 @@ A plasma ion detector only provides an energy spectrum -- the velocity, density,
 
 \section{\Kp~data series}
 \label{sec:kp_data}
-The planetary magnetospheric disturbance indicator \Kp{} is designed to measure solar particle radiation by its magnetic effects. The index is already described in detail in the previous \autoref{sec:kp_index}. Actual and quicklook data of the \Kp~index is provided by the GFZ~Potsdam via their website\footnote{GFZ website for geomagnetic indices: \urlfoot{http://www.gfz-potsdam.de/en/kp-index/}} and historical data is available from 1932 onwards.
+The planetary magnetospheric disturbance indicator \Kp{} is designed to measure solar particle radiation by its magnetic effects. The index is already described in detail in the previous \autoref{sec:kp_index}. Quicklook and actual data of the \Kp~index is provided by the GFZ~Potsdam via their website for geomagnetic indices: \mbox{\urltext{http://www.gfz-potsdam.de/en/kp-index/}}. Historical data is available from 1932 onwards.
 In \autoref{chap:chapter2}, \Kp~data of the time period 1917--2016 is used for the inspection of its long-term variations and data of the time period 1981--2016 is related to solar wind parameters.
 
 % acknowledgments:\\
@@ -1379,7 +1345,7 @@ In \autoref{chap:chapter2}, \Kp~data of the time period 1917--2016 is used for t
 
 \section{Sunspot number}
 \label{sec:sunspot_number}
-The number of sunspots occuring on the solar surface is commonly used as a long-term solar activity indicator, for more information on solar activity and sunspots see \autoref{sec:solar_activity_cycle}. The international sunspot number (SSN) is maintained by the World Data Center -- Sunspot Index and Long-term Solar Observations (WDC-SILSO) at the Solar Influences Data Center (SIDC), Royal Observatory of Belgium (ROB). The SIDC provides an online catalog\footnote{WDC-SILSO website: \urlfoot{http://www.sidc.be/silso/}} for the SSN data. The SSN version~2.0, the current recalibrated version introduced in July 2015, is used in this work. \autoref{chap:chapter2} applies the SSN data from the time period 1932--2016 spanning eight solar cycles, see \autoref{fig:timeline_SSN_with_data_and_sc}.
+The number of sunspots occuring on the solar surface is commonly used as a long-term solar activity indicator, for more information on solar activity and sunspots see \autoref{sec:solar_activity_cycle}. The international sunspot number (SSN) is maintained by the World Data Center -- Sunspot Index and Long-term Solar Observations (WDC-SILSO) at the Solar Influences Data Center (SIDC), Royal Observatory of Belgium (ROB). WDC-SILSO provides an online catalog for the SSN data via their website: \urltext{http://www.sidc.be/silso/}. The SSN version~2.0, the current recalibrated version introduced in July 2015, is used in this work. \autoref{chap:chapter2} applies the SSN data from the time period 1932--2016 spanning eight solar cycles, see \autoref{fig:timeline_SSN_with_data_and_sc}.
 
 Short-term predictions of the SSN are provided by several institutions. The SIDC itself provides 12-month SSN forecasts derived via different methods. The Space Weather Prediction Center (SWPC) at the National Oceanic and Atmospheric Administration (NOAA) supports the SSN prediction of the Solar Cycle~24 Prediction Panel\footnote{Solar Cycle~24 Prediction Panel website: \urlfoot{http://www.swpc.noaa.gov/products/solar-cycle-progression}}.
 
@@ -1397,7 +1363,7 @@ Solar wind was measured in~situ for the first time by spacecraft in 1959 and sin
 \end{figure}
 \footnotetext{OMNIWeb Data Documentation: \urlfoot{https://omniweb.gsfc.nasa.gov/html/ow_data.html}}
 
-The OMNI data set is being maintained at NASA's Space Physics Data Facility (SPDF), Goddard Space Flight Center (GSFC). Their OMNIWeb interface\footnote{GSFC OMNIWeb interface: \urlfoot{http://omniweb.gsfc.nasa.gov/}} and their Coordinated Data Analysis Web\footnote{GSFC CDAWeb interface: \urlfoot{http://cdaweb.gsfc.nasa.gov/}} (CDAWeb) provide the data -- the latter is where I obtained both data sets. The HRO data is used in \autoref{chap:chapter2} and the LRO data in \autoref{chap:empirical_solar_wind_model_for_the_inner_heliosphere}.
+The OMNI data set is being maintained at NASA's Space Physics Data Facility (SPDF), Goddard Space Flight Center (GSFC). Their OMNIWeb interface \urltext{http://omniweb.gsfc.nasa.gov/} and their Coordinated Data Analysis Web (CDAWeb) interface \urltext{http://cdaweb.gsfc.nasa.gov/} provide the data -- the latter is where I obtained both data sets. The HRO data is used in \autoref{chap:chapter2} and the LRO data in \autoref{chap:empirical_solar_wind_model_for_the_inner_heliosphere}.
 
 
 \section{Helios probes}
@@ -1436,7 +1402,7 @@ Until today, these both probes were the only spacecraft that measured solar wind
 	\addtocontents{lof}{\smallskip\protect\center I created the figure myself.\medskip}
 \end{figure}
 
-The scientific instruments carried by the spacecraft for measuring the magnetic field and solar wind plasma are two different fluxgate magnetometers and the Plasma Experiment Investigation. The data from the magnetometer and plasma instruments are merged into a data set with hourly resolution \citep{Rosenbauer1977}. The Helios data is available via the GSFC/SPDF CDAWeb interface\footnote{GSFC CDAWeb interface: \urlfoot{http://cdaweb.gsfc.nasa.gov/}}. In case of Helios~1 this data set includes about 12.5~orbits in the time range \mbox{1974-12-10} to \mbox{1981-06-14} and in case of Helios~2 about 8~orbits in the time range \mbox{1976-01-01} to \mbox{1980-03-04}. The Helios~1 (Helios~2) magnetometer data coverage (without gaps) is about \SI{43}{\%} (\SI{54}{\%}) and amounts to 2.8~years (2.3~years) in total, whereas the plasma data coverage is \SI{76}{\%} (\SI{92}{\%}) and amounts to 5.0~years (3.9~years) in total.
+The scientific instruments carried by the spacecraft for measuring the magnetic field and solar wind plasma are two different fluxgate magnetometers and the Plasma Experiment Investigation. The data from the magnetometer and plasma instruments are merged into a data set with hourly resolution \citep{Rosenbauer1977}. The Helios data is available via the GSFC/SPDF CDAWeb interface: \urltext{http://cdaweb.gsfc.nasa.gov/}. In case of Helios~1 this data set includes about 12.5~orbits in the time range \mbox{1974-12-10} to \mbox{1981-06-14} and in case of Helios~2 about 8~orbits in the time range \mbox{1976-01-01} to \mbox{1980-03-04}. The Helios~1 (Helios~2) magnetometer data coverage (without gaps) is about \SI{43}{\%} (\SI{54}{\%}) and amounts to 2.8~years (2.3~years) in total, whereas the plasma data coverage is \SI{76}{\%} (\SI{92}{\%}) and amounts to 5.0~years (3.9~years) in total.
 
 The Helios magnetic field and plasma data frequency over heliocentric distance and over heliographic latitude are plotted in \autoref{fig:helios_data_frequency}.\\
 \begin{figure}[htb]

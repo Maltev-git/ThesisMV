@@ -4,7 +4,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.1.3
-lastDocument=chapters/front_matter.tex
+lastDocument=chapters/chapter2.tex
 masterDocument=
 name=thesis_project
 pkg_extIsRegExp=false
@@ -94,7 +94,7 @@ Indentation Mode=normal
 Mode=LaTeX
 
 [document-settings,item:chapters/introduction.tex]
-Bookmarks=668,302,1117,748,1120,381,530,50,717,792,870,56,835,1171,1098,1210,915,843,920,255,849,184
+Bookmarks=668,302,748,1119,381,530,1122,50,717,792,870,56,835,1170,915,1100,1211,843,920,255,849,184
 Encoding=UTF-8
 Highlighting=LaTeX
 Indentation Mode=normal
@@ -188,12 +188,12 @@ order=-1
 
 [item:appendix/literature_bibtex.bib]
 archive=true
-column=0
+column=20
 encoding=UTF-8
 highlight=BibTeX
-line=3510
+line=1251
 mode=BibTeX
-open=true
+open=false
 order=6
 
 [item:appendix/literature_bibtex_combined.bib]
@@ -228,10 +228,10 @@ order=6
 
 [item:chapters/chapter2.tex]
 archive=true
-column=19
+column=228
 encoding=UTF-8
 highlight=LaTeX
-line=45
+line=318
 mode=LaTeX
 open=true
 order=4
@@ -258,20 +258,20 @@ order=5
 
 [item:chapters/front_matter.tex]
 archive=true
-column=28
+column=71
 encoding=UTF-8
 highlight=LaTeX
-line=369
+line=373
 mode=LaTeX
 open=true
 order=2
 
 [item:chapters/introduction.tex]
 archive=true
-column=537
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=1090
+line=1052
 mode=LaTeX
 open=true
 order=3
@@ -313,7 +313,7 @@ encoding=UTF-8
 highlight=LaTeX
 line=114
 mode=LaTeX
-open=true
+open=false
 order=7
 
 [item:paperMVVB/sections/literature_bibtex.bib]
@@ -328,10 +328,10 @@ order=-1
 
 [item:style/header.tex]
 archive=true
-column=46
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=0
+line=103
 mode=LaTeX
 open=true
 order=0
@@ -348,10 +348,10 @@ order=-1
 
 [item:thesis.tex]
 archive=true
-column=0
+column=71
 encoding=UTF-8
 highlight=LaTeX
-line=48
+line=91
 mode=LaTeX
 open=true
 order=1
@@ -385,10 +385,10 @@ JumpList=
 ViMarks=.,3,0,[,3,0,],3,0
 
 [view-settings,view=0,item:appendix/literature_bibtex.bib]
-CursorColumn=0
-CursorLine=3510
+CursorColumn=20
+CursorLine=1251
 JumpList=
-ViMarks=.,3510,0,[,3510,0,],3510,0
+ViMarks=.,1251,20,[,1251,20,],1251,20
 
 [view-settings,view=0,item:appendix/literature_bibtex_combined.bib]
 CursorColumn=15
@@ -409,10 +409,10 @@ JumpList=
 ViMarks=.,312,260,[,312,259,],312,260
 
 [view-settings,view=0,item:chapters/chapter2.tex]
-CursorColumn=19
-CursorLine=45
+CursorColumn=228
+CursorLine=318
 JumpList=
-ViMarks=.,45,18,[,45,5,],45,18
+ViMarks=.,318,167,[,318,167,],318,167
 
 [view-settings,view=0,item:chapters/discussion_summary.tex]
 CursorColumn=219
@@ -427,16 +427,16 @@ JumpList=
 ViMarks=.,81,38,[,81,38,],81,38
 
 [view-settings,view=0,item:chapters/front_matter.tex]
-CursorColumn=28
-CursorLine=369
+CursorColumn=71
+CursorLine=373
 JumpList=
-ViMarks=.,372,50,[,372,15,],372,50
+ViMarks=.,373,70,[,373,65,],373,70
 
 [view-settings,view=0,item:chapters/introduction.tex]
-CursorColumn=537
-CursorLine=1090
+CursorColumn=0
+CursorLine=1052
 JumpList=
-ViMarks=.,1090,536,[,1090,536,],1090,536,a,717,0,b,530,0,c,381,0,d,302,0,e,255,0,f,184,0,g,56,0,h,50,0,i,843,0,j,668,0,k,1117,0,m,1098,0,n,1171,0,o,1210,0,p,870,0,q,915,0,r,835,0,s,792,0,t,748,0,u,849,0,v,920,0,w,1120,0
+ViMarks=.,1046,119,[,1046,116,],1046,119,a,717,0,b,530,0,c,381,0,d,302,0,e,255,0,f,184,0,g,56,0,h,50,0,i,843,0,j,668,0,k,1119,0,m,1100,0,n,1170,0,o,1211,0,p,870,0,q,915,0,r,835,0,s,792,0,t,748,0,u,849,0,v,920,0,w,1122,0
 
 [view-settings,view=0,item:chapters/paperMVVB_wrapper.tex]
 CursorColumn=0
@@ -469,10 +469,10 @@ JumpList=
 ViMarks=.,778,73,[,778,73,],778,73
 
 [view-settings,view=0,item:style/header.tex]
-CursorColumn=46
-CursorLine=0
+CursorColumn=0
+CursorLine=103
 JumpList=
-ViMarks=.,0,46,[,0,46,],0,46
+ViMarks=.,103,0,[,103,0,],103,0
 
 [view-settings,view=0,item:style/short_commands_malte.tex]
 CursorColumn=0
@@ -481,7 +481,7 @@ JumpList=
 ViMarks=.,51,0,[,51,0,],51,0
 
 [view-settings,view=0,item:thesis.tex]
-CursorColumn=0
-CursorLine=48
+CursorColumn=71
+CursorLine=91
 JumpList=
 ViMarks=.,90,40,[,90,40,],90,40

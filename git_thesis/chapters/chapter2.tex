@@ -34,12 +34,6 @@ With the results presented in this chapter, I elaborate the step from solar wind
 
 differences to existing studies...\\
 
-%general solar wind nowcast; rt-data
-In-situ measurements of solar wind are made almost continuously, e.g., at the first Lagrange point (L1), in front of the magnetosphere. Since 1963 several spacecraft collected more than 50~years of solar wind data. The latest spacecraft, that is, Wind, ACE, and DSCOVR (launched in early 2015), provide real-time solar wind data online\footnote{Wind real-time data website: \urlfoot{https://pwg.gsfc.nasa.gov/windnrt/}} \footnote{ACE real-time data website: \urlfoot{http://www.swpc.noaa.gov/products/ace-real-time-solar wind}} \footnote{DSCOVR real-time data website: \urlfoot{http://www.swpc.noaa.gov/products/real-time-solar wind}}.
-% solar wind impacts
-These solar wind real-time data are used to nowcast various effects on the Earth's magnetosphere, such as the position of the magnetospheric bow shock in front of the Earth, the magnitude of geomagnetic disturbances, the positions of the polar auroral ovals, the variation of the total electron content (TEC) of the ionosphere, and the positional error of global navigation satellite systems (GNSS).\\
-
-
 %CME velocity forecast
 The velocity and the direction of CMEs can be determined in their early near-Sun stages via remote tracking with coronagraph white-light observations. Using these parameters as input for CME propagation models, their possible arrival time and arrival velocity at Earth can be derived.\\
 
@@ -302,27 +296,27 @@ In order to demonstrate this relation with actual in-situ data, I calculate the 
 \end{figure}
 It can be seen that in this period the \Kp{} estimate traces the actual \Kp{}~index pretty well within the mean MAD band. However, deviations are found at the times of the initial shock, and the start and middle of the MC.\\
 
+% warning lead time
+The derived E"~field relation can well be applied with the solar wind real-time measurements that are continuously being made at L1. However, the heads-up time for warnings from this location is relatively short with a few tens of minutes, whereas remote observations via solar imagers and coronagraphs allow for longer lead times of a few days.
+
+The E"~field relation derived above cannot be applied in the remote case, as IMF strength and orientation are not yet properly forecastable from current prediction methods that rely on remote observations.
 
 
 \section{Relations between CME/stream velocities and \Kp~index}
 \label{sec:relations_between_cme_stream_v_and_kp}
 
+In order to still make use of the enhanced warning lead times from remote observations, the solar wind velocity is the only parameter left which is to a certain degree reliably forecastable.
+
+For one, the velocity can even be used for persistence forecast, as it has the highest autocorrelation time of all major solar wind parameters -- with \SI{59}{\hour} it is much higher than that with the lowest autocorrelation time, which is indeed the $B_\text{z}$~GSM component (\SI{4}{\hour}) \citep{Elliott2013}.
+
+It is clear that the strength of the southward IMF is the most dominant solar wind parameter for the driving of geomagnetic activity.
+The velocity shows a strong correlation during CME conditions as well, however, during HSSs the velocity is considered the most dominant parameter for driving the geomagnetic activity \citep{Holappa2014}.\\
+
 % separating CMEs and streams
-\Kp{} forecast from remote CME and stream observations...\\
-It makes sense to separately look at CMEs and solar wind streams -> see event comparison fig.\\
-same velocity -> different \Kp{} effect\\
-The different CME and stream forecast methods are described in \autoref{sec:stream_and_cme_forecast_to_earth}.\\
-
-% velocity as coupling function
-The IMF strength and orientation is difficult to determine from remote observations. The solar wind velocity is the only coupling parameter which is to a certain degree reliably forecastable. Therefore, the heads-up time of remote observations can be made still use of.\\
-
-
-Savani2017:\\
-``\textit{Prior evidence has suggested the reason be due to southerly IMF strength being the most dominant solar wind parameter for driving geomagnetic activity at Earth. The strong correlation of solar wind speed to geomagnetic activity is evident during CME conditions but is only considered the most dominant parameter during high-speed streams} [Holappa et al., 2014].''\\
-
+The distinct generation mechanisms of solar wind streams and CMEs shows in their different appearance, streams are of continuous nature and CMEs are event-like. Therefore they require completely different forecast methods, see also \autoref{sec:solar_wind_nowcast_and_forecast_to_earth}. Thus, in order to forecast the \Kp~index from remotely derived velocity values, it is obvious to analyze CMEs and solar wind streams separately.
 
 \subsection{Solar Wind Structures list}
-For the following analysis, I use the list of solar wind structures (SWS) created and updated by \citet{Richardson2000} and \citet{Richardson2012}, who characterized the near-Earth solar wind structures since 1963. All periods related to ICMEs in the OMNI solar wind data set were identified and flagged.\\
+For the separation of CME and stream data, I use the list of solar wind structures (SWS) created and updated by \citet{Richardson2000} and \citet{Richardson2012}. They characterized the near-Earth solar wind structures since 1963. All periods related to ICMEs in the OMNI solar wind data set were identified and flagged.\\
 
 list identifying criteria... look into their paper!\\
 
@@ -627,6 +621,10 @@ see Akasofu1981 p.~126, table\\
 
 
 It is obvious that the derived relations are not suited to be used inversely, i.e., to deduce solar wind properties from existing \Kp{}~data.\\
+
+
+One has to choose between the high accuracy of the L1-derived \Kp{} nowcast with a short lead time and the lower accuracy of the remotely derived \Kp{} forecasts with fairly long lead times.\\
+
 
 
 \section{Applications and outlook}

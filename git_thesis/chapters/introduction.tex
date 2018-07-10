@@ -1013,7 +1013,7 @@ Whereas, \citet{Mays2015} fitted only $\text{d}\Phi / \text{d}t$ with the \Kp~in
 with the velocity measured in \si{\km\per\s} and the magnetic field in \si{\nano\tesla}.
 
 % Kp now- and forecast
-The different empirical functions are utilized within various models developed for predicting the \Kp~index in advance. Their prediction times ranges from simple nowcasts to forecasts of a few days, depending on the type of input data. The input can be solar wind real-time measurements made right ahead of Earth at L1, just as CME/stream arrival predictions derived from remote observations of the solar surface and corona. These remote forecasts are outlined in the next section.
+The different empirical functions are utilized within various models developed for predicting the \Kp~index in advance. Their prediction times ranges from simple nowcasts to forecasts of a few days, depending on the type of input data. The input can be solar wind real-time measurements made right ahead of Earth at L1, just as stream/CME arrival predictions derived from remote observations of the solar surface and corona. These two input sources are outlined in the next section.
 Another sophisticated prediction method relies on artificial neural networks. Models utilizing this method usually rank highest in prediction performance.
 Below I list a few currently existing operational services that implement various \Kp{} prediction methods, including nowcasts, forecasts, and manual warnings:
 \begin{itemize*}
@@ -1039,15 +1039,17 @@ Below I list a few currently existing operational services that implement variou
 \end{itemize*}
 
 
-\subsection{Solar wind nowcast at Earth}
+\subsection{Solar wind nowcast and forecast to Earth}
+\label{sec:solar_wind_nowcast_and_forecast_to_earth}
 
-rtsw L1\\
+\subsubsection*{Solar wind nowcast}
+%solar wind nowcast
+In-situ measurements of solar wind are made continuously in front of the magnetosphere. The solar wind is monitored by several spacecraft since 1963. Currently located at the first Lagrange point (L1) are the Wind, ACE, and DSCOVR spacecraft; the latter was recently launched in early 2015. These missions enable the availability of solar wind data that is provided online in near real-time by NASA and NOAA\footnote{Wind real-time data website: \urlfoot{https://pwg.gsfc.nasa.gov/windnrt/}} \footnote{ACE real-time data website: \urlfoot{http://www.swpc.noaa.gov/products/ace-real-time-solar wind}} \footnote{DSCOVR real-time data website: \urlfoot{http://www.swpc.noaa.gov/products/real-time-solar wind}}. The delay from measurement to data online is only a few minutes -- about \SI{3}{\minute} for the ACE real-time data.
 
+Solar wind measurements at L1 provide important plasma properties with high accuracy, such as magnetic vector information and bulk velocity. These properties enable reliable predictions of the intensity of upcoming geomagnetic activity, though the lead time is very short. The travel time from L1 to Earth is about one hour for average solar wind speeds, but goes down to \SI{30}{\minute} for fast solar wind. In case of fast CMEs the warning time can be even shorter, that is, a CME with a speed of \SI{2000}{\km\per\s} bridges this distance in only \SI{12}{\minute}.
 
-\subsection{Stream and CME forecast to Earth}
-\label{sec:stream_and_cme_forecast_to_earth}
 % Storm causes
-Solar wind streams may cause enhanced geomagnetic activity, however, most major geomagnetic storms are caused by CMEs. Here I denote solar wind without CMEs simply as solar wind streams, that is, including slow/fast solar wind and interaction regions. The continuous nature of solar wind streams and the event-like appearance of CMEs, rooted in their distinct generation mechanisms, require entirely different forecast methods. In the following I note some forecast techniques that are in use to predict important properties of solar wind streams and CMEs.
+Solar wind streams may cause enhanced geomagnetic activity, however, most major geomagnetic storms are caused by CMEs. In the following I denote solar wind without CMEs simply as solar wind streams, that is, including slow/fast solar wind and interaction regions. The continuous nature of solar wind streams and the event-like appearance of CMEs, rooted in their distinct generation mechanisms, require entirely different forecast methods. In the following I note some forecast techniques that are in use to predict important properties of solar wind streams and CMEs.
 
 \subsubsection*{Stream forecast}
 % stream forecast
@@ -1119,9 +1121,6 @@ A recently proposed method includes the prediction of the magnetic flux rope con
 
 
 \section{notes...}
-
-Savani2015:\\
-In contrast, the important magnetic vector information is only revealed when in situ measurements are made by spacecraft upstream of Earth at the first Lagrangian position (L1) ~1 h prior to the CME arriving at Earth, thereby severely limiting the lead time available for reliable, magnetic field-based, storm warnings.\\
 
 put fig. somewhere earlier (p.~10?): see \autoref{fig:Hundhausen1977_fig20bcd}\\
 \begin{figure}[htb]
@@ -1205,6 +1204,8 @@ There exist several indicators/quantities that scale or are based on the \Kp{}~i
 	\item The variation of the total electron content (TEC) of the ionosphere correlates with the \Kp~index (cite?). The TEC has influence on global navigation satellite systems (GNSS). A part of their positional error scales directly with TEC (in extreme cases up to about \SI{30}{\m}).
 \end{itemize*}
 
+% solar wind impacts
+These solar wind real-time data are used to nowcast various effects on the Earth's magnetosphere, such as the position of the magnetospheric bow shock in front of the Earth, the magnitude of geomagnetic disturbances, the positions of the polar auroral ovals, the variation of the total electron content (TEC) of the ionosphere, and the positional error of global navigation satellite systems (GNSS).\\
 
 
 

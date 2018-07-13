@@ -218,22 +218,22 @@ order=4
 
 [item:chapters/analyses_helios.tex]
 archive=true
-column=224
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=46
+line=83
 mode=LaTeX
-open=false
-order=6
+open=true
+order=4
 
 [item:chapters/chapter2.tex]
 archive=true
-column=13
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=669
+line=583
 mode=LaTeX
-open=true
+open=false
 order=4
 
 [item:chapters/discussion_summary.tex]
@@ -258,20 +258,20 @@ order=5
 
 [item:chapters/front_matter.tex]
 archive=true
-column=39
+column=26
 encoding=UTF-8
 highlight=LaTeX
-line=376
+line=377
 mode=LaTeX
 open=true
 order=2
 
 [item:chapters/introduction.tex]
 archive=true
-column=151
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=1087
+line=95
 mode=LaTeX
 open=true
 order=3
@@ -403,14 +403,14 @@ JumpList=
 ViMarks=.,132,7,[,132,6,],132,7
 
 [view-settings,view=0,item:chapters/analyses_helios.tex]
-CursorColumn=224
-CursorLine=46
+CursorColumn=0
+CursorLine=83
 JumpList=
-ViMarks=.,312,260,[,312,259,],312,260
+ViMarks=.,85,43,[,85,43,],85,43
 
 [view-settings,view=0,item:chapters/chapter2.tex]
-CursorColumn=13
-CursorLine=669
+CursorColumn=0
+CursorLine=583
 JumpList=
 ViMarks=.,665,70,[,665,69,],665,70
 
@@ -427,14 +427,14 @@ JumpList=
 ViMarks=.,81,38,[,81,38,],81,38
 
 [view-settings,view=0,item:chapters/front_matter.tex]
-CursorColumn=39
-CursorLine=376
+CursorColumn=26
+CursorLine=377
 JumpList=
-ViMarks=.,376,39,[,376,39,],376,39
+ViMarks=.,377,25,[,377,15,],377,25
 
 [view-settings,view=0,item:chapters/introduction.tex]
-CursorColumn=151
-CursorLine=1087
+CursorColumn=0
+CursorLine=95
 JumpList=
 ViMarks=.,102,0,[,102,0,],102,0,a,717,0,b,530,0,c,381,0,d,302,0,e,255,0,f,184,0,g,56,0,h,50,0,i,843,0,j,668,0,k,1119,0,m,1100,0,n,1170,0,o,1211,0,p,870,0,q,915,0,r,835,0,s,792,0,t,748,0,u,849,0,v,920,0,w,1122,0
 

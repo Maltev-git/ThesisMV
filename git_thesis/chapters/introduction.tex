@@ -983,7 +983,7 @@ Many coupling functions were proposed in order to characterize the solar wind's 
 	\begin{align}
 		\frac{\text{d}\Phi}{\text{d}t} &= v^{4/3} |\vect{B}|^{2/3} \sin^{8/3}\left(\frac{\theta_c}{2}\right)	\,.	\label{eq:newell_merging_function}
 	\end{align}
-	The X"~line length is approximated with $\left(v / |\vect{B}|\right)^{1/3}$ and is included within the first two factors. The value of the sinus exponent, $n = 8/3$, is determined empirically. This relation shows the highest correlation with 9 out of 10 geomagnetic indices out of various tested coupling functions, aiming to be an universal solar wind-magnetosphere coupling function \citep{Newell2007}. The coupling function's correlation coefficient with the \Kp~index reaches a value of $r = 0.760$.
+	The X"~line length is approximated with $\left(v / |\vect{B}|\right)^{1/3}$ and is included within the first two factors. The value of the sine exponent, $n = 8/3$, is determined empirically. This relation shows the highest correlation with 9 out of 10 geomagnetic indices out of various tested coupling functions, aiming to be an universal solar wind-magnetosphere coupling function \citep{Newell2007}. The coupling function's correlation coefficient with the \Kp~index reaches a value of $r = 0.760$.
 	
 	\item \citet{Newell2008} found that a single coupling function, consisting of a merging and a viscous part, is able to describe the solar wind-magnetosphere interaction best, in that it correlates with the behavior of a broad range of geomagnetic indices. One of the best combinations for the \Kp~index is the merging term $\text{d}\Phi / \text{d}t$ together with the viscous term $\sqrt{n} \cdot v^2$, resulting in a correlation coefficient as high as $r = 0.866$.
 	
@@ -992,7 +992,7 @@ Many coupling functions were proposed in order to characterize the solar wind's 
 
 \subsection{\Kp{} forecast methods}
 % Kp empirical functions
-However, the correlation of a coupling function only shows which quantities are involved in the interaction and how much they contribute to the observed variance. In order to quantify the interaction and relate the coupling functions to geomagnetic indices, empirical relations are often obtained by fitting the mutual distribution of both time series.
+However, the correlation of a coupling function only shows which quantities are involved in the interaction and how much they contribute to the observed variance. In order to quantify the interaction and relate the coupling functions to geomagnetic indices, empirical relations are obtained by fitting the mutual distribution of both time series.
 
 As the \Kp~index is the measure for the size of geomagnetic disturbances, many simple and more complex analytical functions connecting \Kp{} with different solar wind coupling functions were derived. For instance, \citet{Snyder1963} deduced the following velocity relation for the daily sum of the eight \Kp{} values from Mariner~2 data: $\sum \Kp(v) = (v - 330) / 8.44$. Another example is the relation developed by \citet{Newell2008}, comprising the previously mentioned coupling function set of a merging and a viscous term. Their equation for the least variance linear prediction of \Kp{} is
 \begin{align}
@@ -1005,11 +1005,11 @@ Whereas, \citet{Mays2015} fitted only $\text{d}\Phi / \text{d}t$ with the \Kp~in
 with the velocity measured in \si{\km\per\s} and the magnetic field in \si{\nano\tesla}.
 
 % Kp now- and forecast
-The different empirical functions are utilized within various models developed for predicting the \Kp~index in advance. Their prediction times ranges from simple nowcasts to forecasts of a few days, depending on the type of input data. The input can be solar wind real-time measurements made right ahead of Earth at L1, just as stream/CME arrival predictions derived from remote observations of the solar surface and corona. These two input sources are outlined in the next section.
+The different empirical functions are utilized within various models developed for predicting the \Kp~index in advance. Their prediction times range from simple nowcasts to forecasts of a few days, depending on the type of input data. The input can be solar wind real-time measurements made right ahead of Earth at L1, just as stream/CME arrival predictions derived from remote observations of the solar surface and corona. These two input sources are outlined in the next section.
 Another sophisticated prediction method relies on artificial neural networks. Models utilizing this method usually rank highest in prediction performance.
 Below I list a few currently existing operational services that implement various \Kp{} prediction methods, including nowcasts, forecasts, and manual warnings:
 \begin{itemize*}
-	\item The GFZ German Research Centre for Geosciences Potsdam is the responsible institution for releasing the official \Kp{}~index. Additionally, it also calculates a nowcast \Kp~index from the already available magnetic observations. The Nowcast \Kp~index is provided at:\\
+	\item The GFZ German Research Centre for Geosciences Potsdam is the responsible institution for releasing the official \Kp{}~index. Additionally, it also calculates a nowcast \Kp~index from the already available magnetic observations. The Nowcast \Kp~index is provided at the website of the GFZ~Potsdam:\\
 	\urltext{https://www.gfz-potsdam.de/en/kp-index/}
 	
 	\item NOAA's Space Weather Prediction Center (SWPC) provides an estimated \Kp~index using ground-based real-time magnetometer measurements from a set of eight international observatories. The Planetary $K$"~index nowcast is availabe at the SWPC:\\
@@ -1036,7 +1036,7 @@ Below I list a few currently existing operational services that implement variou
 
 \subsubsection*{Solar wind nowcast}
 %solar wind nowcast
-In-situ measurements of solar wind are made continuously in front of the magnetosphere. The solar wind is monitored by several spacecraft since 1963. Currently located at the first Lagrange point (L1) are the Wind, ACE, and DSCOVR spacecraft; the latter was recently launched in early 2015. These missions enable the availability of solar wind data that is provided online in near real-time by NASA and NOAA\footnote{Wind real-time data website: \urlfoot{https://pwg.gsfc.nasa.gov/windnrt/}} \footnote{ACE real-time data website: \urlfoot{http://www.swpc.noaa.gov/products/ace-real-time-solar wind}} \footnote{DSCOVR real-time data website: \urlfoot{http://www.swpc.noaa.gov/products/real-time-solar wind}}. The delay from measurement to data online is only a few minutes -- about \SI{3}{\minute} for the ACE real-time data.
+In-situ measurements of solar wind are made continuously in front of the magnetosphere. Various spacecraft monitored the solar wind since 1963 -- currently located at the first Lagrange point (L1) are the Wind, ACE, and DSCOVR spacecraft; the latter was recently launched in early 2015. These missions enable the availability of solar wind data that is provided online in near real-time by NASA and NOAA\footnote{Wind real-time data website: \urlfoot{https://pwg.gsfc.nasa.gov/windnrt/}} \footnote{ACE real-time data website: \urlfoot{http://www.swpc.noaa.gov/products/ace-real-time-solar wind}} \footnote{DSCOVR real-time data website: \urlfoot{http://www.swpc.noaa.gov/products/real-time-solar wind}}. The delay from measurement to data online is only a few minutes -- about \SI{3}{\minute} for the ACE real-time data.
 
 Solar wind measurements at L1 provide important plasma properties with high accuracy, such as magnetic vector information and bulk velocity. These properties enable reliable predictions of the intensity of upcoming geomagnetic activity, though the lead time is very short. The travel time from L1 to Earth is about one hour for average solar wind speeds, but goes down to \SI{30}{\minute} for fast solar wind. In case of fast CMEs the warning time can be even shorter, that is, a CME with a speed of \SI{2000}{\km\per\s} bridges this distance in only \SI{12}{\minute}.
 
@@ -1051,7 +1051,7 @@ The occurrence of fast and slow solar wind streams at Earth depends on the size 
 Coronal holes are the origin of the fast solar wind. Their area on the solar disk -- seen in EUV wavelengths -- correlates with the measured velocity of solar wind streams \citep{Vrsnak2007}. This relation is used to predict the Earth-arrival velocity of solar wind streams about 4~days in advance \citep{Rotter2012}, as is done in real-time within the empirical solar wind forecast (ESWF) at the University of Graz\footnote{ESWF website: \urlfoot{http://swe.uni-graz.at/index.php/services/solar-wind-forecast}}.
 
 % solar wind time shift
-Coronal holes may grow or shrink to some extent from one solar rotation to the next. However, they usually exist over many rotations and thus lead to recurrent HSSs and CIRs. This steadyness is utilized to forecast the solar wind one solar rotation in advance, simply by shifting the in-situ measurements by 27~days. The prediction accuracy can be further enhanced by shortening this period to a few days using in-situ data from spacecraft trailing the Earth in its orbit around the Sun. This is possible with the STEREO spacecraft and with a potential spacecraft mission located at the fifth Lagrange point (L5). The method is applied together with an analysis of CH sizes in the STEREO+CH persistence model \citep{Temmer2018} developed at the University of Graz, a 4"~day real-time forecast is hosted on their website\footnote{STEREO+CH website: \urlfoot{http://swe.uni-graz.at/index.php/services/solar-wind-forecast-stereo-ch}}.
+Coronal holes may grow or shrink to some extent from one solar rotation to the next. However, they usually exist over many solar rotations and thus lead to recurrent HSSs and CIRs. This steadyness is utilized to forecast the solar wind one solar rotation in advance, simply by shifting the in-situ measurements by 27~days. The prediction accuracy can be further enhanced by shortening this period to a few days using in-situ data from spacecraft trailing the Earth in its orbit around the Sun. This is possible with the STEREO spacecraft and with a potential spacecraft mission located at the fifth Lagrange point (L5). The method is applied together with an analysis of CH sizes in the STEREO+CH persistence model \citep{Temmer2018} developed at the University of Graz, a 4"~day real-time forecast is hosted on their website\footnote{STEREO+CH website: \urlfoot{http://swe.uni-graz.at/index.php/services/solar-wind-forecast-stereo-ch}}.
 
 % ENLIL
 Another prediction approach is the numerical MHD simulation of the solar wind flow from the Sun to Earth, using remote observations of the Sun and its corona. This allows forecast times of 3~to 4~days -- the solar wind's average travel time to \SI{1}{\au}. The WSA-Enlil model achieves this in two steps \citep{Pizzo2011}. First, observations of the solar surface magnetic field are used to approximate the expansion of the corona and hence get the outflow parameters at the source surface. Second, a steady solar wind flow is propagated outwards to Earth. WSA-Enlil real-time model results are provided by NOAA's SWPC\footnote{WSA-Enlil Solar Wind Prediction website: \urlfoot{https://www.swpc.noaa.gov/products/wsa-enlil-solar-wind-prediction}}.
@@ -1082,7 +1082,7 @@ Fast CMEs usually come with high magnetic field strengths as well, for example t
 % magnetic substructures
 It is clear that geomagnetic storms can directly be attributed to the sub-structures of CMEs. The shock causes a sudden commencement, though the interior structures create geomagnetic storms if carrying a significant southward magnetic field. \citet{Tsurutani1988} showed that the compressed solar wind field in the sheath region behind the shock and the magnetic flux rope field are of equal importance for the generation of geomagnetic storms. Thus, the magnetic field vectors in the flux rope as well as in the sheath need to be forecasted.
 % flux rope and sheath prediction
-There are effective efforts to predict the direction and strength of the magnetic field from the remotely determined geometry and orientation of the flux rope \citep{Savani2015}. However, geomagnetic activity caused by MCs is easier to model than that caused by the compressed magnetic field in CME sheath regions or post-shock streams \citep{Huttunen2004}. One important reason is that the solar wind's $B_\text{z}$ component is quite random -- it has a much lower autocorrelation time than the $B_\text{x}$ and $B_\text{y}$ components, which makes $B_\text{z}$ more difficult to forecast using prior values \citep{Elliott2013}. Infact, a remote prediction of the IMF direction in compression regions is not yet implemented into current forecasts. This is one reason why the intensity and duration of geomagnetic storms still cannot be predicted reliably from remote solar observations only.
+There are effective efforts to predict the direction and strength of the magnetic field from the remotely determined geometry and orientation of the flux rope \citep{Savani2015}. However, geomagnetic activity caused by MCs is easier to model than that caused by the compressed magnetic field in CME sheath regions or post-shock streams \citep{Huttunen2004}. One important reason is that the solar wind's $B_\text{z}$ component is quite random -- it has a much lower autocorrelation time than the $B_\text{x}$ and $B_\text{y}$ components, which makes $B_\text{z}$ also more difficult to forecast using prior values \citep{Elliott2013}. Infact, a remote prediction of the IMF direction in compression regions is not yet implemented into current forecasts. This is one reason why the intensity and duration of geomagnetic storms still cannot be predicted reliably from remote solar observations only.
 
 % CME forecast methods and models
 There exist multiple methods to forecast the CME arrival parameters at Earth, see the CCMC's CME~Scoreboard. However, methods that routinely forecast CMEs do not include internal magnetic structures and shocks \citep{Savani2015}. One prominent method is the implementation of a plasma cloud into the WSA-Enlil solar wind model, where the size and direction of the cloud is derived from remote solar images \citep{Zheng2013}.
@@ -1112,94 +1112,6 @@ A recently proposed method includes the prediction of the magnetic flux rope con
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{notes...}
-
-put fig. somewhere earlier (p.~10?): see \autoref{fig:Hundhausen1977_fig20bcd}\\
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=0.5\textwidth]{figures_of_others/images/Hundhausen1977_fig20bcd.png}
-	\caption[\lofimage{figures_of_others/images/Hundhausen1977_fig20bcd.png}Credit: {\citep[Fig.~20, panels (b--d)]{Hundhausen1977}}, \textcopyright~Colorado Associated University Press, reproduced with permission.]
-	{Schemata of different coronal configurations during the solar cycle. Visualized are the locations of closed coronal magnetic fields (lines) and coronal holes (black areas) for a post maximum distorted dipole (top panel), for a pre minimum stable tilted dipole (middle panel), and a post minimum axial dipole (bottom panel). Credit: {\citep[Fig.~20, panels (b--d)]{Hundhausen1977}}, \textcopyright~Colorado Associated University Press, reproduced with permission.}
-	\label{fig:Hundhausen1977_fig20bcd}
-\end{figure}
-
-causes (see citet{Rangarajan1997} p.~1282 and mention Bartels1963 too)\\
-
-\citet{Sonnerup1967}: The rotational discontinuity seems to occur predominantly during magnetic storms and two of these cases, involving substantial normal-field components, provide compelling evidence that field reconnection takes place during the storm main phase.\\
-
-% mass flux considerations:\\
-% mass per second per Earth disc...\\
-% R_E = 6371.008 km\\
-% A_E = pi * R_E² = 127 516 438.219 km²\\
-% m_p = 1.672621898e-27 kg\\
-% v = 400 km/s\\
-% n = 6.5 cm-3 = 6.5e15 km-3\\
-% mass flux_E = m_p * n * v * A_E = 0,554538384917 kg/s\\
-% = 555 g/s = 1996 kg/h = 48 t/d = 17487 t/a\\
-% mass per second per magnetosphere disc...\\
-% R_MP = 15 * R_E
-% A_MP = pi * R_MP² = 28 691 198 599.3 km²\\
-% mass flux_MP = 124,772770348 kg/s\\
-% = 449 t/h = 10 780 t/d = 3 934 834 t/a\\
-
-% Wikipedia: https://en.wikipedia.org/wiki/Solar_wind
-% The wind exerts a pressure at 1 AU typically in the range of 1–6 nPa (1–6×10−9 N/m2), although it can readily vary outside that range.
-% The ram pressure is a function of wind speed and density. The formula is
-% P = mp * n * V2= 1.6726×10−6 * n * V2
-% where mp is the proton mass, pressure P is in nPa (nanopascals), n is the density in particles/cm3 and V is the speed in km/s of the solar wind.[citation needed]
-
-% HCS
-why HCS? what currents are there...\\
-why is the CS not the divide between both polarities?\\
-
-% space weather
-"The principal users affected by geomagnetic storms are the electric power grid, spacecraft operations, users of radio signals that reflect off of or pass through the ionosphere, and observers of the aurora." NOAA cite\\
-
-strong radio bursts; are they relevant direct disturbances for space weather?\\
-
-The solar wind total energy flux at Earth ($1.45~\text{mW/m}^2$) is only about one millionth of the solar radiation flux at Earth (see \citet[p.~153]{Schwenn1990}).\\
-
-% magnetosphere
-Phan2005, Magnetopause Processes:\\
-Cluster findings include:\\
-A strong ‘guide field’ detected at a reconnection X-line, i.e., a finite magnetic field along the X-line, has provided direct evidence for component merging.\\
-Tailward-of-the-cusp reconnection has been found to occur only when the IMF has a northward component. The occurrence rate of cusp reconnection is nearly 100\% when the IMF has a northward component, implying that cusp reconnection in the northern and southern hemispheres must be common. The high occurrence rate (in contrast to a rate of 50\% at the subsolar magnetopause) is thought to be due to the presence of a plasma depletion layer. In this layer, the plasma beta is reduced, rendering the magnetosheath flow sub-Alfvenic and allowing the establishment of a stable X-line at the high-latitude magnetopause.\\
-
-look into printed paper collection...\\
-
-% geomagnetic indices
-\citet{Lockwood2014} even used geomagnetic indices (including $aa$) to reconstruct the near-Earth IMF strength and solar wind flow speed back to 1845.\\
-
-% Kp index
-The MC plotted in \autoref{fig:ACE_64s_v7_thesis_CME_2013-6-26_6} created a \Kp{} of 6+.\\
-
-% halo CMEs:
-observed coronal transient: 3d structure, directed at Earth, associated with shock wave; \citep{Howard1982} -> halo CME\\
-
-% chapter2
-This work adopts these assumptions and treats the solar wind throughout as a proton plasma.\\
-
-% Kp forecast models
-% Aleksei's f/c model; Ukraine; developed within AFFECTS project Space Research Institute of NAS of Ukraine and SSA of Ukraine, Ukraine (SRI NASU-NSAU)\\
-% http://www.ikd.kiev.ua/index.php?option=com_content&view=article&id=22%3A2011-02-09-12-19-54&catid=12&Itemid=15&lang=en
-
-% The $\text{d}\Phi / \text{d}t$ coupling relation is being implemented into CME forecast procedures \citep{Savani2017}.\\
-% NASA's Space Weather Research Center (SWRC); the derived Kp estimates using real-time in-situ data from L1 are currently implemented within the CCMC integrated Space Weather Analysis System (iSWA); Community Coordinated Modeling Center (CCMC) at the Goddard Space Flight Center\\
-
-% coupling functions
-\citet{Elliott2013}: The \Kp~index and solar wind speed relationship: Insights for improving space weather forecasts\\
-
-% Kp index
-There exist several indicators/quantities that scale or are based on the \Kp{}~index:
-\begin{itemize*}
-	\item The equatorward auroral boundary position correlates with the \Kp~index (cite?).
-	\item The variation of the total electron content (TEC) of the ionosphere correlates with the \Kp~index (cite?). The TEC has influence on global navigation satellite systems (GNSS). A part of their positional error scales directly with TEC (in extreme cases up to about \SI{30}{\m}).
-\end{itemize*}
-
-% solar wind impacts
-These solar wind real-time data are used to nowcast various effects on the Earth's magnetosphere, such as the position of the magnetospheric bow shock in front of the Earth, the magnitude of geomagnetic disturbances, the positions of the polar auroral ovals, the variation of the total electron content (TEC) of the ionosphere, and the positional error of global navigation satellite systems (GNSS).\\
-
-
 
 %%%%--  next chapter  --%%%%
 
@@ -1208,7 +1120,7 @@ These solar wind real-time data are used to nowcast various effects on the Earth
 %COFI -- chapter outline and flow integration
 For analyzing the solar wind and related areas on the Sun, there exist remote instruments, such as solar imagers and coronagraphs, and in-situ instruments, such as magnetometers and plasma spectrometers. The basic principles of the latter are described in this chapter, because the analyses performed in this thesis are based entirely on in-situ measurements -- except of course the sunspot time series.
 
-Different kind of data, collected from observatories at various locations, are used for the investigations performed in this thesis. In the following sections, I also describe these data sets: the magnetospheric disturbance index \Kp{}, the solar activity indicator sunspot number (SSN), and the solar wind in-situ data sets. The solar wind in-situ data sets are the near-Earth OMNI data collections, consisting of minutely and hourly data, that is, low resolution OMNI (LRO) and high resolution OMNI (HRO), and the data obtained from the Helios~1 and Helios~2 spacecraft in the 1970s. I prepared a time coverage overview of all data sets in relation to the solar activity cycles in \autoref{fig:timeline_SSN_with_data_and_sc}.\\
+Different kind of data, collected from observatories at various locations, are used for the investigations performed in this thesis. In the following sections, I also describe these data sets: the magnetospheric disturbance index \Kp{}, the solar activity indicator sunspot number (SSN), and the solar wind in-situ data sets. The solar wind in-situ data sets are the near-Earth OMNI data collections, consisting of minutely and hourly data, that is, low resolution OMNI (LRO) and high resolution OMNI (HRO), and the data obtained from the Helios~1 and Helios~2 spacecraft in the 1970s. I prepared a time coverage overview of all data sets in relation to the solar activity cycles in \autoref{fig:timeline_SSN_with_data_and_sc}.
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{figures_of_mine/gnuplots/timeline_SSN_with_data_and_sc.pdf}
@@ -1243,7 +1155,7 @@ A magnetometer monitors the local magnetic field environment. Almost every inter
 % fluxgate magnetometer
 A fluxgate magnetometer consists of two coils around a core -- one coil with alternating current. This current is then compared with the current signal induced into the other coil. Without an external magnetic field both current patterns match. However, the core is easier magnetized in direction of an existing external magnetic field, in this case a differing pattern is detected \citep{Ness1970}. Modern fluxgate magnetometers are designed in a ring core geometry with advanced magnetic core materials, such as molybdenum-permalloy.
 % http://sprg.ssl.berkeley.edu/impact/instruments_mag.html
-Fluxgate magnetometers are directional, therefore they are usually placed in a set of triaxial configuration. In order to minimize the influence of the spacecraft's own magnetic field, the magnetometers are usually placed away from the spacecraft's body, attached on the ends of solar panels or booms -- often actually two redundant sets at opposite sides.
+Fluxgate magnetometers are directional, therefore they are usually placed in a set of triaxial configuration. In order to minimize the influence of the spacecraft's own magnetic field, the magnetometers are usually placed away from the spacecraft's body, attached on the ends of solar panels or booms -- often actually two redundant sets at opposite sides of the spacecraft.
 % ACE/MAG
 In case of the Advanced Composition Explorer (ACE) spacecraft, two triaxial fluxgate magnetometers are mounted \SI{4.2}{\meter} from its center \citep{Smith1998}. The MAG instrument, before integration onto the ACE spacecraft, is pictured in \autoref{fig:ACE_fluxgate_magnetometer}. It has a resolution of a few measurements per second and an accuracy of about \SI{0.1}{\nano\tesla}.
 \begin{figure}[htb]
@@ -1330,7 +1242,7 @@ A plasma ion detector only provides an energy spectrum -- the velocity, density,
 \section{\Kp~data series}
 \label{sec:kp_data}
 The planetary magnetospheric disturbance indicator \Kp{} is designed to measure solar particle radiation by its magnetic effects. The index is already described in detail in the previous \autoref{sec:kp_index}. Quicklook and actual data of the \Kp~index is provided by the GFZ~Potsdam via their website for geomagnetic indices: \mbox{\urltext{http://www.gfz-potsdam.de/en/kp-index/}}. Historical data is available from 1932 onwards.
-In \autoref{chap:chapter2}, \Kp~data of the time period 1917--2016 is used for the inspection of its long-term variations and data of the time period 1981--2016 is related to solar wind parameters.
+In the analyses in \autoref{chap:chapter2}, \Kp~data of the time period 1932--2016 is used for the inspection of its long-term variations. \Kp{} data of the time period 1981--2016 is related to solar wind parameters.
 
 % acknowledgments:\\
 % The results presented in this thesis rely on the \Kp{}~index, calculated and made available by the German Research Centre for Geosciences in Potsdam from data collected at magnetic observatories. We thank the involved national institutes, the INTERMAGNET network and ISGI (isgi.unistra.fr).\\
@@ -1356,7 +1268,7 @@ Solar wind was measured in~situ for the first time by spacecraft in 1959 and sin
 \end{figure}
 \footnotetext{OMNIWeb Data Documentation: \urlfoot{https://omniweb.gsfc.nasa.gov/html/ow_data.html}}
 
-The OMNI data set is being maintained at NASA's Space Physics Data Facility (SPDF), Goddard Space Flight Center (GSFC). Their OMNIWeb interface \urltext{http://omniweb.gsfc.nasa.gov/} and their Coordinated Data Analysis Web (CDAWeb) interface \urltext{http://cdaweb.gsfc.nasa.gov/} provide the data -- the latter is where I obtained both data sets. The HRO data is used in \autoref{chap:chapter2} and the LRO data in \autoref{chap:empirical_solar_wind_model_for_the_inner_heliosphere}.
+The OMNI data set is being maintained at NASA's Space Physics Data Facility (SPDF), Goddard Space Flight Center (GSFC). Their OMNIWeb interface \urltext{http://omniweb.gsfc.nasa.gov/} and their Coordinated Data Analysis Web (CDAWeb) interface \urltext{http://cdaweb.gsfc.nasa.gov/} provide the data -- the latter is where I obtained both data sets. The HRO data is used in \autoref{chap:chapter2} for the correlation with the \Kp~index and the LRO data together with Helios data in \autoref{chap:empirical_solar_wind_model_for_the_inner_heliosphere} for the derivation of the solar wind model.
 
 
 \section{Helios probes}
@@ -1378,7 +1290,7 @@ In order to observe solar wind in~situ within the inner heliosphere, the nearly 
 			\includegraphics{figures_of_mine/gnuplots/Helios_r_b_ssn.pdf}
 		}{
 			\caption[\lofimage{figures_of_mine/gnuplots/Helios_r_b_ssn.pdf}]
-			{Solar distance (top panel) and heliographic latitude (middle panel) of Helios~1 (red) and Helios~2 (green) with respect to their mission time. The trajectory data are from GSFC/SPDF and is plotted in HGI~coordinates. I give the SIDC 13-month smoothed monthly SSN and its cycle number in the bottom panel for orientation.}
+			{Solar distance (top panel) and heliographic latitude (middle panel) of Helios~1 (red) and Helios~2 (green) with respect to their mission time. The trajectory data are from GSFC/SPDF and are plotted in HGI~coordinates. I give the SIDC 13-month smoothed monthly SSN and its cycle number in the bottom panel for orientation.}
 			\label{fig:Helios_r_b_ssn}
 		}
 		\addtocontents{lof}{\smallskip\protect\center I created the figure myself.\medskip}
@@ -1395,28 +1307,18 @@ Until today, these both probes were the only spacecraft that measured solar wind
 	\addtocontents{lof}{\smallskip\protect\center I created the figure myself.\medskip}
 \end{figure}
 
-The scientific instruments carried by the spacecraft for measuring the magnetic field and solar wind plasma are two different fluxgate magnetometers and the Plasma Experiment Investigation. The data from the magnetometer and plasma instruments are merged into a data set with hourly resolution \citep{Rosenbauer1977}. The Helios data is available via the GSFC/SPDF CDAWeb interface: \urltext{http://cdaweb.gsfc.nasa.gov/}. In case of Helios~1 this data set includes about 12.5~orbits in the time range \mbox{1974-12-10} to \mbox{1981-06-14} and in case of Helios~2 about 8~orbits in the time range \mbox{1976-01-01} to \mbox{1980-03-04}. The Helios~1 (Helios~2) magnetometer data coverage (without gaps) is about \SI{43}{\%} (\SI{54}{\%}) and amounts to 2.8~years (2.3~years) in total, whereas the plasma data coverage is \SI{76}{\%} (\SI{92}{\%}) and amounts to 5.0~years (3.9~years) in total.
+The scientific instruments carried by the spacecraft for measuring the magnetic field and solar wind plasma are two different fluxgate magnetometers and the Plasma Experiment Investigation. The data from the magnetometer and plasma instruments are merged into a data set with hourly resolution \citep{Rosenbauer1977}. The Helios data is available via the GSFC/SPDF CDAWeb interface: \urltext{http://cdaweb.gsfc.nasa.gov/}. In case of Helios~1 this data set includes about 12.5~orbits in the time range \mbox{1974-12-10} to \mbox{1981-06-14} and in case of Helios~2 about 8~orbits in the time range \mbox{1976-01-01} to \mbox{1980-03-04}. The Helios~1 (Helios~2) magnetometer data coverage, excluding the data gaps, is about \SI{43}{\%} (\SI{54}{\%}) and amounts to 2.8~years (2.3~years) in total, whereas the plasma data coverage is \SI{76}{\%} (\SI{92}{\%}) and amounts to 5.0~years (3.9~years) in total.
+The Helios data is used in \autoref{chap:empirical_solar_wind_model_for_the_inner_heliosphere} for analyzing the solar wind parameters' solar distance dependency.
 
-The Helios magnetic field and plasma data frequency over heliocentric distance and over heliographic latitude are plotted in \autoref{fig:helios_data_frequency}.\\
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=\textwidth]{figures_of_mine/gnuplots/helios_data_frequency.pdf}
-	\caption[\lofimage{figures_of_mine/gnuplots/helios_data_frequency.pdf}]
-	{Helios data frequency over heliocentric distance with bins of \SI{0.01}{au} (left panels) and over heliographic latitude with bins of \SI{0.1}{\degree} (right panels). The frequency data is based on the hourly merged magnetometer and plasma data sets for Helios~1 and Helios~2. The top panels show the frequencies for Helios~1 and Helios~2 individually and the bottom panels those for the magnetometer and plasma data.}
-	\label{fig:helios_data_frequency}
-	\addtocontents{lof}{\smallskip\protect\center I created the figure myself.\medskip}
-\end{figure}
-\begin{figure}[htb]
-	\includegraphics[width=\textwidth]{figures_of_mine/gnuplots/helios_data_frequency.pdf}
-	\caption[\lofimage{figures_of_mine/gnuplots/helios_data_frequency.pdf}Remove later...]{}
-\end{figure}
+
+% \begin{figure}[htb]
+% 	\includegraphics[width=\textwidth]{figures_of_mine/gnuplots/helios_data_frequency.pdf}
+% 	\caption[\lofimage{figures_of_mine/gnuplots/helios_data_frequency.pdf}Remove later...]{}
+% \end{figure}
 
 
 %see presi 1.07 Inside Helios-Origins and Evolution-Salem.ppt
 %see book Schwenn1990 https://books.google.de/books?id=W1DuCAAAQBAJ&printsec=frontcover&dq=Physics+of+the+Inner+Heliosphere+I.+Large-Scale+Phenomena&hl=de&sa=X&redir_esc=y#v=onepage&q=Physics%20of%20the%20Inner%20Heliosphere%20I.%20Large-Scale%20Phenomena&f=false
-
-
-
 
 
 % HELIOS~1 and 2 -- orbital Parameters:\\

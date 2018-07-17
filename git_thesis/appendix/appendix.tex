@@ -400,68 +400,97 @@ Earth rotation axis tilt to ecliptic: $i_\text{E} = \SI{23.439279}{\degree}$ \ci
 
 
 
-\section{Abbreviations}
-% \label{sec:abbreviations}
-% 
-usepackage{nomencl}
-% Projects:
-% \begin{description*}
-% 	\item[AFFECTS] Advanced Forecast For Ensuring Communications Through Space
-% 	\item[HELCATS] Heliographic Cataloging, Analysis and Techniques Service
-% 	\item[FP7] Framework Programme 7
-% 	\item[CGAUSS] Coronagraphic German And US SolarProbePlus Survey
-% 	\item[OPTIMAP] OPerational Tool for Ionospheric Mapping And Prediction
-% \end{description*}
-% 
-% Spacecraft:\\
-% SPP -- Solar Probe Plus\\
-% WISPR -- Wide-field Imager for Solar Probe\\
-% ACE -- Advanced Composition Explorer\\
-% 	MAG -- Magnetometer\\
-% 	SWEPAM -- Solar Wind Electron Proton Alpha Monitor\\
-% 	RTSW -- Real Time Solar Wind\\
-% SDO -- Solar Dynamics Observatory\\
-% SOHO -- Solar and Heliospheric Observatory\\
-% STEREO -- Solar TErrestrial RElations Observatory\\
-% 
-% Organizations:\\
-% NASA -- National Aeronautics and Space Administration\\
-% 	SPDF -- Space Physics Data Facility\\
-% NOAA -- National Oceanic and Atmospheric Administration\\
-% 	SWPC -- Space Weather Prediction Center\\
-% UGOE -- University of Göttingen\\
-% IAG -- Institute for Astrophysics Göttingen\\
-% GFZ -- GeoForschungsZentrum\\
-% WDC-SILSO -- World Data Center-Sunspot Index and Long-term Solar Observations\\
-% 
-% Sun:\\
-% DB -- disparition brusques (disappearing filaments?; quiescent filaments?)\\
-% SSN -- sunspot number\\
-% 
-% Solar wind:\\
-% IMF -- interplanetary magnetic field\\
-% CME -- coronal mass ejection\\
-% ICME -- interplanetary coronal mass ejection\\
-% MC -- magnetic cloud\\
-% HSS -- high speed stream\\
-% CIR -- corotating interaction region\\
-% SIR -- stream interaction region\\
-% SB -- sector boundary\\
-% BDE -- bidirectional electrons\\
-% HCS -- heliospheric current sheet\\
-% HPS -- heliospheric plasma sheet\\
-% 
-% Earth:\\
-% Kp -- planetare Kennziffer\\
-% Dst -- Disturbance storm time\\
-% 
-% Coordinate systems:\\
-% GSE -- geocentric solar ecliptic\\
-% GSM -- geocentric solar magnetospheric\\
-% 
-% Theories and techniques:\\
-% MVA -- minimum variance analysis\\
-% MHD -- magnetohydrodynamic\\
-% GCS -- Graduated Cylindrical Shell\\
-% CAT -- CME Analysis Tool\\
+\section{Acronyms}
+\label{sec:acronyms}
+
+% find
+% \n(.*) -- (.*)\\\\
+% replace
+% \n\t\\item[\1] \2
+
+% 	\item[] 
+
+Generic acronyms:
+\begin{description}[labelwidth=1.2cm]
+	\item[ANN] artificial neural network
+	\item[BDE] bidirectional electrons
+	\item[DB] disparition brusques
+	\item[Dst] disturbance storm time
+	\item[CH] coronal hole
+	\item[CIR] corotating interaction region
+	\item[CME] coronal mass ejection
+	\item[DQCS] dipole plus quadrupole plus current sheet
+	\item[EUV] extreme ultraviolet
+	\item[GNSS] global navigation satellite system
+	\item[GSE] geocentric solar ecliptic
+	\item[GSM] geocentric solar magnetospheric
+	\item[HCS] heliospheric current sheet
+	\item[HGI] Heliographic Inertial
+	\item[HMF] heliospheric magnetic field
+	\item[HPS] heliospheric plasma sheet
+	\item[HSS] high speed stream
+	\item[ICME] interplanetary coronal mass ejection
+	\item[IMF] interplanetary magnetic field
+	\item[Kp] planetare Kennziffer
+	\item[MAD] mean absolute deviation
+	\item[MBP] magnetic bright point
+	\item[MC] magnetic cloud
+	\item[MHD] magnetohydrodynamic
+	\item[MVA] minimum variance analysis
+	\item[SB] sector boundary
+	\item[SAR] sum of absolute residuals
+	\item[SEP] solar energetic particle
+	\item[SIR] stream interaction region
+	\item[SSN] sunspot number
+	\item[TEC] total electron content
+	\item[TSS] true skill statistic
+\end{description}
+
+\noindent Specific acronyms:
+\begin{description*}
+	\item[ACE] Advanced Composition Explorer
+	\item[AFFECTS] Advanced Forecast For Ensuring Communications Through Space
+	\item[AIA] Atmospheric Imaging Assembly
+	\item[BSS] Bothmer-Schwenn scheme
+	\item[CAT] CME Analysis Tool
+	\item[CCMC] Community Coordinated Modeling Center
+	\item[CDAWeb] Coordinated Data Analysis Web
+	\item[CEDAR] Coupling, Energetics and Dynamics of Atmospheric Regions
+	\item[CGAUSS] Coronagraphic German And US SolarProbePlus Survey
+	\item[DDC] DoomsDayCalculator
+	\item[DSCOVR] Deep Space Climate Observatory
+	\item[EVE] EUV Variability Experiment
+	\item[FP7] Framework Programme 7
+	\item[GCS] Graduated Cylindrical Shell
+	\item[GFZ] GeoForschungsZentrum
+	\item[GSFC] Goddard Space Flight Center
+	\item[HELCATS] Heliographic Cataloging, Analysis and Techniques Service
+	\item[HMI] Helioseismic Magnetic Imager
+	\item[IAG] Institute for Astrophysics Göttingen
+	\item[IAGA] International Association of Geomagnetism and Aeronomy
+	\item[ISGI] International Service of Geomagnetic Indices
+	\item[LASCO] Large Angle and Spectrometric COronagraph
+	\item[MAG] name of the Magnetometer on the ACE spacecraft
+	\item[MDI] Michelson Doppler Imager
+	\item[MMS] Magnetospheric Multiscale
+	\item[NASA] National Aeronautics and Space Administration
+	\item[NOAA] National Oceanic and Atmospheric Administration
+	\item[OMNI] name of the multi-source data set
+	\item[OPTIMAP] OPerational Tool for Ionospheric Mapping And Prediction
+	\item[PSP] Parker Solar Probe
+	\item[RTSW] Real Time Solar Wind
+	\item[ROB] Royal Observatory of Belgium
+	\item[SDO] Solar Dynamics Observatory
+	\item[SIDC] Solar Influences Data Center
+	\item[SPDF] Space Physics Data Facility
+	\item[SOHO] Solar and Heliospheric Observatory
+	\item[STEREO] Solar TErrestrial RElations Observatory
+	\item[SWS] Solar Wind Structures
+	\item[SWEPAM] Solar Wind Electron Proton Alpha Monitor
+	\item[SWPC] Space Weather Prediction Center
+	\item[UGOE] University of Göttingen
+	\item[WDC-SILSO] World Data Center-Sunspot Index and Long-term Solar Observations
+	\item[WISPR] Wide-field Imager for Solar Probe
+\end{description*}
+
 

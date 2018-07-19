@@ -7,18 +7,18 @@ Impact estimations derived from empirical correlations between in-situ solar win
 %\section{Abstract}
 
 %context
-Variations in the Earth's magnetosphere are largely evoked by influence through the solar wind. These magnetospheric disturbances have diverse effects on the terrestrial environment. Especially the effects of severe geomagnetic storms created by coronal mass ejections (CMEs) pose various threats to sensitive technical systems and exposed humans. Thus, the development of quantitative forecasts for magnetospheric impacts caused by solar wind and CMEs is of major importance. The analyses in this chapter are based on my work done for the project Advanced Forecast For Ensuring Communications Through Space (AFFECTS).
+Variations in the Earth's magnetosphere are largely evoked by influence through the solar wind. These magnetospheric disturbances have diverse effects on the terrestrial environment. Especially the effects of severe geomagnetic storms created by coronal mass ejections (CMEs) pose various threats to sensitive technical systems and exposed humans. Thus, the development of quantitative forecasts for magnetospheric impacts caused by solar wind and CMEs is of major importance. The analyses in this chapter are based on my work done for the EU~FP7 project Advanced Forecast For Ensuring Communications Through Space (AFFECTS).
 
 %aims
-The goals of this study are to estimate the magnetospheric impact from solar wind and also to predict it for CMEs and streams in particular. Empirical dependencies between specific solar wind parameters and the magnetospheric disturbance index~\Kp{} are presented. These dependencies allow to nowcast the \Kp~index from upstream (L1) solar wind in-situ measurements. Hence, also the magnetospheric impact of CMEs is estimated solely based on their arrival velocities that may be predicted from coronagraph observations. The prediction of solar wind stream velocities, e.g., obtained from coronal hole observations, enables to estimate their impact as well.
+The goals of this study are to estimate the magnetospheric impact from solar wind and also to predict it for remotely forecasted CMEs and streams in particular. Empirical dependencies between specific solar wind parameters and the magnetospheric disturbance index~\Kp{} are presented. These dependencies allow to nowcast the \Kp~index from upstream (L1) solar wind in-situ measurements. Hence, also the magnetospheric impact of CMEs is estimated solely based on their arrival velocities that may be predicted from coronagraph observations. The prediction of solar wind stream velocities, e.g., obtained from coronal hole observations, enables to estimate their impact as well.
 
 %methods
 First, I estimate the long-term variations of the \Kp~index which are contributed by solar activity and seasonal effects. A functional dependency of the average yearly \Kp~index on the yearly sunspot number (SSN) is derived. In order to nowcast the \Kp~index from general solar wind conditions, I apply a correlation with the solar wind electric field -- the product of the parameters velocity and magnetic field z-component in GSM coordinates: $E = v B_\text{z}$. A suitable logarithmic function is constructed and its fit to the data results in a functional relation between $E$ and \Kp{}. For the purpose of forecasting the \Kp~index from estimated CME and stream velocities, I furthermore filter the solar wind data, using flagged CME times from the solar wind structures (SWS) list provided by \citet{Richardson2012}. Logarithmic fits to the data yield in separate \Kp{} relations for CMEs and streams.
 
-The solar wind data considered in these analyses consists of 35~years (1981--2016) of high-resolution minutely OMNI data, which is composed of multi-spacecraft intercalibrated in-situ measurements from \SI{1}{\au}. I analyze the \Kp{} frequency distributions with respect to the depending parameters $E$ and velocity, derive their mean \Kp{} per interval and further compile functional dependencies via logarithmic fitting. I evaluate the relations' prediction performance by analyzing their forecast errors and conparing their true skill statistic.
+The solar wind data considered in these analyses consists of 35~years (1981--2016) of high-resolution minutely OMNI data, which is composed of multi-spacecraft intercalibrated in-situ measurements from \SI{1}{\au}. I analyze the \Kp{} frequency distributions with respect to the depending parameters $E$ and velocity, derive their mean \Kp{} per interval and further compile functional dependencies via logarithmic fitting. I evaluate the relations' prediction performance by analyzing their forecast errors and comparing their true skill statistic.
 
 %results
-As the obtained functional relations are simple, they cannot compete with ANNs, \Kp{} persistence, or full-fledged solar wind coupling functions. However, they enable empirical estimations of the mean \Kp{} impact from measured solar activity, in-situ solar wind, and remotely determined CME and stream velocities.
+As the obtained functional relations are simple, they cannot compete with ANNs, \Kp{} persistence, or full-fledged solar wind coupling functions. However, they enable empirical estimations of the mean \Kp{} impact for special forecast situations, that is, \Kp{} can be quantified from measured solar activity, in-situ solar wind, and remotely determined CME and stream velocities.
 
 %conclusions
 
@@ -27,20 +27,19 @@ As the obtained functional relations are simple, they cannot compete with ANNs, 
 %%% motivation
 Since the early 19th~century it is known that variations in the solar wind evoke disturbances in the magnetosphere \citep{Bartels1962}. Especially strong disturbances, called geomagnetic storms, can be provoked by coronal mass ejections (CMEs), which are embedded within the solar wind. The causes of the strongest geomagnetic storms are the compression of the solar wind magnetic field lines within the CME shock front and the enhanced field strenghts of magnetic clouds, which are enclosed in CMEs \citep{Bothmer1993,Bothmer1995}. The consequences of strong geomagnetic disturbances are a threat to sensitive technical systems and exposed humans. Therefore it is important to know when magnetospheric disturbances will occur and how large they will become.\\
 
-\Kp{} is designed for... (cite?). I use this magnetospheric disturbance index to correlate it with near-Earth solar wind measurements. More detailed information on the \Kp{}~index can be found in \autoref{sec:kp_index}.\\
+\Kp{} is designed to measure solar particle radiation by its magnetic effects. I use this magnetospheric disturbance index to correlate it with near-Earth solar wind measurements. More detailed information on the \Kp{}~index can be found in \autoref{sec:kp_index}.\\
 
 %results
-With the results presented in this chapter, I elaborate the step from solar wind properties at Earth to the forecast of the possible impact strength on the terrestrial magnetosphere. I derive empirical correlations between the solar wind properties and the geomagnetic \Kp~index, in order to obtain the capability to forecast \Kp{} values. The derived functional dependencies can be used to nowcast/forecast the \Kp~index.\\
+With the results presented in this chapter, I elaborate the step from solar wind properties at Earth to the forecast of the possible impact strength on the terrestrial magnetosphere. I derive empirical correlations and functional dependencies between solar wind properties and the geomagnetic \Kp~index, in order to obtain the capability to nowcast/forecast \Kp{} values.
 
-differences to existing studies...\\
-
+Remote solar observations provide enhanced forecast lead times of CMEs and streams, however, the benefit comes with major limitations on the predicted magnetic field and plasma parameters.
 %CME velocity forecast
-The velocity and the direction of CMEs can be determined in their early near-Sun stages via remote tracking with coronagraph white-light observations. Using these parameters as input for CME propagation models, their possible arrival time and arrival velocity at Earth can be derived.\\
-
-%CME magnetic field forecast
+The velocity and the direction of CMEs can still be determined in their early near-Sun stages via remote tracking with coronagraph white-light observations. Using these parameters as input for CME propagation models, their possible arrival time and arrival velocity at Earth can be derived, see \autoref{sec:solar_wind_nowcast_and_forecast_to_earth}.
+% stream velocity forecast
+Similarly, the Earth arrival time and velocity of solar wind streams can be estimated remotely. Images of the solar surface and the corona reveal the distinct sources of solar wind and indicate the emitted type of solar wind and its properties.\\
 
 %%% synopsis
-The objectives of the analyses performed and found in this chapter are to estimate the magnetospheric impact of solar wind and to predict it for CMEs and streams in particular. In \autoref{sec:long_term_variations} I determine the magnitudes of the long-term \Kp{} changes due to solar activity and measure the extent of seasonal variations stemming from the Earth's orbit. In order to nowcast the \Kp{}~index, I quantify the solar wind influence on \Kp{} by deriving a functional relation with the solar wind E-field (\autoref{sec:relation_between_sw_efield_and_kp}). Finally, for the purpose of enabling \Kp{} forecasts from remote observations, I estimate the \Kp{} impact coming from CMEs and streams separately by deriving functional dependencies with their velocities (\autoref{sec:relations_between_cme_stream_v_and_kp}).
+The objectives of the analyses performed and found in this chapter are to estimate the magnetospheric impact of solar wind and to predict it for CMEs and streams in particular. In \autoref{sec:long_term_variations} I determine the magnitudes of the long-term \Kp{} changes due to solar activity and measure the extent of seasonal variations stemming from the Earth's orbit. In order to nowcast the \Kp{}~index, I quantify the solar wind influence on \Kp{} by deriving a functional relation with the solar wind E-field (\autoref{sec:relation_between_sw_efield_and_kp}). For the purpose of enabling \Kp{} forecasts from remote observations, I estimate the \Kp{} impact coming from CMEs and streams separately by deriving functional dependencies with their velocities (\autoref{sec:relations_between_cme_stream_v_and_kp}). Finally, the obtained \Kp{} relations are evaluated for their prediction performance in \autoref{sec:prediction_performance}. At the end of this chapter, the results are further discussed, applications are highlighted, and a short outlook is given.
 
 
 \section{Long-term variations of the \Kp{}~index}
@@ -285,17 +284,6 @@ The mean MAD is about 0.7~\Kp{}~units. Thus, the solar wind dependency relation 
 \end{align}
 This relation can be used together with real-time in-situ measurements from spacecraft located at L1 (see Section~XX rt sources) to nowcast the actual \Kp~index.\\
 
-In order to demonstrate this relation with actual in-situ data, I calculate the \Kp{} estimate for the example CME from \autoref{fig:ACE_64s_v7_thesis_CME_2013-6-26_6} and include the 3"~hour minimum value of \vBz{} in the plot, see \autoref{fig:example_sw_plot_vBz_b_2013-6-26_6}.
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=\textwidth]{figures_of_mine/chapter2/example_sw_plot_vBz_b_2013-6-26_6.pdf}
-	\caption[\lofimage{figures_of_mine/chapter2/example_sw_plot_vBz_b_2013-6-26_6.pdf}]
-	{Solar wind measurements, official \Kp{}~index, and estimated \Kp{} for the time period from 26~June to 2~July 2013. The solar wind parameters are the magnetic field strength, its z"~component in GSM coordinates, and the velocity. I also plot the product \vBz{} with its 3"~hour minimum for illustration. The solar wind data are from the minutely OMNI data set. The official \Kp{}~index is obtained from the GFZ~Potsdam. The \Kp{} estimate is derived via Equations~\ref{eq:kpvsvbz_dependency_function_negative} and \ref{eq:kpvsvbz_dependency_function_negative}. The orange band indicates the mean MAD.}
-	\label{fig:example_sw_plot_vBz_b_2013-6-26_6}
-	\addtocontents{lof}{\smallskip\protect\center I created the figure myself.\medskip}
-\end{figure}
-It can be seen that in this period the \Kp{} estimate traces the actual \Kp{}~index pretty well within the mean MAD band. However, deviations are found at the times of the initial shock, and the start and middle of the MC.\\
-
 % warning lead time
 The derived E"~field relation can well be applied with the solar wind real-time measurements that are continuously being made at L1. However, the heads-up time for warnings from this location is relatively short with a few tens of minutes, whereas remote observations via solar imagers and coronagraphs allow for longer lead times of a few days.
 
@@ -475,6 +463,7 @@ which can be used to forecast the \Kp{}~index from the estimated stream velocity
 
 
 \section{Prediction performance}
+\label{sec:prediction_performance}
 % prediction model performances
 The derived empirical relations are chosen for their high correlation coefficients. However, the correlation coefficient itself does not represent the performance of a model as the coefficient depends highly on the scatter of the underlying distribution. Therefore \citet{Wing2005} advise to additionally provide scatterplots and skill scores for the evaluation of predictive models. In the following, I present the forecast errors and determine the true skill statistics as measures for the prediction performance of the drived empirical models.
 
@@ -581,12 +570,26 @@ CMEs can be faster than the maximal velocities included in the OMNI data. Instru
 		\label{fig:Kp_2dhistogram_V_sws123_fit_f}
 	}
 \end{figure}
-The maximal velocity of regular solar wind is limited by the coronal temperatures \citep{Parker1958} and is observed to be around \SI{900}{\km\per\s}. That is why streams on average provoke \Kp{} values below 5o.\\
+The maximal velocity of regular solar wind is limited by the coronal temperatures \citep{Parker1958} and is observed to be around \SI{900}{\km\per\s}. That is why solar wind plasma associated with streams on average provoke \Kp{} values below 5o.\\
 
 
 
 
 It is a balance between the high accuracy of the L1-derived \Kp{} nowcast with a short lead time and the lower accuracy of the remotely derived \Kp{} forecasts with fairly long lead times.\\
+
+
+In order to demonstrate this relation with actual in-situ data, I calculate the \Kp{} estimate for the example CME from \autoref{fig:ACE_64s_v7_thesis_CME_2013-6-26_6} and include the 3"~hour minimum value of \vBz{} in the plot, see \autoref{fig:example_sw_plot_vBz_b_2013-6-26_6}.
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\textwidth]{figures_of_mine/chapter2/example_sw_plot_vBz_b_2013-6-26_6.pdf}
+	\caption[\lofimage{figures_of_mine/chapter2/example_sw_plot_vBz_b_2013-6-26_6.pdf}]
+	{Solar wind measurements, official \Kp{}~index, and estimated \Kp{} for the time period from 26~June to 2~July 2013. The solar wind parameters are the magnetic field strength, its z"~component in GSM coordinates, and the velocity. I also plot the product \vBz{} with its 3"~hour minimum for illustration. The solar wind data are from the minutely OMNI data set. The official \Kp{}~index is obtained from the GFZ~Potsdam. The \Kp{} estimate is derived via Equations~\ref{eq:kpvsvbz_dependency_function_negative} and \ref{eq:kpvsvbz_dependency_function_negative}. The orange band indicates the mean MAD.}
+	\label{fig:example_sw_plot_vBz_b_2013-6-26_6}
+	\addtocontents{lof}{\smallskip\protect\center I created the figure myself.\medskip}
+\end{figure}
+It can be seen that in this period the \Kp{} estimate traces the actual \Kp{}~index pretty well within the mean MAD band. However, deviations are found at the times of the initial shock, and the start and middle of the MC.\\
+
+
 
 
 It becomes obvious how important the influence of the magnetic field z"~component is, when looking at the same example CME from \autoref{fig:example_sw_plot_vBz_b_2013-6-26_6}. I plot its in-situ magnetic field strength and velocity in \autoref{fig:example_sw_plot_v_b_2013-6-26_6} together with the official \Kp{}~index and the derived \Kp{} estimate.
@@ -614,11 +617,13 @@ solar wind stream example in \autoref{fig:example_sw_plot_v_c_2013-5-1_65}\\
 
 The present study adds more empirical \Kp{} relations -- for the cases when only the solar wind velocity $v$ or its E"~field are known.
 
+differences to existing studies...\\
+
 
 \section{Applications and outlook}
 
 \subsection*{Applications}
-Prototype/precursor relations are integrated into applications developed within the Advanced Forecast For Ensuring Communications Through Space (\mbox{AFFECTS}) project which ran from 2011 to 2013. The following services, accessible via the \mbox{AFFECTS} website\footnote{AFFECTS website: \urlfoot{http://www.affects-fp7.eu/services/}}, contain results from this \Kp{} study (the \Kp{} is estimated from the solar wind relation \ref{eq:kpvsv_CME_dependency_function}):
+Prototype/precursor relations are integrated into applications developed within the Advanced Forecast For Ensuring Communications Through Space (\mbox{AFFECTS}) project which ran from 2011 to 2013. The following services, accessible via the \mbox{AFFECTS} website\footnote{AFFECTS website: \urlfoot{http://www.affects-fp7.eu/services/}}, contain early results from this \Kp{} study (the \Kp{} is estimated from the solar wind relation):
 \begin{itemize*}
 	\item Real-time plot: \href{http://www.affects-fp7.eu/rssfeeds/ace_ap_forecast_plot/ace_realtime_ap_CH_GFT_plot.png}{Solar Wind and \Kp{} forecast plot} -- DSCOVR real-time solar wind and \Kp{} forecast plot.
 	\item RSS feed: \href{http://www.affects-fp7.eu/rssfeeds/rssfeed_kp/rssfeed_kp.xml}{L1 Kp Alert} -- threshold based RSS feed that gets triggered when the estimated \Kp{} surpasses a specified threshold.
@@ -637,9 +642,12 @@ Prototype/precursor relations are integrated into applications developed within 
 
 \subsection*{Outlook}
 
-Separate the structures, such as CIRs and HCSs for their \Kp{} impact.\\
+Separate small-scale solar wind structures, such as CIRs and HCSs, for their \Kp{} impact. Filter CME-associated flows into their substructures, such as compressed solar wind plasma and MC plasma, and evaluate their \Kp{} impact individually.\\
 
 In the present study, the solar activity is neglected for deriving the empirical solar wind--\Kp{} relations. It would be worth examining the solar cycle's influence on the relations, especially as \citet{Wing2005} note that the predictability of \Kp{} slightly scales with solar activity.\\
+
+It can be looked at how well the solar wind stream velocity relation compares to the compression/rarefaction relations derived by \citet{Elliott2013}.\\
+
 
 % low solar activity influence on geomagnetic storms/space weather
 \textit{The weaker solar activity cycle 24 seems to have important consequences for CMEs in the heliosphere: CMEs expand anomalously due to reduced heliospheric pressure leading to the increased observed rate of small CMEs, halos originating far from the disk center, and mild space weather (\citep{Gopalswamy2014}, 2015a; Petrie 2015).\\

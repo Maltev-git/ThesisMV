@@ -14,9 +14,7 @@ This chapter is constructed as follows, the PSP mission and its scientific goals
 \section{Parker Solar Probe mission}
 Remote observations of the Sun and its corona revealed a wealth of structures and dynamical processes. Over time, most underlying physical mechanisms were identified and the observed features were integrated into a comprehensive picture of the Sun. However, key questions remain unanswered \citep{McComas2007}: It is still unknown why the corona is so much hotter than the chromosphere beneath \citep{Klimchuk2006} and the exact processes involved in the acceleration of the solar wind are not fully understood \citep{Hollweg1985,Cranmer2017}.
 
-Up to now coronal heating and solar wind acceleration remain the open problems that drive the motivation to directly probe the near-Sun environment \citep{McComas2007,Fox2015}. The mission concept of a solar probe taking in-situ measurements from the corona dates back to 1958 when NASA was founded \citep{McComas200807}.
-
-The closest solar wind in-situ measurements made so far were done by the two Helios probes, see also \autoref{sec:helios_probes}. Helios~1 was launched in 1974 and reached a perihelion distance of \SI{0.31}{\au} (\SI{67}{\Rs}) and Helios~2 was launched in 1976 and reached a perihelion distance of \SI{0.29}{\au} (\SI{62}{\Rs}) \citep{Rosenbauer1977}. Yet, the solar wind acceleration region is predicted to extend up to the Alfvénic critical surface which lies at solar distances between \SIrange{15}{30}{\Rs} \citep{Katsikas2010,Goelzer2014}. Thus, the Helios spacecraft were well bejond the region where the magic happens.
+Up to now coronal heating and solar wind acceleration remain the open problems that drive the motivation to directly probe the near-Sun environment \citep{McComas2007,Fox2015}. The mission concept of a solar probe taking in-situ measurements from the corona dates back to 1958 when NASA was founded \citep{McComas200807}. The closest solar wind in-situ measurements made so far were done by the two Helios probes, see also \autoref{sec:helios_probes}. Helios~1 was launched in 1974 and reached a perihelion distance of \SI{0.31}{\au} (\SI{67}{\Rs}) and Helios~2 was launched in 1976 and reached a perihelion distance of \SI{0.29}{\au} (\SI{62}{\Rs}) \citep{Rosenbauer1977}. Yet, the solar wind acceleration region is predicted to extend up to the Alfvénic critical surface which lies at solar distances between \SIrange{15}{30}{\Rs} \citep{Katsikas2010,Goelzer2014}. Thus, the Helios spacecraft were well bejond the region where the magic happens.
 
 The Parker Solar Probe mission (until 2017 Solar Probe Plus) is designed to finally address these major questions about the solar corona. The prime goals of the PSP mission as stated by \citet{Fox2015} are: ``Trace the flow of energy that heats and accelerates the solar corona and solar wind; Determine the structure and dynamics of the plasma and magnetic fields at the sources of the solar wind; and Explore mechanisms that accelerate and transport energetic particles.''
 These goals seem achievable due to recent developments in technology and engineering that allow PSP to approach the Sun down to a closest distance of \SI{8.86}{\Rs} from the solar surface. PSP launched on 4~August 2018 and utilizes seven Venus gravity assists over nearly seven years throughout its mission in order to lower its orbit around the Sun, see the planned trajectory in \autoref{fig:PSP_MissionDesign}.
@@ -66,10 +64,10 @@ The Wide Field Imager for Solar Probe Plus (WISPR) is a white-light telescope fo
 The study in \citet{Venzmer2018} is conducted within the Coronagraphic German And US SolarProbePlus Survey (CGAUSS) which is the German contribution to the PSP mission as part of WISPR. The input of this study to the CGAUSS project is the extrapolation of Helios solar wind data to the solar distances PSP is to reach.
 
 
-\section{Paper content}
+\section{On the puplished paper}
 
 %%% contributions and copyright
-The major part of this chapter is published under the title ``Solar-wind predictions for the Parker Solar Probe orbit'' in \citet{Venzmer2018}, which is just referred to as 'the paper' in this chapter. The article was published online on 20~March 2018 in Astronomy and Astrophysics (A\&A). It is included following this chapter, denoted as \autoref{chap:solar_wind_predictions_for_the_parker_solar_probe_orbit} -- copyright to ESO and reproduced with permission.
+The major part of this chapter is published under the title ``Solar-wind predictions for the Parker Solar Probe orbit'' in \citet{Venzmer2018}, which is also just referred to as 'the paper' in this chapter. The article was published online on 20~March 2018 in Astronomy and Astrophysics (A\&A). It is included following this chapter, denoted as \autoref{chap:solar_wind_predictions_for_the_parker_solar_probe_orbit}. The European Southern Observatory (ESO) is the holder of the copyright -- the article is reproduced with permission.
 
 The analyses described in the paper were entirely done by me, as well as the tables, figures and equations. My coauthor Volker~Bothmer contributed to the text and the anonymous referee helped clarifying a few aspects. The text was further improved by the A\&A language editor Joshua~Neve.
 % my own contributions to the paper (percentages):\\
@@ -91,21 +89,14 @@ The analyses described in the paper were entirely done by me, as well as the tab
 The paper is included in \autoref{chap:solar_wind_predictions_for_the_parker_solar_probe_orbit}, so I will only briefly outline its content here: In the paper, we predict the solar wind conditions for the orbit of the PSP spacecraft. We extrapolate the near-Sun environment from empirical solar wind models that are based on Helios and OMNI solar wind observations. These estimations are further adjusted to the expected solar activity during the PSP mission -- the adjustments are based on empirical relations with the sunspot number (SSN).
 
 % methods
-This is achieved via the following steps: We obtain lognormal representations of the frequency distributions’ shapes of the four key solar wind parameters magnetic field strength, proton velocity, density, and temperature. We derive analytical relations for the parameters’ solar activity dependencies and for their solar distance scaling. An empirical solar wind model is built from the combination of the obtained frequency distributions, SSN dependence relations and solar distance dependence functions, representing the solar wind’s solar activity and distance behavior. This empirical model is fed with SSN predictions and is extrapolated to the orbit of PSP. We estimate solar wind median values during PSP’s first perihelion and also model the values for PSP’s closest perihelia.\\
+This is achieved via the following steps: We obtain lognormal representations of the frequency distributions’ shapes of the four key solar wind parameters magnetic field strength, proton velocity, density, and temperature. We derive analytical relations for the parameters’ solar activity dependencies and for their solar distance scaling. An empirical solar wind model is built from the combination of the obtained frequency distributions, SSN dependence relations and solar distance dependence functions, representing the solar wind’s solar activity and distance behavior. This empirical model is fed with SSN predictions and is extrapolated to the orbit of PSP. We estimate solar wind median values during PSP’s first perihelion and also model the values for PSP’s closest perihelia.
 
 
+\section{Parker magnetic field solar distance dependency}
+% intro
+In our article, we scaled the magnetic field strength via a power-law function and obtained a solar-distance dependency proportional to $r^{-1.662}$. We also noted there that the model's near-Sun field magnitude, extrapolated to PSP's closest perihelion, will be lower than the actual values to be found. However, it is a simplified approach -- in the following I present a procedure, leading to an improved distance dependency, which is intended to account for a Parker IMF geometry, respecting the different power-law scalings of the contributions of the individual field vector components. This new distance dependency, extrapolated to the PSP orbit and combined with the solar activity dependency described in the paper, yields \SI{8}{\%} higher values at the first perihelion and \SI{32}{\%} higher values at the 22nd perihelion in comparison to those derived in the paper.
 
-
-In order to derive the solar wind environment for the PSP orbit, finally the general solar wind model derived in the previous sections will be extrapolated to the PSP orbit, taking into account predictions of the SSN.\\
-
-
-\section{Alternative magnetic field solar distance dependency}
-
-note: comparison plot between models in range 0--20~au...\\
-
-In our article, we scaled the magnetic field strength via a power-law function and obtained a solar-distance dependency proportional to $r^{-1.662}$. We also noted there that the model's near-Sun field magnitude, extrapolated to PSP's closest perihelion, will be lower than the actual values to be found. However, it is a simplified approach -- in the following I present a procedure, leading to an improved distance dependency, which is intended to account for a Parker IMF geometry,  respecting the different power-law scalings of the contributions of the individual field vector components. This new distance dependency, extrapolated to the PSP orbit and combined with the solar activity dependency described in the paper, yields \SI{8}{\%} higher values at the first perihelion and \SI{32}{\%} higher values at the 22nd perihelion.\\
-
-A possibly more accurate distance dependency for the model is derived in the following.\\
+In the following a distance dependency for the IMF model of the paper is derived that is possibly more accurate in the near-Sun region. In any case, it is found that Voyager~1 observations of the magnetic field strength at solar distances larger than \SI{1}{\au} agree well with Parker’s IMF model \citep{Burlaga2002}.
 
 The coronal magnetic field near the Sun rotates rigidly, holding on to the coronal plasma. At the solar wind source surface (at around \SI{2.5}{\Rs}), where the thermal plasma pressure overcomes the magnetic pressure, the magnetic field gets radially transported outwards, maintaining only its radial vector component $\vect{B}_r$. From there on, the solar rotation begins to shear the magnetic field, building up a longitudinal component $\vect{B}_\phi$ as well. The solar wind magnetic field model formulated by \citet{Parker1958} has the following components in spherical coordinates ($\theta$ is the colatitude):
 \begin{align}
@@ -124,18 +115,18 @@ it is apparent that the magnetic field strength does not scale with a simple pow
 \begin{align}
 	B(r) &= B_0 \cdot \sqrt{r^{-4} + \left(\frac{\omega\,r}{v_\text{sw}}\right)^2 r^{-4}}\,,	\label{eq:B_1au}
 \end{align}
-with the distance $r$ in units of [au].
+with the solar distance $r$ in astronomical units.
 
 %%% field angle phi %%%
 The magnetic field angle in the solar equatorial plane is distance dependent and is calculated via
 \begin{align}
 	\phi_B(r) &= \arctan\left(-\frac{\omega \cdot r}{v_\text{sw}}\right)\,.
 \end{align}
-The angle becomes $\phi_B(\SI{1}{\au}) = \SI{-46.23}{\degree}$ when using the Sun's equatorial angular velocity $\omega_\text{eq} = \SI{14.37}{\degree\per\day}$ (for more details on solar rotation see appendix \autoref{sec:solar_surface_differential_rotation}) and the median solar wind velocity $v_\text{sw} = \SI{416}{\km\per\s}$ from our paper.
+The angle becomes $\phi_B(\SI{1}{\au}) = \SI{-46.23}{\degree}$ when using the Sun's equatorial angular velocity $\omega_\text{eq} = \SI{14.37}{\degree\per\day}$ (for more details on solar rotation see appendix \autoref{sec:solar_surface_differential_rotation}) together with the median solar wind velocity $v_\text{sw} = \SI{416}{\km\per\s}$ from the paper.
 
-During solar cycle minimum, the solar wind in the equatorial plane outside the source surface originates from polar regions at about \SI{+-60}{\degree} heliolatitude. This leads to a slightly underwound Parker spiral, because of the slower rotation rate at higher latitudes \citep{Banaszkiewicz1998}. Using the differential rotation rate $\omega(\SI{+-60}{\degree}) = \SI{13.69}{\degree\per\day}$ (see appendix \autoref{eq:omega_differential}), the field angle becomes $\phi_B(\SI{1}{\au}) = \SI{-44.84}{\degree}$.\\
+During solar cycle minimum, the solar wind in the equatorial plane outside the source surface originates from polar regions at about \SI{+-60}{\degree} heliolatitude. This leads to a slightly underwound Parker spiral, because of the slower rotation rate at higher latitudes \citep{Banaszkiewicz1998}. Using the differential rotation rate $\omega(\SI{+-60}{\degree}) = \SI{13.69}{\degree\per\day}$ (see appendix \autoref{eq:omega_differential}), the field angle becomes $\phi_B(\SI{1}{\au}) = \SI{-44.84}{\degree}$.
 
-As the solar rotation axis tilt to the ecliptic normal only has a maximum angle of \SI{7.2}{\degree}, I consider its influence on $\phi_B$ minor, and choose to neglect it in this calculation. Thus from theory, in the ecliptic at a solar distance of \SI{1}{\au}, the Parker spiral's observed magnetic field angle $\phi_B$ is centered most of the time at \SI{-45}{\degree} or for the opposite field polarity at \SI{135}{\degree}. Indeed, this is confirmed by the angle's frequency distribution, apparent in measurements made at \SI{1}{\au}, such as the OMNI data of the time period 1963--2016 plotted in \autoref{fig:histogram_B_angles_c}.\\
+As the solar rotation axis tilt to the ecliptic normal only has a maximum angle of \SI{7.2}{\degree}, I consider its influence on $\phi_B$ minor, and choose to neglect it in this calculation. Thus from theory, in the ecliptic at a solar distance of \SI{1}{\au}, the Parker spiral's observed magnetic field angle $\phi_B$ is centered most of the time at about \SI{-45}{\degree} or for the opposite field polarity at \SI{135}{\degree}. Indeed, this is confirmed by the angle's frequency distribution, apparent in IMF measurements made at \SI{1}{\au}, such as the OMNI data of the time period 1963--2016 plotted in \autoref{fig:histogram_B_angles_c}.
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/histogram_B_angles_c.pdf}
@@ -149,18 +140,18 @@ For $\phi_B$ being in average centered around these two directions, both vector 
 \begin{align}
 	B(\SI{1}{\au}) &= B_0 \cdot \sqrt{2}	&\text{with}	&	&	\left(\frac{\omega\cdot\SI{1}{\au}}{v_\text{sw}}\right) &= 1\,.
 \end{align}
-However this way, $\omega$ and $v_\text{sw}$ are treated as time independent constants.\\
+Admittedly, this way I treat $\omega$ and $v_\text{sw}$ as time independent constants.
 
 %%% fit %%%
-Considering the longitudinal field component, the magnetic field strength's distance dependency is derived in a similar way to that in the paper, see paper \autoref{sec:paper_solar_distance_dependency}. Also, the same Helios data set is used for the fit as is in the paper.
+Below, the magnetic field strength's distance dependency is derived in a similar way to that in the paper, see paper \autoref{sec:paper_solar_distance_dependency}. Also, the same data set is used for the fit as is in the paper, that is, in-situ data from the Helios~1 and Helios~2 spacecraft (see also \autoref{sec:helios_probes}). The plain difference is the additional consideration of the longitudinal field component.
 
-In order to get an analytical representation of the radial dependence of the magnetic field, I derive a suitable fit function, assuming a nonexistent $\vect{B}_\theta$,
+In order to get an analytical representation of the radial dependence of the magnetic field, I derive a suitable fit function assuming a nonexistent $\vect{B}_\theta$:
 \begin{align}
-	x(r) = a \cdot \sqrt{\left(r^{e_1}\right)^2 + \left(r^{e_2}\right)^2}	\label{eq:sqare_power_law}
+	x(r) = a \cdot \sqrt{\left(r^{e_1}\right)^2 + \left(r^{e_2}\right)^2}	\,.	\label{eq:sqare_power_law}
 \end{align}
-with the scaling parameter $a$, and the exponents $e_1$ and $e_2$, is used in a least squares regression fit. From the theoretical considerations sketched above, the expected fit parameter values are: $a \approx \frac{B(\SI{1}{\au})}{\sqrt{2}}$, $e_1 \approx -2$, and $e_2 \approx -1$.
+The function, containing the scaling parameter $a$, and the exponents $e_1$ and $e_2$, is used in a least squares regression fit. From the theoretical considerations sketched above, the expected fit parameter values are: \mbox{$a \approx B(\SI{1}{\au}) / \sqrt{2}$}, $e_1 \approx -2$, and $e_2 \approx -1$.
 
-The resulting fit curves for the mean and median field strength are plotted with respect to solar distance in \autoref{fig:radial_fit_B_thesis_skip}. In the Helios distance region \SIrange{0.3}{1.0}{\au}, the fit curves are very similar to those in the paper -- as they are expected to be. This is why this graph is visually almost indistinguishable to the corresponding one in the paper (paper \autoref{sec:paper_solar_distance_dependency}, Figure~7).
+The resulting fit curves for the mean and median field strength are plotted with respect to solar distance in \autoref{fig:radial_fit_B_thesis_skip}. Within the Helios distance range \SIrange{0.3}{1.0}{\au}, the fit curves are very similar to those in the paper -- as they are expected to be. This is why this graph is visually almost indistinguishable to the corresponding one in the paper (paper Figure~7, \autoref{sec:paper_solar_distance_dependency}).
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/radial_fit_B_thesis_skip.pdf}
@@ -221,35 +212,22 @@ Concerning the error notation, I adhere to the parentheses notation documented i
 % 1267.19055342511	this fit; is 33 % higher
 % 950.841158464094	paper fit
 
-The weighted sum of the squared residuals (WSSR) of this fit slighly improved in comparison to that of the simple power-law function $x(r) = d \cdot r^e$ used in \citet{Venzmer2018} -- \SI{6}{\%} for the median and \SI{9}{\%} for the mean. However, the mean and median fit curves are fairly similar and still cross each other at a similar value as in the paper.\\
+The weighted sum of the squared residuals (WSSR) of this fit slighly improved in comparison to that of the simple power-law function $x(r) = d \cdot r^e$ used in \citet{Venzmer2018} -- \SI{6}{\%} for the median and \SI{9}{\%} for the mean. However, the mean and median fit curves are fairly similar and still cross each other at a similar value as in the paper.
 
-The here obtained fit parameter values are closer to the theoretical values than those derived in the paper. The exponents $e_{1, med} = -1.852$ and $e_{1, avg} = -1.740$ are up to \SI{13}{\%} larger than the theoretical exponent $2$ and lead to a less steep slope near the Sun. However, they are about \SI{12}{\%} smaller than the power-law exponents derived in the paper, which have values of \num{-1.655} and \num{-1.546}.\\
+The here obtained fit parameter values are closer to the theoretical values than those derived in the paper. The exponents $e_{1, med} = -1.852$ and $e_{1, avg} = -1.740$ are up to \SI{13}{\%} larger than the theoretical exponent $-2$ and lead to a less steep slope near the Sun. However, they are about \SI{12}{\%} smaller than the power-law exponents derived in the paper, which have values of \num{-1.655} and \num{-1.546} respectively.
 
-It can be seen from \autoref{fig:sw_extrapolation_ssn_median_g} that although the new fit curve is slightly curved, both fits are congruent in the Helios data range.\\ 
+It can be seen from \autoref{fig:sw_extrapolation_ssn_median_gt1au_g} that although the new fit curve is slightly curved, both fits are congruent in the Helios data range.
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
-		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/sw_extrapolation_ssn_median_g.pdf}
+		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/sw_extrapolation_ssn_median_gt1au_g.pdf}
 	}{
 		\caption{Magnetic field strength fit curves with respect to solar distance. Plotted are the derived absolute median field strength and its radial and azimuthal components. I added the absolute median field strength from Equation (10) of the paper as well. The orbital distance ranges from PSP and the Helios probes are indicated by the blue and green lines.}
-		\label{fig:sw_extrapolation_ssn_median_g}
+		\label{fig:sw_extrapolation_ssn_median_gt1au_g}
 	}
 \end{figure}
+Already little above \SI{1}{\au}, the power-law yields significantly lower IMF strenghts. It is known that the decline in IMF strength in the range \SIrange{1}{81}{\au} behaves according to Parker's theory \citep{Burlaga2002}. However, both curves do not deviate that much in the PSP distance range.
 
-In the following paragraph I use the same method and reasoning as explained in the paper \autoref{sec:paper_solar_distance_dependency}, thus I do not go into detail here.\\
-
-...and it can be fitted via a lognormal function\\
-
-% from paper:\\
-% 'The mean and median velocity fit exponents acquired from the Helios data are very similar, which indicates that they can be kept identical so that the basic shape of the frequency distribution does not change with distance.
-% 
-% The crossing points limit the regions where the distribution's shapes can still be considered lognormal.
-% 
-% In order to still fit and extrapolate lognormal functions with the data, we assume that the shapes can be considered lognormal at all distances. For the frequency distribution fit function to be discussed in the following paragraph, we reduce the fit exponents $e_\text{med}$ and $e_\text{avg}$ to only one.
-% 
-% Implementing the power law distance dependency~(ref{eq:}) into the lognormal function (ref{eq:}), we get the fit parameters $d'_\text{med}$, $d'_\text{avg}$ and the common exponent $e'$.'\\
-
-
-see fit distribution in \autoref{fig:fit_fixed_B_paper_f} and resulting fit parameters in \autoref{tab:bfield_fit_parameters}.\\
+In the next step lognormal functions will be fit with the data -- I use the same method and reasoning as explained in the paper's \autoref{sec:paper_solar_distance_dependency}. Therefore the IMF distribution's shapes are considered to be lognormal at all distances and the fit exponents $e_\text{med}$ and $e_\text{avg}$ are reduced to only one common exponent. The distance dependency is implemented into the lognormal function from the paper, yielding in the parameters and common exponents of the distribution fit. The fit parameters are presented in \autoref{tab:bfield_fit_parameters} and the fitted distribution is plotted in \autoref{fig:fit_fixed_B_paper_f}.\\
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/fit_fixed_B_paper_f.pdf}
@@ -259,10 +237,10 @@ see fit distribution in \autoref{fig:fit_fixed_B_paper_f} and resulting fit para
 	}
 \end{figure}
 
-% from paper:\\
-% 'In order to estimate the solar wind environment for the PSP orbit, we combine the results from the solar wind frequency distributions’ solar-activity relationships and their distance dependencies derived from the OMNI and Helios data. The result is an empirical solar wind model for the inner heliosphere which is then extrapolated to the PSP orbit in Sect.~ref{sec:}.'\\
 
-The result of this analysis can be used to scale the SSN-relation derived in the paper:
+
+
+Finally, the magnetic field distance dependency derived above will be combined with the solar activity relationship from the paper. In order to derive the solar wind environment for the PSP orbit, the model is then extrapolated to the PSP orbit. To take into account predictions of the SSN, the distance relation is used to scale the SSN-relation derived in the paper:
 \begin{align}
 	B(ssn,r) = \frac{B(ssn)}{\sqrt{2}} \cdot \sqrt{\left(r^{e_1}\right)^2 + \left(r^{e_2}\right)^2}	\,.
 \end{align}

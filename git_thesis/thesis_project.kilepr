@@ -218,10 +218,10 @@ order=4
 
 [item:chapters/analyses_helios.tex]
 archive=true
-column=368
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=290
+line=325
 mode=LaTeX
 open=true
 order=4
@@ -258,10 +258,10 @@ order=6
 
 [item:chapters/front_matter.tex]
 archive=true
-column=25
+column=26
 encoding=UTF-8
 highlight=LaTeX
-line=381
+line=382
 mode=LaTeX
 open=true
 order=2
@@ -403,10 +403,10 @@ JumpList=
 ViMarks=.,132,7,[,132,6,],132,7
 
 [view-settings,view=0,item:chapters/analyses_helios.tex]
-CursorColumn=368
-CursorLine=290
+CursorColumn=0
+CursorLine=325
 JumpList=
-ViMarks=.,290,368,[,290,368,],290,368
+ViMarks=.,325,0,[,325,0,],325,0
 
 [view-settings,view=0,item:chapters/chapter2.tex]
 CursorColumn=170
@@ -427,10 +427,10 @@ JumpList=
 ViMarks=.,16,36,[,16,34,],16,36
 
 [view-settings,view=0,item:chapters/front_matter.tex]
-CursorColumn=25
-CursorLine=381
+CursorColumn=26
+CursorLine=382
 JumpList=
-ViMarks=.,381,15,[,381,15,],381,24
+ViMarks=.,382,26,[,382,26,],382,26
 
 [view-settings,view=0,item:chapters/introduction.tex]
 CursorColumn=509

@@ -98,6 +98,7 @@ In our article, we scaled the magnetic field strength via a power-law function a
 
 In the following a distance dependency for the IMF model of the paper is derived that is possibly more accurate in the near-Sun region. In any case, it is found that Voyager~1 observations of the magnetic field strength at solar distances larger than \SI{1}{\au} agree well with Parker’s IMF model \citep{Burlaga2002}.
 
+\subsection{Parker magnetic field}
 The coronal magnetic field near the Sun rotates rigidly, holding on to the coronal plasma. At the solar wind source surface (at around \SI{2.5}{\Rs}), where the thermal plasma pressure overcomes the magnetic pressure, the magnetic field gets radially transported outwards, maintaining only its radial vector component $\vect{B}_r$. From there on, the solar rotation begins to shear the magnetic field, building up a longitudinal component $\vect{B}_\phi$ as well. The solar wind magnetic field model formulated by \citet{Parker1958} has the following components in spherical coordinates ($\theta$ is the colatitude):
 \begin{align}
 	\vect{B}_r(r) &= B_0 \left(\frac{r_0}{r}\right)^2 \cdot \vect{e}_r\,,\\
@@ -142,6 +143,7 @@ For $\phi_B$ being in average centered around these two directions, both vector 
 \end{align}
 Admittedly, this way I treat $\omega$ and $v_\text{sw}$ as time independent constants.
 
+\subsection{IMF solar distance fit}
 %%% fit %%%
 Below, the magnetic field strength's distance dependency is derived in a similar way to that in the paper, see paper \autoref{sec:paper_solar_distance_dependency}. Also, the same data set is used for the fit as is in the paper, that is, in-situ data from the Helios~1 and Helios~2 spacecraft (see also \autoref{sec:helios_probes}). The plain difference is the additional consideration of the longitudinal field component.
 
@@ -151,7 +153,7 @@ In order to get an analytical representation of the radial dependence of the mag
 \end{align}
 The function, containing the scaling parameter $a$, and the exponents $e_1$ and $e_2$, is used in a least squares regression fit. From the theoretical considerations sketched above, the expected fit parameter values are: \mbox{$a \approx B(\SI{1}{\au}) / \sqrt{2}$}, $e_1 \approx -2$, and $e_2 \approx -1$.
 
-The resulting fit curves for the mean and median field strength are plotted with respect to solar distance in \autoref{fig:radial_fit_B_thesis_skip}. Within the Helios distance range \SIrange{0.3}{1.0}{\au}, the fit curves are very similar to those in the paper -- as they are expected to be. This is why this graph is visually almost indistinguishable to the corresponding one in the paper (paper Figure~7, \autoref{sec:paper_solar_distance_dependency}).
+The resulting fit curves for the mean and median field strength are plotted with respect to solar distance in \autoref{fig:radial_fit_B_thesis_skip}. Within the Helios distance range \SIrange{0.3}{1.0}{\au}, the fit curves are very similar to those in the paper -- as they are expected to be. This is why this graph is visually almost indistinguishable to the corresponding one in the paper (see paper Figure~7, \autoref{sec:paper_solar_distance_dependency}).
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/radial_fit_B_thesis_skip.pdf}
@@ -227,7 +229,7 @@ It can be seen from \autoref{fig:sw_extrapolation_ssn_median_gt1au_g} that altho
 \end{figure}
 Already little above \SI{1}{\au}, the power-law yields significantly lower IMF strenghts. It is known that the decline in IMF strength in the range \SIrange{1}{81}{\au} behaves according to Parker's theory \citep{Burlaga2002}. However, both curves do not deviate that much in the PSP distance range.
 
-In the next step lognormal functions will be fit with the data -- I use the same method and reasoning as explained in the paper's \autoref{sec:paper_solar_distance_dependency}. Therefore the IMF distribution's shapes are considered to be lognormal at all distances and the fit exponents $e_\text{med}$ and $e_\text{avg}$ are reduced to only one common exponent. The distance dependency is implemented into the lognormal function from the paper, yielding in the parameters and common exponents of the distribution fit. The fit parameters are presented in \autoref{tab:bfield_fit_parameters} and the fitted distribution is plotted in \autoref{fig:fit_fixed_B_paper_f}.\\
+In the next step lognormal functions will be fit with the data -- I use the same method and reasoning as explained in the paper's \autoref{sec:paper_solar_distance_dependency}. Therefore the IMF distribution's shapes are considered to be lognormal at all distances and the fit exponents $e_\text{med}$ and $e_\text{avg}$ are reduced to only one common exponent. The distance dependency is implemented into the lognormal function from the paper, yielding in the parameters and common exponents of the distribution fit. The fit parameters are presented in \autoref{tab:bfield_fit_parameters} and the fitted distribution is plotted in \autoref{fig:fit_fixed_B_paper_f}.
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/fit_fixed_B_paper_f.pdf}
@@ -236,21 +238,19 @@ In the next step lognormal functions will be fit with the data -- I use the same
 		\label{fig:fit_fixed_B_paper_f}
 	}
 \end{figure}
+Just as with \autoref{fig:radial_fit_B_thesis_skip}, the fitted distribution looks almost identical to the corresponding one presented in Figure~8 of the paper.
 
-
-
-
-Finally, the magnetic field distance dependency derived above will be combined with the solar activity relationship from the paper. In order to derive the solar wind environment for the PSP orbit, the model is then extrapolated to the PSP orbit. To take into account predictions of the SSN, the distance relation is used to scale the SSN-relation derived in the paper:
+\subsection{Implementing the SSN dependency}
+Finally, the IMF distance dependency derived above will be combined with the solar activity relationship obtained in the paper. In order to derive the solar wind environment for the PSP orbit, the model is then extrapolated to the PSP orbit. To take into account predictions of the SSN, the distance relation is used to scale the SSN-relation derived in the paper:
 \begin{align}
 	B(ssn,r) = \frac{B(ssn)}{\sqrt{2}} \cdot \sqrt{\left(r^{e_1}\right)^2 + \left(r^{e_2}\right)^2}	\,.
 \end{align}
-The resulting equation, combined with the values obtained from the solar activity analysis in the paper \autoref{sec:paper_solar_activity_dependence_of_the_solar_wind_frequency_distributions}, yields
+The square root just replaces the $r^{-1.66}$ factor of Equation~(12) in the paper:
 \begin{align}
-	B_\text{med}(ssn,r) &= \left(\SI{0.0131}{\nT} \cdot ssn + \SI{4.29}{\nT}\right) \cdot \sqrt{\left(r^{-1.86}\right)^2 + \left(r^{-1.3}\right)^2}	\,,\\
-	B_\text{avg}(ssn,r) &= 1.0879 \cdot B_\text{med}(ssn,r)\,.
+	B_\text{med}(ssn,r) &= \left(\SI{0.0131}{\nT} \cdot ssn + \SI{4.29}{\nT}\right) \cdot \sqrt{\left(r^{-1.86}\right)^2 + \left(r^{-1.3}\right)^2}	\,.
 \end{align}
 
-This magnetic field strength model is extrapolated to PSP's orbital range in \autoref{fig:sw_extrapolation_ssn_g}.\\
+This magnetic field strength model can now be extrapolated to PSP's orbital range. \autoref{fig:sw_extrapolation_ssn_g} shows the model and its extrapolation, visualized for a SSN range \numrange{0}{200}, representing the range from solar minimum to maximum. The magnetic field strength from the paper is shaded in yellow, the above derived model in the Helios range in green and the extrapolation to the PSP range in blue. The new model is found to differ increasingly to the perihelion of the extrapolated PSP region.
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/sw_extrapolation_ssn_g.pdf}
@@ -260,12 +260,16 @@ This magnetic field strength model is extrapolated to PSP's orbital range in \au
 	}
 \end{figure}
 
-Using the SSN prediction as described in the paper, the solar wind environment is forecasted to PSP's orbit and mission time, see \autoref{fig:PSP_perihelia_prediction_f}.\\
+Parker1958 field normed to 1au as comparison...\\
+
+
+
+Using the same SSN predictions as described in the paper (SIDC forecast and mirroring the last solar cycle), the solar wind environment can be forecasted to PSP's orbit and mission time. The magnetic field changes during the first perihelion and the first closest perihelion (which is actually the 22nd) are plotted in \autoref{fig:PSP_perihelia_prediction_f}.
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/PSP_perihelia_prediction_f.pdf}
 	}{
-		\caption{Estimated solar wind parameter medians (solid lines) and their error bands (gray area) during 12~days in 2018 and 2024 with PSP's first perihelion at about \SI{0.16}{\au} and PSP's 22nd (the first closest) perihelion at \SI{0.046}{\au}. I indicated the prediction from \citet{Venzmer2018} as well (dotted lines).}
+		\caption{Estimated magnetic field strength medians (solid lines) and their error bands (gray area) during 12~days in 2018 and 2024 with PSP's first perihelion at about \SI{0.16}{\au} and PSP's 22nd perihelion at \SI{0.046}{\au}. I indicated the prediction from \citet{Venzmer2018} as well (dotted lines).}
 		\label{fig:PSP_perihelia_prediction_f}
 	}
 \end{figure}
@@ -275,22 +279,23 @@ Using the SSN prediction as described in the paper, the solar wind environment i
 % first closest perihelion value:
 % 1241 nT	this fit; is 32 % higher
 % 943 nT	old fit
+The estimated magnetic field strength median value of \SI{94}{\nano\tesla} for PSP's first perihelion is \SI{8}{\%} higher than that derived in the paper. The median value for the first closest perihelion is even \SI{32}{\%} higher with \SI{1241}{\nano\tesla}.\\
 
-The estimated magnetic field strength median value of \SI{94}{\nano\tesla} for PSP's first perihelion is \SI{8}{\%} higher than that derived in the paper. However, the median value for the first closest perihelion is even \SI{32}{\%} higher with \SI{1241}{\nano\tesla}.\\
 
-The estimated frequency distributions of the solar wind magnetic field strength at PSP's 1st and 22nd (first closest) perihelion are plotted in \autoref{fig:PSP_sw_distributions_c}.
+
+The estimated frequency distributions of the solar wind magnetic field strength at PSP's 1st and 22nd (the first closest) perihelion are plotted in \autoref{fig:PSP_sw_distributions_c}.
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/PSP_sw_distributions_c.pdf}
 	}{
-		\caption{Frequency distributions of the solar wind magnetic field strength (OMNI data) and those estimated with the solar wind model for PSP's 1st and 22nd (first closest) perihelion. In this plot the frequencies of both extrapolated curves are scaled for visibility to the same height as the \SI{1}{\au} distribution. I indicated the prediction from \citet{Venzmer2018} is as well (dotted lines).}
+		\caption{Frequency distribution of the magnetic field strength at \SI{1}{\au} (OMNI data and fit) and those estimated with the derived model for PSP's 1st and 22nd perihelion. In this plot the frequencies of both extrapolated curves are scaled up for visibility to the same height as the \SI{1}{\au} distribution. I indicated the predictions from \citet{Venzmer2018} as well (dotted lines). add (paper) behind OMNI fit...}
 		\label{fig:PSP_sw_distributions_c}
 	}
 \end{figure}
 During the first closest perihelion, high field strengths have multiple times the frequency of those derived in the paper.\\
 
 
-\section{Discussion}
+\subsection{Discussion}
 %discussion/conclusion
 The newly derived dependency relation can be used to replace that found in the paper.\\
 

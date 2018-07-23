@@ -64,8 +64,7 @@ The Wide Field Imager for Solar Probe Plus (WISPR) is a white-light telescope fo
 The study in \citet{Venzmer2018} is conducted within the Coronagraphic German And US SolarProbePlus Survey (CGAUSS) which is the German contribution to the PSP mission as part of WISPR. The input of this study to the CGAUSS project is the extrapolation of Helios solar wind data to the solar distances PSP is to reach.
 
 
-\section{On the puplished paper}
-
+\section{On the published paper}
 %%% contributions and copyright
 The major part of this chapter is published under the title ``Solar-wind predictions for the Parker Solar Probe orbit'' in \citet{Venzmer2018}, which is also just referred to as 'the paper' in this chapter. The article was published online on 20~March 2018 in Astronomy and Astrophysics (A\&A). It is included following this chapter, denoted as \autoref{chap:solar_wind_predictions_for_the_parker_solar_probe_orbit}. The European Southern Observatory (ESO) is the holder of the copyright -- the article is reproduced with permission.
 
@@ -143,7 +142,7 @@ For $\phi_B$ being in average centered around these two directions, both vector 
 \end{align}
 Admittedly, this way $\omega$ and $v_\text{sw}$ are treated as time independent constants.
 
-\subsection{IMF solar distance fit}
+\subsection{Solar distance dependency}
 %%% fit %%%
 Below, the magnetic field strength's distance dependency is derived in a similar way to that in the paper, see paper \autoref{sec:paper_solar_distance_dependency}. Also, the same data set is used for the fit as is in the paper, that is, in-situ data from the Helios~1 and Helios~2 spacecraft (see also \autoref{sec:helios_probes}). The plain difference is the additional consideration of the longitudinal field component.
 
@@ -240,8 +239,10 @@ In the next step lognormal functions will be fit with the data -- I use the same
 \end{figure}
 Just as with \autoref{fig:radial_fit_B_thesis_skip}, the fitted distribution looks almost identical to the corresponding one presented in Figure~8 of the paper.
 
-\subsection{Implementing the SSN dependency}
-Finally, the IMF distance dependency derived above will be combined with the solar activity relationship obtained in the paper. In order to derive the solar wind environment for the PSP orbit, the model is then extrapolated to the PSP orbit. To take into account predictions of the SSN, the distance relation is used to scale the SSN-relation derived in the paper:
+\subsection{SSN implementation and extrapolation to PSP orbit}
+Finally, the IMF distance dependency derived above will be combined with the solar activity relationship obtained in the paper. In order to derive the solar wind environment for the PSP orbit, the model is then extrapolated to the PSP orbit.
+
+To take into account predictions of the SSN, the distance relation is used to scale the SSN-relation derived in the paper:
 \begin{align}
 	B(ssn,r) = \frac{B(ssn)}{\sqrt{2}} \cdot \sqrt{\left(r^{e_1}\right)^2 + \left(r^{e_2}\right)^2}	\,.
 \end{align}

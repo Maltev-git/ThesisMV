@@ -1,27 +1,29 @@
 
-\begin{titlepage}
-	\begin{center}
-		%\renewcommand{\baselinestretch}{1.5}
-		{\LARGE\sffamily
-			\textbf{Solar wind -- Predicted magnetospheric influence\\and near-Sun environment}\\
-		}
-		\Large
-		\textit{Malte~S.~Venzmer}\\
-		title?\\
-		place cover page images\\
-		Institute for Astrophysics logo?\\
-		January 2012 -- October? 2018\\
-		german title and abstract?\\
-	\end{center}
-\end{titlepage}
+\begin{center}
+	%\renewcommand{\baselinestretch}{1.5}
+	{\LARGE\sffamily
+		\textbf{Solar wind -- Predicted magnetospheric influence\\and near-Sun environment}\\
+	}
+	\Large
+	\textit{Malte~S.~Venzmer}\\
+	title?\\
+	place cover page images\\
+	January 2012 -- October? 2018\\
+	german title and abstract?\\
+\end{center}
 
-
-\includegraphics[width=0.5\textwidth]{figures_of_mine/gnuplots/KpvsBz_titlepage.pdf}
-
+\begin{minipage}{0.46\textwidth}
+	\includegraphics[width=\textwidth]{figures_of_mine/gnuplots/KpvsBz_titlepage.pdf}
+\end{minipage}
+\begin{minipage}{0.08\textwidth}
+\end{minipage}
+\begin{minipage}{0.46\textwidth}
+	\includegraphics[width=\textwidth]{figures_of_mine/gnuplots/fit_fixed_B_paper_f_title.pdf}
+\end{minipage}
 
 % \begin{figure}[htb]
 % 	\centering
-	\includegraphics[width=0.5\textwidth]{figures_of_mine/gnuplots/fit_fixed_B_paper_f_title.pdf}
+% 	\includegraphics[width=0.46\textwidth]{figures_of_mine/gnuplots/fit_fixed_B_paper_f_title.pdf}
 % 	\caption[\lofimage{figures_of_mine/gnuplots/fit_fixed_B_paper_f_title.pdf}]
 % 	{Combined figure of \autoref{fig:fit_fixed_B_paper_f}.}
 % 	\label{fig:fit_fixed_B_paper_f_title}
@@ -33,8 +35,7 @@
 
 % electronic version note
 \begin{small}
-	\noindent The electronic version of this document is fully hyperlinked. The external links in some figure captions and in the references are not accessible in the printed version.
-	All linked web pages in this document were existent and all external web links in this document were valid in 2018-XX-XX.
+	\noindent The electronic version of this document is fully hyperlinked. The external links in some figure captions and in the references are not accessible in the printed version. All external web links in this document were valid in 2018-XX-XX.
 \end{small}
 
 \vfill
@@ -381,6 +382,7 @@
 338	2018-07-21	chapterPSP; figure: IMF comparison\\
 339	2018-07-22	chapterPSP\\
 340	2018-07-22b	chapterPSP discussion\\
+341	2018-07-23	basics intro; introduction synopsis\\
 \vspace{\baselineskip}
 \ISOToday{} \thistime{} -- last save
 \end{footnotesize}
@@ -409,13 +411,15 @@
 
 \begin{abstract}
 	\section*{Abstract}	%or abstract=true
-	\noindent This thesis derives empirical predictions of the solar wind's and coronal mass ejections' impact on the terrestrial magnetosphere and of the solar wind environment in the near-Sun region.
+	\noindent This thesis derives empirical predictions of the solar wind's impact on the terrestrial magnetosphere and of the solar wind environment in the near-Sun region.
 	%magnetosphere impact
-	Near-Earth in-situ solar wind measurements, consisting of 35~years of minutely OMNI data, are analyzed together with the time series of the planetary geomagnetic disturbance indicator \Kp{}. Correlations and functional dependencies are compiled with regard to nowcast the magnitude of the geomagnetic disturbances from in-situ solar wind measurements and to forecast them from remotely observed solar wind streams and CMEs.
+	Near-Earth in-situ solar wind measurements, consisting of 35~years of minutely OMNI data, are analyzed together with the time series of the planetary geomagnetic disturbance indicator \Kp{}. Correlations and functional dependencies are compiled with regard to nowcast the magnitude of the geomagnetic disturbances from in-situ solar wind measurements and to forecast them from remotely observed solar wind streams and coronal mass ejections.
 	%solar activity
 	Further, 53~years of hourly OMNI data and sunspot number data are correlated for the purpose of deriving functional dependencies with the state of the solar cycle for the key solar wind parameters magnetic field strength, proton velocity, density, and temperature.
 	%solar distance
-	Solar wind in-situ data from the Helios~1 and~2 missions, operational in the 1970s and orbiting the Sun within the distance range \SIrange{0.3}{1.0}{\au}, are analyzed and empirical solar wind distance dependencies are derived. Additionally, in view of the planned near-Sun spacecraft mission Parker~Solar~Probe (PSP) with a planned launch in mid~2018, the solar wind environment is estimated down to PSP's closest perihelion at \num{9.86}~solar radii.
+	Solar wind in-situ data from the Helios~1 and~2 missions, operational in the 1970s and orbiting the Sun within the distance range \SIrange{0.3}{1.0}{\au}, are analyzed and empirical solar wind distance dependencies are derived. Additionally, in view of the planned near-Sun spacecraft mission Parker~Solar~Probe with a planned launch in mid~2018, the solar wind environment is estimated down to its closest perihelion at \num{9.86}~solar radii.
+% 	use
+	The empirical solar wind and \Kp{} relations derived in this work provide useful tools for estimating the corresponding quantities. The relations are especially valuable within the scope of space weather predictions.
 \end{abstract}
 %key words: solar wind; sun: corona; sun: heliosphere; Parker Solar Probe (PSP); magnetosphere; Kp index; space weather\\
 

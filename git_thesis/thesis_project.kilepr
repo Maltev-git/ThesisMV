@@ -170,7 +170,7 @@ encoding=UTF-8
 highlight=LaTeX
 line=39
 mode=LaTeX
-open=true
+open=false
 order=4
 
 [item:appendix/appendix.tex]
@@ -235,12 +235,12 @@ order=4
 
 [item:chapters/chapter2.tex]
 archive=true
-column=34
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=231
+line=652
 mode=LaTeX
-open=false
+open=true
 order=4
 
 [item:chapters/data.tex]
@@ -275,10 +275,10 @@ order=6
 
 [item:chapters/front_matter.tex]
 archive=true
-column=31
+column=50
 encoding=UTF-8
 highlight=LaTeX
-line=386
+line=387
 mode=LaTeX
 open=true
 order=2
@@ -426,10 +426,10 @@ JumpList=
 ViMarks=.,260,232,[,260,226,],260,232
 
 [view-settings,view=0,item:chapters/chapter2.tex]
-CursorColumn=34
-CursorLine=231
+CursorColumn=0
+CursorLine=652
 JumpList=
-ViMarks=.,231,34,[,231,34,],231,34
+ViMarks=.,651,244,[,651,0,],-1,-1
 
 [view-settings,view=0,item:chapters/data.tex]
 CursorColumn=202
@@ -450,10 +450,10 @@ JumpList=
 ViMarks=.,16,36,[,16,34,],16,36
 
 [view-settings,view=0,item:chapters/front_matter.tex]
-CursorColumn=31
-CursorLine=386
+CursorColumn=50
+CursorLine=387
 JumpList=
-ViMarks=.,386,30,[,386,16,],386,30
+ViMarks=.,387,49,[,387,15,],387,49
 
 [view-settings,view=0,item:chapters/introduction.tex]
 CursorColumn=1517

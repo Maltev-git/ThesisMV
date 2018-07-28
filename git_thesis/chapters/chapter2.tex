@@ -23,9 +23,6 @@ As the obtained functional relations are simple, they cannot compete with curren
 
 %conclusions
 
-%%% motivation
-Since the early 19th~century it is known that variations in the solar wind evoke disturbances in the magnetosphere \citep{Bartels1962}. Especially strong disturbances, called geomagnetic storms, can be provoked by coronal mass ejections (CMEs), which are shot into the solar wind. The causes of the strongest geomagnetic storms are the compression of the solar wind magnetic field within the CME shock front and the enhanced field strenghts of magnetic clouds, which drive the CMEs \citep{Bothmer1993,Bothmer1995}. The consequences of strong geomagnetic disturbances are a threat to sensitive technical systems and exposed humans. Therefore it is important to know when magnetospheric disturbances will occur and how large they will become.\\
-
 %results
 With the results presented in this chapter, I elaborate the step from solar wind properties at Earth to the forecast of the possible impact strength on the terrestrial magnetosphere. I derive empirical correlations and functional dependencies between solar wind properties and the geomagnetic \Kp~index, in order to obtain the capability to nowcast/forecast \Kp{} values.
 
@@ -151,9 +148,9 @@ So the \Kp{} variation effects originate from the seasonal change in the solar t
 \section{Relation between solar wind electric field and \Kp~index}
 \label{sec:relation_between_sw_efield_and_kp}
 
-\Kp{} nowcast from in-situ solar wind measurements at L1. RTSW. reliable measurements of all sw parameters available. but only short lead-time -> nowcast\\
+\Kp{} nowcast from in-situ solar wind measurements at L1. Real-time solar wind make reliable measurements of all solar wind parameters available. It has a short lead-time and can therefore provide a nowcast.\\
 
-The coupling between the solar wind and the magnetosphere is governed by reconnection and compression of the magnetic field lines, as described in \autoref{sec:solar_wind_coupling_mechanisms}. There exist quite a few coupling functions relating solar wind quantities with geomagnetic activity, see \autoref{sec:coupling_functions}. However, in this work I settle and work with the solar wind electric field as the coupling function. The reasons for using the electric field are that it is a simple coupling function and still reaches high correlations...\\
+The coupling between the solar wind and the magnetosphere is governed by reconnection and compression of the magnetic field lines, as described in \autoref{sec:solar_wind_coupling_mechanisms}. There exist quite a few coupling functions relating solar wind quantities with geomagnetic activity, see \autoref{sec:coupling_functions}. However, in this work I settle and work with the solar wind electric field as the coupling function. The reasons for using the electric field are that it is a simple coupling function and still reaches a high correlation...\\
 
 % electric field
 see \autoref{eq:coupling_vxBz}\\
@@ -169,7 +166,6 @@ If not specified otherwise, $B_\text{z}$ is always meant to be in GSM coordinate
 The solar wind velocity sticks mostly to its radial flow direction, that is, it rarely deviates up to \SI{0.0}{\degree} (correct and cite...). Thus, the absolute flow speed $v$ can be used instead of the vector component.\\
 
 argue for \vBz:\\
-
 vs vBs vs vBT (Newell2007)\\
 large northward fields still contribute to geomagnetic activity.\\
 3hmin(\vBz) performs in rank correlation slightly better than the sophisticated Newell formula. really?\\
@@ -419,7 +415,7 @@ is used for the fit, with the scaling factor $a$, the location parameter $x'$, a
 \end{figure}
 This leads to the CME dependency function
 \begin{align}
-	\Kp_\text{CME}(v) = 10.6 \cdot \ln(v + 810) - 73	\,,	\label{eq:kpvsv_CME_dependency_function}
+	\text{\Kp}_\text{CME}(v) = 10.6 \cdot \ln(v + 810) - 73	\,,	\label{eq:kpvsv_CME_dependency_function}
 \end{align}
 which can be used to forecast the \Kp{}~index from the estimated CME arrival velocity, e.g., obtained from analyses of remote coronagraph observations.
 
@@ -456,7 +452,7 @@ Again, I use the logarithmic function (\ref{eq:log_offset_fit_function}) for the
 \end{figure}
 This leads to the solar wind stream dependency function
 \begin{align}
-	\Kp_\text{Stream}(v) = 5.88 \cdot \ln(v + 299) - 37.0	\,,	\label{eq:kpvsv_stream_dependency_function}
+	\text{\Kp}_\text{Stream}(v) = 5.88 \cdot \ln(v + 299) - 37.0	\,,	\label{eq:kpvsv_stream_dependency_function}
 \end{align}
 which can be used to forecast the \Kp{}~index from the estimated stream velocity, e.g., obtained from remote coronal hole analyses.
 
@@ -623,7 +619,7 @@ see Akasofu1981 p.~126, table\\
 Prototype \Kp{} relations are integrated into applications developed within the Advanced Forecast For Ensuring Communications Through Space (\mbox{AFFECTS}) project which ran from 2011 to 2013. The following services are accessible via the \mbox{AFFECTS} website\footnote{AFFECTS website: \urlfoot{http://www.affects-fp7.eu/services/}} and contain early results from this \Kp{} study:
 \begin{itemize*}
 	\item Real-time solar wind plot: \href{http://www.affects-fp7.eu/rssfeeds/ace_ap_forecast_plot/ace_realtime_ap_CH_GFT_plot.png}{Solar Wind and \Kp{} forecast plot} -- ACE/DSCOVR real-time solar wind and \Kp{} forecast plot.
-	\item RSS feed: \href{http://www.affects-fp7.eu/rssfeeds/rssfeed_kp/rssfeed_kp.xml}{L1 Kp Alert} -- threshold-based RSS feed that gets triggered when the estimated \Kp{} surpasses a threshold specified as being XX.
+	\item RSS feed: \href{http://www.affects-fp7.eu/rssfeeds/rssfeed_kp/rssfeed_kp.xml}{L1 Kp Alert} -- threshold-based RSS feed that gets triggered when the estimated \Kp{} surpasses a threshold specified as being $7-$.
 	\item RSS feed: \href{http://www.affects-fp7.eu/rssfeeds/rssfeed_gnss/rssfeed_gnss.xml}{L1 GNSS Alert} -- threshold-based RSS feed that gets triggered when a specified GNSS error is reached. The value is derived from the \Kp{} estimate.
 	\item RSS feed: \href{http://www.affects-fp7.eu/rssfeeds/rssfeed_aurora/rssfeed_aurora.xml}{L1 Aurora Alert} -- threshold-based RSS feed that gets triggered when a specified auroral location is reached. The value is derived from the \Kp{} estimate.
 \end{itemize*}

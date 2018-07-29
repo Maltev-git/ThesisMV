@@ -34,7 +34,7 @@ Thus, the solar equatorial sidereal rotation period is $T_\odot^\text{eq} = \SI{
 \end{align}
 with a Julian year as the Earth's orbital rotation period, $T_\text{E} = \SI{365.25}{\day}$.
 
-The differential rotation differs locally in the different surface structures, such as sunspots and CHs. The angular velocity slows down with sunspot age and changes with how deep the structure is rooted in the interior \citep{Pulkkinen1998}. The average differential rotation profile is asymmetric in both hemispheres and also varies slightly with solar activity. Thus, \autoref{eq:omega_differential} is not a definite function, infact the average rotation rate is even slowing down over the last couple of solar cycles.
+The differential rotation differs locally in the different surface structures, such as sunspots and CHs. The angular velocity slows down with sunspot age and changes with how deep the structure is rooted in the interior \citep{Pulkkinen1998}. The average differential rotation profile is asymmetric in both hemispheres and also varies slightly with solar activity. Thus, \autoref{eq:omega_differential} is not a definite function, infact the average rotation rate is even observed to slow down during the last couple of solar cycles.
 
 % Solar surface rotation period at equator\\
 % sidereal: 25.05~d (Sun Fact Sheet...), synodic: 26.90~d (derived)\\
@@ -64,15 +64,15 @@ The Lorentz force law defines the electric and magnetic field vectors $\vect{E}$
 \begin{align}
 	\vect{F} = q\,(\vect{E} + \vect{v} \times \vect{B})	\,.
 \end{align}
-It describes the force $\vect{F}$ that acts on a charge $q$ with velocity $v$. The full Ohm's law accounts for the Lorentz force:
+The equation describes the force $\vect{F}$ that acts on a charge $q$ with velocity $\vect{v}$. The full Ohm's law accounts for the Lorentz force:
 \begin{align*}
 	\vect{j} &= \sigma(\vect{E} + \vect{v} \times \vect{B})	& \Longleftrightarrow	&	&	\vect{E} &= - \vect{v} \times \vect{B} + \frac{\vect{j}}{\sigma}	\,.
 \end{align*}
-Solar wind is often approximated as an ideal MHD plasma having an infinite conductivity ($\sigma = \infty$). In this case electric fields do not generate electric currents ($\vect{j} / \sigma = 0$):
+Solar wind is often approximated as an ideal magnetohydrodynamic (MHD) plasma having an infinite conductivity ($\sigma = \infty$). In this case electric fields do not generate electric currents ($\vect{j} / \sigma = 0$):
 \begin{align}
 	\vect{E} = - \vect{v} \times \vect{B}	\,.
 \end{align}
-Assuming a strict radial solar wind flow -- in x"~direction when using GSM coordinates ($v_\text{y} = v_\text{z} = 0$) -- the resulting electric field components become
+Assuming a strictly radial solar wind flow, that is, in x"~direction when using GSM coordinates ($v_\text{y} = v_\text{z} = 0$), the resulting electric field components become
 \begin{align}
 	\vect{E} =& \begin{bmatrix}
 		0\\
@@ -80,7 +80,7 @@ Assuming a strict radial solar wind flow -- in x"~direction when using GSM coord
 		v_\text{x} \cdot B_\text{y}
 	\end{bmatrix}	\,.
 \end{align}
-Reconnection occurs only where the magnetic fields of the solar wind and magnetopause are antiparallel. Due to the magnetosphere's dipole topology, this is the case at the equator of the sunward magnetopause. If in addition the magnetospheric field is orientated along the z"~axis, the only remaining electric field component that contributes is
+Reconnection occurs where the magnetic fields of the solar wind and magnetopause are antiparallel. Due to the magnetosphere's dipole topology, the magnetospheric field is always orientated along the GSM z"~axis at the equator and central meridian of the sunward magnetopause ($B_y = 0$). In this region the only remaining electric field component that contributes is
 \begin{align}
 	E_\text{y} = - v_\text{x} \cdot B_\text{z}	\,.
 \end{align}
@@ -89,7 +89,7 @@ At the rest of the magnetopause surface facing the solar wind, the magnetospheri
 \begin{align}
 	\vect{E} =& \begin{bmatrix}
 		0\\
-		- v_\text{x} \cdot |\vect{B_\text{yz}}| \, \cos(\theta_c)\\
+		- v_\text{x} \cdot |\vect{B_\text{yz}}| \cdot \cos(\theta_c)\\
 		v_\text{x} \cdot |\vect{B_\text{yz}}| \cdot \sin(\theta_c)\\
 	\end{bmatrix}	\,,
 \end{align}
@@ -110,9 +110,9 @@ with $E_\text{y}$ containing the half-wave rectifier, see also \autoref{fig:coup
 
 \section{Plasma beta}
 \label{sec:plasma_beta}
-The thermal pressure of a plasma is defined as $p = n k_\text{B} T$, with the number density $n$ and the Boltzmann constant $k_\text{B}$. However, according to magnetohydrodynamics (MHD), the magnetic energy density $w_\text{mag} = B^2 / (2 \mu_0)$, with the magnetic field strength $B$ and the permeability constant $\mu_0$, behaves like an additional pressure that adds to the thermal pressure of a plasma \citep[p.~50]{Kivelson1995}. The ratio of the thermal pressure to the magnetic pressure determines the behavior of the plasma. If the thermal pressure dominates the magnetic pressure (warm plasma), the plasma movements transport the magnetic field, else the plasma movements are guided by the magnetic field lines (cold plasma). This ratio is called plasma beta:
+The thermal pressure of a plasma is defined as $p = n k_\text{B} T$, with the number density $n$ and the Boltzmann constant $k_\text{B}$. However, according to MHD, the magnetic energy density $w_\text{mag} = B^2 / (2 \mu_0)$, with the magnetic field strength $B$ and the permeability constant $\mu_0$, behaves like an additional pressure that adds to the thermal pressure of a plasma \citep[p.~50]{Kivelson1995}. The ratio of the thermal pressure to the magnetic pressure determines the behavior of the plasma. If the thermal pressure dominates the magnetic pressure (warm plasma), the plasma movements transport the magnetic field, else the plasma movements are guided by the magnetic field lines (cold plasma). This ratio is called plasma beta:
 \begin{align}
-	\beta &= \frac{p}{p_\text{mag}}	\,,\\
+	\beta &= \frac{p}{p_\text{mag}}\\
 	&= \frac{2 \mu_0 n k_\text{B} T}{B^2}	\,.	\nonumber
 \end{align}
 The plasma at the photosphere has typical beta values around~14 and that of the low corona around~0.2 \citep{Gary2001}. Further up, beta raises again and the region where it equals~1 is defined as the source surface for the solar wind \citep{Schatten1969}.	% source surface where beta equals 1 (Schatten1969), at 0.6~Rs\\
@@ -143,7 +143,7 @@ with the permeability constant $\mu_0$ and the total mass density $\rho$ of the 
 \begin{align}
 	v_\text{A} = \frac{|B|}{\sqrt{\mu_0 \rho}}	\text{\,.}
 \end{align}
-The wave's phase velocity is $v_\text{ph} = v_\text{A} \cos(\theta)$, with $\theta$ as the angle between wave propagation direction and magnetic field line, that is, Alfvén waves travel along magnetic field lines. They consist of periodic disturbances in the magnetic field, the electric field, the plasma velocity, and the current density. Plasma density, pressure, and magnetic field magnitude are not affected by them.
+The wave's phase velocity is $v_\text{ph} = v_\text{A} \cdot \cos(\alpha)$, with $\alpha$ as the angle between wave propagation direction and magnetic field line, that is, Alfvén waves travel along magnetic field lines. They consist of periodic disturbances in the magnetic field, the electric field, the plasma velocity, and the current density. Plasma density, pressure, and magnetic field magnitude are not affected by them.
 
 Additionally, there exist two types of compressional wave modes within MHD plasmas, the fast-mode wave and the slow-mode wave. The phase speeds of the three MHD waves meet $v_\text{fast} \geq v_\text{A} \geq v_\text{slow}$ \citep[p.~52]{Kivelson1995}. The solar distance where the solar wind speed exceeds the Alfvén speed is called the Alfvén critical surface. It lies on average around \SI{17}{\Rs} \citep{Sittler1999,Exarhos2000}. Within solar wind at \SI{1}{\au}, the typical frequency of Alfvén waves is 1--4 per hour and their average velocity is $v_\text{A} = \SI{56.8}{\km\per\s}$ \citep{Veselovsky2010}.	% at 1~au in 1963--2007\\
 
@@ -165,19 +165,19 @@ Additionally, there exist two types of compressional wave modes within MHD plasm
 %$v_\text{A} = 53$~km/s for $B = 5.6$~nT and $\rho = 5.3$~cm$^{-3}$
 
 
-\section{Sun-Earth distance and rotation axes tilt}
+\section{Sun--Earth distance and rotation axes tilt}
 \label{sec:sun_earth_orbit_geometry}
-All interactions between Sun and Earth are governed by the geometry of Earth's orbit and the orientations of both bodies' rotation axes. The Earth orbit defines the ecliptic plane which is a convenient reference base for a few coordinate systems, see appendix \autoref{sec:coordinate_systems}.
+All interactions between Sun and Earth are governed by the geometry of Earth's orbit and the orientations of both bodies' rotation axes. The Earth orbit defines the ecliptic plane which is a convenient reference base for a few coordinate systems, see Appendix \ref{sec:coordinate_systems}.
 
 % \subsection*{Solar distance}
-The Sun-Earth distance can be derived from the orbital parameters of Earth\footnote{NASA's Earth Fact Sheet: \urlfoot{http://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html}}, the semimajor axis $a = \SI{1}{\au}$ and the eccentricity $e = \num{0.0167}$. Hence, the perihelion and aphelion distances are:
+The Sun--Earth distance can be derived from the orbital parameters of Earth\footnote{NASA's Earth Fact Sheet: \urlfoot{http://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html}}, the semimajor axis $a = \SI{1}{\au}$ and the eccentricity $e = \num{0.0167}$. Hence, the perihelion and aphelion distances are:
 \begin{align*}
 	r_\text{p} &= a (1 - e)	&	&\text{and}	&	r_\text{a} &= a (1 + e)\\
 		&= \SI{0.9833}{\au}	\,,	&	&	&	&= \SI{1.0167}{\au}	\,,
 \end{align*}
 %perihelion, point on solar orbit with minimum distance to Sun\\
 %aphelion, point on solar orbit with maximum distance to Sun\\
-The exact solar distance at a given point in time can be obtained from the JPL~HORIZONS online ephemeris system\footnote{NASA/JPL HORIZONS Web-Interface: \urlfoot{http://ssd.jpl.nasa.gov/horizons.cgi}}, hosted by the Solar System Dynamics group at NASA's Jet~Propulsion Laboratory (JPL). In the year 2017, the Earth's perihelion was on 5~January.
+The exact solar distance at a given point in time can be obtained from the HORIZONS online ephemeris system\footnote{NASA/JPL HORIZONS Web-Interface: \urlfoot{http://ssd.jpl.nasa.gov/horizons.cgi}}, hosted by the Solar System Dynamics group at NASA's Jet~Propulsion Laboratory. In the year 2017, the Earth's perihelion was on 5~January.
 % HORIZONS Web-Interface
 % http://ssd.jpl.nasa.gov/horizons.cgi
 % Ephemeris Type:	VECTORS
@@ -229,7 +229,6 @@ The total distance variation of \SI{3.34}{\%} has implications for the magnitude
 % p_a = 1.32e18 m-1
 % -> ram pressure varies by 6\% through the year\\
 
-
 % \subsection*{Solar rotation axis tilt to the ecliptic}
 The heliosphere is structured by the orientation of the solar rotation axis, e.g., the overall solar wind properties change with angular distance from the solar equator. The solar equator is inclined to the ecliptic by $i_\odot = \SI{7.25}{\degree}$\footnote{NASA's Sun Fact Sheet: \urlfoot{http://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html}}. Thus, viewed from Earth, the projected solar rotation axis tilt angle varies as the Earth is moving on its orbit. The seasonal change is plotted in \autoref{fig:Sun_Earth_geometry}, where the projected tilt at a given time is calculated by modulating $i_\odot$ with a sine, using the equation in \citet{Hapgood1992} and the time of vernal equinox. The projected tilt is zero at the equinoxes -- the vernal equinox in 2016 was on 20~March.
 % vernal_equinox = 2016.0 + 2.0/12.0 + 20.0/366.0
@@ -242,9 +241,8 @@ The heliosphere is structured by the orientation of the solar rotation axis, e.g
 % tilt(x) = 7.25 * sin(-(73.67 + 0.013958 * (x - 1850.0)) + (-vernal_equinox + x) * 360.0)
 % tilt(2016.0+(x-1.0)/12.0) with lines title "sine approx." ls 2 lw 2,\
 
-
 % \subsection*{Earth rotation axis tilt to the ecliptic}
-The orientation of the Earth's rotation axis to the Sun defines the solar wind flow angle onto the magnetosphere. The Earth's obliquity of the ecliptic is \SI{23.44}{\degree} and the resulting seasonal variation, seen in \autoref{fig:Sun_Earth_geometry}, influences the solar wind coupling efficiency with the magnetosphere and is reflected in geomagnetic activity as well.
+The orientation of the Earth's rotation axis to the Sun defines the solar wind flow angle onto the magnetosphere. The Earth's obliquity of the ecliptic is \SI{23.44}{\degree} \citep{Luzum2011} and the resulting seasonal variation, seen in \autoref{fig:Sun_Earth_geometry}, influences the solar wind coupling efficiency with the magnetosphere and is reflected in geomagnetic activity as well.
 
 
 \section{GSE, GSM, and HGI coordinate systems}
@@ -261,7 +259,7 @@ Thus compared to a fixed coordinate system, the GSE system completes one rotatio
 % SPENVIS coordinate systems
 % https://www.spenvis.oma.be/help/background/background.html
 
-GSE coordinates are preferably used when looking at near-Earth solar wind measurements. In this work GSE coordinates are applied for the near-Earth solar wind measurements, e.g., with ACE data in Figures~\ref{fig:ACE_64s_v7_thesis_CIRs_2013-5-1_65_plot} and \ref{fig:ACE_64s_v7_thesis_CME_2013-6-26_6}.
+GSE coordinates are preferably used when looking at near-Earth solar wind measurements, e.g., in this work they are applied for plotting the ACE solar wind measurements in Figures~\ref{fig:ACE_64s_v7_thesis_CIRs_2013-5-1_65_plot} and \ref{fig:ACE_64s_v7_thesis_CME_2013-6-26_6}.
 
 % GSM - Geocentric Solar Magnetospheric
 \subsection*{Geocentric Solar Magnetospheric coordinates}
@@ -324,7 +322,7 @@ In the case of rare event forecasting, the contingency table is dominated by cor
 
 \section{Lognormal distribution}
 \label{sec:lognormal_distribution}
-This is a small summary about the lognormal probability distribution. The lognormal distribution is the distribution of a random variable $X$ if the logarithm of $X$ conforms to a normal distribution \citep[p.~780]{Bronstein2000}. Its shape is highly asymmetric, however in a semi-log plot the Gaussian bell curve is recognizable, see \autoref{fig:lognormal_semi_log}.
+This is a small summary about the lognormal probability distribution. The lognormal distribution is the distribution of a random variable $X$ if the logarithm of $X$ conforms to a normal distribution \citep[p.~780]{Bronstein2000}. Its shape is highly asymmetric, however the Gaussian bell curve is recognizable in a semi-log plot, see \autoref{fig:lognormal_semi_log}.
 \begin{figure}[htb]
 	\begin{floatrow}
 		\ffigbox{
@@ -351,7 +349,7 @@ with the location ($\mu$) and the shape parameter ($\sigma$). Changes in $\mu$ a
 
 A lognormal distribution adheres to the general properties noted in the following. As it is a probability distribution, its area is normalized:
 \begin{align*}
-	\int_0^\infty f(x) \text{d} x = 1	\,.
+	\int_0^\infty f(x) \, \text{d} x = 1	\,.
 \end{align*}
 For a lognormally distributed random variable, the geometric moments mean, standard deviation, and variance are calculated from:
 \begin{align*}
@@ -371,16 +369,11 @@ Most distributions in nature deviate from the simple Gaussian shape and are to s
 
 \section{Astronomical constants}
 \label{sec:astronomical_constants}
-
-Astronomical unit: $\SI{1}{\au} = \SI{149597870.700}{\km}$ \citep{Luzum2011}\\
-Nominal solar radius (photosphere): $R_\odot = \SI{695700}{\km}$ \citep{Mamajek2015}\\
-% Nominal solar effective temperature (photosphere): $T_{\text{eff}\odot} = \SI{5772}{\kelvin}$ \citep{Mamajek2015}\\
-Solar rotation axis tilt to ecliptic: $i_\odot = \SI{7.25}{\degree}$ (NASA's Sun Fact Sheet\footnote{NASA's Sun Fact Sheet website: \urlfoot{http://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html}})\\ %C3; Obliquity to ecliptic
-Earth rotation axis tilt to ecliptic: $i_\text{E} = \SI{23.439279}{\degree}$ \citep{Luzum2011}\\ %C3; Obliquity to ecliptic
+The nominal distance units astronomical unit (\si{\au}) and solar radius (\Rs) are used extensively in this work. The astronomical unit is about the average distance between Earth's perihelion and aphelion. The 2009 Resolution~B2 of the International Astronomical Union (IAU) defines it as being exactly $\SI{1}{\au} = \SI{149597870.700}{\km}$ \citep{Luzum2011}. The nominal solar radius is the distance from the Sun's center to its photosphere and the IAU 2015 Resolution~B3 defines its value exactly as $\SI{1}{\Rs} = \SI{695700}{\km}$ \citep{Prsa2016}. Thus \SI{1}{\au} equals about \SI{215.0}{\Rs}.\\
 
 \noindent Notable online resources for astronomical constants:
 \begin{itemize*}
-	\item IAU 2009 values and best estimates, IAU Division I Working Group, Numerical Standards for Fundamental Astronomy \citet{Luzum2011}:\\
+	\item IAU 2009 values and best estimates, IAU Division~I Working Group, Numerical Standards for Fundamental Astronomy, \citet{Luzum2011}:\\
 	\urltext{http://maia.usno.navy.mil/NSFA/}
 	
 	\item The Astronomical Almanac Online, \citet{USNAO2017}:\\
@@ -391,6 +384,9 @@ Earth rotation axis tilt to ecliptic: $i_\text{E} = \SI{23.439279}{\degree}$ \ci
 	
 \end{itemize*}
 
+% Nominal solar effective temperature (photosphere): $T_{\text{eff}\odot} = \SI{5772}{\kelvin}$ \citep{Mamajek2015}\\
+% Solar rotation axis tilt to ecliptic: $i_\odot = \SI{7.25}{\degree}$ (NASA's Sun Fact Sheet\footnote{NASA's Sun Fact Sheet website: \urlfoot{http://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html}})\\ %C3; Obliquity to ecliptic
+% Earth rotation axis tilt to ecliptic: $i_\text{E} = \SI{23.439279}{\degree}$ \citep{Luzum2011}\\ %C3; Obliquity to ecliptic
 % Solar mass: $M_\odot = \SI{1.9884(2)e30}{\kg}$ \citep{USNAO2017}\\
 % Sun escape velocity: $v_\text{esc} = \SI{617.6}{\km\per\s}$ (Sun Fact Sheet...)\\
 % Solar surface rotation period at equator, sidereal: 25.05~d (Sun Fact Sheet...)\\
@@ -404,10 +400,7 @@ Earth rotation axis tilt to ecliptic: $i_\text{E} = \SI{23.439279}{\degree}$ \ci
 \begin{minipage}[t]{0.41\textwidth}
 	List of generic acronyms:
 	\begin{description}[leftmargin=1.2cm, align=parleft, style=sameline]
-		\item[ANN] artificial neural network
-		\item[BDE] bidirectional electrons
-		\item[DB] disparition brusques
-		\item[Dst] disturbance storm time
+		\item[\textit{Dst}] disturbance storm time
 		\item[CH] coronal hole
 		\item[CIR] corotating interaction region
 		\item[CME] coronal mass ejection
@@ -423,13 +416,11 @@ Earth rotation axis tilt to ecliptic: $i_\text{E} = \SI{23.439279}{\degree}$ \ci
 		\item[HSS] high speed stream
 		\item[ICME] interplanetary coronal mass ejection
 		\item[IMF] interplanetary magnetic field
-		\item[Kp] planetare Kennziffer
+		\item[\Kp] planetare Kennziffer
 		\item[MAD] mean absolute deviation
-		\item[MBP] magnetic bright point
 		\item[MC] magnetic cloud
 		\item[MHD] magnetohydrodynamic
 		\item[MVA] minimum variance analysis
-		\item[SB] sector boundary
 		\item[SAR] sum of absolute residuals
 		\item[SEP] solar energetic particle
 		\item[SIR] stream interaction region
@@ -458,7 +449,6 @@ Earth rotation axis tilt to ecliptic: $i_\text{E} = \SI{23.439279}{\degree}$ \ci
 		\item[DDC] DoomsDayCalculator
 		\item[DSCOVR] Deep Space Climate Observatory
 		\item[EVE] EUV Variability Experiment
-		\item[FP7] Framework Programme 7
 		\item[GCS] Graduated Cylindrical Shell
 		\item[GFZ] GeoForschungsZentrum
 		\item[GSFC] Goddard Space Flight Center
@@ -477,7 +467,6 @@ Earth rotation axis tilt to ecliptic: $i_\text{E} = \SI{23.439279}{\degree}$ \ci
 		\item[OPTIMAP] OPerational Tool for Ionospheric Mapping And Prediction
 		\item[PSP] Parker Solar Probe
 		\item[ROB] Royal Observatory of Belgium
-		\item[RTSW] Real Time Solar Wind
 		\item[SDO] Solar Dynamics Observatory
 		\item[SIDC] Solar Influences Data Center
 		\item[SOHO] Solar and Heliospheric Observatory

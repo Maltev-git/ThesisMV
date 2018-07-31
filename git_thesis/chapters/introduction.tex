@@ -8,11 +8,12 @@
 In this thesis I address two current solar wind problems: Prediction of the solar wind's geomagnetic impact is one of the most important space weather issues. The solar wind conditions in the near-Sun region remain unknown until the Parker~Solar~Probe will start to frequently visit it end of 2018. The two problems are linked in view of the fact that the solar wind impacting the magnetosphere is originating from the near-Sun region.
 
 % two topics and studies
-This thesis presents studies examining both problems. The two studies have in common their predictive nature that is related to solar wind. The studies are still quite different with regard to their contents, however, despite their topical differences, they are related in that they make use of similar data sets and harness similar data processing methods.
+This thesis presents quantitative studies examining both problems. The two studies have in common their predictive nature that is related to solar wind. The studies are still quite different with regard to their contents, however, despite their topical differences, they are related in that they make use of similar data sets and harness similar data processing methods.
 
 % response to problems
-In the following, I introduce both topics separately. First, I lead into the subject of quantifying the solar wind's geomagnetic impact for different forecast situations. Second, I inform about the issue of estimating the near-Sun solar wind environment which PSP will encounter during its mission.\\
+In the following, I introduce both topics separately. First, I lead into the subject of quantifying the solar wind's geomagnetic impact for different forecast situations. Second, I inform about the issue of estimating the near-Sun solar wind environment which PSP will encounter during its mission.
 
+\bigskip
 
 % chapter2: Kp estimate from sw
 
@@ -20,55 +21,59 @@ In the following, I introduce both topics separately. First, I lead into the sub
 The Sun emits a continuous flow of magnetized plasma into space, which consists of electrons and ions (mainly protons). This solar wind fills the interplanetary space and interacts with the solar system bodies and their magnetic fields. Since the early 19th~century it is known that variations in the solar wind evoke disturbances in the terrestrial magnetosphere \citep{Bartels1962}.
 
 % CMEs
-Especially strong disturbances, called geomagnetic storms, can be provoked by coronal mass ejections (CMEs). CMEs consist of magnetically structured coronal plasma that is shot into the ambient solar wind by rearrangements in the configuration of the solar magnetic field. Their impact on the magnetosphere can be much stronger than that of the ambient solar wind streams, because their properties, such as velocity and magnetic field strength, are able to be more extreme -- sometimes even many times higher.
-
-The causes of the strongest geomagnetic storms are the compression of the magnetic field within the shock fronts of fast CMEs and the enhanced field strenght of the driving magnetic clouds \citep{Bothmer1993,Bothmer1995}.\\
-
-
-
-
+Especially strong disturbances, called geomagnetic storms, can be provoked by coronal mass ejections (CMEs). CMEs consist of magnetically structured coronal plasma that is shot into the ambient solar wind by rearrangements in the configuration of the solar magnetic field. Their impact on the magnetosphere can be much stronger than that of the ambient solar wind streams, because their properties, such as magnetic field strength and velocity, are able to be more extreme -- sometimes even many times higher.
+(The causes of the strongest geomagnetic storms are the compression of the magnetic field within the shock fronts of fast CMEs and the enhanced field strength of the driving magnetic clouds \citep{Bothmer1995}.)
 
 % consequences
-The consequences of strong geomagnetic disturbances are a threat to sensitive technical systems and exposed humans.
-
-The abundance of modern technological systems that are sensitive to disturbances in the terrestrial mangetic field increases.\\
-These include critical systems, such as ..., whose potential disruptions would not only have severe economical impacts but would affect human lives as well.\\
-
-Therefore it is important to know when magnetospheric disturbances will occur and how large they will become.\\
+The effects of geomagnetic storms are a threat to sensitive technical systems and exposed humans. This includes critical systems, such as satellite communications and power grids, whose potential disruption could not only have severe economical impacts but would affect human lives as well. The advancement in modern technology leads to an ever-growing abundance of systems that are sensitive to disturbances in the geomagnetic field. Therefore, it is increasingly important to know in advance when magnetospheric disturbances will occur and how large they will become, in order to mitigate severe consequences.
 
 % what is well known
-Variations in some solar wind parameters lead to a direct response in geomagnetic activity.\\
+It is well known from in-situ measurements, that variations in specific solar wind quantities, such as magnetic field and velocity, lead to direct responses in geomagnetic activity. The coupling mechanisms between solar wind and magnetosphere have been identified and modeled extensively, resulting in a variety of coupling functions linking solar wind parameters to indicators of geomagnetic activity. These coupling functions are the base for models that predict geomagnetic activity from solar wind input parameters. Thus, with the solar wind conditions known in front of the magnetosphere, the geomagnetic response can be predicted fairly well.
 
-from in-situ measurements the sw coupling mechanism is well known and modeled extensively\\
-
+Spacecraft located in front of the magnetosphere are continuously monitoring the solar wind in~situ. Operational services use these solar wind real-time measurements for providing nowcasts of geomagnetic activity.\\
 
 % 2) problem statement
-however, for remote f/c situations the specific parameters cannot be obtained and the only aquirable quantity is the velocity\\
+
+The spacecraft are located at the first Lagrange point (L1). L1 is located one-hundredth the distance to the Sun and the lead time is a few tens of minutes.\\
+
+this is quite short in comparison to the travel time from Sun to Earth\\
+
+which is 3 to 4~days for ambient solar wind streams and down to one day for extremely fast CMEs\\
+CMEs and streams can be observed remotely via solar imagers and coronagraph observations\\
+
+
+These nowcast services -- derived from in-situ measurements -- reach a high prediction accuracy, however, for remote forecast situations the specific solar wind parameters cannot readily be obtained.\\
+
+
+the only acquirable quantity is the velocity\\
 
 
 % 3) response to the problem
 
 This work aims to quantify this response for the different solar wind forecast situations.\\
-
 For when magnetic field and velocity information is available and for when only velocity information is available and it is known whether it is ambient solar wind or a CME event.\\
+The present study adds more empirical \Kp{} relations -- for the cases when only the solar wind velocity $v$ or its electric field \vBz{} are known.\\
 
-The present study adds more empirical \Kp{} relations -- for the cases when only the solar wind velocity $v$ or its electric field \vBz{} are known, see \autoref{chap:chapter2}. The derived \Kp{} relations are part of the UGOE/IAG CME forecast chain.\\
-
-unique to this study is the use of high resolution solar wind data\\
+unique to this study is the use of high resolution solar wind data, where usually hourly or 3"~hourly averages are taken\\
+this enhances the correlations significantly\\
 
 
 % purpose statement
 The purpose of this study is to...\\
+provide ...\\
+
 
 % scope of this study in the thesis
 what will be addressed\\
-what not; what lies outside the scope\\
+what not; what lies outside the scope of this thesis\\
+This thesis presents quantitative analyses of the solar wind impact strengh on the terrestrial magnetosphere.\\
+It does not provide further scientific insight into the underlying physical coupling processes.\\
+It is focused on planetary disturbances in the geomagnetic field.\\
+It does not analyze the variations in the different subsystems of the magnetosphere nor does it analyze local disturbances.\\
 
 
-This thesis presents quantitative analyses of the solar wind impact strengh on the terrestrial magnetosphere and of the estimated near-Sun solar wind environment.\\
 
-
-
+\bigskip
 
 % chapterPSP: sw estimate from Helios
 
@@ -92,16 +97,22 @@ by back-extrapolating Helios solar wind data\\
 
 % purpose statement
 The purpose of this study is to...\\
+This thesis presents quantitative analyses of the estimated near-Sun solar wind environment.\\
 
 % scope of the study in this thesis
 what will be addressed\\
-what not; what lies outside the scope\\
+what not; what lies outside the scope of this thesis\\
+This thesis presents bulk predictions.\\
+It does not provide predictions about the properties of internal solar wind structures, such as CIRs and CMEs.\\
+The models apply to the ecliptic, where the measurements they are derived from were made.\\
+The study does not cover regions of higher heliolatitude, away from the solar equator.\\
 
 
 
 thesis goal: finding more precise relationships between parameters/quantities for being able to make better forecasts\\
 
 
+\bigskip
 
 %Synopsis	% Outline (chapters and their content)
 I structured this document as follows: \autoref{chap:basics} lays out the fundamentals behind the problems addressed in this work. This comprises basic knowledge about the Sun, its activity and magnetic field, solar wind, space weather, magnetosphere, geomagnetic activity and forecast methods. \autoref{chap:data} describes those instrumentation and data sources on which the studies in the subsequent chapters are based on. \autoref{chap:chapter2} presents the analyses performed on the solar wind's magnetospheric influence, with focus on predicting the \Kp~index from the solar wind electric field and from the velocities of CMEs and streams. \autoref{chap:empirical_solar_wind_model_for_the_inner_heliosphere} is followed by the published article on the same topic, integrated as \autoref{chap:solar_wind_predictions_for_the_parker_solar_probe_orbit} into this document. These chapters develop an empirical solar wind model for the inner heliosphere and use it to estimate the near-Sun solar wind environment of the PSP mission underway. The model comprises the solar wind parameters magnetic field strength, proton velocity, density, and temperature. Further, an alternative magnetic field model is outlined, which exhibits a solar distance dependency based on Parker's magnetic field formulation. Eventually, \autoref{chap:summary} offers a summary of the results and gives an outlook on ideas for further studies. The subsequent \autoref{chap:appendix} contains helpful information and theory about some more specific topics.

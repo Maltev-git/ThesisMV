@@ -18,7 +18,7 @@ In the following, I introduce both topics separately. First, I lead into the sub
 % chapter2: Kp estimate from sw
 
 % 1) contextualizing background information
-The Sun emits a continuous flow of magnetized plasma into space, which consists of electrons and ions (mainly protons). This solar wind fills the interplanetary space and interacts with the solar system bodies and their magnetic fields. Since the early 19th~century it is known that variations in the solar wind evoke disturbances in the terrestrial magnetosphere \citep{Bartels1962}.
+The Sun emits a continuous flow of magnetized plasma into space, which mainly consists of electrons and protons. This solar wind fills the interplanetary space and interacts with the solar system bodies and their magnetic fields. Since the early 19th~century it is known that variations in the solar wind evoke disturbances in the terrestrial magnetosphere \citep{Bartels1962}.
 
 % CMEs
 Especially strong disturbances, called geomagnetic storms, can be provoked by coronal mass ejections (CMEs). CMEs consist of magnetically structured coronal plasma that is shot into the ambient solar wind by rearrangements in the configuration of the solar magnetic field. Their impact on the magnetosphere can be much stronger than that of the ambient solar wind streams, because their properties, such as magnetic field strength and velocity, are able to be more extreme -- sometimes even many times higher.
@@ -30,71 +30,60 @@ The effects of geomagnetic storms are a threat to sensitive technical systems an
 % what is well known
 It is well known from in-situ measurements, that variations in specific solar wind quantities, such as magnetic field and velocity, lead to direct responses in geomagnetic activity. The coupling mechanisms between solar wind and magnetosphere have been identified and modeled extensively, resulting in a variety of coupling functions linking solar wind parameters to indicators of geomagnetic activity. These coupling functions are the basis for models that predict geomagnetic activity from solar wind input parameters. Thus, with the solar wind conditions known in front of the magnetosphere, the geomagnetic response can be predicted fairly well.
 
-The solar wind is continuously monitored in~situ by spacecraft located in front of the magnetosphere. Operational services use these solar wind real-time measurements for providing nowcasts of geomagnetic activity.\\
+The solar wind is continuously monitored in~situ by spacecraft located in front of the magnetosphere. Operational space weather services use these solar wind real-time measurements for providing nowcasts of geomagnetic activity.\\
 
 % 2) problem statement
 The monitoring spacecraft are located at the first Lagrange point (L1) -- from Earth about one-hundredth the way in direction of the Sun.
-From there it takes the solar wind plasma a few tens of minutes to reach the magnetosphere. This lead time is quite short in comparison to the travel time from Sun to Earth, which is 3 to 4~days for ambient solar wind streams and goes down to one day for extremely fast CMEs.\\
+From there it takes the solar wind plasma a few tens of minutes to reach the magnetosphere. This lead time is quite short in comparison to the travel time from Sun to Earth, which is three to four days for ambient solar wind streams and goes down to one day for extremely fast CMEs.
 
+In order to exploit this extended lead time, some information about CMEs and solar wind streams can be acquired from remote observations provided by solar imagers and coronagraphs. The velocity is one of the few remotely acquirable quantities which is to a certain degree reliably forecastable.
 
-
-
-In order to exploit the extended lead time from remote observations...\\
-
-
-CMEs and streams can be observed remotely via solar imagers and coronagraph observations, thus, some information about these features can be acquired when they are still close to the Sun.\\
-
-
-These nowcast services -- derived from in-situ measurements -- reach a high prediction accuracy, however, for remote forecast situations the specific solar wind parameters cannot readily be obtained.\\
-
-
-the only acquirable quantity is the velocity\\
-
+Space weather nowcast services reach a high prediction accuracy by using in-situ measurements from L1, however, for remote forecast situations the methods used by nowcast services are not effective, because not all solar wind parameters necessary for geomagnetic activity forecasts can readily be obtained.\\
 
 % 3) response to the problem
+This study addresses this problem in that it quantifies the geomagnetic response for remote forecast situations, when only the velocity information from CMEs or ambient solar wind is available.
+The present study relates the planetary geomagnetic disturbance indicator \Kp{} with velocity measurements made ahead of the Earth's magnetosphere. In view of the differences between the velocity prediction methods applied for CMEs and streams, I derive separate relations for CME-associated flows and for solar wind streams.\\
 
-This work aims to quantify this response for the different solar wind forecast situations.\\
-For when magnetic field and velocity information is available and for when only velocity information is available and it is known whether it is ambient solar wind or a CME event.\\
-The present study adds more empirical \Kp{} relations -- for the cases when only the solar wind velocity $v$ or its electric field \vBz{} are known.\\
-
-unique to this study is the use of high resolution solar wind data, where usually hourly or 3"~hourly averages are taken\\
-this enhances the correlations significantly\\
-
+Solar wind analyses in conjunction with \Kp{} commonly employ averaged solar wind data, even though the \Kp~index represents the value of the maximal geomagnetic disturbance per 3"~hour interval and not its average. Thus, a unique approach in the present study is the use of extreme values derived from high resolution solar wind data. This method is expected to result in significantly enhanced correlations between \Kp~index and solar wind data. Here this approach is tested for the case of the solar wind electric field, which represents one of the most prominent coupling functions.\\
 
 % purpose statement
-The purpose of this study is to...\\
-provide ...\\
-
+The purpose of this study is to provide empirical \Kp{} relations that can be utilized in specific forecast situations when only the remotely estimated velocity of CMEs or streams is known.
+The study further shows the impact of the way the solar wind data is processed by means of the electric field relation to \Kp{}.\\
 
 % scope of this study in the thesis
-what will be addressed\\
-what not; what lies outside the scope of this thesis\\
-This thesis presents quantitative analyses of the solar wind impact strengh on the terrestrial magnetosphere.\\
-It does not provide further scientific insight into the underlying physical coupling processes.\\
-It is focused on planetary disturbances in the geomagnetic field.\\
-It does not analyze the variations in the different subsystems of the magnetosphere nor does it analyze local disturbances.\\
+This work presents quantitative analyses of the solar wind impact strengh on the terrestrial magnetosphere. It does not provide further scientific insight into the underlying physical coupling processes.
+The work is focused on planetary disturbances in the geomagnetic field. Analyses of local disturbances or of the variations in the different subsystems of the magnetosphere lie outside the scope of this thesis.\\
 
-
+% what will be addressed\\
+% what not; what lies outside the scope of this thesis\\
 
 \bigskip
 
 % chapterPSP: sw estimate from Helios
-
-This is the introduction into the second part of this work.\\
-
+The second topic of this thesis is introduced in the following.
 % 1) contextualizing background information
+\citet{Parker1958} was the first who formulated the theoretical model of an expanding isothermal solar atmosphere that describes a continuous supersonic radial outflow of magnetized plasma. The existence of this solar wind was subsequently confirmed from in-situ measurements made by the first satellites in 1959. Since then solar wind measurements were made almost continuously by various spacecraft located near Earth.
+
+Solar wind is measured throughout the heliosphere -- the two Voyager probes tracked it from Earth to the heliopause; the Ulysses spacecraft measured it at high heliolatitudes; and the two Helios spacecraft probed it down to the solar distance of Mercury.\\
+
+However, the closer regions to the Sun remain unexplored, although they are of particular interest.\\
+They are believed to hold the answers to the open key questions which mechanisms heat the corona and accelerate the solar wind.\\
+
+It has long been an idea to send a probe to this region. The Parker Solar Probe (PSP) mission is intended to clarify this.\\
+
+PSP will fly within about nine solar radii of the solar surface.\\
 
 
 % 2) problem statement
-Open key questions are which mechanisms heat the corona and accelerate the solar wind.\\
-The PSP mission is intended to clarify this.\\
-As it is the first spacecraft to fly through the corona and that close to the Sun, the solar wind environment there is not known yet.\\
+PSP is the first spacecraft to fly through the corona and that close to the Sun. Thus, the solar wind environment there is not known yet.\\
 
 % 3) response to the problem
+This study addresses this problem in that it predicts the solar wind environment for the PSP orbit.\\
 
-This work derives estimates of that solar wind environment.\\
+This work derives estimates of the key solar wind parameters magnetic field strength, proton velocity, density, and temperature.\\
 
 by back-extrapolating Helios solar wind data\\
+and relating the solar wind parameters to the sunspot number\\
 
 
 

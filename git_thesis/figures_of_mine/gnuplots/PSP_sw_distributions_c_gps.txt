@@ -1,0 +1,146 @@
+set terminal pdfcairo enhanced font "arial,12" fontscale 0.5 lw 1 size 8.8cm,6.6cm rounded
+set output "PSP_sw_distributions_c.pdf"
+
+####--  Data files  --####
+datafileB = "../data/OMNI2_H0_MRG1HR_19630101-20161231_2330_all53_yearly_frequencies_B05.txt"
+
+####--  Constants  --####
+binSizeB = 0.5
+dataCountB = 349870.0	#data with value count
+
+####--  Variables and functions  --####
+au = 149597870.700	#km
+
+# square-root power-law function
+aa_med = 3.833
+e_b = -1.858
+e_b2 = -1.32
+med(r) = aa_med * ((r**e_b)**2.0 + (r**e_b2)**2.0)**0.5
+median_new(ssn,r) = (a_med * ssn + b_med) / sqrt(2.0) * ((r**e_b)**2.0 + (r**e_b2)**2.0)**0.5
+
+#### lognormal distribution
+sigma = 0.4125
+mu = 1.7337
+W(x) = 1 / (sqrt(2.0 * pi) * sigma * x) * exp(-(log(x) - mu)**2.0 / (2.0 * sigma**2.0))
+median = exp(mu)
+mean = exp(mu + (sigma**2.0 / 2.0))
+mode = exp(mu - sigma**2.0)
+stddev = exp(sigma)	#geometric stdev
+#stddev = mean * (exp(sigma**2.0) - 1)	#arithmetic stdev
+
+#error calculation
+sigma_err = 0.0023
+mu_err = 0.0028
+W_(x) = 1 / (sqrt(2.0 * pi) * sigma * x) * exp(-(-log(x) + mu)**2.0 / (2.0 * sigma**2.0))
+dWdsigma(x) = W_(x) * (mu**2.0 - sigma**2.0 - 2.0*mu*log(x) + (log(x))**2.0) / sigma**3.0
+dWdmu(x) = W_(x) * (log(x) - mu) / sigma**2.0
+W_err(x) = 0.0*sqrt((dWdsigma(x) * sigma_err)**2.0 + (dWdmu(x) * mu_err)**2.0)
+
+MAE_B = 5.51e-4
+
+#variable function
+W3(x,x_med,x_avg) = 1.0 / (2.0 * x * sqrt(pi * log(x_avg / x_med))) * exp(-(log(x / x_med))**2.0 / (4.0 * log(x_avg / x_med)))
+
+
+####--  Styles  --####
+set style line 1 lt 1 lw 1 lc rgb "white"
+set style line 2 lt 1 lw 1 lc rgb "light-red"
+set style line 3 lt 1 lw 1 lc rgb "web-green"
+set style line 4 lt 1 lw 1 lc rgb "web-blue"
+set style line 5 lt 1 lw 1 lc rgb "yellow"
+set style line 6 lt 1 lw 1 lc rgb "brown"
+set style line 7 lt 1 lw 1 lc rgb "light-blue"
+set style line 8 lt 1 lw 1 lc rgb "dark-blue"
+set style line 9 lt 1 lw 1 lc rgb "dark-violet"
+set style line 10 lt 1 lw 1 lc rgb "black"
+set style line 11 lt 1 lw 1 lc rgb "grey"
+set style line 12 lt 1 lw 1 lc rgb "grey50"
+
+set style fill solid border lc rgb "black"
+set style textbox opaque noborder
+
+set multiplot\
+	layout 1,1\
+	margins 0.125,0.97,0.115,0.997\
+	spacing 0,0
+# #############
+# lm = 0.058	#left margin
+# rm = 0.93
+# bm = 0.038
+# tm = 0.99
+# spx = 0.15	#spacing x
+# spy = 0.07	#spacing y
+# pw = (rm - lm - spx)/4.0	#panel width
+# rmi = lm + 2*pw	#inner position
+# lmi = lm + spx + 2*pw	#inner position
+# ph = (tm - bm - spy)/2.0	#panel height
+# mgapt = bm + ph + spy
+# mgapb = bm + ph
+# #############
+
+set key reverse Left box opaque
+set key right top
+set key font ",11"
+set key samplen 1
+unset key
+
+set border 3
+set xtics nomirror
+set ytics nomirror
+
+
+set grid back
+set tics scale 0.5
+set xtics offset 0,0.3
+set ytics offset 0.3,0
+
+set ylabel "Frequency" offset 2,0
+
+####--  plot  --####
+
+####--  B-field  --####
+sigma = 0.4125
+mu = 1.7337
+sigma_err = 0.0023
+mu_err = 0.0028
+
+earth_median = 5.661
+earth_average = 6.164
+first_median = 87.0
+first_average = 94.6473
+nearest_median = 943.0
+nearest_average = 1025.8897
+first_median_new = 94.0
+first_average_new = 102.2626
+nearest_median_new = 1241.0
+nearest_average_new = 1350.0839
+
+
+set xlabel "Magnetic field [nT]" offset 0,0.7
+Ax = 1e4
+Ay = 0.13
+set xrange [0.7:Ax]; set yrange [0:Ay]
+set xtics 0.1
+#set xtics add("" Ax)
+set ytics add("" Ay)
+set log x
+set format x "10^%T"
+set xtics add("1^ " 1,"10^ " 10)
+min = 1e-5
+set key vertical maxrows 2
+#set key at 1e4,Ay
+set key width -3.3
+set key height +0.2
+plot\
+	datafileB index 0 using 3:($2/dataCountB) with fillsteps title "OMNI data" ls 11 lw 1,\
+	datafileB index 0 using 3:($2/dataCountB) with steps notitle ls 10 lw 1,\
+	W(x)*binSizeB<min?NaN:W(x)*binSizeB with lines title "OMNI fit (paper)" ls 4 lw 2,\
+	W3(x,first_median_new,first_average_new)*binSizeB*first_median_new/earth_median<min?NaN:W3(x,first_median_new,first_average_new)*binSizeB*first_median_new/earth_median with lines title "1st perihelion" ls 10 lw 2,\
+	W3(x,first_median,first_average)*binSizeB*first_median/earth_median<min?NaN:W3(x,first_median,first_average)*binSizeB*first_median/earth_median with lines title "1st (paper)" ls 10 lw 2 dt 3,\
+	W3(x,nearest_median_new,nearest_average_new)*binSizeB*nearest_median_new/earth_median<min?NaN:W3(x,nearest_median_new,nearest_average_new)*binSizeB*nearest_median_new/earth_median with lines title "22nd perihelion" ls 2 lw 2,\
+	W3(x,nearest_median,nearest_average)*binSizeB*nearest_median/earth_median<min?NaN:W3(x,nearest_median,nearest_average)*binSizeB*nearest_median/earth_median with lines title "22nd (paper)" ls 2 lw 2 dt 3,\
+	NaN notitle
+# 	W3(x,first_median,first_average)*binSizeB with lines title "Lognormal fit" ls 10 lw 2,\
+# 	W3(x,nearest_median,nearest_average)*binSizeB with lines title "Lognormal fit" ls 12 lw 2,\
+
+

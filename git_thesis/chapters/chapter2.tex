@@ -3,49 +3,36 @@
 \label{chap:chapter2}
 
 %context
-Variations in the Earth's magnetosphere are largely evoked by influence through the solar wind. These magnetospheric disturbances have diverse effects on the terrestrial environment. Especially the effects of severe geomagnetic storms created by coronal mass ejections (CMEs) pose various threats to sensitive technical systems and exposed humans. Thus, the development of quantitative forecasts for magnetospheric impacts caused by solar wind and CMEs is of major importance. The analyses in this chapter are based on my work done for the EU~FP7 project Advanced Forecast For Ensuring Communications Through Space (AFFECTS).
+Variations in the Earth's magnetosphere are largely evoked by influence through the solar wind. These magnetospheric disturbances have diverse effects on the terrestrial environment. Especially the effects of severe geomagnetic storms created by coronal mass ejections (CMEs) pose various threats to sensitive technical systems and exposed humans. Thus, the development of quantitative forecasts for magnetospheric impacts caused by solar wind and CMEs is of major importance.
+
+The analyses in this chapter are based on my work done for the EU~FP7 project Advanced Forecast For Ensuring Communications Through Space (AFFECTS).
 
 %aims
-The goals of this study are to estimate the magnetospheric impact from solar wind and also to predict it for remotely forecasted CMEs and streams in particular. Empirical dependencies between the solar wind and the magnetospheric disturbance index~\Kp{} are presented. These relations allow nowcasts from upstream (L1) solar wind in-situ measurements and allow forecasts from remote observations of the corona. The \Kp{} nowcast is derived via a relation with the solar wind electric field. The \Kp{} forecasts are based on solar wind velocity and split into CME and stream forecasts. The magnetospheric impact of CMEs is estimated solely based on their arrival velocities that may be predicted from coronagraph observations. The prediction of solar wind stream velocities, e.g., obtained from coronal hole observations, enables to estimate their impact as well.
+The goals of this study are to estimate the magnetospheric impact from solar wind and also to predict it for remotely forecasted CMEs and streams in particular. Empirical dependencies between the solar wind and the magnetospheric disturbance index~\Kp{} are presented. These relations allow nowcasts from upstream solar wind in-situ measurements and allow forecasts from remote observations of the corona. The \Kp{} nowcast is derived via a relation with the solar wind electric field. The \Kp{} forecasts are based on solar wind velocity and split into CME and stream forecasts. The magnetospheric impact of CMEs is estimated solely based on their arrival velocities which can be predicted from coronagraph observations. The prediction of solar wind stream velocities, e.g., obtained from coronal hole observations, enables to estimate their impact as well.
 
 % data
-The solar wind data considered in these analyses consists of 35~years (1981--2016) of high-resolution minutely OMNI data, which is composed of multi-spacecraft intercalibrated in-situ measurements from \SI{1}{\au}. I analyze the \Kp{} frequency distributions with respect to the depending parameters E"~field and velocity, derive their mean \Kp{} values and further compile functional dependencies via logarithmic fitting.
+The solar wind data considered in these analyses consists of 35~years (1981--2016) of high-resolution minutely OMNI data, which is composed of multi-spacecraft intercalibrated in-situ measurements from \SI{1}{\au}. I analyze the \Kp{} frequency distributions with respect to the depending parameters electric field and velocity and compile functional dependencies via logarithmic fitting.
 
 %methods
-In order to nowcast the \Kp~index from general solar wind conditions, I apply a correlation with the solar wind electric field -- the product of the parameters velocity and magnetic field z-component in GSM coordinates: $E = v B_\text{z}$. A suitable logarithmic function is constructed and its fit to the data results in a functional relation between E"~field and \Kp{}. For the purpose of forecasting the \Kp~index from estimated CME and stream velocities, I furthermore filter the solar wind data, using flagged CME times from the solar wind structures (SWS) list provided by \citet{Richardson2012}. Logarithmic fits to the data yield in separate \Kp{} relations for CMEs and streams.
+In order to nowcast the \Kp~index from general solar wind conditions, I apply a correlation with the solar wind electric field -- the product of the parameters velocity and magnetic field z-component in GSM coordinates: $E = - v B_\text{z}$. The solar wind data processing of 3"~hour extreme values is evaluated against averaging via the correlation with \Kp{}. A suitable logarithmic function is constructed and its fit to the data results in a functional relation between E"~field and \Kp{}.
 
-I evaluate the relations' prediction performance by analyzing their forecast errors and comparing their true skill statistic.
+Remote solar observations provide enhanced forecast lead times for CMEs and for streams, however, this benefit comes with major limitations on the predicted magnetic field and plasma parameters. The velocity and the direction of CMEs can still be determined in their early near-Sun stages via remote tracking with coronagraph white-light observations. Using these parameters as input for CME propagation models, their possible arrival time and arrival velocity at Earth can be derived, see \autoref{sec:solar_wind_nowcast_and_forecast_to_earth}. Similarly, the Earth arrival time and velocity of solar wind streams can be estimated remotely. Images of the solar surface and the corona reveal the distinct sources of solar wind and indicate the emitted type of solar wind and its properties.
 
-%results
-As the obtained functional relations are simple, they cannot compete with current models based on artificial neural networks, \Kp{} persistence, or full-fledged solar wind coupling functions. However, they enable empirical estimations of the mean \Kp{} impact for special forecast situations, that is, \Kp{} can directly be quantified from measured solar activity, in-situ solar wind, and remotely determined CME and stream velocities.
+For the purpose of forecasting the \Kp~index from estimated CME and stream velocities, I furthermore filter the solar wind data, using flagged CME times from the solar wind structures (SWS) list provided by \citet{Richardson2012}. Logarithmic fits to the data yield in separate \Kp{} relations for CMEs and streams.
 
-%conclusions
-
-%results
-With the results presented in this chapter, I elaborate the step from solar wind properties at Earth to the forecast of the possible impact strength on the terrestrial magnetosphere. I derive empirical correlations and functional dependencies between solar wind properties and the geomagnetic \Kp~index, in order to obtain the capability to nowcast/forecast \Kp{} values.
-
-Remote solar observations provide enhanced forecast lead times of CMEs and streams, however, the benefit comes with major limitations on the predicted magnetic field and plasma parameters.
-%CME velocity forecast
-The velocity and the direction of CMEs can still be determined in their early near-Sun stages via remote tracking with coronagraph white-light observations. Using these parameters as input for CME propagation models, their possible arrival time and arrival velocity at Earth can be derived, see \autoref{sec:solar_wind_nowcast_and_forecast_to_earth}.
-% stream velocity forecast
-Similarly, the Earth arrival time and velocity of solar wind streams can be estimated remotely. Images of the solar surface and the corona reveal the distinct sources of solar wind and indicate the emitted type of solar wind and its properties.\\
+Eventually, I evaluate the prediction performances of the derived relations by analyzing their forecast errors and comparing their true skill statistic.\\
 
 %%% synopsis
-The objectives of the analyses performed and presented in this chapter are to estimate the magnetospheric impact of solar wind and to predict it for CMEs and streams in particular. In \autoref{sec:long_term_variations} I determine the magnitudes of the long-term \Kp{} changes due to solar activity and measure the extent of seasonal variations stemming from the Earth's orbit. In order to nowcast the \Kp{}~index, I quantify the solar wind influence on \Kp{} by deriving a functional relation with the solar wind E"~field in \autoref{sec:relation_between_sw_efield_and_kp}. For the purpose of enabling \Kp{} forecasts from remote observations, I estimate the \Kp{} impact coming from CMEs and streams separately by deriving functional dependencies with their velocities in \autoref{sec:relations_between_cme_stream_v_and_kp}. Finally, the obtained \Kp{} relations are evaluated for their prediction performance in \autoref{sec:prediction_performance}. At the end of this chapter, the results are further discussed, applications are highlighted, and a short outlook is given.
+The objectives of the analyses performed and presented in this chapter are to estimate the geomagnetic impact of solar wind and to predict it for CMEs and streams in particular. The analyses are ordered as follows: In \autoref{sec:long_term_variations} I determine the magnitudes of the long-term \Kp{} changes due to solar activity and measure the extent of seasonal variations stemming from the Earth's orbit. In \autoref{sec:relation_between_sw_efield_and_kp} in order to nowcast the \Kp{}~index, I quantify the solar wind influence on \Kp{} by deriving a functional relation with the solar wind E"~field. In \autoref{sec:relations_between_cme_stream_v_and_kp} for the purpose of enabling \Kp{} forecasts from remote observations, I estimate the \Kp{} impact coming from CMEs and streams separately by deriving functional dependencies with their velocities. Finally in \autoref{sec:prediction_performance}, the obtained \Kp{} relations are evaluated for their prediction performance. At the end of this chapter, the results are further discussed, and applications are highlighted.
 
 
 \section{The \Kp{}~index and its long-term variations}
 \label{sec:long_term_variations}
 
-% intro
-As magnetospheric activity is driven by the approaching solar wind, it also reflects the solar wind's long-term variations. The long-term variations of \Kp{} originate from the change in solar activity and the changes due to the Earth's orbit around the Sun. Here the influence of both effects is quantified.\\
-
-I estimate the long-term variations of the \Kp~index which are contributed by solar activity and seasonal effects. A functional dependency of the average yearly \Kp~index on the yearly sunspot number (SSN) is derived.\\
-
 % data
-\Kp{} is designed to measure solar particle radiation by its magnetic effects. I use this magnetospheric disturbance index to correlate it with near-Earth solar wind measurements. More detailed information on the \Kp{}~index can be found in \autoref{sec:kp_index}.\\
+The \Kp~index is designed to measure solar particle radiation by its magnetic effects. I use this magnetospheric disturbance index to correlate it with near-Earth solar wind measurements. More detailed information on the \Kp{}~index can be found in \autoref{sec:kp_index}.
 
-The \Kp{} data is obtained from the GFZ~Potsdam, where the index is currently maintained\footnote{GFZ~Potsdam \Kp~index website: \urlfoot{http://www.gfz-potsdam.de/en/kp-index/}}. The data used in this analysis covers the time period 1932--2016, see also \autoref{sec:kp_data}. Its frequency distribution shows that the highest frequencies occur around low \Kp{} values of 1+, see \autoref{fig:Kp_histogram_b}. Going to higher \Kp{} values, the frequencies decline asymptotically towards zero -- a \Kp{} value of 9o occurred only 29 times in this time interval.\\
+The \Kp{} data is obtained from the GFZ~Potsdam, where the index is currently maintained\footnote{GFZ~Potsdam \Kp~index website: \urlfoot{http://www.gfz-potsdam.de/en/kp-index/}}. It covers the time period 1932--2016, see also \autoref{sec:kp_data}. Its frequency distribution shows that the highest frequencies occur around low \Kp{} values of 1+, see \autoref{fig:Kp_histogram_b}. Going to higher \Kp{} values, the frequencies decline asymptotically towards zero -- a \Kp{} value of 9o occurred only 29 times in this time interval.\\
 \begin{figure}[htb]
 	\begin{floatrow}
 		\ffigbox{
@@ -63,12 +50,13 @@ The \Kp{} data is obtained from the GFZ~Potsdam, where the index is currently ma
 	\end{floatrow}
 \end{figure}
 
+% intro
+As magnetospheric activity is driven by the approaching solar wind, it also reflects the solar wind's long-term variations. The long-term variations of \Kp{} originate from the change in solar activity and the changes due to the Earth's orbit around the Sun. In the following the influence of both effects is quantified. I estimate the long-term variations of the \Kp~index which are contributed by solar activity and seasonal effects.
+
 \subsection{Solar activity influence}
-Obviously, the general \Kp{} distribution as seen in \autoref{fig:Kp_histogram_b} averages over solar activity. Solar activity is generally tracked with the international sunspot number (SSN). SSN data from the time period 1917--2016 is used in the present analyses. The data is obtained from the International Sunspot Number Monthly Bulletin and online catalog\footnote{WDC-SILSO website: \urlfoot{http://www.sidc.be/silso/}} provided by the World Data Center -- Sunspot Index and Long-term Solar Observations (WDC-SILSO), Solar Influences Data Analysis Center (SIDC), Royal Observatory of Belgium (ROB).
+The general \Kp{} distribution seen in \autoref{fig:Kp_histogram_b} averages over solar activity. Solar activity is generally tracked with the international sunspot number (SSN). A functional dependency of the average yearly \Kp~index on the yearly SSN is derived. SSN data from the time period 1917--2016 is used in the present analyses. The data is obtained from the International Sunspot Number Monthly Bulletin and online catalog provided by the WDC-SILSO\footnote{WDC-SILSO website: \urlfoot{http://www.sidc.be/silso/}} at the SIDC (ROB).
 
-The \Kp{} frequency distributions' shape varies with solar activity (cite?). This is visible in the yearly distributions, sorted and colored by yearly SSN in \autoref{fig:Kp_histogram_yearlySSN_b}.
-
-The distribution's peak position scales with SSN, that is, a high yearly SSN results in a higher abundance of large \Kp{} values as well (cite?).
+The \Kp{} frequency distributions' shape varies with solar activity as is visible in the yearly distributions, sorted and colored by yearly SSN in \autoref{fig:Kp_histogram_yearlySSN_b}. The distribution's peak position scales with SSN, that is, a high yearly SSN results in a higher abundance of large \Kp{} values as well.
 
 The time series of yearly average \Kp{} values from the years 1932--2016 shows a solar cycle imprint, see the top graphs in \autoref{fig:yearly_kp-ssn_correlation_c}.
 \begin{figure}
@@ -98,7 +86,7 @@ In order to obtain an analytical relation for this dependency, I perform a least
 The resulting fit parameters are $a = 0.281(43)$ and $b = 1.05(19)$; the numbers in parentheses are the estimated standard deviations.
 They lead to the relation
 \begin{align}
-	\Kp(ssn) = 0.28 \cdot \ln(ssn) + 1.1	\,,	\label{eq:kp_ssn_relation}
+	\Kp(ssn) = 0.281 \cdot \ln(ssn) + 1.05	\,,	\label{eq:kp_ssn_relation}
 \end{align}
 % log fit parameters:
 % a 0.281126         +/- 0.04267
@@ -112,7 +100,7 @@ which is plotted in \autoref{fig:Kp_SSN_fit_d}. This means that for an average y
 % 200	2.5387	0.295
 % 300	2.6527	0.308
 
-This relation is a practical resource for estimating the yearly average \Kp~index from the last year's average SSN. In 2017 the yearly SSN was \num{21.7(25)} -- applying this into the relation gives an average \Kp{} of \num{1.91} for 2018.
+This relation is a practical resource for estimating the yearly average \Kp~index from the last year's average SSN. In 2017 the yearly SSN was \num{21.7} -- applying this into the relation gives an average \Kp{} of \num{1.91} for the year 2018.
 
 \subsection{Seasonal variations}
 On top of the yearly variations, seasonal variations exist in the magnetospheric disturbances as well. In the months May--August the \Kp{} peak frequency is higher than in the remaining months of the year, whereas in March/April and September/October \Kp{} values larger than 3 are more abundant. This is apparent from looking at the monthly \Kp{} frequency distributions plotted in \autoref{fig:Kp_histogram_monthly}.
@@ -134,60 +122,51 @@ On top of the yearly variations, seasonal variations exist in the magnetospheric
 \end{figure}
 These \Kp{} changes arise from seasonal variations of the solar wind parameters at Earth, which stem from Earth's yearly changes in orbital distance and heliographic latitude. The Earth's rotation axis tilt adds another seasonal effect, the tilt changes the direction of the Earth's magnetic dipole axis to the Sun during the year.
 
-Earth's distance to the Sun varies over the course of a year by \SI{+-1.67}{\percent}, see Appendix~\ref{sec:sun_earth_orbit_geometry}. The solar wind parameters scale via power-law dependencies with solar distance, as it is described in the following \autoref{chap:empirical_solar_wind_model_for_the_inner_heliosphere} and accordingly in \citet{Venzmer2018}. For example, the solar wind proton density scales with about $r^{-2}$, this leads to a yearly variation in density of about \SI{6.7}{\percent}. These yearly solar wind variations have direct influence on the \Kp{}~index.
+Earth's distance to the Sun varies over the course of a year by \SI{+-1.67}{\percent}, see Appendix~\ref{sec:sun_earth_orbit_geometry}. The solar wind parameters scale via power-law dependencies with solar distance, as it is described in \autoref{chap:empirical_solar_wind_model_for_the_inner_heliosphere} and accordingly in \citet{Venzmer2018}. For example, the solar wind proton density scales with a solar distance exponent of about $-2$, this leads to a yearly variation in density of about \SI{6.7}{\percent}. These yearly variations of the solar wind have direct influence on the \Kp{}~index.
 
-The Sun's rotation axis tilt angle to the ecliptic is \SI{+-7.25}{\degree} and that for Earth is \SI{+-23.44}{\degree}, see also Appendix~\ref{sec:sun_earth_orbit_geometry}. The solar wind magnetic field strength varies with heliographic latitude (cite?). The solar wind influence on the \Kp{}~index depends on its coupling efficiency with the magnetosphere. Furthermore, the rate of magnetic reconnection between solar wind and the Earth's magnetosphere depends on both fields' orientation to each other (parallel/antiparallel). Additionally, the tilt of the magnetic dipole axis to the rotation axis -- only a few degrees for the Sun during cycle minima and extreme during solar maxima; and about \SI{10}{\degree} for the Earth -- complicates this system even more.
+The solar wind influence on the \Kp{}~index depends on its coupling efficiency with the magnetosphere. The rate of magnetic reconnection between solar wind and the Earth's magnetosphere depends on both fields' orientation to each other (parallel/antiparallel). The Sun's rotation axis tilt angle to the ecliptic is \SI{+-7.25}{\degree} and that for Earth is \SI{+-23.44}{\degree}, see also Appendix~\ref{sec:sun_earth_orbit_geometry}. First, the solar wind type composition varies with heliographic latitude, which has consequences for the average values of parameters, such as magnetic field strength and velocity. Second, the tilt of the magnetic dipole axis to the rotation axis -- only a few degrees for the Sun during cycle minima and extreme during solar maxima; and around \SI{10}{\degree} for the Earth -- complicates this system even more.
 %geomagnetic dipole tilt: Planetary fact sheet: 11.2 (Model GSFC-12/83)
 %variation range in the time period 1930--2016: 9.6--11.5° (http://wdc.kugi.kyoto-u.ac.jp/poles/polesexp.html)
 
-So the \Kp{} variation effects originate from the seasonal change in the solar tilt, the Earth's tilt, and the Earth's solar distance. Thorough analyses of the seasonal variations were already early performed by \citet{Cortie1912} (more cites?). Thus, I just quantify the bulk magnitude of these effects in order to consider them as relative uncertainties when using the solar activity relation (\ref{eq:kp_ssn_relation}). Looking at the \Kp{} frequency distributions by month -- seen in \autoref{fig:Kp_seasonal_e} -- it is apparent that for high values ($\Kp{} > 4$), there exist yearly frequency maxima at the equinoxes and frequency minima at the solstices, as was early described by \citet{Cortie1912}. It is evident from the plotted quantiles that this semiannual variation amounts to $1/3$~\Kp~unit at small \Kp~values and up to 4/3~\Kp~units at higher \Kp~values.
+So the \Kp{} variation effects originate from the seasonal change in the solar tilt, the Earth's tilt, and the Earth's solar distance. Thorough analyses of the seasonal variations were already early performed by \citet{Cortie1912} and many others thereafter. Thus, I just assess the bulk magnitude of these effects in order to consider them as relative uncertainties for the solar activity relation (\ref{eq:kp_ssn_relation}). Looking at the \Kp{} frequency distributions by month -- seen in \autoref{fig:Kp_seasonal_e} -- it is apparent that for values ($\Kp{} > 2$), there exist yearly frequency maxima at the equinoxes and frequency minima at the solstices, as was early described by \citet{Cortie1912}. It is evident from the plotted quantiles that this semiannual variation amounts to $1/3$~\Kp~unit for the median \Kp{} and goes up to 4/3~\Kp~units for the rare higher \Kp~values.
 
 
 \section{Relation between solar wind electric field and \Kp~index}
 \label{sec:relation_between_sw_efield_and_kp}
 
-\Kp{} nowcast from in-situ solar wind measurements at L1. Real-time solar wind make reliable measurements of all solar wind parameters available. It has a short lead-time and can therefore provide a nowcast.\\
+The coupling between the solar wind and the magnetosphere is governed by reconnection and compression of the magnetic field lines, as described in \autoref{sec:solar_wind_coupling_mechanisms}. There exist quite a few coupling functions that are intended to approximate thease processes in relating solar wind quantities with geomagnetic activity, see \autoref{sec:coupling_functions}. In this section I settle and work with the solar wind electric field as the coupling function for the purpose of nowcasting the \Kp~index.
 
-The coupling between the solar wind and the magnetosphere is governed by reconnection and compression of the magnetic field lines, as described in \autoref{sec:solar_wind_coupling_mechanisms}. There exist quite a few coupling functions relating solar wind quantities with geomagnetic activity, see \autoref{sec:coupling_functions}. However, in this work I settle and work with the solar wind electric field as the coupling function. The reasons for using the electric field are that it is a simple coupling function and still reaches a high correlation...\\
-
-% electric field
-see \autoref{eq:coupling_vxBz}\\
-
-The solar wind electric field y"~component $E_\text{y}$ approximates $\vect{E}$ under special circumstances, see derivation in \autoref{sec:electric_field_at_the_magnetopause}. It is the product of the radial proton velocity $v_\text{x}$ and the magnetic field z"~component $B_\text{z}$:
+The electric field $\vect{E}$ approximates the solar wind's magnetic flux rate in z"~direction, see \autoref{sec:coupling_functions}. The solar wind electric field y"~component $E_\text{y}$ approximates under special circumstances, see the derivation in \autoref{sec:electric_field_at_the_magnetopause}. $E_\text{y}$ is the product of the radial proton velocity $v_\text{x}$ and the magnetic field z"~component $B_\text{z}$ in GSM coordinates:
 \begin{align}
-	E_\text{y} = -v_\text{x} \, B_\text{z}\,.
+	E_\text{y} = -v_\text{x} \cdot B_\text{z}\,.
 \end{align}
-If not specified otherwise, $B_\text{z}$ is always meant to be in GSM coordinates hereafter.\\
+In the following analysis, the negative electric field proxy \vBz{} is applied, where the vector component $v_\text{x}$ is approximated by the absolute flow speed $v$.
 
+% The solar wind velocity sticks mostly to its radial flow direction, that is, it rarely deviates up to \SI{0.0}{\degree} (correct and cite...).
 
-%velocity relation
-The solar wind velocity sticks mostly to its radial flow direction, that is, it rarely deviates up to \SI{0.0}{\degree} (correct and cite...). Thus, the absolute flow speed $v$ can be used instead of the vector component.\\
-
-argue for \vBz:\\
-vs vBs vs vBT (Newell2007)\\
-large northward fields still contribute to geomagnetic activity.\\
-3hmin(\vBz) performs in rank correlation slightly better than the sophisticated Newell formula. really?\\
+argue for \vBz{}\\
+$vB_\text{s}$, large northward fields still contribute to geomagnetic activity.\\
+$vB_\text{T}$, with BT being the field magnitude in the yz"~plane \citep{Newell2007}.\\
+3hmin(\vBz) performs in correlation slightly better than the sophisticated Newell formula. really?\\
 
 
 \subsection{Data correlation}
 \label{sec:data_correlation}
-%determine data basis
-The \Kp{} time series started in 1932 when there existed no spacecraft to measure solar wind in~situ. Thus, the maximal surveyed time range is defined by the available in-situ solar wind data.\\
+\Kp{} is defined for 3"~hour time intervals and it represents the maximal variation within this period (see \autoref{sec:kp_index}). Any solar wind parameter that is to be correlated with \Kp{} also should have the same time resolution.
 
-Savani2017:\\
-``Although Kp is defined for 3 h periods, predicted variations in the IMF are made on shorter time scales and can influence the level of geomagnetic activity (e.g., geomagnetically induced currents). Hence, averaging the IMF over intervals that match those of Kp may suppress features that are important drivers of geomagnetic activity. Nevertheless, for the purpose of this paper, we choose to average the Kp estimate from the field vectors predicted by the BSS model over the same 3 h intervals as the Kp values, as this currently represents the service provided by NOAA/SWPC.''\\
+Commonly the \Kp~index is correlated with 3"~hour or 1"~hour solar wind averages \citep{Newell2007,Elliott2013,Savani2017}.
 
-Commonly the \Kp{} is estimated from 3-hour and 1-hour averages \citep{Savani2017} (more cites...).\\
+However, in addition to adapting the time resolution, it has to be considered by which means this should be done. Most IMF variations are on shorter time scales than 3~hours. Averaging the IMF over these intervals suppresses features that are important drivers of geomagnetic activity \citep{Savani2017}. Thus, the solar wind parameter's 3"~hourly extreme values are expected to have a stronger correlation with \Kp{} than the 3"~hourly averages.
 
-%argue for averaging method
-The \Kp{}~index represents maximal variations within 3-hour time intervals (see \autoref{sec:kp_index}). Any solar wind parameter that will be correlated with \Kp{}, obviously also has to have the same time resolution. In addition to adapting the time resolution, it has to be considered by which means this should be done. Simple 3-hour average values are expected to have a weaker correlation than the solar wind parameter's 3-hourly maximal variation.
-%argue for high resolution, deliberate between hourly and minutely data
-It is self-evident that the 3"~hour maximal variations are higher when using high resolution data. Thus, to be able to correlate \Kp{} with solar wind data in a proper way, high resolution data, that is, much shorter than the 3"~hour resolution, are needed to determine the maximal solar wind variations within each 3"~hour interval.\\
+To be able to correlate \Kp{} with solar wind data in a proper way, high resolution data, that is, much shorter than the 3"~hour resolution, are needed to determine the maximal solar wind variations within each 3"~hour interval.\\
 
-The OMNI data collection constitutes the longest continuous solar wind measurements made at \SI{1}{\au}. There exist two OMNI data sets with different time resolution -- the hourly version extends back to 1963 and the minutely version extends back to 1981. Although it is shorter, I choose to apply the minutely data, in order to benefit from the higher resolution. Thus, the work presented in this chapter is based on the minutely OMNI data set with a time duration spanning from 1981 until end of 2016.\\
+The \Kp{} time series started in 1932 when there existed no spacecraft to measure solar wind in~situ. Thus, the maximal surveyed time range is restricted by the available in-situ solar wind data.
 
-vBz data...\\
-The reduction to 3"~hour minimum values shifts the \vBz{} frequency distribution asymmetrically to negative values, whereas the averaged data is scattered around zero, see \autoref{fig:histogram_VBzgsm}.\\
+The OMNI data collection constitutes the longest continuous solar wind measurements made at \SI{1}{\au}. There exist two OMNI data sets with different time resolution -- the hourly version extends back to 1963 and the minutely version extends back to 1981. Although it is shorter, I choose to apply the minutely data, in order to benefit from the higher resolution as discussed below. Thus, the work presented in this chapter is based on the minutely OMNI data set with a time duration of 36~years, spanning from 1981 until end of 2016.\\
+
+The product \vBz{} is formed and the minutely solar wind data is reduced to 3"~hourly values in two ways: by calculating the averages and the minima.
+
+The reduction to 3"~hour minimum values shifts the \vBz{} frequency distribution asymmetrically to negative values, whereas the averaged data is scattered around zero, see \autoref{fig:histogram_VBzgsm}.
 \begin{figure}[htb]
 	\begin{floatrow}
 		\ffigbox{
@@ -213,11 +192,12 @@ The reduction to 3"~hour minimum values shifts the \vBz{} frequency distribution
 	\end{floatrow}
 \end{figure}
 
-The data is reduced to 3"~hour averages and 3"~hour minima in order to match the \Kp{} data resolution and evaluate the advantage of high resolution data. The \Kp{}--\vBz{} Pearson correlation coefficients for the two differently processed data versions are plotted over time shift in \autoref{fig:cc_lag_data_d_KpvsVBzgsm}. The data with 3"~hour minimum processing shows a much better correlation than the 3"~hour average data. Both curves show a negative correlation and their minima lie at a time shift of zero, with coefficients of $r_\text{min} = -0.72$ and $r_\text{avg} = -0.36$.
+The data is reduced to 3"~hourly values in order to match the \Kp{} data resolution. Both its averages and minima are used to evaluate the advantage of high resolution data by correlating them to the \Kp~index. The \Kp{}--\vBz{} Pearson correlation coefficients for the two differently processed data versions are plotted over time shift in \autoref{fig:cc_lag_data_d_KpvsVBzgsm}. The data with 3"~hour minimum processing shows a much better correlation than the 3"~hour average data. Both curves show a negative correlation and their minima lie at a time shift of zero, which is expected as the OMNI data represents the solar wind at the location of the magnetospheric bow shock. It takes the plasma only a couple of minutes to arrive at the magnetopause and influence the geomagnetic field, for example a study about the Dungey convection cycle by \citet{Zhang2015} accounts for this duration by lagging the OMNI data generally by 5~minutes. I estimate its influence for this analysis to be negligible and thus do not apply a time shift.
 
-The best correlation at the time shift of zero is expected as the OMNI data represents the solar wind at the location of the magnetospheric bow shock. It takes the plasma only a couple of minutes to arrive at the magnetopause and influence the geomagnetic field.\\
+The correlation coefficients for the minimum and average data reach values of $r_\text{min} = -0.72$ and $r_\text{avg} = -0.36$ respectively.\\
 
-Zhang2015 do with their data: ``The (OMNI) data have been lagged by 5~min to allow for propagation from the nose of bow shock to the magnetopause.''\\
+Compared with the $vB_\text{s}$ value of $-0.642$ and $vB_\text{T}$ value of $0.551$ from \citet{Newell2007}...\\
+they correlate a 6"~hour interval and weight each hour individually.\\
 
 
 \subsection{Functional dependency for solar wind electric field}
@@ -233,13 +213,13 @@ The frequency distribution in \Kp--\vBz{} space is shaped like a candle flame, i
 	}
 \end{figure}
 %dependency
-In order to determine a functional dependency, I focus on the relative frequencies per \vBz-interval and their mean \Kp{} values, which are plotted in the bottom panel of \autoref{fig:Kp_2dhistogram_VBzgsm_sws_e}. The mean absolute deviation (MAD) of the mean has a mean size of \SI{0.7}{\Kp}~units. This probability distribution is asymmetrically V-shaped around zero, having a larger and steeper negative arm than positive arm.
+In order to determine a functional dependency, I focus on the relative frequencies per \vBz-interval and their mean \Kp{} values, which are plotted in the bottom panel of \autoref{fig:Kp_2dhistogram_VBzgsm_sws_e}. This probability distribution is asymmetrically V"~shaped around zero, having a larger and steeper negative arm than positive arm. The mean absolute deviation (MAD) from the mean \Kp{} value has a mean size of \SI{0.7}{\Kp}~units.
 %MAD: 2.211/3 = 0.737 Kp units
 
-The asymmetry also exists for 3"~hour mean data, thus this effect is not a result of the data reducing method (3-hour minimum). Rather the steeper negative arm is a consequence of the asymmetric coupling of the solar wind magnetic field direction to the magnetosphere, as described in \autoref{sec:solar_wind_coupling_mechanisms}.\\
+The asymmetry also exists for 3"~hour mean data (which is not plotted), thus this effect is not a result of the data reducing method to 3"~hour minima. Rather the steeper negative arm is a consequence of the asymmetric coupling of the solar wind magnetic field direction to the magnetopause, as described in detail in \autoref{sec:solar_wind_coupling_mechanisms}.\\
 
 %determine fitting functions
-The appropriate type of function has to be constructed for the empirical fit. Since the \Kp~index has a quasi-logarithmic scaling (see \autoref{sec:kp_index}), a logarithmic function is the obvious choice as a fit function. Furthermore, the depending argument consists of a product of two solar wind parameters which individually scale logarithmically with \Kp{}. These reasons are why I use the logarithm of a parabola for the fitting approach:
+For the empirical fit an appropriate type of function has to be constructed. Since the \Kp~index has a quasi-logarithmic scaling (see \autoref{sec:kp_index}), a logarithmic function is the obvious choice as a fit function. Furthermore, the depending argument consists of a product of two solar wind parameters which individually scale logarithmically with \Kp{}. These reasons are why I use the logarithm of a parabola for the fitting approach:
 \begin{align}
 	f(x) &= \ln\left(x^2\right)	\,.	\label{eq:log_square_function}
 \end{align}
@@ -256,13 +236,19 @@ This way, both arms can be scaled individually with scaling factors for the nega
 	f_-(x) &= a_- \cdot \ln\left(\left(x + x'\right)^2 + b\right) + y'	\,,\\
 	f_+(x) &= a_+ \cdot \left(f_-(x) - f_-\left(-x'\right)\right) + f_-\left(-x'\right)	\,,
 \end{align}
-with the vertical shifting parameter $y'$ and the depth parameter $b$. The resulting fit curve is plotted in \autoref{fig:Kp_2dhistogram_VBzgsm_sws_fit_e} with the fit coefficients $a_- = 1.258(19)$, $x' = 163(20)$, $b = \num{1.416(68)e6}$, $y' = -17.04(33)$, and \mbox{$a_+ = 0.467(20)$} for units of [\si{\km\per\s \nano\tesla}].
+with the vertical shifting parameter $y'$ and the depth parameter $b$. The resulting fit coefficients are \mbox{$a_- = 1.258(19)$}, $x' = 163(20)$, $b = \num{1.416(68)e6}$, $y' = -17.04(33)$, and \mbox{$a_+ = 0.467(20)$} for units of [\si{\km\per\s \nano\tesla}].
 %high precision values:
 % a_- = 1.25788(0.019)\\
 % y' = -17.0394(0.33)\\
 % a_+ = 0.467039(0.0197)\\
 % b = 1.41639e6(0.067795e6)\\
 % x' = 162.907(20.642)\\
+Thus, the solar wind dependency relation 'condenses' to:
+\begin{align}
+	\text{\Kp}_-\left(vB_\text{z}\right) &= 1.258 \cdot \ln\left(\left(vB_\text{z} + 163\right)^2 + \num{1.416e6}\right) - 17.04	\,,	\label{eq:kpvsvbz_dependency_function_negative}\\
+	\text{\Kp}_+\left(vB_\text{z}\right) &= 0.467 \cdot \left(\text{\Kp}_-\left(vB_\text{z}\right) - \text{\Kp}_-(-163)\right) + \text{\Kp}_-(-163)	\,.	\label{eq:kpvsvbz_dependency_function_positive}
+\end{align}
+The fit curve is plotted in \autoref{fig:Kp_2dhistogram_VBzgsm_sws_fit_e}.
 \begin{figure}
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_VBzgsm_sws_fit_e.pdf}
@@ -271,46 +257,35 @@ with the vertical shifting parameter $y'$ and the depth parameter $b$. The resul
 		\label{fig:Kp_2dhistogram_VBzgsm_sws_fit_e}
 	}
 \end{figure}
-Thus, the solar wind dependency relation 'condenses' to:
-\begin{align}
-	\text{\Kp}_-\left(vB_\text{z}\right) &= 1.258 \cdot \ln\left(\left(vB_\text{z} + 163\right)^2 + \num{1.416e6}\right) - 17.04	\,,	\label{eq:kpvsvbz_dependency_function_negative}\\
-	\text{\Kp}_+\left(vB_\text{z}\right) &= 0.467 \cdot \left(\text{\Kp}_-\left(vB_\text{z}\right) - \text{\Kp}_-(-163)\right) + \text{\Kp}_-(-163)	\,.	\label{eq:kpvsvbz_dependency_function_positive}
-\end{align}
+The error bars of the data points indicate the relative data count per \vBz{} interval. Those points which deviate far from the fit curve (e.g., below the left arm and above the right arm) stem from single 3"~hour periods. A look into the data revealed that all data outside the range \SIrange{-14000}{8000}{\km\per\s\nano\tesla} is related to CMEs. Thus, the deviating points are caused by individual CME events, for example, the two points with a \Kp{} of $8-$ near \SI{10000}{\km\per\s\nano\tesla} belong to CMEs with in-situ velocities of about \SI{1000}{\km\per\s} and a positive $B_\text{z}$ of the order \SI{30}{\nano\tesla}.
 
 % warning lead time
-This derived E"~field relation can well be applied with the solar wind real-time measurements that are continuously being made by spacecraft located at L1, see \autoref{sec:solar_wind_nowcast_and_forecast_to_earth}. However, the heads-up time for warnings from this location is relatively short with a few tens of minutes, whereas remote observations via solar imagers and coronagraphs allow for longer lead times of a few days.
-
-The E"~field relation derived above could also be applied to remote forecast situations, however, IMF strength and orientation are not yet properly predictable from current prediction methods that rely on remote observations.
+This derived E"~field relation can well be applied with the solar wind real-time measurements that are continuously being made by spacecraft located at L1. However, the heads-up time for warnings from this location is relatively short having only a few tens of minutes, whereas remote observations via solar imagers and coronagraphs allow for longer lead times of a few days. In principle, the E"~field relation could also be applied to remote forecast situations, however, IMF strength and orientation are not yet properly predictable from current prediction methods that rely on remote observations.
 
 
 \section{Relations between CME/stream velocities and \Kp~index}
 \label{sec:relations_between_cme_stream_v_and_kp}
-
-In order to still make use of the enhanced warning lead times from remote observations, the solar wind velocity is the only parameter left which is to a certain degree reliably forecastable. In fact, solar wind velocity and \Kp~index correlate quite well, \citet{Machol2013} even proposed a linear function of the \Kp~index as a best proxy for corrupted real-time velocity measurements made by the ACE spacecraft. For one, the velocity can even be used for persistence forecast, as it has the highest autocorrelation time of all major solar wind parameters -- with \SI{59}{\hour} it is much higher than that with the lowest autocorrelation time of \SI{4}{\hour}, which is indeed the $B_\text{z}$~GSM component \citep{Elliott2013}.
-
+In order to still benefit from the enhanced warning lead times obtained from remote observations, the solar wind velocity has to be employed. It is the only parameter left which is to a certain degree reliably forecastable from remote observations. In fact, solar wind velocity and \Kp~index correlate quite well -- \citet{Machol2013} even proposed a linear function of the \Kp~index as a best proxy for corrupted real-time velocity measurements made by the ACE spacecraft. For one, the velocity can even be used for persistence forecast, as it has the highest autocorrelation time of all major solar wind parameters -- with \SI{59}{\hour} it is much higher than that with the lowest autocorrelation time of \SI{4}{\hour}, which is indeed the $B_\text{z}$~GSM component \citep{Elliott2013}.
 It is clear that the strength of the southward IMF component is the most dominant solar wind parameter for the driving of geomagnetic activity. The velocity shows a strong correlation during CME conditions as well, however, infact during HSSs the velocity is considered the most dominant parameter for driving the geomagnetic activity \citep{Holappa2014}.\\
 
 % separating CMEs and streams
-The distinct generation mechanisms of solar wind streams and CMEs show in their different appearance: streams are of continuous nature and CMEs are event-like. Therefore they require completely different forecast methods, see also \autoref{sec:solar_wind_nowcast_and_forecast_to_earth}. Thus, in order to forecast the \Kp~index from remotely derived velocity values, it is apparent and makes sense to analyze CMEs and solar wind streams separately.\\
+In order to forecast the \Kp~index from remotely derived velocity values, it makes sense to analyze CMEs and solar wind streams separately. The distinct generation mechanisms of CMEs and solar wind streams show in their different appearance: CMEs are event-like and streams are of continuous nature. Therefore these two solar wind structures require completely different forecast methods, see also \autoref{sec:solar_wind_nowcast_and_forecast_to_earth}.
 
-% velocity relation
-It is also known that the solar wind velocity itself already correlates strongly with the \Kp~index.\\
-
-I use this velocity relationship for obtaining \Kp{} proxies from CME and solar wind stream data.\\
+In the following, I use an existing list of solar wind structures to separate between CME and solar wind stream data, calculate 3"~hour velocity values and correlate them with the \Kp~index. Functional dependencies are derived for obtaining \Kp{} proxies from both structure types separately.
 
 
 \subsection{Solar Wind Structures list}
 For the separation of CME and stream data, I use the list of solar wind structures (SWS) created and updated by \citet{Richardson2000} and \citet{Richardson2012}. They characterized the near-Earth solar wind into periods related to slow wind, fast wind, and CMEs. Their list extends back to 1963 and is mostly based on 1"~hour averages of solar wind parameters from the OMNI data set. However, in the cases where there are gaps in the in-situ data, they consider other indicators for identifying solar wind structures. They achieve a fairly complete classification with the inclusion of data from geomagnetic activity, energetic particles, and cosmic rays.
-Their work identifies solar wind structures and flags the time series into four categories: HSSs, slow solar wind, CME-associated flows, and undetermined intervals. Periods related to CMEs are defined to also comprise the associated ambient solar wind plasma, which consists of upstream shocks and compressed material. The criterion for differentiating between slow and fast solar wind is a velocity threshold of \SI{400}{\km\per\s}.
+Their work identifies solar wind structures and flags the time series into four categories: CME-associated flows, slow solar wind, fast solar wind, and undetermined intervals. Periods related to CMEs are defined to also comprise the associated ambient solar wind plasma, which consists of upstream shocks and compressed material. The criterion for differentiating between slow and fast solar wind is a velocity threshold of \SI{400}{\km\per\s}.
 
 The SWS list is made available via registration at CEDARweb: \urltext{http://cedarweb.vsp.ucar.edu/wiki/index.php/Tools_and_Models:Solar_Wind_Structures}.
 %List of near-Earth ICMEs since January 1996 by \citet{Cane2003,Richardson2010}. Available as ACE Level~3 data for the period 1995--mid2016\footnote{ACE Level~3 data website -- list of near-Earth ICMEs: \urlfoot{http://www.srl.caltech.edu/ACE/ASC/DATA/level3/icmetable2.htm}}.\\
 The updated SWS list (until the end of 2016) was kindly provided by Ian~Richardson.
 
 According to the SWS list, the CME fraction during the 36-year time period considered in the present study, 1981--2016, is \SI{15.4}{\%}, which accumulates to 5.53~years. %and that for the period 1963--2016 is \SI{16.9}{\%} (9.01~years).\\
-This percentage is an average value, as the actual fraction varies heavily with the solar activity cycle and with the appearance of individual active regions on the solar surface.
+This percentage is an average value, as the actual yearly fraction varies heavily with the solar activity cycle and with the appearance of individual active regions on the solar surface.
 
-The SWS definition of CME-associated flows makes sense for the following analysis as the causes of the strongest geomagnetic storms are both the compression of the magnetic field within the shock fronts of fast CMEs and the enhanced field strength of the driving magnetic clouds \citep{Bothmer1995}. In the following part of the study, I refer to the combination of the SWS categories slow and fast solar wind simply as solar wind streams. These periods are composed entirely from a mixture of slow wind flows, fast wind streams, and their interaction regions.
+The SWS definition of CME-associated flows makes sense for the following analysis as the causes of the strongest geomagnetic storms are both the compression of the magnetic field within the shock fronts of fast CMEs and the enhanced field strength of the driving magnetic clouds \citep{Bothmer1995}. In the following part of this study, I refer to the combination of the SWS categories slow and fast solar wind simply as solar wind streams. These periods are composed entirely from a mixture of slow wind flows, fast wind streams, and their interaction regions.
 
 
 \subsection{Data correlation}
@@ -551,6 +526,9 @@ The following results are obtained from the \Kp{} analyses in this chapter:
 	\item A functional dependency for enabling a stream forecast. It relates \Kp{} with the velocity of solar wind streams.
 \end{itemize*}
 
+With the results presented in this chapter, I elaborate the step from solar wind properties at Earth to the forecast of the possible impact strength on the terrestrial magnetosphere. I derive empirical correlations and functional dependencies between solar wind properties and the geomagnetic \Kp~index, in order to obtain the capability to nowcast/forecast \Kp{} values.
+
+As the obtained functional relations are simple, they cannot compete with current models based on artificial neural networks, \Kp{} persistence, or full-fledged solar wind coupling functions. However, they enable empirical estimations of the mean \Kp{} impact for special forecast situations, that is, \Kp{} can directly be quantified from measured solar activity, in-situ solar wind, and remotely determined CME and stream velocities.
 
 % extreme CME speeds
 CMEs can be faster than the maximal velocities included in the OMNI data. Solar wind plasma spectrometers are only able to measure speeds up to about \SI{1100}{\km\per\s} reliably, leading to data gaps during these periods. Yet, CME speeds of up to \SI{2000}{\km\per\s} were observed at \SI{1}{\au} \citep{Russell2013}. According to \autoref{eq:kpvsv_CME_dependency_function}, a CME speed of this value would lead on average to a theoretical \Kp{} of 12.2, however, the \Kp{} scale is capped at 9o and a \Kp{} of 9o is reached already at a velocity of \SI{1489}{\km\per\s}, see \autoref{fig:Kp_2dhistogram_V_sws123_fit_f}.
@@ -653,7 +631,7 @@ Prototype \Kp{} relations are integrated into applications developed within the 
 \bigskip
 {\small
 \textit{Acknowledgments.} Part of the research leading to the results presented in this chapter has received funding from the EU~FP7 project AFFECTS under grant 263506.
-The analyses in this chapter rely on the \Kp~index, calculated and made available by the GFZ~Potsdam from data collected at magnetic observatories. Thank goes to the involved national institutes, the INTERMAGNET network and ISGI (\urltext{isgi.unistra.fr}). The author thanks the WDC-SILSO at the SIDC (ROB) for maintaining and providing the international sunspot number series. Additional thank gos to the OMNI PIs/teams for creating and making available the solar wind in-situ data. The OMNI data are supplied by the SPDF at GSFC (NASA). The hourly SWS list, updated until the end of 2016, was kindly provided by Ian~Richardson of the GSFC and CRESST/University of Maryland.
+The analyses in this chapter rely on the \Kp~index, calculated and made available by the GFZ~Potsdam from data collected at magnetic observatories. Thank goes to the involved national institutes, the INTERMAGNET network and ISGI (\urltext{isgi.unistra.fr}). The author thanks the WDC-SILSO at the SIDC (ROB) for maintaining and providing the international sunspot number series. Additional thank gos to the OMNI PIs/teams for creating and making available the solar wind in-situ data. The OMNI data are supplied by the SPDF at the GSFC (NASA). The hourly SWS list, updated until the end of 2016, was kindly provided by Ian~Richardson of the GSFC and CRESST/University of Maryland.
 }
 
 

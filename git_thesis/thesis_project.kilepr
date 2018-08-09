@@ -87,7 +87,7 @@ Indentation Mode=normal
 Mode=LaTeX
 
 [document-settings,item:chapters/discussion_summary.tex]
-Bookmarks=138
+Bookmarks=141
 Encoding=UTF-8
 Highlighting=LaTeX
 Indentation Mode=normal
@@ -242,20 +242,20 @@ order=6
 
 [item:chapters/basics.tex]
 archive=true
-column=88
+column=155
 encoding=UTF-8
 highlight=LaTeX
-line=1006
+line=881
 mode=LaTeX
 open=false
 order=4
 
 [item:chapters/chapter2.tex]
 archive=true
-column=630
+column=24
 encoding=UTF-8
 highlight=LaTeX
-line=259
+line=625
 mode=LaTeX
 open=true
 order=3
@@ -272,10 +272,10 @@ order=-1
 
 [item:chapters/discussion_summary.tex]
 archive=true
-column=58
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=41
+line=116
 mode=LaTeX
 open=false
 order=4
@@ -295,7 +295,7 @@ archive=true
 column=52
 encoding=UTF-8
 highlight=LaTeX
-line=402
+line=403
 mode=LaTeX
 open=true
 order=2
@@ -385,7 +385,7 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=43
+line=0
 mode=LaTeX
 open=true
 order=1
@@ -443,16 +443,16 @@ JumpList=
 ViMarks=.,316,108,[,316,105,],316,108
 
 [view-settings,view=0,item:chapters/basics.tex]
-CursorColumn=88
-CursorLine=1006
+CursorColumn=155
+CursorLine=881
 JumpList=
-ViMarks=.,1006,87,[,1006,82,],1006,87,a,1,0,b,7,0,c,639,0,d,688,0,e,886,0,f,820,0,g,253,0,h,135,0,i,206,0,j,332,0,k,481,0
+ViMarks=.,881,144,[,881,144,],881,154,a,1,0,b,7,0,c,639,0,d,688,0,e,886,0,f,820,0,g,253,0,h,135,0,i,206,0,j,332,0,k,481,0
 
 [view-settings,view=0,item:chapters/chapter2.tex]
-CursorColumn=630
-CursorLine=259
+CursorColumn=24
+CursorLine=625
 JumpList=
-ViMarks=.,259,629,[,259,619,],259,629
+ViMarks=.,625,23,[,625,24,],625,23
 
 [view-settings,view=0,item:chapters/data.tex]
 CursorColumn=979
@@ -461,10 +461,10 @@ JumpList=
 ViMarks=.,183,979,[,183,979,],183,979,a,1,0,b,34,0,c,81,0,d,125,0,e,134,0,f,141,0,g,157,0
 
 [view-settings,view=0,item:chapters/discussion_summary.tex]
-CursorColumn=58
-CursorLine=41
+CursorColumn=0
+CursorLine=116
 JumpList=
-ViMarks=.,41,22,[,41,6,],41,22,a,138,0
+ViMarks=.,120,156,[,120,156,],120,156,a,141,0
 
 [view-settings,view=0,item:chapters/formal_titlepage.tex]
 CursorColumn=3
@@ -474,9 +474,9 @@ ViMarks=.,7,0,[,7,0,],7,0
 
 [view-settings,view=0,item:chapters/front_matter.tex]
 CursorColumn=52
-CursorLine=402
+CursorLine=403
 JumpList=
-ViMarks=.,402,51,[,402,0,],402,51
+ViMarks=.,403,51,[,403,50,],403,51
 
 [view-settings,view=0,item:chapters/introduction.tex]
 CursorColumn=0
@@ -528,6 +528,6 @@ ViMarks=.,53,0,[,53,0,],53,1
 
 [view-settings,view=0,item:thesis.tex]
 CursorColumn=0
-CursorLine=43
+CursorLine=0
 JumpList=
 ViMarks=.,43,0,[,43,0,],43,0

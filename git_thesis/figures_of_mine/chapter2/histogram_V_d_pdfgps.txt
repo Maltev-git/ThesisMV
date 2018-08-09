@@ -1,0 +1,78 @@
+set terminal pdfcairo enhanced font "arial,12" fontscale 0.5 lw 1 size 8.8cm,6.6cm rounded
+set output "histogram_V_d.pdf"
+
+datafile2_sws_3hmax = "../Data/OMNI_data3_analysis/KpvsV/OMNI_HRO_1MIN_19810101--20161231_with_ap_VBzgsm_sws_3hmax_KpvsV_dependenceFunctionsYofX.txt"
+datafile2_sws_3hmean = "../Data/OMNI_data3_analysis/KpvsV/OMNI_HRO_1MIN_19810101--20161231_with_ap_VBzgsm_sws_3hmean_KpvsV_dependenceFunctionsYofX.txt"
+datafile2_sws1_3hmax = "../Data/OMNI_data3_analysis/KpvsV_sws1/OMNI_HRO_1MIN_19810101--20161231_with_ap_VBzgsm_sws1_3hmax_KpvsV_dependenceFunctionsYofX.txt"
+datafile2_sws1_3hmean = "../Data/OMNI_data3_analysis/KpvsV_sws1/OMNI_HRO_1MIN_19810101--20161231_with_ap_VBzgsm_sws1_3hmean_KpvsV_dependenceFunctionsYofX.txt"
+datafile2_sws23_3hmax = "../Data/OMNI_data3_analysis/KpvsV_sws23/OMNI_HRO_1MIN_19810101--20161231_with_ap_VBzgsm_sws23_3hmax_KpvsV_dependenceFunctionsYofX.txt"
+
+#######- header parameters from datafile -#######
+binSizeX=10
+binSizeY=1
+histLowX=240
+histLowY=0
+histUppX=1090
+histUppY='28.0'
+hist2DbinCount=1340
+intersectionCount=69444
+peakCount=512
+peakX=360
+peakY='2.0'
+meanCount=51
+meanX=430
+meanY='6'
+###########
+
+
+####--  Styles  --####
+set style line 1 lt 1 lw 1 lc rgb "white"
+set style line 2 lt 1 lw 1 lc rgb "light-red"
+set style line 3 lt 1 lw 1 lc rgb "web-green"
+set style line 4 lt 1 lw 1 lc rgb "web-blue"
+set style line 5 lt 1 lw 1 lc rgb "yellow"
+set style line 6 lt 1 lw 1 lc rgb "brown"
+set style line 7 lt 1 lw 1 lc rgb "light-blue"
+set style line 8 lt 1 lw 1 lc rgb "dark-blue"
+set style line 9 lt 1 lw 1 lc rgb "dark-violet"
+set style line 10 lt 1 lw 1 lc rgb "black"
+set style line 11 lt 1 lw 1 lc rgb "grey"
+set style line 12 lt 1 lw 1 lc rgb "grey50"
+
+set style textbox opaque noborder
+
+set multiplot\
+	layout 1,1 columnsfirst\
+	margins 0.11,0.955,0.14,0.98\
+	spacing 0.1,0.05
+
+set border 3
+set xtics nomirror
+set ytics nomirror
+
+set grid back
+
+set key reverse Left box opaque samplen 2 font ",11"
+set key top right
+set key width -1
+#set key at screen 0.99,screen 0.68
+
+set log y
+set ylabel "Frequency" offset -0.3,0
+set yrange [0.8:*]
+set mytics 10
+set format y "10^%T"
+set ytics add("1^ " 1,"10^ " 10)
+
+set xlabel "Velocity [km s^{-1}]" offset 0,0.3
+set xrange [0:1200]
+set xtics 200
+set xtics add("" 50000)
+set mxtics 2
+plot\
+	datafile2_sws_3hmean using ($1+0.5*binSizeX):($2==0?0.1:$2) with lines title "3-hour mean data" ls 10 lw 2 dt 1,\
+	datafile2_sws_3hmax using ($1+0.5*binSizeX):($2==0?0.1:$2) with lines title "3-hour maximum data" ls 2 lw 2 dt 1,\
+	NaN notitle
+#	datafile2_sws1_3hmean using ($1+0.5*binSizeX):($2==0?0.1:$2) with lines title "CMEs, 3-hour mean" ls 12 lw 2 dt '.',\
+#	datafile2_sws23_3hmax using ($1+0.5*binSizeX):($2==0?0.1:$2) with lines title "SWS23 no CMEs, 3-hour maximum" ls 3 lw 2 dt '.',\
+#	datafile2_sws1_3hmax using ($1+0.5*binSizeX):($2==0?0.1:$2) with lines title "CMEs, 3-hour maximum" ls 3 lw 2 dt '.',\

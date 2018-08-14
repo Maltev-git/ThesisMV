@@ -1,0 +1,98 @@
+set terminal pdfcairo enhanced font "arial,12" fontscale 0.5 lw 1 size 8.8cm,8.8cm rounded
+set output "model_performance_d.pdf"
+
+datafile_vBz = "out_vBz.txt"
+datafile_vCME = "out_vCME.txt"
+datafile_vstream = "out_vstream.txt"
+datafile_persistence = "out_persistence.txt"
+
+
+####--  Style  --####
+set style line 1 lw 1 lc rgb "white"
+set style line 2 lw 1 lc rgb "light-red"
+set style line 3 lw 1 lc rgb "web-green"
+set style line 4 lw 1 lc rgb "web-blue"
+set style line 5 lw 1 lc rgb "orange"
+set style line 6 lw 1 lc rgb "dark-orange"
+set style line 7 lw 1 lc rgb "skyblue"
+set style line 8 lw 1 lc rgb "dark-blue"
+set style line 9 lw 1 lc rgb "dark-magenta"
+set style line 10 lw 1 lc rgb "black"
+set style line 11 lw 1 lc rgb "gray"
+set style line 12 lw 1 lc rgb "gray50"
+
+set multiplot\
+	layout 2,2\
+	margins 0.105,0.99,0.11,0.985\
+	spacing 0.09,0.09
+
+set border 3 front
+set xtics nomirror
+set ytics nomirror
+
+set size ratio -1
+
+####--  Key  --####
+set key vert left top reverse Left box opaque
+set key font ",11"
+set key samplen 2
+set key width -1.5
+set key height +0.15
+#unset key
+
+set grid back
+
+####--  Axes  --####
+set xrange [0:9]
+set yrange [0:9]
+
+set xlabel "Official {/:Italic= Kp}"
+set ylabel "Predicted {/:Italic= Kp}"
+
+#set ytics 0.2
+# set mxtics 3
+# set mytics 3
+
+unset bars
+
+unset xlabel
+
+####--  Plots  --####
+plot\
+	x notitle with lines ls 12 lw 1,\
+	datafile_persistence using ($3<=1?NaN:$2):($2-$15):($2-$15-$20):($2-$15+$19) notitle with yerrorbars ls 12 lw 2 pt 13 ps 0.4,\
+	datafile_persistence using ($3<=1?NaN:$16==0||$17==0?NaN:$2):($2-$15):($2-$15-$20):($2-$15+$19) title "{/:Italic= Kp} persistence" with yerrorbars ls 10 lw 2 pt 13 ps 0.4,\
+	NaN notitle
+
+unset ylabel
+set key width +1.5
+
+plot\
+	x notitle with lines ls 12 lw 1,\
+	datafile_vBz using ($3<=1?NaN:$2):($2-$15):($2-$15-$20):($2-$15+$19) notitle with yerrorbars ls 12 lw 2 pt 13 ps 0.4,\
+	datafile_vBz using ($3<=1?NaN:$16==0||$17==0?NaN:$2):($2-$15):($2-$15-$20):($2-$15+$19) title "{/:Italic= vB}_z" with yerrorbars ls 10 lw 2 pt 13 ps 0.4,\
+	NaN notitle
+# 	datafile_vBz using 2:($2-$15):($2-$15+$13):($2-$15+$12) title "{/:Italic= vB}_z" with yerrorbars ls 10 lw 2 pt 13 ps 0.4,\
+
+set xlabel "Official {/:Italic= Kp}"
+set ylabel "Predicted {/:Italic= Kp}"
+set key width +0.5
+
+plot\
+	x notitle with lines ls 12 lw 1,\
+	datafile_vCME using ($3<=1?NaN:$2):($2-$15):($2-$15-$20):($2-$15+$19) notitle with yerrorbars ls 12 lw 2 pt 13 ps 0.4,\
+	datafile_vCME using ($3<=1?NaN:$16==0||$17==0?NaN:$2):($2-$15):($2-$15-$20):($2-$15+$19) title "{/:Italic= v}, CMEs" with yerrorbars ls 10 lw 2 pt 13 ps 0.4,\
+	NaN notitle
+
+unset ylabel
+set key width -1
+
+plot\
+	x notitle with lines ls 12 lw 1,\
+	datafile_vstream using ($3<=1?NaN:$2):($2-$15):($2-$15-$20):($2-$15+$19) notitle with yerrorbars ls 12 lw 2 pt 13 ps 0.4,\
+	datafile_vstream using ($3<=1?NaN:$16==0||$17==0?NaN:$2):($2-$15):($2-$15-$20):($2-$15+$19) title "{/:Italic= v}, streams" with yerrorbars ls 10 lw 2 pt 13 ps 0.4,\
+	NaN notitle
+
+
+
+

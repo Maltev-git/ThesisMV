@@ -543,41 +543,39 @@ Conclusions of data processing:\\
 $v$ is suited for remote forecast situations, whereas \vBz{} is not, because short-term variations in $B_\text{z}$ cannot be predicted yet.\\
 - As the obtained functional relations are simple, they cannot compete with current models based on artificial neural networks, \Kp{} persistence, or full-fledged solar wind coupling functions. However, they enable empirical estimations of the mean \Kp{} impact for special forecast situations, that is, \Kp{} can directly be quantified from measured solar activity, in-situ solar wind, and remotely determined CME and stream velocities.\\
 
+
 % in-situ plots
-In the following, I take sample periods of solar wind in-situ data and apply the predictive models to compare their output qualitatively with the actual measured \Kp~index.
+In the following, I take two sample periods of solar wind in-situ data and apply the predictive \Kp{} models to compare their output qualitatively with the actual measured \Kp~index. First, I discuss a 2"~month period from the maximum of the solar activity cycle~24 and second, I zoom into a 6~day sub-period containing a CME.
 
-solar wind stream example in \autoref{fig:example_sw_plot_v_c_2013-5-1_65}\\
+% 5-week sample period
+A 2"~month sample period of solar wind and \Kp{} data is displayed in \autoref{fig:example_sw_plot_1month_b_2013-5-1_65}. The considered period ranges from 1~May to 5~July 2013, when the solar activity cycle~24 had its maximum. The period contains a few HSSs and CMEs.\\
 \begin{figure}[htb]
 	\centering
-	\includegraphics[width=\textwidth]{figures_of_mine/chapter2/example_sw_plot_v_c_2013-5-1_65.pdf}
-	\caption[\lofimage{figures_of_mine/chapter2/example_sw_plot_v_c_2013-5-1_65.pdf}]
-	{Solar wind measurements, official \Kp{}~index, and estimated \Kp{} for the time period 1~May to 5~July 2013. The solar wind parameters are the magnetic field strength and the velocity. I also plotted the velocity's 3"~hour maximum for illustration. The solar wind data are from the minutely OMNI data set. The official \Kp{}~index is obtained from the GFZ~Potsdam. I plotted the \Kp{} estimate depending on whether the period is flagged as a CME in the SWS list (red line in top panel) or not, that is, via \autoref{eq:kpvsv_CME_dependency_function} or \autoref{eq:kpvsv_stream_dependency_function}. The orange band indicates the mean MAD.}
-	\label{fig:example_sw_plot_v_c_2013-5-1_65}
+	\includegraphics[width=\textwidth]{figures_of_mine/chapter2/example_sw_plot_1month_b_2013-5-1_65.pdf}
+	\caption[\lofimage{figures_of_mine/chapter2/example_sw_plot_1month_b_2013-5-1_65.pdf}]
+	{Solar wind parameters, official \Kp~index, and estimated \Kp{} indices for the 65~day time period from 1~May to 5~July 2013. The solar wind parameters are the magnetic field strength, its z"~component in GSM coordinates, the velocity, and the product of the latter two. I also plot the velocity's 3"~hour maxima and the \vBz{}'s 3"~hour minima for illustration. The \Kp{} estimates based on the electric field and velocity relations are displayed together with their mean MAD bands. The \Kp{} estimates from both velocity relations are chosen according to the periods flagged as CMEs in the SWS list (red lines in top panel), that is, either via Equation~(\ref{eq:kpvsv_CME_dependency_function}) or (\ref{eq:kpvsv_stream_dependency_function}). The solar wind data are from the minutely OMNI data set and the official \Kp~index is obtained from the GFZ~Potsdam.}
+	\label{fig:example_sw_plot_1month_b_2013-5-1_65}
 	\addtocontents{lof}{\smallskip\protect\center I created the figure myself.\medskip}
 \end{figure}
 
-I calculate the \Kp{} estimate for the CME from 27~June 2013 (see also \autoref{fig:ACE_64s_v7_thesis_CME_2013-6-26_6}) and include the 3"~hour minima values of \vBz{} in the plot, see \autoref{fig:example_sw_plot_vBz_b_2013-6-26_6}.
+% 6~day sub-period
+I calculate the \Kp{} estimate for the CME from 27~June 2013 (see also \autoref{fig:ACE_64s_v7_thesis_CME_2013-6-26_6}) and include the 3"~hour minima values of \vBz{} in the plot, see \autoref{fig:example_sw_plot_CME_b_2013-6-26_6}.
 \begin{figure}[htb]
 	\centering
-	\includegraphics[width=\textwidth]{figures_of_mine/chapter2/example_sw_plot_vBz_b_2013-6-26_6.pdf}
-	\caption[\lofimage{figures_of_mine/chapter2/example_sw_plot_vBz_b_2013-6-26_6.pdf}]
-	{Solar wind parameters, official \Kp{}~index, and estimated \Kp{} for the time period from 26~June to 2~July 2013. The solar wind parameters are the magnetic field strength, its z"~component in GSM coordinates, and the velocity from the minutely OMNI data set. I also plot the product \vBz{} with its 3"~hour minima for illustration. The official \Kp{}~index is obtained from the GFZ~Potsdam. The \Kp{} estimate is derived via Equations~(\ref{eq:kpvsvbz_dependency_function_negative}) and (\ref{eq:kpvsvbz_dependency_function_positive}). The orange band indicates the mean MAD.}
-	\label{fig:example_sw_plot_vBz_b_2013-6-26_6}
+	\includegraphics[width=\textwidth]{figures_of_mine/chapter2/example_sw_plot_CME_b_2013-6-26_6.pdf}
+	\caption[\lofimage{figures_of_mine/chapter2/example_sw_plot_CME_b_2013-6-26_6.pdf}]
+	{Solar wind parameters, official \Kp~index, and estimated \Kp{} indices for the 6~day time period from 26~June to 2~July 2013. All panels show the same parameters as in \autoref{fig:example_sw_plot_1month_b_2013-5-1_65}. The period includes the CME from 27~June 2013.}
+	\label{fig:example_sw_plot_CME_b_2013-6-26_6}
 	\addtocontents{lof}{\smallskip\protect\center I created the figure myself.\medskip}
 \end{figure}
-It can be seen that in the considered period the \Kp{} estimate traces the actual \Kp{}~index pretty well within the mean MAD band. However, deviations are found at the times of the initial shock, and the start and middle of the MC.
+It can be seen that in the considered period the \Kp{} estimate from \vBz{} traces the actual \Kp~index pretty well within the mean MAD band. However, deviations are found at the times of the initial shock, and the start and middle of the MC.\\
 
-It becomes apparent how important the influence of the magnetic field z"~component is, when comparing the \vBz{} and velocity estimations. I plot its in-situ magnetic field strength, $B_\text{z}$, and velocity in \autoref{fig:example_sw_plot_v_b_2013-6-26_6} together with the official \Kp{}~index and the derived \Kp{} estimates.
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=\textwidth]{figures_of_mine/chapter2/example_sw_plot_v_b_2013-6-26_6.pdf}
-	\caption[\lofimage{figures_of_mine/chapter2/example_sw_plot_v_b_2013-6-26_6.pdf}]
-	{Solar wind measurements, official \Kp{}~index, and estimated \Kp{} for the time period 26~June to 2~July 2013. The solar wind parameters are the magnetic field strength and the velocity. I also plotted the velocity's 3"~hour maximum for illustration. The solar wind data are from the minutely OMNI data set. The official \Kp{}~index is obtained from the GFZ~Potsdam. I plot the \Kp{} estimate depending on whether the period is flagged as a CME in the SWS list (red line in top panel) or not, that is, via \autoref{eq:kpvsv_CME_dependency_function} or \autoref{eq:kpvsv_stream_dependency_function}. The orange band indicates the mean MAD.}
-	\label{fig:example_sw_plot_v_b_2013-6-26_6}
-	\addtocontents{lof}{\smallskip\protect\center I created the figure myself.\medskip}
-\end{figure}
+The \Kp{} estimate derived from both velocity relations is overestimating all small \Kp{} values and underestimates the main part of the MC. However, it is able to track the initial shock when considering the initial mixed-flag 3"~hour interval. The velocity models do not coincide well during the whole period. The \Kp{} estimate performs okay during the initial sheath region and around the peak of the trailing HSS. The rarefaction regions of declining velocity at the start and end of the considered interval are overestimated, whereas the MC and the trailing compression region are underestimated.\\
 
-The latter do not coincide well during this period. The \Kp{} estimate performs okay during the initial sheath region and around the peak of the trailing HSS. The rarefaction regions of declining velocity at the start and end of the considered interval are overestimated, whereas the MC and the trailing compression region are underestimated.\\
+% learned:
+It becomes apparent how important the influence of the magnetic field z"~component is, when comparing the \vBz{} and velocity estimations.\\
+
+
 
 % The present study adds more empirical \Kp{} relations -- for the specific forecast situations when only the solar wind velocity $v$ or its E"~field are obtainable.\\
 
@@ -633,7 +631,7 @@ Prototype \Kp{} relations are integrated into applications developed within the 
 
 \bigskip
 {\small
-\textit{Acknowledgments.} Part of the research leading to the results presented in this chapter has received funding from the EU~FP7 project AFFECTS under grant 263506.
+\noindent \textit{Acknowledgments.} Part of the research leading to the results presented in this chapter has received funding from the EU~FP7 project AFFECTS under grant 263506.
 The analyses in this chapter rely on the \Kp~index, calculated and made available by the GFZ~Potsdam from data collected at magnetic observatories. Thank goes to the involved national institutes, the INTERMAGNET network and ISGI (\urltext{isgi.unistra.fr}). The author thanks the WDC-SILSO at the SIDC (ROB) for maintaining and providing the international sunspot number series. Additional thank gos to the OMNI PIs/teams for creating and making available the solar wind in-situ data. The OMNI data are supplied by the SPDF at the GSFC (NASA). The hourly SWS list, updated until the end of 2016, was kindly provided by Ian~Richardson of the GSFC and CRESST/University of Maryland.
 }
 

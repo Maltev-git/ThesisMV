@@ -33,13 +33,15 @@ The \Kp{} data is obtained from the GFZ~Potsdam, where the index is currently ma
 		\ffigbox{
 			\includegraphics[width=0.46\textwidth]{figures_of_mine/chapter2/Kp_histogram_b.pdf}
 		}{
-			\caption{\Kp{} frequency distribution for the time period 1932--2016. The inset shows a zoomed-in view of the high-value tail. The \Kp{} data is obtained from the GFZ~Potsdam.}
+			\caption[\lofimage{figures_of_mine/chapter2/Kp_histogram_b.pdf}I created the figure myself.]
+			{\Kp{} frequency distribution for the time period 1932--2016. The inset shows a zoomed-in view of the high-value tail. The \Kp{} data is obtained from the GFZ~Potsdam.}
 			\label{fig:Kp_histogram_b}
 		}
 		\ffigbox{
 			\includegraphics[width=0.95\Xhsize]{figures_of_mine/chapter2/Kp_histogram_yearlySSN_b.pdf}
 		}{
-			\caption{Yearly \Kp{} frequency distributions during the period 1932--2016, sorted and colored by yearly SSN. All distributions are normed to be of equal area. The \Kp{} data is obtained from the GFZ~Potsdam and the yearly SSN data from the SILSO World Data Center.}
+			\caption[\lofimage{figures_of_mine/chapter2/Kp_histogram_yearlySSN_b.pdf}I created the figure myself.]
+			{Yearly \Kp{} frequency distributions during the period 1932--2016, sorted and colored by yearly SSN. All distributions are normed to be of equal area. The \Kp{} data is obtained from the GFZ~Potsdam and the yearly SSN data from the SILSO World Data Center.}
 			\label{fig:Kp_histogram_yearlySSN_b}
 		}
 	\end{floatrow}
@@ -58,7 +60,8 @@ The time series of yearly average \Kp{} values from the years 1932--2016 shows a
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/yearly_kp-ssn_correlation_c.pdf}
 	}{
-		\caption{Yearly \Kp~index distributions (shaded area) with their mean values for the time period 1932--2016 and yearly SSN with cycle number for the time period 1917--2016 (top panels). The Pearson correlation coefficients with the yearly SSN are calculated for time lags back to \num{-15}~years (bottom panel). The \Kp{} data is obtained from the GFZ~Potsdam and the yearly SSN data from the SILSO World Data Center.}
+		\caption[\lofimage{figures_of_mine/chapter2/yearly_kp-ssn_correlation_c.pdf}I created the figure myself.]
+		{Yearly \Kp~index distributions (shaded area) with their mean values for the time period 1932--2016 and yearly SSN with cycle number for the time period 1917--2016 (top panels). The Pearson correlation coefficients with the yearly SSN are calculated for time lags back to \num{-15}~years (bottom panel). The \Kp{} data is obtained from the GFZ~Potsdam and the yearly SSN data from the SILSO World Data Center.}
 		\label{fig:yearly_kp-ssn_correlation_c}
 	}
 \end{figure}
@@ -70,7 +73,8 @@ The yearly mean \Kp~index with respect to the 1-year lagged SSN shows a rise wit
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_SSN_fit_d.pdf}
 	}{
-		\caption{Yearly mean \Kp~index with respect to 1-year lagged SSN (+) with the weighted logarithmic fit (dashed line). The error bars denote the SSN standard deviation and the relative weight from the yearly data coverage. The shaded area represents the fit error band derived from the estimated standard deviations of the fit parameters. The logarithmic function (\autoref{eq:log_fit_function}) is used for the weighted fit. The yearly \Kp{} mean values are calculated from GFZ~Potsdam data and the yearly SSN is obtained from the SILSO World Data Center.}
+		\caption[\lofimage{figures_of_mine/chapter2/Kp_SSN_fit_d.pdf}I created the figure myself.]
+		{Yearly mean \Kp~index with respect to 1-year lagged SSN (+) with the weighted logarithmic fit (dashed line). The error bars denote the SSN standard deviation and the relative weight from the yearly data coverage. The shaded area represents the fit error band derived from the estimated standard deviations of the fit parameters. The logarithmic function (\autoref{eq:log_fit_function}) is used for the weighted fit. The yearly \Kp{} mean values are calculated from GFZ~Potsdam data and the yearly SSN is obtained from the SILSO World Data Center.}
 		\label{fig:Kp_SSN_fit_d}
 	}
 \end{figure}
@@ -78,15 +82,16 @@ In order to obtain an analytical relation for this dependency, I perform a least
 \begin{align}
 	f(x) = a \cdot \ln(x) + b	\,.	\label{eq:log_fit_function}
 \end{align}
-The resulting fit parameters are $a = 0.281(43)$ and $b = 1.05(19)$; the numbers in parentheses are the estimated standard deviations.
-They lead to the relation
+The resulting fit parameters are $a = 0.281(43)$ and $b = 1.05(19)$; the numbers in parentheses are the estimated standard deviations. Concerning the error notation in this work, I adhere to the parentheses notation documented in the ``Guide to the expression of uncertainty in measurement'' (GUM) published by \citet{GUM2008}, where the numbers in parentheses are the errors on the corresponding last digits of the quoted value.
+
+The fit parameters lead to the relation
 \begin{align}
 	\Kp(ssn) = 0.281 \cdot \ln(ssn) + 1.05	\,,	\label{eq:kp_ssn_relation}
 \end{align}
 % log fit parameters:
 % a 0.281126         +/- 0.04267
 % b 1.04923          +/- 0.19
-which is plotted in \autoref{fig:Kp_SSN_fit_d}. This means that for an average yearly SSN of 1 the mean \Kp{} is $1.05(20)$ and for a SSN of 300 it is $2.65(31)$. The numbers in parentheses are the errors on the corresponding last digits of the quoted value. They are calculated via error propagation from the estimated standard deviations of the fit parameters.
+which is plotted together with its fit error band in \autoref{fig:Kp_SSN_fit_d}. This means that for an average yearly SSN of 1 the mean \Kp{} is $1.05(20)$ and for a SSN of 300 it is $2.65(31)$. The errors are calculated via error propagation from the estimated standard deviations of the fit parameters.
 % SSN	Kp	Kp_err
 % 1	1.0492	0.189
 % 10	1.6965	0.213
@@ -94,7 +99,6 @@ which is plotted in \autoref{fig:Kp_SSN_fit_d}. This means that for an average y
 % 100	2.3438	0.273
 % 200	2.5387	0.295
 % 300	2.6527	0.308
-
 This relation is a practical resource for estimating the yearly average \Kp~index from the last year's average SSN. In 2017 the yearly SSN was \num{21.7} -- applying this into the relation gives an average \Kp{} of \num{1.91} for the year 2018.
 
 \subsection{Seasonal variations}
@@ -104,13 +108,15 @@ On top of the yearly variations, seasonal variations exist in the magnetospheric
 		\ffigbox{
 			\includegraphics[width=0.46\textwidth]{figures_of_mine/chapter2/Kp_histogram_monthly.pdf}
 		}{
-			\caption{Average monthly \Kp{} frequency distributions of the time period 1932--2016, colored by month of the year. The \Kp{} data is obtained from the GFZ~Potsdam.}
+			\caption[\lofimage{figures_of_mine/chapter2/Kp_histogram_monthly.pdf}I created the figure myself.]
+			{Average monthly \Kp{} frequency distributions of the time period 1932--2016, colored by month of the year. The \Kp{} data is obtained from the GFZ~Potsdam.}
 			\label{fig:Kp_histogram_monthly}
 		}
 		\ffigbox{
 			\includegraphics[width=0.46\textwidth]{figures_of_mine/chapter2/Kp_seasonal_e.pdf}
 		}{
-			\caption{\Kp{} frequency distributions by month for the time period 1932--2016 with median (white dashed) and quartile isolines (white dotted). The other dotted isolines mark the upper eighth, 16th, 32nd, and 64th parts. The bin size is 1~month and \SI{1/3}{\Kp}~unit respectively.}
+			\caption[\lofimage{figures_of_mine/chapter2/Kp_seasonal_e.pdf}I created the figure myself.]
+			{\Kp{} frequency distributions by month for the time period 1932--2016 with median (white dashed) and quartile isolines (white dotted). The other dotted isolines mark the upper eighth, 16th, 32nd, and 64th parts. The bin size is 1~month and \SI{1/3}{\Kp}~unit respectively.}
 			\label{fig:Kp_seasonal_e}
 		}
 	\end{floatrow}
@@ -162,7 +168,8 @@ The reduction to 3"~hour minimum values shifts the \vBz{} frequency distribution
 		\ffigbox{
 			\includegraphics[width=0.46\textwidth]{figures_of_mine/chapter2/histogram_VBzgsm.pdf}
 		}{
-			\caption{Frequency distributions for the \vBz{} product. The minutely OMNI data from 1981--2016 is reduced to 3"~hour averages (black line) and 3"~hour minima (red line).}
+			\caption[\lofimage{figures_of_mine/chapter2/histogram_VBzgsm.pdf}I created the figure myself.]
+			{Frequency distributions for the \vBz{} product. The minutely OMNI data from 1981--2016 is reduced to 3"~hour averages (black line) and 3"~hour minima (red line).}
 			\label{fig:histogram_VBzgsm}
 		}
 %vBz frequency shifts:
@@ -172,7 +179,8 @@ The reduction to 3"~hour minimum values shifts the \vBz{} frequency distribution
 		\ffigbox{
 			\includegraphics[width=0.46\textwidth]{figures_of_mine/chapter2/cc_lag_data_d_KpvsVBzgsm.pdf}
 		}{
-			\caption{\Kp--\vBz{} correlation coefficients for different time shifts up to \num{+-24}~hours. The minutely OMNI data from 1981--2016 is reduced to 3"~hour averages (black line) and 3"~hour minima (red line).}
+			\caption[\lofimage{figures_of_mine/chapter2/cc_lag_data_d_KpvsVBzgsm.pdf}I created the figure myself.]
+			{\Kp--\vBz{} correlation coefficients for different time shifts up to \num{+-24}~hours. The minutely OMNI data from 1981--2016 is reduced to 3"~hour averages (black line) and 3"~hour minima (red line).}
 			\label{fig:cc_lag_data_d_KpvsVBzgsm}
 		}
 %highest correlation coefficients:
@@ -198,7 +206,8 @@ The frequency distribution in \Kp--\vBz{} space is shaped like a candle flame, i
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_VBzgsm_sws_e.pdf}
 	}{
-		\caption{\Kp{} versus \vBz{} frequency distribution (top panel) and its relative distribution (bottom panel) with the mean \Kp{} values (solid line) and their mean absolute deviation (dotted lines). It is 3"~hour minimum data from the minutely OMNI data set (1981--2016). The bin size is \SI{500}{\km\per\s\nano\tesla} and \SI{1/3}{\Kp}~unit respectively.}
+		\caption[\lofimage{figures_of_mine/chapter2/Kp_2dhistogram_VBzgsm_sws_e.pdf}I created the figure myself.]
+		{\Kp{} versus \vBz{} frequency distribution (top panel) and its relative distribution (bottom panel) with the mean \Kp{} values (solid line) and their mean absolute deviation (dotted lines). It is 3"~hour minimum data from the minutely OMNI data set (1981--2016). The bin size is \SI{500}{\km\per\s\nano\tesla} and \SI{1/3}{\Kp}~unit respectively.}
 		\label{fig:Kp_2dhistogram_VBzgsm_sws_e}
 	}
 \end{figure}
@@ -243,7 +252,8 @@ The fit curve is plotted in \autoref{fig:Kp_2dhistogram_VBzgsm_sws_fit_e}.
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_VBzgsm_sws_fit_e.pdf}
 	}{
-		\caption{Mean \Kp{} values (+) and MAD values (dotted lines) per \vBz~interval. The error bars represent the relative data count. The logarithmic fit (dashed line) is plotted with a mean MAD band (shaded area). The splitted function (\ref{eq:log_square_fit_function}) is used for the weighted fit.}
+		\caption[\lofimage{figures_of_mine/chapter2/Kp_2dhistogram_VBzgsm_sws_fit_e.pdf}I created the figure myself.]
+		{Mean \Kp{} values (+) and MAD values (dotted lines) per \vBz~interval. The error bars represent the relative data count. The logarithmic fit (dashed line) is plotted with a mean MAD band (shaded area). The splitted function (\ref{eq:log_square_fit_function}) is used for the weighted fit.}
 		\label{fig:Kp_2dhistogram_VBzgsm_sws_fit_e}
 	}
 \end{figure}
@@ -281,13 +291,15 @@ Again, as done before for the data processing of the E"~field analysis, 3"~hour 
 		\ffigbox{
 			\includegraphics[width=0.5\Xhsize]{figures_of_mine/chapter2/histogram_V_d.pdf}
 		}{
-			\caption{Solar wind velocity frequency distributions for the 3"~hour average and 3"~hour maximum data. The minutely OMNI data from the period 1981--2016 is used.}
+			\caption[\lofimage{figures_of_mine/chapter2/histogram_V_d.pdf}I created the figure myself.]
+			{Solar wind velocity frequency distributions for the 3"~hour average and 3"~hour maximum data. The minutely OMNI data from the period 1981--2016 is used.}
 			\label{fig:histogram_V_d}
 		}
 		\ffigbox{
 			\includegraphics[width=\Xhsize]{figures_of_mine/chapter2/cc_lag_sws_f.pdf}
 		}{
-			\caption{\Kp{}--velocity correlation coefficients for time shifts in the range from $-24$ to 48~hours. The correlations are plotted for the whole solar wind data (solid lines), for solar wind streams without CMEs (dashed line), and for CMEs only (dotted line). The data used is the 3"~hour averages (black) and the 3"~hour maxima (red) of the minutely high resolution OMNI data from the period 1981--2016.}
+			\caption[\lofimage{figures_of_mine/chapter2/cc_lag_sws_f.pdf}I created the figure myself.]
+			{\Kp{}--velocity correlation coefficients for time shifts in the range from $-24$ to 48~hours. The correlations are plotted for the whole solar wind data (solid lines), for solar wind streams without CMEs (dashed line), and for CMEs only (dotted line). The data used is the 3"~hour averages (black) and the 3"~hour maxima (red) of the minutely high resolution OMNI data from the period 1981--2016.}
 			\label{fig:cc_lag_sws_f}
 		}
 	\end{floatrow}
@@ -342,7 +354,8 @@ The general \Kp--velocity dependency in the solar wind is apparent from the tilt
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_V_sws_d.pdf}
 	}{
-		\caption{\Kp--velocity distributions for all solar wind data, for solar wind streams, and for CMEs. The data used is the 3"~hour maximum of the minutely high resolution OMNI data from the time period 1981--2016. The SWS list from \citet{Richardson2012} is used for the separation between CME and stream data. The bin size is \SI{10}{\km\per\s} and \SI{1/3}{\Kp}~unit respectively.}
+		\caption[\lofimage{figures_of_mine/chapter2/Kp_2dhistogram_V_sws_d.pdf}I created the figure myself.]
+		{\Kp--velocity distributions for all solar wind data, for solar wind streams, and for CMEs. The data used is the 3"~hour maximum of the minutely high resolution OMNI data from the time period 1981--2016. The SWS list from \citet{Richardson2012} is used for the separation between CME and stream data. The bin size is \SI{10}{\km\per\s} and \SI{1/3}{\Kp}~unit respectively.}
 		\label{fig:Kp_2dhistogram_V_sws_d}
 	}
 \end{figure}
@@ -354,7 +367,8 @@ In order to determine a functional relation between \Kp{} and CME velocity, I lo
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_V_sws1_c2.pdf}
 	}{
-		\caption{CME part of the \Kp--velocity distribution (same as third panel of \autoref{fig:Kp_2dhistogram_V_sws_d}) and its relative distribution per velocity interval with the mean \Kp{} values (solid line) and their MAD (dotted lines). The bin size is \SI{10}{\km\per\s} and \SI{1/3}{\Kp}~unit respectively.}
+		\caption[\lofimage{figures_of_mine/chapter2/Kp_2dhistogram_V_sws1_c2.pdf}I created the figure myself.]
+		{CME part of the \Kp--velocity distribution (same as third panel of \autoref{fig:Kp_2dhistogram_V_sws_d}) and its relative distribution per velocity interval with the mean \Kp{} values (solid line) and their MAD (dotted lines). The bin size is \SI{10}{\km\per\s} and \SI{1/3}{\Kp}~unit respectively.}
 		\label{fig:Kp_2dhistogram_V_sws1_c2}
 	}
 \end{figure}
@@ -378,7 +392,8 @@ which is plotted in \autoref{fig:Kp_2dhistogram_V_sws1_fit_e}.
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_V_sws1_fit_e.pdf}
 	}{
-		\caption{Mean \Kp{} values (+) and MAD values (dotted lines) per velocity interval for the CME part of the data. The error bars represent the relative data count. The logarithmic fit (dashed line) is plotted with a mean MAD band (shaded area). The function (\ref{eq:log_offset_fit_function}) is used for the weighted fit.}
+		\caption[\lofimage{figures_of_mine/chapter2/Kp_2dhistogram_V_sws1_fit_e.pdf}I created the figure myself.]
+		{Mean \Kp{} values (+) and MAD values (dotted lines) per velocity interval for the CME part of the data. The error bars represent the relative data count. The logarithmic fit (dashed line) is plotted with a mean MAD band (shaded area). The function (\ref{eq:log_offset_fit_function}) is used for the weighted fit.}
 		\label{fig:Kp_2dhistogram_V_sws1_fit_e}
 	}
 \end{figure}
@@ -391,7 +406,8 @@ I use this shifted data and look at the relative frequencies per velocity interv
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_V_sws23_d.pdf}
 	}{
-		\caption{Stream part of the \Kp--velocity distribution (similar to second panel of \autoref{fig:Kp_2dhistogram_V_sws_d}, but with the data shifted by 9~hours) and its relative distribution per velocity interval with the mean \Kp{} values (solid line) and their MAD (dotted lines). The bin size is \SI{10}{\km\per\s} and \SI{1/3}{\Kp}~unit respectively.}
+		\caption[\lofimage{figures_of_mine/chapter2/Kp_2dhistogram_V_sws23_d.pdf}I created the figure myself.]
+		{Stream part of the \Kp--velocity distribution (similar to second panel of \autoref{fig:Kp_2dhistogram_V_sws_d}, but with the data shifted by 9~hours) and its relative distribution per velocity interval with the mean \Kp{} values (solid line) and their MAD (dotted lines). The bin size is \SI{10}{\km\per\s} and \SI{1/3}{\Kp}~unit respectively.}
 		\label{fig:Kp_2dhistogram_V_sws23_d}
 	}
 \end{figure}
@@ -415,7 +431,8 @@ which is plotted in \autoref{fig:Kp_2dhistogram_V_sws23_fit_e}.
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_V_sws23_fit_e.pdf}
 	}{
-		\caption{Mean \Kp{} values (+) and MAD values (dotted lines) per velocity interval for the stream part of the data, shifted by 9~hours. The error bars represent the relative data count. The logarithmic fit (dashed line) is plotted with a mean MAD band (shaded area). The function (\ref{eq:log_offset_fit_function}) is used for the weighted fit.}
+		\caption[\lofimage{figures_of_mine/chapter2/Kp_2dhistogram_V_sws23_fit_e.pdf}I created the figure myself.]
+		{Mean \Kp{} values (+) and MAD values (dotted lines) per velocity interval for the stream part of the data, shifted by 9~hours. The error bars represent the relative data count. The logarithmic fit (dashed line) is plotted with a mean MAD band (shaded area). The function (\ref{eq:log_offset_fit_function}) is used for the weighted fit.}
 		\label{fig:Kp_2dhistogram_V_sws23_fit_e}
 	}
 \end{figure}
@@ -438,7 +455,7 @@ In order to evaluate all models' prediction performances, their forecast errors 
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/model_performance_d.pdf}
 	}{
-		\caption[\lofimage{figures_of_mine/chapter2/model_performance_d.pdf}]
+		\caption[\lofimage{figures_of_mine/chapter2/model_performance_d.pdf}I created the figure myself.]
 		{Prediction performance of \Kp{} persistence and the three derived empirical \Kp{} relations. The forecast errors are the differences between the predicted and the actual values. They are calculated from the same data and time range as the relations themselves. The errorbars denote one positive and one negative standard deviation. Forecast errors with one-sided deviations are plotted in gray. Perfect predictions are indicated by the diagonal lines.}
 		\label{fig:model_performance_d}
 	}
@@ -464,7 +481,8 @@ In order to further test the derived models for their predictive value, I derive
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/true_skill_score.pdf}
 	}{
-		\caption{True skill scores for the \Kp{} persistence and the three predictive models as a function of \Kp{} threshold. The scores are calculated from the same data and time range as the relations themselves.}
+		\caption[\lofimage{figures_of_mine/chapter2/true_skill_score.pdf}I created the figure myself.]
+		{True skill scores for the \Kp{} persistence and the three predictive models as a function of \Kp{} threshold. The scores are calculated from the same data and time range as the relations themselves.}
 		\label{fig:true_skill_score}
 	}
 \end{figure}
@@ -530,10 +548,9 @@ The 2"~month sample period of solar wind and \Kp{} data is displayed in \autoref
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{figures_of_mine/chapter2/example_sw_plot_1month_b_2013-5-1_65.pdf}
-	\caption[\lofimage{figures_of_mine/chapter2/example_sw_plot_1month_b_2013-5-1_65.pdf}]
+	\caption[\lofimage{figures_of_mine/chapter2/example_sw_plot_1month_b_2013-5-1_65.pdf}I created the figure myself.]
 	{Solar wind parameters, official \Kp~index, and estimated \Kp{} indices for the 65"~day time period from 1~May to 5~July 2013. The solar wind parameters are the magnetic field strength, its z"~component in GSM coordinates, the velocity, and the product of the latter two. I also plot the velocity's 3"~hour maxima and the \vBz{}'s 3"~hour minima for illustration. The \Kp{} estimates based on the electric field and the velocity relations are displayed together with their mean MAD bands. The \Kp{} estimates from both velocity relations are chosen according to the periods flagged as CMEs or streams in the SWS list (red lines in top panel). The solar wind data are from the minutely OMNI data set and the official \Kp~index is obtained from the GFZ~Potsdam.}
 	\label{fig:example_sw_plot_1month_b_2013-5-1_65}
-	\addtocontents{lof}{\smallskip\protect\center I created the figure myself.\medskip}
 \end{figure}
 The considered period ranges from 1~May to 5~July 2013, when the solar activity cycle~24 had its maximum. The period contains various types of structures, such as HSSs, CIRs, and CMEs.
 
@@ -548,10 +565,9 @@ The second plot zooms in on the latter CME -- it covers the 6"~day time period f
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{figures_of_mine/chapter2/example_sw_plot_CME_b_2013-6-26_6.pdf}
-	\caption[\lofimage{figures_of_mine/chapter2/example_sw_plot_CME_b_2013-6-26_6.pdf}]
+	\caption[\lofimage{figures_of_mine/chapter2/example_sw_plot_CME_b_2013-6-26_6.pdf}I created the figure myself.]
 	{Solar wind parameters, official \Kp~index, and estimated \Kp{} indices for the 6"~day time period from 26~June to 2~July 2013. All panels show the same parameters as in \autoref{fig:example_sw_plot_1month_b_2013-5-1_65}. The period covers the CME from 27~June 2013, which induced a peak \Kp{} of $6+$.}
 	\label{fig:example_sw_plot_CME_b_2013-6-26_6}
-	\addtocontents{lof}{\smallskip\protect\center I created the figure myself.\medskip}
 \end{figure}
 The plot shows the same parameters as in the previous plot. This more detailed sample period confirms the observations made from the previous 2"~month period. In addition, it can be seen that deviations in the \vBz{} based \Kp{} prediction are found at the times of the initial shock, and the start and center of the MC. The velocity based models perform okay during the initial sheath region and around the peak of the trailing HSS, however, the main part of the MC is underestimated. The CME velocity based model is able to track the initial shock when considering the mixed-flag 3"~hour interval beginning at 27~June 2013 12:00. The background is that the SWS list flags each hour, thus, 3"~hour intervals in between solar wind structures can contain flags of different structures.
 
@@ -573,7 +589,8 @@ The maximal velocities included in the OMNI data are around \SI{1100}{\km\per\s}
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_V_sws123_fit_f2.pdf}
 	}{
-		\caption{Logarithmic fit curves for CMEs (dashed line) and streams (dotted line) with their corresponding mean MAD bands (shaded areas). I expanded the curve for CMEs up to a hypothetical \Kp{} of 12. The curve for solar wind streams is cut at \SI{1100}{\km\per\s} because streams do not occur at these high velocities. The curves are the same as in Figures~\ref{fig:Kp_2dhistogram_V_sws1_fit_e} and \ref{fig:Kp_2dhistogram_V_sws23_fit_e}.}
+		\caption[\lofimage{figures_of_mine/chapter2/Kp_2dhistogram_V_sws123_fit_f2.pdf}I created the figure myself.]
+		{Logarithmic fit curves for CMEs (dashed line) and streams (dotted line) with their corresponding mean MAD bands (shaded areas). I expanded the curve for CMEs up to a hypothetical \Kp{} of 12. The curve for solar wind streams is cut at \SI{1100}{\km\per\s} because streams do not occur at these high velocities. The curves are the same as in Figures~\ref{fig:Kp_2dhistogram_V_sws1_fit_e} and \ref{fig:Kp_2dhistogram_V_sws23_fit_e}.}
 		\label{fig:Kp_2dhistogram_V_sws123_fit_f2}
 	}
 \end{figure}

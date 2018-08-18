@@ -17,22 +17,21 @@ The Sun's sidereal differential angular velocity can be approximated by the func
 \begin{align}
 	\omega_\odot(\theta) = \omega_\text{eq} + B \sin^2(\theta) + C \sin^4(\theta)	\,,	\label{eq:omega_differential}
 \end{align}
-with the heliolatitude $\theta$, the equatorial angular velocity $\omega_\text{eq} = \SI{14.37}{\degree\per\day}$, and the coefficients $B = \SI{-2.33}{\degree\per\day}$ and $C = \SI{-1.56}{\degree\per\day}$. I plotted this function in \autoref{fig:differential_rotation}.
-\begin{figure}[htb]
-	\fcapside[\FBwidth]{
-		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/differential_rotation.pdf}
-	}{
-		\caption{Diagram showing the angular velocity of the sidereal solar surface differential rotation over solar latitude. The upper x-axis shows the corresponding sidereal rotation period.}
-		\label{fig:differential_rotation}
-	}
-	\addtocontents{lof}{\smallskip\protect\center I created the figure myself.\medskip}
-\end{figure}
-Thus, the solar equatorial sidereal rotation period is $T_\odot^\text{eq} = \SI{25.05}{\day}$ and the synodic period is
+with the heliolatitude $\theta$, the equatorial angular velocity $\omega_\text{eq} = \SI{14.37}{\degree\per\day}$, and the coefficients $B = \SI{-2.33}{\degree\per\day}$ and $C = \SI{-1.56}{\degree\per\day}$. I plot this function in \autoref{fig:differential_rotation} for illustration. Thus, the solar equatorial sidereal rotation period is $T_\odot^\text{eq} = \SI{25.05}{\day}$ and the synodic period is
 \begin{align}
 	T_\odot^\text{eq,syn} &= \left(\frac{1}{T_\odot^\text{eq}} - \frac{1}{T_\text{E}}\right)^{-1}\\
 	&= \SI{26.90}{\day}	\,,	\nonumber
 \end{align}
 with a Julian year as the Earth's orbital rotation period, $T_\text{E} = \SI{365.25}{\day}$.
+\begin{figure}[htb]
+	\fcapside[\FBwidth]{
+		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/differential_rotation.pdf}
+	}{
+		\caption[\lofimage{figures_of_mine/gnuplots/differential_rotation.pdf}I created the figure myself.]
+		{Diagram showing the angular velocity of the sidereal solar surface differential rotation over solar latitude. The upper x-axis shows the corresponding sidereal rotation period.}
+		\label{fig:differential_rotation}
+	}
+\end{figure}
 
 The differential rotation differs locally in the different surface structures, such as sunspots and CHs. The angular velocity slows down with sunspot age and changes with how deep the structure is rooted in the interior \citep{Pulkkinen1998}. The average differential rotation profile is asymmetric in both hemispheres and also varies slightly with solar activity. Thus, \autoref{eq:omega_differential} is not a definite function, infact the average rotation rate is even observed to slow down during the last couple of solar cycles.
 
@@ -198,10 +197,10 @@ with $t$ in years, suffices for the plot of the seasonal changes in Earth's sola
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/Sun_Earth_geometry.pdf}
 	}{
-		\caption{Seasonal changes of the Sun's and the Earth's tilt angles to the ecliptic and of the Earth's solar distance. The curves are approximated with trigonometric fuctions.}
+		\caption[\lofimage{figures_of_mine/gnuplots/Sun_Earth_geometry.pdf}I created the figure myself.]
+		{Seasonal changes of the Sun's and the Earth's tilt angles to the ecliptic and of the Earth's solar distance. The curves are approximated with trigonometric fuctions.}
 		\label{fig:Sun_Earth_geometry}
 	}
-	\addtocontents{lof}{\smallskip\protect\center I created the figure myself.\medskip}
 \end{figure}
 The total distance variation of \SI{3.34}{\%} has implications for the magnitude of the solar wind quantities measured at Earth, as most of them follow a power law distance dependency. Thus for example, the density varies about \SI{6.7}{\percent} between summer and winter because it scales with $r^{-2}$.
 
@@ -322,30 +321,29 @@ In the case of rare event forecasting, the contingency table is dominated by cor
 
 \section{Lognormal distribution}
 \label{sec:lognormal_distribution}
-This is a small summary about the lognormal probability distribution. The lognormal distribution is the distribution of a random variable $X$ if the logarithm of $X$ conforms to a normal distribution \citep[p.~780]{Bronstein2000}. Its shape is highly asymmetric, however the Gaussian bell curve is recognizable in a semi-log plot, see \autoref{fig:lognormal_semi_log}.
+This is a small summary about the lognormal probability distribution. The lognormal distribution is the distribution of a random variable $X$ if the logarithm of $X$ conforms to a normal distribution \citep[p.~780]{Bronstein2000}. Its shape is highly asymmetric, however the Gaussian bell curve is recognizable in a semi-log plot, see \autoref{fig:lognormal_semi_log}. Its probability density function is
+\begin{align}
+	f(x) &= \frac{1}{\sigma \sqrt{2 \pi} x} \, \text{e}^{- \frac{(\ln x - \mu)^2}{2 \sigma^2}}	\,,
+\end{align}
+with the location ($\mu$) and the shape parameter ($\sigma$). Changes in $\mu$ affect both the horizontal and vertical scaling of the function, whereas $\sigma$ has an influence on its shape, see the graphs with different $\mu$ and $\sigma$ in \autoref{fig:lognormal_ms_b}.
 \begin{figure}[htb]
 	\begin{floatrow}
 		\ffigbox{
 			\includegraphics[width=0.46\textwidth]{figures_of_mine/gnuplots/lognormal_semi_log.pdf}
 		}{
-			\caption{Lognormal probability density function plotted in a linear (top panel) and semi-log (bottom panel) way. Both distributions have the parameters $\sigma = 1$ and $\mu = 0$.}
+			\caption[\lofimage{figures_of_mine/gnuplots/lognormal_semi_log.pdf}I created the figure myself.]
+			{Lognormal probability density function plotted in a linear (top panel) and semi-log (bottom panel) way. Both distributions have the parameters $\sigma = 1$ and $\mu = 0$.}
 			\label{fig:lognormal_semi_log}
 		}
-		\addtocontents{lof}{\smallskip\protect\center I created the figure myself.\medskip}
 		\ffigbox{
 			\includegraphics[width=0.46\textwidth]{figures_of_mine/gnuplots/lognormal_ms_b.pdf}
 		}{
-			\caption{Sets of five different lognormal distributions plotted with a fixed $\sigma$ (top panel) and a fixed $\mu$ (bottom panel). The Gaussian curve is drawn for comparison.}
+			\caption[\lofimage{figures_of_mine/gnuplots/lognormal_ms_b.pdf}I created the figure myself.]
+			{Sets of five different lognormal distributions plotted with a fixed $\sigma$ (top panel) and a fixed $\mu$ (bottom panel). The Gaussian curve is drawn for comparison.}
 			\label{fig:lognormal_ms_b}
 		}
-		\addtocontents{lof}{\smallskip\protect\center I created the figure myself.\medskip}
 	\end{floatrow}
 \end{figure}
-Its probability density function is
-\begin{align}
-	f(x) &= \frac{1}{\sigma \sqrt{2 \pi} x} \, \text{e}^{- \frac{(\ln x - \mu)^2}{2 \sigma^2}}	\,,
-\end{align}
-with the location ($\mu$) and the shape parameter ($\sigma$). Changes in $\mu$ affect both the horizontal and vertical scaling of the function, whereas $\sigma$ has an influence on its shape, see the graphs with different $\mu$ and $\sigma$ in \autoref{fig:lognormal_ms_b}.
 
 A lognormal distribution adheres to the general properties noted in the following. As it is a probability distribution, its area is normalized:
 \begin{align*}

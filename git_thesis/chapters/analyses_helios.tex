@@ -291,23 +291,23 @@ The model assumes a frequency distribution of lognormal shape and shifts this di
 It is evident that during the closest perihelion, strong magnetic fields are estimated to occur more frequently than predicted from the model in the paper.
 
 \subsection{Conclusion}
-The key difference between the magnetic field strength models presented in this section and in the paper lies in their differing solar distance relations. The models both still assume a lognormal distributed magnetic field strength and the same dependency on solar activity. Instead of being based on a simple power law, the solar distance relation derived above is based on the well-founded spiral field model formulated by \citet{Parker1958}. This newly derived IMF relation fits the Helios data as good as that one presented in \citet{Venzmer2018}. However, the function is slightly more curved so that the magnetic field becomes larger outside the fitted solar distance range \SIrange{0.3}{1}{\au}. The consequence is a significant increase in the predicted field strength at the perihelia of PSP's orbital trajectory, ranging from \SI{8}{\%} at the first perihelion to \SI{32}{\%} at the first closest perihelion. I suggest it results in more accurate predictions for the near-Sun region.
-
-% % % former outlook
-Seasonal effects from the orbit of the Earth have an influence on the OMNI data set, as it represents measurements located at the bow shock of the magnetosphere. These effects include the Earth's solar distance and its heliographic latitude. It would be valuable to estimate how large the resulting errors for the models are.
+The key difference between the magnetic field strength models presented in this section and in the paper lies in their differing solar distance relations. The models both still assume a lognormal distributed magnetic field strength and the same dependency on solar activity. Instead of being based on a simple power law, the solar distance relation derived above is based on the well-founded spiral field model formulated by \citet{Parker1958}. I suggest this newly derived IMF relation results in more accurate predictions for the near-Sun region. It fits the Helios data as good as that one presented in \citet{Venzmer2018}, however, the function is slightly more curved so that the magnetic field becomes larger outside the fitted solar distance range \SIrange{0.3}{1}{\au}. The consequence is a significant increase in the predicted field strength at the perihelia of PSP's orbital trajectory, ranging from \SI{8}{\%} at the first perihelion to \SI{32}{\%} at the first closest perihelion.
 
 
 \section{Possible solar wind model refinements}
-Currently, the solar wind models described in the paper and in this chapter are purely empirical and the four solar wind quantities are characterized independently from each other. In further steps, theoretical relations connecting the parameters could be introduced to make the model more self-consistent. For example, proton flux conservation could be implemented into the radial distance dependencies, relating the two parameters density and velocity. Or also, the solar wind velocity within the magnetic field's azimuthal component (\autoref{eq:b_phi_vector}) could be respected as a variable and not as a constant as it is done in the previous section, relating the two parameters velocity and magnetic field strength.\\
+Currently, the solar wind models described in the paper and in this chapter are purely empirical and the four solar wind quantities are characterized independently from each other. In further steps, theoretical relations connecting the parameters could be introduced to make the model more self-consistent.
 
-see notes...\\
+For example, proton flux conservation could be implemented into the radial distance dependencies, relating the two parameters density and velocity. Presuming a spherical radial solar wind outflow, the proton flux ($j = v n A$) per solid angle ($A \propto r^2$) is conserved. Closer to the Sun the assumption of a radial outflow is invalid as there exist in particular a significant equatorward flow of solar wind from the higher latitudes. Assuming power law distance dependencies for the velocity ($v \propto r^{e_v}$) and density ($n \propto r^{e_n}$), it can be seen that the exponents are related as the flux is distance independent:
+\begin{align}
+	\frac{\text{d}j}{\text{d}r} = 0	&	&\Rightarrow	&	&e_v + e_n + 2 = 0	&	&\Leftrightarrow	&	&e_v + e_n = -2	\,,	\nonumber
+% 	\frac{\text{d}}{\text{d}r} (v_0 r^{e_v} n_0 r^{e_n} A_0 r^2) &= 0	\,,\\
+% 	v_0 n_0 A_0 (e_v + e_n + 2) r^{e_v + e_n + 1} &= 0	\,,\\
+\end{align}
+Thus, an increasing velocity results in a steeper than $r^{-2}$ density fall-off.
+
+Another example is that the solar wind velocity within the magnetic field's azimuthal component (\autoref{eq:b_phi_vector}) could be respected as a variable and not as a constant as it is done in the previous section, relating the two parameters velocity and magnetic field strength.
 
 
-list principal conclusions of this study:\\
-- \\
-
-
-% There exist a lot more aspects related to solar wind that are not covered in this study, i.e., MHD waves, the electron pitch angle, solar energetic particles, dust particles, and neutral energetic atoms. It would be worth looking into these properties as well...\\
 
 \bigskip
 {\small
@@ -335,6 +335,7 @@ conserved quantities:\\
 %increase in sw velocity with distance; speed increase mainly in slow solar wind
 %density deviates from a purely r^-2 fall-off (10% faster); n(r)=6.1*r^-2.1 cm^-3; different behavior in slow and fast wind
 %proton flux density constant between 0.3-1.0~au -> no meridional flow into/out of the ecliptic; different for slow and fast sw
+
 
 With consideration of continuity, the mass flux per solid angle has to be constant: $\dot{m} = \text{const}$\\
 conserved quantities:\\
@@ -405,6 +406,9 @@ we expect for the magnetic field strength (paper scaling law $n(r) \propto r^{-1
 $B(0.983~au) = 5.870~nT$\\
 $B(1~au) = 5.705~nT$\\
 $B(1.017~au) = 5.547~nT$\\
+
+% % % former outlook
+Seasonal effects from the orbit of the Earth have an influence on the OMNI data set, as it represents measurements located at the bow shock of the magnetosphere. These effects include the Earth's solar distance and its heliographic latitude. It would be valuable to estimate how large the resulting errors for the models are.
 
 
 \subsection{Latitude dependency}

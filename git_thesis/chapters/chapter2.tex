@@ -533,7 +533,7 @@ The BSS model developed by \citet{Savani2015,Savani2017} predicts the magnetic f
 \section{Discussion}
 % solar activity influence
 For the solar wind predictive \Kp{} models, the influence of the solar activity is not considered despite its contribution of a variation of about 1.6~\Kp~units (see \autoref{sec:kp_long_term_variations}). A detailed analysis of the solar activity's influence on the \Kp{} prediction behavior lies outside the scope of this thesis. Nevertheless, it would be worth examining the solar cycle's influence on the relations, especially as \citet{Wing2005} note that the predictability of \Kp{} slightly scales with solar activity.
-\citet{Gopalswamy2014} indicate in particular that low solar activity leads to a decreased geomagnetic effectiveness of CMEs in general. The reason is the reduced pressure within the heliosphere, which allows for a greater expansion of CMEs, resulting in the dilution of the magnetic field in the CME as well as weaker fields in the accompanying ambient compression regions.\\
+\citet{Gopalswamy2014} indicate in particular that low solar activity leads to a decreased geomagnetic effectiveness of CMEs in general. The reason is the reduced pressure within the heliosphere, which allows for a greater expansion of CMEs, resulting in the dilution of the magnetic field in the CME as well as weaker fields in the accompanying ambient compression regions.
 % % low solar activity influence on geomagnetic storms/space weather
 % \textit{The weaker solar activity cycle 24 seems to have important consequences for CMEs in the heliosphere: CMEs expand anomalously due to reduced heliospheric pressure leading to the increased observed rate of small CMEs, halos originating far from the disk center, and mild space weather (\citep{Gopalswamy2014}, 2015a; Petrie 2015).\\
 % The total pressure in the heliosphere (magnetic + plasma) is reduced by ca. 40\%, which leads to the anomalous expansion of CMEs explaining the increased slope. The excess CME expansion contributes to the diminished effectiveness of CMEs in producing magnetic storms during cycle 24, both because the magnetic content of the CMEs is diluted and also because of the weaker ambient fields \citep{Gopalswamy2014}.\\
@@ -553,15 +553,17 @@ The 2"~month sample period of solar wind and \Kp{} data is displayed in \autoref
 	\label{fig:example_sw_plot_1month_b_2013-5-1_65}
 \end{figure}
 The considered period ranges from 1~May to 5~July 2013, when the solar activity cycle~24 had its maximum. The period contains various types of structures, such as HSSs, CIRs, and CMEs.
-
 % describe plot
 The plot shows the solar wind IMF strength, its z"~component, the velocity with its 3"~hour maxima, and the electric field \vBz{} with its 3"~hour minima. The \Kp{} estimate based on the electric field relation is displayed together with the official \Kp~index. The CME and stream velocity relations are displayed together with the official \Kp~index as well, however, both velocity relations are chosen according to the periods flagged as CMEs or streams in the SWS list, that is, either via Equation~(\ref{eq:kpvsv_CME_dependency_function}) or (\ref{eq:kpvsv_stream_dependency_function}).
 
 % interprete plot
-It can be seen that in the considered period the \Kp{} estimate based on the E"~field traces the actual \Kp~index pretty well within its mean MAD band, whereas the \Kp{} estimates based on both velocity relations do not coincide well with the actual \Kp~index. The stream velocity based model overestimates small \Kp{} values, which occur during rarefaction regions of declining velocity, whereas compressed regions are underestimated, such as the interaction region on 1~June 2013. The CME velocity based model underestimates the effect of pronounced MCs, as is seen for the CMEs on 6~June and 27~June 2013.
+It can be seen that in the considered period the \Kp{} estimate based on the E"~field traces the actual \Kp~index pretty well within its mean MAD band, whereas the \Kp{} estimates based on both velocity relations do not coincide that well with the actual \Kp~index. The stream velocity based model overestimates small \Kp{} values, which occur during rarefaction regions of declining velocity, whereas compressed regions are underestimated, such as the interaction region on 1~June 2013. The CME velocity based model underestimates the effect of pronounced MCs, as is seen for the CMEs on 6~June and 27~June 2013.
+
+% Elliott2013
+A study that differentiates especially between compression and rarefaction regions is that of \citet{Elliott2013}. They compare three threshold techniques to do so: by sorting for density, dynamic pressure, and velocity slope. The three \Kp--velocity distribution panels in \autoref{fig:Kp_2dhistogram_V_sws_d} look indeed very similar to the Figures~3 and~4 from \citet{Elliott2013}. This is because they sort the \Kp{}--velocity distribution for CMEs and streams, use OMNI data, and the SWS list as well, however, they use a different time resolution, data processing, and time period. More precisely, they use 3"~hour averages of the hourly OMNI data set, modify the CME-associated periods of the SWS list with additional constraints, and use data from the time period 1963--2009.
 
 % 6~day sub-period
-The second plot zooms in on the latter CME -- it covers the 6"~day time period from 26~June to 2~July 2013, see \autoref{fig:example_sw_plot_CME_b_2013-6-26_6}.
+The second solar wind plot zooms in on the latter CME -- it covers the 6"~day time period from 26~June to 2~July 2013, see \autoref{fig:example_sw_plot_CME_b_2013-6-26_6}.
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{figures_of_mine/chapter2/example_sw_plot_CME_b_2013-6-26_6.pdf}
@@ -569,22 +571,13 @@ The second plot zooms in on the latter CME -- it covers the 6"~day time period f
 	{Solar wind parameters, official \Kp~index, and estimated \Kp{} indices for the 6"~day time period from 26~June to 2~July 2013. All panels show the same parameters as in \autoref{fig:example_sw_plot_1month_b_2013-5-1_65}. The period covers the CME from 27~June 2013, which induced a peak \Kp{} of $6+$.}
 	\label{fig:example_sw_plot_CME_b_2013-6-26_6}
 \end{figure}
-The plot shows the same parameters as in the previous plot. This more detailed sample period confirms the observations made from the previous 2"~month period. In addition, it can be seen that deviations in the \vBz{} based \Kp{} prediction are found at the times of the initial shock, and the start and center of the MC. The velocity based models perform okay during the initial sheath region and around the peak of the trailing HSS, however, the main part of the MC is underestimated. The CME velocity based model is able to track the initial shock when considering the mixed-flag 3"~hour interval beginning at 27~June 2013 12:00. The background is that the SWS list flags each hour, thus, 3"~hour intervals in between solar wind structures can contain flags of different structures.
-
+The plot shows the same parameters as in the previous plot. This more detailed sample period agrees with the observations made from the previous 2"~month period. In addition, it can be seen that deviations in the \vBz{} based \Kp{} prediction are found at the times of the initial shock, and the start and center of the MC. The velocity based models perform okay during the initial sheath region and around the peak of the trailing HSS, however, the main part of the MC (where $B_\text{z} < \SI{-10}{\nano\tesla}$) is underestimated. The CME velocity based model is able to track the initial shock when considering the mixed-flag 3"~hour interval beginning at 27~June 2013 12:00. The background is that the SWS list flags each hour, thus, 3"~hour intervals in between solar wind structures can contain flags of different structures.
 % learned/conclusions
-When comparing the \Kp{} estimations for the \vBz{} and velocity based predictive models, it becomes apparent how important the influence of the magnetic field z"~component is.\\
-
-
-% comparison and differences to existing studies
-The three \Kp--velocity distribution panels in \autoref{fig:Kp_2dhistogram_V_sws_d} look very similar to the Figures~3 and~4 from \citet{Elliott2013}. This is because they sort the \Kp{}--velocity distribution for CMEs and streams, use OMNI data, and the SWS list as well, however, they use a different time resolution, data processing, and time period. More precisely, they use 3"~hour averages of the hourly OMNI data set, modify the CME-associated periods of the SWS list with additional constraints, and use data from the time period 1963--2009.
-
-They further differentiate between compression and rarefaction regions and compare three threshold techniques to do so: by sorting for density, dynamic pressure, and velocity slope.\\
-
-% correlation studies between solar wind and geomagnetic indices, see Akasofu1981 p.~126, table\\
+When comparing the \Kp{} estimations for the \vBz{} and velocity based predictive models, it becomes apparent how significant the influence of the magnetic field z"~component is.
 
 
 % extreme CME speeds
-The maximal velocities included in the OMNI data are around \SI{1100}{\km\per\s}. Current solar wind plasma spectrometers are only able to reliably measure speeds up to this value, leading to data gaps during the affected periods. Yet, CMEs can be much faster -- speeds of up to \SI{2000}{\km\per\s} at \SI{1}{\au} were reconstructed \citep{Russell2013}. Future studies have to show how accurate the CME relation is in predicting \Kp{} from extreme CMEs with velocities higher than \SI{1100}{\km\per\s}. According to the CME velocity relation (\ref{eq:kpvsv_CME_dependency_function}), a CME speed of \SI{2000}{\km\per\s} would lead on average to a theoretical \Kp{} of $11.2$, however, the \Kp{} scale is capped at 9o and a \Kp{} of 9o is reached on average already at a velocity of \SI{1479}{\km\per\s}, see \autoref{fig:Kp_2dhistogram_V_sws123_fit_f2}.
+The maximal velocities included in the OMNI data are around \SI{1100}{\km\per\s}. Current solar wind plasma spectrometers are only able to reliably measure speeds up to this value. Yet, CMEs can be much faster -- speeds of up to \SI{2000}{\km\per\s} at \SI{1}{\au} were reconstructed \citep{Russell2013}. Future studies have to show how accurate the CME relation is in predicting \Kp{} from extreme CMEs with velocities higher than \SI{1100}{\km\per\s}. According to the CME velocity relation (\ref{eq:kpvsv_CME_dependency_function}), a CME speed of \SI{2000}{\km\per\s} would lead on average to a theoretical \Kp{} of $11.2$, however, the \Kp{} scale is capped at 9o and a \Kp{} of 9o is reached on average already at a velocity of \SI{1479}{\km\per\s}, see \autoref{fig:Kp_2dhistogram_V_sws123_fit_f2}.
 \begin{figure}
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_V_sws123_fit_f2.pdf}
@@ -596,6 +589,8 @@ The maximal velocities included in the OMNI data are around \SI{1100}{\km\per\s}
 \end{figure}
 
 The capped \Kp{} scale limits the capability to quantify the ground impacts of extremely fast CMEs. \Kp{} is linked to the \textit{ap}~index, which translates to the ground magnetic field disturbance at about \SI{+-50}{\degree} dipole latitudes and thus can directly be expressed in \si{\nano\tesla}. The limit could be overcome, if the \Kp-to-\textit{ap} conversion table (see \autoref{tab:kp_to_ap_table}) would be expanded above \Kp{} 9o. Then the absolute ground field disturbances evoked by extremely fast CMEs could be estimated via the \Kp{} relation for CMEs displayed in \autoref{fig:Kp_2dhistogram_V_sws123_fit_f2}.
+
+% correlation studies between solar wind and geomagnetic indices, see Akasofu1981 p.~126, table\\
 
 
 \section{Conclusions}
@@ -612,32 +607,32 @@ With the results presented in this chapter, I elaborate the step from solar wind
 % Applications
 The derived \Kp{} relations constitute a part of the UGOE/IAG CME forecast chain, which consists of CME source region and coronal environment analysis, 3D modeling of the CME structure, CME acceleration and propagation modeling, CME arrival time and parameter prediction, and the subsequent forecast of relevant space weather effects, such as its impact on the \Kp~index and the ionospheric TEC.
 
-Prototype \Kp{} relations were integrated into applications developed within the AFFECTS project (2011--2013). The following services are accessible via the \mbox{AFFECTS} website\footnote{AFFECTS website: \urlfoot{http://www.affects-fp7.eu/services/}} and contain early results from the present \Kp{} study:
-\begin{itemize*}
-	\item Real-time solar wind plot: \href{http://www.affects-fp7.eu/rssfeeds/ace_ap_forecast_plot/ace_realtime_ap_CH_GFT_plot.png}{Solar Wind and \Kp{} forecast plot} -- ACE/DSCOVR real-time solar wind and \Kp{} forecast plot.
-	\item RSS feed: \href{http://www.affects-fp7.eu/rssfeeds/rssfeed_kp/rssfeed_kp.xml}{L1 Kp Alert} -- threshold-based RSS feed that gets triggered when the estimated \Kp{} surpasses a threshold specified as being $7-$.
-	\item RSS feed: \href{http://www.affects-fp7.eu/rssfeeds/rssfeed_gnss/rssfeed_gnss.xml}{L1 GNSS Alert} -- threshold-based RSS feed that gets triggered when a specified GNSS error is reached. The value is derived from the \Kp{} estimate.
-	\item RSS feed: \href{http://www.affects-fp7.eu/rssfeeds/rssfeed_aurora/rssfeed_aurora.xml}{L1 Aurora Alert} -- threshold-based RSS feed that gets triggered when a specified auroral latitude is reached. The value is derived from the \Kp{} estimate.
-	\item The L1 Alerts are accessible via the \href{https://itunes.apple.com/au/app/affects/id893579846}{AFFECTS app for iPhone}.
-\end{itemize*}
+Prototype \Kp{} relations were integrated into applications developed within the AFFECTS project (2011--2013). The following services contain early results from the present \Kp{} study and are accessible via the \mbox{AFFECTS} website\footnote{AFFECTS website: \urlfoot{http://www.affects-fp7.eu/services/}}. The corresponding services comprise a real-time plot, and alerts disseminated via RSS feeds and a mobile app. The \href{http://www.affects-fp7.eu/rssfeeds/ace_ap_forecast_plot/ace_realtime_ap_CH_GFT_plot.png}{Solar Wind and \Kp{} forecast plot} and the alerts are based on the \Kp--\vBz{} relation and process real-time solar wind measurements from L1: The \href{http://www.affects-fp7.eu/rssfeeds/rssfeed_kp/rssfeed_kp.xml}{L1 Kp Alert} is a threshold-based RSS feed that gets triggered when the estimated \Kp{} surpasses a threshold specified as being $7-$. The \href{http://www.affects-fp7.eu/rssfeeds/rssfeed_gnss/rssfeed_gnss.xml}{L1 GNSS Alert} and the \href{http://www.affects-fp7.eu/rssfeeds/rssfeed_aurora/rssfeed_aurora.xml}{L1 Aurora Alert} are threshold-based RSS feeds that derive GNSS error and auroral latitude from the \Kp{} estimate. The L1 Alerts are also accessible via the \href{https://itunes.apple.com/au/app/affects/id893579846}{AFFECTS app for iPhone}.\\
 % 	\urltext{http://www.affects-fp7.eu/app-services/L1-Alerts/dataL1Alerts.txt}\\
 % 	\item Android app L1 Alerts... \urltext{https://play.google.com/store/apps/details?id=com.afects.forecasts}
-% 	\item has SW-Display \Kp{} forecast??
 
 
 % conclusions from data processing
-- for \vBz{} it is of key importance to capture the extreme values, i.e., to use high resolution solar wind data.\\
-- for $v$ the underlying data resolution is negligible\\
-$v$ is suited for remote forecast situations, whereas \vBz{} is not, because short-term variations in $B_\text{z}$ cannot be predicted yet.\\
-- It is confirmed that averaging over 3"~hour intervals neglects short-term geoeffective features/structures in the IMF $B_\text{z}$.\\
-- 3"~hour minima consider these structures and gain a significant higher correlation.\\
+From the results presented here, I conclude that when correlating \vBz{} with \Kp{} it is of key importance to capture the 3"~hour minimum values, i.e., to use high resolution solar wind data, whereas when using velocity the underlying data resolution is negligible.
+
+It is confirmed that averaging over 3"~hour intervals neglects short-term geoeffective features/structures in the IMF $B_\text{z}$. The calculation of 3"~hour minima considers these structures and gains a significant higher correlation.
+
+Thus, the solar wind velocity is best suited for remote forecast situations, whereas \vBz{} is not, because short-term variations in $B_\text{z}$ cannot be predicted yet.
 
 % principal conclusions
-- The different trend of the velocity curves confirmes that for the prediction of \Kp{} from remote velocity determination, it is beneficial to utilize separate CME and stream forecast methods.\\
-- As the obtained functional relations are simple, they cannot compete with current models based on artificial neural networks, \Kp{} persistence, or full-fledged solar wind coupling functions. However, they enable empirical estimations of the mean \Kp{} impact for special forecast situations, that is, \Kp{} can directly be quantified from measured solar activity, in-situ solar wind, and remotely determined CME and stream velocities.\\
-- The extension of the CME velocity relation to about \SI{1500}{\km\per\s} may be used for predicting the \Kp~index of fast CMEs.\\
-- The ground geomagnetic disturbances of the rare, extremely fast CME events (\SI{>1500}{\km\per\s}) could be resolved and estimated via extending the relation between \Kp{} and \textit{ap}.\\
+The differences in magnitude and trend of the velocity curves confirmes that for the prediction of \Kp{} from solar wind velocity, it is beneficial to utilize separate \Kp{} relations for CMEs and streams.
 
+The extension of the CME velocity relation from \SI{1100}{\km\per\s} to \SI{1500}{\km\per\s} can be used for predicting the \Kp~index of fast CMEs, if the \Kp--velocity dependency indeed holds true for that speed regime as well.
+
+The ground geomagnetic disturbances of the rare, extremely fast CME events with velocities above \SI{1500}{\km\per\s} could be resolved and estimated via extending the relation between \Kp{} and \textit{ap}.
+
+
+As the obtained functional relations are based only on one or two aspects of the solar wind--magnetosphere coupling, they cannot compete with full-fledged solar wind coupling functions, such as the rate magnetic flux is opened at the magnetopause (\autoref{eq:newell_merging_function}), nor with current models based on artificial neural networks or \Kp{} persistence. Nevertheless, they enable empirical estimations of the mean \Kp{} impact for special forecast situations, that is, \Kp{} can directly be quantified from measured solar activity, in-situ solar wind, and remotely determined CME and stream velocities.
+
+- for \Kp{} nowcasts via the E-field the sw data processing is of major importance\\
+- average and strong geomagnetic activity is likely underestimated by the predictions from the \Kp--velocity relations\\
+- from the derived ambient solar wind velocity--Kp relation it is not possible forecast geomagnetic storms\\
+- from the derived CME velocity--Kp relation strong geomagnetic storms are likely to be underestimated\\
 
 
 % discuss $r_{vB_\text{z}} = -0.72$ vs $r_{d\phi/dt} = 0.76$ (Newell)\\

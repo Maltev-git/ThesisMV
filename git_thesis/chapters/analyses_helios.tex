@@ -8,10 +8,11 @@ The analyses in the previous chapter are focused on the solar wind's influence o
 % context of motivation in thesis and paper introduction and context of results in thesis\\
 
 %COFI -- chapter outline and flow integration
-This chapter is constructed as follows: first the PSP mission and its scientific goals are described, then I introduce the analyses done in the publication \citet{Venzmer2018}, which constitutes the major part of this chapter. Further, an alternative magnetic field model is derived, which changes the solar distance dependency from the power law in our article to support a Parker magnetic field geometry. Finally, an outlook is given, suggesting different effects that are to be analyzed and quantified further, and could be implemented into the solar wind model.
+This chapter is constructed as follows: in the first \autoref{sec:PSP_mission}, the PSP mission and its scientific goals are described. In \autoref{sec:on_the_published_article} I introduce the analyses done in the publication \citet{Venzmer2018}, which constitutes the major part of this chapter. Then in \autoref{sec:Parker_IMF_solar_distance_dependency}, an alternative magnetic field model is derived, which changes the solar distance dependency from the power law in our article to support a Parker magnetic field geometry. Further in \autoref{sec:possible_solar_wind_model_refinements}, possible improvements to the solar wind model are sketched.
 
 
 \section{Parker Solar Probe mission}
+\label{sec:PSP_mission}
 Remote observations of the Sun and its corona revealed a wealth of structures and dynamical processes. Over time, most underlying physical mechanisms were identified and the observed features were integrated into a comprehensive picture of the Sun. However, key questions remain unanswered \citep{McComas2007}: It is still unknown how the corona is so much hotter than the chromosphere beneath \citep{Klimchuk2006} and the exact processes involved in the acceleration of the solar wind are not fully understood \citep{Hollweg1985,Cranmer2017}.
 
 Up to now coronal heating and solar wind acceleration remain the open problems that drive the motivation to directly probe the near-Sun environment \citep{McComas2007,Fox2015}. The mission concept of a solar probe taking in-situ measurements from the corona dates back to 1958 when NASA was founded \citep{McComas200807}. The closest solar wind in-situ measurements made so far were done by the two Helios probes, see also \autoref{sec:helios_probes}. Helios~1 was launched in 1974 and reached a perihelion distance of \SI{0.31}{\au} (\SI{67}{\Rs}) and Helios~2 was launched in 1976 and reached a perihelion distance of \SI{0.29}{\au} (\SI{62}{\Rs}) \citep{Rosenbauer1977}. Yet, the solar wind acceleration region is predicted to extend up to the Alfvénic critical surface which lies at solar distances between \SIrange{15}{30}{\Rs} \citep{Katsikas2010,Goelzer2014}. Thus, the Helios spacecraft flew well bejond the region where the magic happens.
@@ -65,6 +66,7 @@ The study in \citet{Venzmer2018} is conducted within the Coronagraphic German An
 
 
 \section{On the published article}
+\label{sec:on_the_published_article}
 %%% contributions and copyright
 The major part of this chapter is published under the title ``Solar-wind predictions for the Parker Solar Probe orbit'' in \citet{Venzmer2018}, which is also just referred to as 'the paper' in this chapter. The article was published online on 20~March 2018 in Astronomy and Astrophysics (A\&A). It is included following this chapter, denoted as \autoref{chap:solar_wind_predictions_for_the_parker_solar_probe_orbit}. The European Southern Observatory (ESO) is the holder of the copyright -- the article is reproduced with permission.
 
@@ -96,8 +98,9 @@ After the publishing of the paper, PSP's launch date was shifted from initially 
 
 
 \section{Parker magnetic field solar distance dependency}
+\label{sec:Parker_IMF_solar_distance_dependency}
 % intro
-In our article we noted that the model's near-Sun field magnitude, extrapolated to PSP's closest perihelion, will be lower than the actual values to be found. We scaled the magnetic field strength via a power-law function and obtained a solar-distance dependency proportional to $r^{-1.662}$. However, it is a simplified approach -- in the following I present a procedure, leading to an improved distance dependency, which is intended to account for the Parker IMF geometry, respecting the contributions of the individual field vector components, which have different power-law scalings. It is found that Voyager~1 observations of the magnetic field strength at solar distances larger than \SI{1}{\au} agree well with Parker’s IMF model \citep{Burlaga1984,Burlaga2002}. In the following, this alternative distance dependency for the IMF model is derived and its predictions are compared to those from the paper.
+In our article we noted that the model's near-Sun field magnitude, extrapolated to PSP's closest perihelion, will be lower than the actual values to be found. We scaled the magnetic field strength via a power-law function and obtained a solar-distance dependency proportional to $r^{-1.662}$. However, even though this approach is used in some cases \citep[e.g.,][]{Coleman1969,Hellinger2013}, it remains a simplification -- in the following I implement an improved distance dependency and thus modify the magnetic field model from the paper. The new distance dependency is intended to account for the Parker IMF geometry, respecting the contributions of the individual field vector components, which have different power-law scalings. It is found that Voyager~1 observations of the magnetic field strength at solar distances larger than \SI{1}{\au} agree well with Parker’s IMF model \citep{Burlaga1984,Burlaga2002}. In the following, this alternative distance dependency for the IMF model is derived and its predictions are compared to those from the paper.
 
 \subsection{Parker magnetic field}
 The coronal magnetic field near the Sun rotates rigidly, holding on to the coronal plasma. At the solar wind source surface, at around \SI{2.5}{\Rs} where the thermal plasma pressure overcomes the magnetic pressure, the magnetic field gets transported outwards in a radial way, maintaining only its radial vector component $\vect{B}_r$. From there on, the solar rotation begins to shear the magnetic field, building up a longitudinal component $\vect{B}_\phi$ as well. This solar wind magnetic field model was formulated by \citet{Parker1958} and has the following components in spherical coordinates ($\theta$ is the colatitude):
@@ -295,18 +298,18 @@ The key difference between the magnetic field strength models presented in this 
 
 
 \section{Possible solar wind model refinements}
-Currently, the solar wind models described in the paper and in this chapter are purely empirical and the four solar wind quantities are characterized independently from each other. In further steps, theoretical relations connecting the parameters could be introduced to make the model more self-consistent.
+\label{sec:possible_solar_wind_model_refinements}
+Currently, the solar wind models described in the paper and in this chapter are purely empirical and the four solar wind quantities are characterized independently from each other. In further steps, theoretical relations connecting the individual solar wind parameters could be introduced to make the model more self-consistent.
 
-For example, proton flux conservation could be implemented into the radial distance dependencies, relating the two parameters density and velocity. Presuming a spherical radial solar wind outflow, the proton flux ($j = v n A$) per solid angle ($A \propto r^2$) is conserved. Closer to the Sun the assumption of a radial outflow is invalid as there exist in particular a significant equatorward flow of solar wind from the higher latitudes. Assuming power law distance dependencies for the velocity ($v \propto r^{e_v}$) and density ($n \propto r^{e_n}$), it can be seen that the exponents are related as the flux is distance independent:
+For example, proton flux conservation could be implemented into the radial distance dependencies, as it was found to be the quantity which varies the least with solar distance \citep{Schwenn1983}. This would relate the two solar wind parameters density and velocity. Presuming a spherical radial solar wind outflow, the proton flux ($j = v n A$) per solid angle ($A \propto r^2$) is conserved. Nonradial flow is almost not existent beyond \SI{0.29}{\au} \citep{Schwenn1983}, however, close to the Sun the assumption of a radial outflow becomes invalid as there exist in particular a significant equatorward flow of solar wind from the higher latitudes. Assuming power law distance dependencies for the velocity ($v \propto r^{e_v}$) and density ($n \propto r^{e_n}$), it can be seen that the exponents are related via the following condition as the flux is distance independent:
 \begin{align}
-	\frac{\text{d}j}{\text{d}r} = 0	&	&\Rightarrow	&	&e_v + e_n + 2 = 0	&	&\Leftrightarrow	&	&e_v + e_n = -2	\,,	\nonumber
+	\frac{\text{d}j}{\text{d}r} = 0	&	&\Rightarrow	&	&e_v + e_n + 2 = 0	&	&\Leftrightarrow	&	&e_v + e_n = -2	\,.	\nonumber
 % 	\frac{\text{d}}{\text{d}r} (v_0 r^{e_v} n_0 r^{e_n} A_0 r^2) &= 0	\,,\\
 % 	v_0 n_0 A_0 (e_v + e_n + 2) r^{e_v + e_n + 1} &= 0	\,,\\
 \end{align}
-Thus, an increasing velocity results in a steeper than $r^{-2}$ density fall-off.
+Thus, where the solar wind is accelerated/decelerated, the density fall-off has to deviate from $r^{-2}$ as well.
 
-Another example is that the solar wind velocity within the magnetic field's azimuthal component (\autoref{eq:b_phi_vector}) could be respected as a variable and not as a constant as it is done in the previous section, relating the two parameters velocity and magnetic field strength.
-
+Another example would be to respect the solar wind velocity as a time-variable parameter within the magnetic field's azimuthal component $\vect{B}_\phi$ and not as a constant as it is done in the previous section (\autoref{eq:b_phi_vector}). This would relate the two parameters velocity and magnetic field strength, as the Parker spiral angle has to change with velocity.
 
 
 \bigskip
@@ -315,166 +318,6 @@ Another example is that the solar wind velocity within the magnetic field's azim
 The analyses in this chapter are based on the Helios and the OMNI data, which are supplied by the SPDF at the GSFC (NASA). The author thanks the Helios and OMNI PIs/teams for creating and making available the solar wind in-situ data. Additional thank for maintaining and providing the international sunspot number series goes to the WDC-SILSO at the SIDC (ROB).
 }
 
-\section{notes...}
-Schwenn1983 intro -> sw-averaging comment (beer and wine) (cite him...)\\
-see Hellinger2013 p.1353\\
-see Balogh1999 from p. 162 (Helios CIR results)\\
-
-at larger distances (specify...) heating outbalances the adiabatic temperature part (adiabatic cooling vs. pickup proton and stream--interaction heating; 1--68~au by Voyager~2; \citet{Richardson2003}\\
-solar wind ram pressure $p_\text{ram} = \rho V^2$\\
-
-\subsection{flux conservation}
-conserved quantities:\\
-- momentum conservation... VBbookp112\\
-- flux conservation...\\
-
-%%%%%%%%%%%--  flux  --%%%%%%%%%%%%%%%
-%As Schwenn1983 stated ``From Helios in situ measurements we know that at least beyond 0.29~au there is almost no nonradial flow, on the average. In fact, the particle flux was found to be that quantity which varies the least with increasing R.''\\
-
-%Schwenn1990:
-%increase in sw velocity with distance; speed increase mainly in slow solar wind
-%density deviates from a purely r^-2 fall-off (10% faster); n(r)=6.1*r^-2.1 cm^-3; different behavior in slow and fast wind
-%proton flux density constant between 0.3-1.0~au -> no meridional flow into/out of the ecliptic; different for slow and fast sw
-
-
-With consideration of continuity, the mass flux per solid angle has to be constant: $\dot{m} = \text{const}$\\
-conserved quantities:\\
-- mass flux: $\dot{m} = \rho v A$ (with mass density $\rho$, velocity $v$ and solid angle A)\\
-- particle fluxes (proton flux, electron flux, etc.)\\
-	- proton flux: $j_\text{p} = n_\text{p} v_\text{p} A$ (with proton density $n_\text{p}$ and proton velocity $v_\text{p}$)\\
-
-(with proton mass density $\rho = n_\text{p} m_\text{p}$ (with proton number density $n_\text{p}$ and proton mass $m_\text{p}$).)\\
-
-the individual radial dependencies for a spherical radial outflow are:\\
-$A(r) \propto r^2$ --> $A/r^2 = \text{const}$\\
-and assuming exponential dependencies,\\
-$n_{\text{p}}(r) = n_0 r^{c_n}$,\\
-$v(r) = v_0 r^{c_v}$\\
-\begin{align}
-	j_\text{p} &= \text{const}\\
-	n_\text{p} v_\text{p} A &= \text{const}\\
-	n_0 r^{c_n} v_0 r^{c_v} r^2 &= \text{const}\\
-	r^{c_n} r^{c_v} r^2 &= \text{const}\\
-	\Rightarrow c_n + c_v + 2 &= 0\\
-	c_n + c_v &= -2
-\end{align}
-Thus, an increasing velocity results in a steeper density fall-off.\\
-
-validity of mass flux continuity: within the heliosphere mass to energy conversion and vice versa is negligible, but there can be flux from and to higher latitudes as the Helios data is localized to a small latitude range in the ecliptic plane.\\
-larger errors should be located near CMEs and CIRs (nonradial flows from deflections)\\
-there is a proton flux difference between slow and fast solar wind streams (see book Schwenn1990 p.~146)
-
-estimate the possible size of error:\\
-(constant mass flux only for mean)\\
-$c_n = -2.114$\\
-$c_v = 0.0990$\\
-$c_n + c_v = -2.024$\\
-difference to -2 is 0.024\\
-
-simple view: For a spherical constant velocity mass outflow, a per distance squared law is expected for the density, because of the mass flux conservation per solid angle for different distances. Measurements up to the outer heliosphere confirm the $r^{-2}$ dependency (1--38~au by Voyager~2, \citep{Belcher1993} newer paper?)\\
-
-
-\subsection{Seasonal solar wind variations}
-seasonal variation by month\\
-quantify variation amplitudes\\
-
-see \autoref{fig:OMNI_monthly_freq_V_gps} and \autoref{fig:OMNI_monthly_freq_B_a_gps}\\
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=0.3\textwidth]{figures_of_mine/gnuplots/OMNI_monthly_freq_V_gps.png}
-	\caption{Diagram of the velocity frequency by month for the period 1963/01--2013/08. Mean and median values are shown as well.}
-	\label{fig:OMNI_monthly_freq_V_gps}
-\end{figure}
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=0.3\textwidth]{figures_of_mine/gnuplots/OMNI_monthly_freq_B_a_gps.png}
-	\caption{Diagram of magnetic field frequency by month for the period 1963/01--2013/08. Mean and median values are shown as well as the expected course from the solar distance variation (obtained from Helios data).}
-	\label{fig:OMNI_monthly_freq_B_a_gps}
-\end{figure}
-make 4-panel figure...\\
-
-derived exponent values from simple trigonometric fit on monthly values:\\
-$c_n = -2.234$\\
-maybe figure?\\
-
-expected influence from Earth's perihelion/aphelion (see Appendix...) distance vs observations\\
-we expect for the mean proton density (scaling law $n(r) \propto r^{-2.114}$):\\
-$n(0.983~au) = 7.098~cm^{-3}$\\
-$n(1~au) = 6.845~cm^{-3}$\\
-$n(1.017~au) = 6.605~cm^{-3}$\\
-we expect for the magnetic field strength (paper scaling law $n(r) \propto r^{-1.662}$):\\
-$B(0.983~au) = 5.870~nT$\\
-$B(1~au) = 5.705~nT$\\
-$B(1.017~au) = 5.547~nT$\\
-
-% % % former outlook
-Seasonal effects from the orbit of the Earth have an influence on the OMNI data set, as it represents measurements located at the bow shock of the magnetosphere. These effects include the Earth's solar distance and its heliographic latitude. It would be valuable to estimate how large the resulting errors for the models are.
-
-
-\subsection{Latitude dependency}
-refer to Ulysses \autoref{fig:McComas2008_Ulysses_orbit}\\
-Ulysses swoops polar plots...\\
-
-see Schwenn1990's~Fig.~3.14\\
-see also \citet{Schwenn1990} p.~127\\
-see also \citet{Richardson1995}\\
-Balogh et al. (1999) p. 162 ff (origin and formation of CIRs in inner heliosphere with Helios data; latitude V dependence)\\
-
-Helios latitude; see \autoref{fig:latitude_frequency_4_thesis_plot}
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=0.5\textwidth]{figures_of_mine/gnuplots/latitude_frequency_4_thesis_plot.png}
-	\caption{The four solar wind parameter's HGI latitude dependency. Their mean and median values per \SI{0.1}{\degree} bin are plotted as well. I added a random distance value of up to \SI{+-0.005}{\au} in order to make the distribution visible in this plot.}
-	\label{fig:latitude_frequency_4_thesis_plot}
-\end{figure}
-
-with the exponential dependencies to 1~au projected solar wind parameters; there are only small changes with latitude in the range \SIrange{-7.25}{7.25}{\degree}\\
-have a look on distribution widths...\\
-
-dependence from latitude in interval \SIrange{-7.25}{7.25}{\degree} in Helios data negligible?, see \autoref{fig:latitude_frequency_rcorrected_v3_4_thesis_plot}.\\
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=0.5\textwidth]{figures_of_mine/gnuplots/latitude_frequency_rcorrected_v3_4_thesis_plot.png}
-	\caption{Solar wind parameters projected to 1~au with respect to latitude. And their mean values, including weighted fit. I added a random distance value of up to \SI{+-0.005}{\au} in order to make the distribution visible in this plot. add projected median...}
-	\label{fig:latitude_frequency_rcorrected_v3_4_thesis_plot}
-\end{figure}
-estimate error ranges from latitude influence...\\
-
-...plot Ulysses data into plot?\\
-
-%latitude variation negligible?
-influence from latitude variation in data negligible? (see Ulysses \autoref{fig:McComas2008_Ulysses_orbit} in introduction). Helios probes within ecliptic => variation span equal to solar tilt: \SIrange{-7.25}{7.25}{\degree}; solar tilt/obliquity to ecliptic: $i_\odot = 7.25\degree$ (Sun fact sheet: \url{http://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html)}\\
-big part of Helios data is from latitudes $>\pm5$°, see Figure~XX (data count over latitude) and see \autoref{fig:Helios12_orbits_ecliptic_polar} (Helios orbit polar plane in data section)\\
-
-The Helios magnetic field and plasma data frequency over heliocentric distance and over heliographic latitude are plotted in \autoref{fig:helios_data_frequency}.\\
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=\textwidth]{figures_of_mine/gnuplots/helios_data_frequency.pdf}
-	\caption[\lofimage{figures_of_mine/gnuplots/helios_data_frequency.pdf}]
-	{Helios data frequency over heliocentric distance with bins of \SI{0.01}{au} (left panels) and over heliographic latitude with bins of \SI{0.1}{\degree} (right panels). The frequency data is based on the hourly merged magnetometer and plasma data sets for Helios~1 and Helios~2. The top panels show the frequencies for Helios~1 and Helios~2 individually and the bottom panels those for the magnetometer and plasma data.}
-	\label{fig:helios_data_frequency}
-\end{figure}
-
-
-\subsection{Radial evolution of solar wind structures}
-see CGAUSS \url{report2015_2}
-
-Helios event lists HSSs, SLOWs, CIRs, CMEs...; event lists for all Helios data\\
-see Liu2004 for Helios ICME list and radial dependencies of $B$, $n$, $T$ and $v$...\\
-
-\SI{200}{\km\per\s} slow solar wind at \SI{10}{\Rs} is in agreement with blob measurements from Wang2000\\
-
-very slow sw (VSSW) gets accelerated; see Sanchez-Diaz2016:\\
-%"The reported in situ measurements suggest that the properties of VSSW are a continuation of the slow wind toward lower speeds: higher densities, higher proton fluxes, and lower temperatures, thereby extending well-known scaling laws [Lopez and Freeman, 1986; Hundhausen et al., 1970] down to speeds as low as 200 km/s."\\
-%"The VSSW has a number of interesting properties that suggest it may be the interplanetary signature of long HPS crossings."\\
-
-
-radial diameter of MCs increase between 0.3~au and 4.3~au proportional to the distance as $r^{0.8}$ \citep{Bothmer1998}\\
-MC central axial magnetic field strength radial density dependence $B = 18.1\,r^{-1.64}$ \citet{Leitner2007}\\
-MC average diameter $D = 0.23\,r^{1.14}$ \citet{Leitner2007}
-
-sw structure marked plots\\
-
-
 
 \cleardoublepage
+

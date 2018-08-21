@@ -15,9 +15,11 @@ In this work I addressed solar wind problems relevant to space weather and to th
 
 
 % long synopsis chapter2 without refs
-long synopsis chapter2 without refs\\
+The objectives of the analyses performed and presented in this study are to estimate the geomagnetic impact of solar wind and to predict it for CMEs and streams in particular. I determined the magnitudes of the long-term \Kp{} changes due to solar activity and I measured the extent of seasonal variations stemming from the Earth's orbit. In order to nowcast the \Kp~index, I quantified the solar wind influence on \Kp{} by deriving a functional relation with the solar wind E"~field. For the purpose of enabling \Kp{} forecasts from remote observations, I estimated the \Kp{} impact coming from CMEs and streams separately by deriving functional dependencies with their velocities. The obtained \Kp{} relations were evaluated for their prediction performance. The results were further discussed and the conclusions were presented.\\
 
-Impact estimations derived from empirical correlations between in-situ solar wind measurements and the geomagnetic \Kp{}~index\\
+
+
+Impact estimations derived from empirical correlations between in-situ solar wind measurements and the geomagnetic \Kp~index\\
 
 In order to derive the link from near-Earth solar wind properties to its \Kp{}~impact, 35~years of solar wind high-resolution measurements were correlated with the \Kp~index and empirical relations were derived that enable the prediction of \Kp{} from the solar wind velocity and the IMF z"~component. Early predictions of CME and ambient stream magnetic fields obtained from near-Sun observations currently either are not existent or come with high uncertainties. Thus, to provide \Kp{} predictions, I derived relations exclusively from their arrival velocity.\\
 
@@ -26,8 +28,14 @@ conclusions:\\
 - \\
 
 
+
 % long synopsis chapterPSP without refs
-long synopsis chapterPSP without refs\\
+This study is constructed as follows: first, the PSP mission and its scientific goals were described. I introduced the analyses done in the publication \citet{Venzmer2018}, which constitutes the major part of this study. An alternative magnetic field model was derived, which changes the solar distance dependency from the power law in our article to support a Parker magnetic field geometry. Further, possible improvements to the solar wind model were sketched.\\
+
+% synopsis from paper
+Our approach is to obtain analytical representations of the shapes of the solar wind parameter’s frequency distributions, of their solar activity dependence, and of their solar distance scaling. The solar wind parameters’ frequency distributions and solar activity dependence were derived from near-Earth solar wind and SSN time series with a duration of almost five solar cycles. Their distance dependency was derived from Helios solar wind measurements covering more than two thirds of the distance to the Sun and more than half a solar cycle. From a combination of the obtained frequency distributions, SSN dependence functions, and solar distance dependence functions, a general solar wind model was built, representing the solar activity and distance behavior. Finally, this empirical model was fed with SSN predictions and extrapolated to PSP’s planned orbital positions.\\
+
+
 
 I built an empirical solar wind model for the inner heliosphere in the ecliptic which accounts for the variations of the solar activity cycle and for solar distance. In order to obtain empirical estimates of the solar wind environment PSP is to encounter, this solar wind model was extrapolated down to PSP's planned near-Sun perihelia and was built to consider the expected solar activity during PSP's mission.\\
 
@@ -240,5 +248,118 @@ Using \vBz{} implies that both quantities are sufficiently independent. $B$ and 
 
 rt data errors/gaps... vs science data (see paper Kp as V replacement: \citet{Machol2013})\\
 DSCOVR as replacement was launched on 11~Februar 2015. It is NOAA's SWPC real-time solar wind prime source since 27 July 2016.\footnote{\urlfoot{http://www.swpc.noaa.gov/products/real-time-solar wind}}\\
+
+
+% % % chapterPSP notes
+
+% proton flux conservation
+larger errors should be located near CMEs and CIRs (nonradial flows from deflections)\\
+there is a proton flux difference between slow and fast solar wind streams (see book Schwenn1990 p.~146)
+estimate the possible size of error:\\
+(constant mass flux only for mean)\\
+$c_n = -2.114$\\
+$c_v = 0.0990$\\
+$c_n + c_v = -2.024$\\
+difference to -2 is 0.024\\
+
+at larger distances (specify...) heating outbalances the adiabatic temperature part (adiabatic cooling vs. pickup proton and stream--interaction heating; 1--68~au by Voyager~2; \citet{Richardson2003}\\
+
+solar wind ram pressure $p_\text{ram} = \rho V^2$\\
+
+\subsection{Seasonal solar wind variations}
+seasonal variation by month\\
+quantify variation amplitudes\\
+
+see \autoref{fig:OMNI_monthly_freq_V_gps} and \autoref{fig:OMNI_monthly_freq_B_a_gps}\\
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.3\textwidth]{figures_of_mine/gnuplots/OMNI_monthly_freq_V_gps.png}
+	\caption{Diagram of the velocity frequency by month for the period 1963/01--2013/08. Mean and median values are shown as well.}
+	\label{fig:OMNI_monthly_freq_V_gps}
+\end{figure}
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.3\textwidth]{figures_of_mine/gnuplots/OMNI_monthly_freq_B_a_gps.png}
+	\caption{Diagram of magnetic field frequency by month for the period 1963/01--2013/08. Mean and median values are shown as well as the expected course from the solar distance variation (obtained from Helios data).}
+	\label{fig:OMNI_monthly_freq_B_a_gps}
+\end{figure}
+make 4-panel figure...\\
+
+derived exponent values from simple trigonometric fit on monthly values:\\
+$c_n = -2.234$\\
+maybe figure?\\
+
+expected influence from Earth's perihelion/aphelion (see Appendix...) distance vs observations\\
+we expect for the mean proton density (scaling law $n(r) \propto r^{-2.114}$):\\
+$n(0.983~au) = 7.098~cm^{-3}$\\
+$n(1~au) = 6.845~cm^{-3}$\\
+$n(1.017~au) = 6.605~cm^{-3}$\\
+we expect for the magnetic field strength (paper scaling law $n(r) \propto r^{-1.662}$):\\
+$B(0.983~au) = 5.870~nT$\\
+$B(1~au) = 5.705~nT$\\
+$B(1.017~au) = 5.547~nT$\\
+
+% % % former outlook
+Seasonal effects from the orbit of the Earth have an influence on the OMNI data set, as it represents measurements located at the bow shock of the magnetosphere. These effects include the Earth's solar distance and its heliographic latitude. It would be valuable to estimate how large the resulting errors for the models are.
+
+\subsection{Latitude dependency}
+refer to Ulysses \autoref{fig:McComas2008_Ulysses_orbit}\\
+Ulysses swoops polar plots...\\
+
+see Schwenn1990's~Fig.~3.14\\
+see also \citet{Schwenn1990} p.~127\\
+see also \citet{Richardson1995}\\
+Balogh et al. (1999) p. 162 ff (origin and formation of CIRs in inner heliosphere with Helios data; latitude V dependence)\\
+
+Helios latitude; see \autoref{fig:latitude_frequency_4_thesis_plot}
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.5\textwidth]{figures_of_mine/gnuplots/latitude_frequency_4_thesis_plot.png}
+	\caption{The four solar wind parameter's HGI latitude dependency. Their mean and median values per \SI{0.1}{\degree} bin are plotted as well. I added a random distance value of up to \SI{+-0.005}{\au} in order to make the distribution visible in this plot.}
+	\label{fig:latitude_frequency_4_thesis_plot}
+\end{figure}
+
+with the exponential dependencies to 1~au projected solar wind parameters; there are only small changes with latitude in the range \SIrange{-7.25}{7.25}{\degree}\\
+have a look on distribution widths...\\
+
+dependence from latitude in interval \SIrange{-7.25}{7.25}{\degree} in Helios data negligible?, see \autoref{fig:latitude_frequency_rcorrected_v3_4_thesis_plot}.\\
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.5\textwidth]{figures_of_mine/gnuplots/latitude_frequency_rcorrected_v3_4_thesis_plot.png}
+	\caption{Solar wind parameters projected to 1~au with respect to latitude. And their mean values, including weighted fit. I added a random distance value of up to \SI{+-0.005}{\au} in order to make the distribution visible in this plot. add projected median...}
+	\label{fig:latitude_frequency_rcorrected_v3_4_thesis_plot}
+\end{figure}
+estimate error ranges from latitude influence...\\
+
+...plot Ulysses data into plot?\\
+
+%latitude variation negligible?
+influence from latitude variation in data negligible? (see Ulysses \autoref{fig:McComas2008_Ulysses_orbit} in introduction). Helios probes within ecliptic => variation span equal to solar tilt: \SIrange{-7.25}{7.25}{\degree}\\
+big part of Helios data is from latitudes $>\pm5$°, see Figure~XX (data count over latitude) and see \autoref{fig:Helios12_orbits_ecliptic_polar} (Helios orbit polar plane in data section)\\
+
+The Helios magnetic field and plasma data frequency over heliocentric distance and over heliographic latitude are plotted in \autoref{fig:helios_data_frequency}.\\
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.5\textwidth]{figures_of_mine/gnuplots/helios_data_frequency.pdf}
+	\caption[\lofimage{figures_of_mine/gnuplots/helios_data_frequency.pdf}]
+	{Helios data frequency over heliocentric distance with bins of \SI{0.01}{au} (left panels) and over heliographic latitude with bins of \SI{0.1}{\degree} (right panels). The frequency data is based on the hourly merged magnetometer and plasma data sets for Helios~1 and Helios~2. The top panels show the frequencies for Helios~1 and Helios~2 individually and the bottom panels those for the magnetometer and plasma data.}
+	\label{fig:helios_data_frequency}
+\end{figure}
+
+\subsection{Radial evolution of solar wind structures}
+Helios event lists HSSs, SLOWs, CIRs, CMEs...; event lists for all Helios data\\
+see Liu2004 for Helios ICME list and radial dependencies of $B$, $n$, $T$ and $v$...\\
+
+\SI{200}{\km\per\s} slow solar wind at \SI{10}{\Rs} is in agreement with blob measurements from Wang2000\\
+
+very slow sw (VSSW) gets accelerated; see Sanchez-Diaz2016:\\
+%"The reported in situ measurements suggest that the properties of VSSW are a continuation of the slow wind toward lower speeds: higher densities, higher proton fluxes, and lower temperatures, thereby extending well-known scaling laws [Lopez and Freeman, 1986; Hundhausen et al., 1970] down to speeds as low as 200 km/s."\\
+%"The VSSW has a number of interesting properties that suggest it may be the interplanetary signature of long HPS crossings."\\
+
+radial diameter of MCs increase between 0.3~au and 4.3~au proportional to the distance as $r^{0.8}$ \citep{Bothmer1998}\\
+MC central axial magnetic field strength radial density dependence $B = 18.1\,r^{-1.64}$ \citet{Leitner2007}\\
+MC average diameter $D = 0.23\,r^{1.14}$ \citet{Leitner2007}
+
+sw structure marked plots\\
 
 

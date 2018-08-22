@@ -192,13 +192,13 @@ order=8
 
 [item:appendix/curriculum_vitae.tex]
 archive=true
-column=136
+column=64
 encoding=UTF-8
 highlight=LaTeX
-line=24
+line=19
 mode=LaTeX
-open=false
-order=6
+open=true
+order=5
 
 [item:appendix/literature_bibtex.bib]
 archive=true
@@ -292,10 +292,10 @@ order=6
 
 [item:chapters/front_matter.tex]
 archive=true
-column=68
+column=18
 encoding=UTF-8
 highlight=LaTeX
-line=411
+line=412
 mode=LaTeX
 open=true
 order=2
@@ -413,10 +413,10 @@ JumpList=
 ViMarks=.,344,0,[,344,0,],344,0
 
 [view-settings,view=0,item:appendix/curriculum_vitae.tex]
-CursorColumn=136
-CursorLine=24
+CursorColumn=64
+CursorLine=19
 JumpList=
-ViMarks=.,24,0,[,24,0,],24,0
+ViMarks=.,19,63,[,19,61,],19,63
 
 [view-settings,view=0,item:appendix/literature_bibtex.bib]
 CursorColumn=79
@@ -473,10 +473,10 @@ JumpList=
 ViMarks=.,7,0,[,7,0,],7,0
 
 [view-settings,view=0,item:chapters/front_matter.tex]
-CursorColumn=68
-CursorLine=411
+CursorColumn=18
+CursorLine=412
 JumpList=
-ViMarks=.,411,67,[,411,15,],411,67
+ViMarks=.,412,17,[,412,15,],412,17
 
 [view-settings,view=0,item:chapters/introduction.tex]
 CursorColumn=242

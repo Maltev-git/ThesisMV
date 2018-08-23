@@ -235,7 +235,7 @@ This way, both arms can be scaled individually with scaling factors for the nega
 	f_-(x) &= a_- \cdot \ln\left(\left(x + x'\right)^2 + b\right) + y'	\,,\\
 	f_+(x) &= a_+ \cdot \left(f_-(x) - f_-\left(-x'\right)\right) + f_-\left(-x'\right)	\,,
 \end{align}
-with the vertical shifting parameter $y'$ and the depth parameter $b$. The resulting fit coefficients are \mbox{$a_- = 1.258(19)$}, $x' = 163(20)$, $b = \num{1.416(68)e6}$, $y' = -17.04(33)$, and \mbox{$a_+ = 0.467(20)$} for units of [\si{\km\per\s \nano\tesla}].
+with the vertical shifting parameter $y'$ and the depth parameter $b$. The resulting values of the fit coefficients are \mbox{$a_- = 1.258(19)$}, $x' = 163(20)$, $b = \num{1.416(68)e6}$, $y' = -17.04(33)$, and \mbox{$a_+ = 0.467(20)$} for units of [\si{\km\per\s \nano\tesla}].
 %high precision values:
 % a_- = 1.25788(0.019)\\
 % y' = -17.0394(0.33)\\
@@ -418,7 +418,7 @@ Again, the mean \Kp{} value scales almost linear with the velocity. The distribu
 %MAD: 2.454/3 = 0.818 Kp units for 350--850km/s
 
 %determine fitting function
-Again, I use the logarithmic function (\ref{eq:log_offset_fit_function}) for the fitting process. The resulting fit parameters are $a = \num{5.88(38)}$, $x' = \num{2.99(49)e2}$, and $y' = \num{-3.70(29)e1}$, with the velocity in units of [\si{\km\per\s}].
+Again, I use the logarithmic function (\ref{eq:log_offset_fit_function}) for the fitting process. The resulting values of the fit parameters are \mbox{$a = \num{5.88(38)}$}, $x' = \num{2.99(49)e2}$, and $y' = \num{-3.70(29)e1}$, with the velocity in units of [\si{\km\per\s}].
 %a1 = 5.88(38)
 %b1 = -37.0(29)
 %x1 = 299(49)
@@ -589,7 +589,7 @@ The maximal velocities included in the OMNI data are around \SI{1100}{\km\per\s}
 	}
 \end{figure}
 
-The capped \Kp{} scale limits the capability to quantify the ground impacts of extremely fast CMEs. \Kp{} is linked to the \textit{ap}~index, which translates to the ground magnetic field disturbance at about \SI{+-50}{\degree} dipole latitudes and thus can directly be expressed in \si{\nano\tesla}. The limit could be overcome, if the \Kp-to-\textit{ap} conversion table (see \autoref{tab:kp_to_ap_table}) would be expanded above \Kp{} 9o. Then the absolute ground field disturbances evoked by extremely fast CMEs could be estimated via the \Kp{} relation for CMEs displayed in \autoref{fig:Kp_2dhistogram_V_sws123_fit_f2}.
+The capped \Kp{} scale limits the capability to quantify the ground impacts of extremely fast CMEs. \Kp{} is linked to the \textit{ap}~index, which translates to the ground magnetic field disturbance at about \SI{+-50}{\degree} dipole latitudes and thus can directly be expressed in \si{\nano\tesla}. The limit could be overcome, if the fixed \Kp-to-\textit{ap} conversion table (see \autoref{tab:kp_to_ap_table}) would be redefined and extended above \Kp{} 9o. Then the absolute ground field disturbances evoked by extremely fast CMEs could be estimated via the \Kp{} relation for CMEs displayed in \autoref{fig:Kp_2dhistogram_V_sws123_fit_f2}.
 
 % correlation studies between solar wind and geomagnetic indices, see Akasofu1981 p.~126, table\\
 
@@ -599,15 +599,14 @@ The capped \Kp{} scale limits the capability to quantify the ground impacts of e
 % summary
 With the results presented in this chapter, I elaborate the step from solar wind properties to the prediction of its possible impact strength on the terrestrial magnetosphere. I derive empirical correlations and functional dependencies between solar wind properties and the geomagnetic \Kp~index, in order to obtain the capability to nowcast/forecast the \Kp~index. The following predictive models are obtained from the \Kp{} analyses in this chapter:
 \begin{itemize*}
-	\item The functional relation for the yearly \Kp{} averages relates \Kp{} with solar activity via the SSN, see \autoref{eq:kp_ssn_relation}. The error to it is about 1/3~\Kp{}~unit, whereas seasonal variations further contribute up to 4/3~\Kp{}~units.
-	\item The functional relation for enabling \Kp{} nowcasts relates \Kp{} with the solar wind E"~field, see Equations~(\ref{eq:kpvsvbz_dependency_function_negative}) and (\ref{eq:kpvsvbz_dependency_function_positive}). Its MAD has a mean size of \SI{0.7}{\Kp}~units.
+	\item The functional relation for the yearly \Kp{} averages relates \Kp{} with solar activity via the SSN, see Equation (\ref{eq:kp_ssn_relation}). The error to it is about 1/3~\Kp{}~unit, whereas seasonal variations further contribute up to 4/3~\Kp{}~units.
+	\item The functional relation for enabling \Kp{} nowcasts relates \Kp{} with the solar wind electric field, see Equations~(\ref{eq:kpvsvbz_dependency_function_negative}) and (\ref{eq:kpvsvbz_dependency_function_positive}). Its MAD has a mean size of \SI{0.7}{\Kp}~units.
 	\item The functional relation for enabling CME forecasts relates \Kp{} with the velocity of CME-associated flows, see Equation~(\ref{eq:kpvsv_CME_dependency_function}). Its MAD has a mean size of \SI{1.1}{\Kp}~units.
 	\item The functional relation for enabling stream forecasts relates \Kp{} with the velocity of solar wind streams, see Equation~(\ref{eq:kpvsv_stream_dependency_function}). Its MAD has a mean size of \SI{0.7}{\Kp}~units.
 \end{itemize*}
 
-
 % Applications
-The derived \Kp{} relations constitute a part of the UGOE/IAG CME forecast chain, which consists of CME source region and coronal environment analysis, 3D modeling of the CME structure, CME acceleration and propagation modeling, CME arrival time and parameter prediction, and the subsequent forecast of relevant space weather effects, such as its impact on the \Kp~index and the ionospheric TEC.
+The derived \Kp{} relations constitute a part of the CME forecast chain developed at the Institute for Astrophysics Göttingen, which consists of CME source region and coronal environment analysis, 3D modeling of the CME structure, CME acceleration and propagation modeling, CME arrival time and parameter prediction, and the subsequent forecast of relevant space weather effects, such as its impact on the \Kp~index and the ionospheric TEC.
 
 Prototype \Kp{} relations were integrated into applications developed within the AFFECTS project (2011--2013). The following services contain early results from the present \Kp{} study and are accessible via the \mbox{AFFECTS} website\footnote{AFFECTS website: \urlfoot{http://www.affects-fp7.eu/services/}}. The corresponding services comprise a real-time plot, and alerts disseminated via RSS feeds and a mobile app. The \href{http://www.affects-fp7.eu/rssfeeds/ace_ap_forecast_plot/ace_realtime_ap_CH_GFT_plot.png}{Solar Wind and \Kp{} forecast plot} and the alerts are based on the \Kp--\vBz{} relation and process real-time solar wind measurements from L1: The \href{http://www.affects-fp7.eu/rssfeeds/rssfeed_kp/rssfeed_kp.xml}{L1 Kp Alert} is a threshold-based RSS feed that gets triggered when the estimated \Kp{} surpasses a threshold specified as being $7-$. The \href{http://www.affects-fp7.eu/rssfeeds/rssfeed_gnss/rssfeed_gnss.xml}{L1 GNSS Alert} and the \href{http://www.affects-fp7.eu/rssfeeds/rssfeed_aurora/rssfeed_aurora.xml}{L1 Aurora Alert} are threshold-based RSS feeds that derive GNSS error and auroral latitude from the \Kp{} estimate. The L1 Alerts are also accessible via the \href{https://itunes.apple.com/au/app/affects/id893579846}{AFFECTS app for iPhone}.\\
 % 	\urltext{http://www.affects-fp7.eu/app-services/L1-Alerts/dataL1Alerts.txt}\\
@@ -615,27 +614,16 @@ Prototype \Kp{} relations were integrated into applications developed within the
 
 
 % conclusions from data processing
-From the results presented here, I conclude that when correlating \vBz{} with \Kp{} it is of key importance to capture the 3"~hour minimum values, i.e., to use high resolution solar wind data, whereas when using velocity the underlying data resolution is negligible.
-
-It is confirmed that averaging over 3"~hour intervals neglects short-term geoeffective features/structures in the IMF $B_\text{z}$. The calculation of 3"~hour minima considers these structures and gains a significant higher correlation.
-
-Thus, the solar wind velocity is best suited for remote forecast situations, whereas \vBz{} is not, because short-term variations in $B_\text{z}$ cannot be predicted yet.
+From the results presented in this study, I conclude that when correlating \vBz{} with \Kp{} it is of key importance to capture the 3"~hour minimum values, i.e., to use high resolution solar wind data, whereas when correlating velocity with \Kp{} the underlying data resolution is negligible. The results support that averaging over 3"~hour intervals neglects short-term geoeffective features in the magnetic field z"~component $B_\text{z}$. The calculation of 3"~hour minima considers these magnetic features and leads to a significant higher correlation with \Kp{}. Thus, the solar wind velocity is best suited for remote forecast situations, whereas \vBz{} is not, because short-term variations in $B_\text{z}$ cannot be predicted yet.
 
 % principal conclusions
-The differences in magnitude and trend of the velocity curves confirmes that for the prediction of \Kp{} from solar wind velocity, it is beneficial to utilize separate \Kp{} relations for CMEs and streams.
+There are differences in magnitude and trend in the \Kp--velocity prediction curves obtained from CMEs and streams. This confirms that it is beneficial to utilize separate relations for the prediction of \Kp{} from CME and stream velocities.
 
-The extension of the CME velocity relation from \SI{1100}{\km\per\s} to \SI{1500}{\km\per\s} can be used for predicting the \Kp~index of fast CMEs, if the \Kp--velocity dependency indeed holds true for that speed regime as well.
+The \Kp--velocity dependency for CMEs is derived from velocity data of up to \SI{1100}{\km\per\s}. Assuming this relation holds true for higher speeds, the extension of it could be used to predict the \Kp{} impact of fast CMEs as well. Though, the \Kp--velocity relation for CMEs reaches the maximum \Kp{} of 9o at a CME velocity of \SI{1500}{\km\per\s}. The ground geomagnetic disturbances, generated by the rare, extremely fast CME events having velocities above this value, could be resolved and estimated via redefining and extending the conversion between the \Kp{} and \textit{ap} indices.
 
-The ground geomagnetic disturbances of the rare, extremely fast CME events with velocities above \SI{1500}{\km\per\s} could be resolved and estimated via extending the relation between \Kp{} and \textit{ap}.
+The examination of the prediction performance of the derived predictive models shows that strong geomagnetic storms exceeding a \Kp{} of 7 are being underestimated. The CME velocity relation underestimates their resulting actual \Kp{} on average by about 3~\Kp~units, whereas the stream velocity relation does not even reach the range of geomagnetic storms ($\text{\Kp} \geq 5$), that is, the stream velocity relation is good in predicting lower geomagnetic activity but is not able to predict storms.
 
-
-As the obtained functional relations are based only on one or two aspects of the solar wind--magnetosphere coupling, they cannot compete with full-fledged solar wind coupling functions, such as the rate magnetic flux is opened at the magnetopause (\autoref{eq:newell_merging_function}), nor with current models based on artificial neural networks or \Kp{} persistence. Nevertheless, they enable empirical estimations of the mean \Kp{} impact for special forecast situations, that is, \Kp{} can directly be quantified from measured solar activity, in-situ solar wind, and remotely determined CME and stream velocities.
-
-- for \Kp{} nowcasts via the E-field the sw data processing is of major importance\\
-- average and strong geomagnetic activity is likely underestimated by the predictions from the \Kp--velocity relations\\
-- from the derived ambient solar wind velocity--Kp relation it is not possible forecast geomagnetic storms\\
-- from the derived CME velocity--Kp relation strong geomagnetic storms are likely to be underestimated\\
-
+As the obtained functional relations are based only on one or two aspects of the solar wind--magnetosphere coupling, they cannot compete with full-fledged solar wind coupling functions, such as the rate magnetic flux is opened at the magnetopause (\autoref{eq:newell_merging_function}), nor with current prediction models based on artificial neural networks or \Kp{} persistence. Nevertheless, they enable empirical estimations of the mean geomagnetic activity impact for special forecast situations, that is, \Kp{} can directly be quantified from measured solar activity, monitored in-situ solar wind, and remotely determined CME and stream velocities.
 
 % discuss $r_{vB_\text{z}} = -0.72$ vs $r_{d\phi/dt} = 0.76$ (Newell)\\
 

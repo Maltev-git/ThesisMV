@@ -272,7 +272,7 @@ GSM coordinates are useful in problems regarding the magnetosphere. These coordi
 The Heliographic Inertial (HGI) coordinates are centered at the Sun and oriented with its rotation axis. The z"~axis points northward parallel to the Sun's rotation axis. The x"~axis is parallel to the intersection line between the solar equatorial plane and the ecliptic plane \citep{Burlaga1984a}, which are inclined by \SI{7.25}{\degree}. This x"~axis points to the longitude of the ascending node which was at \SI{74.367}{\degree} on 1~January 1900 at 12:00~UT, but increases slowly with time (about \SI{1.4}{\degree} per century) due to the Earth's precession\footnote{Numbers according to NASA's COHOWeb documentation: \urlfoot{https://omniweb.gsfc.nasa.gov/coho/html/cw_data.html}}. The y"~axis completes the right-handed orthogonal system.
 Over one year, the position of Earth oscillates within a HGI latitude range of \SI{+-7.25}{\degree}.
 
-HGI coordinates are useful when looking at processes concerning the solar wind in the heliosphere. These coordinates are applied for the processing of the Helios data, e.g., in Figures~\ref{fig:Helios_r_b_ssn}, \ref{fig:Helios12_orbits_ecliptic_polar}, and \ref{fig:helios_data_frequency}.
+HGI coordinates are useful when looking at processes concerning the solar wind in the heliosphere. These coordinates are applied for the processing of the Helios data, e.g., in Figures~\ref{fig:Helios_r_b_ssn} and \ref{fig:Helios12_orbits_ecliptic_polar}.
 
 
 \section{True skill statistic}
@@ -309,7 +309,7 @@ The TSS is the difference between the hit rate and the false alarm rate\footnote
 	\mathit{TSS} &= \mathit{POD} - \mathit{POFD}\\
 		&= \frac{n_\text{H} \cdot n_\text{CN} - n_\text{FA} \cdot n_\text{M}}{\left(n_\text{H}+n_\text{M}\right) (n_\text{FA}+n_\text{CN})}	\,.	\nonumber	\label{eq:true_skill_score}
 \end{align}
-Its value is in the range from -1 to 1, with 1 representing an ideal prediction, 0 a random prediction, and -1 an ideal negative prediction. The TSS is positive if the hit rate is higher than the false alarm rate.
+Its value is in the range from $-1$ to 1, with 1 representing an ideal prediction, 0 a random prediction, and $-1$ an ideal negative prediction. The TSS is positive if the hit rate is higher than the false alarm rate.
 
 In the case of rare event forecasting, the contingency table is dominated by correct nulls and the TSS approaches the hit rate. \citet{Doswell1990} show that the Heidke skill score is superior in these situations, in that it considers correct null forecasts in a controlled way. They recommend to use the Heidke skill score in preference to TSS for rare event forecasting. Other often applied skill scores are the threat score, also called critical success index or Gilbert score, and the equitable threat score. However, the TSS is commonly applied to evaluate and compare space weather prediction methods, especially in forecasting the \Kp~index \citep{Detman1999,Wing2005,Savani2017}. The TSS is used in the verification analysis of operational geomagnetic storm forecasts as well, for example at the SIDC\footnote{SIDC's Verification Analysis of the SIDC Forecast website: \urlfoot{http://sidc.be/forecastverification/K_index_storm_5+.php}}.
 
@@ -454,7 +454,6 @@ The nominal distance units astronomical unit (\si{\au}) and solar radius (\Rs) a
 		\item[GSFC] Goddard Space Flight Center
 		\item[HELCATS] Heliographic Cataloging, Analysis and Techniques Service
 		\item[HMI] Helioseismic Magnetic Imager
-		\item[IAG] Institute for Astrophysics Göttingen
 		\item[IAGA] International Association of Geomagnetism and Aeronomy
 		\item[ISGI] International Service of Geomagnetic Indices
 		\item[L1] Lagrange point 1
@@ -476,7 +475,6 @@ The nominal distance units astronomical unit (\si{\au}) and solar radius (\Rs) a
 		\item[SWEPAM] Solar Wind Electron Proton Alpha Monitor
 		\item[SWPC] Space Weather Prediction Center
 		\item[SWS] Solar Wind Structures
-		\item[UGOE] University of Göttingen
 		\item[WDC-SILSO] World Data Center-Sunspot Index and Long-term Solar Observations
 		\item[WISPR] Wide-field Imager for Solar Probe
 	\end{description}

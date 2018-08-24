@@ -12,15 +12,14 @@ In this work I addressed solar wind problems relevant to space weather and to th
 Here, I briefly summarize the principal results and conclusions of both studies and give an outlook on further objectives based on this work.
 
 \section{The solar wind's geomagnetic impact}
-% summary
-% long synopsis chapter2 without refs
+% % % summary
 This study estimates the impact of solar wind on the planetary geomagnetic disturbance indicator \Kp{} and predicts it for CMEs and streams in particular.
 % First, the long-term changes of \Kp{} due to solar activity and the extent of seasonal variations stemming from the Earth's orbit were determined.
 The analyses are based on 35~years (1981--2016) of near-Earth solar wind data from the minutely OMNI data set and \Kp{} data from the GFZ~Potsdam. The separation of CME and stream data is done via the Solar Wind Structures list created by \citet{Richardson2000}.
 The solar wind electric field proxy \vBz{} and the velocity of CMEs and streams were correlated with the \Kp~index. Empirical relations were determined from the mean values of the relative \Kp{} frequency distributions per solar wind parameter interval. Functional dependencies were derived via fitting logarithmic functions to these mean \Kp{} values.
 The obtained \Kp{} relations were evaluated for their prediction performance. The resulting predictive models and conclusions are presented in the following.
 
-% predictive models
+% % % predictive models
 \begin{itemize*}
 	\item Functional dependency of the yearly \Kp{} average on the SSN of the previous year:
 	\begin{align*}
@@ -44,25 +43,34 @@ The obtained \Kp{} relations were evaluated for their prediction performance. Th
 	\begin{align*}
 		\text{\Kp}_\text{CME}(v) &= 10.6 \cdot \ln(v + 810) - 73	\,.
 	\end{align*}
-	The MAD has a mean size of about 1.1~\Kp~units. This relation has a proper range of \numrange{1.3}{6.3}.
+	The MAD has a mean size of about 1.1~\Kp~units. This relation has a proper range of \numrange{1.3}{6.3}. Strong geomagnetic storms exceeding a \Kp{} of 7o are being underestimated on average by about 3~\Kp~units.
 
 	\item Relation between the \Kp~index and the 3"~hour velocity maxima of solar wind streams (fast and slow wind including interaction regions):
 	\begin{align*}
 		\text{\Kp}_\text{Stream}(v) &= 5.88 \cdot \ln(v + 299) - 37.0	\,.
 	\end{align*}
-	The MAD has a mean size of about 0.7~\Kp~units. This relation has a proper range of \numrange{0.3}{4.3}.
+	The MAD has a mean size of about 0.7~\Kp~units. This relation has a proper range of \numrange{0.3}{4.3}. This is well below the threshold of geomagnetic storms and thus the relation is good in predicting lower geomagnetic activity but not geomagnetic storms.
 \end{itemize*}
 
+% % % conclusions
+% conclusions from data processing
+The correlations between \Kp{} and the solar wind parameters electric field and velocity were done for differently processed high-resolution solar wind data, that is, 3"~hour averages and 3"~hour extrema. The processing of 3"~hour \vBz{} minima leads to a significant higher correlation in comparison to 3"~hour averages, whereas correlating 3"~hour velocity maxima results in almost the same correlation as 3"~hour averages.
+These findings support that by averaging over 3"~hour intervals, short-term geoeffective features in the magnetic field z"~component are being missed. Thus, for an efficient \Kp{} prediction via \vBz{}, it is of key importance to capture the magnetic features by using 3"~hour minima of high-resolution data. As short-term variations in $B_\text{z}$ cannot be predicted from remote observations yet, the solar wind electric field is not well suited for remote forecast situations.
+In contrast, as the underlying data resolution makes no difference for the solar wind velocity, it is best suited for remote forecast situations.
 
-Predictive models
-In order to nowcast the \Kp~index, I quantified the solar wind influence on \Kp{}.
-For the purpose of enabling \Kp{} forecasts from remote observations, I estimated the \Kp{} impact coming from CMEs and streams separately by deriving functional dependencies with their velocities.
+% principal conclusions
+The \Kp{} predictive models from CME and stream velocity show a significant difference in magnitude and in trend -- their initial separation of 1~\Kp~unit grows slightly to higher velocities. This confirms the initial assumption that the isolated treatment of CME and stream velocities is beneficial for the prediction of \Kp{}.
 
-In order to derive the link from near-Earth solar wind properties to its \Kp{} impact, solar wind high-resolution data were correlated with the \Kp~index and empirical relations were derived that enable the prediction of \Kp{} from the solar wind velocity and the IMF z"~component. Early predictions of CME and ambient stream magnetic fields obtained from near-Sun observations currently either are not existent or come with high uncertainties. Thus, to provide \Kp{} predictions, I derived relations exclusively from their arrival velocity.\\
+These relations are derived from velocity data that reaches \SI{1100}{\km\per\s}. Assuming the CME relation holds true for even higher speeds, an extension could predict the geomagnetic impact of faster CMEs as well. However, the maximum \Kp{} of 9o is reached at a CME velocity of \SI{1500}{\km\per\s}.
+
+The derived functional relations are based on velocity and magnetic field z"~component, which comprise only part of the relevant solar wind--magnetosphere coupling parameters. The evaluation of the prediction performance of the derived predictive models shows that they indeed cannot compete with models based on full-fledged solar wind coupling functions, nor with current prediction models based on artificial neural networks.
+
+That said, the relations still enable empirical estimations of the average geomagnetic activity for special forecast situations. \Kp{} can directly be quantified from in-situ measurements of the solar wind electric field. As early predictions of CME and stream magnetic fields obtained from remote observations currently either are not existent or come with high uncertainties, \Kp{} relations were derived exclusively for the arrival velocities of CMEs and streams.\\
 
 
-conclusions:\\
-- \\
+
+% % % outlook
+The ground geomagnetic disturbances, generated by the rare, extremely fast CME events having velocities above this value, could be resolved and estimated via redefining and extending the conversion between the \Kp{} and \textit{ap} indices.
 
 
 \section{The solar wind's Sun--Earth evolution}

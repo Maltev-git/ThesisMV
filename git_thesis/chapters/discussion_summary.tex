@@ -1,34 +1,73 @@
 
 \chapter{Conclusions}
 \label{chap:summary}
-
-%COFI -- chapter outline and flow integration\\
-Here, I briefly summarize the principal results of this work and give an outlook on further objectives/questions based on/raised by this work.
-
-\section{Summary}
 % retelling of the principal results
 % summarizing briefly the evidence for each conclusion
 % where the work leaves us
 
 % two topics
-In this work I addressed solar wind problems relevant to space weather and to the Parker~Solar~Probe mission. Predictive models related to solar wind were developed in both studies. In the first study I modeled the solar wind's and CMEs' impact on geomagnetic activity and in the second study I developed an empirical solar wind model for the inner heliosphere.\\
+In this work I addressed solar wind problems relevant to space weather and to the Parker~Solar~Probe mission. Predictive models related to solar wind were developed in both studies. In the first study I modeled the impact of solar wind and CMEs on geomagnetic activity and in the second study I developed an empirical solar wind model for the inner heliosphere.
 
+%COFI -- chapter outline and flow integration
+Here, I briefly summarize the principal results and conclusions of both studies and give an outlook on further objectives based on this work.
 
+\section{The solar wind's geomagnetic impact}
+% summary
 % long synopsis chapter2 without refs
-The objectives of the analyses performed and presented in this study are to estimate the geomagnetic impact of solar wind and to predict it for CMEs and streams in particular. I determined the magnitudes of the long-term \Kp{} changes due to solar activity and I measured the extent of seasonal variations stemming from the Earth's orbit. In order to nowcast the \Kp~index, I quantified the solar wind influence on \Kp{} by deriving a functional relation with the solar wind E"~field. For the purpose of enabling \Kp{} forecasts from remote observations, I estimated the \Kp{} impact coming from CMEs and streams separately by deriving functional dependencies with their velocities. The obtained \Kp{} relations were evaluated for their prediction performance. The results were further discussed and the conclusions were presented.\\
+This study estimates the impact of solar wind on the planetary geomagnetic disturbance indicator \Kp{} and predicts it for CMEs and streams in particular.
+% First, the long-term changes of \Kp{} due to solar activity and the extent of seasonal variations stemming from the Earth's orbit were determined.
+The analyses are based on 35~years (1981--2016) of near-Earth solar wind data from the minutely OMNI data set and \Kp{} data from the GFZ~Potsdam. The separation of CME and stream data is done via the Solar Wind Structures list created by \citet{Richardson2000}.
+The solar wind electric field proxy \vBz{} and the velocity of CMEs and streams were correlated with the \Kp~index. Empirical relations were determined from the mean values of the relative \Kp{} frequency distributions per solar wind parameter interval. Functional dependencies were derived via fitting logarithmic functions to these mean \Kp{} values.
+The obtained \Kp{} relations were evaluated for their prediction performance. The resulting predictive models and conclusions are presented in the following.
+
+% predictive models
+\begin{itemize*}
+	\item Functional dependency of the yearly \Kp{} average on the SSN of the previous year:
+	\begin{align*}
+		\Kp(ssn) = 0.281 \cdot \ln(ssn) + 1.05	\,.
+	\end{align*}
+	The error is about 0.3~\Kp~units but seasonal effects add variations with a magnitude of up to 1.3~\Kp~units.
+
+	\item Two-part relation of the \Kp~index with the 3"~hour minima of the solar wind electric field proxy \vBz{}:
+	\begin{align*}
+		\text{\Kp}\left(vB_\text{z}\right) &=
+		\begin{cases}
+			\,\text{\Kp}_-\left(vB_\text{z}\right) &\text{for~} (vB_\text{z} + 163) < 0	\,,\\
+			\,\text{\Kp}_+\left(vB_\text{z}\right) &\text{for~} (vB_\text{z} + 163) \ge 0	\,.
+		\end{cases}\\
+		\text{\Kp}_-\left(vB_\text{z}\right) &= 1.258 \cdot \ln\left(\left(vB_\text{z} + 163\right)^2 + \num{1.416e6}\right) - 17.04	\,,\\
+		\text{\Kp}_+\left(vB_\text{z}\right) &= 0.467 \cdot \left(\text{\Kp}_-\left(vB_\text{z}\right) - \text{\Kp}_-(-163)\right) + \text{\Kp}_-(-163)	\,.
+	\end{align*}
+	The MAD of this relation has a mean size of 0.7~\Kp~units. This relation provides proper predictions in the \Kp{} range \numrange{1.0}{8.7}.
+
+	\item Relation between the \Kp~index and the 3"~hour velocity maxima of CME-associated flows (including shocked and compressed solar wind plasma):
+	\begin{align*}
+		\text{\Kp}_\text{CME}(v) &= 10.6 \cdot \ln(v + 810) - 73	\,.
+	\end{align*}
+	The MAD has a mean size of about 1.1~\Kp~units. This relation has a proper range of \numrange{1.3}{6.3}.
+
+	\item Relation between the \Kp~index and the 3"~hour velocity maxima of solar wind streams (fast and slow wind including interaction regions):
+	\begin{align*}
+		\text{\Kp}_\text{Stream}(v) &= 5.88 \cdot \ln(v + 299) - 37.0	\,.
+	\end{align*}
+	The MAD has a mean size of about 0.7~\Kp~units. This relation has a proper range of \numrange{0.3}{4.3}.
+\end{itemize*}
 
 
+Predictive models
+In order to nowcast the \Kp~index, I quantified the solar wind influence on \Kp{}.
+For the purpose of enabling \Kp{} forecasts from remote observations, I estimated the \Kp{} impact coming from CMEs and streams separately by deriving functional dependencies with their velocities.
 
-Impact estimations derived from empirical correlations between in-situ solar wind measurements and the geomagnetic \Kp~index\\
-
-In order to derive the link from near-Earth solar wind properties to its \Kp{}~impact, 35~years of solar wind high-resolution measurements were correlated with the \Kp~index and empirical relations were derived that enable the prediction of \Kp{} from the solar wind velocity and the IMF z"~component. Early predictions of CME and ambient stream magnetic fields obtained from near-Sun observations currently either are not existent or come with high uncertainties. Thus, to provide \Kp{} predictions, I derived relations exclusively from their arrival velocity.\\
+In order to derive the link from near-Earth solar wind properties to its \Kp{} impact, solar wind high-resolution data were correlated with the \Kp~index and empirical relations were derived that enable the prediction of \Kp{} from the solar wind velocity and the IMF z"~component. Early predictions of CME and ambient stream magnetic fields obtained from near-Sun observations currently either are not existent or come with high uncertainties. Thus, to provide \Kp{} predictions, I derived relations exclusively from their arrival velocity.\\
 
 
 conclusions:\\
 - \\
 
 
+\section{The solar wind's Sun--Earth evolution}
 
+% summary
 % long synopsis chapterPSP without refs
 This study is constructed as follows: first, the PSP mission and its scientific goals were described. I introduced the analyses done in the publication \citet{Venzmer2018}, which constitutes the major part of this study. An alternative magnetic field model was derived, which changes the solar distance dependency from the power law in our article to support a Parker magnetic field geometry. Further, possible improvements to the solar wind model were sketched.\\
 
@@ -52,37 +91,6 @@ results summary handout\\
 - equations and under which circumstances they are to be used\\
 
 
-\subsubsection*{Solar wind and CME influence on the magnetosphere}
-
-Relation between the yearly averages of the previous year's SSN and the \Kp~index:
-\begin{align}
-	\Kp(ssn) = 0.28 \cdot \ln(ssn) + 1.1	\,.
-\end{align}
-
-The seasonal variations in \Kp{} contribute up to 1.3~\Kp~units.\\
-
-Relation between the 3"~hour minimum values of \vBz{} and the \Kp~index:
-\begin{align*}
-	\text{\Kp}\left(vB_\text{z}\right) &=
-	\begin{cases}
-		\,\text{\Kp}_-\left(vB_\text{z}\right) &\text{for } (vB_\text{z} + 163) < 0	\,,\\
-		\,\text{\Kp}_+\left(vB_\text{z}\right) &\text{for } (vB_\text{z} + 163) \ge 0	\,.
-	\end{cases}
-\end{align*}
-\begin{align*}
-	\text{\Kp}_-\left(vB_\text{z}\right) &= 1.258 \cdot \ln\left(\left(vB_\text{z} + 163\right)^2 + \num{1.416e6}\right) - 17.04	\,,\\
-	\text{\Kp}_+\left(vB_\text{z}\right) &= 0.467 \cdot \left(\text{\Kp}_-\left(vB_\text{z}\right) - \text{\Kp}_-(-163)\right) + \text{\Kp}_-(-163)	\,.
-\end{align*}
-The MAD of the mean has a mean size of \SI{0.7}{\Kp}~units.\\
-Restrictions: This relation is able to predict \Kp{} in the range \numrange{1.0}{8.7}.\\
-
-Relations between the 3"~hour maximum values of $v$ and the \Kp~index for CME-associated flows (including shocked and compressed solar wind plasma) and solar wind streams (fast and slow wind including interaction regions):
-\begin{align*}
-	\text{\Kp}_\text{CME}(v) &= 10.6 \cdot \ln(v + 810) - 73	\,,\\
-	\text{\Kp}_\text{Stream}(v) &= 5.88 \cdot \ln(v + 299) - 37.0	\,.
-\end{align*}
-The MAD of the mean has a mean size of about \SI{1.1}{\Kp~units} for the CME case and \SI{0.7}{\Kp}~units for streams.\\
-Restrictions: These relations are able to predict \Kp{} in the ranges \numrange{1.3}{6.3} and \numrange{0.3}{4.3} respecively.\\
 
 
 \subsubsection*{Empirical solar wind model for the inner heliosphere}

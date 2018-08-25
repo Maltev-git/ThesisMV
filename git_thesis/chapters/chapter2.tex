@@ -545,17 +545,17 @@ For the solar wind predictive \Kp{} models, the influence of the solar activity 
 In the following, I take two sample periods of solar wind in-situ data and apply the predictive \Kp{} models to compare their output qualitatively with the actual measured \Kp~index. First, I discuss a 2"~month period from the maximum of the solar activity cycle~24 and second, I zoom into a 6"~day sub-period containing a CME.
 
 % 5-week sample period
-The 2"~month sample period of solar wind and \Kp{} data is displayed in \autoref{fig:example_sw_plot_1month_b_2013-5-1_65}.
+The 2"~month sample period of solar wind and \Kp{} data is displayed in \autoref{fig:example_sw_plot_1month_b_9hshift_2013-5-1_65}.
 \begin{figure}[htb]
 	\centering
-	\includegraphics[width=\textwidth]{figures_of_mine/chapter2/example_sw_plot_1month_b_2013-5-1_65.pdf}
-	\caption[\lofimage{figures_of_mine/chapter2/example_sw_plot_1month_b_2013-5-1_65.pdf}I created the figure myself.]
-	{Solar wind parameters, official \Kp~index, and estimated \Kp{} indices for the 65"~day time period from 1~May to 5~July 2013. The solar wind parameters are the magnetic field strength, its z"~component in GSM coordinates, the velocity, and the product of the latter two. I also plot the velocity's 3"~hour maxima and the \vBz{}'s 3"~hour minima for illustration. The \Kp{} estimates based on the electric field and the velocity relations are displayed together with their mean MAD bands. The \Kp{} estimates from both velocity relations are chosen according to the periods flagged as CMEs or streams in the SWS list (red lines in top panel). The solar wind data are from the minutely OMNI data set and the official \Kp~index is obtained from the GFZ~Potsdam.}
-	\label{fig:example_sw_plot_1month_b_2013-5-1_65}
+	\includegraphics[width=\textwidth]{figures_of_mine/chapter2/example_sw_plot_1month_b_9hshift_2013-5-1_65.pdf}
+	\caption[\lofimage{figures_of_mine/chapter2/example_sw_plot_1month_b_9hshift_2013-5-1_65.pdf}I created the figure myself.]
+	{Solar wind parameters, official \Kp~index, and estimated \Kp{} indices for the 65"~day time period from 1~May to 5~July 2013. The solar wind parameters are the magnetic field strength, its z"~component in GSM coordinates, the velocity, and the product of the latter two. I also plot the velocity's 3"~hour maxima and the \vBz{}'s 3"~hour minima for illustration. The \Kp{} estimates based on the electric field and the velocity relations are displayed together with their mean MAD bands. The \Kp{} estimates from both velocity relations are chosen according to the periods flagged as CMEs or streams in the SWS list (red lines in top panel). The \Kp{} estimate derived from stream velocity is shifted by 9~hours. The solar wind data are from the minutely OMNI data set and the official \Kp~index is obtained from the GFZ~Potsdam.}
+	\label{fig:example_sw_plot_1month_b_9hshift_2013-5-1_65}
 \end{figure}
 The considered period ranges from 1~May to 5~July 2013, when the solar activity cycle~24 had its maximum. The period contains various types of structures, such as HSSs, CIRs, and CMEs.
 % describe plot
-The plot shows the solar wind IMF strength, its z"~component, the velocity with its 3"~hour maxima, and the electric field \vBz{} with its 3"~hour minima. The \Kp{} estimate based on the electric field relation is displayed together with the official \Kp~index. The CME and stream velocity relations are displayed together with the official \Kp~index as well, however, both velocity relations are chosen according to the periods flagged as CMEs or streams in the SWS list, that is, either via Equation~(\ref{eq:kpvsv_CME_dependency_function}) or (\ref{eq:kpvsv_stream_dependency_function}).
+The plot shows the solar wind IMF strength, its z"~component, the velocity with its 3"~hour maxima, and the electric field \vBz{} with its 3"~hour minima. The \Kp{} estimate based on the electric field relation is displayed together with the official \Kp~index. The CME and stream velocity relations are displayed together with the official \Kp~index as well, however, both velocity relations are chosen according to the periods flagged as CMEs or streams in the SWS list, that is, either via Equation~(\ref{eq:kpvsv_CME_dependency_function}) or (\ref{eq:kpvsv_stream_dependency_function}). The \Kp{} derived from stream velocity is based on the data shifted by 9~hours.
 
 % interprete plot
 It can be seen that in the considered period the \Kp{} estimate based on the E"~field traces the actual \Kp~index pretty well within its mean MAD band, whereas the \Kp{} estimates based on both velocity relations do not coincide that well with the actual \Kp~index. The stream velocity based model overestimates small \Kp{} values, which occur during rarefaction regions of declining velocity, whereas compressed regions are underestimated, such as the interaction region on 1~June 2013. The CME velocity based model underestimates the effect of pronounced MCs, as is seen for the CMEs on 6~June and 27~June 2013.
@@ -564,13 +564,13 @@ It can be seen that in the considered period the \Kp{} estimate based on the E"~
 A study that differentiates especially between compression and rarefaction regions is that of \citet{Elliott2013}. They compare three threshold techniques to do so: by sorting for density, dynamic pressure, and velocity slope. The three \Kp--velocity distribution panels in \autoref{fig:Kp_2dhistogram_V_sws_d} look indeed very similar to the Figures~3 and~4 from \citet{Elliott2013}. This is because they sort the \Kp{}--velocity distribution for CMEs and streams, use OMNI data, and the SWS list as well, however, they use a different time resolution, data processing, and time period. More precisely, they use 3"~hour averages of the hourly OMNI data set, modify the CME-associated periods of the SWS list with additional constraints, and use data from the time period 1963--2009.
 
 % 6~day sub-period
-The second solar wind plot zooms in on the latter CME -- it covers the 6"~day time period from 26~June to 2~July 2013, see \autoref{fig:example_sw_plot_CME_b_2013-6-26_6}.
+The second solar wind plot zooms in on the latter CME -- it covers the 6"~day time period from 26~June to 2~July 2013, see \autoref{fig:example_sw_plot_CME_b_9hshift_2013-6-26_6}.
 \begin{figure}[htb]
 	\centering
-	\includegraphics[width=\textwidth]{figures_of_mine/chapter2/example_sw_plot_CME_b_2013-6-26_6.pdf}
-	\caption[\lofimage{figures_of_mine/chapter2/example_sw_plot_CME_b_2013-6-26_6.pdf}I created the figure myself.]
-	{Solar wind parameters, official \Kp~index, and estimated \Kp{} indices for the 6"~day time period from 26~June to 2~July 2013. All panels show the same parameters as in \autoref{fig:example_sw_plot_1month_b_2013-5-1_65}. The period covers the CME from 27~June 2013, which induced a peak \Kp{} of $6+$.}
-	\label{fig:example_sw_plot_CME_b_2013-6-26_6}
+	\includegraphics[width=\textwidth]{figures_of_mine/chapter2/example_sw_plot_CME_b_9hshift_2013-6-26_6.pdf}
+	\caption[\lofimage{figures_of_mine/chapter2/example_sw_plot_CME_b_9hshift_2013-6-26_6.pdf}I created the figure myself.]
+	{Solar wind parameters, official \Kp~index, and estimated \Kp{} indices for the 6"~day time period from 26~June to 2~July 2013. All panels show the same parameters as in \autoref{fig:example_sw_plot_1month_b_9hshift_2013-5-1_65}. The period covers the CME from 27~June 2013, which induced a peak \Kp{} of $6+$.}
+	\label{fig:example_sw_plot_CME_b_9hshift_2013-6-26_6}
 \end{figure}
 The plot shows the same parameters as in the previous plot. This more detailed sample period agrees with the observations made from the previous 2"~month period. In addition, it can be seen that deviations in the \vBz{} based \Kp{} prediction are found at the times of the initial shock, and the start and center of the MC. The velocity based models perform okay during the initial sheath region and around the peak of the trailing HSS, however, the main part of the MC (where $B_\text{z} < \SI{-10}{\nano\tesla}$) is underestimated. The CME velocity based model is able to track the initial shock when considering the mixed-flag 3"~hour interval beginning at 27~June 2013 12:00. The background is that the SWS list flags each hour, thus, 3"~hour intervals in between solar wind structures can contain flags of different structures.
 % learned/conclusions
@@ -578,18 +578,18 @@ When comparing the \Kp{} estimations for the \vBz{} and velocity based predictiv
 
 
 % extreme CME speeds
-The maximal velocities included in the OMNI data are around \SI{1100}{\km\per\s}. Current solar wind plasma spectrometers are only able to reliably measure speeds up to this value. Yet, CMEs can be much faster -- speeds of up to \SI{2000}{\km\per\s} at \SI{1}{\au} were reconstructed \citep{Russell2013}. Future studies have to show how accurate the CME relation is in predicting \Kp{} from extreme CMEs with velocities higher than \SI{1100}{\km\per\s}. According to the CME velocity relation (\ref{eq:kpvsv_CME_dependency_function}), a CME speed of \SI{2000}{\km\per\s} would lead on average to a theoretical \Kp{} of $11.2$, however, the \Kp{} scale is capped at 9o and a \Kp{} of 9o is reached on average already at a velocity of \SI{1479}{\km\per\s}, see \autoref{fig:Kp_2dhistogram_V_sws123_fit_f2}.
+The maximal velocities included in the OMNI data are around \SI{1100}{\km\per\s}. Current solar wind plasma spectrometers are only able to reliably measure speeds up to this value. Yet, CMEs can be much faster -- speeds of up to \SI{2000}{\km\per\s} at \SI{1}{\au} were reconstructed \citep{Russell2013}. Future studies have to show how accurate the CME relation is in predicting \Kp{} from extreme CMEs with velocities higher than \SI{1100}{\km\per\s}. According to the CME velocity relation (\ref{eq:kpvsv_CME_dependency_function}), a CME speed of \SI{2000}{\km\per\s} would lead on average to a theoretical \Kp{} of $11.2$, however, the \Kp{} scale is capped at 9o and a \Kp{} of 9o is reached on average already at a velocity of \SI{1479}{\km\per\s}, see \autoref{fig:Kp_2dhistogram_V_sws123_fit_f3}.
 \begin{figure}
 	\fcapside[\FBwidth]{
-		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_V_sws123_fit_f2.pdf}
+		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_V_sws123_fit_f3.pdf}
 	}{
-		\caption[\lofimage{figures_of_mine/chapter2/Kp_2dhistogram_V_sws123_fit_f2.pdf}I created the figure myself.]
-		{Logarithmic fit curves for CMEs (dashed line) and streams (dotted line) with their corresponding mean MAD bands (shaded areas). I expanded the curve for CMEs up to a hypothetical \Kp{} of 12. The curve for solar wind streams is cut at \SI{1100}{\km\per\s} because streams do not occur at these high velocities. The curves are the same as in Figures~\ref{fig:Kp_2dhistogram_V_sws1_fit_e} and \ref{fig:Kp_2dhistogram_V_sws23_fit_e}.}
-		\label{fig:Kp_2dhistogram_V_sws123_fit_f2}
+		\caption[\lofimage{figures_of_mine/chapter2/Kp_2dhistogram_V_sws123_fit_f3.pdf}I created the figure myself.]
+		{Logarithmic fit curves for CMEs and streams with their proper ranges (solid lines) and extensions (dashed lines). The mean MAD bands corresponding to CMEs and streams are indicated by gray and blue shaded areas respectively. I extended the curve for CMEs up to a hypothetical \Kp{} of 12. The curve for solar wind streams is cut at \SI{1100}{\km\per\s} because streams do not occur at these high velocities. The curves are the same as in Figures~\ref{fig:Kp_2dhistogram_V_sws1_fit_e} and \ref{fig:Kp_2dhistogram_V_sws23_fit_e}.}
+		\label{fig:Kp_2dhistogram_V_sws123_fit_f3}
 	}
 \end{figure}
 
-The capped \Kp{} scale limits the capability to quantify the ground impacts of extremely fast CMEs. \Kp{} is linked to the \textit{ap}~index, which translates to the ground magnetic field disturbance at about \SI{+-50}{\degree} dipole latitudes and thus can directly be expressed in \si{\nano\tesla}. The limit could be overcome, if the fixed \Kp-to-\textit{ap} conversion table (see \autoref{tab:kp_to_ap_table}) would be redefined and extended above \Kp{} 9o. Then the absolute ground field disturbances evoked by extremely fast CMEs could be estimated via the \Kp{} relation for CMEs displayed in \autoref{fig:Kp_2dhistogram_V_sws123_fit_f2}.
+The capped \Kp{} scale limits the capability to quantify the ground impacts of extremely fast CMEs. \Kp{} is linked to the \textit{ap}~index, which translates to the ground magnetic field disturbance at about \SI{+-50}{\degree} dipole latitudes and thus can directly be expressed in \si{\nano\tesla}. The limit could be overcome, if the fixed \Kp-to-\textit{ap} conversion table (see \autoref{tab:kp_to_ap_table}) would be redefined and extended above \Kp{} 9o. Then the absolute ground field disturbances evoked by extremely fast CMEs could be estimated via the \Kp{} relation for CMEs displayed in \autoref{fig:Kp_2dhistogram_V_sws123_fit_f3}.
 
 % correlation studies between solar wind and geomagnetic indices, see Akasofu1981 p.~126, table\\
 

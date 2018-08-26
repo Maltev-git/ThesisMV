@@ -239,12 +239,12 @@ order=8
 
 [item:chapters/analyses_helios.tex]
 archive=true
-column=84
+column=135
 encoding=UTF-8
 highlight=LaTeX
-line=232
+line=250
 mode=LaTeX
-open=false
+open=true
 order=4
 
 [item:chapters/basics.tex]
@@ -279,10 +279,10 @@ order=5
 
 [item:chapters/discussion_summary.tex]
 archive=true
-column=0
+column=262
 encoding=UTF-8
 highlight=LaTeX
-line=148
+line=124
 mode=LaTeX
 open=true
 order=3
@@ -299,10 +299,10 @@ order=6
 
 [item:chapters/front_matter.tex]
 archive=true
-column=76
+column=86
 encoding=UTF-8
 highlight=LaTeX
-line=426
+line=430
 mode=LaTeX
 open=true
 order=2
@@ -359,10 +359,10 @@ order=6
 
 [item:notes.tex]
 archive=true
-column=8
+column=83
 encoding=UTF-8
 highlight=LaTeX
-line=68
+line=185
 mode=LaTeX
 open=false
 order=7
@@ -454,10 +454,10 @@ JumpList=
 ViMarks=.,43,9,[,43,9,],43,9
 
 [view-settings,view=0,item:chapters/analyses_helios.tex]
-CursorColumn=84
-CursorLine=232
+CursorColumn=135
+CursorLine=250
 JumpList=
-ViMarks=.,322,0,[,320,0,],-1,-1
+ViMarks=.,250,134,[,250,134,],250,134
 
 [view-settings,view=0,item:chapters/basics.tex]
 CursorColumn=100
@@ -478,10 +478,10 @@ JumpList=
 ViMarks=.,131,0,[,131,0,],131,0,a,1,0,b,16,0,c,63,0,d,106,0,e,115,0,f,122,0,g,139,0
 
 [view-settings,view=0,item:chapters/discussion_summary.tex]
-CursorColumn=0
-CursorLine=148
+CursorColumn=262
+CursorLine=124
 JumpList=
-ViMarks=.,147,0,[,139,0,],-1,-1,a,171,0
+ViMarks=.,124,262,[,124,262,],124,262,a,171,0
 
 [view-settings,view=0,item:chapters/formal_titlepage.tex]
 CursorColumn=2
@@ -490,10 +490,10 @@ JumpList=
 ViMarks=.,7,0,[,7,0,],7,0
 
 [view-settings,view=0,item:chapters/front_matter.tex]
-CursorColumn=76
-CursorLine=426
+CursorColumn=86
+CursorLine=430
 JumpList=
-ViMarks=.,426,75,[,426,75,],426,75
+ViMarks=.,430,85,[,430,67,],430,85
 
 [view-settings,view=0,item:chapters/introduction.tex]
 CursorColumn=359
@@ -526,10 +526,10 @@ JumpList=
 ViMarks=.,1,18,[,1,18,],1,18
 
 [view-settings,view=0,item:notes.tex]
-CursorColumn=8
-CursorLine=68
+CursorColumn=83
+CursorLine=185
 JumpList=
-ViMarks=.,68,7,[,68,1,],68,7
+ViMarks=.,185,56,[,185,56,],185,56
 
 [view-settings,view=0,item:paperMVVB/sections/literature_bibtex.bib]
 CursorColumn=0

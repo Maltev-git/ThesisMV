@@ -1,0 +1,144 @@
+set terminal pdfcairo enhanced font "arial,14" fontscale 0.5 lw 1 size 18cm,9cm rounded
+
+set output "titlepage_plot_ch2_kpvsv_cmes_c2.pdf"
+
+datafile_sws1 = "OMNI_HRO_1MIN_19810101--20161231_with_ap_VBzgsm_sws1_3hmax_KpvsV_2Dhistogram.txt"
+datafile2_sws1 = "OMNI_HRO_1MIN_19810101--20161231_with_ap_VBzgsm_sws1_3hmax_KpvsV_dependenceFunctionsYofX.txt"
+
+#######- header parameters from datafile SWS1 -#######
+binSizeX=10
+binSizeY=1
+histLowX=255
+histLowY=0
+histUppX=1085
+histUppY='28.0'
+hist2DbinCount=1183
+intersectionCount=12115
+peakCount=62
+peakX=435
+peakY='6.0'
+meanCount=10
+meanX=455
+meanY='8'
+###########
+#######- header parameters from datafile -#######
+binSizeX=10
+binSizeY=1
+histLowX=235
+histLowY=0
+histUppX=1085
+histUppY='28.0'
+hist2DbinCount=1356
+intersectionCount=79278
+peakCount=553
+peakX=355
+peakY='2.0'
+meanCount=58
+meanX=425
+meanY='5'
+###########
+
+### log fit
+a1 = 10.6
+b1 = -73.0
+x1 = 810.0
+f1(x) = a1 * log(x + x1) + b1
+
+
+####--  Styles  --####
+set style line 1 lt 1 lw 1 lc rgb "white"
+set style line 2 lt 1 lw 1 lc rgb "light-red"
+set style line 3 lt 1 lw 1 lc rgb "web-green"
+set style line 4 lt 1 lw 1 lc rgb "web-blue"
+set style line 5 lt 1 lw 1 lc rgb "yellow"
+set style line 6 lt 1 lw 1 lc rgb "brown"
+set style line 7 lt 1 lw 1 lc rgb "light-blue"
+set style line 8 lt 1 lw 1 lc rgb "dark-blue"
+set style line 9 lt 1 lw 1 lc rgb "dark-violet"
+set style line 10 lt 1 lw 1 lc rgb "black"
+set style line 11 lt 1 lw 1 lc rgb "grey"
+set style line 12 lt 1 lw 1 lc rgb "grey50"
+
+set style textbox opaque noborder
+
+set multiplot\
+	layout 1,1\
+	margins 0.075,0.916,0.123,0.986\
+	spacing 0,0
+
+set border 3
+set xtics nomirror
+set ytics nomirror
+
+# set grid back
+set nobars
+
+set tics scale 0.5
+
+####--  Key  --####
+set key reverse Left box opaque
+set key width -3
+# set key font ",11"
+#set key samplen 1
+set key at 1.02,200
+unset key
+
+
+set log cb
+set format cb "10^{%T}"
+set format cb ""
+set cbrange [1e-3:1]
+set cbtics offset 0,0
+unset colorbox
+#set cbtics add("" 1.0)
+#cubehelix palette
+#https://www.mrao.cam.ac.uk/~dag/CUBEHELIX/
+#https://www.mrao.cam.ac.uk/~dag/CUBEHELIX/cubetry.html
+set palette cubehelix start 2.0 cycles 1.4 saturation 1.4 negative
+set palette gamma 1.0
+##############################
+
+set label "CME data" at graph 0.09,graph 0.85 front boxed
+set label "Extension" at graph 0.8,graph 0.6 front boxed
+# set arrow from 1100,0 to 1100,9 nohead ls 10 lw 1 dt "_ " front
+
+set colorbox user origin graph 1.03,0 size graph 0.03,1
+set cblabel "Relative frequency" offset 0.7,0
+
+set arrow from 1500,0 to 1500,9 nohead ls 10 lw 1 dt 3 front
+set arrow from 0,9 to 1500,9 nohead ls 10 lw 1 dt 3 front
+
+set view map
+
+set ylabel "{/:Italic= Kp} index" offset 0,0
+set xlabel "Velocity [km/s]" offset 0,0
+#set format y "%g"
+set yrange [0:9]
+set ytics 1
+set mytics 3
+set xrange [0:1500]
+set mxtics 2
+set xtics 200 offset 0,0
+set format x "%g"
+
+k=1
+kk = 40.0
+sigma1 = 1.113
+plot\
+	for [i=-kk:kk] f1(x)+i/kk*sigma1 notitle with lines ls 11 lw 2 dt 1,\
+	f1(x)<1.333||f1(x)>6.333?f1(x):NaN notitle with lines ls 1 lw 2 dt 2,\
+	datafile_sws1 matrix index 1 using ((0.5+$1)*binSizeX+histLowX):(($2*binSizeY+histLowY)/3.0):($3==0?NaN:$3/1e6) with image notitle,\
+	datafile2_sws1 using ($1+0.5*binSizeX):($2<=k?NaN:$3/3.0) with lines notitle ls 1 lw 2 dt 1,\
+	for [i=-kk:kk:2*kk] f1(x)+i/kk*sigma1 notitle with lines ls 1 lw 2 dt 3,\
+	NaN title "Mean MAD" with points ls 11 pt 5 ps 0.7,\
+	NaN with lines title "Mean" ls 11 lw 2 dt 1,\
+	NaN with lines title "MAD" ls 11 lw 2 dt 3,\
+	NaN notitle
+# 	datafile2_sws1 using ($1+0.5*binSizeX):($2<=k?NaN:($3+$18)/3.0) with lines notitle ls 1 lw 2 dt 3,\
+# 	datafile2_sws1 using ($1+0.5*binSizeX):($2<=k?NaN:($3-$18)/3.0) with lines notitle ls 1 lw 2 dt 3,\
+# 	datafile2_sws1 using ($1+0.5*binSizeX):($2<=10?NaN:($3+$18)/3.0) with lines title "MAD" ls 12 lw 2 dt 3,\
+# 	datafile2_sws1 using ($1+0.5*binSizeX):($2<=10?NaN:($3-$18)/3.0) with lines notitle ls 12 lw 2 dt 3,\
+# 	datafile2_sws1 using ($1+0.5*binSizeX):($2<=0?NaN:$17/3.0):(0.67*1.0/sqrt($2)) with yerrorbars title "Mean {/:Italic= Kp} value" ls 12 lw 2 pt 1 ps 0.3,\
+
+# 	f1(x)<1.333||f1(x)>6.333?NaN:f1(x) notitle with lines ls 1 lw 2 dt 1,\
+

@@ -3,7 +3,7 @@
 \label{chap:introduction}
 
 % two problems
-In this thesis I address two current solar wind problems: the prediction of the solar wind's geomagnetic impact, which is one of the most important space weather issues, and the characterization of the solar wind conditions in the near-Sun region -- the conditions remain unknown until the Parker~Solar~Probe will start to frequently visit it end of 2018. These two problems are linked in view of the fact that the solar wind impacting the magnetosphere originates from the near-Sun region.
+In this thesis I address two current solar wind problems: the prediction of the solar wind's geomagnetic impact, which is one of the most important space weather issues, and the characterization of the solar wind conditions in the near-Sun region -- the conditions remain uncertain until the Parker~Solar~Probe will frequently visit it beginning in end of 2018. These two problems are linked in view of the fact that the solar wind impacting the magnetosphere originates from the near-Sun region.
 
 % two topics and studies
 This thesis presents quantitative studies examining both problems. Despite a considerable difference with regard to their content, the two studies both share their predictive nature related to solar wind, deal with similar data sets, and harness similar data processing methods.
@@ -37,17 +37,17 @@ Space weather nowcast services reach a high prediction accuracy by using in-situ
 
 % 3) response to the problem
 This study addresses this problem in that it quantifies the geomagnetic response for remote forecast situations, when only the velocity information from CMEs or ambient solar wind is available.
-The present study relates the planetary geomagnetic disturbance indicator \Kp{} with velocity measurements made ahead of the Earth's magnetosphere. In view of the differences between the velocity prediction methods applied for CMEs and streams, I derive separate relations for CME-associated flows and for solar wind streams.
+The present study relates the planetary geomagnetic disturbance indicator \Kp{} with velocity measurements made ahead of the Earth's magnetosphere. In view of the differences between the velocity prediction methods applied for CMEs and streams, I derive separate relations for CME-associated flows and for solar wind streams. This study is based on 35~years of solar wind data from the hourly OMNI data set and on the classification from the list of Solar Wind Structures (SWS).
 
-Solar wind analyses in conjunction with \Kp{} commonly employ averaged solar wind data, even though the \Kp~index represents the value of the maximal geomagnetic disturbance per 3"~hour interval and not its average. Thus, a unique approach in the present study is the use of extreme values derived from high resolution solar wind data. This method is expected to result in significantly enhanced correlations between the \Kp~index and solar wind data. Here, this approach is tested for the case of the solar wind electric field, which represents one of the most prominent coupling functions.\\
+Solar wind analyses in conjunction with \Kp{} commonly employ averaged solar wind data, even though the \Kp~index represents the value of the maximal geomagnetic disturbance per 3"~hour interval and not its average. Thus, a unique approach in the present study is the use of 3"~hour extreme values derived from high resolution solar wind data. This method is expected to result in significantly enhanced correlations between the \Kp~index and solar wind data. Here, this approach is tested and compared for the cases of the solar wind electric field, which represents one of the most prominent coupling functions, and the velocity.\\
 
 % purpose statement
 The purpose of this study is to provide empirical \Kp{} relations that can be utilized in specific forecast situations when only the remotely estimated velocity of CMEs or streams is known.
-The study further shows the impact of the way the solar wind data is processed by means of the electric field relation to \Kp{}.
+The study further shows the impact of the way the solar wind data is processed to 3"~hourly values by means of the \Kp{} relations to the electric field and the velocity.
 
 % scope of this study in the thesis
-This work presents quantitative analyses of the solar wind impact strength on the terrestrial magnetosphere. It does not provide further scientific insight into the underlying physical coupling processes.
-The work is focused on planetary disturbances in the geomagnetic field. Analyses of local disturbances or of the variations in the different subsystems of the magnetosphere lie outside the scope of this thesis.
+This work presents quantitative analyses of the solar wind impact strength on the terrestrial magnetosphere. Its objective is not to provide further scientific insight into the underlying physical coupling processes.
+The work focuses on planetary disturbances in the geomagnetic field. Analyses of local disturbances or of the variations in the different subsystems of the magnetosphere lie outside the scope of this thesis.
 
 \bigskip
 
@@ -58,23 +58,23 @@ The solar wind was first theoretically described by \citet{Parker1958} who formu
 
 % 2) problem statement
 However, the region close to the Sun remains unexplored although it is of particular scientific interest. In this region, the corona is heated to temperatures far exceeding those of the underlying photosphere and the plasma is being accelerated to its final solar wind speeds. Up to now the mechanisms that heat the corona and accelerate the solar wind are still not fully understood.
-As this region is assumed to hold the answers to these open key questions, it has long been planned to send a probe to this region. The Parker Solar Probe (PSP) mission is intended to address these questions. The PSP spacecraft launched on 12~August 2018 and will dive through the corona within distances down to about nine solar radii from the solar surface.
+As this region is assumed to hold the answers to these open key questions, it has long been planned to send a probe to this region. The Parker Solar Probe (PSP) mission is intended to address these questions. The PSP spacecraft launched on 12~August 2018 and will dive through the corona within distances down to \num{8.86}~solar radii (\Rs) from the solar surface.
 
 The solar wind conditions that close to the Sun are not known yet and PSP will be the first spacecraft to fly into this uncharted territory.\\
 
 % 3) response to the problem
 This study addresses this topic in that it explores the near-Sun solar wind conditions and predicts the solar wind environment for the PSP orbit, that is, this work derives estimates of the key solar wind parameters magnetic field strength, proton velocity, density, and temperature. These key parameters are back-extrapolated to the near-Sun region, using an empirical solar wind model for the inner heliosphere.
-I develop this solar wind model from solar activity and solar distance dependencies of each parameter individually. To derive the dependencies on solar activity, solar wind measurements from the near-Earth OMNI data set are being related to the sunspot number. To derive the solar distance dependencies, I apply solar wind data from the Helios~1 and Helios~2 probes.
+I develop this solar wind model from solar activity and solar distance dependencies of each parameter individually. To derive the dependencies on solar activity, solar wind measurements from the near-Earth OMNI data set are being related to the sunspot number. To derive the solar distance dependencies, I apply solar wind data from the Helios~1 and Helios~2 probes, which flew in the 1970s and took in-situ measurements between \SI{0.29}{\au} and \SI{0.98}{\au}.
 
 Commonly, studies that analyze solar wind handle it by working with time averages of the bulk parameters. In contrast, the special approach in this work is its tackling of the frequency distributions instead. The model represents the solar wind parameters by lognormal distributions, furthermore, both the slow and fast velocity components are taken into account.
 
-For the magnetic field strength, I additionally derive an alternative distance dependency that is based on the Parker magnetic field geometry.\\
+For the magnetic field strength, I additionally derive a second alternative distance dependency that is based on the Parker magnetic field geometry.\\
 
 % purpose statement
 The purpose of this study is to quantitatively estimate the near-Sun solar wind environment and to predict it for the orbit of the PSP spacecraft.
 
 % scope of the study in this thesis
-The solar wind model applies to the near-ecliptic region -- the model does not provide information about the higher heliolatitudes, away from the solar equator.
+The solar wind model focuses on the near-ecliptic region -- it does not provide information about the higher heliolatitudes, away from the solar equator.
 This work presents average predictions for the key solar wind parameters. Predictions about the near-Sun properties of internal solar wind structures, such as interaction regions and CMEs, lie outside the scope of this thesis.\\
 
 % what will be addressed\\
@@ -84,6 +84,6 @@ This work presents average predictions for the key solar wind parameters. Predic
 \bigskip
 
 %Synopsis	% Outline (chapters and their content)
-I structured this document as follows: \autoref{chap:basics} lays out the fundamentals behind the problems addressed in this work. This comprises basic knowledge about the Sun, its activity and magnetic field, solar wind, space weather, magnetosphere, geomagnetic activity and forecast methods. \autoref{chap:data} describes those instrumentation and data sources on which the studies in the subsequent chapters are based on. \autoref{chap:chapter2} presents the analyses performed on the solar wind's magnetospheric influence, with focus on predicting the \Kp~index from the solar wind electric field and from the velocities of CMEs and streams. \autoref{chap:empirical_solar_wind_model_for_the_inner_heliosphere} is followed by the published article on the same topic, integrated as \autoref{chap:solar_wind_predictions_for_the_parker_solar_probe_orbit} into this document. These chapters develop an empirical solar wind model for the inner heliosphere and use it to estimate the near-Sun solar wind environment of the PSP mission underway. The model comprises the solar wind parameters magnetic field strength, proton velocity, density, and temperature. Further, an alternative magnetic field model is outlined, which exhibits a solar distance dependency based on Parker's magnetic field formulation. Eventually, \autoref{chap:summary} offers a summary of the results and gives an outlook on ideas for further studies. The subsequent \autoref{chap:appendix} contains helpful information and theory about some more specific topics, as well as a list of frequently used acronyms in this work.
+I structured this document as follows: \autoref{chap:basics} lays out the fundamentals behind the problems addressed in this work. This comprises basic knowledge about the Sun, its activity and magnetic field, solar wind, space weather, magnetosphere, geomagnetic activity and forecast methods. \autoref{chap:data} describes those instrumentation and data sources on which the studies in the subsequent chapters are based on. \autoref{chap:chapter2} presents the analyses performed on the solar wind's magnetospheric influence, with focus on predicting the \Kp~index from the solar wind electric field and from the velocities of CMEs and streams. \autoref{chap:empirical_solar_wind_model_for_the_inner_heliosphere} is followed by the published article on the same topic, integrated as \autoref{chap:solar_wind_predictions_for_the_parker_solar_probe_orbit} into this document. These chapters develop an empirical solar wind model for the inner heliosphere and use it to estimate the near-Sun solar wind environment of the PSP mission underway. The model comprises the solar wind parameters magnetic field strength, proton velocity, density, and temperature. Further, an alternative magnetic field model is outlined, which exhibits a solar distance dependency based on Parker's magnetic field formulation. Eventually, \autoref{chap:summary} offers a summary of the results and conclusions, and gives an outlook on ideas for further studies. The subsequent \autoref{chap:appendix} contains helpful information and theory about some more specific topics, as well as a list of frequently used acronyms in this work (\autoref{sec:acronyms}).
 
 

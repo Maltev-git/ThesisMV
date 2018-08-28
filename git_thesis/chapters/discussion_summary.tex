@@ -13,7 +13,7 @@ Here, I briefly summarize the principal results and conclusions of both studies 
 
 \section{The solar wind's geomagnetic impact}
 % % % summary
-This study estimates the impact of solar wind on the planetary geomagnetic disturbance indicator \Kp{} and predicts it for CMEs and streams in particular.
+This study, presented in \autoref{chap:chapter2}, estimates the impact of solar wind on the planetary geomagnetic disturbance indicator \Kp{} and predicts it for CMEs and streams in particular.
 % First, the long-term changes of \Kp{} due to solar activity and the extent of seasonal variations stemming from the Earth's orbit were determined.
 The analyses are based on 35~years (1981--2016) of near-Earth solar wind data from the minutely OMNI data set and \Kp{} data from the GFZ~Potsdam. The separation of CME and stream data is done via the Solar Wind Structures list created by \citet{Richardson2000}.
 The solar wind electric field proxy \vBz{} and the velocity of CMEs and streams were correlated with the \Kp~index. Empirical relations were determined from the mean values of the relative \Kp{} frequency distributions per solar wind parameter interval. Functional dependencies were derived via fitting logarithmic functions to these mean \Kp{} values.
@@ -72,31 +72,21 @@ That said, the relations still enable empirical estimations of the average geoma
 
 
 \section{The solar wind's Sun--Earth evolution}
-
-% summary
+% % % summary
 % long synopsis chapterPSP without refs
-This study built an empirical solar wind model for the inner heliosphere in the ecliptic which accounts for the variations of the solar activity cycle and for solar distance. In order to obtain empirical estimates of the solar wind environment PSP is to encounter, this solar wind model was extrapolated down to PSP's planned near-Sun perihelia and was built to consider the expected solar activity during PSP's mission.\\
+This study is presented in \autoref{chap:chapterPSP} but its major part is published in \citet{Venzmer2018}, which is included as \autoref{chap:solar_wind_predictions_for_the_parker_solar_probe_orbit} in this thesis.
+The study builds an empirical solar wind model for the inner heliosphere, which accounts for the variations of the solar activity cycle and for solar distance. In order to obtain empirical estimates of the solar wind environment the PSP spacecraft is to encounter, this solar wind model is extrapolated down to PSP's planned near-Sun perihelia and is built to consider the expected solar activity during PSP's mission.
+The model actually consists of separate models that consider the solar wind parameters magnetic field strength, proton velocty, density, and temperature. They are composed of empirically determined frequency distributions that are being shifted with solar distance and solar activity.
 
-I introduced the analyses done in the publication \citet{Venzmer2018}, which constitute the major part of this study. An alternative magnetic field model was derived, which changes the solar distance dependency from the power law in our article to support a Parker magnetic field geometry. Further, possible improvements to the solar wind model were sketched.\\
+The parameters' frequency distributions were obtained from 53~years (1963--2016) of near-Earth solar wind measurements from the hourly OMNI data set. Analytical representations of the shapes of the frequency distributions were derived. They all were fitted with lognormal functions except for the velocity, whose fast and slow regimes were considered by using a double lognormal distribution. The solar activity dependences were derived from almost five solar cycles of monthly SSN data. Solar wind measurements made by the Helios~1 and Helios~2 probes in the 1970s were analyzed to model the parameters' solar distance scalings via power law fits. The Helios data cover more than two thirds of the distance to the Sun (\SIrange{0.29}{0.98}{\au}). Furthermore for the magnetic field strength, an alternative model was derived, which changes the solar distance dependency to support a Parker magnetic field geometry.
 
-% synopsis from paper
-Our approach is to obtain analytical representations of the shapes of the solar wind parameter’s frequency distributions, of their solar activity dependence, and of their solar distance scaling. The solar wind parameters’ frequency distributions and solar activity dependence were derived from near-Earth solar wind and SSN time series with a duration of almost five solar cycles. Their distance dependency was derived from Helios solar wind measurements covering more than two thirds of the distance to the Sun and more than half a solar cycle. From a combination of the obtained frequency distributions, SSN dependence functions, and solar distance dependence functions, a general solar wind model was built, representing the solar activity and distance behavior. Finally, this empirical model was fed with SSN predictions and extrapolated to PSP’s planned orbital positions.\\
+The obtained lognormal functions, SSN dependencies, and solar distance dependencies were combined to build models of the parameters that represent the solar activity and distance behavior. The near-Sun extrapolations of the resulting models were compared to existing studies that infer the local magnitude of the solar wind parameters from remote observations. Eventually, these empirical models were supplied with predictions of the SSN and extrapolated to the planned orbital positions of the PSP. The resulting models and conclusions are presented in the following.\\
 
-Empirical solar wind models are derived for the magnetic field strength, proton velocty, density, and temperature. The models comprise the empirically determined frequency distributions and shifts them with solar distance and solar activity. The distributions are assumed to be of lognormal shape, but the velocity's fast and slow regimes are considered by modeling a double lognormal distribution. The solar activity dependence is based on the SSN.\\
+
+
 
 
 % % % results
-The newly derived distance dependency, extrapolated to the PSP orbit and combined with the solar activity dependency described in the paper, yields \SI{8}{\%} higher values at the first perihelion and \SI{32}{\%} higher values at the closest perihelion in comparison to the estimates derived in the paper.\\
-
-
-\subsubsection*{Empirical solar wind model for the inner heliosphere}
-
-The relevant solar wind relations are presented in \citet[p.~10]{Venzmer2018}.\\
-They are valid within the ecliptic plane.\\
-
-
-Equations for lognormal distribution W(x)\\
-B v n T and eq. 5 from paper\\
 \begin{itemize*}
 	\item The magnetic field strength relations, depending on solar activity and solar distance, are:
 	\begin{align*}
@@ -124,7 +114,7 @@ B v n T and eq. 5 from paper\\
 	\end{align*}
 \end{itemize*}
 
-\subsubsection*{Parker magnetic field solar distance dependency}
+% Parker magnetic field solar distance dependency
 Advantage of the IMF model: considers the different distance scaling of the individual vector components.\\
 
 Modeled median and mean relations for shifting the magnetic field strength's lognormal distribution:
@@ -132,10 +122,17 @@ Modeled median and mean relations for shifting the magnetic field strength's log
 	B_\text{med}(ssn,r) &= \left(\SI{0.0131}{\nT} \cdot ssn + \SI{4.29}{\nT}\right) \cdot \sqrt{\left(r^{-1.858}\right)^2 + \left(r^{-1.32}\right)^2}	\,,\\
 	B_\text{avg}(ssn,r) &= 1.0879 \cdot B_\text{med}(ssn,r)	\,.
 \end{align*}
-Restrictions of the magnetic field model: It is assumed that the azimuthal field component is nonexistent and the Parker spiral angle at \SI{1}{\au} has a value of \SI{-45}{\degree} or \SI{135}{\degree}, corresponding to a constant solar wind velocity of \SI{414}{\km\per\s}.
+Restrictions of the magnetic field model: It is assumed that the azimuthal field component is nonexistent and the Parker spiral angle at \SI{1}{\au} has a value of \SI{-45}{\degree} or \SI{135}{\degree}, corresponding to a constant solar wind velocity of \SI{414}{\km\per\s}.\\
 
-The estimated magnetic field strength median value of \SI{94}{\nano\tesla} for PSP's first perihelion is \SI{8}{\%} higher than that derived in the paper. The median value of \SI{1241}{\nano\tesla} for the first closest perihelion is even \SI{32}{\%} higher.
+The estimated magnetic field strength median value of \SI{94}{\nano\tesla} for PSP's first perihelion is \SI{8}{\%} higher than that derived in the paper. The median value of \SI{1241}{\nano\tesla} for the first closest perihelion is even \SI{32}{\%} higher.\\
 
+The newly derived distance dependency, extrapolated to the PSP orbit and combined with the solar activity dependency described in the paper, yields \SI{8}{\%} higher values at the first perihelion and \SI{32}{\%} higher values at the closest perihelion in comparison to the estimates derived in the paper.\\
+
+The relevant solar wind relations are presented in \citet[p.~10]{Venzmer2018}.\\
+They are valid within the ecliptic plane.\\
+
+
+Equations for lognormal distribution W(x)\\
 
 
 % % % conclusions

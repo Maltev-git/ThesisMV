@@ -907,7 +907,7 @@ The rate magnetic flux merges with the IMF (i.e., is opened at the magnetopause)
 As the viscous term describes another kind of interaction process, that is, reconnections due to Kelvin-Helm\-holtz instabilies at the flanks of the magnetosphere, it is independent from the dayside reconnection term. The viscous term accounts for the smaller fraction of variance and depends on the solar wind plasma quantities velocity and density \citep{Newell2008}.
 
 Many coupling functions were proposed in order to characterize the solar wind's interaction processes with the magnetosphere. They consist of functional terms of differing complexity, mostly including and approximating some of the factors listed above. There exist a lot of coupling functions based on combinations of the same physical quantities, often including the IMF direction \citep{Newell2007,Lockwood2013}. Here I list and discuss a few of the most used coupling factors and functions:
-\begin{itemize*}
+\begin{itemize}
 	\item $v$, the solar wind velocity. At an early stage, \citet{Snyder1963} found a strong correlation of the daily average velocity with geomagnetic activity from Mariner~2 solar wind measurements.
 	
 	\item $B_\text{z}$, the IMF z"~component. \citet{Fairfield1966} deduced from early satellite IMF measurements that a southward IMF direction is linked with geomagnetic disturbances, whereas a northward is connected with quiet geomagnetic conditions. For this purpose it makes sense to use the geocentric solar magnetospheric (GSM) coordinate system, which is aligned with the Earth's magnetic dipole axis.
@@ -967,7 +967,7 @@ Many coupling functions were proposed in order to characterize the solar wind's 
 	
 	\item \citet{Newell2008} found that a single coupling function, consisting of a merging and a viscous part, is able to describe the solar wind-magnetosphere interaction best, in that it correlates with the behavior of a broad range of geomagnetic indices. One of the best combinations for the \Kp~index is the merging term $\text{d}\Phi / \text{d}t$ together with the viscous term $\sqrt{n} \cdot v^2$, resulting in a correlation coefficient as high as $r = 0.866$.
 	
-\end{itemize*}
+\end{itemize}
 
 
 \subsection{\Kp{} forecast methods}
@@ -988,7 +988,7 @@ with the velocity measured in \si{\km\per\s} and the magnetic field in \si{\nano
 The different empirical functions are utilized within various models developed for predicting the \Kp~index in advance. Their prediction times range from simple nowcasts to forecasts of a few days, depending on the type of input data. The input can be solar wind real-time measurements made right ahead of Earth at L1, just as stream/CME arrival predictions derived from remote observations of the solar surface and corona. These two input sources are outlined in the next section.
 Another sophisticated prediction method relies on artificial neural networks. Models utilizing this method usually rank highest in prediction performance.
 Below I list a few currently existing operational services that implement various \Kp{} prediction methods, including nowcasts, forecasts, and manual warnings:
-\begin{itemize*}
+\begin{itemize}
 	\item The GFZ German Research Centre for Geosciences Potsdam is the responsible institution for releasing the official \Kp{}~index. Additionally, it also calculates a nowcast \Kp~index from the already available magnetic observations. The Nowcast \Kp~index is provided at the website of the GFZ~Potsdam:\\
 	\urltext{https://www.gfz-potsdam.de/en/kp-index/}
 	
@@ -1008,7 +1008,7 @@ Below I list a few currently existing operational services that implement variou
 	\item The Solar Influences Data Center (SIDC) at the Royal Observatory of Belgium (ROB) provides two kind of event-driven \Kp{} predictions: The first kind predicts in case of an actual solar event its geomagnetic consequences. The other kind warns about start and end times of quiet space weather conditions, that is, if geomagnetic activity is expected to remain the next 2~days below a \Kp{} of 5. Quiet geomagnetic periods are essential amongst others for operating precise geomagnetic surveys. Both alerts are prepared manually by forecasters. The warnings, called \textit{Presto} and \textit{Start/End of all quiet alert}, are disseminated via email and can be subscribed to at the SIDC's website:\\
 	\urltext{http://sidc.be/registration/registration_main.php}
 	
-\end{itemize*}
+\end{itemize}
 
 
 \subsection{Solar wind nowcast and forecast to Earth}

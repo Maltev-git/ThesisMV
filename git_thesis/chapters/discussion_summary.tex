@@ -20,7 +20,7 @@ The solar wind electric field proxy \vBz{} and the velocity of CMEs and streams 
 The obtained \Kp{} relations were evaluated for their prediction performance. The resulting predictive models and conclusions are presented in the following.
 
 % % % predictive models
-\begin{itemize*}
+\begin{itemize}
 	\item The functional dependency of the yearly \Kp{} average on the SSN of the previous year is
 	\begin{align*}
 		\Kp(ssn) = 0.281 \cdot \ln(ssn) + 1.05	\,.
@@ -53,7 +53,7 @@ The obtained \Kp{} relations were evaluated for their prediction performance. Th
 		\text{\Kp}_\text{Stream}(v) &= 5.88 \cdot \ln(v + 299) - 37.0	\,.
 	\end{align*}
 	Its MAD has a mean size of about 0.7~\Kp~units. This relation has a proper \Kp{} range of \numrange{0.3}{4.3}. This is well below the threshold of geomagnetic storms ($\si{\Kp} \leq 5$) and thus the relation is good in predicting lower geomagnetic activity but not storms.
-\end{itemize*}
+\end{itemize}
 
 % % % conclusions
 % conclusions from data processing
@@ -80,59 +80,59 @@ The model actually consists of separate models that consider the solar wind para
 
 The parameters' frequency distributions were obtained from 53~years (1963--2016) of near-Earth solar wind measurements from the hourly OMNI data set. Analytical representations of the shapes of the frequency distributions were derived. They all were fitted with lognormal functions except for the velocity, whose fast and slow regimes were considered by using a double lognormal distribution. The solar activity dependences were derived from almost five solar cycles of monthly SSN data. Solar wind measurements made by the Helios~1 and Helios~2 probes in the 1970s were analyzed to model the parameters' solar distance scalings via power law fits. The Helios data cover more than two thirds of the distance to the Sun (\SIrange{0.29}{0.98}{\au}). Furthermore for the magnetic field strength, an alternative model was derived, which changes the solar distance dependency to support a Parker magnetic field geometry.
 
-The obtained lognormal functions, SSN dependencies, and solar distance dependencies were combined to build models of the parameters that represent the solar activity and distance behavior. The near-Sun extrapolations of the resulting models were compared to existing studies that infer the local magnitude of the solar wind parameters from remote observations. Eventually, these empirical models were supplied with predictions of the SSN and extrapolated to the planned orbital positions of the PSP. The resulting models and conclusions are presented in the following.\\
-
-
-
-
+The obtained lognormal functions, SSN dependencies, and solar distance dependencies were combined to build models of the parameters that represent the solar activity and distance behavior. The near-Sun extrapolations of the resulting models were compared to existing studies that infer the local magnitude of the solar wind parameters from remote observations. Eventually, these empirical models were supplied with predictions of the SSN and extrapolated to the planned orbital trajectory of the PSP. The resulting models and conclusions are presented in the following.\\
 
 % % % results
-\begin{itemize*}
-	\item The magnetic field strength relations, depending on solar activity and solar distance, are:
+The resulting models represent the frequency distributions of the solar wind parameters by lognormal functions, whose location and shape are defined by their median and mean.
+
+The derived relations for the median and mean values are a result of lognormal function fits and they deviate from the actual median and mean values of the solar wind parameters\footnote{The only actual median and mean values I calculated, are those with respect to solar distance -- they are presented in Table~3 of the article and in the first two rows of \autoref{tab:bfield_fit_parameters}.}. Thus, the derived relations are to be used only as input to the lognormal function, Equation~(4) in \citet{Venzmer2018}.
+
+The frequency distributions are being shifted by the median and mean relations, which depend on solar distance $r$, measured in au, and on solar activity, measured via the SSN. The resulting relations and the predictions for the first and the first closest perihelion of PSP are presented in the following.
+\begin{itemize}
+	\item The relations for the median and mean of the magnetic field strength are:
 	\begin{align*}
 		B_\text{med}(ssn,r) &= \left(\SI{0.0131}{\nT} \cdot ssn + \SI{4.29}{\nT}\right) \cdot r^{-1.66}	\,,\\
 		B_\text{avg}(ssn,r) &= 1.0879 \cdot B_\text{med}(ssn,r)	\,.
 	\end{align*}
-	\item The proton velocity relations for the slow and fast components, depending on solar distance, are:
+	 The estimated median value for PSP's first perihelion is \SI{87}{\nano\tesla} and that for the first closest perihelion is \SI{943}{\nano\tesla}.
+	
+	\item I derived an alternative relation for the median, which considers the differing distance scaling of the individual vector components. The relation only differs in its solar distance dependency, that is, it accounts for the Parker field geometry:
+	\begin{align*}
+		B^\text{Parker}_\text{med}(ssn,r) &= \left(\SI{0.0131}{\nT} \cdot ssn + \SI{4.29}{\nT}\right) \cdot \sqrt{\left(r^{-1.858}\right)^2 + \left(r^{-1.32}\right)^2}	\,.
+	\end{align*}
+	This model assumes that the azimuthal field component is nonexistent and the Parker spiral angle at \SI{1}{\au} has a value of \SI{-45}{\degree} or \SI{135}{\degree}, corresponding to a constant solar wind velocity of \SI{414}{\km\per\s}.
+	
+	This model yields higher extrapolated near-Sun values than the simple power-law dependent model does. The estimated median value of \SI{94}{\nano\tesla} for PSP's first perihelion is \SI{8}{\%} higher and the value for the first closest perihelion of \SI{1241}{\nano\tesla} is even \SI{32}{\%} higher.
+	
+	\item The model for the velocity distribution is built in a different way, combining two lognormal functions to consider for the slow and fast solar wind components, see the Equation~(5) in \citet{Venzmer2018}. Here, the solar activity dependence is introduced by varying the share of both components and not by shifting their positions, that is, a balancing parameter depending on the SSN regulates the share of both components:
+	\begin{align*}
+		c(ssn) = -0.00180 \cdot ssn + 0.64	\,.
+	\end{align*}
+	As a result, the median and mean relations for both lognormal functions depend only on solar distance:
 	\begin{align*}
 		v_\text{med}^\text{slow}(r) &= \SI{363}{\km\per\s} \cdot r^{0.099}	\,,&    &       &v_\text{med}^\text{fast}(r) &= \SI{483}{\km\per\s} \cdot r^{0.099}	\,,\\
 		v_\text{avg}^\text{slow}(r) &= 1.0101 \cdot v_\text{med}^\text{slow}(r)	\,,&    &       &v_\text{avg}^\text{fast}(r) &= 1.023 \cdot v_\text{med}^\text{fast}(r)	\,.
 	\end{align*}
-	The share of both components balanced with solar activity is found to be:
-	\begin{align*}
-		c(ssn) = -0.00180 \cdot ssn + 0.64	\,.
-	\end{align*}
-	\item The derived relations of the proton density are:
+	 The estimated median value for PSP's first perihelion is \SI{340}{\km\per\s} and that for the first closest perihelion is \SI{290}{\km\per\s}.
+	
+	\item The derived median and mean relations for the density are:
 	\begin{align*}
 		n_\text{med}(ssn,r) &= \left(\SI{0.0038}{\per\cm\cubed} \cdot ssn + \SI{4.50}{\per\cm\cubed}\right) \cdot r^{-2.11}	\,,\\
 		n_\text{avg}(ssn,r) &= 1.305 \cdot n_\text{med}(ssn,r)	\,.
 	\end{align*}
-	\item The derived proton temperature relations are:
+	 The estimated median value for PSP's first perihelion is \SI{214}{\per\cm\cubed} and that for the first closest perihelion is \SI{2951}{\per\cm\cubed}.
+	
+	\item The derived median and mean relations for the temperature are:
 	\begin{align*}
 		T_\text{med}(ssn,r) &= (\SI{197}{\K} \cdot ssn + \SI{57300}{\K}) \cdot r^{-1.10}	\,,\\
 		T_\text{avg}(ssn,r) &= 1.654 \cdot T_\text{med}(ssn,r)\,.
 	\end{align*}
-\end{itemize*}
+	 The estimated median value for PSP's first perihelion is \SI{503000}{\kelvin} and that for the first closest perihelion is \SI{1930000}{\kelvin}.
+\end{itemize}
 
-% Parker magnetic field solar distance dependency
-Advantage of the IMF model: considers the different distance scaling of the individual vector components.\\
-
-Modeled median and mean relations for shifting the magnetic field strength's lognormal distribution:
-\begin{align*}
-	B_\text{med}(ssn,r) &= \left(\SI{0.0131}{\nT} \cdot ssn + \SI{4.29}{\nT}\right) \cdot \sqrt{\left(r^{-1.858}\right)^2 + \left(r^{-1.32}\right)^2}	\,,\\
-	B_\text{avg}(ssn,r) &= 1.0879 \cdot B_\text{med}(ssn,r)	\,.
-\end{align*}
-Restrictions of the magnetic field model: It is assumed that the azimuthal field component is nonexistent and the Parker spiral angle at \SI{1}{\au} has a value of \SI{-45}{\degree} or \SI{135}{\degree}, corresponding to a constant solar wind velocity of \SI{414}{\km\per\s}.\\
-
-The estimated magnetic field strength median value of \SI{94}{\nano\tesla} for PSP's first perihelion is \SI{8}{\%} higher than that derived in the paper. The median value of \SI{1241}{\nano\tesla} for the first closest perihelion is even \SI{32}{\%} higher.\\
-
-The newly derived distance dependency, extrapolated to the PSP orbit and combined with the solar activity dependency described in the paper, yields \SI{8}{\%} higher values at the first perihelion and \SI{32}{\%} higher values at the closest perihelion in comparison to the estimates derived in the paper.\\
-
-The relevant solar wind relations are presented in \citet[p.~10]{Venzmer2018}.\\
 They are valid within the ecliptic plane.\\
 
 
-Equations for lognormal distribution W(x)\\
 
 
 % % % conclusions

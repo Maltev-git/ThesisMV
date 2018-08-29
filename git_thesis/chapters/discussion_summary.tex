@@ -68,7 +68,7 @@ Both relations are derived from velocity data that is below \SI{1100}{\km\per\s}
 
 The derived functional relations are based on velocity and magnetic field z"~component, which comprise only part of the relevant solar wind--magnetosphere coupling parameters. The evaluation of the prediction performance of the derived predictive models shows that they indeed cannot compete with models based on full-fledged solar wind coupling functions, nor with current prediction models based on artificial neural networks.
 
-That said, the relations still enable empirical estimations of the average geomagnetic activity for special forecast situations. \Kp{} can directly be quantified from in-situ measurements of the solar wind electric field. As early predictions of CME and stream magnetic fields obtained from remote observations currently either are not existent or come with high uncertainties, \Kp{} relations, derived exclusively for the arrival velocities of CMEs and streams, are provided.
+That said, the relations still enable empirical estimations of the average geomagnetic activity for special space weather forecast situations. \Kp{} can directly be quantified from in-situ measurements of the solar wind electric field. As early predictions of CME and stream magnetic fields obtained from remote observations currently either are not existent or come with high uncertainties, \Kp{} relations, derived exclusively for the arrival velocities of CMEs and streams, are provided.
 
 
 \section{The solar wind's Sun--Earth evolution}
@@ -101,7 +101,6 @@ The frequency distributions are being shifted by the median and mean relations, 
 		B^\text{Parker}_\text{med}(ssn,r) &= \left(\SI{0.0131}{\nT} \cdot ssn + \SI{4.29}{\nT}\right) \cdot \sqrt{\left(r^{-1.858}\right)^2 + \left(r^{-1.32}\right)^2}	\,.
 	\end{align*}
 	This model assumes that the azimuthal field component is nonexistent and the Parker spiral angle at \SI{1}{\au} has a value of \SI{-45}{\degree} or \SI{135}{\degree}, corresponding to a constant solar wind velocity of \SI{414}{\km\per\s}.
-	
 	This model yields higher extrapolated near-Sun values than the simple power-law dependent model does. The estimated median value of \SI{94}{\nano\tesla} for PSP's first perihelion is \SI{8}{\%} higher and the value for the first closest perihelion of \SI{1241}{\nano\tesla} is even \SI{32}{\%} higher.
 	
 	\item The model for the velocity distribution is built in a different way, combining two lognormal functions to consider for the slow and fast solar wind components, see the Equation~(5) in \citet{Venzmer2018}. Here, the solar activity dependence is introduced by varying the share of both components and not by shifting their positions, that is, a balancing parameter depending on the SSN regulates the share of both components:
@@ -130,17 +129,12 @@ The frequency distributions are being shifted by the median and mean relations, 
 	 The estimated median value for PSP's first perihelion is \SI{503000}{\kelvin} and that for the first closest perihelion is \SI{1930000}{\kelvin}.
 \end{itemize}
 
-They are valid within the ecliptic plane.\\
-
-
-
-
 % % % conclusions
-The extrapolation of the velocity model indicates that solar wind acceleration takes place up to solar distances of around \SI{20}{\Rs}.\\
-The extrapolation of the temperature model suggests that plasma heating takes place up to solar distances of \SI{20}{\Rs}.\\
-PSP at its closest perihelia will possibly encounter IMF median values of \SI{943}{\nano\tesla} and extreme values of up to around \SI{1200}{\nano\tesla} (for the Parker IMF model \SI{1241}{\nano\tesla} and around \SI{1600}{\nano\tesla} respectively).\\
+The extrapolation of the velocity model to solar distances below \SI{20}{\Rs} yields speeds that overestimate those obtained from remote observations. In particular, the estimated slow wind velocity for \SI{10}{\Rs} is about \SI{270}{\km\per\s}, whereas remote observations show velocities around \SI{200}{\km\per\s}. This indicates that solar wind acceleration takes place up to solar distances of \SI{20}{\Rs}.
 
+Also, the near-Sun extrapolation of the temperature model overestimates its magnitude in comparison to coronal measurements, that is, temperatures of \SIrange{2e6}{3e6}{\kelvin} are estimated for solar distances of \SI{10}{\Rs}, whereas it is known that these temperatures already exist in the corona close to the Sun. This suggests that plasma heating takes place up to these solar distances.
 
+Thus, from the results presented in this study, I conclude that the regions, where solar wind acceleration and heating occurs, will indeed be probed by the PSP spacecraft.
 
 
 \section{Outlook}

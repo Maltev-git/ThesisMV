@@ -4,7 +4,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.1.3
-lastDocument=chapters/discussion_summary.tex
+lastDocument=chapters/front_matter.tex
 masterDocument=
 name=thesis_project
 pkg_extIsRegExp=false
@@ -87,7 +87,7 @@ Indentation Mode=normal
 Mode=LaTeX
 
 [document-settings,item:chapters/discussion_summary.tex]
-Bookmarks=182
+Bookmarks=183
 Encoding=UTF-8
 Highlighting=LaTeX
 Indentation Mode=normal
@@ -179,12 +179,12 @@ Mode=LaTeX
 
 [item:appendix/acknowledgments.tex]
 archive=true
-column=91
+column=23
 encoding=UTF-8
 highlight=LaTeX
-line=34
+line=22
 mode=LaTeX
-open=false
+open=true
 order=5
 
 [item:appendix/appendix.tex]
@@ -279,42 +279,42 @@ order=5
 
 [item:chapters/discussion_summary.tex]
 archive=true
-column=122
+column=413
 encoding=UTF-8
 highlight=LaTeX
-line=70
+line=178
 mode=LaTeX
 open=true
 order=3
 
 [item:chapters/formal_titlepage.tex]
 archive=true
-column=2
+column=28
 encoding=UTF-8
 highlight=LaTeX
-line=20
+line=138
 mode=LaTeX
 open=false
 order=6
 
 [item:chapters/front_matter.tex]
 archive=true
-column=6
+column=2
 encoding=UTF-8
 highlight=LaTeX
-line=424
+line=56
 mode=LaTeX
 open=true
 order=2
 
 [item:chapters/introduction.tex]
 archive=true
-column=44
+column=264
 encoding=UTF-8
 highlight=LaTeX
-line=68
+line=11
 mode=LaTeX
-open=false
+open=true
 order=4
 
 [item:chapters/notes_thesis.tex]
@@ -359,10 +359,10 @@ order=4
 
 [item:notes.tex]
 archive=true
-column=83
+column=31
 encoding=UTF-8
 highlight=LaTeX
-line=185
+line=68
 mode=LaTeX
 open=false
 order=7
@@ -418,10 +418,10 @@ open=false
 order=-1
 
 [view-settings,view=0,item:appendix/acknowledgments.tex]
-CursorColumn=91
-CursorLine=34
+CursorColumn=23
+CursorLine=22
 JumpList=
-ViMarks=.,34,91,[,34,91,],34,91
+ViMarks=.,22,22,[,22,14,],22,22
 
 [view-settings,view=0,item:appendix/appendix.tex]
 CursorColumn=12
@@ -478,28 +478,28 @@ JumpList=
 ViMarks=.,174,36,[,174,36,],174,50,a,1,0,b,16,0,c,63,0,d,106,0,e,115,0,f,122,0,g,139,0
 
 [view-settings,view=0,item:chapters/discussion_summary.tex]
-CursorColumn=122
-CursorLine=70
+CursorColumn=413
+CursorLine=178
 JumpList=
-ViMarks=.,70,121,[,70,108,],70,121,a,182,0
+ViMarks=.,178,413,[,178,413,],178,413,a,183,0
 
 [view-settings,view=0,item:chapters/formal_titlepage.tex]
-CursorColumn=2
-CursorLine=20
+CursorColumn=28
+CursorLine=138
 JumpList=
-ViMarks=.,7,0,[,7,0,],7,0
+ViMarks=.,141,50,[,141,37,],141,50
 
 [view-settings,view=0,item:chapters/front_matter.tex]
-CursorColumn=6
-CursorLine=424
+CursorColumn=2
+CursorLine=56
 JumpList=
-ViMarks=.,424,0,[,424,0,],424,1
+ViMarks=.,56,0,[,56,0,],56,1
 
 [view-settings,view=0,item:chapters/introduction.tex]
-CursorColumn=44
-CursorLine=68
+CursorColumn=264
+CursorLine=11
 JumpList=
-ViMarks=.,86,656,[,86,656,],86,670,a,15,0,b,53,0,c,85,0,w,1,0
+ViMarks=.,11,263,[,11,263,],11,263,a,15,0,b,53,0,c,85,0,w,1,0
 
 [view-settings,view=0,item:chapters/notes_thesis.tex]
 CursorColumn=0
@@ -526,10 +526,10 @@ JumpList=
 ViMarks=.,1,18,[,1,18,],1,18
 
 [view-settings,view=0,item:notes.tex]
-CursorColumn=83
-CursorLine=185
+CursorColumn=31
+CursorLine=68
 JumpList=
-ViMarks=.,185,56,[,185,56,],185,56
+ViMarks=.,68,30,[,68,30,],68,30
 
 [view-settings,view=0,item:paperMVVB/sections/literature_bibtex.bib]
 CursorColumn=0

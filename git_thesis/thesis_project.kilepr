@@ -172,40 +172,40 @@ Mode=LaTeX
 
 [item:appendix/acknowledgments.tex]
 archive=true
-column=23
+column=78
 encoding=UTF-8
 highlight=LaTeX
-line=22
+line=27
 mode=LaTeX
 open=false
 order=5
 
 [item:appendix/appendix.tex]
 archive=true
-column=12
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=384
+line=451
 mode=LaTeX
 open=false
 order=4
 
 [item:appendix/curriculum_vitae.tex]
 archive=true
-column=64
+column=2
 encoding=UTF-8
 highlight=LaTeX
-line=19
+line=31
 mode=LaTeX
 open=false
 order=5
 
 [item:appendix/literature_bibtex.bib]
 archive=true
-column=4
+column=62
 encoding=UTF-8
 highlight=BibTeX
-line=1979
+line=2001
 mode=BibTeX
 open=false
 order=6
@@ -232,10 +232,10 @@ order=8
 
 [item:chapters/analyses_helios.tex]
 archive=true
-column=22
+column=27
 encoding=UTF-8
 highlight=LaTeX
-line=2
+line=23
 mode=LaTeX
 open=false
 order=4
@@ -282,20 +282,20 @@ order=5
 
 [item:chapters/formal_titlepage.tex]
 archive=true
-column=28
+column=34
 encoding=UTF-8
 highlight=LaTeX
-line=138
+line=103
 mode=LaTeX
 open=false
 order=6
 
 [item:chapters/front_matter.tex]
 archive=true
-column=70
+column=11
 encoding=UTF-8
 highlight=LaTeX
-line=436
+line=498
 mode=LaTeX
 open=true
 order=2
@@ -307,7 +307,7 @@ encoding=UTF-8
 highlight=LaTeX
 line=43
 mode=LaTeX
-open=true
+open=false
 order=3
 
 [item:chapters/notes_thesis.tex]
@@ -392,10 +392,10 @@ order=7
 
 [item:thesis.tex]
 archive=true
-column=28
+column=41
 encoding=UTF-8
 highlight=LaTeX
-line=91
+line=96
 mode=LaTeX
 open=true
 order=1
@@ -411,26 +411,26 @@ open=false
 order=-1
 
 [view-settings,view=0,item:appendix/acknowledgments.tex]
-CursorColumn=23
-CursorLine=22
+CursorColumn=78
+CursorLine=27
 JumpList=
-ViMarks=.,22,22,[,22,14,],22,22
+ViMarks=.,27,35,[,27,35,],27,35
 
 [view-settings,view=0,item:appendix/appendix.tex]
-CursorColumn=12
-CursorLine=384
+CursorColumn=0
+CursorLine=451
 JumpList=
 ViMarks=.,384,12,[,384,12,],384,12
 
 [view-settings,view=0,item:appendix/curriculum_vitae.tex]
-CursorColumn=64
-CursorLine=19
+CursorColumn=2
+CursorLine=31
 JumpList=
-ViMarks=.,19,63,[,19,61,],19,63
+ViMarks=.,31,0,[,31,0,],31,1
 
 [view-settings,view=0,item:appendix/literature_bibtex.bib]
-CursorColumn=4
-CursorLine=1979
+CursorColumn=62
+CursorLine=2001
 JumpList=
 ViMarks=.,1979,3,[,1979,3,],1979,3
 
@@ -447,10 +447,10 @@ JumpList=
 ViMarks=.,43,9,[,43,9,],43,9
 
 [view-settings,view=0,item:chapters/analyses_helios.tex]
-CursorColumn=22
-CursorLine=2
+CursorColumn=27
+CursorLine=23
 JumpList=
-ViMarks=.,2,21,[,2,12,],2,21
+ViMarks=.,21,14,[,21,14,],21,18
 
 [view-settings,view=0,item:chapters/basics.tex]
 CursorColumn=12
@@ -471,16 +471,16 @@ JumpList=
 ViMarks=.,174,36,[,174,36,],174,50,a,1,0,b,16,0,c,63,0,d,106,0,e,115,0,f,122,0,g,139,0
 
 [view-settings,view=0,item:chapters/formal_titlepage.tex]
-CursorColumn=28
-CursorLine=138
+CursorColumn=34
+CursorLine=103
 JumpList=
-ViMarks=.,141,50,[,141,37,],141,50
+ViMarks=.,103,34,[,103,34,],103,34
 
 [view-settings,view=0,item:chapters/front_matter.tex]
-CursorColumn=70
-CursorLine=436
+CursorColumn=11
+CursorLine=498
 JumpList=
-ViMarks=.,436,69,[,436,42,],436,69
+ViMarks=.,498,1,[,498,1,],498,10
 
 [view-settings,view=0,item:chapters/introduction.tex]
 CursorColumn=170
@@ -537,7 +537,7 @@ JumpList=
 ViMarks=.,53,0,[,53,0,],53,1
 
 [view-settings,view=0,item:thesis.tex]
-CursorColumn=28
-CursorLine=91
+CursorColumn=41
+CursorLine=96
 JumpList=
-ViMarks=.,91,27,[,91,17,],91,27
+ViMarks=.,96,40,[,96,40,],96,40

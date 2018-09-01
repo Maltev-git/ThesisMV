@@ -3,12 +3,12 @@
 \label{chap:chapterPSP}
 
 % introduction
-The analyses in the previous chapter are focused on the solar wind's influence on the magnetosphere -- this chapter changes the main focus to the solar wind upstream of the magnetosphere, in a first step down to a solar distance of \SI{0.3}{\au} and then even further down to the region around \SI{10}{\Rs}, close to the solar wind's origin near the Sun. The solar wind's evolution on its way from the near-Sun region to \SI{1}{\au} is modeled with the goal of predicting the solar wind environment for the orbit of the Parker Solar Probe (PSP) mission.
+The analyses in the previous chapter are focused on the solar wind's influence on the terrestrial magnetosphere -- this chapter changes the main focus to the solar wind upstream of the magnetosphere, in a first step down to a solar distance of \SI{0.3}{\au} and then even further down to the region around \SI{10}{\Rs}, close to the solar wind's origin near the Sun. The solar wind's evolution on its way from the near-Sun region to \SI{1}{\au} is modeled with the goal of predicting the solar wind environment for the orbit of the Parker Solar Probe (PSP) mission.
 
 % context of motivation in thesis and paper introduction and context of results in thesis\\
 
 %COFI -- chapter outline and flow integration
-This chapter is constructed as follows: in the first \autoref{sec:PSP_mission}, the PSP mission and its scientific goals are described. In \autoref{sec:on_the_published_article} I introduce the analyses done in the publication \citet{Venzmer2018}, which constitute the major part of this chapter. Then in \autoref{sec:Parker_IMF_solar_distance_dependency}, an alternative magnetic field model is derived, which changes the solar distance dependency from the power law in our article to support a Parker magnetic field geometry. Further in \autoref{sec:possible_solar_wind_model_modifications}, possible improvements to the solar wind model are sketched.
+This chapter is constructed as follows: In the first \autoref{sec:PSP_mission}, the PSP mission and its scientific goals are described. In \autoref{sec:on_the_published_article} I introduce the analyses done in the publication \citet{Venzmer2018}, which constitute the major part of this chapter. Then in \autoref{sec:Parker_IMF_solar_distance_dependency}, an alternative magnetic field model is derived, which changes the solar distance dependency from the power law in our article to support a Parker magnetic field geometry. Further in \autoref{sec:possible_solar_wind_model_modifications}, possible improvements to the solar wind model are sketched.
 
 
 \section{Parker Solar Probe mission}
@@ -19,7 +19,7 @@ Up to now coronal heating and solar wind acceleration remain the open problems t
 
 The Parker Solar Probe (PSP) mission (renamed in 2017 from Solar Probe Plus) is designed to finally address these major questions about the solar corona, in that it will dive into this near-Sun region. The prime goals of the PSP mission as stated by \citet{Fox2015} are: ``Trace the flow of energy that heats and accelerates the solar corona and solar wind; Determine the structure and dynamics of the plasma and magnetic fields at the sources of the solar wind; and Explore mechanisms that accelerate and transport energetic particles.''
 These goals seem achievable due to recent developments in technology and engineering that allow PSP to approach the Sun down to a closest distance of \SI{9.86}{\Rs} (\SI{0.046}{\au}) from the center of the Sun. PSP launched on 12~August 2018 and utilizes seven Venus gravity assists over nearly seven years throughout its mission in order to lower its orbit around the Sun, see the planned trajectory in \autoref{fig:PSP_MissionDesign2_negative}.
-\begin{figure}
+\begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_others/images/PSP_MissionDesign2_negative.png}
 	}{

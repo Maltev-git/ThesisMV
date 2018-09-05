@@ -259,23 +259,23 @@ order=5
 
 [item:chapters/chapter2.tex]
 archive=true
-column=128
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=18
+line=631
 mode=LaTeX
 open=false
 order=3
 
 [item:chapters/conclusions.tex]
 archive=true
-column=0
+column=10
 encoding=UTF-8
 highlight=LaTeX
-line=172
+line=163
 mode=LaTeX
-open=false
-order=-1
+open=true
+order=3
 
 [item:chapters/data.tex]
 archive=true
@@ -299,10 +299,10 @@ order=6
 
 [item:chapters/front_matter.tex]
 archive=true
-column=46
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=446
+line=485
 mode=LaTeX
 open=true
 order=2
@@ -312,17 +312,17 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=40
+line=13
 mode=LaTeX
-open=false
-order=3
+open=true
+order=4
 
 [item:chapters/notes_thesis.tex]
 archive=true
-column=0
+column=234
 encoding=UTF-8
 highlight=LaTeX
-line=1
+line=2
 mode=LaTeX
 open=false
 order=-1
@@ -379,10 +379,10 @@ order=-1
 
 [item:style/header.tex]
 archive=true
-column=84
+column=93
 encoding=UTF-8
 highlight=LaTeX
-line=97
+line=1
 mode=LaTeX
 open=true
 order=0
@@ -399,10 +399,10 @@ order=7
 
 [item:thesis.tex]
 archive=true
-column=41
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=96
+line=74
 mode=LaTeX
 open=true
 order=1
@@ -466,16 +466,16 @@ JumpList=
 ViMarks=.,1033,191,[,1033,191,],1033,191,a,1,0,b,7,0,c,640,0,d,689,0,e,887,0,f,821,0,g,255,0,h,137,0,i,208,0,j,334,0,k,483,0
 
 [view-settings,view=0,item:chapters/chapter2.tex]
-CursorColumn=128
-CursorLine=18
+CursorColumn=0
+CursorLine=631
 JumpList=
 ViMarks=.,18,128,[,18,128,],18,128
 
 [view-settings,view=0,item:chapters/conclusions.tex]
-CursorColumn=0
-CursorLine=172
+CursorColumn=10
+CursorLine=163
 JumpList=
-ViMarks=
+ViMarks=.,163,9,[,163,0,],163,9
 
 [view-settings,view=0,item:chapters/data.tex]
 CursorColumn=371
@@ -490,22 +490,22 @@ JumpList=
 ViMarks=.,15,6,[,15,6,],15,6
 
 [view-settings,view=0,item:chapters/front_matter.tex]
-CursorColumn=46
-CursorLine=446
+CursorColumn=0
+CursorLine=485
 JumpList=
-ViMarks=.,446,45,[,446,41,],446,45
+ViMarks=.,485,0,[,485,0,],485,0
 
 [view-settings,view=0,item:chapters/introduction.tex]
 CursorColumn=0
-CursorLine=40
+CursorLine=13
 JumpList=
 ViMarks=.,78,1125,[,78,1122,],78,1125,a,14,0,b,50,0,c,77,0,w,1,0
 
 [view-settings,view=0,item:chapters/notes_thesis.tex]
-CursorColumn=0
-CursorLine=1
+CursorColumn=234
+CursorLine=2
 JumpList=
-ViMarks=.,1,20,[,1,14,],1,20
+ViMarks=.,2,233,[,2,232,],2,233
 
 [view-settings,view=0,item:chapters/paperMVVB_wrapper.tex]
 CursorColumn=0
@@ -538,10 +538,10 @@ JumpList=
 ViMarks=.,778,73,[,778,73,],778,73
 
 [view-settings,view=0,item:style/header.tex]
-CursorColumn=84
-CursorLine=97
+CursorColumn=93
+CursorLine=1
 JumpList=
-ViMarks=.,133,37,[,133,34,],133,37
+ViMarks=.,1,92,[,1,88,],1,92
 
 [view-settings,view=0,item:style/short_commands_malte.tex]
 CursorColumn=48
@@ -550,7 +550,7 @@ JumpList=
 ViMarks=.,53,0,[,53,0,],53,1
 
 [view-settings,view=0,item:thesis.tex]
-CursorColumn=41
-CursorLine=96
+CursorColumn=0
+CursorLine=74
 JumpList=
 ViMarks=.,96,40,[,96,40,],96,40

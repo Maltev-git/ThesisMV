@@ -22,12 +22,13 @@ Ultimately, I evaluate the prediction performances of the derived relations by a
 %%% synopsis
 The objectives of the analyses performed and presented in this chapter are to estimate the geomagnetic impact of solar wind and to predict it for CMEs and streams in particular. The analyses are ordered as follows: In \autoref{sec:kp_long_term_variations} I determine the magnitudes of the long-term \Kp{} changes due to solar activity and I measure the extent of seasonal variations stemming from the Earth's orbit. In \autoref{sec:relation_between_sw_efield_and_kp} in order to nowcast the \Kp~index, I quantify the solar wind influence on \Kp{} by deriving a functional relation with the solar wind E"~field. In \autoref{sec:relations_between_cme_stream_v_and_kp} for the purpose of enabling \Kp{} forecasts from remote observations, I estimate the \Kp{} impact coming from CMEs and streams separately by deriving functional dependencies with their velocities. In \autoref{sec:prediction_performance}, the obtained \Kp{} relations are evaluated for their prediction performance. Finally in \autoref{sec:discussion_ch2}, the results are further discussed and at the end of this chapter in \autoref{sec:conclusions_ch2}, the conclusions are presented.
 
+\clearpage
 
 \section{The \Kp~index and its long-term variations}
 \label{sec:kp_long_term_variations}
 % data
 The \Kp~index is designed to measure solar particle radiation by its magnetic effects. I use this magnetospheric disturbance index to correlate it with near-Earth solar wind measurements. More detailed information on the \Kp~index can be found in \autoref{sec:kp_index}.
-The \Kp{} data is obtained from the GFZ~Potsdam, where the index is currently maintained\footnote{GFZ~Potsdam \Kp~index website: \urlfoot{http://www.gfz-potsdam.de/en/kp-index/}}. It covers the time period 1932--2016, see also \autoref{sec:kp_data}. Its frequency distribution shows that the highest frequencies occur around low \Kp{} values of \num{1.3}, see \autoref{fig:Kp_histogram_b}. Going to higher \Kp{} values, the frequencies decline asymptotically towards zero -- the maximum \Kp{} value of \num{9.0} occurred only 29 times in this time interval.
+The \Kp{} data is obtained from the GFZ~Potsdam, where the index is currently maintained\footnote{GFZ~Potsdam \Kp~index website: \urlfoot{http://www.gfz-potsdam.de/en/kp-index/}}. It covers the time period 1932--2016, see also \autoref{sec:kp_data}. Its frequency distribution shows that the highest frequencies occur around low \Kp{} values of \num{1.3}, see \autoref{fig:Kp_histogram_b}. Going to higher \Kp{} values, the frequencies decline asymptotically towards zero -- the maximum \Kp{} value of \num{9.0} occurred only 29 times in this time interval. Throughout this work, I write the \Kp~index in decimal notation, that is, '$4+$', '$4o$', and '$4-$' translate to 4.3, 4.0, and 3.7 respectively.
 \begin{figure}[htb]
 	\begin{floatrow}
 		\ffigbox{
@@ -46,7 +47,6 @@ The \Kp{} data is obtained from the GFZ~Potsdam, where the index is currently ma
 		}
 	\end{floatrow}
 \end{figure}
-Throughout this work, I write the \Kp~index in decimal notation, that is, '$4+$', '$4o$', and '$4-$' translate to 4.3, 4.0, and 3.7 respectively.
 
 % intro
 As magnetospheric activity is driven by the approaching solar wind, it also reflects the solar wind's long-term variations. The long-term variations of \Kp{} originate from the change in solar activity and the changes due to the Earth's orbit around the Sun. In the following the influence of both effects is quantified. I estimate the long-term variations of the \Kp~index which are contributed by solar activity and seasonal effects.
@@ -57,7 +57,7 @@ The general \Kp{} distribution seen in \autoref{fig:Kp_histogram_b} averages ove
 The \Kp{} frequency distributions' shape varies with solar activity as is visible in the yearly distributions, sorted and colored by yearly SSN in \autoref{fig:Kp_histogram_yearlySSN_b}. The distribution's peak position scales with SSN, that is, a high yearly SSN results in a higher abundance of large \Kp{} values as well.
 
 The time series of yearly average \Kp{} values from the years 1932--2016 shows a solar cycle imprint, see the top graphs in \autoref{fig:yearly_kp-ssn_correlation_c}.
-\begin{figure}
+\begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/yearly_kp-ssn_correlation_c.pdf}
 	}{
@@ -69,13 +69,15 @@ The time series of yearly average \Kp{} values from the years 1932--2016 shows a
 The \Kp{} pattern follows the solar cycle minima and maxima as well as the changes in magnitude between solar cycles. The yearly mean \Kp{} shifts by a value of about \num{1.0} for both variations separately. As expected, the correlation with solar activity shows an 11-year period, see bottom graph in \autoref{fig:yearly_kp-ssn_correlation_c}. The highest correlation coefficient of \num{0.60} is found with a time lag of $-1$~year, that is, the yearly average \Kp{} follows the SSN of the previous year.
 %Kp-ssn cc: 0.5971
 
+\pagebreak
+
 The yearly mean \Kp~index with respect to the 1-year lagged SSN shows a rise with increasing SSN, as seen from \autoref{fig:Kp_SSN_fit_d}.
-\begin{figure}
+\begin{figure}[b!]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_SSN_fit_d.pdf}
 	}{
 		\caption[\lofimage{figures_of_mine/chapter2/Kp_SSN_fit_d.pdf}I created the figure myself.]
-		{Yearly mean \Kp~index with respect to 1-year lagged SSN (+) with the weighted logarithmic fit (dashed line). The error bars denote the SSN standard deviation and the relative weight from the yearly data coverage. The shaded area represents the fit error band derived from the estimated standard deviations of the fit parameters. The logarithmic function (\autoref{eq:log_fit_function}) is used for the weighted fit. The yearly \Kp{} mean values are calculated from GFZ~Potsdam data and the yearly SSN is obtained from the SILSO World Data Center.}
+		{Yearly mean \Kp~index with respect to 1-year lagged SSN (+) with the weighted logarithmic fit (dashed line). The error bars denote the SSN standard deviation and the relative weight from the yearly data coverage. The shaded area represents the fit error band derived from the estimated standard deviations of the fit parameters. The logarithmic function (\autoref{eq:log_fit_function}) is used for the weighted fit. The yearly \Kp{} mean values are calculated from GFZ~Potsdam data. The yearly SSN is obtained from the SILSO World Data Center.}
 		\label{fig:Kp_SSN_fit_d}
 	}
 \end{figure}
@@ -83,9 +85,7 @@ In order to obtain an analytical relation for this dependency, I perform a least
 \begin{align}
 	f(x) = a \cdot \ln(x) + b	\,.	\label{eq:log_fit_function}
 \end{align}
-The resulting fit parameters are $a = 0.281(43)$ and $b = 1.05(19)$; the numbers in parentheses are the estimated standard deviations. Concerning the error notation in this work, I adhere to the parentheses notation documented in the ``Guide to the expression of uncertainty in measurement'' (GUM) published by \citet{GUM2008}, where the numbers in parentheses are the errors on the corresponding last digits of the quoted value.
-
-The fit parameters lead to the relation
+The resulting fit parameters are $a = 0.281(43)$ and $b = 1.05(19)$; the numbers in parentheses are the estimated standard deviations. Concerning the error notation in this work, I adhere to the parentheses notation documented in the ``Guide to the expression of uncertainty in measurement'' (GUM) published by \citet{GUM2008}, where the numbers in parentheses are the errors on the corresponding last digits of the quoted value. The fit parameters lead to the relation
 \begin{align}
 	\Kp(ssn) = 0.281 \cdot \ln(ssn) + 1.05	\,,	\label{eq:kp_ssn_relation}
 \end{align}
@@ -101,6 +101,8 @@ which is plotted in \autoref{fig:Kp_SSN_fit_d} together with its fit error band.
 % 200	2.5387	0.295
 % 300	2.6527	0.308
 This relation is a practical resource for estimating the yearly average \Kp~index from the last year's average SSN. In 2017 the yearly SSN was \num{21.7} -- applying this into the relation gives an average \Kp{} of \num{1.91} for the year 2018.
+
+\pagebreak
 
 \subsection{Seasonal variations}
 On top of the yearly variations, seasonal variations exist in the magnetospheric disturbances as well. In the months May--August the \Kp{} peak frequency is higher than in the remaining months of the year, whereas in March/April and September/October \Kp{} values larger than \num{3.0} are more abundant. This is apparent from looking at the monthly \Kp{} frequency distributions plotted in \autoref{fig:Kp_histogram_monthly}.
@@ -132,12 +134,11 @@ The solar wind's influence on the \Kp~index depends on its coupling efficiency w
 
 So the \Kp{} variation effects originate from the seasonal change in the solar tilt, the Earth's tilt, and the Earth's solar distance. Thorough analyses of the seasonal variations were already early performed by \citet{Cortie1912} and many others thereafter. Thus, I just assess the bulk magnitude of these effects in order to consider them as relative uncertainties for the solar activity relation (\ref{eq:kp_ssn_relation}). Looking at the \Kp{} frequency distributions by month -- seen in \autoref{fig:Kp_seasonal_e} -- it is apparent that for values ($\Kp{} > 2.0$), there exist yearly frequency maxima at the equinoxes and frequency minima at the solstices, as was early described by \citet{Cortie1912}. It is evident from the plotted quantiles that this semiannual variation in \Kp{} amounts to \num{0.3} for the median \Kp{} and goes up to \num{1.3} for the rare higher \Kp~values.
 
-
 \section{Relation between solar wind electric field and \Kp~index}
 \label{sec:relation_between_sw_efield_and_kp}
 The coupling between the solar wind and the magnetosphere is governed by reconnection and compression of the magnetic field lines, as described in \autoref{sec:solar_wind_coupling_mechanisms}. There exist quite a few coupling functions that are intended to approximate these processes in relating solar wind quantities with geomagnetic activity (\autoref{sec:coupling_functions}). In this section I settle and work with the solar wind electric field as the coupling function for the purpose of nowcasting the \Kp~index.
 
-The solar wind electric field $\vect{E}$ approximates the rate of magnetic flux aligned with the z"~direction of the GSM coordinates. The electric field y"~component $E_\text{y}$ approximates $\vect{E}$ under special circumstances, see the derivation in \autoref{sec:electric_field_at_the_magnetopause}. $E_\text{y}$ is the product of the radial proton velocity $v_\text{x}$ and the magnetic field z"~component $B_\text{z}$:
+The solar wind electric field $\vect{E}$ approximates the rate of magnetic flux aligned with the z"~direction of the GSM coordinates. The electric field y"~component $E_\text{y}$ approximates the electric field $\vect{E}$ under special circumstances, the derivation is presented in \autoref{sec:electric_field_at_the_magnetopause}. $E_\text{y}$ is the product of the radial proton velocity $v_\text{x}$ and the magnetic field z"~component $B_\text{z}$:
 \begin{align}
 	E_\text{y} = -v_\text{x} \cdot B_\text{z}\,.
 \end{align}
@@ -164,6 +165,8 @@ The OMNI data collection constitutes the longest continuous solar wind measureme
 
 The product \vBz{} is formed and the minutely solar wind data is reduced to 3"~hourly values in two ways: by calculating the averages and the minima.
 The reduction to 3"~hour minimum values shifts the \vBz{} frequency distribution asymmetrically to negative values, whereas the averaged data is scattered around zero, see \autoref{fig:histogram_VBzgsm}.
+
+The data is reduced to 3"~hourly values in order to match the \Kp{} data resolution. Both its averages and minima are used to evaluate the advantage of high-resolution data by correlating them to the \Kp~index. The \Kp{}--\vBz{} Pearson correlation coefficients for the two differently processed data versions are plotted over time shift in \autoref{fig:cc_lag_data_d_KpvsVBzgsm}.
 \begin{figure}[htb]
 	\begin{floatrow}
 		\ffigbox{
@@ -190,20 +193,22 @@ The reduction to 3"~hour minimum values shifts the \vBz{} frequency distribution
 %max:	0.00000     0.293137
 	\end{floatrow}
 \end{figure}
-
-The data is reduced to 3"~hourly values in order to match the \Kp{} data resolution. Both its averages and minima are used to evaluate the advantage of high-resolution data by correlating them to the \Kp~index. The \Kp{}--\vBz{} Pearson correlation coefficients for the two differently processed data versions are plotted over time shift in \autoref{fig:cc_lag_data_d_KpvsVBzgsm}. The data with 3"~hour minimum processing shows a much better correlation than the 3"~hour average data. Both curves show a negative correlation and their minima lie at a time shift of zero, which is expected as the OMNI data represents the solar wind at the location of the magnetospheric bow shock. It takes the plasma only a couple of minutes to arrive at the magnetopause and influence the geomagnetic field, for example a study about the Dungey convection cycle by \citet{Zhang2015} accounts for this duration by lagging the OMNI data generally by 5~minutes. I estimate its influence for this analysis to be negligible and thus do not apply such a time shift.
+\pagebreak
+The data with 3"~hour minimum processing shows a much better correlation than the 3"~hour average data. Both curves show a negative correlation and their minima lie at a time shift of zero, which is expected as the OMNI data represents the solar wind at the location of the magnetospheric bow shock. It takes the plasma only a couple of minutes to arrive at the magnetopause and influence the geomagnetic field, for example a study about the Dungey convection cycle by \citet{Zhang2015} accounts for this duration by lagging the OMNI data generally by 5~minutes. I estimate its influence for this analysis to be negligible and thus do not apply such a time shift.
 
 The correlation coefficient for the minimum data reaches a value of $r_\text{min} = -0.72$ and is twice as high as that of the average data $r_\text{avg} = -0.36$.
 
 % Compared with the $vB_\text{s}$ value of $-0.642$ and $vB_\text{T}$ value of $0.551$ from \citet{Newell2007}...\\
 % they correlate a 6"~hour solar wind interval to \Kp{} and weight each hour individually.\\
 
-
 \subsection{Functional dependency for solar wind electric field}
 An empirical relation between \vBz{} and \Kp{} is sought by processing the data distribution and fitting an appropriate function to it.
 %distribution
 The frequency distribution in \Kp--\vBz{} space is shaped like a candle flame, inclined to negative values by a light breeze, see top panel in \autoref{fig:Kp_2dhistogram_VBzgsm_sws_e}. The negative correlation is already apparent.
-\begin{figure}
+%dependency
+In order to determine a functional dependency, I focus on the relative frequencies per \vBz-interval and their average \Kp{} values, which are plotted in the bottom panel of \autoref{fig:Kp_2dhistogram_VBzgsm_sws_e}. This probability distribution is asymmetrically V"~shaped around zero, having a larger and steeper negative arm than positive arm. The mean absolute deviation (MAD) from the average \Kp{} value has a mean size of \num{0.7}.
+%MAD: 2.211/3 = 0.737 Kp
+\begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_VBzgsm_sws_e.pdf}
 	}{
@@ -212,9 +217,6 @@ The frequency distribution in \Kp--\vBz{} space is shaped like a candle flame, i
 		\label{fig:Kp_2dhistogram_VBzgsm_sws_e}
 	}
 \end{figure}
-%dependency
-In order to determine a functional dependency, I focus on the relative frequencies per \vBz-interval and their average \Kp{} values, which are plotted in the bottom panel of \autoref{fig:Kp_2dhistogram_VBzgsm_sws_e}. This probability distribution is asymmetrically V"~shaped around zero, having a larger and steeper negative arm than positive arm. The mean absolute deviation (MAD) from the average \Kp{} value has a mean size of \num{0.7}.
-%MAD: 2.211/3 = 0.737 Kp
 
 The asymmetry also exists for 3"~hour mean data (which is not plotted), thus this effect is not a result of the data reducing method to 3"~hour minima. Rather the steeper negative arm is a consequence of the asymmetric coupling of the solar wind magnetic field direction to the magnetopause, as described in detail in \autoref{sec:solar_wind_coupling_mechanisms}.
 
@@ -248,8 +250,8 @@ Thus, the solar wind dependency relation 'condenses' to:
 	\text{\Kp}_-\left(vB_\text{z}\right) &= 1.258 \cdot \ln\left(\left(vB_\text{z} + 163\right)^2 + \num{1.416e6}\right) - 17.04	\,,	\label{eq:kpvsvbz_dependency_function_negative}\\
 	\text{\Kp}_+\left(vB_\text{z}\right) &= 0.467 \cdot \left(\text{\Kp}_-\left(vB_\text{z}\right) - \text{\Kp}_-(-163)\right) + \text{\Kp}_-(-163)	\,.	\label{eq:kpvsvbz_dependency_function_positive}
 \end{align}
-The fit curve is plotted in \autoref{fig:Kp_2dhistogram_VBzgsm_sws_fit_e}.
-\begin{figure}
+The fit curve is plotted in \autoref{fig:Kp_2dhistogram_VBzgsm_sws_fit_e}. The error bars of the data points indicate the relative data count per \vBz{} interval. Those points which deviate far from the fit curve (e.g., below the left arm and above the right arm) stem from single 3"~hour periods. A look into the data revealed that all data outside the range \SIrange{-14000}{8000}{\km\per\s\nano\tesla} is related to CMEs. Thus, the deviating points are caused by individual CME events, for example, the two points with a \Kp{} of $7.7$ near \SI{10000}{\km\per\s\nano\tesla} belong to two CMEs\footnote{For reference: the 3"~hour intervals began at 2000-07-16~00:00 and 2005-05-15~09:00} with in-situ velocities of about \SI{1000}{\km\per\s} and a positive $B_\text{z}$ of the order \SI{30}{\nano\tesla}.
+\begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_VBzgsm_sws_fit_e.pdf}
 	}{
@@ -258,7 +260,6 @@ The fit curve is plotted in \autoref{fig:Kp_2dhistogram_VBzgsm_sws_fit_e}.
 		\label{fig:Kp_2dhistogram_VBzgsm_sws_fit_e}
 	}
 \end{figure}
-The error bars of the data points indicate the relative data count per \vBz{} interval. Those points which deviate far from the fit curve (e.g., below the left arm and above the right arm) stem from single 3"~hour periods. A look into the data revealed that all data outside the range \SIrange{-14000}{8000}{\km\per\s\nano\tesla} is related to CMEs. Thus, the deviating points are caused by individual CME events, for example, the two points with a \Kp{} of $7.7$ near \SI{10000}{\km\per\s\nano\tesla} belong to two CMEs\footnote{For reference: the 3"~hour intervals began at 2000-07-16~00:00 and 2005-05-15~09:00} with in-situ velocities of about \SI{1000}{\km\per\s} and a positive $B_\text{z}$ of the order \SI{30}{\nano\tesla}.
 
 % warning lead time
 This derived E"~field relation can well be applied with the solar wind real-time measurements that are continuously being made by spacecraft located at L1. However, the heads-up time for warnings from this location is relatively short having only a few tens of minutes, whereas remote observations via solar imagers and coronagraphs allow for longer lead times of a few days. In principle, the E"~field relation could also be applied to remote forecast situations, however, IMF strength and orientation are not yet properly predictable from current prediction methods that rely on remote observations.
@@ -285,7 +286,7 @@ This percentage is an average value, as the actual short-term fraction varies he
 The SWS definition of CME-associated flows makes sense for the present study as the causes of the strongest geomagnetic storms are both the compression of the magnetic field within the shock fronts of fast CMEs and the enhanced field strength of the driving magnetic clouds \citep{Bothmer1995}. In the following part of this study, I refer to the combination of the SWS categories slow and fast solar wind simply as solar wind streams. These periods are composed entirely from a mixture of slow wind flows, fast wind streams, and their interaction regions.
 
 \subsection{Data correlation}
-Again, as done before for the data processing of the E"~field analysis, 3"~hour average as well as extreme velocities are calculated using the minutely OMNI data in order to test for a higher correlation with \Kp{}. The comparison between the 3"~hour average and the 3"~hour maximum frequency distributions shows that their mean positions are shifted slightly, having velocities of \SI{405}{\km\per\s} and \SI{425}{\km\per\s} respectively (\autoref{fig:histogram_V_d}).
+Again, as done before for the data processing of the E"~field analysis, 3"~hour average as well as extreme velocities are calculated using the minutely OMNI data in order to test for a higher correlation with \Kp{}. The comparison between the 3"~hour average and the 3"~hour maximum frequency distributions shows that their mean positions are shifted slightly, having velocities of \SI{405}{\km\per\s} and \SI{425}{\km\per\s} respectively, see \autoref{fig:histogram_V_d}.
 %the SWS1 mean raises from 435 to 455~km/s in 3hmax data...\\
 \begin{figure}[htb]
 	\begin{floatrow}
@@ -307,7 +308,7 @@ Again, as done before for the data processing of the E"~field analysis, 3"~hour 
 \end{figure}
 
 The \Kp{} correlations with the average and maximum processed data show that both are nearly identical, see \autoref{fig:cc_lag_sws_f}. Their maxima lie at a time shift of 6"~hours with correlation coefficients of 0.61 and 0.62 respectively, see \autoref{tab:correlation_coefficients_kpvsv}.
-\begin{table}
+\begin{table}[htb]
 	\caption{The highest correlation coefficients and their time lags of the \Kp{}--velocity relations for the different data versions: 3"~hour averaged data, 3"~hour maximum of all data, CME, and stream data. The values are based on the minutely high-resolution OMNI data from the time period 1981--2016.}
 	\label{tab:correlation_coefficients_kpvsv}
 	\centering
@@ -339,6 +340,8 @@ The \Kp{} correlations with the average and maximum processed data show that bot
 % -2	0.621539\\
 % 0	0.595784\\
 
+\pagebreak
+
 The CME and stream parts of the 3"~hour maximum data are examined separately by filtering the corresponding periods using the SWS list. Both parts are correlated independently with the \Kp~index. The correlations for CME related data are lower than that for all solar wind. Their maximal correlation coefficient has a value of 0.51 and is without time shift.
 Solar wind streams show higher correlations with \Kp{} and the correlation's maximum value 0.66 has a positive time shift of 9~hours, which means that the \Kp~index forecasts the velocity of solar wind streams 9~hours in advance.
 This positive time shift may be explained from the occurrence of interaction regions followed by HSSs. When a slow solar wind stream is followed by a fast one, the compression at their interface leads to enhanced solar wind densities and magnetic field strengths. The peak velocity of a HSS naturally appears after the interaction region. Therefore the \Kp-impact from the enhanced magnetic field might be correlated with the higher velocity of the trailing HSS, resulting in the observed positive time shift.
@@ -351,7 +354,7 @@ For \vBz{} the correlations with \Kp{} are very different for 3"~hour averages a
 
 \subsection{Functional dependencies for CME and stream velocities}
 The general \Kp--velocity dependency in the solar wind is apparent from the tilt of its distribution, see top panel of \autoref{fig:Kp_2dhistogram_V_sws_d}.
-\begin{figure}
+\begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_V_sws_d.pdf}
 	}{
@@ -364,7 +367,7 @@ The distribution is inclined to positive values but very broad, that is, in the 
 
 % Functional dependency for CME velocity
 In order to determine a functional relation between \Kp{} and CME velocity, I look at the relative \Kp{} frequencies for each \SI{10}{\km\per\s} velocity interval. The relative frequencies are plotted in the bottom panel of \autoref{fig:Kp_2dhistogram_V_sws1_c2}.
-\begin{figure}
+\begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_V_sws1_c2.pdf}
 	}{
@@ -389,7 +392,7 @@ They lead to the CME dependency function
 	\text{\Kp}_\text{CME}(v) = 10.6 \cdot \ln(v + 810) - 73	\,,	\label{eq:kpvsv_CME_dependency_function}
 \end{align}
 which is plotted in \autoref{fig:Kp_2dhistogram_V_sws1_fit_e}.
-\begin{figure}
+\begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_V_sws1_fit_e.pdf}
 	}{
@@ -403,7 +406,7 @@ This empirical relation can be used to forecast the \Kp~index from a predicted C
 % Functional dependency for stream velocity
 The procedure for the functional dependency on stream velocity is the same as that for the CME velocity. However, in the case of solar wind stream velocities, the correlation coefficient is higher when the data is shifted by 9~hours (\autoref{fig:cc_lag_sws_f}).
 I use this shifted data and look at the relative frequencies per velocity interval in order to find a functional dependency between \Kp{} and velocity, see bottom panel of \autoref{fig:Kp_2dhistogram_V_sws23_d}.
-\begin{figure}
+\begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_V_sws23_d.pdf}
 	}{
@@ -428,7 +431,7 @@ This leads to the solar wind stream dependency function
 	\text{\Kp}_\text{Stream}(v) = 5.88 \cdot \ln(v + 299) - 37.0	\,,	\label{eq:kpvsv_stream_dependency_function}
 \end{align}
 which is plotted in \autoref{fig:Kp_2dhistogram_V_sws23_fit_e}.
-\begin{figure}
+\begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_V_sws23_fit_e.pdf}
 	}{
@@ -441,6 +444,7 @@ This empirical relation can be used to forecast the \Kp~index from an estimated 
 
 The stream velocity curve is smaller and its slope is less steep than that obtained from the CME velocities. CMEs with a speed of \SI{500}{\km\per\s} cause on average a by $0.6$ higher \Kp{} than a stream of the same speed would -- for CMEs with \SI{1000}{\km\per\s} this gap even increases to $1.3$. This difference in \Kp{} magnitude between the two velocity relations is due to the generally larger magnetic field strength in CMEs compared with streams having the same velocity.
 
+\clearpage
 
 \section{Prediction performance}
 \label{sec:prediction_performance}
@@ -451,8 +455,8 @@ The derived empirical relations are chosen for their high correlation coefficien
 The quality of predictions can be assessed by how they compare to a simple persistence model \citep{Detman1999}. In the case at hand, the persistence consists of the official \Kp{} value from the previous 3"~hour interval. The persistence performance is obtained from the complete \Kp{} time span 1981--2016.
 
 % prediction performance
-In order to evaluate all models' prediction performances, their forecast errors are calculated. Forecast errors are the differences between the predicted and the actual values. The resulting performances of the persistence and the three models are displayed together with the corresponding positive and negative standard deviations in \autoref{fig:model_performance_d}.
-\begin{figure}
+In order to evaluate all models' prediction performances, their forecast errors are calculated. Forecast errors are the differences between the predicted and the actual values. The resulting performances of the persistence and the three models are displayed together with the corresponding positive and negative standard deviations in \autoref{fig:model_performance_d}. The deviations to the forecast errors can be completely one-sided if the actual \Kp{} values are always being over- or underestimated (in the figure these points are plotted in gray). This happens at the extreme ends of the \Kp{} range -- I denote the range in between as 'proper range'.
+\begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/model_performance_d.pdf}
 	}{
@@ -461,7 +465,6 @@ In order to evaluate all models' prediction performances, their forecast errors 
 		\label{fig:model_performance_d}
 	}
 \end{figure}
-The deviations to the forecast errors can be completely one-sided if the actual \Kp{} values are always being over- or underestimated (in the figure these points are plotted in gray). This happens at the extreme ends of the \Kp{} range -- I denote the range in between as 'proper range'.
 
 The empirically derived solar wind relations do not cover the whole \Kp{} range from 0 to 9 within the distributions of observed values. Only the \Kp{} values with more than one observed data point are considered for deriving the relations' prediction performances. This excludes the values $\text{\Kp} = 9.0$ and in case of the velocity relation for streams also all values of \num{7.7} and above.
 
@@ -476,9 +479,11 @@ For the velocity relation for streams, the proper range goes from 0.3 to 4.3 -- 
 % conclusion
 The model based on the \vBz{} relation is more accurate than those based purely on the velocity. This is expected, however, the \vBz{} relation is still eclipsed by the persistence model.
 
+\pagebreak
+
 % true skill score
 In order to further test the derived models for their predictive value, I derive their true skill statistic (TSS) -- a common tool for forecast verification. The TSS is a skill score based on the contingency table that categorizes forecasted and observed events. The score is the difference between the forecast hit rate and the false alarm rate. It ranges from $-1$ to 1, where 1 indicates an ideal prediction and 0 a random prediction. I give more detailed information about the TSS in the Appendix~\ref{sec:true_skill_statistic}. This method is the prevalent form of forecast verification in \Kp{} models \citep{Detman1999,Wing2005,Savani2017}. It is defined that each single 3"~hour \Kp{} interval represents an event and a hit occurs when both the forecasted and observed \Kp{} exceed a specified threshold. I adopt these criteria to make the results comparable. Therefore the TSS is derived as a function of \Kp{} threshold -- the results for persistence and the three models are plotted in \autoref{fig:true_skill_score}.
-\begin{figure}
+\begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/true_skill_score.pdf}
 	}{
@@ -523,7 +528,9 @@ In order to compare the \Kp{} forecast skill metrics with other models, \citet{S
 For the stream velocity relation, the defined \Kp{} threshold is of little use as its proper \Kp~range is below the defining geomagnetic storm value of $\text{\Kp} = 5.0$. The maximal velocity of solar wind streams is limited by the coronal temperatures \citep{Parker1958} and is observed to be around \SI{900}{\km\per\s}. That is why solar wind plasma associated with streams on average provoke \Kp{} values below $5.0$, that is, geomagnetic storms cannot be predicted via the stream relation.
 
 % comparison
-The E"~field model has a TSS of 0.33 at $\text{\Kp} = 5.0$, this can be compared with the Wing APL models \citep[Fig.~13]{Wing2005}. The Wing APL model~3 predicts \Kp{} 1~hour in advance and uses the solar wind parameters velocity, density, magnetic field strength, and $B_\text{z}$ as input sources for a neural network based model. The additionally considered parameters (density and absolute magnetic field strength) boost the corresponding TSS to about 0.7. The Wing APL model~1 incorporates \Kp{} nowcast values in addition to the solar wind parameters and achieves this way a TSS of about 0.8.
+The E"~field model has a TSS of 0.33 at $\text{\Kp} = 5.0$, this can be compared with the Wing APL models \citep[Fig.~13]{Wing2005}. The Wing APL model~3 predicts \Kp{} 1~hour in advance and uses the solar wind parameters velocity, density, magnetic field strength, and $B_\text{z}$ as input sources for a neural network based model.
+\pagebreak
+The additionally considered parameters (density and absolute magnetic field strength) boost the corresponding TSS to about 0.7. The Wing APL model~1 incorporates \Kp{} nowcast values in addition to the solar wind parameters and achieves this way a TSS of about 0.8.
 
 The BSS model developed by \citet{Savani2015,Savani2017} predicts the magnetic field in CMEs arriving at Earth and derives their geomagnetic response. For a total of eight CME events the BSS model shows a TSS of 0.34, when investigating only restricted periods of ``active solar wind'' \citep[Tab.~3]{Savani2017}.
 % Costello model (neural network, input: sw): about 0.45\\
@@ -542,7 +549,6 @@ For the solar wind predictive \Kp{} models, the influence of the solar activity 
 % \textit{The weaker solar activity cycle 24 seems to have important consequences for CMEs in the heliosphere: CMEs expand anomalously due to reduced heliospheric pressure leading to the increased observed rate of small CMEs, halos originating far from the disk center, and mild space weather (\citep{Gopalswamy2014}, 2015a; Petrie 2015).\\
 % The total pressure in the heliosphere (magnetic + plasma) is reduced by ca. 40\%, which leads to the anomalous expansion of CMEs explaining the increased slope. The excess CME expansion contributes to the diminished effectiveness of CMEs in producing magnetic storms during cycle 24, both because the magnetic content of the CMEs is diluted and also because of the weaker ambient fields \citep{Gopalswamy2014}.\\
 % }
-
 
 % in-situ plots
 In the following, I take two sample periods of solar wind in-situ data and apply the predictive \Kp{} models to compare their output qualitatively with the actual measured \Kp~index. First, I discuss a 2"~month period from the maximum of the solar activity cycle~24 and second, I zoom into a 6"~day sub-period containing a CME.
@@ -566,6 +572,8 @@ It can be seen that in the considered period the \Kp{} estimate based on the E"~
 % Elliott2013
 A study that differentiates especially between compression and rarefaction regions is that of \citet{Elliott2013}. They compare three threshold techniques to do so: by sorting for density, dynamic pressure, and velocity slope. The three \Kp--velocity distribution panels in \autoref{fig:Kp_2dhistogram_V_sws_d} look indeed very similar to the Figures~3 and~4 from \citet{Elliott2013}. This is because they sort the \Kp{}--velocity distribution for CMEs and streams, use OMNI data, and the SWS list as well, however, they use a different time resolution, data processing, and time period. More precisely, they use 3"~hour averages of the hourly OMNI data set, modify the CME-associated periods of the SWS list with additional constraints, and use data from the time period 1963--2009.
 
+\pagebreak
+
 % 6~day sub-period
 The second solar wind plot zooms in on the latter CME -- it covers the 6"~day time period from 26~June to 2~July 2013, see \autoref{fig:example_sw_plot_CME_b_9hshift_2013-6-26_6}.
 \begin{figure}[htb]
@@ -579,10 +587,9 @@ The plot shows the same parameters as in the previous plot. This more detailed s
 % learned/conclusions
 When comparing the \Kp{} estimations for the \vBz{} and velocity based predictive models, it becomes apparent how significant the influence of the magnetic field z"~component is.
 
-
 % extreme CME speeds
 The maximal velocities included in the OMNI data are around \SI{1100}{\km\per\s}. Current solar wind plasma spectrometers are only able to reliably measure speeds up to this value. Yet, CMEs can be much faster -- speeds of up to \SI{2000}{\km\per\s} at \SI{1}{\au} were reconstructed \citep{Russell2013}. Future studies have to show how accurate the CME relation is in predicting \Kp{} from extreme CMEs with velocities higher than \SI{1100}{\km\per\s}. According to the CME velocity relation (\ref{eq:kpvsv_CME_dependency_function}), a CME speed of \SI{2000}{\km\per\s} would lead on average to a theoretical \Kp{} of $11.2$, however, the \Kp{} scale is capped at $9.0$ and this \Kp{} is reached on average already at a velocity of \SI{1479}{\km\per\s}, see \autoref{fig:Kp_2dhistogram_V_sws123_fit_f3}.
-\begin{figure}
+\begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_V_sws123_fit_f3.pdf}
 	}{
@@ -591,6 +598,8 @@ The maximal velocities included in the OMNI data are around \SI{1100}{\km\per\s}
 		\label{fig:Kp_2dhistogram_V_sws123_fit_f3}
 	}
 \end{figure}
+
+\pagebreak
 
 The capped \Kp{} scale limits the capability to quantify the ground impacts of extremely fast CMEs. \Kp{} is linked to the \textit{ap}~index, which translates to the ground magnetic field disturbance at about \SI{+-50}{\degree} dipole latitudes and thus can directly be expressed in \si{\nano\tesla}. The limit could be overcome, if the fixed \Kp-to-\textit{ap} conversion table (see \autoref{tab:kp_to_ap_table}) would be redefined and extended above $\text{\Kp} = 9.0$. Then the absolute ground field disturbances evoked by extremely fast CMEs could be estimated via the \Kp{} relation for CMEs displayed in \autoref{fig:Kp_2dhistogram_V_sws123_fit_f3}.
 
@@ -607,6 +616,8 @@ With the results presented in this chapter, I elaborate the step from solar wind
 	\item The functional relation for enabling CME forecasts relates \Kp{} with the velocity of CME-associated flows, see Equation~(\ref{eq:kpvsv_CME_dependency_function}). Its MAD has a mean \Kp{} size of \num{1.1}.
 	\item The functional relation for enabling stream forecasts relates \Kp{} with the velocity of solar wind streams, see Equation~(\ref{eq:kpvsv_stream_dependency_function}). Its MAD has a mean \Kp{} size of \num{0.7}.
 \end{itemize*}
+
+\pagebreak
 
 % Applications
 The derived \Kp{} relations constitute a part of the CME forecast chain developed at the Institute for Astrophysics Göttingen. It consists of CME source region and coronal environment analysis, 3D modeling of the CME structure, CME acceleration and propagation modeling, CME arrival time and parameter prediction, and the subsequent forecast of relevant space weather effects, such as its impacts on the \Kp~index and on the ionospheric TEC.
@@ -627,6 +638,8 @@ The examination of the prediction performance of the derived predictive models s
 The models are derived from data with a broad scatter in \Kp{}. Nevertheless, when within their specified proper ranges, the derived models provide predictions that are significantly better than random.
 
 The \Kp--velocity dependency for CMEs is derived from velocity data of up to \SI{1100}{\km\per\s}. Assuming this relation holds true for higher speeds, the extension of it could be used to predict the \Kp{} impact of fast CMEs as well. Though, the \Kp--velocity relation for CMEs reaches the maximum \Kp{} of 9.0 at a CME velocity of \SI{1500}{\km\per\s}. The ground geomagnetic disturbances, generated by the rare, extremely fast CME events having velocities above this value, could be resolved and estimated via redefining and extending the conversion between the \Kp{} and \textit{ap} indices.
+
+\pagebreak
 
 As the obtained functional relations are based only on one or two aspects of the coupling between solar wind and magnetosphere, they cannot compete with full-fledged solar wind coupling functions, such as the rate magnetic flux is opened at the magnetopause (\autoref{eq:newell_merging_function}), nor with current prediction models based on artificial neural networks or \Kp{} persistence. Nevertheless, they enable empirical estimations of the mean geomagnetic activity impact for special forecast situations, that is, \Kp{} can directly be quantified from observed solar activity, measured in-situ solar wind parameters, and remotely determined CME and stream velocities.
 

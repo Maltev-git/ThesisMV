@@ -1,4 +1,4 @@
-\documentclass[twoside,openright,fontsize=10pt]{scrreprt}
+\documentclass[twoside,openright,fontsize=10pt,a4paper]{scrreprt}
 \KOMAoptions{headings=normal,numbers=noendperiod,toc=bib,cleardoublepage=plain,abstract=false}
 %\KOMAoption{Option}{Werteliste}
 %a4paper is default in KOMA-classes
@@ -16,7 +16,10 @@
 \addto\captionsenglish{\renewcommand{\bibname}{References}}	%for book and report class
 %\addto\captionsenglish{\renewcommand{\refname}{References}}	%for article class
 
-\usepackage[inner=3cm,outer=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage[showframe,inner=3cm,outer=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+
+% \widowpenalty=300	% lonely last line of paragraph
+% \clubpenalty=300	% orphan or lonely first line of paragraph
 
 \usepackage{graphicx}
 

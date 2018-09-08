@@ -4,7 +4,7 @@
 %COFI -- chapter outline and flow integration
 For analyzing the solar wind and related areas on the Sun, there exist remote instruments, such as solar imagers and coronagraphs, and in-situ instruments, such as magnetometers and plasma spectrometers. The basic principles of the latter are described in this chapter, because the analyses performed in this thesis are based entirely on in-situ measurements -- except of course the sunspot time series.
 
-Different kind of measurements, collected from observatories at various locations, are used for the investigations performed in this thesis. In the following sections, I describe these data sets as well: the magnetospheric disturbance index \Kp{}, the solar activity indicator sunspot number (SSN), and the solar wind in-situ data sets. The solar wind in-situ data sets are the near-Earth OMNI data collections, consisting of minutely and hourly data, that is, low resolution OMNI (LRO) and high resolution OMNI (HRO), and the data obtained from the Helios~1 and Helios~2 spacecraft in the 1970s. I prepared a time coverage overview of all data sets in relation to the solar activity cycles in \autoref{fig:timeline_SSN_with_data_and_sc}.
+Different kind of measurements, collected from observatories at various locations, are used for the investigations performed in this thesis. In the following sections, I describe these data sets as well: the geomagnetic disturbance index \Kp{}, the solar activity indicator sunspot number (SSN), and the solar wind in-situ data sets. The solar wind in-situ data sets are the near-Earth OMNI data collections, consisting of minutely and hourly data, that is, low resolution OMNI (LRO) and high resolution OMNI (HRO), and the data obtained from the Helios~1 and Helios~2 spacecraft in the 1970s. I prepared a time coverage overview of all data sets in relation to the solar activity cycles in \autoref{fig:timeline_SSN_with_data_and_sc}.
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{figures_of_mine/gnuplots/timeline_SSN_with_data_and_sc.pdf}
@@ -104,22 +104,6 @@ A plasma ion detector only provides an energy spectrum -- the velocity, density,
 % angular dimensions.''
 
 
-\section{\Kp~data series}
-\label{sec:kp_data}
-The planetary magnetospheric disturbance indicator \Kp{} is designed to measure solar particle radiation by its magnetic effects. The index is already described in detail in the previous \autoref{sec:kp_index}. Quicklook and actual data of the \Kp~index is provided by the GFZ~Potsdam via their website for geomagnetic indices: \mbox{\urltext{http://www.gfz-potsdam.de/en/kp-index/}}. Historical data is available from 1932 onwards.
-In the analyses in \autoref{chap:chapter2}, \Kp~data of the time period 1932--2016 is used for the inspection of its long-term variations. \Kp{} data of the time period 1981--2016 is related to solar wind parameters.
-
-% acknowledgments:\\
-% The results presented in this thesis rely on the \Kp{}~index, calculated and made available by the German Research Centre for Geosciences in Potsdam from data collected at magnetic observatories. We thank the involved national institutes, the INTERMAGNET network and ISGI (isgi.unistra.fr).\\
-
-
-\section{Sunspot number}
-\label{sec:sunspot_number}
-The number of sunspots occurring on the solar surface is commonly used as a long-term solar activity indicator, for more information on solar activity and sunspots see \autoref{sec:solar_activity_cycle}. The international sunspot number (SSN) is maintained by the World Data Center -- Sunspot Index and Long-term Solar Observations (WDC-SILSO) at the Solar Influences Data Center (SIDC), Royal Observatory of Belgium (ROB). WDC-SILSO provides an online catalog for the SSN data via their website: \urltext{http://www.sidc.be/silso/}. The SSN version~2.0, the current recalibrated version introduced in July 2015, is used in this work. \autoref{chap:chapter2} applies the SSN data from the time period 1932--2016 spanning eight solar cycles, see \autoref{fig:timeline_SSN_with_data_and_sc}.
-
-Short-term predictions of the SSN are provided by several institutions. The SIDC itself provides 12-month SSN forecasts derived via different methods. The Space Weather Prediction Center (SWPC) at the National Oceanic and Atmospheric Administration (NOAA) supports the SSN prediction of the Solar Cycle~24 Prediction Panel\footnote{Solar Cycle~24 Prediction Panel website: \urlfoot{http://www.swpc.noaa.gov/products/solar-cycle-progression}}.
-
-
 \section{OMNI data collection}
 \label{sec:omni_data_collection}
 Solar wind was measured in~situ for the first time by spacecraft in 1959 and since 1963 near-Earth measurements were done almost continuously. The OMNI~2 data collection \citep{King2005} merges data from solar wind magnetic field and plasma, energetic proton fluxes, geomagnetic indices, and solar indices. The included solar wind data starts in 27~November 1963, the temperature data not before 26~July 1965, and is continuously maintained until today. As the data covers decades from multiple spacecraft at varying locations, the solar wind data is composed of intercalibrated data, which has been time-shifted to the nose of the magnetosphere's bow shock upstream of Earth. I created an overview of the various spacecraft contributing to the IMF and solar wind plasma data and their time coverages to the data set in \autoref{fig:timeline_OMNI_SC_IDs}. Especially from the early space age until the 1980s, many different spacecraft contributed to the LRO data set, whereas over the last twenty years, it were only two spacecraft.
@@ -136,10 +120,9 @@ The OMNI data set is being maintained at NASA's Space Physics Data Facility (SPD
 
 \pagebreak
 
-
 \section{Helios probes}
 \label{sec:helios_probes}
-In order to observe solar wind in~situ within the inner heliosphere, the nearly identical solar probes Helios~1 and Helios~2, were launched in December 1974 and January 1976 respectively, one of them is pictured in \autoref{fig:helios2}.
+In order to observe solar wind in~situ within the inner heliosphere, the nearly identical solar probes Helios~1 and Helios~2, were launched in December 1974 and January 1976 respectively, one of them is pictured in \autoref{fig:helios2}. Until today, these both probes were the only spacecraft that measured solar wind in~situ over large solar distance ranges with perihelia as close as \SI{0.31}{\au} and \SI{0.29}{\au} respectively. Their highly elliptical orbits in the ecliptic covered a solar distance up to \SI{0.98}{\au}. Launched during solar cycle minimum, the data of both probes cover the rise to the maximum of solar cycle~21, that amounts to about 6.5~years of data at varying solar distances.
 \begin{figure}[htb]
 	\begin{floatrow}
 		\ffigbox[\FBwidth][]{
@@ -162,7 +145,7 @@ In order to observe solar wind in~situ within the inner heliosphere, the nearly 
 	\end{floatrow}
 \end{figure}
 \footnotetext{I was not able to find out which Helios spacecraft this is.}
-Until today, these both probes were the only spacecraft that measured solar wind in~situ over large solar distance ranges with perihelia as close as \SI{0.31}{\au} and \SI{0.29}{\au} respectively. Their highly elliptical orbits in the ecliptic covered a solar distance up to \SI{0.98}{\au}. Launched during solar cycle minimum, the data of both probes cover the rise to the maximum of solar cycle~21, that amounts to about 6.5~years of data at varying solar distances. I plotted the probes' solar distance and heliographic latitude with respect to their mission time and sunspot number for illustration in \autoref{fig:Helios_r_b_ssn}. The daily trajectory data are available from NASA's Space Physics Data Facility (SPDF) at the Goddard Space Flight Center (GSFC)\protect\footnote{SPDF Helios~1 trajectory data: \urlfoot{http://spdf.sci.gsfc.nasa.gov/pub/data/helios/helios1/traj/}} and are drawn in Heliographic Inertial (HGI) coordinates, more on HGI coordinates in Appendix~\ref{sec:coordinate_systems}. I also plotted the orbits of Helios~1 and Helios~2 in a solar equatorial plane view and in a solar polar plane view, see \autoref{fig:Helios12_orbits_ecliptic_polar}.
+I plotted the probes' solar distance and heliographic latitude with respect to their mission time and sunspot number for illustration in \autoref{fig:Helios_r_b_ssn}. The daily trajectory data are available from NASA's Space Physics Data Facility (SPDF) at the Goddard Space Flight Center (GSFC)\protect\footnote{SPDF Helios~1 trajectory data: \urlfoot{http://spdf.sci.gsfc.nasa.gov/pub/data/helios/helios1/traj/}} and are drawn in Heliographic Inertial (HGI) coordinates, more on HGI coordinates in Appendix~\ref{sec:coordinate_systems}. I also plotted the orbits of Helios~1 and Helios~2 in a solar equatorial plane view and in a solar polar plane view, see \autoref{fig:Helios12_orbits_ecliptic_polar}.
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=\textwidth]{figures_of_mine/gnuplots/Helios12_orbits_ecliptic_polar.pdf}
@@ -174,16 +157,13 @@ Until today, these both probes were the only spacecraft that measured solar wind
 The scientific instruments carried by the spacecraft for measuring the magnetic field and solar wind plasma are two different fluxgate magnetometers and the Plasma Experiment Investigation. The data from the magnetometer and plasma instruments are merged into a data set with hourly resolution \citep{Rosenbauer1977}. The Helios data is available via the GSFC/SPDF CDAWeb interface: \urltext{http://cdaweb.gsfc.nasa.gov/}. In case of Helios~1 this data set includes about 12.5~orbits in the time range \mbox{1974-12-10} to \mbox{1981-06-14} and in case of Helios~2 about 8~orbits in the time range \mbox{1976-01-01} to \mbox{1980-03-04}. The Helios~1 (Helios~2) magnetometer data coverage, excluding the data gaps, is about \SI{43}{\%} (\SI{54}{\%}) and amounts to 2.8~years (2.3~years) in total, whereas the plasma data coverage is \SI{76}{\%} (\SI{92}{\%}) and amounts to 5.0~years (3.9~years) in total.
 The Helios data is used in \autoref{chap:chapterPSP} for analyzing the solar wind parameters' solar distance dependency.
 
-
 % \begin{figure}[htb]
 % 	\includegraphics[width=\textwidth]{figures_of_mine/gnuplots/Helios12_orbits_ecliptic_polar.pdf}
 % 	\caption[\lofimage{figures_of_mine/gnuplots/Helios12_orbits_ecliptic_polar.pdf}Remove later...]{}
 % \end{figure}
 
-
 %see presi 1.07 Inside Helios-Origins and Evolution-Salem.ppt
 %see book Schwenn1990 https://books.google.de/books?id=W1DuCAAAQBAJ&printsec=frontcover&dq=Physics+of+the+Inner+Heliosphere+I.+Large-Scale+Phenomena&hl=de&sa=X&redir_esc=y#v=onepage&q=Physics%20of%20the%20Inner%20Heliosphere%20I.%20Large-Scale%20Phenomena&f=false
-
 
 % HELIOS~1 and 2 -- orbital Parameters:\\
 % \url{http://spdf.sci.gsfc.nasa.gov/pub/data/helios/helios1/traj/}\\
@@ -200,4 +180,20 @@ The Helios data is used in \autoref{chap:chapterPSP} for analyzing the solar win
 % Helios 2: 1976-01-01 -- 1980-03-04\\
 % Mag data availability: 54.4~\%\\
 % Plasma \& orbit data availability: 91.8~\%\\
+
+
+\section{\Kp~data series}
+\label{sec:kp_data}
+The planetary magnetospheric disturbance indicator \Kp{} is designed to measure solar particle radiation by its magnetic effects. The index is already described in detail in the previous \autoref{sec:kp_index}. Quicklook and actual data of the \Kp~index is provided by the GFZ~Potsdam via their website for geomagnetic indices: \mbox{\urltext{http://www.gfz-potsdam.de/en/kp-index/}}. Historical data is available from 1932 onwards.
+In the analyses in \autoref{chap:chapter2}, \Kp~data of the time period 1932--2016 is used for the inspection of its long-term variations. \Kp{} data of the time period 1981--2016 is related to solar wind parameters.
+
+% acknowledgments:\\
+% The results presented in this thesis rely on the \Kp{}~index, calculated and made available by the German Research Centre for Geosciences in Potsdam from data collected at magnetic observatories. We thank the involved national institutes, the INTERMAGNET network and ISGI (isgi.unistra.fr).\\
+
+
+\section{Sunspot number}
+\label{sec:sunspot_number}
+The number of sunspots occurring on the solar surface is commonly used as a long-term solar activity indicator, for more information on solar activity and sunspots see \autoref{sec:solar_activity_cycle}. The international sunspot number (SSN) is maintained by the World Data Center -- Sunspot Index and Long-term Solar Observations (WDC-SILSO) at the Solar Influences Data Center (SIDC), Royal Observatory of Belgium (ROB). WDC-SILSO provides an online catalog for the SSN data via their website: \urltext{http://www.sidc.be/silso/}. The SSN version~2.0, the current recalibrated version introduced in July 2015, is used in this work. \autoref{chap:chapter2} applies the SSN data from the time period 1932--2016 spanning eight solar cycles, see \autoref{fig:timeline_SSN_with_data_and_sc}.
+
+Short-term predictions of the SSN are provided by several institutions. The SIDC itself provides 12-month SSN forecasts derived via different methods. The Space Weather Prediction Center (SWPC) at the National Oceanic and Atmospheric Administration (NOAA) supports the SSN prediction of the Solar Cycle~24 Prediction Panel\footnote{Solar Cycle~24 Prediction Panel website: \urlfoot{http://www.swpc.noaa.gov/products/solar-cycle-progression}}.
 

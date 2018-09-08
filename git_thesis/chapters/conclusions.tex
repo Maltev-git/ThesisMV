@@ -18,7 +18,7 @@ This study, presented in \autoref{chap:chapter2}, estimates the impact of solar 
 The analyses are based on 35~years (1981--2016) of near-Earth solar wind data from the minutely OMNI data set and \Kp{} data from the GFZ~Potsdam. The separation into CME and stream data is done via the Solar Wind Structures list created by \citet{Richardson2000}. The CME data consists of CME-associated flows including leading compressed material and the stream data consists of a mixture of slow and fast wind including interaction regions. The solar wind electric field proxy \vBz{}, the velocity of CMEs, and the velocity of streams were each correlated with the \Kp~index. Empirical dependencies were determined from the mean values of the relative \Kp{} frequency distributions. Functional relations were derived via fitting logarithmic functions to these mean \Kp{} values.
 The obtained \Kp{} relations were evaluated for their prediction performance. The resulting predictive models are presented in the following and the conclusions thereafter.
 
-\bigskip
+\medskip
 
 % % % predictive models
 \begin{itemize}
@@ -49,6 +49,8 @@ The obtained \Kp{} relations were evaluated for their prediction performance. Th
 	\end{align*}
 	with the velocity in units of [\si{\km\per\s}]. Its MAD has a mean \Kp{} size of about \num{1.1}. This relation has a proper prediction range between a \Kp{} of \num{1.3} and \num{6.3}. Strong geomagnetic storms exceeding $\text{\Kp} = 7.0$ are being underestimated on average by about 3~\Kp~values.
 
+	\pagebreak
+
 	\item The relation between the \Kp~index and the 3"~hour velocity maxima of solar wind streams, including fast and slow wind and interaction regions, is
 	\begin{align*}
 		\text{\Kp}_\text{Stream}(v) &= 5.88 \cdot \ln(v + 299) - 37.0	\,,
@@ -56,7 +58,7 @@ The obtained \Kp{} relations were evaluated for their prediction performance. Th
 	with the velocity in units of [\si{\km\per\s}]. Its MAD has a mean \Kp{} size of about \num{0.7}. This relation has a proper \Kp{} range of \numrange{0.3}{4.3}. This is well below the threshold of geomagnetic storms ($\si{\Kp} \leq 5$), and thus the relation is good in predicting lower geomagnetic activity but not storms.
 \end{itemize}
 
-\bigskip
+\medskip
 
 % % % conclusions
 % conclusions from data processing
@@ -91,6 +93,8 @@ Smaller-scale solar wind structures, such as CIRs and HCSs, could be separately 
 
 Spacecraft missions positioned at special locations would be beneficial for earlier and more accurate space weather forecasting. Suggested locations are sub-L1 for earlier in-situ CME magnitude warnings and L5 for earlier CME velocity and arrival time warnings \citep{Vourlidas2015}.
 
+\clearpage
+
 
 \section{The solar wind's Sun--Earth evolution}
 % % % summary
@@ -103,7 +107,7 @@ The parameters' frequency distributions were obtained from 53~years (1963--2016)
 
 The obtained lognormal functions, SSN dependencies, and solar distance dependencies were combined to build models of the parameters that represent the solar activity and distance behavior. The near-Sun extrapolations of the resulting models were compared to existing studies that infer the local magnitude of the solar wind parameters from remote observations. Eventually, these empirical models were supplied with predictions of the SSN and extrapolated to the planned orbital trajectory of PSP.
 
-\bigskip
+\medskip
 
 % % % results
 The resulting models represent the frequency distributions of the solar wind parameters by lognormal functions, whose location and shape are defined by their median and mean.
@@ -123,7 +127,9 @@ The frequency distributions are being shifted by the median and mean relations, 
 	\end{align*}
 	This model neglects the azimuthal field component and assumes that the Parker spiral angle at \SI{1}{\au} has an average value of \SI{-45}{\degree} or \SI{135}{\degree}, corresponding to a constant solar wind velocity of \SI{414}{\km\per\s}.
 	This model yields higher extrapolated near-Sun values than the simple power-law dependent model does. The estimated median value of \SI{94}{\nano\tesla} for PSP's first perihelion is \SI{8}{\%} higher and the value for the first closest perihelion of \SI{1241}{\nano\tesla} is even \SI{32}{\%} higher.
-	
+
+	\pagebreak
+
 	\item The model for the velocity distribution is built in a different way, combining two lognormal functions to consider for the slow and fast solar wind components \citep[see the Equation~(5) in][]{Venzmer2018}. Here, the solar activity dependence is introduced by varying the share of both components and not by shifting their positions, that is, a balancing parameter depending on the SSN regulates the share of both components:
 	\begin{align*}
 		c(ssn) = -0.00180 \cdot ssn + 0.64	\,.
@@ -150,7 +156,7 @@ The frequency distributions are being shifted by the median and mean relations, 
 	 The estimated median value for PSP's first perihelion is \SI{5.03e5}{\kelvin} and that for the first closest perihelion is \SI{1.93e6}{\kelvin}.
 \end{itemize}
 
-\bigskip
+\medskip
 
 % % % conclusions
 The extrapolation of the velocity model to solar distances below \SI{20}{\Rs} yields speeds that overestimate those obtained from remote observations. In particular, the estimated velocity for slow wind at \SI{10}{\Rs} is about \SI{270}{\km\per\s}, whereas remote observations show velocities around \SI{200}{\km\per\s}. This indicates that solar wind acceleration takes place up to solar distances of \SI{20}{\Rs}.

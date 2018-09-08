@@ -16,7 +16,7 @@
 \addto\captionsenglish{\renewcommand{\bibname}{References}}	%for book and report class
 %\addto\captionsenglish{\renewcommand{\refname}{References}}	%for article class
 
-\usepackage[showframe,inner=3cm,outer=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage[inner=3cm,outer=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}	% showframe
 
 % \widowpenalty=300	% lonely last line of paragraph
 % \clubpenalty=300	% orphan or lonely first line of paragraph
@@ -105,6 +105,7 @@
 %##########--  bib  --###########
 \usepackage{natbib}		%defines citation style
 \citestyle{aa}
+\setlength{\bibsep}{0pt plus 0.3ex}	% reset \bibsep (separating space between reference entries)
 
 %##########--  tables  --###########
 \usepackage{multirow}	%for tables

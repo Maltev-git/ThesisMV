@@ -84,7 +84,7 @@ Reconnection occurs where the magnetic fields of the solar wind and magnetopause
 	E_\text{y} = - v_\text{x} \cdot B_\text{z}	\,.
 \end{align}
 
-At the rest of the magnetopause surface facing the solar wind, the magnetospheric field deviates from the z"~direction, especially at higher latitudes. However, reconnection can occur there too if the solar wind magnetic field clock angle is oriented accordingly, see also \autoref{fig:Russell2007_fig4_10_VBbook_magnetopause_reconnection_regions_modified}. Thus, it makes sense to use the magnetic field's clock angle, which is defined as $\theta_c = \tan^{-1}\left(B_\text{y} / B_\text{z}\right)$, instead of just the field's $B_\text{z}$ component. The electric field becomes then
+At the rest of the magnetopause surface facing the solar wind, the magnetospheric field deviates from the z"~direction, in particular at higher latitudes. However, reconnection can occur there too if the solar wind magnetic field clock angle is oriented accordingly, see also \autoref{fig:Russell2007_fig4_10_VBbook_magnetopause_reconnection_regions_modified}. Thus, it makes sense to use the magnetic field's clock angle, which is defined as $\theta_c = \tan^{-1}\left(B_\text{y} / B_\text{z}\right)$, instead of just the field's $B_\text{z}$ component. The electric field becomes then
 \begin{align}
 	\vect{E} =& \begin{bmatrix}
 		0\\
@@ -247,7 +247,7 @@ The orientation of the Earth's rotation axis to the Sun defines the solar wind f
 \section{GSE, GSM, and HGI coordinate systems}
 \label{sec:coordinate_systems}
 
-A wise choice of coordinate system often eases the understanding and the calculation of a given problem, especially in geo- and astrophysics there exist an abundance of different coordinate systems. The coordinate systems used in this work are Earth- and Sun-centered and are described in the following. Three different Cartesian systems are applied: GSE, GSM, and HGI coordinates.
+A wise choice of coordinate system often eases the understanding and the calculation of a given problem, notably in geo- and astrophysics there exist an abundance of different coordinate systems. The coordinate systems used in this work are Earth- and Sun-centered and are described in the following. Three different Cartesian systems are applied: GSE, GSM, and HGI coordinates.
 
 % GSE - Geocentric Solar Ecliptic
 \subsection*{Geocentric Solar Ecliptic coordinates}
@@ -313,7 +313,7 @@ The TSS is the difference between the hit rate and the false alarm rate\footnote
 \end{align}
 Its value is in the range from $-1$ to 1, with 1 representing an ideal prediction, 0 a random prediction, and $-1$ an ideal negative prediction. The TSS is positive if the hit rate is higher than the false alarm rate.
 
-In the case of rare event forecasting, the contingency table is dominated by correct nulls and the TSS approaches the hit rate. \citet{Doswell1990} show that the Heidke skill score is superior in these situations, in that it considers correct null forecasts in a controlled way. They recommend to use the Heidke skill score in preference to TSS for rare event forecasting. Other often applied skill scores are the threat score, also called critical success index or Gilbert score, and the equitable threat score. However, the TSS is commonly applied to evaluate and compare space weather prediction methods, especially in forecasting the \Kp~index \citep{Detman1999,Wing2005,Savani2017}. The TSS is used in the verification analysis of operational geomagnetic storm forecasts as well, for example at the SIDC\footnote{SIDC's Verification Analysis of the SIDC Forecast website: \urlfoot{http://sidc.be/forecastverification/K_index_storm_5+.php}}.
+In the case of rare event forecasting, the contingency table is dominated by correct nulls and the TSS approaches the hit rate. \citet{Doswell1990} show that the Heidke skill score is superior in these situations, in that it considers correct null forecasts in a controlled way. They recommend to use the Heidke skill score in preference to TSS for rare event forecasting. Other often applied skill scores are the threat score, also called critical success index or Gilbert score, and the equitable threat score. However, the TSS is commonly applied to evaluate and compare space weather prediction methods, particularly in forecasting the \Kp~index \citep{Detman1999,Wing2005,Savani2017}. The TSS is used in the verification analysis of operational geomagnetic storm forecasts as well, for example at the SIDC\footnote{SIDC's Verification Analysis of the SIDC Forecast website: \urlfoot{http://sidc.be/forecastverification/K_index_storm_5+.php}}.
 
 
 % Fraction Correct is given by [0,1]\\

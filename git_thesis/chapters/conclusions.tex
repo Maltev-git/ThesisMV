@@ -7,11 +7,10 @@
 
 % two topics
 In this work I addressed solar wind problems relevant to space weather and to the Parker~Solar~Probe mission. Predictive models related to solar wind were developed in both studies. In the first study, I modeled the impact of solar wind and CMEs on geomagnetic activity, and in the second study I developed an empirical solar wind model for the inner heliosphere.
-
 %COFI -- chapter outline and flow integration
 Here, I briefly summarize the principal results and conclusions of both studies and give an outlook on further objectives based on this work.
 
-\section{The solar wind's geomagnetic impact}
+\section{Geomagnetic impact of the solar wind}
 % % % summary
 This study, presented in \autoref{chap:chapter2}, estimates the impact of solar wind on the planetary geomagnetic disturbance indicator \Kp{} and predicts it for CMEs and streams in particular.
 % First, the long-term changes of \Kp{} due to solar activity and the extent of seasonal variations stemming from the Earth's orbit were determined.
@@ -41,7 +40,7 @@ The obtained \Kp{} relations were evaluated for their prediction performance. Th
 		\text{\Kp}_-\left(vB_\text{z}\right) &= 1.258 \cdot \ln\left(\left(vB_\text{z} + 163\right)^2 + \num{1.416e6}\right) - 17.04	\,,\\
 		\text{\Kp}_+\left(vB_\text{z}\right) &= 0.467 \cdot \left(\text{\Kp}_-\left(vB_\text{z}\right) - \text{\Kp}_-(-163)\right) + \text{\Kp}_-(-163)	\,.
 	\end{align*}
-	The mean absolute deviation (MAD) of this relation has a mean \Kp{} size of \num{0.7}. This relation provides proper predictions in the \Kp{} range from \num{1.0} to \num{8.7}, that is, significantly better than random.
+	The mean absolute deviation (MAD) of this relation has a mean \Kp{} size of \num{0.7}. This relation provides proper predictions, that is, significantly better than random, in the \Kp{} range from \num{1.0} to \num{8.7}.
 
 	\item The relation between the \Kp~index and the 3"~hour velocity maxima of CME-associated flows, including shocked and compressed solar wind plasma, is
 	\begin{align*}
@@ -51,11 +50,11 @@ The obtained \Kp{} relations were evaluated for their prediction performance. Th
 
 	\pagebreak
 
-	\item The relation between the \Kp~index and the 3"~hour velocity maxima of solar wind streams, including fast and slow wind and interaction regions, is
+	\item The empirical relation between the \Kp~index and the 3"~hour velocity maxima of solar wind streams, including fast and slow wind and interaction regions, is
 	\begin{align*}
 		\text{\Kp}_\text{Stream}(v) &= 5.88 \cdot \ln(v + 299) - 37.0	\,,
 	\end{align*}
-	with the velocity in units of [\si{\km\per\s}]. Its MAD has a mean \Kp{} size of about \num{0.7}. This relation has a proper \Kp{} range of \numrange{0.3}{4.3}. This is well below the threshold of geomagnetic storms ($\si{\Kp} \leq 5$), and thus the relation is good in predicting lower geomagnetic activity but not storms.
+	with the velocity in units of [\si{\km\per\s}]. Its MAD has a mean \Kp{} size of about \num{0.7}. This relation has a proper \Kp{} range of \numrange{0.3}{4.3}. This is well below the threshold of geomagnetic storms ($\si{\Kp} = 5$), and thus the relation is good in predicting lower geomagnetic activity but not storms.
 \end{itemize}
 
 \medskip
@@ -63,17 +62,15 @@ The obtained \Kp{} relations were evaluated for their prediction performance. Th
 % % % conclusions
 % conclusions from data processing
 The correlations between \Kp{} and the solar wind electric field and velocity were done separately for high-resolution solar wind data that was processed in a different manner, that is, 3"~hour averages and 3"~hour extrema. The processing of 3"~hour \vBz{} minima leads to a significantly higher correlation coefficient as compared with the 3"~hour averages ($r_\text{min} = -0.72$ versus $r_\text{avg} = -0.36$), whereas correlating 3"~hour velocity maxima results in nearly the same correlation as 3"~hour averages ($r_\text{max} = 0.622$ versus $r_\text{avg} = 0.613$).
-These findings support the notion that averaging over 3"~hour intervals leads to short-term geoeffective features in the magnetic field z"~component being missed. Thus, for an efficient \Kp{} prediction via \vBz{}, it is of key importance to capture the magnetic features by using 3"~hour minima of high-resolution data. As short-term variations in $B_\text{z}$ cannot yet be predicted from remote observations, the solar wind electric field is not well suited as a basis for remote forecast situations.
+These findings support the notions that averaging over 3"~hour intervals leads to short-term geoeffective features in the magnetic field z"~component being missed, and that the magnetosphere indeed responds directly to short-term solar wind variations in the order of minutes. Thus, for an efficient \Kp{} prediction via \vBz{}, it is of key importance to capture the magnetic features by using 3"~hour minima of high-resolution data. As short-term variations in $B_\text{z}$ cannot yet be predicted from remote observations, the solar wind electric field is not well suited as a basis for remote forecast situations.
 In contrast, as the underlying data resolution makes no difference for the solar wind velocity, it is best suited for remote forecast situations.
 
 % principal conclusions
-The \Kp{} predictive models from CME and stream velocity show a significant difference in magnitude and in trend -- their initial separation of about 1~\Kp~value grows slightly at higher velocities. This confirms the initial assumption that the isolated treatment of CME and stream velocities is beneficial for the prediction of the \Kp~index.
-
+The \Kp{} predictive models derived from CME and stream velocity show a significant difference in magnitude and in trend -- their initial separation of about 1~\Kp~value grows slightly at higher velocities. This confirms the initial assumption that the isolated treatment of CME and stream velocities is beneficial for the prediction of the \Kp~index.
 Both relations are derived from velocity data that is below \SI{1100}{\km\per\s}. Assuming the CME relation holds true for even higher speeds, an extension could predict the geomagnetic impact of faster CMEs as well. However, the maximum \Kp{} of \num{9.0} is reached at a CME velocity of \SI{1500}{\km\per\s}.
 
-The derived functional relations are based on the velocity and the magnetic field z"~component, which comprise only a fraction of the relevant solar wind--magnetosphere coupling parameters. The evaluation of the prediction performance of the derived predictive models shows that they indeed cannot compete with models based on full-fledged solar wind coupling functions, nor with current prediction models based on artificial neural networks.
-
-That said, the relations still enable empirical estimations of the average geomagnetic activity for special space weather forecast situations. \Kp{} can directly be quantified from in-situ measurements of the solar wind electric field. As early predictions of CME and stream magnetic fields obtained from remote observations are currently either non-existent or come with high uncertainties, \Kp{} relations, derived exclusively for the arrival velocities of CMEs and streams, are provided.
+The derived predictive models are based on the velocity and the magnetic field z"~component, which comprise only a fraction of the relevant solar wind--magnetosphere coupling parameters. The evaluation of their prediction performance shows that they indeed cannot compete with models based on full-fledged solar wind coupling functions, nor with current prediction models based on artificial neural networks.
+That said, the models perform well for what they represent and they still enable empirical estimations of the average geomagnetic activity for special space weather forecast situations. \Kp{} can directly be quantified from in-situ measurements of the solar wind electric field. As early predictions of CME and stream magnetic fields obtained from remote observations are currently either non-existent or come with high uncertainties, \Kp{} relations, derived exclusively for the arrival velocities of CMEs and streams, are provided.
 
 \bigskip
 
@@ -84,19 +81,19 @@ That said, the relations still enable empirical estimations of the average geoma
 % what approaches I would have chosen, knowing what I now know?
 % specific objectives based on unanswered questions in my work
 % % % chapter2 outlook
-Many questions remain unanswered regarding the relationship between solar wind properties and \Kp~index: What are these short-term geoeffective magnetic features? Are there other ways of data processing that can achieve even higher correlations with \Kp{}?
-It would be interesting to uncover to what extent full-fledged coupling functions, such as Newell's universal coupling function, are impacted by the underlying processing of the high resolution data.
+Many questions remain unanswered regarding the relationship between solar wind properties and \Kp~index: Would an even higher time resolution in the order of seconds further resolve these short-term geoeffective magnetic features and subsequently enhance the \Kp{} predictions? Are there other ways of data processing that can achieve even higher correlations with \Kp{}?
+It would be interesting to uncover to what extent full-fledged coupling functions, such as Newell's universal coupling function, are impacted by the underlying processing of the high-resolution data.
 
-The ground geomagnetic disturbances, generated by rare and extremely fast CME events with velocities above \SI{1500}{\km\per\s}, may be resolved and estimated by redefining and extending the conversion between the \Kp{} and \textit{ap} indices. \Kp{} is connected to the ground disturbance field strength at the \SI{+-50}{\degree} latitudes via the \textit{ap}~index. By extending the derived \Kp{} relations above \num{9.0}, the absolute field disturbances at the ground can be estimated.
+The ground geomagnetic disturbances, generated by rare and extremely fast CME events with velocities above \SI{1500}{\km\per\s}, may be resolved and estimated by redefining and extending the conversion between the \Kp{} and \textit{ap} indices. \Kp{} is connected to the ground disturbance field strength at the \SI{+-50}{\degree} latitudes via the equivalent \textit{ap}~index. By extending the derived \Kp{} relations above \num{9.0}, the absolute field disturbances at the ground can be estimated.
 
 Smaller-scale solar wind structures, such as CIRs and HCSs, may be isolated for their \Kp{} impact. The CME-associated flows can be filtered into their substructures, such as the compressed solar wind plasma and the MC plasma, and their \Kp{} impact evaluated individually.
 
-Spacecraft missions positioned at special locations would be beneficial for earlier and more accurate space weather forecasting. Suggested locations are sub-L1 for earlier in-situ CME magnitude warnings and L5 for earlier CME velocity and arrival time warnings \citep{Vourlidas2015}.
+Spacecraft missions positioned at special locations would be beneficial for earlier and more accurate space weather forecasting. Suggested locations are sub-L1, a position slightly closer to the Sun than L1 which would enable earlier warnings from in-situ solar wind and CME measurements, and L5, which would provide early CME velocity and arrival time warnings from coronagraph images \citep{Vourlidas2015}, similar to what the STEREO mission achieved at this position.
 
 \clearpage
 
 
-\section{The solar wind's Sun--Earth evolution}
+\section{Sun--Earth evolution of the solar wind}
 % % % summary
 % long synopsis chapterPSP without refs
 This study is presented in \autoref{chap:chapterPSP}, however, its essential portion is published in \citet{Venzmer2018}, which is included as \autoref{chap:solar_wind_predictions_for_the_parker_solar_probe_orbit} in this thesis.
@@ -111,7 +108,8 @@ The obtained lognormal functions, SSN dependencies, and solar distance dependenc
 
 % % % results
 The resulting models represent the frequency distributions of the solar wind parameters by lognormal functions, whose location and shape are defined by their median and mean.
-The derived relations for the median and mean values are a result of lognormal function fits and they deviate from the actual median and mean values of the solar wind parameters\footnote{The only actual median and mean values I calculated, are those with respect to solar distance -- they are presented in Table~3 of the article and in the first two rows of \autoref{tab:bfield_fit_parameters}.}. Thus, the derived relations are to be used only as input to the lognormal function, Equation~(4) in \citet{Venzmer2018}.
+The derived relations for the median and mean values are a result of lognormal function fits and they deviate slightly from the actual median and mean values of the solar wind parameters. Thus, the derived relations are to be used as input to the lognormal function, Equation~(4) in \citet{Venzmer2018}.
+% \footnote{The only actual median and mean values I calculated, are those with respect to solar distance -- they are presented in Table~3 of the article and in the first two rows of \autoref{tab:bfield_fit_parameters}.}
 The frequency distributions are being shifted by the median and mean relations, which depend on solar distance $r$ measured in [au], and on solar activity measured via the SSN. The resulting relations and the predicted values for PSP's first perihelion in November 2018 and its first closest perihelion in December 2024 are listed here.
 \begin{itemize}
 	\item The relations for the median and mean of the magnetic field strength are:
@@ -121,16 +119,16 @@ The frequency distributions are being shifted by the median and mean relations, 
 	\end{align*}
 	 The estimated median value for PSP's first perihelion is \SI{87}{\nano\tesla} and that for the first closest perihelion is \SI{943}{\nano\tesla}.
 	
-	\item An alternative relation for the median has been derived, which considers the differing distance scaling of the individual vector components. The relation only differs in its solar distance dependency, that is, it accounts for the Parker field geometry:
+	\item An alternative relation for the field strength median has been derived, which considers the differing distance scaling of the individual vector components. The relation only differs in its solar distance dependency, that is, it accounts for the Parker field geometry:
 	\begin{align*}
 		B^\text{Parker}_\text{med}(ssn,r) &= \left(\SI{0.0131}{\nT} \cdot ssn + \SI{4.29}{\nT}\right) \cdot \sqrt{\left(r^{-1.858}\right)^2 + \left(r^{-1.32}\right)^2}	\,.
 	\end{align*}
 	This model neglects the azimuthal field component and assumes that the Parker spiral angle at \SI{1}{\au} has an average value of \SI{-45}{\degree} or \SI{135}{\degree}, corresponding to a constant solar wind velocity of \SI{414}{\km\per\s}.
 	This model yields higher extrapolated near-Sun values than the simple power-law dependent model does. The estimated median value of \SI{94}{\nano\tesla} for PSP's first perihelion is \SI{8}{\%} higher and the value for the first closest perihelion of \SI{1241}{\nano\tesla} is even \SI{32}{\%} higher.
 
+	\item The model for the velocity distribution is built in a different way, combining two lognormal functions to consider for the slow and fast solar wind components
 	\pagebreak
-
-	\item The model for the velocity distribution is built in a different way, combining two lognormal functions to consider for the slow and fast solar wind components \citep[see the Equation~(5) in][]{Venzmer2018}. Here, the solar activity dependence is introduced by varying the share of both components and not by shifting their positions, that is, a balancing parameter depending on the SSN regulates the share of both components:
+	 \citep[see the Equation~(5) in][]{Venzmer2018}. Here, the solar activity dependence is introduced by varying the share of both components and not by shifting their positions, that is, a balancing parameter depending on the SSN regulates the share of both components:
 	\begin{align*}
 		c(ssn) = -0.00180 \cdot ssn + 0.64	\,.
 	\end{align*}
@@ -150,7 +148,7 @@ The frequency distributions are being shifted by the median and mean relations, 
 	
 	\item The derived median and mean relations for the temperature are:
 	\begin{align*}
-		T_\text{med}(ssn,r) &= (\SI{197}{\K} \cdot ssn + \SI{57300}{\K}) \cdot r^{-1.10}	\,,\\
+		T_\text{med}(ssn,r) &= (\SI{197}{\K} \cdot ssn + \SI{5.73e4}{\K}) \cdot r^{-1.10}	\,,\\
 		T_\text{avg}(ssn,r) &= 1.654 \cdot T_\text{med}(ssn,r)\,.
 	\end{align*}
 	 The estimated median value for PSP's first perihelion is \SI{5.03e5}{\kelvin} and that for the first closest perihelion is \SI{1.93e6}{\kelvin}.
@@ -159,10 +157,9 @@ The frequency distributions are being shifted by the median and mean relations, 
 \medskip
 
 % % % conclusions
+The IMF is known to conform to the Parker field geometry in the outer heliosphere, therefore, the predictions of the second IMF model are considered to be more reliable.
 The extrapolation of the velocity model to solar distances below \SI{20}{\Rs} yields speeds that overestimate those obtained from remote observations. In particular, the estimated velocity for slow wind at \SI{10}{\Rs} is about \SI{270}{\km\per\s}, whereas remote observations show velocities around \SI{200}{\km\per\s}. This indicates that solar wind acceleration takes place up to solar distances of \SI{20}{\Rs}.
-
 Also, the near-Sun extrapolation of the temperature model overestimates its magnitude in comparison to coronal measurements, that is, temperatures of \SIrange{2}{3}{\mega\kelvin} are estimated for solar distances of \SI{10}{\Rs}, whereas it is known that these temperatures already exist in the corona close to the Sun. This suggests that plasma heating takes place up to these solar distances.
-
 Thus, from the results presented in this study, I conclude that the regions where solar wind acceleration and heating occurs will indeed be probed by the PSP spacecraft. However, only the near-Sun in-situ measurements of PSP itself will ultimately reveal the accuracy of the solar wind model predictions.
 
 \bigskip
@@ -174,15 +171,13 @@ Thus, from the results presented in this study, I conclude that the regions wher
 % what approaches I would have chosen, knowing what I now know?
 % specific objectives based on unanswered questions in my work
 % % % chapterPSP outlook
-A number of modifications could be further integrated into the solar wind model, such as flux conservation, seasonal effects, and the distance behavior of different solar wind structure types.
-
-Further investigations should be done to extrapolate the different solar wind structures as, for example, the properties of CMEs and MCs differ from those of the bulk solar wind distance scaling laws \citep{Bothmer1998}. Furthermore, the dependence of the contribution of solar wind structures on solar activity can influence the derived fit parameters.
+A number of modifications could be further integrated into the solar wind model, such as flux conservation, the IMF--velocity dependence, seasonal effects, and the distance behavior of different solar wind structure types.
+Further investigations should be done to extrapolate different solar wind structures as, for example, the properties of CMEs and MCs differ from those of the bulk solar wind distance scaling laws \citep{Bothmer1998}. Furthermore, the dependence of the contribution of solar wind structures on solar activity can influence the derived fit parameters.
 
 To refine the distance dependency of the solar wind model in the Helios distance range, additional solar wind data could be included in the analyses. For example, data from the spacecraft Mariner~10 and MESSENGER that studied Mercury which has a perihelion distance of \SI{0.3}{\au}.
 %MESSENGER: B-field 2004--2011
 Furthermore, the Solar~Orbiter spacecraft, which is scheduled for launch in 2020, carries in-situ instruments as well. When reaching its operational orbit in 2023, it will provide more solar wind data from the solar distance range \SIrange{0.28}{0.9}{\au} and from heliolatitudes up to \SI{+-25}{\degree}.
-
-Ultimately, the upcoming solar wind measurements made by PSP, beginning in November 2018 with its first perihelion at \SI{0.16}{\au}, can be integrated into the solar wind model, adjusting its near-Sun part.
+Ultimately, the upcoming solar wind measurements made by PSP, beginning in November 2018 with its first perihelion at \SI{0.16}{\au}, can be integrated into the solar wind model to adjust its near-Sun part with empirical data.
 
 
 

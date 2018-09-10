@@ -185,7 +185,7 @@ highlight=LaTeX
 line=27
 mode=LaTeX
 open=true
-order=9
+order=8
 
 [item:appendix/appendix.tex]
 archive=true
@@ -195,7 +195,7 @@ highlight=LaTeX
 line=315
 mode=LaTeX
 open=true
-order=10
+order=9
 
 [item:appendix/curriculum_vitae.tex]
 archive=true
@@ -239,12 +239,12 @@ order=8
 
 [item:chapters/analyses_helios.tex]
 archive=true
-column=350
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=101
+line=316
 mode=LaTeX
-open=true
+open=false
 order=6
 
 [item:chapters/basics.tex]
@@ -255,24 +255,24 @@ highlight=LaTeX
 line=797
 mode=LaTeX
 open=true
-order=7
+order=6
 
 [item:chapters/chapter2.tex]
 archive=true
-column=62
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=196
+line=650
 mode=LaTeX
 open=true
 order=4
 
 [item:chapters/conclusions.tex]
 archive=true
-column=131
+column=165
 encoding=UTF-8
 highlight=LaTeX
-line=114
+line=128
 mode=LaTeX
 open=true
 order=5
@@ -285,7 +285,7 @@ highlight=LaTeX
 line=6
 mode=LaTeX
 open=true
-order=8
+order=7
 
 [item:chapters/formal_titlepage.tex]
 archive=true
@@ -299,10 +299,10 @@ order=6
 
 [item:chapters/front_matter.tex]
 archive=true
-column=39
+column=67
 encoding=UTF-8
 highlight=LaTeX
-line=444
+line=45
 mode=LaTeX
 open=true
 order=2
@@ -454,10 +454,10 @@ JumpList=
 ViMarks=.,43,9,[,43,9,],43,9
 
 [view-settings,view=0,item:chapters/analyses_helios.tex]
-CursorColumn=350
-CursorLine=101
+CursorColumn=0
+CursorLine=316
 JumpList=
-ViMarks=.,101,349,[,101,339,],101,349
+ViMarks=.,296,487,[,296,474,],296,487
 
 [view-settings,view=0,item:chapters/basics.tex]
 CursorColumn=0
@@ -466,16 +466,16 @@ JumpList=
 ViMarks=.,787,315,[,787,303,],787,315,a,1,0,b,7,0,c,646,0,d,697,0,e,896,0,f,828,0,g,253,0,h,136,0,i,207,0,j,335,0,k,486,0
 
 [view-settings,view=0,item:chapters/chapter2.tex]
-CursorColumn=62
-CursorLine=196
+CursorColumn=0
+CursorLine=650
 JumpList=
 ViMarks=.,196,61,[,196,61,],196,61
 
 [view-settings,view=0,item:chapters/conclusions.tex]
-CursorColumn=131
-CursorLine=114
+CursorColumn=165
+CursorLine=128
 JumpList=
-ViMarks=.,114,130,[,114,130,],114,130
+ViMarks=.,130,49,[,128,165,],130,49
 
 [view-settings,view=0,item:chapters/data.tex]
 CursorColumn=75
@@ -490,10 +490,10 @@ JumpList=
 ViMarks=.,110,6,[,110,0,],-1,-1
 
 [view-settings,view=0,item:chapters/front_matter.tex]
-CursorColumn=39
-CursorLine=444
+CursorColumn=67
+CursorLine=45
 JumpList=
-ViMarks=.,449,95,[,449,59,],449,95
+ViMarks=.,45,67,[,45,67,],45,67
 
 [view-settings,view=0,item:chapters/introduction.tex]
 CursorColumn=1534

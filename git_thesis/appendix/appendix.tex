@@ -367,34 +367,6 @@ Note that for the lognormal distribution its median is equal to its geometric me
 Most distributions in nature deviate from the simple Gaussian shape and are to some extent skewed. Indeed, almost all natural quantities which can only be positive are lognormally distributed. Such distributions are found in all fields of sciences \citep{Limpert2001}, for example in biology (size and weight of individuals in populations; species abundance), in medicine (latency periods and survival times of diseases), in social sciences (age of marriage), in linguistics (lengths of words and sentences), in economics (household income), and in geophysics (distribution of mineral resources in the Earth's crust). Obviously measurements of certain solar wind quantities and geomagnetic indices conform to lognormal distributions as well.
 
 
-\section{Astronomical constants}
-\label{sec:astronomical_constants}
-The nominal distance units astronomical unit (\si{\au}) and solar radius (\Rs) are used extensively in this work. The astronomical unit is about the average distance between Earth's perihelion and aphelion. The 2009 Resolution~B2 of the International Astronomical Union (IAU) defines it as being exactly $\SI{1}{\au} = \SI{149597870.700}{\km}$ \citep{Luzum2011}. The nominal solar radius is the distance from the Sun's center to its photosphere and the IAU 2015 Resolution~B3 defines its value exactly as $\SI{1}{\Rs} = \SI{695700}{\km}$ \citep{Prsa2016}. Thus \SI{1}{\au} equals about \SI{215.0}{\Rs}.
-
-\bigskip
-
-\noindent Notable online resources for astronomical constants:
-\begin{itemize}
-	\item IAU 2009 values and best estimates, IAU Division~I Working Group, Numerical Standards for Fundamental Astronomy, \citet{Luzum2011}:\\
-	\urltext{http://maia.usno.navy.mil/NSFA/}
-	
-	\item The Astronomical Almanac Online, \citet{USNAO2017}:\\
-	\urltext{http://asa.usno.navy.mil/static/files/2016/Astronomical_Constants_2016.pdf}
-	
-	\item NASA's Planetary~Fact~Sheets:\\
-	\urltext{https://nssdc.gsfc.nasa.gov/planetary/planetfact.html}
-	
-\end{itemize}
-
-% Nominal solar effective temperature (photosphere): $T_{\text{eff}\odot} = \SI{5772}{\kelvin}$ \citep{Mamajek2015}\\
-% Solar rotation axis tilt to ecliptic: $i_\odot = \SI{7.25}{\degree}$ (NASA's Sun Fact Sheet\footnote{NASA's Sun Fact Sheet website: \urlfoot{http://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html}})\\ %C3; Obliquity to ecliptic
-% Earth rotation axis tilt to ecliptic: $i_\text{E} = \SI{23.439279}{\degree}$ \citep{Luzum2011}\\ %C3; Obliquity to ecliptic
-% Solar mass: $M_\odot = \SI{1.9884(2)e30}{\kg}$ \citep{USNAO2017}\\
-% Sun escape velocity: $v_\text{esc} = \SI{617.6}{\km\per\s}$ (Sun Fact Sheet...)\\
-% Solar surface rotation period at equator, sidereal: 25.05~d (Sun Fact Sheet...)\\
-
-\newpage
-
 \section{Acronyms}
 \label{sec:acronyms}
 
@@ -437,6 +409,7 @@ The nominal distance units astronomical unit (\si{\au}) and solar radius (\Rs) a
 \end{minipage}
 %second column
 \begin{minipage}[t]{0.56\textwidth}
+	\begin{flushleft}
 	\noindent List of specific acronyms:
 	\begin{description}[leftmargin=2.1cm, align=parleft, style=sameline]\small
 		\item[ACE] Advanced Composition Explorer
@@ -480,8 +453,9 @@ The nominal distance units astronomical unit (\si{\au}) and solar radius (\Rs) a
 		\item[WDC-SILSO] World Data Center-Sunspot Index and Long-term Solar Observations
 		\item[WISPR] Wide-field Imager for Solar Probe
 	\end{description}
+	\end{flushleft}
 \end{minipage}
-% 
+
 % Generic acronyms:
 % \begin{description}[labelwidth=1.2cm]
 % 	\item[ANN] artificial neural network
@@ -571,4 +545,33 @@ The nominal distance units astronomical unit (\si{\au}) and solar radius (\Rs) a
 % \n\t\\item[\1] \2
 
 % 	\item[] 
+
+\clearpage
+
+
+\section{Astronomical constants}
+\label{sec:astronomical_constants}
+The nominal distance units astronomical unit (\si{\au}) and solar radius (\Rs) are used extensively in this work. The astronomical unit is about the average distance between Earth's perihelion and aphelion. The 2009 Resolution~B2 of the International Astronomical Union (IAU) defines it as being exactly $\SI{1}{\au} = \SI{149597870.700}{\km}$ \citep{Luzum2011}. The nominal solar radius is the distance from the Sun's center to its photosphere and the IAU 2015 Resolution~B3 defines its value exactly as $\SI{1}{\Rs} = \SI{695700}{\km}$ \citep{Prsa2016}. Thus \SI{1}{\au} equals about \SI{215.0}{\Rs}.
+
+\bigskip
+
+\noindent Notable online resources for astronomical constants:
+\begin{itemize}
+	\item IAU 2009 values and best estimates, IAU Division~I Working Group, Numerical Standards for Fundamental Astronomy, \citet{Luzum2011}:\\
+	\urltext{http://maia.usno.navy.mil/NSFA/}
+	
+	\item The Astronomical Almanac Online, \citet{USNAO2017}:\\
+	\urltext{http://asa.usno.navy.mil/static/files/2016/Astronomical_Constants_2016.pdf}
+	
+	\item NASA's Planetary~Fact~Sheets:\\
+	\urltext{https://nssdc.gsfc.nasa.gov/planetary/planetfact.html}
+	
+\end{itemize}
+
+% Nominal solar effective temperature (photosphere): $T_{\text{eff}\odot} = \SI{5772}{\kelvin}$ \citep{Mamajek2015}\\
+% Solar rotation axis tilt to ecliptic: $i_\odot = \SI{7.25}{\degree}$ (NASA's Sun Fact Sheet\footnote{NASA's Sun Fact Sheet website: \urlfoot{http://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html}})\\ %C3; Obliquity to ecliptic
+% Earth rotation axis tilt to ecliptic: $i_\text{E} = \SI{23.439279}{\degree}$ \citep{Luzum2011}\\ %C3; Obliquity to ecliptic
+% Solar mass: $M_\odot = \SI{1.9884(2)e30}{\kg}$ \citep{USNAO2017}\\
+% Sun escape velocity: $v_\text{esc} = \SI{617.6}{\km\per\s}$ (Sun Fact Sheet...)\\
+% Solar surface rotation period at equator, sidereal: 25.05~d (Sun Fact Sheet...)\\
 

@@ -13,7 +13,7 @@ The differential rotation of the solar surface is visible from sunspot observati
 % sidereal: 25.38~d (of 609.12~h Sun Fact Sheet...), synodic: 27.2753~d (derived)
 
 %best-fitting function
-The Sun's sidereal differential angular velocity can be approximated by the function\footnote{NASA's Sun Fact Sheet: \urlfoot{http://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html}}:
+The Sun's sidereal differential angular velocity can be approximated by the function \citep{Beck2000}:
 \begin{align}
 	\omega_\odot(\theta) = \omega_\text{eq} + B \sin^2(\theta) + C \sin^4(\theta)	\,,	\label{eq:omega_differential}
 \end{align}
@@ -55,6 +55,8 @@ The differential rotation differs locally in the different surface structures, s
 % 		\multicolumn{4}{l}{\footnotesize{$^\text{a}$Carrington solar rotation period}}
 % 	\end{tabular}
 % \end{table}
+
+\pagebreak
 
 
 \section{Electric field at the magnetopause}
@@ -229,7 +231,7 @@ The total distance variation of \SI{3.34}{\%} has implications for the magnitude
 % -> ram pressure varies by 6\% through the year\\
 
 % \subsection*{Solar rotation axis tilt to the ecliptic}
-The heliosphere is structured by the orientation of the solar rotation axis, e.g., the overall solar wind properties change with angular distance from the solar equator. The solar equator is inclined to the ecliptic by $i_\odot = \SI{7.25}{\degree}$\footnote{NASA's Sun Fact Sheet: \urlfoot{http://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html}}. Thus, viewed from Earth, the projected solar rotation axis tilt angle varies as the Earth is moving on its orbit. The seasonal change is plotted in \autoref{fig:Sun_Earth_geometry}, where the projected tilt at a given time is calculated by modulating $i_\odot$ with a sine, using the equation in \citet{Hapgood1992} and the time of vernal equinox. The projected tilt is zero at the equinoxes -- the vernal equinox in 2016 was on 20~March.
+The heliosphere is structured by the orientation of the solar rotation axis, e.g., the overall solar wind properties change with angular distance from the solar equator. The solar equator is inclined to the ecliptic \citep[p.~13]{Carrington1863} by $i_\odot = \SI{7.25}{\degree}$ \citep{Russell1971}. Thus, viewed from Earth, the projected solar rotation axis tilt angle varies as the Earth is moving on its orbit. The seasonal change is plotted in \autoref{fig:Sun_Earth_geometry}, where the projected tilt at a given time is calculated by modulating $i_\odot$ with a sine, using the equation in \citet{Hapgood1992} and the time of vernal equinox. The projected tilt is zero at the equinoxes -- the vernal equinox in 2016 was on 20~March.
 % vernal_equinox = 2016.0 + 2.0/12.0 + 20.0/366.0
 % projected tilt from Earth: i_proj = i_sun * sin(beta)
 % this years vernal equinox: eq = 2015.0 + 2.0/12.0 + 20.0/365.0 = 2015.2215

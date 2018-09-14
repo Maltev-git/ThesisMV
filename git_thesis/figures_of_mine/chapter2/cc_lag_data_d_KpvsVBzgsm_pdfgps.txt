@@ -1,0 +1,62 @@
+set terminal pdfcairo enhanced font "arial,12" fontscale 0.5 lw 1 size 8.8cm,6.6cm rounded
+set output "cc_lag_data_d_KpvsVBzgsm.pdf"
+
+datafile_swsf_3hmax = "../../Data/OMNI_data3_analysis/KpvsVBzgsm/OMNI_HRO_1MIN_19810101--20161231_with_ap_VBzgsm_swsf_3hmax_KpvsVBzgsm_2Dhistogram.txt"
+datafile_swsf_3hmean = "../../Data/OMNI_data3_analysis/KpvsVBzgsm/OMNI_HRO_1MIN_19810101--20161231_with_ap_VBzgsm_swsf_3hmean_KpvsVBzgsm_2Dhistogram.txt"
+datafile_swsf_3hmin = "../../Data/OMNI_data3_analysis/KpvsVBzgsm/OMNI_HRO_1MIN_19810101--20161231_with_ap_VBzgsm_swsf_3hmin_KpvsVBzgsm_2Dhistogram.txt"
+datafile_sws23_3hmin = "../../Data/OMNI_data3_analysis/KpvsVBzgsm/OMNI_HRO_1MIN_19810101--20161231_with_ap_VBzgsm_sws23_3hmin_KpvsVBzgsm_2Dhistogram.txt"
+datafile_sws1_3hmin = "../../Data/OMNI_data3_analysis/KpvsVBzgsm/OMNI_HRO_1MIN_19810101--20161231_with_ap_VBzgsm_sws1_3hmin_KpvsVBzgsm_2Dhistogram.txt"
+
+
+####--  Styles  --####
+set style line 1 lt 1 lw 1 lc rgb "white"
+set style line 2 lt 1 lw 1 lc rgb "light-red"
+set style line 3 lt 1 lw 1 lc rgb "web-green"
+set style line 4 lt 1 lw 1 lc rgb "web-blue"
+set style line 5 lt 1 lw 1 lc rgb "yellow"
+set style line 6 lt 1 lw 1 lc rgb "brown"
+set style line 7 lt 1 lw 1 lc rgb "light-blue"
+set style line 8 lt 1 lw 1 lc rgb "dark-blue"
+set style line 9 lt 1 lw 1 lc rgb "dark-violet"
+set style line 10 lt 1 lw 1 lc rgb "black"
+set style line 11 lt 1 lw 1 lc rgb "grey"
+set style line 12 lt 1 lw 1 lc rgb "grey50"
+
+#set title "V vs Kp correlation coefficients for different time lags and data averaging"\
+# set multiplot\
+# 	title "Correlation coefficient for different time lags"\
+# 	layout 2,1\
+# 	spacing 0
+
+set border 3
+set xtics nomirror
+set ytics nomirror
+
+set margins screen 0.125,screen 0.975,screen 0.15,screen 0.98
+
+set key reverse Left font ",11" samplen 2 box opaque
+set key width -1.5
+set key right bottom
+
+set grid back
+
+
+set xlabel "Time shift [h]"
+set ylabel "Correlation coefficient ({/:Italic= Kp} vs {/:Italic= v{/Symbol \327}B_z})" offset 1,0
+set xrange [-24:24]
+set xtics 6
+#set ytics 0.05
+set mxtics 2
+set mytics 2
+ylow = -1
+yup = 0.0
+set yrange [ylow:yup]
+#set ytics add("" yup)
+
+set arrow from 0,ylow to 0,yup ls 10 lw 1 dt 3 nohead
+plot\
+	datafile_swsf_3hmean index 1 using (-$1*3.0):2 title "3-hour mean data" with lines ls 10 lw 2 dt 1,\
+	datafile_swsf_3hmin index 2 using (-$1*3.0):2 title "3-hour minimum data" with lines ls 2 lw 2 dt 1,\
+	NaN notitle
+#	datafile_swsf_3hmax index 1 using (-$1*3.0):2 title "3-hour max of minutely data" with lines ls 8 lw 2 dt 1,\
+#	0 with lines ls 10 dt 3 notitle,\

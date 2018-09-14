@@ -132,7 +132,7 @@ The solar wind's influence on the \Kp~index depends on its coupling efficiency w
 %geomagnetic dipole tilt: Planetary fact sheet: 11.2 (Model GSFC-12/83)
 %variation range in the time period 1930--2016: 9.6--11.5° (http://wdc.kugi.kyoto-u.ac.jp/poles/polesexp.html)
 
-So the \Kp{} variation effects originate from the seasonal change in the solar tilt, the Earth's tilt, and the Earth's solar distance. Thorough analyses of the seasonal variations were already early performed by \citet{Cortie1912} and many others thereafter. Thus, I just assess the bulk magnitude of these effects in order to consider them as relative uncertainties for the solar activity relation (\ref{eq:kp_ssn_relation}). Looking at the \Kp{} frequency distributions by month -- seen in \autoref{fig:Kp_seasonal_e} -- it is apparent that for values ($\Kp{} > 2.0$), there exist yearly frequency maxima at the equinoxes and frequency minima at the solstices, as was early described by \citet{Cortie1912}. It is evident from the plotted quantiles that this semiannual variation in \Kp{} amounts to \num{0.3} for the median \Kp{} and goes up to \num{1.3} for the rare higher \Kp~values.
+So the \Kp{} variation effects originate from the seasonal change in the solar tilt, the Earth's tilt, and the Earth's solar distance. Thorough analyses of the seasonal variations were already early performed by \citet{Cortie1912} and many others thereafter. Thus, I just assess the bulk magnitude of these effects in order to consider them as relative uncertainties for the solar activity relation \eqref{eq:kp_ssn_relation}. Looking at the \Kp{} frequency distributions by month -- seen in \autoref{fig:Kp_seasonal_e} -- it is apparent that for values ($\Kp{} > 2.0$), there exist yearly frequency maxima at the equinoxes and frequency minima at the solstices, as was early described by \citet{Cortie1912}. It is evident from the plotted quantiles that this semiannual variation in \Kp{} amounts to \num{0.3} for the median \Kp{} and goes up to \num{1.3} for the rare higher \Kp~values.
 
 \section{Relation between solar wind electric field and \Kp~index}
 \label{sec:relation_between_sw_efield_and_kp}
@@ -254,7 +254,7 @@ The fit curve is plotted in \autoref{fig:Kp_2dhistogram_VBzgsm_sws_fit_e}. The e
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_VBzgsm_sws_fit_e.pdf}
 	}{
 		\caption[\lofimage{figures_of_mine/chapter2/Kp_2dhistogram_VBzgsm_sws_fit_e.pdf}I created the figure myself.]
-		{Mean \Kp{} values (+) and MAD values (dotted lines) per \vBz~interval. The error bars represent the relative data count. The logarithmic fit (dashed line) is plotted with a mean MAD band (shaded area). The splitted function (\ref{eq:log_square_fit_function}) is used for the weighted fit.}
+		{Mean \Kp{} values (+) and MAD values (dotted lines) per \vBz~interval. The error bars represent the relative data count. The logarithmic fit (dashed line) is plotted with a mean MAD band (shaded area). The splitted function \eqref{eq:log_square_fit_function} is used for the weighted fit.}
 		\label{fig:Kp_2dhistogram_VBzgsm_sws_fit_e}
 	}
 \end{figure}
@@ -351,28 +351,24 @@ For \vBz{}, the correlations with \Kp{} are very different for 3"~hour averages 
 % Compare with Newell's $r_v = 0.582$.\\
 
 \subsection{Functional dependencies for CME and stream velocities}
-The general \Kp--velocity dependency in the solar wind is apparent from the tilt of its distribution, see top panel of \autoref{fig:Kp_2dhistogram_V_sws_d}.
+The general \Kp--velocity dependency in the solar wind is apparent from the tilt of its distribution, see first panel of \autoref{fig:Kp_2dhistogram_V_sws_e}.
 \begin{figure}[htb]
-	\fcapside[\FBwidth]{
-		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_V_sws_d.pdf}
-	}{
-		\caption[\lofimage{figures_of_mine/chapter2/Kp_2dhistogram_V_sws_d.pdf}I created the figure myself.]
-		{\Kp--velocity distributions for all solar wind data, for solar wind streams, and for CMEs. The data consists of the 3"~hour maxima of the minutely high-resolution OMNI data from the time period 1981--2016. The SWS list from \citet{Richardson2012} is used for the separation between CME and stream data. The bin size in velocity is \SI{10}{\km\per\s} and in \Kp{} \num{0.3}.}
-		\label{fig:Kp_2dhistogram_V_sws_d}
-	}
+	\centering
+	\includegraphics[width=\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_V_sws_e.pdf}
+	\caption[\lofimage{figures_of_mine/chapter2/Kp_2dhistogram_V_sws_e.pdf}I created the figure myself.]
+	{\Kp--velocity distributions for all solar wind data, for solar wind streams, and for CMEs. The data consists of the 3"~hour maxima of the minutely high-resolution OMNI data from the time period 1981--2016. The SWS list from \citet{Richardson2012} is used for the separation between CME and stream data. The bin size in velocity is \SI{10}{\km\per\s} and in \Kp{} \num{0.3}.}
+	\label{fig:Kp_2dhistogram_V_sws_e}
 \end{figure}
-The distribution is inclined to positive values but very broad, that is, in the typical solar wind velocity range it spans over more than half of the total \Kp{} range. The comparison with the filtered data shows that \Kp{} values \num{>6.0} and velocities \SI{>850}{\km\per\s} are almost always associated with CME related periods, see middle and bottom panel of \autoref{fig:Kp_2dhistogram_V_sws_d}.
+The distribution is inclined to positive values but very broad, that is, in the typical solar wind velocity range it spans over more than half of the total \Kp{} range. The comparison with the filtered data shows that \Kp{} values \num{>6.0} and velocities \SI{>850}{\km\per\s} are almost always associated with CME related periods, see right and bottom panel of \autoref{fig:Kp_2dhistogram_V_sws_e}.
 
 % Functional dependency for CME velocity
-In order to determine a functional relation between \Kp{} and CME velocity, I look at the relative \Kp{} frequencies for each \SI{10}{\km\per\s} velocity interval. The relative frequencies are plotted in the bottom panel of \autoref{fig:Kp_2dhistogram_V_sws1_c2}.
+In order to determine a functional relation between \Kp{} and CME velocity, I look at the relative \Kp{} frequencies for each \SI{10}{\km\per\s} velocity interval. The relative frequencies are plotted in the bottom panel of \autoref{fig:Kp_2dhistogram_V_sws1_d}.
 \begin{figure}[htb]
-	\fcapside[\FBwidth]{
-		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_V_sws1_c2.pdf}
-	}{
-		\caption[\lofimage{figures_of_mine/chapter2/Kp_2dhistogram_V_sws1_c2.pdf}I created the figure myself.]
-		{CME fraction of the \Kp--velocity distribution (same as third panel of \autoref{fig:Kp_2dhistogram_V_sws_d}) and its relative distribution per velocity interval with the mean \Kp{} values (solid line) and their MAD (dotted lines). The bin size in velocity is \SI{10}{\km\per\s} and in \Kp{} \num{0.3}.}
-		\label{fig:Kp_2dhistogram_V_sws1_c2}
-	}
+	\centering
+	\includegraphics[width=\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_V_sws1_d.pdf}
+	\caption[\lofimage{figures_of_mine/chapter2/Kp_2dhistogram_V_sws1_d.pdf}I created the figure myself.]
+	{CME fraction of the \Kp--velocity distribution (same as third panel of \autoref{fig:Kp_2dhistogram_V_sws_e}) and its relative distribution per velocity interval with the mean \Kp{} values (solid line) and their MAD (dotted lines). The bin size in velocity is \SI{10}{\km\per\s} and in \Kp{} \num{0.3}.}
+	\label{fig:Kp_2dhistogram_V_sws1_d}
 \end{figure}
 The average \Kp{} value seems to scale almost linear with the solar wind velocity. The MAD of the average \Kp{} value has a mean \Kp{} size of about \num{1.1}.
 %MAD: 3.338/3 = 1.113 Kp units
@@ -395,7 +391,7 @@ which is plotted in \autoref{fig:Kp_2dhistogram_V_sws1_fit_e}.
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_V_sws1_fit_e.pdf}
 	}{
 		\caption[\lofimage{figures_of_mine/chapter2/Kp_2dhistogram_V_sws1_fit_e.pdf}I created the figure myself.]
-		{Mean \Kp{} values (+) and MAD values (dotted lines) per velocity interval for the CME fraction of the data. The error bars represent the relative data count. The logarithmic fit (dashed line) is plotted with a mean MAD band (shaded area). The function (\ref{eq:log_offset_fit_function}) is used for the weighted fit.}
+		{Mean \Kp{} values (+) and MAD values (dotted lines) per velocity interval for the CME fraction of the data. The error bars represent the relative data count. The logarithmic fit (dashed line) is plotted with a mean MAD band (shaded area). The function \eqref{eq:log_offset_fit_function} is used for the weighted fit.}
 		\label{fig:Kp_2dhistogram_V_sws1_fit_e}
 	}
 \end{figure}
@@ -403,15 +399,13 @@ This empirical relation can be used to forecast the \Kp~index from a predicted C
 
 % Functional dependency for stream velocity
 The procedure for the functional dependency on stream velocity is the same as that for the CME velocity. However, in the case of solar wind stream velocities, the correlation coefficient is higher when the data is shifted by 9~hours (\autoref{fig:cc_lag_sws_f}).
-I use this shifted data and look at the relative frequencies per velocity interval in order to find a functional dependency between \Kp{} and velocity, see bottom panel of \autoref{fig:Kp_2dhistogram_V_sws23_d}.
+I use this shifted data and look at the relative frequencies per velocity interval in order to find a functional dependency between \Kp{} and velocity, see bottom panel of \autoref{fig:Kp_2dhistogram_V_sws23_e}.
 \begin{figure}[htb]
-	\fcapside[\FBwidth]{
-		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_V_sws23_d.pdf}
-	}{
-		\caption[\lofimage{figures_of_mine/chapter2/Kp_2dhistogram_V_sws23_d.pdf}I created the figure myself.]
-		{Stream fraction of the \Kp--velocity distribution (similar to second panel of \autoref{fig:Kp_2dhistogram_V_sws_d}, but with the data shifted by 9~hours) and its relative distribution per velocity interval with the mean \Kp{} values (solid line) and their MAD (dotted lines). The bin size in velocity is \SI{10}{\km\per\s} and in \Kp{} \num{0.3}.}
-		\label{fig:Kp_2dhistogram_V_sws23_d}
-	}
+	\centering
+	\includegraphics[width=\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_V_sws23_e.pdf}
+	\caption[\lofimage{figures_of_mine/chapter2/Kp_2dhistogram_V_sws23_e.pdf}I created the figure myself.]
+	{Stream fraction of the \Kp--velocity distribution (similar to second panel of \autoref{fig:Kp_2dhistogram_V_sws_e}, but with the data shifted by 9~hours) and its relative distribution per velocity interval with the mean \Kp{} values (solid line) and their MAD (dotted lines). The bin size in velocity is \SI{10}{\km\per\s} and in \Kp{} \num{0.3}.}
+	\label{fig:Kp_2dhistogram_V_sws23_e}
 \end{figure}
 Again, the mean \Kp{} value scales almost linear with the velocity. The distribution is much narrower than that for CMEs -- the MAD from the average \Kp{} has only a mean size of about \num{0.7}.
 %MAD: 2.226/3 = 0.742 Kp units
@@ -420,7 +414,7 @@ Again, the mean \Kp{} value scales almost linear with the velocity. The distribu
 %MAD: 2.454/3 = 0.818 Kp units for 350--850km/s
 
 %determine fitting function
-Again, I use the logarithmic function (\ref{eq:log_offset_fit_function}) for the fitting process. The resulting values of the fit parameters are \mbox{$a = \num{5.88(38)}$}, $x' = \num{2.99(49)e2}$, and $y' = \num{-3.70(29)e1}$, with the velocity in units of [\si{\km\per\s}].
+Again, I use the logarithmic function \eqref{eq:log_offset_fit_function} for the fitting process. The resulting values of the fit parameters are \mbox{$a = \num{5.88(38)}$}, $x' = \num{2.99(49)e2}$, and $y' = \num{-3.70(29)e1}$, with the velocity in units of [\si{\km\per\s}].
 %a1 = 5.88(38)
 %b1 = -37.0(29)
 %x1 = 299(49)
@@ -434,7 +428,7 @@ which is plotted in \autoref{fig:Kp_2dhistogram_V_sws23_fit_e}.
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_V_sws23_fit_e.pdf}
 	}{
 		\caption[\lofimage{figures_of_mine/chapter2/Kp_2dhistogram_V_sws23_fit_e.pdf}I created the figure myself.]
-		{Mean \Kp{} values (+) and MAD values (dotted lines) per velocity interval for the stream fraction of the data, shifted by 9~hours. The error bars represent the relative data count. The logarithmic fit (dashed line) is plotted with a mean MAD band (shaded area). The function (\ref{eq:log_offset_fit_function}) is used for the weighted fit.}
+		{Mean \Kp{} values (+) and MAD values (dotted lines) per velocity interval for the stream fraction of the data, shifted by 9~hours. The error bars represent the relative data count. The logarithmic fit (dashed line) is plotted with a mean MAD band (shaded area). The function \eqref{eq:log_offset_fit_function} is used for the weighted fit.}
 		\label{fig:Kp_2dhistogram_V_sws23_fit_e}
 	}
 \end{figure}
@@ -562,13 +556,13 @@ The 2"~month sample period of solar wind and \Kp{} data is displayed in \autoref
 \end{figure}
 The considered period ranges from 1~May to 5~July 2013, when the solar activity cycle~24 had its maximum. The period contains multiple types of structures, such as HSSs, CIRs, and CMEs.
 % describe plot
-The plot shows the solar wind IMF strength, its z"~component, the velocity with its 3"~hour maxima, and the electric field \vBz{} with its 3"~hour minima. The \Kp{} estimate based on the electric field relation is displayed together with the official \Kp~index. The CME and stream velocity relations are displayed together with the official \Kp~index as well, however, both velocity relations are chosen according to the periods flagged as CMEs or streams in the SWS list, that is, either via Equation~(\ref{eq:kpvsv_CME_dependency_function}) or (\ref{eq:kpvsv_stream_dependency_function}). The \Kp{} derived from stream velocity is based on the data shifted by 9~hours.
+The plot shows the solar wind IMF strength, its z"~component, the velocity with its 3"~hour maxima, and the electric field \vBz{} with its 3"~hour minima. The \Kp{} estimate based on the electric field relation is displayed together with the official \Kp~index. The CME and stream velocity relations are displayed together with the official \Kp~index as well, however, both velocity relations are chosen according to the periods flagged as CMEs or streams in the SWS list, that is, either via Equation~\eqref{eq:kpvsv_CME_dependency_function} or \eqref{eq:kpvsv_stream_dependency_function}. The \Kp{} derived from stream velocity is based on the data shifted by 9~hours.
 
 % interprete plot
 It can be seen that in the considered period the \Kp{} estimate based on the E"~field traces the actual \Kp~index pretty well within its mean MAD band, whereas the \Kp{} estimates based on both velocity relations do not coincide that well with the actual \Kp~index. The stream velocity based model overestimates small \Kp{} values, which occur during rarefaction regions of declining velocity, whereas compressed regions are underestimated, such as the interaction region on 1~June 2013. The CME velocity based model underestimates the effect of pronounced MCs, as is seen for the CMEs on 6~June and 27~June 2013.
 
 % Elliott2013
-A study that differentiates particularly between compression and rarefaction regions is that of \citet{Elliott2013}. They compare three threshold techniques to do so: by sorting for density, dynamic pressure, and velocity slope. The three \Kp--velocity distribution panels in \autoref{fig:Kp_2dhistogram_V_sws_d} look indeed very similar to the Figures~3 and~4 from \citet{Elliott2013}. This is because they sort the \Kp{}--velocity distribution for CMEs and streams, use OMNI data, and the SWS list as well, however, they use a different time resolution, data processing, and time period. More precisely, they use 3"~hour averages of the hourly OMNI data set, modify the CME-associated periods of the SWS list with additional constraints, and use data from the time period 1963--2009.
+A study that differentiates particularly between compression and rarefaction regions is that of \citet{Elliott2013}. They compare three threshold techniques to do so: by sorting for density, dynamic pressure, and velocity slope. The three \Kp--velocity distribution panels in \autoref{fig:Kp_2dhistogram_V_sws_e} look indeed very similar to the Figures~3 and~4 from \citet{Elliott2013}. This is because they sort the \Kp{}--velocity distribution for CMEs and streams, use OMNI data, and the SWS list as well, however, they use a different time resolution, data processing, and time period. More precisely, they use 3"~hour averages of the hourly OMNI data set, modify the CME-associated periods of the SWS list with additional constraints, and use data from the time period 1963--2009.
 
 \pagebreak
 
@@ -586,7 +580,7 @@ The plot shows the same parameters as in the previous plot. This more detailed s
 When comparing the \Kp{} estimations for the \vBz{} and velocity based predictive models, it becomes apparent how significant the influence of the magnetic field z"~component is.
 
 % extreme CME speeds
-The maximal velocities included in the OMNI data are around \SI{1100}{\km\per\s}. Current solar wind plasma spectrometers are only able to reliably measure speeds up to this value. Yet, CMEs can be much faster -- speeds of up to \SI{2000}{\km\per\s} at \SI{1}{\au} were reconstructed \citep{Russell2013}. Future studies have to show how accurate the CME relation is in predicting \Kp{} from extreme CMEs with velocities higher than \SI{1100}{\km\per\s}. According to the CME velocity relation (\ref{eq:kpvsv_CME_dependency_function}), a CME speed of \SI{2000}{\km\per\s} would lead on average to a theoretical \Kp{} of $11.2$, however, the \Kp{} scale is capped at $9.0$ and this \Kp{} is reached on average already at a velocity of \SI{1479}{\km\per\s}, see \autoref{fig:Kp_2dhistogram_V_sws123_fit_f3}.
+The maximal velocities included in the OMNI data are around \SI{1100}{\km\per\s}. Current solar wind plasma spectrometers are only able to reliably measure speeds up to this value. Yet, CMEs can be much faster -- speeds of up to \SI{2000}{\km\per\s} at \SI{1}{\au} were reconstructed \citep{Russell2013}. Future studies have to show how accurate the CME relation is in predicting \Kp{} from extreme CMEs with velocities higher than \SI{1100}{\km\per\s}. According to the CME velocity relation \eqref{eq:kpvsv_CME_dependency_function}, a CME speed of \SI{2000}{\km\per\s} would lead on average to a theoretical \Kp{} of $11.2$, however, the \Kp{} scale is capped at $9.0$ and this \Kp{} is reached on average already at a velocity of \SI{1479}{\km\per\s}, see \autoref{fig:Kp_2dhistogram_V_sws123_fit_f3}.
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/chapter2/Kp_2dhistogram_V_sws123_fit_f3.pdf}
@@ -609,10 +603,10 @@ The capped \Kp{} scale limits the capability to quantify the ground impacts of e
 % summary
 With the results presented in this chapter, I elaborate the step from solar wind properties to the prediction of their possible impact strength on the terrestrial magnetosphere. I derive empirical correlations and functional dependencies between solar wind properties and the geomagnetic \Kp~index, in order to obtain the capability to nowcast/forecast the \Kp~index. The following predictive models and their errors are obtained from the \Kp{} analyses in this chapter:
 \begin{itemize}
-	\item The functional relation for the yearly \Kp{} averages relates \Kp{} with solar activity via the SSN, see Equation (\ref{eq:kp_ssn_relation}). The \Kp{} error to it is about $0.3$, whereas seasonal variations further contribute up to $1.3$.
-	\item The functional relation for enabling \Kp{} nowcasts relates \Kp{} with the solar wind electric field, see Equations~(\ref{eq:kpvsvbz_dependency_function_negative}) and (\ref{eq:kpvsvbz_dependency_function_positive}). Its MAD has a mean \Kp{} size of \num{0.7}.
-	\item The functional relation for enabling CME forecasts relates \Kp{} with the velocity of CME-associated flows, see Equation~(\ref{eq:kpvsv_CME_dependency_function}). Its MAD has a mean \Kp{} size of \num{1.1}.
-	\item The functional relation for enabling stream forecasts relates \Kp{} with the velocity of solar wind streams, see Equation~(\ref{eq:kpvsv_stream_dependency_function}). Its MAD has a mean \Kp{} size of \num{0.7}.
+	\item The functional relation for the yearly \Kp{} averages relates \Kp{} with solar activity via the SSN, see Equation \eqref{eq:kp_ssn_relation}. The \Kp{} error to it is about $0.3$, whereas seasonal variations further contribute up to $1.3$.
+	\item The functional relation for enabling \Kp{} nowcasts relates \Kp{} with the solar wind electric field, see Equations~\eqref{eq:kpvsvbz_dependency_function_negative} and \eqref{eq:kpvsvbz_dependency_function_positive}. Its MAD has a mean \Kp{} size of \num{0.7}.
+	\item The functional relation for enabling CME forecasts relates \Kp{} with the velocity of CME-associated flows, see Equation~\eqref{eq:kpvsv_CME_dependency_function}. Its MAD has a mean \Kp{} size of \num{1.1}.
+	\item The functional relation for enabling stream forecasts relates \Kp{} with the velocity of solar wind streams, see Equation~\eqref{eq:kpvsv_stream_dependency_function}. Its MAD has a mean \Kp{} size of \num{0.7}.
 \end{itemize}
 
 \pagebreak

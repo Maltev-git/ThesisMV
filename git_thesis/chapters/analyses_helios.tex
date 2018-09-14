@@ -126,7 +126,7 @@ The magnetic field angle in the solar equatorial plane is distance dependent and
 \begin{align}
 	\phi_B(r) &= \arctan\left(-\frac{\omega\,r}{v_\text{sw}}\right)	\,.
 \end{align}
-The angle becomes $\phi_B(\SI{1}{\au}) = \SI{-46.23}{\degree}$ when using the Sun's equatorial angular velocity $\omega_\text{eq} = \SI{14.37}{\degree\per\day}$ (for more details on solar rotation see Appendix~\ref{sec:solar_surface_differential_rotation}) together with the median solar wind velocity $v_\text{sw} = \SI{416}{\km\per\s}$ determined in the paper. During solar cycle minimum, the solar wind in the equatorial plane outside the source surface originates from polar regions at about \SI{+-60}{\degree} heliolatitude. This leads to a slightly underwound Parker spiral, because of the slower rotation rate at higher latitudes \citep{Banaszkiewicz1998}. Using the differential rotation rate $\omega(\SI{+-60}{\degree}) = \SI{13.69}{\degree\per\day}$ (see Appendix~\ref{eq:omega_differential}), the field angle becomes $\phi_B(\SI{1}{\au}) = \SI{-44.84}{\degree}$. As the solar rotation axis tilt to the ecliptic normal only has a maximum angle of \SI{7.2}{\degree}, I consider its influence on $\phi_B$ minor, and choose to neglect it in this calculation. Thus from theory, in the ecliptic at a solar distance of \SI{1}{\au}, the Parker spiral's observed magnetic field angle $\phi_B$ is centered most of the time at about \SI{-45}{\degree} or for the opposite field polarity at \SI{135}{\degree}. Indeed, this is confirmed by the angle's frequency distribution, apparent in IMF measurements made at \SI{1}{\au}, such as the hourly OMNI data of the time period 1963--2016 plotted in \autoref{fig:histogram_B_angles_c}.
+The angle becomes $\phi_B(\SI{1}{\au}) = \SI{-46.23}{\degree}$ when using the Sun's equatorial angular velocity $\omega_\text{eq} = \SI{14.37}{\degree\per\day}$ (for more details on solar rotation see Appendix~\ref{sec:solar_surface_differential_rotation}) together with the median solar wind velocity $v_\text{sw} = \SI{416}{\km\per\s}$ determined in the paper. During solar cycle minimum, the solar wind in the equatorial plane outside the source surface originates from polar regions at about \SI{+-60}{\degree} heliolatitude. This leads to a slightly underwound Parker spiral, because of the slower rotation rate at higher latitudes \citep{Banaszkiewicz1998}. Using the differential rotation rate $\omega(\SI{+-60}{\degree}) = \SI{13.69}{\degree\per\day}$ (see Equation~\eqref{eq:omega_differential}), the field angle becomes $\phi_B(\SI{1}{\au}) = \SI{-44.84}{\degree}$. As the solar rotation axis tilt to the ecliptic normal only has a maximum angle of \SI{7.2}{\degree}, I consider its influence on $\phi_B$ minor, and choose to neglect it in this calculation. Thus from theory, in the ecliptic at a solar distance of \SI{1}{\au}, the Parker spiral's observed magnetic field angle $\phi_B$ is centered most of the time at about \SI{-45}{\degree} or for the opposite field polarity at \SI{135}{\degree}. Indeed, this is confirmed by the angle's frequency distribution, apparent in IMF measurements made at \SI{1}{\au}, such as the hourly OMNI data of the time period 1963--2016 plotted in \autoref{fig:histogram_B_angles_c}.
 \begin{figure}[b]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/histogram_B_angles_c.pdf}
@@ -137,7 +137,7 @@ The angle becomes $\phi_B(\SI{1}{\au}) = \SI{-46.23}{\degree}$ when using the Su
 	}
 \end{figure}
 
-For $\phi_B$ being on average centered around these two directions, both vector components $\vect{B}_r$ and $\vect{B}_\phi$ have to be of equal amplitude. It can be seen from Equations~\ref{eq:B_absolute} and \ref{eq:B_1au} that this condition leads to
+For $\phi_B$ being on average centered around these two directions, both vector components $\vect{B}_r$ and $\vect{B}_\phi$ have to be of equal amplitude. It can be seen from Equations~\eqref{eq:B_absolute} and \eqref{eq:B_1au} that this condition leads to
 \begin{align}
 	B(\SI{1}{\au}) &= B_0 \cdot \sqrt{2}	&\text{with}	&	&	\left(\frac{\omega\cdot\SI{1}{\au}}{v_\text{sw}}\right) &= 1\,.
 \end{align}
@@ -227,19 +227,17 @@ It can be seen from \autoref{fig:sw_extrapolation_ssn_median_gt1au_g} that altho
 	}
 \end{figure}
 
-In the next step, a lognormal function is fitted to the data -- I use the same method and reasoning as explained in the paper's \autoref{sec:paper_solar_distance_dependency}. Accordingly the IMF distribution's shapes are considered to be lognormal at all distances and the fit exponents $e_\text{med}$ and $e_\text{avg}$ are reduced to only one common exponent. The distance dependency is implemented into the lognormal function from the paper, yielding in the parameters and common exponents of the distribution fit. The fit parameters are presented in \autoref{tab:bfield_fit_parameters} and the fitted distribution is plotted in \autoref{fig:fit_fixed_B_paper_f}.
+In the next step, a lognormal function is fitted to the data -- I use the same method and reasoning as explained in the paper's \autoref{sec:paper_solar_distance_dependency}. Accordingly the IMF distribution's shapes are considered to be lognormal at all distances and the fit exponents $e_\text{med}$ and $e_\text{avg}$ are reduced to only one common exponent. The distance dependency is implemented into the lognormal function from the paper, yielding in the parameters and common exponents of the distribution fit. The fit parameters are presented in \autoref{tab:bfield_fit_parameters} and the fitted distribution is plotted in \autoref{fig:fit_fixed_B_paper_g}.
 As is expected for the Helios distance range, the fitted distribution looks almost identical to the corresponding one presented in Figure~8 of the paper.
 \begin{figure}[htb]
-	\fcapside[\FBwidth]{
-		\includegraphics[width=0.6\textwidth]{figures_of_mine/gnuplots/fit_fixed_B_paper_f.pdf}
-	}{
-		\caption[\lofimage{figures_of_mine/gnuplots/fit_fixed_B_paper_f.pdf}I created the figure myself.]
-		{Frequency distribution of the solar wind magnetic field strength with respect to solar distance. I plotted the binned Helios data (top panel) and the square-root power-law lognormal fit model (bottom panel) with their median values (white lines).}
-		\label{fig:fit_fixed_B_paper_f}
-	}
+	\centering
+	\includegraphics[width=\textwidth]{figures_of_mine/gnuplots/fit_fixed_B_paper_g.pdf}
+	\caption[\lofimage{figures_of_mine/gnuplots/fit_fixed_B_paper_g.pdf}I created the figure myself.]
+	{Frequency distribution of the solar wind magnetic field strength with respect to solar distance. I plotted the binned Helios data (top panel) and the square-root power-law lognormal fit model (bottom panel) with their median values (white lines).}
+	\label{fig:fit_fixed_B_paper_g}
 \end{figure}
 
-\clearpage
+\pagebreak
 
 \subsection{SSN implementation and extrapolation to PSP orbit}
 Finally, the IMF distance dependency will be combined with the solar activity relationship obtained in the paper. In order to derive the solar wind environment for the PSP orbit, the model is then extrapolated to the PSP orbit.

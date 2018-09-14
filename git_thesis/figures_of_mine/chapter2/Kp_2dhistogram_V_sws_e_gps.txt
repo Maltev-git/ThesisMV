@@ -1,0 +1,122 @@
+set terminal pdfcairo enhanced font "arial,12" fontscale 0.5 lw 1 size 18cm,12cm rounded
+set output "Kp_2dhistogram_V_sws_e.pdf"
+
+datafile_sws = "../Data/OMNI_data3_analysis/KpvsV/OMNI_HRO_1MIN_19810101--20161231_with_ap_VBzgsm_sws_3hmax_KpvsV_2Dhistogram.txt"
+datafile_sws_shift = "../Data/OMNI_data3_analysis/KpvsV/OMNI_HRO_1MIN_19810101--20161231_with_ap_VBzgsm_swsf_3hmax_ap6hshift_KpvsV_2Dhistogram.txt"
+datafile_sws1 = "../Data/OMNI_data3_analysis/KpvsV_sws1/OMNI_HRO_1MIN_19810101--20161231_with_ap_VBzgsm_sws1_3hmax_KpvsV_2Dhistogram.txt"
+datafile_sws23 = "../Data/OMNI_data3_analysis/KpvsV_sws23/OMNI_HRO_1MIN_19810101--20161231_with_ap_VBzgsm_sws23_3hmax_KpvsV_2Dhistogram.txt"
+datafile_sws23_shift = "../Data/OMNI_data3_analysis/KpvsV_sws23/OMNI_HRO_1MIN_19810101--20161231_with_ap_VBzgsm_sws23_3hmax_ap9hshift_KpvsV_2Dhistogram.txt"
+
+#######- header parameters from datafile -#######
+binSizeX=10
+binSizeY=1
+histLowX=235
+histLowY=0
+histUppX=1085
+histUppY='28.0'
+hist2DbinCount=1356
+intersectionCount=79278
+peakCount=553
+peakX=355
+peakY='2.0'
+meanCount=58
+meanX=425
+meanY='5'
+###########
+
+
+####--  Styles  --####
+set style line 1 lt 1 lw 1 lc rgb "white"
+set style line 2 lt 1 lw 1 lc rgb "light-red"
+set style line 3 lt 1 lw 1 lc rgb "web-green"
+set style line 4 lt 1 lw 1 lc rgb "web-blue"
+set style line 5 lt 1 lw 1 lc rgb "yellow"
+set style line 6 lt 1 lw 1 lc rgb "brown"
+set style line 7 lt 1 lw 1 lc rgb "light-blue"
+set style line 8 lt 1 lw 1 lc rgb "dark-blue"
+set style line 9 lt 1 lw 1 lc rgb "dark-violet"
+set style line 10 lt 1 lw 1 lc rgb "black"
+set style line 11 lt 1 lw 1 lc rgb "grey"
+set style line 12 lt 1 lw 1 lc rgb "grey50"
+
+set style textbox opaque noborder
+
+set multiplot\
+	layout 2,2\
+	margins 0.05,0.995,0.077,0.988\
+	spacing 0,0
+
+set border 3
+set xtics nomirror
+set ytics nomirror
+
+set grid back
+set nobars
+
+set key reverse Left box opaque samplen 2 font ",11"
+set key top left
+set key width -4
+#set key at screen 0.99,screen 0.68
+unset key
+
+set cblabel "Frequency" offset 1,0
+set log cb
+set format cb "10^{%T}"
+set cbrange [1e-5:1e-2]
+set cbtics offset 0,0
+#set cbtics add("" 1.0)
+#cubehelix palette
+#https://www.mrao.cam.ac.uk/~dag/CUBEHELIX/
+#https://www.mrao.cam.ac.uk/~dag/CUBEHELIX/cubetry.html
+set palette cubehelix start 2.0 cycles 1.4 saturation 1.4 negative
+set palette gamma 1.0
+
+# set colorbox user origin graph 1.02,graph -1.5 size 0.04,graph 2
+unset colorbox
+
+set view map
+
+set ylabel "{/:Italic= Kp} index" offset 0,0
+#set xlabel "Velocity [km/s]" offset 0,0
+#set format y "%g"
+set yrange [0:9]
+set ytics 1
+set mytics 3
+set format x ""
+set xrange [0:1100]
+set xtics 200
+set xtics add("" 1100)
+set mxtics 2
+set label at 50,8 "All data" box font ",11"
+plot\
+	datafile_sws matrix index 0 using ((0.5+$1)*binSizeX+histLowX):(($2*binSizeY+histLowY)/3.0):($3==0?NaN:$3/intersectionCount) with image notitle,\
+	NaN with points title sprintf("\nBin size %g x %g/3\nAll data",binSizeX,binSizeY) ls 11 pt 5 ps 0.3,\
+	NaN title " " ls 1,\
+	NaN notitle
+unset ylabel
+
+set colorbox horizontal user origin graph 0.1,graph -0.7 size graph 0.8,graph 0.08
+
+set format y ""
+set format x "%g"
+#set key width -4
+set xlabel "Velocity [km s^{-1}]" offset 0,0.3
+set ytics add("" 9)
+unset label; set label at 50,8 "Streams" box font ",11"
+plot\
+	datafile_sws23 matrix index 0 using ((0.5+$1)*binSizeX+histLowX):(($2*binSizeY+histLowY)/3.0):($3==0?NaN:$3/intersectionCount) with image notitle,\
+	NaN with points title sprintf("\nBin size %g x %g/3\nw/o CMEs",binSizeX,binSizeY) ls 11 pt 5 ps 0.3,\
+	NaN title " " ls 1,\
+	NaN notitle
+unset colorbox
+
+set ylabel "{/:Italic= Kp} index" offset -1,0
+
+set format y "%g"
+#set key width -4
+unset label; set label at 50,8 "CMEs" box font ",11"
+plot\
+	datafile_sws1 matrix index 0 using ((0.5+$1)*binSizeX+histLowX):(($2*binSizeY+histLowY)/3.0):($3==0?NaN:$3/intersectionCount) with image notitle,\
+	NaN with points title sprintf("\nBin size %g x %g/3\nCMEs",binSizeX,binSizeY) ls 11 pt 5 ps 0.3,\
+	NaN title " " ls 1,\
+	NaN notitle

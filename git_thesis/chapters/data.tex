@@ -2,21 +2,21 @@
 \chapter{Instrumentation and data description}
 \label{chap:data}
 %COFI -- chapter outline and flow integration
-For analyzing the solar wind and related areas on the Sun, there exist remote instruments, such as solar imagers and coronagraphs, and in-situ instruments, such as magnetometers and plasma spectrometers. The basic principles of the latter are described in this chapter, because the analyses performed in this thesis are based entirely on in-situ measurements -- except of course the sunspot time series.
+For analyzing the solar wind and related areas on the Sun, there exist remote instruments, such as solar imagers and coronagraphs, and in-situ instruments, such as magnetometers and plasma spectrometers. The basic principles of the latter are described in this chapter, because the analyses performed in this thesis are based entirely on in-situ measurements -- of course except for the sunspot time series.
 
-Different kind of measurements, collected from observatories at a number of locations, are used for the investigations performed in this thesis. In the following sections, I describe these data sets as well: the geomagnetic disturbance index \Kp{}, the solar activity indicator sunspot number (SSN), and the solar wind in-situ data sets. The solar wind in-situ data sets are the near-Earth OMNI data collections, consisting of minutely and hourly data, that is, low resolution OMNI (LRO) and high resolution OMNI (HRO), and the data obtained from the Helios~1 and Helios~2 spacecraft in the 1970s. I prepared a time coverage overview of all data sets in relation to the solar activity cycles in \autoref{fig:timeline_SSN_with_data_and_sc}.
+Different kind of measurements, collected from observatories at a number of locations, are used for the investigations performed in this thesis. In the following sections, I describe these data sets as well: the geomagnetic disturbance index \Kp{}, the solar activity indicator sunspot number (SSN), and the solar wind in-situ data sets. The solar wind in-situ data sets are the near-Earth OMNI data collections, consisting of minutely and hourly data, that is, low-resolution OMNI (LRO) and high-resolution OMNI (HRO), and the data obtained from the Helios~1 and Helios~2 spacecraft in the 1970s. I prepared a time coverage overview of all data sets in relation to the solar activity cycles in \autoref{fig:timeline_SSN_with_data_and_sc}.
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{figures_of_mine/gnuplots/timeline_SSN_with_data_and_sc.pdf}
 	\caption[\lofimage{figures_of_mine/gnuplots/timeline_SSN_with_data_and_sc.pdf}I created the figure myself.]
-	{Time coverage of the data sets used in this work together with a plot of the solar activity from 1930 until end of 2016. The individual data sets are the \Kp~index, the low and high resolution OMNI (LRO and HRO) collections, and the Helios~1 and Helios~2 data sets. I added the SIDC 13-month smoothed monthly SSN and the solar cycle number in the background for orientation.}
+	{Time coverage of the data sets used in this work together with a plot of the solar activity from 1930 until end of 2016. The individual data sets are the \Kp~index, the low- and high-resolution OMNI (LRO and HRO) collections, and the Helios~1 and Helios~2 data sets. I added the SIDC 13-month smoothed monthly SSN and the solar cycle number in the background for orientation.}
 	\label{fig:timeline_SSN_with_data_and_sc}
 \end{figure}
 
 
 \section{Magnetometer}
 \label{sec:magnetometer}
-A magnetometer monitors the local magnetic field environment. Almost every interplanetary spacecraft carries magnetometers as apart from providing useful information, they also have low weight, low power requirements, and a low data rate compared to other scientific instruments \citep{Ness1970}. There are different magnetometer types -- prevalent types are fluxgate magnetometers for measuring the magnetic field direction and its strength and search coil magnetometers for observing the magnetic flux and detecting waves. Some spacecraft carry both magnetometer types, as is the case with the Helios, Wind, and THEMIS spacecraft. All magnetic field data employed in the present study was measured by fluxgate magnetometers.
+A magnetometer monitors the local magnetic field environment. Almost every interplanetary spacecraft carries magnetometers as apart from providing useful information, they also have low weight, low power requirements, and a low data rate compared to other scientific instruments \citep{Ness1970}. There are different magnetometer types -- prevalent types are fluxgate magnetometers for measuring the magnetic field direction and its strength and search coil magnetometers for observing the magnetic flux and detecting waves. Some spacecraft carry both magnetometer types, as is the case with the Helios, Wind, and THEMIS spacecraft. All magnetic field data employed in the present study were measured by fluxgate magnetometers.
 
 % fluxgate magnetometer
 A fluxgate magnetometer consists of two coils around a core -- one coil with alternating current. This current is then compared with the current signal induced into the other coil. Without an external magnetic field both current patterns match. However, the core is easier magnetized in direction of an existing external magnetic field, in this case a differing pattern is detected \citep{Ness1970}. Modern fluxgate magnetometers are designed in a ring core geometry with advanced magnetic core materials, such as molybdenum-permalloy.
@@ -74,7 +74,7 @@ Electrostatic analyzers are equipped with channel electron multipiers which allo
 			\includegraphics[width=0.4\textwidth]{figures_of_others/images/ACE_SWEPAM_I.jpg}
 		}{
 			\caption[\lofimage{figures_of_others/images/ACE_SWEPAM_I.jpg}Credit: \href{https://swepam.lanl.gov/}{Los Alamos National Laboratory}.]
-			{Ion spectrometer SWEPAM-I onboard the ACE spacecraft. The cylindrical part is the sensor head and the box behind houses the electronics and power supplies. Credit: \href{https://swepam.lanl.gov/}{Los Alamos National Laboratory}.}
+			{Ion spectrometer SWEPAM-I on board the ACE spacecraft. The cylindrical part is the sensor head and the box behind houses the electronics and power supplies. Credit: \href{https://swepam.lanl.gov/}{Los Alamos National Laboratory}.}
 			\label{fig:ACE_SWEPAM_I}
 			% copyright
 			% https://lanl.gov/resources/web-policies/copyright-legal.php
@@ -106,12 +106,12 @@ A plasma ion detector only provides an energy spectrum -- the velocity, density,
 
 \section{OMNI data collection}
 \label{sec:omni_data_collection}
-Solar wind was measured in~situ for the first time by spacecraft in 1959 and since 1963 near-Earth measurements were done almost continuously. The OMNI~2 data collection \citep{King2005} merges data from solar wind magnetic field and plasma, energetic proton fluxes, geomagnetic indices, and solar indices. The included solar wind data starts in 27~November 1963, the temperature data not before 26~July 1965, and is continuously maintained until today. As the data covers decades from multiple spacecraft at varying locations, the solar wind data is composed of intercalibrated data, which has been time-shifted to the nose of the magnetosphere's bow shock upstream of Earth. I created an overview of the various spacecraft contributing to the IMF and solar wind plasma data and their time coverages to the data set in \autoref{fig:timeline_OMNI_SC_IDs}. Especially from the early space age until the 1980s, many different spacecraft contributed to the LRO data set, whereas over the last twenty years, it were only two spacecraft.
+Solar wind was measured in~situ for the first time by spacecraft in 1959 and since 1963 near-Earth measurements were done almost continuously. The OMNI~2 data collection \citep{King2005} merges data from solar wind magnetic field and plasma, energetic proton fluxes, geomagnetic indices, and solar indices. The included solar wind data starts in 27~November 1963, the temperature data not before 26~July 1965, and is continuously maintained until today. As the data covers decades from multiple spacecraft at varying locations, the solar wind data is composed of intercalibrated data, which has been time-shifted to the nose of the magnetosphere's bow shock upstream of Earth. I created an overview of the various spacecraft contributing to the IMF and solar wind plasma data and their time coverages to the data set in \autoref{fig:timeline_OMNI_SC_IDs}. Especially from the early space age until the 1980s, many different spacecraft contributed to the LRO data set, whereas over the last twenty years, there were only two spacecraft.
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{figures_of_mine/gnuplots/timeline_OMNI_SC_IDs.pdf}
 	\caption[\lofimage{figures_of_mine/gnuplots/timeline_OMNI_SC_IDs.pdf}I created the figure myself.]
-	{IMF and solar wind plasma data sources (spacecraft) for the high and the low resolution OMNI (HRO and LRO) data sets until the end of 2016. I plotted this figure using the spacecraft identifiers noted in the OMNIWeb Data Documentation\protect\footnotemark. The SIDC 13-month smoothed monthly SSN and the cycle number are plotted in the background.}
+	{IMF and solar wind plasma data sources (spacecraft) for the high- and the low-resolution OMNI (HRO and LRO) data sets until the end of 2016. I plotted this figure using the spacecraft identifiers noted in the OMNIWeb Data Documentation\protect\footnotemark. The SIDC 13-month smoothed monthly SSN and the cycle number are plotted in the background.}
 	\label{fig:timeline_OMNI_SC_IDs}
 \end{figure}
 \footnotetext{OMNIWeb Data Documentation: \urlfoot{https://omniweb.gsfc.nasa.gov/html/ow_data.html}}
@@ -122,7 +122,7 @@ The OMNI data set is being maintained at NASA's Space Physics Data Facility (SPD
 
 \section{Helios probes}
 \label{sec:helios_probes}
-In order to observe solar wind in~situ within the inner heliosphere, the nearly identical solar probes Helios~1 and Helios~2, were launched in December 1974 and January 1976 respectively, one of them is pictured in \autoref{fig:helios2}. Until today, these both probes were the only spacecraft that measured solar wind in~situ over large solar distance ranges with perihelia as close as \SI{0.31}{\au} and \SI{0.29}{\au} respectively. Their highly elliptical orbits in the ecliptic covered a solar distance up to \SI{0.98}{\au}. Launched during solar cycle minimum, the data of both probes cover the rise to the maximum of solar cycle~21, that amounts to about 6.5~years of data at varying solar distances.
+In order to observe solar wind in~situ within the inner heliosphere, the nearly identical solar probes Helios~1 and Helios~2, were launched in December 1974 and January 1976 respectively, one of them is pictured in \autoref{fig:helios2}. Until today, both probes were the only spacecraft that measured solar wind in~situ over large solar distance ranges with perihelia as close as \SI{0.31}{\au} and \SI{0.29}{\au} respectively. Their highly elliptical orbits in the ecliptic covered a solar distance up to \SI{0.98}{\au}. Launched during solar cycle minimum, the data of both probes cover the rise to the maximum of solar cycle~21, that amounts to about 6.5~years of data at varying solar distances.
 \begin{figure}[htb]
 	\begin{floatrow}
 		\ffigbox[\FBwidth][]{
@@ -145,7 +145,7 @@ In order to observe solar wind in~situ within the inner heliosphere, the nearly 
 	\end{floatrow}
 \end{figure}
 \footnotetext{I was not able to find out which Helios spacecraft this actually is.}
-I plotted the probes' solar distance and heliographic latitude with respect to their mission time and sunspot number for illustration in \autoref{fig:Helios_r_b_ssn}. The daily trajectory data are available from NASA's SPDF at the GSFC\protect\footnote{SPDF Helios~1 trajectory data: \urlfoot{http://spdf.sci.gsfc.nasa.gov/pub/data/helios/helios1/traj/}} and are drawn in Heliographic Inertial (HGI) coordinates, more on HGI coordinates in Appendix~\ref{sec:coordinate_systems}. I also plotted the orbits of Helios~1 and Helios~2 in a solar equatorial plane view and in a solar polar plane view, see \autoref{fig:Helios12_orbits_ecliptic_polar}.
+I plotted the probes' solar distance and heliographic latitude with respect to their mission time and sunspot number for illustration in \autoref{fig:Helios_r_b_ssn}. The daily trajectory data are available from NASA's SPDF at the GSFC\protect\footnote{SPDF Helios~1 trajectory data: \urlfoot{http://spdf.sci.gsfc.nasa.gov/pub/data/helios/helios1/traj/}} and are drawn in Heliographic Inertial (HGI) coordinates, for more on HGI coordinates see Appendix~\ref{sec:coordinate_systems}. I also plotted the orbits of Helios~1 and Helios~2 in a solar equatorial plane view and in a solar polar plane view, see \autoref{fig:Helios12_orbits_ecliptic_polar}.
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=\textwidth]{figures_of_mine/gnuplots/Helios12_orbits_ecliptic_polar.pdf}
@@ -185,7 +185,7 @@ The Helios data is used in \autoref{chap:chapterPSP} for analyzing the solar win
 \section{\Kp~data series}
 \label{sec:kp_data}
 The planetary magnetospheric disturbance indicator \Kp{} is designed to measure solar particle radiation by its magnetic effects. The index is already described in detail in the previous \autoref{sec:kp_index}. Quicklook and actual data of the \Kp~index is provided by the GFZ~Potsdam via their website for geomagnetic indices: \mbox{\urltext{http://www.gfz-potsdam.de/en/kp-index/}}. Historical data is available from 1932 onwards.
-In the analyses in \autoref{chap:chapter2}, \Kp~data of the time period 1932--2016 is used for the inspection of its long-term variations. \Kp{} data of the time period 1981--2016 is related to solar wind parameters.
+In the analyses in \autoref{chap:chapter2}, \Kp~data of the time period 1932--2016 is used for the inspection of its long-term variations and \Kp{} data of the time period 1981--2016 is related to solar wind parameters.
 
 % acknowledgments:\\
 % The results presented in this thesis rely on the \Kp{}~index, calculated and made available by the German Research Centre for Geosciences in Potsdam from data collected at magnetic observatories. We thank the involved national institutes, the INTERMAGNET network and ISGI (isgi.unistra.fr).\\

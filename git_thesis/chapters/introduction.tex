@@ -23,7 +23,7 @@ Particularly strong disturbances, called geomagnetic storms, can be provoked by 
 		\includegraphics[width=0.5\textwidth]{figures_of_others/images/SOHO_LASCO_C3_20170906_151807.png}
 	}{
 		\caption[\lofimage{figures_of_others/images/SOHO_LASCO_C3_20170906_151807.jpg}Courtesy of SOHO/LASCO consortium; SOHO is a project of international cooperation between ESA and NASA.]
-		{White-light image of the solar corona out to \SI{30}{\Rs} from 6~September 2017 taken by the LASCO/C3 coronagraph on board the SOHO spacecraft. The solar disk's position is indicated by the white circle. Thedisk is covered by an occulter disk with a mount to the top right. The bright extensive structure is the CME and the faint aura around is a shock wave. Courtesy of SOHO/LASCO consortium; SOHO is a project of international cooperation between ESA and NASA.}
+		{White-light image of the solar corona out to \SI{30}{\Rs} from 6~September 2017 taken by the LASCO/C3 coronagraph on board the SOHO spacecraft. The solar disk's position is indicated by the white circle and it is covered by an occulter disk whose mount is visible to the top right. The bright extensive structure is the CME and the faint aura around is a shock wave. Courtesy of SOHO/LASCO consortium; SOHO is a project of international cooperation between ESA and NASA.}
 		\label{fig:SOHO_LASCO_C3_20170906_151807}
 	}
 \end{figure}
@@ -33,16 +33,16 @@ Particularly strong disturbances, called geomagnetic storms, can be provoked by 
 % consequences
 The effects of geomagnetic storms pose a threat both to exposed humans and sensitive technological systems. The potential disruption of critical systems, such as satellite communication and power grids, would not only have severe economic implications but would affect human lives as well. The rapid rate of technological advancement leads to an ever-growing abundance of systems which are sensitive to disturbances in the geomagnetic field. Therefore, it is becoming increasingly important to be capable of predicting the onset of magnetospheric disturbances and their magnitude, in order to mitigate such severe consequences.
 
-\pagebreak
-
 % what is well known
-As a result of solar wind in-situ measurements, it is well known that variations in specific solar wind quantities lead to direct responses in geomagnetic activity. The coupling mechanisms between solar wind and magnetosphere have been identified and modeled extensively, resulting in a variety of coupling functions linking solar wind parameters to indicators of geomagnetic activity. These coupling functions serve as the basis for models that predict geomagnetic activity from solar wind input parameters and thus, knowledge of the solar wind conditions in front of the magnetosphere enables to predict the geomagnetic response fairly well.
+As a result of solar wind in-situ measurements, it is well known that variations in specific solar wind quantities lead to direct responses in geomagnetic activity.
+\pagebreak
+The coupling mechanisms between solar wind and magnetosphere have been identified and modeled extensively, resulting in a variety of coupling functions linking solar wind parameters to indicators of geomagnetic activity. These coupling functions serve as the basis for models that predict geomagnetic activity from solar wind input parameters and thus, knowledge of the solar wind conditions in front of the magnetosphere enables to predict the geomagnetic response fairly well.
 
 % 2) problem statement
 The solar wind is continuously monitored in~situ by spacecraft located in front of the magnetosphere. These real-time measurements are used by operational space weather services for providing nowcasts of geomagnetic activity. The monitoring spacecraft are located at the first Lagrange point (L1), which is situated at approximately one-hundredth the distance from the Earth to the Sun.
 Solar wind plasma from this point reaches the magnetosphere in a few tens of minutes, which is significantly shorter than its  travel time from Sun to Earth, which is around three to four days for ambient solar wind streams and about a day for extremely fast CMEs.
 In order to exploit this extended lead time, some information about CMEs and solar wind streams can be acquired from remote observations provided by solar imagers and coronagraphs. The velocity is one of the few remotely acquirable quantities which is to a certain degree reliably forecastable.
-Space weather nowcast services reach a high prediction accuracy by using in-situ measurements from L1, however, for remote forecast situations the methods used by nowcast services are not effective, because not all solar wind parameters necessary for geomagnetic activity forecasts can readily be obtained.
+Space weather nowcast services reach a high prediction accuracy by using in-situ measurements from L1, however, for remote forecast situations, the methods used by nowcast services are not effective, because not all solar wind parameters necessary for geomagnetic activity forecasts can readily be obtained.
 
 % 3) response to the problem
 This study addresses this problem in that it quantifies the geomagnetic response for remote forecast situations, when only the velocity information from CMEs or ambient solar wind is available.
@@ -62,7 +62,7 @@ The solar wind was first theoretically described by \citet{Parker1958} who formu
 
 % 2) problem statement
 However, the region close to the Sun remains unexplored although it is of particular scientific interest. In this region, the corona is heated to temperatures far exceeding those of the underlying photosphere and the plasma is being accelerated to its final solar wind speeds. Up to now the mechanisms that heat the corona and accelerate the solar wind are still not fully understood.
-As this region is assumed to hold the answers to these open key questions, it has long been planned to send a probe to this region. The Parker Solar Probe (PSP) mission is intended to address these questions. The PSP spacecraft, launched on 12~August 2018, will dive through the corona within distances down to \num{8.86}~solar radii (\Rs) from the solar surface, see \autoref{fig:SPP_ObservingSun2b}. It will provide for the first time in-situ measurements and high-resolution images of the solar wind conditions in this unexplored region.
+As this region is assumed to hold the answers to these open key questions, it has long been planned to send a probe to this region. The Parker Solar Probe (PSP) mission is intended to address these questions. The PSP spacecraft, launched on 12~August 2018, will dive through the corona within distances down to \SI{8.86}{\Rs} from the solar surface, see \autoref{fig:SPP_ObservingSun2b}. It will provide for the first time in-situ measurements and high-resolution images of the solar wind conditions in this unexplored region.
 \begin{figure}[htb]
 	\fcapside[\FBwidth]{
 		\includegraphics[width=0.6\textwidth]{figures_of_others/images/SPP_ObservingSun2b.jpg}
@@ -74,9 +74,9 @@ As this region is assumed to hold the answers to these open key questions, it ha
 \end{figure}
 
 % 3) response to the problem
-This study addresses this topic in that it explores the near-Sun solar wind conditions and predicts the solar wind environment for the PSP orbit, that is, this work derives estimates of the key solar wind parameters magnetic field strength, proton velocity, density, and temperature. These key parameters are back-extrapolated to the near-Sun region, using an empirical solar wind model for the inner heliosphere.
+This study addresses this topic in that it explores the near-Sun solar wind conditions and predicts the solar wind environment for the PSP orbit, that is, this work derives estimates of the key solar wind parameters magnetic field strength, proton velocity, density, and temperature. These key parameters are back-extrapolated to the near-Sun region, using an empirical solar wind model for the inner heliosphere. I develop this solar wind model from solar activity and solar distance dependencies of each parameter individually. To derive the dependencies on solar activity,
 \pagebreak
-I develop this solar wind model from solar activity and solar distance dependencies of each parameter individually. To derive the dependencies on solar activity, solar wind measurements from the near-Earth OMNI data set are being related to the sunspot number. To derive the solar distance dependencies, I apply solar wind data from the Helios~1 and Helios~2 probes, which flew in the 1970s and took in-situ measurements between \SI{0.29}{\au} and \SI{0.98}{\au}.
+solar wind measurements from the near-Earth OMNI data set are being related to the sunspot number. To derive the solar distance dependencies, I apply solar wind data from the Helios~1 and Helios~2 probes, which flew in the 1970s and took in-situ measurements between \SI{0.29}{\au} and \SI{0.98}{\au}.
 Commonly, studies that analyze solar wind handle it by working with time averages of the bulk parameters. In contrast, the special approach in this work is its tackling of the frequency distributions. The model represents the solar wind parameters by lognormal distributions, furthermore, both the slow and fast velocity components are taken into account.
 For the magnetic field strength, I additionally derive a second alternative distance dependency that is based on the Parker magnetic field geometry.
 

@@ -66,7 +66,7 @@ Indentation Mode=normal
 Mode=LaTeX
 
 [document-settings,item:chapters/basics.tex]
-Bookmarks=136,646,697,1,207,7,486,827,895,335,253
+Bookmarks=136,1,207,854,7,925,655,706,335,488,253
 Encoding=UTF-8
 Highlighting=LaTeX
 Indentation Mode=normal
@@ -249,12 +249,12 @@ order=5
 
 [item:chapters/basics.tex]
 archive=true
-column=154
+column=161
 encoding=UTF-8
 highlight=LaTeX
-line=805
+line=722
 mode=LaTeX
-open=true
+open=false
 order=3
 
 [item:chapters/chapter2.tex]
@@ -279,10 +279,10 @@ order=6
 
 [item:chapters/data.tex]
 archive=true
-column=141
+column=52
 encoding=UTF-8
 highlight=LaTeX
-line=187
+line=80
 mode=LaTeX
 open=false
 order=6
@@ -304,7 +304,7 @@ encoding=UTF-8
 highlight=LaTeX
 line=454
 mode=LaTeX
-open=true
+open=false
 order=2
 
 [item:chapters/introduction.tex]
@@ -314,7 +314,7 @@ encoding=UTF-8
 highlight=LaTeX
 line=24
 mode=LaTeX
-open=true
+open=false
 order=4
 
 [item:chapters/notes_thesis.tex]
@@ -349,10 +349,10 @@ order=0
 
 [item:figure_permissions.tex]
 archive=true
-column=18
+column=522
 encoding=UTF-8
 highlight=LaTeX
-line=1
+line=7
 mode=LaTeX
 open=false
 order=4
@@ -379,10 +379,10 @@ order=-1
 
 [item:style/header.tex]
 archive=true
-column=8
+column=28
 encoding=UTF-8
 highlight=LaTeX
-line=69
+line=34
 mode=LaTeX
 open=true
 order=0
@@ -460,10 +460,10 @@ JumpList=
 ViMarks=.,128,776,[,128,775,],128,776
 
 [view-settings,view=0,item:chapters/basics.tex]
-CursorColumn=154
-CursorLine=805
+CursorColumn=161
+CursorLine=722
 JumpList=
-ViMarks=.,805,153,[,805,153,],805,153,a,1,0,b,7,0,c,646,0,d,697,0,e,895,0,f,827,0,g,253,0,h,136,0,i,207,0,j,335,0,k,486,0
+ViMarks=.,722,160,[,722,155,],722,160,a,1,0,b,7,0,c,655,0,d,706,0,e,925,0,f,854,0,g,253,0,h,136,0,i,207,0,j,335,0,k,488,0
 
 [view-settings,view=0,item:chapters/chapter2.tex]
 CursorColumn=37
@@ -478,10 +478,10 @@ JumpList=
 ViMarks=.,129,274,[,129,274,],129,274
 
 [view-settings,view=0,item:chapters/data.tex]
-CursorColumn=141
-CursorLine=187
+CursorColumn=52
+CursorLine=80
 JumpList=
-ViMarks=.,187,140,[,187,137,],187,140,a,1,0,b,16,0,c,63,0,d,105,0,e,105,0,f,106,0,g,122,0
+ViMarks=.,80,51,[,80,47,],80,51,a,1,0,b,16,0,c,63,0,d,105,0,e,105,0,f,106,0,g,122,0
 
 [view-settings,view=0,item:chapters/formal_titlepage.tex]
 CursorColumn=0
@@ -520,10 +520,10 @@ JumpList=
 ViMarks=.,5,18,[,5,12,],5,18
 
 [view-settings,view=0,item:figure_permissions.tex]
-CursorColumn=18
-CursorLine=1
+CursorColumn=522
+CursorLine=7
 JumpList=
-ViMarks=.,1,18,[,1,18,],1,18
+ViMarks=.,7,521,[,7,521,],7,521
 
 [view-settings,view=0,item:notes.tex]
 CursorColumn=62
@@ -538,10 +538,10 @@ JumpList=
 ViMarks=.,778,73,[,778,73,],778,73
 
 [view-settings,view=0,item:style/header.tex]
-CursorColumn=8
-CursorLine=69
+CursorColumn=28
+CursorLine=34
 JumpList=
-ViMarks=.,69,0,[,69,0,],69,1
+ViMarks=.,34,0,[,34,0,],34,0
 
 [view-settings,view=0,item:style/short_commands_malte.tex]
 CursorColumn=48
